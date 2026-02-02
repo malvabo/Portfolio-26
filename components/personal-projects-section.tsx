@@ -4,25 +4,25 @@ export function PersonalProjectsSection() {
   const projects = [
     {
       label: "Design newsletter",
-      title: "Tech Matters and Mary Substack publication. Subscribe!",
+      title: "Tech Matters & Mary newsletter",
       link: "#",
       gradient: "from-[#5d4a7a] via-[#7d6a9a] to-[#9d8aba]",
     },
     {
       label: "Design mentorship",
-      title: "ADPList mentorship, 900+ min of mentoring young designers to help them grow",
+      title: "ADPList mentorship, 900+ min",
       link: "#",
       gradient: "from-[#2d5a6d] via-[#4d7a8d] to-[#6d9aad]",
     },
     {
       label: "Apple Podcasts, 2020-2021",
-      title: "Health Tech Matters podcast, 26 episodes",
+      title: "Health Tech Matters podcast (26 eps)",
       link: "#",
       gradient: "from-[#3a4a7a] via-[#5a6a9a] to-[#7a8aba]",
     },
     {
       label: "2021-2023",
-      title: "Unsplash photography contribution, 1M views",
+      title: "Unsplash, 1M views",
       link: "#",
       gradient: "from-[#1a5d5d] via-[#3a7d7d] to-[#5a9d9d]",
     },
@@ -36,8 +36,8 @@ export function PersonalProjectsSection() {
           <span className="uppercase text-[13px] text-muted-foreground/70 font-mono tracking-wide">After work</span>
         </div>
 
-        <h2 className="font-serif text-3xl md:text-4xl font-normal mb-12 tracking-[-0.02em] leading-[1.1]">
-          My personal projects
+        <h2 className="font-serif text-3xl md:text-4xl font-normal mb-8 tracking-[-0.02em] leading-[1.1]">
+          Beyond the day job
         </h2>
 
         <div className="grid gap-6 md:grid-cols-2">
@@ -55,7 +55,7 @@ export function PersonalProjectsSection() {
                 <p className="text-[13px] text-muted-foreground/70 mb-3 uppercase tracking-wide group-hover:text-white/80 transition-colors duration-500">
                   {project.label}
                 </p>
-                <h3 className="font-serif text-[22px] mb-4 tracking-[-0.02em] leading-[1.2] group-hover:text-white transition-colors duration-500">
+                <h3 className="font-serif text-[22px] mb-2 tracking-[-0.02em] leading-[1.15] group-hover:text-white transition-colors duration-500">
                   {project.title}
                 </h3>
                 <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-white transition-colors duration-500" />

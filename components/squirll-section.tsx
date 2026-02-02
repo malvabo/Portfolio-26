@@ -11,17 +11,18 @@ export function SquirllSection() {
   return (
     <section className="container mx-auto px-8 lg:px-12 py-8 md:py-12">
 
-      <h2 className="text-2xl md:text-3xl leading-tight font-serif mb-8">
-        Squirll - AI Finance Platform That Automated 80% of Budgeting
+      <h2 className="text-2xl md:text-3xl leading-[1.1] font-serif mb-6 tracking-tight">
+        Squirll — 80% of budgeting on autopilot
       </h2>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 mb-10">
         <div>
           <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">About</h3>
           <p className="text-base leading-relaxed text-foreground">
-            Led the end-to-end design and launch of an AI-driven financial coaching platform that uses Computer Vision
-            to automate 80% of data entry and NLP for real-time feedback. Built a variable reward system to gamify
-            spending habits. Delivered a premium MVP in 16 weeks with high daily engagement.
+            Led end-to-end product design and research for an AI financial coaching platform. Defined product
+            strategy and information architecture; designed receipt-capture (CV) and budgeting flows that automate
+            80% of data entry, plus NLP-driven feedback and gamification. Drove cross-functional alignment with
+            eng and product; shipped MVP in 16 weeks. Result: 80% automation, strong daily engagement.
           </p>
           <Link
             href="/projects/squirll"

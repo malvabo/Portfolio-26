@@ -12,17 +12,18 @@ export function PandaDocSection() {
     <section className="container mx-auto px-8 lg:px-12 py-8 md:py-12">
       <div className="border-t border-gray-300 mb-10" />
 
-      <h2 className="text-2xl md:text-3xl leading-tight font-serif mb-8">
-        PandaDoc - Automation That Streamlines Workflows for 50K+ Businesses
+      <h2 className="text-2xl md:text-3xl leading-[1.1] font-serif mb-6 tracking-tight">
+        PandaDoc — One flow from draft to signed for 50K+ teams
       </h2>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 mb-10">
         <div>
           <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">About</h3>
           <p className="text-base leading-relaxed text-foreground">
-            Designed a starred template system and notification framework to reduce friction between CRM/email and
-            PandaDoc. Launched a new integration touchpoint for 50K+ businesses, streamlining the path from draft to
-            eSign and reducing task-switching time.
+            Led product design for PandaDoc Chrome extension (50K+ teams). Drove user research and problem
+            definition; designed in-browser document creation, view tracking, and starred templates. Partnered
+            with eng on scope and phased rollout; shipped v1, deferred rich notifications to v2. Improved
+            deal-cycle efficiency and reduced context-switching.
           </p>
           <Link
             href="/projects/pandadoc"

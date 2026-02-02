@@ -10,7 +10,6 @@ import { SpeakingIndustrySection } from "@/components/speaking-industry-section"
 import { TestimonialsSection } from "@/components/testimonials-section"
 import { PersonalProjectsSection } from "@/components/personal-projects-section"
 import { Footer } from "@/components/footer"
-import { AuthoticsSection } from "@/components/authotics-section"
 
 export default function Home() {
   return (
@@ -21,10 +20,9 @@ export default function Home() {
         <SpeakingIndustrySection />
         <WorkSection />
         <SquirllSection />
-        <AuthoticsSection />
         <BodySpecSection />
-        <LuminaraSection />
         <PandaDocSection />
+        <LuminaraSection />
         <ArticlesSection />
         <TestimonialsSection />
         <PersonalProjectsSection />

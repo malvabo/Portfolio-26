@@ -36,12 +36,10 @@ export function SpeakingIndustrySection() {
             </span>
           </div>
 
-          <h2 className="text-2xl md:text-3xl leading-tight font-serif mb-3">Shaping the industry</h2>
+          <h2 className="text-2xl md:text-3xl leading-[1.1] font-serif mb-2 tracking-tight">Talks, panels & the future of design</h2>
 
           <p className="text-base leading-relaxed mb-6 text-muted-foreground">
-            I regularly speak at industry conferences and events, sharing insights on product design, AI ethics, and the
-            intersection of technology and human experience. Through talks, panels, and workshops, I contribute to
-            shaping conversations about the future of design and digital products.
+            I speak at conferences and events on product design, AI ethics, and the future of digital products.
           </p>
 
           <div className="mt-6">

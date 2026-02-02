@@ -3,27 +3,27 @@ import { Target, Sparkles, Zap, Layout } from "lucide-react"
 const approaches = [
   {
     icon: Target,
-    title: "User-Centered Research",
+    title: "Research that finds the real problem",
     description:
-      "Every project begins with understanding users deeply. I combine qualitative interviews with quantitative data to uncover real problems worth solving.",
+      "Qualitative and quantitative research to uncover real problems worth solving.",
   },
   {
     icon: Sparkles,
-    title: "Strategic Product Thinking",
+    title: "Strategy that ties design to outcomes",
     description:
-      "Great design serves business goals. I align design decisions with metrics that matter, ensuring every pixel contributes to product success.",
+      "Design aligned with business goals and metrics that matter.",
   },
   {
     icon: Zap,
-    title: "Rapid Iteration",
+    title: "Ship fast, learn faster",
     description:
-      "Speed matters in startups. I prototype fast, test early, and iterate based on real feedback—not assumptions. This keeps teams moving forward with confidence.",
+      "Prototype fast, test early, iterate on real feedback.",
   },
   {
     icon: Layout,
-    title: "Scalable Design Systems",
+    title: "Systems that grow with you",
     description:
-      "I build systems that grow with your product. From early foundations to enterprise scale, the right system maintains quality while empowering teams.",
+      "Systems that scale with your product and empower teams.",
   },
 ]
 
@@ -32,12 +32,11 @@ export function ApproachSection() {
     <section id="approach" className="py-16 md:py-20 bg-[#F5F3F0]">
       <div className="container mx-auto px-8 lg:px-12 max-w-7xl">
         <div className="max-w-3xl mb-16">
-          <h2 className="font-serif text-3xl md:text-4xl leading-[1.1] text-balance mb-6 font-normal tracking-[-0.02em]">
-            How I Approach Product Design
+          <h2 className="font-serif text-3xl md:text-4xl leading-[1.1] text-balance mb-4 font-normal tracking-[-0.02em]">
+            How I design products that stick
           </h2>
           <p className="text-[15px] text-muted-foreground leading-relaxed">
-            Over ten years, I've developed a process that balances user empathy with business pragmatism. The result:
-            products that users love and companies can scale.
+            A process that balances user empathy with business pragmatism—products people love that scale.
           </p>
         </div>
 
@@ -51,7 +50,7 @@ export function ApproachSection() {
                     <Icon className="h-5 w-5 text-foreground" strokeWidth={1.5} />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-[20px] font-medium mb-3 tracking-tight">{item.title}</h3>
+                    <h3 className="text-[20px] font-medium mb-2 tracking-tight leading-tight">{item.title}</h3>
                     <p className="text-[15px] text-muted-foreground leading-relaxed">{item.description}</p>
                   </div>
                 </div>

@@ -30,10 +30,10 @@ export default function PandaDocCaseStudy() {
               PANDADOC • JAN 2023 - DEC 2023
             </p>
             <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl tracking-[-0.02em] leading-[1.2] mb-4 text-balance">
-              PandaDoc: Enhancing Productivity for 50K Businesses
+              PandaDoc Chrome extension: document workflow in the browser
             </h1>
             <p className="text-[17px] text-muted-foreground leading-relaxed">
-              Extension design to speed up document workflows for 50k businesses
+              Design of a Chrome extension enabling 50K+ teams to move from draft to signed without leaving inbox or CRM
             </p>
           </div>
 
@@ -64,29 +64,31 @@ export default function PandaDocCaseStudy() {
               <li className="flex gap-4">
                 <span className="text-muted-foreground mt-1">•</span>
                 <span>
-                  Driving growth & engagement: created a PandaDoc Chrome Extension to streamline document workflows for
-                  50K+ businesses.
+                  Sales and marketing teams were using PandaDoc alongside CRM and email. The team designed a Chrome
+                  extension that sits in the browser and supports the path from draft to signed with less
+                  context-switching.
                 </span>
               </li>
               <li className="flex gap-4">
                 <span className="text-muted-foreground mt-1">•</span>
                 <span>
-                  I identified key pain points: tracking document views, real-time drafting, and simplifying template
-                  selection.
+                  Research surfaced three real pains: “Did they even open my proposal?”, “I need to draft during the
+                  call,” and “I use the same few templates—why do I have to hunt for them?”
                 </span>
               </li>
               <li className="flex gap-4">
                 <span className="text-muted-foreground mt-1">•</span>
                 <span>
-                  Launched in phases: prioritized core features, introduced starred templates, and planned rich
-                  notifications for future updates.
+                  The product was delivered in phases: core flow first, then starred templates for quick access.
+                  Richer in-app notifications were planned for a later release to allow earlier learning from
+                  usage data.
                 </span>
               </li>
               <li className="flex gap-4">
                 <span className="text-muted-foreground mt-1">•</span>
                 <span>
-                  I collaborated with marketing to optimize marketplace traction, with metrics tracking retention, new
-                  user acquisition, and conversion rates.
+                  Launched to a beta cohort; we’re watching retention, new signups from the extension, and conversion to
+                  paid—and working with marketing so the Chrome Store listing speaks to the people who need it most.
                 </span>
               </li>
             </ul>
@@ -106,16 +108,14 @@ export default function PandaDocCaseStudy() {
           <section id="overview" className="mb-16">
             <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-4">Overview</p>
             <h2 className="font-serif text-[2rem] leading-[1.2] tracking-[-0.02em] mb-6 text-balance">
-              Bringing document automation to 50K businesses
+              Context and rationale
             </h2>
             <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
               <p>
-                PandaDoc is a document automation software to streamline the process to create, approve, and eSign
-                proposals, templates and contracts. PandaDoc is the #1 proposal, contract and document solution by G2.
+                PandaDoc is a document automation platform for proposals, contracts, and eSign, and is G2’s top-rated solution in its category. User research showed that many users worked primarily in email and CRM; they switched to PandaDoc only to create or check documents, which led to context loss and limited visibility into document status (e.g. whether a proposal had been opened).
               </p>
               <p>
-                I wanted to build an extension that would serve as a valuable asset for current users promoting paid
-                features and also would help me attract new users from the marketplace.
+                The objective was to support existing workflows rather than replace the main product. A Chrome extension could run alongside inbox and CRM, allowing users to create, send, and track documents within the same environment. For existing customers this reduced friction; for new users discovering PandaDoc via the Chrome Web Store, it offered a lower-friction entry point before adoption of the full application.
               </p>
             </div>
           </section>
@@ -140,31 +140,28 @@ export default function PandaDocCaseStudy() {
             <div className="space-y-8 max-w-[750px]">
               <div>
                 <h3 className="font-serif text-xl leading-[1.3] tracking-[-0.02em] mb-2">
-                  "Have they already reviewed my proposal?"
+                  “Have they already reviewed my proposal?”
                 </h3>
                 <p className="text-[17px] leading-relaxed text-muted-foreground">
-                  Every successful sales rep tracks the updates of their proposals and materials shared. Users were
-                  confused with the number of emails with updates PandaDoc sent.
+                  Visibility into when a prospect opened a document was reported as critical for timely follow-up. Users received many notification emails from PandaDoc and had difficulty distinguishing what required action. The need was not more notifications but a single place to see who had viewed which documents.
                 </p>
               </div>
 
               <div>
                 <h3 className="font-serif text-xl leading-[1.3] tracking-[-0.02em] mb-2">
-                  "I need to draft the docs real time during the calls"
+                  “I need to draft the docs in real time during the call”
                 </h3>
                 <p className="text-[17px] leading-relaxed text-muted-foreground">
-                  Timing is of essence for sales and marketing reps. They often draft docs as they go over the
-                  requirements and solutions with clients on calls.
+                  Sales and marketing users often draft documents while on calls, aligning scope and content in real time. They needed to create proposals or one-pagers during the conversation rather than deferring to a follow-up. The extension therefore had to support fast, minimal-step creation with familiar patterns and clear save locations.
                 </p>
               </div>
 
               <div>
                 <h3 className="font-serif text-xl leading-[1.3] tracking-[-0.02em] mb-2">
-                  "There are too many templates and I usually need a few"
+                  “There are too many templates—I usually need the same few”
                 </h3>
                 <p className="text-[17px] leading-relaxed text-muted-foreground">
-                  Some users needed to find a template quickly while drafting documents. Finding the right template
-                  required extra energy and attention.
+                  Although a large template library is a product strength, many users reported relying on a small subset of templates repeatedly. A “starred” or favorites layer was introduced to surface frequently used templates and reduce time spent searching, prioritizing efficiency over discovery.
                 </p>
               </div>
             </div>
@@ -173,18 +170,23 @@ export default function PandaDocCaseStudy() {
           <section id="solution" className="mb-16">
             <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-4">Solution</p>
             <h2 className="font-serif text-[2rem] leading-[1.2] tracking-[-0.02em] mb-6 text-balance">
-              Divide and conquer: project stages
+              Solution approach and prioritization
             </h2>
 
             <div className="space-y-8 max-w-[750px]">
               <p className="text-[17px] leading-relaxed text-muted-foreground">
-                After discussions with developers I decided to move "rich" notifications feature to version 2 since it
-                required more resources.
+                The initial scope included: view tracking, in-browser drafting, template shortcuts, rich in-app
+                notifications. Alignment with engineering made it clear that delivering all of these in v1 would
+                delay launch and limit learning from real usage. The team prioritized three core capabilities: opening and creating documents from the browser,
+                visibility into when a proposal had been viewed, and quick access to frequently used templates.
+                Richer, contextual notifications (as an alternative to email) were deferred to v2 so the extension
+                could be released earlier and usage patterns could inform the next phase.
               </p>
 
               <p className="text-[17px] leading-relaxed text-muted-foreground">
-                I designed "starred" templates for quick access to users' most commonly used templates. This feature was
-                added to version 3.
+                The starred-templates feature was informed by research showing that users relied on a small set of
+                templates. The design allowed users to mark their most-used templates and surface them at the top of
+                the extension. This reduced search time and supported faster drafting. This was delivered in a follow-up release after validation of the core flow.
               </p>
             </div>
 
@@ -203,30 +205,36 @@ export default function PandaDocCaseStudy() {
           <section id="outcomes" className="mb-16 p-8 bg-[#F5F3F0] rounded-xl max-w-3xl">
             <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-4">Outcomes</p>
             <h2 className="font-serif text-[2rem] leading-[1.2] tracking-[-0.02em] mb-6 text-balance">
-              Rolled out to beta testers
+              Rollout and metrics
             </h2>
 
             <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
               <p>
-                The PandaDoc Extension is an ongoing project. This extension was rolled out to a specific cohort of
-                active users, the team will collect the data and make decisions on the next steps based on the market
-                traction and feedback.
+                The extension was released to a beta cohort of active PandaDoc users—those most affected by
+                context-switching between tools. A phased rollout was chosen to observe usage in real workflows: retention,
+                sharing, and impact on use of the main product. The
+                answers will drive what we build next—including whether and how we bring those “rich” notifications
+                back.
               </p>
-              <p className="font-medium text-foreground text-[17px]">Metrics to be monitored further:</p>
+              <p className="font-medium text-foreground text-[17px]">Metrics in focus:</p>
               <ul className="space-y-3 text-[17px]">
                 <li className="flex gap-4">
                   <span className="mt-1">•</span>
-                  <span>Retention to the extension</span>
+                  <span>Extension retention (ongoing use vs. drop-off after first use)</span>
                 </li>
                 <li className="flex gap-4">
                   <span className="mt-1">•</span>
-                  <span>Number of new accounts coming from the extension source</span>
+                  <span>New signups attributed to the Chrome Web Store and their subsequent behavior</span>
                 </li>
                 <li className="flex gap-4">
                   <span className="mt-1">•</span>
-                  <span>Conversion to paid of the new and current accounts coming from the extension source</span>
+                  <span>Conversion to paid—for both new users and existing users who adopt the extension</span>
                 </li>
               </ul>
+              <p>
+                The team is also working with marketing to make the store listing speak to the right people: sales and
+                revenue teams who are seeking reduced context-switching and document workflow within their existing tools.
+              </p>
             </div>
           </section>
 
@@ -237,16 +245,15 @@ export default function PandaDocCaseStudy() {
             </h2>
             <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
               <p>
-                The project highlighted the importance of user research and iterative design. By understanding the needs
-                of my users, I was able to create a more intuitive and efficient document management solution.
+                Framing the problem around the user’s workflow—rather than as a product feature—clarified the extension’s role. Focusing on what happens between sending a proposal and closing a deal made the requirements easier to prioritize. User quotes such as “Have they already reviewed my proposal?” helped align the team on who the product was for and what problems it needed to solve.
               </p>
               <p>
-                Collaborating with developers early in the process also proved beneficial. It allowed me to prioritize
-                features that were feasible to implement within my timeframe and resources.
+                Involving engineering early enabled realistic scoping and explicit tradeoffs. Deferring rich notifications to v2 allowed the team to ship a smaller first version and learn from usage instead of cutting scope at the last minute. The approach of shipping a focused release, learning, then expanding is one I aim to apply in future projects.
               </p>
               <p>
-                Feedback from beta testers has been invaluable in guiding further development. Their insights have
-                helped me refine the extension and improve the user experience.
+                Beta feedback has been constructive: users have highlighted both unmet expectations and underused features. Those signals will inform v2,
+                including notification design, potential CRM integration, and refinements to the Chrome Web Store
+                positioning for sales and revenue teams.
               </p>
             </div>
           </section>

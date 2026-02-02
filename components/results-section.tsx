@@ -20,8 +20,8 @@ export function ResultsSection() {
       <div className="absolute bottom-32 right-16 w-2 h-2 rounded-full bg-accent/10" />
 
       <div className="container mx-auto px-6 lg:px-12 relative">
-        <h2 className="font-serif text-3xl md:text-4xl font-normal mb-3 tracking-[-0.02em] leading-[1.1]">
-          Proven impact for growing companies
+        <h2 className="font-serif text-3xl md:text-4xl font-normal mb-2 tracking-[-0.02em] leading-[1.1]">
+          Results that speak for themselves
         </h2>
 
         <p className="text-[15px] text-muted-foreground mb-12 leading-relaxed max-w-2xl">

@@ -3,19 +3,19 @@ import { ArrowUpRight } from "lucide-react"
 export function ArticlesSection() {
   const articles = [
     {
-      title: "Analyzing the Replika app: ethics of an AI avatar chatbot with 30M users",
+      title: "Replika: ethics of an AI chatbot with 30M users",
       description: "AI, avatars, and mental health",
       link: "https://uxdesign.cc/replika-ais-secret-to-30m-users-what-makes-it-so-special-8afb61f1181c?postPublishedType=repub",
       gradient: "from-[#1a4d4d] via-[#2d7373] to-[#4a9d9d]",
     },
     {
-      title: "I trust you not—or How to build trust with AI products",
+      title: "How to build trust with AI products",
       description: "Trust me, I'm (not) a robot",
       link: "https://uxdesign.cc/i-trust-you-not-or-how-to-build-trust-with-ai-products-1fc934f131bf",
       gradient: "from-[#4a5b8a] via-[#6b7ba8] to-[#8ba3c7]",
     },
     {
-      title: "Why over 100 million athletes are hooked on Strava",
+      title: "Why 100M+ athletes are hooked on Strava",
       description: "The psychology behind Strava's addictive community features.",
       link: "https://uxdesign.cc/why-over-100-million-athletes-are-hooked-on-strava-545708e17552",
       gradient: "from-[#2d4a6d] via-[#4d6a8d] to-[#7d9abd]",
@@ -30,8 +30,8 @@ export function ArticlesSection() {
           <span className="uppercase text-[13px] text-muted-foreground/70 font-mono tracking-wide">Know more</span>
         </div>
 
-        <h2 className="font-serif text-3xl md:text-4xl font-normal mb-12 tracking-[-0.02em] leading-[1.1]">
-          My deep dive articles
+        <h2 className="font-serif text-3xl md:text-4xl font-normal mb-8 tracking-[-0.02em] leading-[1.1]">
+          Deep dives on AI, trust & product
         </h2>
 
         <div className="grid gap-8 md:grid-cols-3">
@@ -53,7 +53,7 @@ export function ArticlesSection() {
               />
 
               <div className="relative z-10">
-                <h3 className="font-serif text-[22px] mb-3 tracking-[-0.02em] leading-[1.2] group-hover:text-white transition-colors duration-500">
+                <h3 className="font-serif text-[22px] mb-2 tracking-[-0.02em] leading-[1.15] group-hover:text-white transition-colors duration-500">
                   {article.title}
                 </h3>
                 <p className="text-muted-foreground mb-4 leading-relaxed group-hover:text-white/90 transition-colors duration-500">

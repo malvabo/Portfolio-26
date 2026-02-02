@@ -20,17 +20,18 @@ export function LuminaraSection() {
     <section className="container mx-auto px-8 lg:px-12 py-8 md:py-12">
       <div className="border-t border-gray-300 mb-10" />
 
-      <h2 className="text-2xl md:text-3xl leading-tight font-serif mb-8">
-        Luminara - Dual Mental Health Platform for Seamless Care
+      <h2 className="text-2xl md:text-3xl leading-[1.1] font-serif mb-6 tracking-tight">
+        Luminara — One experience for clients and clinicians
       </h2>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 mb-10">
         <div>
           <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">About</h3>
           <p className="text-base leading-relaxed text-foreground">
-            Created a dual-sided mental health platform with a calming Client Sanctuary for patients and a
-            high-efficiency portal for providers. Used behavioral principles to simplify scheduling and integrate
-            wellness tools into clinical workflows, balancing premium care with practice management.
+            Led product design for dual-sided mental health platform (client + provider). Defined strategy and
+            UX for client-facing sanctuary and provider portal; designed scheduling, wellness tools, and
+            clinical workflow integration. Applied behavioral design to reduce friction; balanced care experience
+            with practice management.
           </p>
         </div>
 

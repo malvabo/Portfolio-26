@@ -37,12 +37,11 @@ export function ContactSection() {
       <div className="container mx-auto px-6 lg:px-12">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="font-serif text-3xl md:text-4xl leading-tight mb-4 text-balance tracking-[-0.02em]">
-              Let's create something exceptional together
+            <h2 className="font-serif text-3xl md:text-4xl leading-[1.1] mb-3 text-balance tracking-[-0.02em]">
+              Ready to build something that matters
             </h2>
             <p className="text-base leading-relaxed text-muted-foreground max-w-2xl mx-auto">
-              Available for select projects starting Q2 2025. Whether you need product strategy, design leadership, or
-              hands-on execution, let's talk.
+              Available for select projects from Q2 2025. Strategy, leadership, or hands-on—let's talk.
             </p>
           </div>
 

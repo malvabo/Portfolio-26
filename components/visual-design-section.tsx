@@ -6,8 +6,8 @@ export function VisualDesignSection() {
           <span className="uppercase text-[13px] text-muted-foreground font-mono tracking-wide">{"{05}"} — My designs</span>
         </div>
         
-        <h2 className="font-serif text-[32px] font-normal mb-12 tracking-[-0.02em] leading-[1.2]">
-          Visual design samples
+        <h2 className="font-serif text-[32px] font-normal mb-8 tracking-[-0.02em] leading-[1.15]">
+          From pixels to systems
         </h2>
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">

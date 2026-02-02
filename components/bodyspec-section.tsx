@@ -12,17 +12,18 @@ export function BodySpecSection() {
     <section className="container mx-auto px-8 lg:px-12 py-8 md:py-12">
       <div className="border-t border-gray-300 mb-10" />
 
-      <h2 className="text-2xl md:text-3xl leading-tight font-serif mb-8">
-        BodySpec - Platform That Boosted Bookings by 20% for 500K+ Users
+      <h2 className="text-2xl md:text-3xl leading-[1.1] font-serif mb-6 tracking-tight">
+        BodySpec — 20% more bookings for 500K+ users
       </h2>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 mb-10">
         <div>
           <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">About</h3>
           <p className="text-base leading-relaxed text-foreground">
-            Conducted deep research to identify funnel friction points and streamlined the booking architecture with a
-            value-first narrative. Achieved a 20% increase in bookings across 500K+ users, positioning the company for
-            an $8.6M funding round.
+            Led research, product strategy, and full redesign of web and app for DEXA scan booking (500K+ users).
+            Ran discovery and funnel analysis; defined content architecture, value narrative, and
+            conversion-optimized booking flow; led rebrand and design system. Shipped with eng: 20% lift in
+            bookings, 30% reduction in booking time, $8.6M raised post-launch.
           </p>
           <Link
             href="/projects/bodyspec"
