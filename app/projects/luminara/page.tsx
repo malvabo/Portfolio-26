@@ -28,11 +28,8 @@ export default function LuminaraCaseStudy() {
             <p className="font-mono text-xs text-muted-foreground mb-6 tracking-wider uppercase">
               MENTAL HEALTH PLATFORM
             </p>
-            <p className="font-mono text-xs text-muted-foreground mb-4 tracking-wider uppercase">
-              LUMINARA • JAN 2021 - DEC 2021
-            </p>
             <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl tracking-[-0.02em] leading-[1.2] mb-4 text-balance">
-              Luminara: Crafting a Unique Brand & App Experience
+              Luminara: Crafting a unique brand & app experience
             </h1>
             <p className="text-[17px] leading-relaxed text-muted-foreground">
               Design of luxury mental health service experience for both clients and providers
@@ -62,33 +59,14 @@ export default function LuminaraCaseStudy() {
             <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-4">TLDR</p>
             <h2 className="font-serif text-[2rem] leading-[1.2] tracking-[-0.02em] mb-6 text-balance">At a glance</h2>
 
-            <ul className="space-y-4 text-[17px] leading-relaxed max-w-[750px]">
+            <ul className="space-y-3 text-[15px] leading-relaxed max-w-[750px]">
               <li className="flex gap-3">
-                <span className="text-muted-foreground">•</span>
-                <span>
-                  I designed a comprehensive mental health platform connecting clients with therapists through an
-                  intuitive booking and session management system.
-                </span>
+                <span className="text-muted-foreground mt-0.5">•</span>
+                <span>Mental health: client–therapist booking, sessions, meditation, provider dashboards.</span>
               </li>
               <li className="flex gap-3">
-                <span className="text-muted-foreground">•</span>
-                <span>
-                  I created distinct experiences for clients seeking care and providers managing their practice,
-                  balancing empathy with efficiency.
-                </span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-muted-foreground">•</span>
-                <span>
-                  I developed meditation tools, appointment scheduling, and provider dashboards to support holistic
-                  mental wellness.
-                </span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-muted-foreground">•</span>
-                <span>
-                  The platform launched successfully with high user satisfaction scores and growing provider adoption.
-                </span>
+                <span className="text-muted-foreground mt-0.5">•</span>
+                <span>Strong launch satisfaction and adoption.</span>
               </li>
             </ul>
           </section>

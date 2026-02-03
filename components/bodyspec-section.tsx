@@ -12,7 +12,7 @@ export function BodySpecSection() {
     <section className="container mx-auto px-8 lg:px-12 py-8 md:py-12">
       <div className="border-t border-gray-300 mb-10" />
 
-      <h2 className="text-2xl md:text-3xl leading-[1.1] font-serif mb-6 tracking-tight">
+      <h2 className="text-2xl md:text-3xl leading-[1.1] font-serif mb-10 tracking-tight">
         BodySpec — 20% more bookings for 500K+ users
       </h2>
 
@@ -20,10 +20,7 @@ export function BodySpecSection() {
         <div>
           <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">About</h3>
           <p className="text-base leading-relaxed text-foreground">
-            Led research, product strategy, and full redesign of web and app for DEXA scan booking (500K+ users).
-            Ran discovery and funnel analysis; defined content architecture, value narrative, and
-            conversion-optimized booking flow; led rebrand and design system. Shipped with eng: 20% lift in
-            bookings, 30% reduction in booking time, $8.6M raised post-launch.
+            I overhauled a clinical DXA-scan service to improve user retention and health literacy. By redesigning the information architecture to translate complex medical data into actionable health trends, I shifted the product from a one-off transaction to a recurring health-tracking habit.
           </p>
           <Link
             href="/projects/bodyspec"
@@ -63,7 +60,7 @@ export function BodySpecSection() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-3 lg:gap-12">
         {images.map((image, idx) => (
           <div key={idx} className="relative aspect-[4/3] overflow-hidden rounded-lg bg-gray-50 border border-gray-200">
             <Image src={image.src || "/placeholder.svg"} alt={image.alt} fill className="object-cover" />

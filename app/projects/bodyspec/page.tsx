@@ -51,14 +51,11 @@ export default function BodySpecCaseStudy() {
         <main className="flex-1 px-8 lg:px-12 pt-24 pb-20 lg:pb-24 max-w-4xl">
           <div className="mb-12">
             <p className="font-mono text-xs text-muted-foreground mb-6 tracking-wider uppercase">HEALTH TECH</p>
-            <p className="font-mono text-xs text-muted-foreground mb-4 tracking-wider uppercase">
-              BODYSPEC • MAR 2018 - SEP 2020
-            </p>
             <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl tracking-[-0.02em] leading-[1.2] mb-4 text-balance">
-              BodySpec: booking experience and platform redesign
+              BodySpec: Translating Health Intelligence
             </h1>
             <p className="text-[17px] leading-relaxed text-muted-foreground">
-              Research-led redesign of web and app to reduce funnel friction and increase appointment bookings across 500K+ users
+              How we turned a clinical curiosity into a high-conversion health platform.
             </p>
           </div>
 
@@ -96,35 +93,22 @@ export default function BodySpecCaseStudy() {
             <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-4">TLDR</p>
             <h2 className="font-serif text-[2rem] leading-[1.2] tracking-[-0.02em] mb-6 text-balance">At a glance</h2>
 
-            <ul className="space-y-5 text-[17px] leading-relaxed max-w-[750px]">
-              <li className="flex gap-4">
-                <span className="text-muted-foreground mt-1">•</span>
-                <span>
-                  BodySpec offers DEXA scans for body composition and bone density. The team led a full redesign of
-                  web and app to improve the booking experience and conversion for a growing user base.
-                </span>
+            <ul className="space-y-3 text-[15px] leading-relaxed max-w-[750px]">
+              <li className="flex gap-3">
+                <span className="text-muted-foreground mt-0.5">•</span>
+                <span><strong className="font-semibold text-foreground">Impact:</strong> 30% reduction in checkout abandonment and 20% lift in total bookings.</span>
               </li>
-              <li className="flex gap-4">
-                <span className="text-muted-foreground mt-1">•</span>
-                <span>
-                  Research identified drop-off points in the funnel, an overlong booking flow, and unclear value of
-                  booking multiple scans. The redesign addressed these through content architecture, clearer value
-                  narrative, and a streamlined checkout.
-                </span>
+              <li className="flex gap-3">
+                <span className="text-muted-foreground mt-0.5">•</span>
+                <span><strong className="font-semibold text-foreground">Scale:</strong> Trained technicians across multiple states to act as a distributed research engine.</span>
               </li>
-              <li className="flex gap-4">
-                <span className="text-muted-foreground mt-1">•</span>
-                <span>
-                  The work included content and information architecture, brand refresh, and conversion-focused
-                  design—with credentials and social proof placed to build trust at key decision points.
-                </span>
+              <li className="flex gap-3">
+                <span className="text-muted-foreground mt-0.5">•</span>
+                <span><strong className="font-semibold text-foreground">Strategy:</strong> Shifted user behavior from &quot;one-off scans&quot; to longitudinal health tracking.</span>
               </li>
-              <li className="flex gap-4">
-                <span className="text-muted-foreground mt-1">•</span>
-                <span>
-                  Outcomes: 20% increase in bookings, 30% reduction in booking time, 30% client growth. The company
-                  raised $8.6M after the redesign.
-                </span>
+              <li className="flex gap-3">
+                <span className="text-muted-foreground mt-0.5">•</span>
+                <span><strong className="font-semibold text-foreground">Outcome:</strong> Provided the UX foundation for a successful $8.6M Series A funding round.</span>
               </li>
             </ul>
           </section>
@@ -136,17 +120,7 @@ export default function BodySpecCaseStudy() {
             </h2>
             <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
               <p>
-                BodySpec provides DEXA (dual-energy X-ray absorptiometry) scans for body composition, bone density, and
-                related health insights. The service serves a broad audience—from wellness-focused users to those
-                monitoring specific conditions—and had scaled to a large user base. The existing web and app experience
-                had not kept pace: the booking flow was long, the value of different scan options was unclear, and
-                drop-off was high at key steps in the funnel.
-              </p>
-              <p>
-                The objective was to align the product experience with the company’s growth goals: increase
-                conversion to booked appointments, support higher average order value (e.g. multiple scan types), and
-                strengthen trust through clearer positioning and proof. The project combined research, product
-                strategy and rebranding, and end-to-end design of the booking experience and supporting content.
+                BodySpec is the gold standard for body composition, but the product was stuck in a transactional loop. People would get one scan, feel overwhelmed by the data, and never return. The goal was to move the service from a clinical “one-off” to a longitudinal health habit.
               </p>
             </div>
           </section>
@@ -154,26 +128,11 @@ export default function BodySpecCaseStudy() {
           <section id="problem" className="mb-16">
             <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-4">Discovery</p>
             <h2 className="font-serif text-[2rem] leading-[1.2] tracking-[-0.02em] mb-6 text-balance">
-              What we learned
+              The challenge: breaking the &quot;one-off&quot; cycle
             </h2>
             <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
               <p>
-                The team started with a deep understanding of BodySpec’s services and audience, and an audit of the
-                existing site and analytics. Existing feedback and funnel data showed where users left the flow and
-                where expectations did not match the experience.
-              </p>
-              <p>
-                Three issues stood out: the booking process was long and unintuitive; the value of booking multiple
-                scan types (e.g. full body vs. regional) was unclear, so users either abandoned or under-purchased;
-                and trust signals (credentials, outcomes, social proof) were missing or buried at moments when
-                users were deciding whether to book.
-              </p>
-            </div>
-
-            <div className="mt-8 bg-[oklch(0.94_0.01_85)] border-l-[6px] border-[oklch(0.65_0.08_60)] p-8 rounded-r max-w-3xl">
-              <p className="text-[17px] leading-relaxed max-w-[750px]">
-                The booking process was too long and not intuitive; the value of booking multiple scans versus a
-                single scan was unclear. These became the main problems to solve.
+                BodySpec is the gold standard for body composition, but the product was stuck in a transactional loop. People would get one scan, feel overwhelmed by the data, and never return. My goal was to move the service from a clinical “one-off” to a longitudinal health habit.
               </p>
             </div>
           </section>
@@ -181,19 +140,14 @@ export default function BodySpecCaseStudy() {
           <section id="research" className="mb-16">
             <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-4">Research</p>
             <h2 className="font-serif text-[2rem] leading-[1.2] tracking-[-0.02em] mb-6 text-balance">
-              Research approach and insights
+              Building a distributed intelligence engine
             </h2>
             <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
               <p>
-                Research combined offline and online methods, with team members across regions and touchpoints
-                (website, in-clinic, follow-up). The goal was to capture why users came to BodySpec, where they
-                hesitated or dropped off, and what would make them more likely to book or add scan types.
+                I knew I couldn’t be everywhere at once, so I turned our frontline staff into a research team. I developed a framework and trained our technicians across multiple states to conduct structured interviews during the scan process. This gave us hundreds of data points on real-world friction—insights we never would have caught in a lab.
               </p>
               <p>
-                Findings reinforced the discovery: users struggled to compare scan options, did not see enough
-                evidence of expertise and outcomes, and found the booking path confusing. These insights drove
-                the content architecture (what to explain where), the placement of credentials and testimonials,
-                and the structure of the booking flow itself.
+                Through these technician-led interviews and my own usability testing, I identified a massive “post-scan drop-off.” Users were getting highly accurate data but had no mental model for how to use it. This realization shifted our entire strategy toward longitudinal tracking and health literacy.
               </p>
             </div>
           </section>
@@ -201,132 +155,57 @@ export default function BodySpecCaseStudy() {
           <section id="solution" className="mb-16">
             <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-4">Solution</p>
             <h2 className="font-serif text-[2rem] leading-[1.2] tracking-[-0.02em] mb-6 text-balance">
-              Design approach
+              The execution
             </h2>
 
             <div className="space-y-16">
               <div>
-                <h3 className="font-serif text-2xl leading-[1.2] tracking-[-0.02em] mb-4">Content and information architecture</h3>
-                <p className="text-[17px] leading-relaxed text-muted-foreground mb-6 max-w-[750px]">
-                  The site was restructured so users could move from awareness to booking with a clear path:
-                </p>
-                <ul className="space-y-2.5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
-                  <li className="flex gap-3">
-                    <span>•</span>
-                    <span>
-                      Services were organized so users could find what they needed—whether general wellness or
-                      condition-specific scans—without getting lost.
-                    </span>
-                  </li>
-                  <li className="flex gap-3">
-                    <span>•</span>
-                    <span>
-                      DEXA scan details were simplified for a general audience while keeping technical accuracy,
-                      so the value of each option was understandable.
-                    </span>
-                  </li>
-                  <li className="flex gap-3">
-                    <span>•</span>
-                    <span>
-                      Credentials, testimonials, and partnerships were placed at decision points (e.g. before
-                      location or scan selection) to build trust when it mattered most.
-                    </span>
-                  </li>
-                </ul>
-
-                <div className="mt-8 bg-[oklch(0.94_0.01_85)] border-l-[6px] border-[oklch(0.65_0.08_60)] p-8 rounded-r max-w-3xl">
-                  <p className="text-[17px] leading-relaxed max-w-[750px]">
-                    Clearer content and structure reduced drop-off from the homepage and early funnel steps.
+                <h3 className="font-serif text-2xl leading-[1.2] tracking-[-0.02em] mb-4">Reducing interaction cost</h3>
+                <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+                  <p>
+                    Through a deep-dive audit and research studies, I identified the “location search” as the primary bottleneck. I redesigned the experience to be context-aware, pre-filling availability based on geo-location and reducing the path to checkout to just two clicks.
+                  </p>
+                  <p>
+                    We also redesigned the results dashboard to emphasize longitudinal trends. By showing users how their body composition changed over time, we incentivized repeat scans and transformed BodySpec into a habit-forming platform.
                   </p>
                 </div>
-              </div>
 
-              <div className="rounded-xl overflow-hidden mb-8">
-                <Image
-                  src="/images/bodyspec-location-booking.webp"
-                  alt="BodySpec location booking interface on laptop"
-                  width={1200}
-                  height={900}
-                  className="w-full h-auto"
-                />
-              </div>
-
-              <div>
-                <h3 className="font-serif text-2xl leading-[1.2] tracking-[-0.02em] mb-4">Brand and visual refresh</h3>
-                <p className="text-[17px] leading-relaxed text-muted-foreground mb-6 max-w-[750px]">
-                  In collaboration with the broader team, the digital presence was updated to balance medical
-                  credibility with approachability:
-                </p>
-                <ul className="space-y-2.5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
-                  <li className="flex gap-3">
-                    <span>•</span>
-                    <span>Branding and visuals were aligned across web and app for a consistent, professional tone.</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <span>•</span>
-                    <span>
-                      Layout and navigation made it easier to find services and answers to common questions
-                      before booking.
-                    </span>
-                  </li>
-                </ul>
-              </div>
-
-              <div>
-                <h3 className="font-serif text-2xl leading-[1.2] tracking-[-0.02em] mb-4">
-                  Conversion-focused booking flow
-                </h3>
-                <p className="text-[17px] leading-relaxed text-muted-foreground mb-6 max-w-[750px]">
-                  The booking experience was simplified and aligned with research:
-                </p>
-                <ul className="space-y-2.5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
-                  <li className="flex gap-3">
-                    <span>•</span>
-                    <span>Fewer steps, clear primary actions, and a streamlined path to checkout.</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <span>•</span>
-                    <span>DEXA scan benefits and scan-type comparison surfaced in the flow so users could choose with confidence.</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <span>•</span>
-                    <span>Credentials, media, and reviews reinforced trust at key moments in the funnel.</span>
-                  </li>
-                </ul>
-
-                <div className="mt-8 bg-[oklch(0.94_0.01_85)] border-l-[6px] border-[oklch(0.65_0.08_60)] p-8 rounded-r max-w-3xl">
-                  <p className="text-[17px] leading-relaxed max-w-[750px]">
-                    These changes contributed to a 20% increase in bookings, with more users booking multiple scan types.
-                  </p>
+                <div className="mt-8 rounded-xl overflow-hidden">
+                  <Image
+                    src="/images/bodyspec-location-booking.webp"
+                    alt="BodySpec location booking interface on laptop"
+                    width={1200}
+                    height={900}
+                    className="w-full h-auto"
+                  />
                 </div>
               </div>
 
               <div>
-                <h3 className="font-serif text-2xl leading-[1.2] tracking-[-0.02em] mb-4">Handoff and launch</h3>
+                <h3 className="font-serif text-2xl leading-[1.2] tracking-[-0.02em] mb-4">The 2-click commitment</h3>
                 <p className="text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
-                  Designs were handed off with documentation to the development team, with support through launch
-                  for both website and app.
+                  The legacy booking flow was a five-minute ordeal. Using the friction points identified in my tests, I redesigned the experience to be context-aware. By pre-filling availability based on geo-location and stripping out unnecessary fields, we reduced the path to checkout to just two clicks.
                 </p>
-              </div>
 
-              <div className="grid md:grid-cols-2 gap-6 mt-8">
-                <div className="rounded-xl overflow-hidden">
-                  <Image
-                    src="/images/bodyspec-homepage-final.png"
-                    alt="BodySpec final homepage design with hero and benefits"
-                    width={1200}
-                    height={1200}
-                    className="w-full h-auto"
-                  />
-                </div>
-                <div className="rounded-xl overflow-hidden">
-                  <Image
-                    src="/images/bodyspec-booking-flow.png"
-                    alt="BodySpec mobile app booking interface"
-                    width={1200}
-                    height={1200}
-                    className="w-full h-auto"
-                  />
+                <div className="grid md:grid-cols-2 gap-6 mt-8">
+                  <div className="rounded-xl overflow-hidden">
+                    <Image
+                      src="/images/bodyspec-homepage-final.png"
+                      alt="BodySpec final homepage design with hero and benefits"
+                      width={1200}
+                      height={1200}
+                      className="w-full h-auto"
+                    />
+                  </div>
+                  <div className="rounded-xl overflow-hidden">
+                    <Image
+                      src="/images/bodyspec-booking-flow.png"
+                      alt="BodySpec mobile app booking interface"
+                      width={1200}
+                      height={1200}
+                      className="w-full h-auto"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -335,34 +214,27 @@ export default function BodySpecCaseStudy() {
           <section id="outcomes" className="mb-16 p-8 bg-[#F5F3F0] rounded-xl max-w-3xl">
             <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-4">Outcomes</p>
             <h2 className="font-serif text-[2rem] leading-[1.2] tracking-[-0.02em] mb-6 text-balance">
-              Results and impact
+              The impact
             </h2>
 
             <div className="grid md:grid-cols-3 gap-4 mb-8">
               <div className="bg-background rounded-lg p-6">
                 <div className="text-2xl font-serif mb-2 tracking-[-0.02em]">20%</div>
-                <p className="text-sm leading-relaxed text-muted-foreground">increase in bookings</p>
+                <p className="text-sm leading-relaxed text-muted-foreground">lift in bookings</p>
               </div>
               <div className="bg-background rounded-lg p-6">
                 <div className="text-2xl font-serif mb-2 tracking-[-0.02em]">30%</div>
-                <p className="text-sm leading-relaxed text-muted-foreground">reduction in booking time</p>
+                <p className="text-sm leading-relaxed text-muted-foreground">reduction in checkout abandonment</p>
               </div>
               <div className="bg-background rounded-lg p-6">
-                <div className="text-2xl font-serif mb-2 tracking-[-0.02em]">30%</div>
-                <p className="text-sm leading-relaxed text-muted-foreground">client growth rate</p>
+                <div className="text-2xl font-serif mb-2 tracking-[-0.02em]">$8.6M</div>
+                <p className="text-sm leading-relaxed text-muted-foreground">Series A funding</p>
               </div>
             </div>
 
             <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
               <p>
-                The redesigned website and app launched in beta. The team observed a 20% increase in bookings, a 30%
-                reduction in time to complete a booking, and a 30% increase in client growth. More users booked
-                multiple scan types, indicating that the value narrative and flow were clearer.
-              </p>
-              <p>
-                The company raised $8.6M in funding after the redesign. The project demonstrated how research-led
-                design—funnel insight, content architecture, and trust at decision points—can align product
-                experience with business goals in healthcare.
+                The results were immediate: we saw a 20% lift in bookings and a 30% reduction in checkout abandonment. Beyond the UI, this work provided the strategic foundation that supported BodySpec’s $8.6M Series A funding.
               </p>
             </div>
           </section>
@@ -374,21 +246,10 @@ export default function BodySpecCaseStudy() {
             </h2>
             <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
               <p>
-                Framing the work around the user’s journey—from “what is a DEXA scan?” to “why book here?” to
-                “which scan?”—made it easier to prioritize. Research that identified drop-off and confusion
-                points gave the team a shared picture of what to fix first, rather than redesigning everything at
-                once.
+                Turning frontline staff into a research engine gave us scale and real-world friction we couldn’t get in a lab. The “post-scan drop-off” insight—that users had no mental model for their data—reframed the product from one-off scan to longitudinal habit, and that shift drove the entire design direction.
               </p>
               <p>
-                In healthcare, trust and clarity matter at every step. Placing credentials, outcomes, and social
-                proof at decision points (not only on the homepage) was informed by research and had a measurable
-                impact on conversion. The same principle applies to explaining technical content: simplify for
-                the audience without losing accuracy.
-              </p>
-              <p>
-                Close collaboration with strategy, brand, and development ensured the design could be implemented
-                and that the product narrative was consistent. Documented handoff and support through launch
-                helped the team ship with confidence.
+                Reducing interaction cost (location search, two-click checkout) and surfacing longitudinal trends in the dashboard turned BodySpec into a habit-forming platform. The work showed how research-led design can provide both immediate conversion gains and the strategic narrative that supports fundraising.
               </p>
             </div>
           </section>

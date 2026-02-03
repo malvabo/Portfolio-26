@@ -4,8 +4,8 @@ export function TestimonialsSection() {
   const testimonials = [
     {
       title: "Critical in AI development",
-      keyPhrase: "joy to work with",
-      text: "Her role was critical in the development of our AI-driven solution. Perhaps most impressive was her ability to make complex systems accessible and user-friendly, consistently identifying and rectifying any logical flaws. On a personal level, she was a joy to work with—friendly, funny and an excellent communicator.",
+      keyPhrase: "excellent communicator",
+      text: "On a personal level, she was a joy to work with—friendly, funny and an excellent communicator.",
       author: "Ophelie Jaschke",
       role: "CEO at lenox AI",
       linkedin: "#",
@@ -15,7 +15,7 @@ export function TestimonialsSection() {
     {
       title: "Outstanding skills",
       keyPhrase: "meticulous attention to details",
-      text: "I strongly recommend working together on multiple projects, and the skills are outstanding. Great at understanding user needs and pays meticulous attention to details.",
+      text: "Great at understanding user needs and pays meticulous attention to details.",
       author: "Igor Stefaniuk",
       role: "Principal Product Manager at PandaDoc",
       linkedin: "#",
@@ -25,7 +25,7 @@ export function TestimonialsSection() {
     {
       title: "Invaluable asset to any team",
       keyPhrase: "invaluable asset to any team",
-      text: "There's not enough room here for me to say all the great things I can say about this designer - both personally and professionally. Their ability to understand, incorporate feedback, and take action in a variety of areas make them an invaluable asset to any team. Very fast and communicative. These are the things that quickly build trust. Lastly, they are fun. Delightful and easy to get along with.",
+      text: "Their ability to understand, incorporate feedback, and take action make them an invaluable asset to any team. Fast, communicative, and a pleasure to work with.",
       author: "Roy Shi",
       role: "CEO at Bodyspec",
       linkedin: "#",
@@ -34,7 +34,7 @@ export function TestimonialsSection() {
     {
       title: "Thorough and analytical",
       keyPhrase: "push the team to build with purpose",
-      text: "Very thorough and analytical and is always considering the big picture and how their designs align with the product vision and user needs. They question the status quo and are constantly asking the tough questions that push the team to build with purpose.",
+      text: "They question the status quo and ask the tough questions that push the team to build with purpose.",
       author: "Carla Ruiz Entrecanales",
       role: "Venture Builder at ColdStart",
       linkedin: "#",
@@ -43,7 +43,7 @@ export function TestimonialsSection() {
     {
       title: "Incredibly talented designer",
       keyPhrase: "go above and beyond",
-      text: "An incredibly talented designer who has impressed me with their attention to detail, ability to create complex user journeys. Not only a skilled designer but also a pleasure to work with. They have a positive attitude and always go above and beyond.",
+      text: "A pleasure to work with—positive attitude and always go above and beyond.",
       author: "Nikolay Stefanov",
       role: "R&D Manager at BGO Software",
       linkedin: "#",
@@ -51,8 +51,8 @@ export function TestimonialsSection() {
     },
     {
       title: "Drives projects to completion",
-      keyPhrase: "drive it to completion",
-      text: "A strong product designer who can immerse themselves entirely in the project to drive it to completion.",
+      keyPhrase: "Immerses themselves entirely",
+      text: "Immerses themselves entirely in the project to drive it to completion.",
       author: "Konstantin Valiotti",
       role: "Director of Product at PandaDoc",
       linkedin: "#",
@@ -77,43 +77,40 @@ export function TestimonialsSection() {
   }
 
   return (
-    <section className="relative py-12 md:py-16 container mx-auto px-8 lg:px-12 overflow-hidden">
+    <section className="relative py-8 md:py-10 container mx-auto px-8 lg:px-12 overflow-hidden">
       <div className="absolute inset-0 opacity-[0.03]">
         <div className="absolute top-1/4 left-1/3 w-[800px] h-[800px] rounded-full bg-gradient-to-br from-purple-500 to-pink-500 blur-[120px]" />
       </div>
 
       <div className="relative max-w-7xl mx-auto">
-        <div className="flex items-center gap-2 mb-4">
-          <span className="uppercase text-[13px] text-muted-foreground/70 font-mono tracking-wide">{"{04}"}</span>
+        <div className="flex items-center gap-2 mb-6">
           <span className="uppercase text-[13px] text-muted-foreground/70 font-mono tracking-wide">TESTIMONIALS</span>
         </div>
 
-        <h2 className="font-serif text-3xl md:text-4xl leading-[1.1] mb-8 tracking-[-0.02em]">
+        <h2 className="font-serif text-2xl md:text-3xl leading-[1.1] tracking-tight text-foreground mb-6">
           What teams I've worked with say
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-[#f1f1f1] rounded-2xl p-8 h-full flex flex-col">
-              <h3 className="text-xl font-medium mb-4 leading-tight tracking-tight">{testimonial.title}</h3>
-
-              <p className="text-base leading-relaxed text-foreground/70 mb-8 flex-grow">
-                {highlightPhrase(testimonial.text, testimonial.keyPhrase)}
+            <div key={index} className="bg-[#f1f1f1] rounded-xl p-5 h-full flex flex-col">
+              <p className="text-sm md:text-base leading-relaxed text-foreground/90 mb-4 flex-grow font-serif">
+                &ldquo;{highlightPhrase(testimonial.text, testimonial.keyPhrase)}&rdquo;
               </p>
 
-              <div className="flex items-center gap-3 pt-6 border-t border-border/30">
-                <div className="w-12 h-12 rounded-full overflow-hidden bg-muted flex-shrink-0">
+              <div className="flex items-center gap-3 pt-4 border-t border-border/30">
+                <div className="w-10 h-10 rounded-full overflow-hidden bg-muted flex-shrink-0 ring-2 ring-white shadow-sm">
                   <Image
                     src={testimonial.avatar || "/placeholder.svg"}
                     alt={testimonial.author}
-                    width={48}
-                    height={48}
+                    width={40}
+                    height={40}
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div>
-                  <p className="text-sm font-medium">{testimonial.author}</p>
-                  <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                  <p className="text-sm font-semibold text-foreground">{testimonial.author}</p>
+                  <p className="text-xs font-medium text-muted-foreground mt-0.5">{testimonial.role}</p>
                 </div>
               </div>
             </div>

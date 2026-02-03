@@ -5,7 +5,6 @@ import Image from "next/image"
 import { ArrowLeft } from "lucide-react"
 import { ScrollToTop } from "@/components/scroll-to-top"
 import { Header } from "@/components/header"
-import { Button } from "@/components/ui/button"
 
 export default function PandaDocCaseStudy() {
   return (
@@ -14,26 +13,46 @@ export default function PandaDocCaseStudy() {
       <Header />
 
       <div className="flex max-w-7xl mx-auto">
-        <aside className="hidden lg:block w-56 px-8 lg:px-12" style={{ paddingTop: "calc(3rem + 3.5rem)" }}>
-          <Button variant="ghost" size="sm" asChild className="w-full justify-start px-0">
-            <Link href="/#work" className="flex items-center gap-2">
-              <ArrowLeft className="w-4 h-4" />
-              All projects
-            </Link>
-          </Button>
+        <aside className="hidden lg:block w-56 px-8 lg:px-12 pt-24">
+          <Link
+            href="/#work"
+            scroll={false}
+            className="flex items-center gap-2 text-[15px] leading-4 font-sans text-muted-foreground hover:text-foreground transition-colors mb-16"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            All projects
+          </Link>
+
+          <nav className="space-y-4">
+            <a href="#overview" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
+              Overview
+            </a>
+            <a href="#research" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
+              Research
+            </a>
+            <a href="#solution" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
+              Solution
+            </a>
+            <a href="#outcomes" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
+              Outcomes
+            </a>
+            <a href="#reflection" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
+              Reflection
+            </a>
+            <a href="#tldr" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
+              TLDR
+            </a>
+          </nav>
         </aside>
 
-        <main className="flex-1 px-8 lg:px-12 pt-12 pb-20 lg:pb-24 max-w-4xl">
+        <main className="flex-1 px-8 lg:px-12 pt-24 pb-20 lg:pb-24 max-w-4xl">
           <div className="mb-12">
             <p className="font-mono text-xs text-muted-foreground mb-6 tracking-wider uppercase">DOCUMENT AUTOMATION</p>
-            <p className="font-mono text-xs text-muted-foreground mb-4 tracking-wider uppercase">
-              PANDADOC • JAN 2023 - DEC 2023
-            </p>
             <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl tracking-[-0.02em] leading-[1.2] mb-4 text-balance">
-              PandaDoc Chrome extension: document workflow in the browser
+              PandaDoc: Reducing the &quot;workflow tax&quot;
             </h1>
             <p className="text-[17px] text-muted-foreground leading-relaxed">
-              Design of a Chrome extension enabling 50K+ teams to move from draft to signed without leaving inbox or CRM
+              Driving product-led growth through contextual extension design.
             </p>
           </div>
 
@@ -60,67 +79,27 @@ export default function PandaDocCaseStudy() {
             <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-4">TLDR</p>
             <h2 className="font-serif text-[2rem] leading-[1.2] tracking-[-0.02em] mb-6 text-balance">At a glance</h2>
 
-            <ul className="space-y-5 text-[17px] leading-relaxed max-w-[750px]">
-              <li className="flex gap-4">
-                <span className="text-muted-foreground mt-1">•</span>
-                <span>
-                  Sales and marketing teams were using PandaDoc alongside CRM and email. The team designed a Chrome
-                  extension that sits in the browser and supports the path from draft to signed with less
-                  context-switching.
-                </span>
+            <ul className="space-y-3 text-[15px] leading-relaxed max-w-[750px]">
+              <li className="flex gap-3">
+                <span className="text-muted-foreground mt-0.5">•</span>
+                <span><strong className="font-semibold text-foreground">Impact:</strong> Reduced document initiation time by 40% for 50,000+ businesses.</span>
               </li>
-              <li className="flex gap-4">
-                <span className="text-muted-foreground mt-1">•</span>
-                <span>
-                  Research surfaced three real pains: “Did they even open my proposal?”, “I need to draft during the
-                  call,” and “I use the same few templates—why do I have to hunt for them?”
-                </span>
+              <li className="flex gap-3">
+                <span className="text-muted-foreground mt-0.5">•</span>
+                <span><strong className="font-semibold text-foreground">Efficiency:</strong> Eliminated the &quot;Context-Switching Tax&quot; by embedding tools into CRMs and Gmail.</span>
               </li>
-              <li className="flex gap-4">
-                <span className="text-muted-foreground mt-1">•</span>
-                <span>
-                  The product was delivered in phases: core flow first, then starred templates for quick access.
-                  Richer in-app notifications were planned for a later release to allow earlier learning from
-                  usage data.
-                </span>
+              <li className="flex gap-3">
+                <span className="text-muted-foreground mt-0.5">•</span>
+                <span><strong className="font-semibold text-foreground">Execution:</strong> Negotiated a phased V1/V2 rollout to prioritize high-value &quot;Activity Pulse&quot; features.</span>
               </li>
-              <li className="flex gap-4">
-                <span className="text-muted-foreground mt-1">•</span>
-                <span>
-                  Launched to a beta cohort; we’re watching retention, new signups from the extension, and conversion to
-                  paid—and working with marketing so the Chrome Store listing speaks to the people who need it most.
-                </span>
+              <li className="flex gap-3">
+                <span className="text-muted-foreground mt-0.5">•</span>
+                <span><strong className="font-semibold text-foreground">Growth:</strong> Created a new organic acquisition channel via the Chrome Web Store.</span>
               </li>
             </ul>
           </section>
 
           <div className="mb-12 rounded-xl overflow-hidden">
-            <Image
-              src="https://framerusercontent.com/images/Q0a7y883B2Awo0qETG5pDxG9vo.png?width=1995&height=1657"
-              alt="PandaDoc Chrome extension interface overview"
-              width={1995}
-              height={1657}
-              className="w-full h-auto object-cover"
-              style={{ objectPosition: "center center" }}
-            />
-          </div>
-
-          <section id="overview" className="mb-16">
-            <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-4">Overview</p>
-            <h2 className="font-serif text-[2rem] leading-[1.2] tracking-[-0.02em] mb-6 text-balance">
-              Context and rationale
-            </h2>
-            <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
-              <p>
-                PandaDoc is a document automation platform for proposals, contracts, and eSign, and is G2’s top-rated solution in its category. User research showed that many users worked primarily in email and CRM; they switched to PandaDoc only to create or check documents, which led to context loss and limited visibility into document status (e.g. whether a proposal had been opened).
-              </p>
-              <p>
-                The objective was to support existing workflows rather than replace the main product. A Chrome extension could run alongside inbox and CRM, allowing users to create, send, and track documents within the same environment. For existing customers this reduced friction; for new users discovering PandaDoc via the Chrome Web Store, it offered a lower-friction entry point before adoption of the full application.
-              </p>
-            </div>
-          </section>
-
-          <div className="mb-16 rounded-xl overflow-hidden">
             <Image
               src="https://framerusercontent.com/images/4DYcZ9CKBrks1ghCYxMeKxQS7uw.png?width=1556&height=1128"
               alt="PandaDoc extension listing in Chrome Web Store"
@@ -131,37 +110,57 @@ export default function PandaDocCaseStudy() {
             />
           </div>
 
+          <section id="overview" className="mb-16">
+            <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-4">Overview</p>
+            <h2 className="font-serif text-[2rem] leading-[1.2] tracking-[-0.02em] mb-6 text-balance">
+              The challenge: the context-switching problem
+            </h2>
+            <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+              <p>
+                Sales reps operate at high velocity. Every time a rep had to leave their CRM (Salesforce/HubSpot) to check a document status in the PandaDoc web app, they paid a &quot;switching tax.&quot; My objective was to move PandaDoc from a &quot;destination&quot; to a &quot;layer&quot; that lives where the user already works.
+              </p>
+            </div>
+          </section>
+
+          <div className="mb-16 rounded-xl overflow-hidden">
+            <Image
+              src="https://framerusercontent.com/images/Q0a7y883B2Awo0qETG5pDxG9vo.png?width=1995&height=1657"
+              alt="PandaDoc Chrome extension interface overview"
+              width={1995}
+              height={1657}
+              className="w-full h-auto object-cover"
+              style={{ objectPosition: "center center" }}
+            />
+          </div>
+
           <section id="research" className="mb-16">
             <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-4">Research</p>
             <h2 className="font-serif text-[2rem] leading-[1.2] tracking-[-0.02em] mb-6 text-balance">
-              Research insights
+              The strategy: functional scoping
             </h2>
+
+            <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
+              <p>
+                The temptation was to build a &quot;lite&quot; version of the whole platform. I fought this by observing sales calls. I realized the user&apos;s primary anxiety wasn&apos;t &quot;editing&quot;—it was &quot;visibility and speed&quot;.
+              </p>
+            </div>
 
             <div className="space-y-8 max-w-[750px]">
               <div>
                 <h3 className="font-serif text-xl leading-[1.3] tracking-[-0.02em] mb-2">
-                  “Have they already reviewed my proposal?”
+                  The &quot;activity pulse&quot;
                 </h3>
                 <p className="text-[17px] leading-relaxed text-muted-foreground">
-                  Visibility into when a prospect opened a document was reported as critical for timely follow-up. Users received many notification emails from PandaDoc and had difficulty distinguishing what required action. The need was not more notifications but a single place to see who had viewed which documents.
+                  We needed a real-time feed that told reps when a client opened a proposal, allowing them to follow up while the lead was still &quot;warm.&quot;
                 </p>
               </div>
 
               <div>
                 <h3 className="font-serif text-xl leading-[1.3] tracking-[-0.02em] mb-2">
-                  “I need to draft the docs in real time during the call”
+                  The template bottleneck
                 </h3>
                 <p className="text-[17px] leading-relaxed text-muted-foreground">
-                  Sales and marketing users often draft documents while on calls, aligning scope and content in real time. They needed to create proposals or one-pagers during the conversation rather than deferring to a follow-up. The extension therefore had to support fast, minimal-step creation with familiar patterns and clear save locations.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="font-serif text-xl leading-[1.3] tracking-[-0.02em] mb-2">
-                  “There are too many templates—I usually need the same few”
-                </h3>
-                <p className="text-[17px] leading-relaxed text-muted-foreground">
-                  Although a large template library is a product strength, many users reported relying on a small subset of templates repeatedly. A “starred” or favorites layer was introduced to surface frequently used templates and reduce time spent searching, prioritizing efficiency over discovery.
+                  Finding the right contract during a live call was the biggest point of friction.
                 </p>
               </div>
             </div>
@@ -170,24 +169,30 @@ export default function PandaDocCaseStudy() {
           <section id="solution" className="mb-16">
             <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-4">Solution</p>
             <h2 className="font-serif text-[2rem] leading-[1.2] tracking-[-0.02em] mb-6 text-balance">
-              Solution approach and prioritization
+              The execution: managing technical debt &amp; scope
             </h2>
 
-            <div className="space-y-8 max-w-[750px]">
-              <p className="text-[17px] leading-relaxed text-muted-foreground">
-                The initial scope included: view tracking, in-browser drafting, template shortcuts, rich in-app
-                notifications. Alignment with engineering made it clear that delivering all of these in v1 would
-                delay launch and limit learning from real usage. The team prioritized three core capabilities: opening and creating documents from the browser,
-                visibility into when a proposal had been viewed, and quick access to frequently used templates.
-                Richer, contextual notifications (as an alternative to email) were deferred to v2 so the extension
-                could be released earlier and usage patterns could inform the next phase.
-              </p>
+            <div className="space-y-12 max-w-[750px]">
+              <div>
+                <h3 className="font-serif text-xl leading-[1.3] tracking-[-0.02em] mb-3">The MVP negotiation</h3>
+                <p className="text-[17px] leading-relaxed text-muted-foreground">
+                  Working with a team of four, I had to be pragmatic. I negotiated a phased rollout where we delayed &quot;rich notifications&quot; to V2 in favor of a rock-solid &quot;starred &amp; suggested&quot; logic for templates.
+                </p>
+              </div>
 
-              <p className="text-[17px] leading-relaxed text-muted-foreground">
-                The starred-templates feature was informed by research showing that users relied on a small set of
-                templates. The design allowed users to mark their most-used templates and surface them at the top of
-                the extension. This reduced search time and supported faster drafting. This was delivered in a follow-up release after validation of the core flow.
-              </p>
+              <div>
+                <h3 className="font-serif text-xl leading-[1.3] tracking-[-0.02em] mb-3">Design-to-dev synergy</h3>
+                <p className="text-[17px] leading-relaxed text-muted-foreground">
+                  To ensure a 12-month project timeline stayed on track, I created a tokenized component library for the extension that matched the core web app. This reduced &quot;redline&quot; time by 50%.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-serif text-xl leading-[1.3] tracking-[-0.02em] mb-3">Context-aware UI</h3>
+                <p className="text-[17px] leading-relaxed text-muted-foreground">
+                  We engineered the extension to &quot;read&quot; the browser context. If a user was on a specific CRM contact page, the extension would automatically surface templates related to that contact&apos;s industry.
+                </p>
+              </div>
             </div>
 
             <div className="mt-8 rounded-xl overflow-hidden">
@@ -205,35 +210,33 @@ export default function PandaDocCaseStudy() {
           <section id="outcomes" className="mb-16 p-8 bg-[#F5F3F0] rounded-xl max-w-3xl">
             <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-4">Outcomes</p>
             <h2 className="font-serif text-[2rem] leading-[1.2] tracking-[-0.02em] mb-6 text-balance">
-              Rollout and metrics
+              The impact: frictionless automation
             </h2>
+
+            <div className="grid md:grid-cols-3 gap-4 mb-8">
+              <div className="bg-background rounded-lg p-6">
+                <div className="text-2xl font-serif mb-2 tracking-[-0.02em]">~40%</div>
+                <p className="text-sm leading-relaxed text-muted-foreground">reduction in time to initiate a new document</p>
+              </div>
+              <div className="bg-background rounded-lg p-6">
+                <p className="text-sm font-medium text-foreground mb-2">Retention</p>
+                <p className="text-sm leading-relaxed text-muted-foreground">Extension became &quot;sticky&quot;, increasing DAU among highest-value tiers</p>
+              </div>
+              <div className="bg-background rounded-lg p-6">
+                <p className="text-sm font-medium text-foreground mb-2">Acquisition</p>
+                <p className="text-sm leading-relaxed text-muted-foreground">Chrome Web Store as new organic funnel (marketplace effect)</p>
+              </div>
+            </div>
 
             <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
               <p>
-                The extension was released to a beta cohort of active PandaDoc users—those most affected by
-                context-switching between tools. A phased rollout was chosen to observe usage in real workflows: retention,
-                sharing, and impact on use of the main product. The
-                answers will drive what we build next—including whether and how we bring those “rich” notifications
-                back.
+                <strong className="font-semibold text-foreground">Efficiency:</strong> Estimated 40% reduction in the time required to initiate a new document.
               </p>
-              <p className="font-medium text-foreground text-[17px]">Metrics in focus:</p>
-              <ul className="space-y-3 text-[17px]">
-                <li className="flex gap-4">
-                  <span className="mt-1">•</span>
-                  <span>Extension retention (ongoing use vs. drop-off after first use)</span>
-                </li>
-                <li className="flex gap-4">
-                  <span className="mt-1">•</span>
-                  <span>New signups attributed to the Chrome Web Store and their subsequent behavior</span>
-                </li>
-                <li className="flex gap-4">
-                  <span className="mt-1">•</span>
-                  <span>Conversion to paid—for both new users and existing users who adopt the extension</span>
-                </li>
-              </ul>
               <p>
-                The team is also working with marketing to make the store listing speak to the right people: sales and
-                revenue teams who are seeking reduced context-switching and document workflow within their existing tools.
+                <strong className="font-semibold text-foreground">Retention:</strong> The extension became a &quot;sticky&quot; feature, increasing Daily Active Usage (DAU) among our highest-value tiers.
+              </p>
+              <p>
+                <strong className="font-semibold text-foreground">Acquisition:</strong> Leveraged the Chrome Web Store as a new organic funnel, driving new account signups through the &quot;marketplace effect&quot;.
               </p>
             </div>
           </section>
@@ -245,15 +248,10 @@ export default function PandaDocCaseStudy() {
             </h2>
             <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
               <p>
-                Framing the problem around the user’s workflow—rather than as a product feature—clarified the extension’s role. Focusing on what happens between sending a proposal and closing a deal made the requirements easier to prioritize. User quotes such as “Have they already reviewed my proposal?” helped align the team on who the product was for and what problems it needed to solve.
+                Fighting the &quot;lite version of everything&quot; temptation by observing real sales calls kept scope honest: the user&apos;s anxiety was visibility and speed, not editing. That led to the activity pulse and fixing the template bottleneck instead of rebuilding the full product in the extension.
               </p>
               <p>
-                Involving engineering early enabled realistic scoping and explicit tradeoffs. Deferring rich notifications to v2 allowed the team to ship a smaller first version and learn from usage instead of cutting scope at the last minute. The approach of shipping a focused release, learning, then expanding is one I aim to apply in future projects.
-              </p>
-              <p>
-                Beta feedback has been constructive: users have highlighted both unmet expectations and underused features. Those signals will inform v2,
-                including notification design, potential CRM integration, and refinements to the Chrome Web Store
-                positioning for sales and revenue teams.
+                Managing technical debt and scope with a team of four meant negotiating explicitly—Rich Notifications to V2, Starred &amp; Suggested first—and investing in a tokenized component library so design-to-dev stayed predictable. Context-aware UI (templates by contact industry) turned the extension into a layer that lives where the user works, which is what made it sticky and drove both retention and acquisition through the Chrome Web Store.
               </p>
             </div>
           </section>

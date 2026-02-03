@@ -77,7 +77,7 @@ export default function SpeakingPage() {
             <section>
               <div className="mb-8">
                 <span className="text-sm font-mono text-muted-foreground tracking-wider uppercase">
-                  {"{00}"} — Public Speaking
+                  Public Speaking
                 </span>
                 <h2 className="font-serif text-3xl md:text-4xl mt-3">Offline and online talks</h2>
               </div>
@@ -96,7 +96,7 @@ export default function SpeakingPage() {
             <section>
               <div className="mb-8">
                 <span className="text-sm font-mono text-muted-foreground tracking-wider uppercase">
-                  {"{01}"} — Public appearances
+                  Public appearances
                 </span>
                 <h2 className="font-serif text-3xl md:text-4xl mt-3">Interviews</h2>
               </div>
@@ -125,7 +125,7 @@ export default function SpeakingPage() {
             <section>
               <div className="mb-8">
                 <span className="text-sm font-mono text-muted-foreground tracking-wider uppercase">
-                  {"{02}"} — Audio Content
+                  Audio Content
                 </span>
                 <h2 className="font-serif text-3xl md:text-4xl mt-3">My podcast appearances</h2>
               </div>

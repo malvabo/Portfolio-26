@@ -11,7 +11,7 @@ export function SquirllSection() {
   return (
     <section className="container mx-auto px-8 lg:px-12 py-8 md:py-12">
 
-      <h2 className="text-2xl md:text-3xl leading-[1.1] font-serif mb-6 tracking-tight">
+      <h2 className="text-2xl md:text-3xl leading-[1.1] font-serif mb-10 tracking-tight">
         Squirll — 80% of budgeting on autopilot
       </h2>
 
@@ -19,10 +19,7 @@ export function SquirllSection() {
         <div>
           <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">About</h3>
           <p className="text-base leading-relaxed text-foreground">
-            Led end-to-end product design and research for an AI financial coaching platform. Defined product
-            strategy and information architecture; designed receipt-capture (CV) and budgeting flows that automate
-            80% of data entry, plus NLP-driven feedback and gamification. Drove cross-functional alignment with
-            eng and product; shipped MVP in 16 weeks. Result: 80% automation, strong daily engagement.
+            I led the design of an AI-driven financial platform focused on reducing interaction cost. By architecting automated receipt-capture and feedback loops, I transformed manual expense tracking into a high-engagement, automated experience.
           </p>
           <Link
             href="/projects/squirll"
@@ -62,7 +59,7 @@ export function SquirllSection() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-3 lg:gap-12">
         {images.map((image, idx) => (
           <div key={idx} className="relative aspect-[4/3] overflow-hidden rounded-lg bg-gray-50 border border-gray-200">
             <Image src={image.src || "/placeholder.svg"} alt={image.alt} fill className="object-cover" />

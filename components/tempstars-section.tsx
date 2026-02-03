@@ -1,11 +1,11 @@
 import Image from "next/image"
 import Link from "next/link"
 
-export function PandaDocSection() {
+export function TempStarsSection() {
   const images = [
-    { src: "/images/9n0bkgdgqgsjajsrutuf1g4wvwc.avif", alt: "PandaDoc UI screens collection" },
-    { src: "/images/0hlicytyhrdxhzcakhkt2wfoly.avif", alt: "PandaDoc laptop interface" },
-    { src: "/images/ggpxangqc3m0i5hz3ezq5nfw.webp", alt: "PandaDoc create and e-sign interface" },
+    { src: "/images/tempstars-phones-hero.png", alt: "TempStars — dental centre profile and onboarding on mobile" },
+    { src: "/images/tempstars-clinic-profile.png", alt: "TempStars dental centre profile with neighborhood and shift details" },
+    { src: "/images/tempstars-good-company.png", alt: "TempStars onboarding — You are in a good company" },
   ]
 
   return (
@@ -13,17 +13,17 @@ export function PandaDocSection() {
       <div className="border-t border-gray-300 mb-10" />
 
       <h2 className="text-2xl md:text-3xl leading-[1.1] font-serif mb-10 tracking-tight">
-        PandaDoc — One flow from draft to signed for 50K+ teams
+        TempStars — Marketplace liquidity & trust for 24K+ dental professionals
       </h2>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 mb-10">
         <div>
           <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">About</h3>
           <p className="text-base leading-relaxed text-foreground">
-            I led the design of a Chrome Extension ecosystem to meet sales professionals in their existing work environments. My focus was on reducing interaction cost by surfacing contextual templates and real-time tracking.
+            I re-engineered the signup and job-matching logic for Canada&apos;s largest dental staffing marketplace. By resolving information gaps in shift listings and aligning business policies with professional user needs, I corrected a 40% user abandonment rate and increased marketplace engagement.
           </p>
           <Link
-            href="/projects/pandadoc"
+            href="/projects/tempstars"
             className="inline-flex items-center gap-2 mt-6 px-5 py-2.5 text-sm font-medium rounded-full bg-white/40 backdrop-blur-md border border-gray-300/50 hover:bg-white/60 hover:border-gray-400/60 transition-all duration-300 shadow-sm hover:shadow-md"
           >
             Read more
@@ -39,8 +39,16 @@ export function PandaDocSection() {
           </h3>
           <div className="space-y-4">
             <div>
-              <div className="text-xl font-medium text-foreground mb-0.5">50K+</div>
-              <div className="text-sm text-muted-foreground opacity-80">Businesses reached</div>
+              <div className="text-xl font-medium text-foreground mb-0.5">20%</div>
+              <div className="text-sm text-muted-foreground opacity-80">Lift in activation</div>
+            </div>
+            <div>
+              <div className="text-xl font-medium text-foreground mb-0.5">7d → 2d</div>
+              <div className="text-sm text-muted-foreground opacity-80">Time-to-First-Offer</div>
+            </div>
+            <div>
+              <div className="text-xl font-medium text-foreground mb-0.5">+25%</div>
+              <div className="text-sm text-muted-foreground opacity-80">Booked shifts YoY</div>
             </div>
           </div>
         </div>
@@ -48,10 +56,9 @@ export function PandaDocSection() {
         <div>
           <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">Role</h3>
           <div className="text-base leading-relaxed text-foreground space-y-0.5">
-            <p>Senior Product Designer</p>
-            <p>Jan 2023 - Dec 2023</p>
-            <p>London</p>
-            <p>Web</p>
+            <p>Lead Product Designer</p>
+            <p>Shipped 2023</p>
+            <p>Web, Mobile</p>
           </div>
         </div>
       </div>
@@ -59,7 +66,7 @@ export function PandaDocSection() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-3 lg:gap-12">
         {images.map((image, idx) => (
           <div key={idx} className="relative aspect-[4/3] overflow-hidden rounded-lg bg-gray-50 border border-gray-200">
-            <Image src={image.src || "/placeholder.svg"} alt={image.alt} fill className="object-cover" />
+            <Image src={image.src} alt={image.alt} fill className="object-cover" />
           </div>
         ))}
       </div>

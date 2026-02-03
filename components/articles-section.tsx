@@ -3,15 +3,15 @@ import { ArrowUpRight } from "lucide-react"
 export function ArticlesSection() {
   const articles = [
     {
-      title: "Replika: ethics of an AI chatbot with 30M users",
-      description: "AI, avatars, and mental health",
-      link: "https://uxdesign.cc/replika-ais-secret-to-30m-users-what-makes-it-so-special-8afb61f1181c?postPublishedType=repub",
+      title: "How to hook 500M users: breaking down Duolingo's gamification",
+      description: "Lessons in motivation, competition, and habit-building.",
+      link: "https://medium.com/user-experience-design-1/duolingo-analyzing-all-engagement-and-retention-techniques-3e73b79120cf",
       gradient: "from-[#1a4d4d] via-[#2d7373] to-[#4a9d9d]",
     },
     {
-      title: "How to build trust with AI products",
-      description: "Trust me, I'm (not) a robot",
-      link: "https://uxdesign.cc/i-trust-you-not-or-how-to-build-trust-with-ai-products-1fc934f131bf",
+      title: "Whoop! or How to gamify training: $3.6 billion product playbook",
+      description: "Secrets on how to make training feel like a fun game.",
+      link: "https://medium.com/user-experience-design-1/whoop-or-how-to-gamify-training-3-6-billion-product-playbook-2a1380971b88",
       gradient: "from-[#4a5b8a] via-[#6b7ba8] to-[#8ba3c7]",
     },
     {
@@ -26,11 +26,10 @@ export function ArticlesSection() {
     <section className="py-16 md:py-20 container mx-auto px-8 lg:px-12 bg-background">
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center gap-2 mb-6">
-          <span className="uppercase text-[13px] text-muted-foreground/70 font-mono tracking-wide">{"{03}"}</span>
           <span className="uppercase text-[13px] text-muted-foreground/70 font-mono tracking-wide">Know more</span>
         </div>
 
-        <h2 className="font-serif text-3xl md:text-4xl font-normal mb-8 tracking-[-0.02em] leading-[1.1]">
+        <h2 className="font-serif text-2xl md:text-3xl leading-[1.1] tracking-tight text-foreground mb-6">
           Deep dives on AI, trust & product
         </h2>
 
@@ -53,13 +52,15 @@ export function ArticlesSection() {
               />
 
               <div className="relative z-10">
-                <h3 className="font-serif text-[22px] mb-2 tracking-[-0.02em] leading-[1.15] group-hover:text-white transition-colors duration-500">
-                  {article.title}
-                </h3>
-                <p className="text-muted-foreground mb-4 leading-relaxed group-hover:text-white/90 transition-colors duration-500">
+                <div className="flex items-center gap-2 mb-2">
+                  <h3 className="font-serif text-[22px] tracking-[-0.02em] leading-[1.15] group-hover:text-white transition-colors duration-500">
+                    {article.title}
+                  </h3>
+                  <ArrowUpRight className="w-5 h-5 shrink-0 text-muted-foreground group-hover:text-white transition-colors duration-500" />
+                </div>
+                <p className="text-muted-foreground leading-relaxed group-hover:text-white/90 transition-colors duration-500">
                   {article.description}
                 </p>
-                <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-white transition-colors duration-500" />
               </div>
             </a>
           ))}

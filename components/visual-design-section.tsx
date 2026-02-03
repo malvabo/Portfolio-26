@@ -2,11 +2,11 @@ export function VisualDesignSection() {
   return (
     <section className="py-12 md:py-16 container mx-auto px-6 lg:px-12 bg-muted/30">
       <div className="max-w-7xl mx-auto">
-        <div className="flex items-center gap-3 mb-4">
-          <span className="uppercase text-[13px] text-muted-foreground font-mono tracking-wide">{"{05}"} — My designs</span>
+        <div className="flex items-center gap-2 mb-6">
+          <span className="uppercase text-[13px] text-muted-foreground/70 font-mono tracking-wide">My designs</span>
         </div>
-        
-        <h2 className="font-serif text-[32px] font-normal mb-8 tracking-[-0.02em] leading-[1.15]">
+
+        <h2 className="font-serif text-2xl md:text-3xl leading-[1.1] tracking-tight text-foreground mb-6">
           From pixels to systems
         </h2>
 

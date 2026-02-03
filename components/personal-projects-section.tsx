@@ -32,11 +32,10 @@ export function PersonalProjectsSection() {
     <section className="py-16 md:py-20 container mx-auto px-8 lg:px-12">
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center gap-2 mb-6">
-          <span className="uppercase text-[13px] text-muted-foreground/70 font-mono tracking-wide">{"{05}"}</span>
           <span className="uppercase text-[13px] text-muted-foreground/70 font-mono tracking-wide">After work</span>
         </div>
 
-        <h2 className="font-serif text-3xl md:text-4xl font-normal mb-8 tracking-[-0.02em] leading-[1.1]">
+        <h2 className="font-serif text-2xl md:text-3xl leading-[1.1] tracking-tight text-foreground mb-6">
           Beyond the day job
         </h2>
 
@@ -55,10 +54,12 @@ export function PersonalProjectsSection() {
                 <p className="text-[13px] text-muted-foreground/70 mb-3 uppercase tracking-wide group-hover:text-white/80 transition-colors duration-500">
                   {project.label}
                 </p>
-                <h3 className="font-serif text-[22px] mb-2 tracking-[-0.02em] leading-[1.15] group-hover:text-white transition-colors duration-500">
-                  {project.title}
-                </h3>
-                <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-white transition-colors duration-500" />
+                <div className="flex items-center gap-2">
+                  <h3 className="font-serif text-[22px] tracking-[-0.02em] leading-[1.15] group-hover:text-white transition-colors duration-500">
+                    {project.title}
+                  </h3>
+                  <ArrowUpRight className="w-5 h-5 shrink-0 text-muted-foreground group-hover:text-white transition-colors duration-500" />
+                </div>
               </div>
             </a>
           ))}

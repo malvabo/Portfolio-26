@@ -28,34 +28,32 @@ export default function AuthoticsCaseStudy() {
             <p className="font-mono text-xs text-muted-foreground mb-6 tracking-wider uppercase">
               E-COMMERCE & HEALTH TECH
             </p>
-            <p className="font-mono text-xs text-muted-foreground mb-4 tracking-wider uppercase">
-              AUTHOTICS • AUG 2024 - JAN 2025
-            </p>
             <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl tracking-[-0.02em] leading-[1.2] mb-4 text-balance">
-              Authotics: 3D AI Consultation for Custom Orthotics
+              Authotics: 3D AI consultation for custom orthotics
             </h1>
             <p className="text-[17px] leading-relaxed text-muted-foreground">
               Digital consultation experience that makes ordering custom orthotics from home easy and precise.
             </p>
           </div>
 
-          <section id="tldr" className="mb-16 p-8 bg-[#F5F3F0] rounded-xl max-w-3xl">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-4 mb-8 pb-8 border-b border-border/30">
+          <section id="tldr" className="mb-16 p-5 bg-[#F5F3F0] rounded-xl max-w-3xl">
+            <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-3">TLDR</p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-2 text-[14px]">
               <div>
-                <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Role</p>
-                <p className="text-[15px] leading-relaxed">Lead Product Designer</p>
+                <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-1">Role</p>
+                <p className="leading-relaxed">Lead Product Designer</p>
               </div>
               <div>
-                <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Timeline</p>
-                <p className="text-[15px] leading-relaxed">Aug 2024 - Jan 2025</p>
+                <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-1">Timeline</p>
+                <p className="leading-relaxed">Aug 2024 – Jan 2025</p>
               </div>
               <div>
-                <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Team</p>
-                <p className="text-[15px] leading-relaxed">Product team of 5</p>
+                <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-1">Team</p>
+                <p className="leading-relaxed">Product team of 5</p>
               </div>
               <div>
-                <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Platform</p>
-                <p className="text-[15px] leading-relaxed">Web, Mobile</p>
+                <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-1">Platform</p>
+                <p className="leading-relaxed">Web, Mobile</p>
               </div>
             </div>
           </section>
