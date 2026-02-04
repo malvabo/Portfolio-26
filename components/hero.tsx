@@ -15,15 +15,14 @@ export function Hero() {
           <div>
             <h1 className="font-serif text-2xl md:text-3xl font-normal leading-[1.1] tracking-tight text-foreground">
               <span className="block">Hi, I am Maria Borysova,</span>
-              <span className="block">Product UX Designer</span>
-              <span className="block">at Amazon</span>
+              <span className="block">Product UX Designer at Amazon</span>
             </h1>
             <p className="mt-5 text-base leading-relaxed text-muted-foreground font-normal max-w-xl">
               I bring 8 years of design craft and 12 years of tech industry experience to building high-trust products for 100M+ users.
             </p>
           </div>
 
-          <div className="pt-2">
+          <div>
             <ul className="space-y-0">
               {impactTldr.map((item) => (
                 <li
