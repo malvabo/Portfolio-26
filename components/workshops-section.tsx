@@ -41,7 +41,7 @@ export function WorkshopsSection() {
           </span>
         </div>
 
-        <h2 className="font-serif text-2xl md:text-3xl leading-[1.1] tracking-tight text-foreground mb-6">
+        <h2 className="font-serif text-2xl md:text-3xl leading-[1.1] tracking-tight text-foreground mb-10">
           AI & Behavioral Design Workshops
         </h2>
 

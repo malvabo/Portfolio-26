@@ -52,7 +52,7 @@ export function ArticlesSection() {
               />
 
               <div className="relative z-10">
-                <h3 className="font-serif text-[22px] tracking-[-0.02em] leading-relaxed group-hover:text-white transition-colors duration-500 mb-2 inline-flex items-baseline gap-1.5">
+                <h3 className="font-serif text-[22px] tracking-[-0.02em] leading-[1.2] group-hover:text-white transition-colors duration-500 mb-2 inline-flex items-baseline gap-1.5">
                   {article.title}
                   <ArrowUpRight className="w-5 h-5 shrink-0 text-muted-foreground group-hover:text-white transition-colors duration-500" />
                 </h3>

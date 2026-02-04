@@ -55,7 +55,7 @@ export function PersonalProjectsSection() {
                   {project.label}
                 </p>
                 <div className="flex items-center gap-2">
-                  <h3 className="font-serif text-[22px] tracking-[-0.02em] leading-[1.15] group-hover:text-white transition-colors duration-500">
+                  <h3 className="font-serif text-[22px] tracking-[-0.02em] leading-[1.2] group-hover:text-white transition-colors duration-500">
                     {project.title}
                   </h3>
                   <ArrowUpRight className="w-5 h-5 shrink-0 text-muted-foreground group-hover:text-white transition-colors duration-500" />

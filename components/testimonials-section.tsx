@@ -87,7 +87,7 @@ export function TestimonialsSection() {
           <span className="uppercase text-[13px] text-muted-foreground/70 font-mono tracking-wide">TESTIMONIALS</span>
         </div>
 
-        <h2 className="font-serif text-2xl md:text-3xl leading-[1.1] tracking-tight text-foreground mb-6">
+        <h2 className="font-serif text-2xl md:text-3xl leading-[1.1] tracking-tight text-foreground mb-10">
           What teams I've worked with say
         </h2>
 

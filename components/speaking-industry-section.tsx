@@ -43,7 +43,7 @@ export function SpeakingIndustrySection() {
               ))}
             </ul>
 
-            <div className="mt-8">
+            <div className="mt-6">
               <Link
                 href="/speaking"
                 className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium rounded-full bg-white/40 backdrop-blur-md border border-gray-300/50 hover:bg-white/60 hover:border-gray-400/60 transition-all duration-300 shadow-sm hover:shadow-md"
