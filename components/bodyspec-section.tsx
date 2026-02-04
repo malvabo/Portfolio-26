@@ -20,7 +20,7 @@ export function BodySpecSection() {
         <div>
           <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">About</h3>
           <p className="text-base leading-relaxed text-foreground">
-            I overhauled a clinical DXA-scan service to improve user retention and health literacy. By redesigning the information architecture to translate complex medical data into actionable health trends, I shifted the product from a one-off transaction to a recurring health-tracking habit.
+            Medical data can be scary and confusing. I overhauled the BodySpec experience to translate complex DXA scans into simple, actionable health stories. By shifting the focus from &quot;one-off data&quot; to &quot;long-term habits,&quot; we helped 500k users understand their bodies and keep coming back for tracking.
           </p>
           <Link
             href="/projects/bodyspec"

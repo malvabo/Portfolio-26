@@ -37,13 +37,16 @@ export function WorkshopsSection() {
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center gap-2 mb-2">
           <span className="uppercase text-[13px] text-muted-foreground/70 font-mono tracking-wide">
-            WORKSHOPS & EDUCATION
+            {"{01}"} WORKSHOPS & EDUCATION
           </span>
         </div>
 
-        <h2 className="font-serif text-2xl md:text-3xl leading-[1.1] tracking-tight text-foreground mb-10">
+        <h2 className="font-serif text-2xl md:text-3xl leading-[1.1] tracking-tight text-foreground mb-6">
           AI & Behavioral Design Workshops
         </h2>
+        <p className="text-base leading-relaxed text-muted-foreground max-w-[750px] mb-10">
+          I&apos;ve designed platforms that have automated complex workflows, scaled to 500K+ users, and helped companies secure dozens of millions in funding. My approach combines behavioral psychology, data-informed design, and a deep understanding of emerging technologies.
+        </p>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-10">
           {workshops.map((workshop, index) => (

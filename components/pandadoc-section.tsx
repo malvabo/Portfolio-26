@@ -20,7 +20,7 @@ export function PandaDocSection() {
         <div>
           <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">About</h3>
           <p className="text-base leading-relaxed text-foreground">
-            I led the design of a Chrome Extension ecosystem to meet sales professionals in their existing work environments. My focus was on reducing interaction cost by surfacing contextual templates and real-time tracking.
+            Sales teams lose hours jumping between their email and their documents. I led the design of a Chrome ecosystem that brings PandaDoc directly into the tools they already use. We cut out the &quot;app-switching tax,&quot; making it effortless to go from a draft to a signed contract.
           </p>
           <Link
             href="/projects/pandadoc"

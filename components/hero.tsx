@@ -13,10 +13,8 @@ export function Hero() {
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-[1.2fr_1fr] gap-12 lg:gap-16 items-start">
           <div>
-            <p className="font-serif text-base md:text-lg text-muted-foreground font-normal tracking-[-0.02em] mb-2">
-              Hi, I am Maria,
-            </p>
-            <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-normal tracking-[-0.02em] leading-[1.15] text-foreground">
+            <h1 className="font-serif text-2xl md:text-3xl font-normal leading-[1.1] tracking-tight text-foreground">
+              <span className="block">Hi, I am Maria Borysova,</span>
               <span className="block">Product UX Designer</span>
               <span className="block">at Amazon</span>
             </h1>

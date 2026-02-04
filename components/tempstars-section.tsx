@@ -20,7 +20,7 @@ export function TempStarsSection() {
         <div>
           <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">About</h3>
           <p className="text-base leading-relaxed text-foreground">
-            I re-engineered the signup and job-matching logic for Canada&apos;s largest dental staffing marketplace. By resolving information gaps in shift listings and aligning business policies with professional user needs, I corrected a 40% user abandonment rate and increased marketplace engagement.
+            When a dental clinic is short-staffed, they need help now. I re-engineered the signup and matching logic for Canada&apos;s largest dental marketplace to fix a 40% user drop-off. By making the matching process more transparent and faster, we turned a week-long headache into a 48-hour win.
           </p>
           <Link
             href="/projects/tempstars"

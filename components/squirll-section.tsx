@@ -19,7 +19,7 @@ export function SquirllSection() {
         <div>
           <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">About</h3>
           <p className="text-base leading-relaxed text-foreground">
-            I led the design of an AI-driven financial platform focused on reducing interaction cost. By architecting automated receipt-capture and feedback loops, I transformed manual expense tracking into a high-engagement, automated experience.
+            Budgeting is a chore that most people quit. I led the design of an AI-driven platform that does the heavy lifting for you. By using Computer Vision to &quot;read&quot; receipts and automate 80% of data entry, we turned a tedious manual task into a seamless, autopilot experience.
           </p>
           <Link
             href="/projects/squirll"

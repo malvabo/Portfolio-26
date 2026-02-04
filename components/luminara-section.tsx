@@ -28,10 +28,7 @@ export function LuminaraSection() {
         <div>
           <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">About</h3>
           <p className="text-base leading-relaxed text-foreground">
-            Led product design for dual-sided mental health platform (client + provider). Defined strategy and
-            UX for client-facing sanctuary and provider portal; designed scheduling, wellness tools, and
-            clinical workflow integration. Applied behavioral design to reduce friction; balanced care experience
-            with practice management.
+            Mental health platforms often feel cold and clinical. I led the design for a dual-sided ecosystem: a &quot;Sanctuary&quot; for patients to feel safe and an efficient &quot;Command Center&quot; for providers to manage their practice. The goal was to reduce the &quot;administrative burnout&quot; for doctors so they could focus on what matters: care.
           </p>
         </div>
 
