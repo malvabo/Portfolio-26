@@ -31,7 +31,7 @@ export function PersonalProjectsSection() {
   return (
     <section className="py-16 md:py-20 container mx-auto px-8 lg:px-12">
       <div className="max-w-7xl mx-auto">
-        <div className="flex items-center gap-2 mb-6">
+        <div className="flex items-center gap-2 mb-2">
           <span className="uppercase text-[13px] text-muted-foreground/70 font-mono tracking-wide">After work</span>
         </div>
 

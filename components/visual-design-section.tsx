@@ -2,7 +2,7 @@ export function VisualDesignSection() {
   return (
     <section className="py-12 md:py-16 container mx-auto px-6 lg:px-12 bg-muted/30">
       <div className="max-w-7xl mx-auto">
-        <div className="flex items-center gap-2 mb-6">
+        <div className="flex items-center gap-2 mb-2">
           <span className="uppercase text-[13px] text-muted-foreground/70 font-mono tracking-wide">My designs</span>
         </div>
 
@@ -10,7 +10,7 @@ export function VisualDesignSection() {
           From pixels to systems
         </h2>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {[1, 2, 3, 4, 5, 6].map((index) => (
             <div 
               key={index}

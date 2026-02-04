@@ -150,6 +150,13 @@ export default function TempStarsCaseStudy() {
                 <strong className="font-semibold text-foreground">Information scarcity:</strong> Users were frequently leaving the app to &quot;Google&quot; dental offices before applying because our shift cards lacked the critical details (parking, equipment, team size) needed for a split-second professional decision.
               </p>
             </div>
+            <div className="mt-8 rounded-xl overflow-hidden max-w-3xl mx-auto">
+              <iframe
+                src="https://chartreuse-states-262259.framer.app/projects/tempstars-app-redesign"
+                className="w-full h-[600px] border-0 rounded-xl"
+                title="TempStars app redesign"
+              />
+            </div>
           </section>
 
           <section id="research" className="mb-16">
@@ -178,7 +185,7 @@ export default function TempStarsCaseStudy() {
                 </p>
               </div>
             </div>
-            <div className="mt-8 rounded-xl overflow-hidden">
+            <div className="mt-8 rounded-xl overflow-hidden max-w-3xl mx-auto">
               <Image
                 src={TEMPSTARS_CASE_IMAGES[2].src}
                 alt={TEMPSTARS_CASE_IMAGES[2].alt}
@@ -208,28 +215,51 @@ export default function TempStarsCaseStudy() {
                 </p>
               </div>
 
+              <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl mx-auto">
+                <div className="relative rounded-xl overflow-hidden bg-[#f5f5f5] h-[320px]">
+                  <Image
+                    src="/images/tempstars-landing-phone.png"
+                    alt="TempStars landing: Dental Temping the way it should be"
+                    fill
+                    className="object-cover object-top"
+                  />
+                </div>
+                <div className="relative rounded-xl overflow-hidden bg-[#f5f5f5] h-[320px]">
+                  <Image
+                    src="/images/tempstars-resume-step.png"
+                    alt="Last step: add your resume to help dental offices choose you"
+                    fill
+                    className="object-cover object-top"
+                  />
+                </div>
+              </div>
+
               <div>
                 <h3 className="font-serif text-xl leading-[1.3] tracking-[-0.02em] mb-3">2. Contextual onboarding (progressive disclosure)</h3>
                 <p className="text-[17px] leading-relaxed text-muted-foreground">
                   We replaced the static, overwhelming signup with a progressive disclosure model. By asking for specialized skills (e.g., specific software or equipment proficiency) upfront, we could pre-filter the marketplace. This allowed us to surface relevant shifts immediately, reducing the &quot;cognitive noise&quot; for new users.
                 </p>
-                <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl">
-                  <div className="relative rounded-xl overflow-hidden bg-[#f5f5f5] h-[320px]">
-                    <Image
-                      src="/images/tempstars-landing-phone.png"
-                      alt="TempStars landing: Dental Temping the way it should be"
-                      fill
-                      className="object-cover object-top"
-                    />
+                <div className="mt-6 space-y-8">
+                  <p className="text-sm text-muted-foreground max-w-[750px]">Dental centre profile with neighborhood, safety, and shift details; clinic and onboarding in context.</p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto">
+                    <div className="relative rounded-xl overflow-hidden bg-[#f5f5f5] h-[360px]">
+                      <Image
+                        src={TEMPSTARS_CASE_IMAGES[5].src}
+                        alt={TEMPSTARS_CASE_IMAGES[5].alt}
+                        fill
+                        className="object-cover object-top"
+                      />
+                    </div>
+                    <div className="relative rounded-xl overflow-hidden bg-[#f5f5f5] h-[360px]">
+                      <Image
+                        src={TEMPSTARS_CASE_IMAGES[6].src}
+                        alt={TEMPSTARS_CASE_IMAGES[6].alt}
+                        fill
+                        className="object-cover object-top"
+                      />
+                    </div>
                   </div>
-                  <div className="relative rounded-xl overflow-hidden bg-[#f5f5f5] h-[320px]">
-                    <Image
-                      src="/images/tempstars-resume-step.png"
-                      alt="Last step: add your resume to help dental offices choose you"
-                      fill
-                      className="object-cover object-top"
-                    />
-                  </div>
+                  <p className="text-sm text-muted-foreground max-w-[750px]">Progressive disclosure: extra skills and photo; social proof — &quot;You are in a good company.&quot;</p>
                 </div>
               </div>
 
@@ -238,7 +268,7 @@ export default function TempStarsCaseStudy() {
                 <p className="text-[17px] leading-relaxed text-muted-foreground">
                   I restructured the shift pages to prioritize &quot;decision-making data.&quot; We moved clinical requirements and office logistics to the forefront. By providing high &quot;information scent,&quot; we eliminated the need for external research and gave users the confidence to book in real-time.
                 </p>
-                <div className="mt-6 rounded-xl overflow-hidden max-w-3xl">
+                <div className="mt-6 rounded-xl overflow-hidden max-w-3xl mx-auto">
                   <Image
                     src="/images/tempstars-information-scent-before-after.png"
                     alt="Before: dense shift detail with long PPE list. After: dental centre profile with tabs for dental office, neighborhood, safety, and shift details; map and clear decision data."
@@ -248,29 +278,6 @@ export default function TempStarsCaseStudy() {
                   />
                 </div>
               </div>
-            </div>
-
-            <div className="mt-8 space-y-8">
-              <p className="text-sm text-muted-foreground max-w-[750px]">Dental centre profile with neighborhood, safety, and shift details; clinic and onboarding in context.</p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="relative rounded-xl overflow-hidden bg-[#f5f5f5] h-[360px]">
-                  <Image
-                    src={TEMPSTARS_CASE_IMAGES[5].src}
-                    alt={TEMPSTARS_CASE_IMAGES[5].alt}
-                    fill
-                    className="object-cover object-top"
-                  />
-                </div>
-                <div className="relative rounded-xl overflow-hidden bg-[#f5f5f5] h-[360px]">
-                  <Image
-                    src={TEMPSTARS_CASE_IMAGES[6].src}
-                    alt={TEMPSTARS_CASE_IMAGES[6].alt}
-                    fill
-                    className="object-cover object-top"
-                  />
-                </div>
-              </div>
-              <p className="text-sm text-muted-foreground max-w-[750px]">Progressive disclosure: extra skills and photo; social proof — &quot;You are in a good company.&quot;</p>
             </div>
           </section>
 

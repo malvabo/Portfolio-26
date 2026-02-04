@@ -25,7 +25,7 @@ export function ArticlesSection() {
   return (
     <section className="py-16 md:py-20 container mx-auto px-8 lg:px-12 bg-background">
       <div className="max-w-7xl mx-auto">
-        <div className="flex items-center gap-2 mb-6">
+        <div className="flex items-center gap-2 mb-2">
           <span className="uppercase text-[13px] text-muted-foreground/70 font-mono tracking-wide">Know more</span>
         </div>
 
@@ -52,12 +52,10 @@ export function ArticlesSection() {
               />
 
               <div className="relative z-10">
-                <div className="flex items-center gap-2 mb-2">
-                  <h3 className="font-serif text-[22px] tracking-[-0.02em] leading-[1.15] group-hover:text-white transition-colors duration-500">
-                    {article.title}
-                  </h3>
+                <h3 className="font-serif text-[22px] tracking-[-0.02em] leading-relaxed group-hover:text-white transition-colors duration-500 mb-2 inline-flex items-baseline gap-1.5">
+                  {article.title}
                   <ArrowUpRight className="w-5 h-5 shrink-0 text-muted-foreground group-hover:text-white transition-colors duration-500" />
-                </div>
+                </h3>
                 <p className="text-muted-foreground leading-relaxed group-hover:text-white/90 transition-colors duration-500">
                   {article.description}
                 </p>

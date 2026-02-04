@@ -83,7 +83,7 @@ export function TestimonialsSection() {
       </div>
 
       <div className="relative max-w-7xl mx-auto">
-        <div className="flex items-center gap-2 mb-6">
+        <div className="flex items-center gap-2 mb-2">
           <span className="uppercase text-[13px] text-muted-foreground/70 font-mono tracking-wide">TESTIMONIALS</span>
         </div>
 

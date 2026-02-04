@@ -35,7 +35,7 @@ export function WorkshopsSection() {
   return (
     <section className="py-12 md:py-16 container mx-auto px-8 lg:px-12">
       <div className="max-w-7xl mx-auto">
-        <div className="flex items-center gap-2 mb-6">
+        <div className="flex items-center gap-2 mb-2">
           <span className="uppercase text-[13px] text-muted-foreground/70 font-mono tracking-wide">
             WORKSHOPS & EDUCATION
           </span>
@@ -54,12 +54,12 @@ export function WorkshopsSection() {
               <h3 className="font-serif text-[22px] tracking-[-0.02em] leading-[1.15] text-foreground mb-3">
                 {workshop.title}
               </h3>
-              <p className="text-xs md:text-sm text-gray-700 leading-relaxed mb-4">
+              <p className="text-base leading-relaxed text-foreground mb-4">
                 {workshop.description}
               </p>
               <ul className="space-y-1.5">
                 {workshop.bullets.map((bullet, i) => (
-                  <li key={i} className="flex items-start gap-3 text-xs md:text-sm text-gray-700">
+                  <li key={i} className="flex items-start gap-3 text-base leading-relaxed text-foreground">
                     <span className="flex-shrink-0 mt-1 text-violet-600/90" aria-hidden>
                       <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M5 12h14M12 5l7 7-7 7" />
@@ -86,7 +86,7 @@ export function WorkshopsSection() {
               <h3 className="font-serif text-lg md:text-xl font-normal tracking-[-0.02em] leading-[1.2] text-white mb-1.5">
                 {featuredArticle.title}
               </h3>
-              <p className="text-sm text-white/75 max-w-xl mb-4 leading-relaxed">
+              <p className="text-base leading-relaxed text-white/90 max-w-xl mb-4">
                 {featuredArticle.description}
               </p>
               <Link
