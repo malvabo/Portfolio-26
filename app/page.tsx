@@ -10,7 +10,6 @@ import { ArticlesSection } from "@/components/articles-section"
 import { SpeakingIndustrySection } from "@/components/speaking-industry-section"
 import { TestimonialsSection } from "@/components/testimonials-section"
 import { WorkshopsSection } from "@/components/workshops-section"
-import { PersonalProjectsSection } from "@/components/personal-projects-section"
 import { Footer } from "@/components/footer"
 
 export default function Home() {
@@ -29,7 +28,6 @@ export default function Home() {
         <LuminaraSection />
         <ArticlesSection />
         <WorkshopsSection />
-        <PersonalProjectsSection />
       </main>
       <Footer />
     </div>

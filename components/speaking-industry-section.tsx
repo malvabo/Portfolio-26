@@ -38,7 +38,7 @@ export function SpeakingIndustrySection() {
               {engagements.map((item, idx) => (
                 <li key={idx} className="border-b border-gray-300/30 py-5 first:pt-0 last:border-b-0">
                   <p className="font-medium text-foreground text-[17px]">{item.name}</p>
-                  <p className="text-sm text-muted-foreground mt-1">{item.description}</p>
+                  <p className="text-base leading-relaxed text-muted-foreground mt-1">{item.description}</p>
                 </li>
               ))}
             </ul>

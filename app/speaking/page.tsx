@@ -86,7 +86,7 @@ export default function SpeakingPage() {
                 {talks.map((talk, index) => (
                   <div key={index} className="border-b border-border/40 pb-6 last:border-0">
                     <h3 className="text-lg font-medium mb-1">{talk.title}</h3>
-                    {talk.subtitle && <p className="text-muted-foreground">{talk.subtitle}</p>}
+                    {talk.subtitle && <p className="text-base leading-relaxed text-muted-foreground">{talk.subtitle}</p>}
                   </div>
                 ))}
                 <p className="text-muted-foreground italic pt-4">… and more to be added soon!</p>
@@ -116,7 +116,7 @@ export default function SpeakingPage() {
                     ) : (
                       <h3 className="text-lg font-medium mb-1">{interview.title}</h3>
                     )}
-                    {interview.subtitle && <p className="text-muted-foreground">{interview.subtitle}</p>}
+                    {interview.subtitle && <p className="text-base leading-relaxed text-muted-foreground">{interview.subtitle}</p>}
                   </div>
                 ))}
               </div>
