@@ -13,7 +13,7 @@ export default function PandaDocCaseStudy() {
       <Header />
 
       <div className="flex max-w-7xl mx-auto">
-        <aside className="hidden lg:block w-56 px-8 lg:px-12 pt-24 sticky top-24 self-start">
+        <aside className="hidden lg:block w-56 px-8 lg:px-12 pt-16 sticky top-24 self-start">
           <Link
             href="/#work"
             scroll={false}

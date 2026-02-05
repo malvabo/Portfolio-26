@@ -12,7 +12,7 @@ export function Hero() {
 
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-[1.2fr_1fr] gap-12 lg:gap-16 items-start">
-          <div>
+          <div className="flex flex-col">
             <h1 className="font-serif text-2xl md:text-3xl font-normal leading-[1.1] tracking-tight text-foreground">
               <span className="block">Maria Borysova is a Product UX Designer at Amazon.</span>
             </h1>
@@ -21,12 +21,12 @@ export function Hero() {
             </p>
           </div>
 
-          <div>
+          <div className="flex flex-col">
             <ul className="space-y-0">
-              {impactTldr.map((item) => (
+              {impactTldr.map((item, index) => (
                 <li
                   key={item.label}
-                  className="py-4 border-b border-border/50 last:border-0"
+                  className={`${index === 0 ? 'pt-0 pb-4' : 'py-4'} border-b border-border/50 last:border-0`}
                 >
                   <span className="text-[15px] font-semibold text-foreground">{item.label}. </span>
                   <span className="text-[15px] leading-relaxed text-muted-foreground">
