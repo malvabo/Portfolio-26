@@ -5,13 +5,15 @@ import './globals.css'
 
 const _geist = Geist({ 
   subsets: ['latin'],
-  variable: '--font-sans'
+  variable: '--font-sans',
+  display: 'swap'
 })
 
 const _lora = Lora({
   subsets: ['latin'],
   weight: ['400', '500', '600'],
-  variable: '--font-serif'
+  variable: '--font-serif',
+  display: 'swap'
 })
 
 export const metadata: Metadata = {
