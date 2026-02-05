@@ -94,17 +94,13 @@ export default function AuthoticsCaseStudy() {
           </div>
 
           <div className="border-t border-border/50 pt-16">
-            <Button
-              variant="ghost"
-              size="sm"
-              asChild
+            <Link
+              href="/#work"
               className="inline-flex items-center gap-2 text-[17px] hover:opacity-70 transition-opacity"
             >
-              <Link href="/#work" className="flex items-center gap-2">
-                <ArrowLeft className="w-4 h-4" />
-                Back to all projects
-              </Link>
-            </Button>
+              <ArrowLeft className="w-4 h-4" />
+              Back to all projects
+            </Link>
           </div>
         </main>
       </div>
