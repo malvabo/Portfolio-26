@@ -24,7 +24,7 @@ export function SpeakingIndustrySection() {
   return (
     <section className="container mx-auto px-8 lg:px-12 py-12 md:py-16">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr] lg:gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr] lg:gap-12 items-stretch">
           <div>
             <div className="flex items-center gap-2 mb-2">
               <span className="uppercase text-[13px] text-muted-foreground/70 font-mono tracking-wide">
@@ -56,7 +56,7 @@ export function SpeakingIndustrySection() {
             </div>
           </div>
 
-          <div className="mt-8 lg:mt-0 grid grid-cols-2 grid-rows-2 gap-3 aspect-[4/3] max-h-[420px] lg:max-h-[480px]">
+          <div className="mt-8 lg:mt-0 grid grid-cols-2 grid-rows-2 gap-3 h-full">
             <div className="row-span-2 relative rounded-xl overflow-hidden bg-[#f1f1f1] border border-border/60 shadow-sm">
               <Image
                 src="/images/speaking-2.jpg"
