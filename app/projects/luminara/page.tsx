@@ -5,8 +5,6 @@ import Image from "next/image"
 import { ArrowLeft } from "lucide-react"
 import { ScrollToTop } from "@/components/scroll-to-top"
 import { Header } from "@/components/header"
-import { Button } from "@/components/ui/button"
-
 export default function LuminaraCaseStudy() {
   return (
     <div className="min-h-screen bg-background">
@@ -14,18 +12,20 @@ export default function LuminaraCaseStudy() {
       <Header />
 
       <div className="flex max-w-7xl mx-auto">
-        <aside className="hidden lg:block w-56 px-8 lg:px-12" style={{ paddingTop: "calc(3rem + 3.5rem)" }}>
-          <Button variant="ghost" size="sm" asChild className="w-full justify-start px-0">
-            <Link href="/#work" className="flex items-center gap-2">
-              <ArrowLeft className="w-4 h-4" />
-              All projects
-            </Link>
-          </Button>
+        <aside className="hidden lg:block w-56 px-8 lg:px-12 pt-24 sticky top-24 self-start">
+          <Link
+            href="/#work"
+            scroll={false}
+            className="inline-flex items-baseline gap-2 text-xs font-mono tracking-wider uppercase text-muted-foreground hover:text-foreground transition-colors mb-16 leading-none"
+          >
+            <ArrowLeft className="w-3 h-3 shrink-0" />
+            All projects
+          </Link>
         </aside>
 
-        <main className="flex-1 px-8 lg:px-12 pt-12 pb-20 lg:pb-24 max-w-4xl">
+        <main className="flex-1 px-8 lg:px-12 pt-24 pb-20 lg:pb-24 max-w-4xl">
           <div className="mb-12">
-            <p className="font-mono text-xs text-muted-foreground mb-6 tracking-wider uppercase">
+            <p className="font-mono text-xs text-muted-foreground mb-6 tracking-wider uppercase leading-none">
               MENTAL HEALTH PLATFORM
             </p>
             <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl tracking-[-0.02em] leading-[1.2] mb-4 text-balance">

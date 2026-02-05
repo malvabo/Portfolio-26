@@ -14,11 +14,10 @@ export function Hero() {
         <div className="grid lg:grid-cols-[1.2fr_1fr] gap-12 lg:gap-16 items-start">
           <div>
             <h1 className="font-serif text-2xl md:text-3xl font-normal leading-[1.1] tracking-tight text-foreground">
-              <span className="block">Hi, I am Maria Borysova,</span>
-              <span className="block">Product UX Designer at Amazon</span>
+              <span className="block">Maria Borysova is a Product UX Designer at Amazon.</span>
             </h1>
-            <p className="mt-5 text-base leading-relaxed text-muted-foreground font-normal max-w-xl">
-              I bring 8 years of design craft and 12 years of tech industry experience to building high-trust products for 100M+ users.
+            <p className="mt-6 font-serif text-2xl md:text-3xl font-normal leading-[1.1] tracking-tight text-foreground max-w-xl">
+              She spends her time thinking and talking about AI Design: how to build trust, use AI to help and how to keep the &quot;human&quot; in the center.
             </p>
           </div>
 

@@ -13,19 +13,19 @@ export default function BodySpecCaseStudy() {
       <Header />
 
       <div className="flex max-w-7xl mx-auto">
-        <aside className="hidden lg:block w-56 px-8 lg:px-12 pt-24">
+        <aside className="hidden lg:block w-56 px-8 lg:px-12 pt-24 sticky top-24 self-start">
           <Link
             href="/#work"
             scroll={false}
-            className="flex items-center gap-2 text-[15px] leading-4 font-sans text-muted-foreground hover:text-foreground transition-colors mb-16"
+            className="inline-flex items-baseline gap-2 text-xs font-mono tracking-wider uppercase text-muted-foreground hover:text-foreground transition-colors mb-16 leading-none"
           >
-            <ArrowLeft className="w-4 h-4" />
+            <ArrowLeft className="w-3 h-3 shrink-0" />
             All projects
           </Link>
 
           <nav className="space-y-4">
-            <a href="#overview" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
-              Overview
+            <a href="#tldr" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
+              TLDR
             </a>
             <a href="#problem" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
               Discovery
@@ -42,15 +42,12 @@ export default function BodySpecCaseStudy() {
             <a href="#reflection" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
               Reflection
             </a>
-            <a href="#tldr" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
-              TLDR
-            </a>
           </nav>
         </aside>
 
         <main className="flex-1 px-8 lg:px-12 pt-24 pb-20 lg:pb-24 max-w-4xl">
           <div className="mb-12">
-            <p className="font-mono text-xs text-muted-foreground mb-6 tracking-wider uppercase">HEALTH TECH</p>
+            <p className="font-mono text-xs text-muted-foreground mb-6 tracking-wider uppercase leading-none">HEALTH TECH</p>
             <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl tracking-[-0.02em] leading-[1.2] mb-4 text-balance">
               BodySpec: Translating Health Intelligence
             </h1>
@@ -113,17 +110,6 @@ export default function BodySpecCaseStudy() {
             </ul>
           </section>
 
-          <section id="overview" className="mb-16">
-            <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-4">Overview</p>
-            <h2 className="font-serif text-[2rem] leading-[1.2] tracking-[-0.02em] mb-6 text-balance">
-              Context and rationale
-            </h2>
-            <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
-              <p>
-                BodySpec is the gold standard for body composition, but the product was stuck in a transactional loop. People would get one scan, feel overwhelmed by the data, and never return. The goal was to move the service from a clinical “one-off” to a longitudinal health habit.
-              </p>
-            </div>
-          </section>
 
           <section id="problem" className="mb-16">
             <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-4">Discovery</p>

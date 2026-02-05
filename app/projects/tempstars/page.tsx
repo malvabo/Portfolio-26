@@ -23,17 +23,20 @@ export default function TempStarsCaseStudy() {
       <Header />
 
       <div className="flex max-w-7xl mx-auto">
-        <aside className="hidden lg:block w-56 px-8 lg:px-12 pt-24">
+        <aside className="hidden lg:block w-56 px-8 lg:px-12 pt-24 sticky top-24 self-start">
           <Link
             href="/#work"
             scroll={false}
-            className="flex items-center gap-2 text-[15px] leading-4 font-sans text-muted-foreground hover:text-foreground transition-colors mb-16"
+            className="inline-flex items-baseline gap-2 text-xs font-mono tracking-wider uppercase text-muted-foreground hover:text-foreground transition-colors mb-16 leading-none"
           >
-            <ArrowLeft className="w-4 h-4" />
+            <ArrowLeft className="w-3 h-3 shrink-0" />
             All projects
           </Link>
 
           <nav className="space-y-4">
+            <a href="#tldr" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
+              TLDR
+            </a>
             <a href="#overview" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
               Overview
             </a>
@@ -52,20 +55,17 @@ export default function TempStarsCaseStudy() {
             <a href="#reflection" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
               Reflection
             </a>
-            <a href="#tldr" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
-              TLDR
-            </a>
           </nav>
         </aside>
 
         <main className="flex-1 px-8 lg:px-12 pt-24 pb-20 lg:pb-24 max-w-4xl">
           <div className="mb-12">
-            <p className="font-mono text-xs text-muted-foreground mb-6 tracking-wider uppercase">MARKETPLACE / HEALTH TECH</p>
+            <p className="font-mono text-xs text-muted-foreground mb-6 tracking-wider uppercase leading-none">MARKETPLACE / HEALTH TECH</p>
             <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl tracking-[-0.02em] leading-[1.2] mb-4 text-balance">
               TempStars: Transforming Marketplace Trust &amp; Activation
             </h1>
             <p className="text-[17px] leading-relaxed text-muted-foreground">
-              Context and Rationale
+              Building trust in a marketplace for dental professionals
             </p>
           </div>
 
@@ -149,13 +149,6 @@ export default function TempStarsCaseStudy() {
               <p>
                 <strong className="font-semibold text-foreground">Information scarcity:</strong> Users were frequently leaving the app to &quot;Google&quot; dental offices before applying because our shift cards lacked the critical details (parking, equipment, team size) needed for a split-second professional decision.
               </p>
-            </div>
-            <div className="mt-8 rounded-xl overflow-hidden max-w-3xl mx-auto">
-              <iframe
-                src="https://chartreuse-states-262259.framer.app/projects/tempstars-app-redesign"
-                className="w-full h-[600px] border-0 rounded-xl"
-                title="TempStars app redesign"
-              />
             </div>
           </section>
 

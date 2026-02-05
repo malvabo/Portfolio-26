@@ -13,17 +13,20 @@ export default function PandaDocCaseStudy() {
       <Header />
 
       <div className="flex max-w-7xl mx-auto">
-        <aside className="hidden lg:block w-56 px-8 lg:px-12 pt-24">
+        <aside className="hidden lg:block w-56 px-8 lg:px-12 pt-24 sticky top-24 self-start">
           <Link
             href="/#work"
             scroll={false}
-            className="flex items-center gap-2 text-[15px] leading-4 font-sans text-muted-foreground hover:text-foreground transition-colors mb-16"
+            className="inline-flex items-baseline gap-2 text-xs font-mono tracking-wider uppercase text-muted-foreground hover:text-foreground transition-colors mb-16 leading-none"
           >
-            <ArrowLeft className="w-4 h-4" />
+            <ArrowLeft className="w-3 h-3 shrink-0" />
             All projects
           </Link>
 
           <nav className="space-y-4">
+            <a href="#tldr" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
+              TLDR
+            </a>
             <a href="#overview" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
               Overview
             </a>
@@ -39,15 +42,12 @@ export default function PandaDocCaseStudy() {
             <a href="#reflection" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
               Reflection
             </a>
-            <a href="#tldr" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
-              TLDR
-            </a>
           </nav>
         </aside>
 
         <main className="flex-1 px-8 lg:px-12 pt-24 pb-20 lg:pb-24 max-w-4xl">
           <div className="mb-12">
-            <p className="font-mono text-xs text-muted-foreground mb-6 tracking-wider uppercase">DOCUMENT AUTOMATION</p>
+            <p className="font-mono text-xs text-muted-foreground mb-6 tracking-wider uppercase leading-none">DOCUMENT AUTOMATION</p>
             <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl tracking-[-0.02em] leading-[1.2] mb-4 text-balance">
               PandaDoc: Reducing the &quot;workflow tax&quot;
             </h1>
@@ -212,21 +212,6 @@ export default function PandaDocCaseStudy() {
             <h2 className="font-serif text-[2rem] leading-[1.2] tracking-[-0.02em] mb-6 text-balance">
               The impact: frictionless automation
             </h2>
-
-            <div className="grid md:grid-cols-3 gap-4 mb-8">
-              <div className="bg-background rounded-lg p-6">
-                <div className="text-2xl font-serif mb-2 tracking-[-0.02em]">~40%</div>
-                <p className="text-sm leading-relaxed text-muted-foreground">reduction in time to initiate a new document</p>
-              </div>
-              <div className="bg-background rounded-lg p-6">
-                <p className="text-sm font-medium text-foreground mb-2">Retention</p>
-                <p className="text-sm leading-relaxed text-muted-foreground">Extension became &quot;sticky&quot;, increasing DAU among highest-value tiers</p>
-              </div>
-              <div className="bg-background rounded-lg p-6">
-                <p className="text-sm font-medium text-foreground mb-2">Acquisition</p>
-                <p className="text-sm leading-relaxed text-muted-foreground">Chrome Web Store as new organic funnel (marketplace effect)</p>
-              </div>
-            </div>
 
             <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
               <p>
