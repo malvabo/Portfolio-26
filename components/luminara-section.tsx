@@ -21,7 +21,7 @@ export function LuminaraSection() {
       <div className="border-t border-gray-300 mb-10" />
 
       <h2 className="text-2xl md:text-3xl leading-[1.1] font-serif mb-10 tracking-tight">
-        Luminara — One experience for clients and clinicians
+        Luminara – One experience for clients and clinicians
       </h2>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 mb-10">

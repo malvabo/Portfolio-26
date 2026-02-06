@@ -41,7 +41,7 @@ export function ContactSection() {
               Ready to build something that matters
             </h2>
             <p className="text-base leading-relaxed text-muted-foreground max-w-2xl mx-auto">
-              Available for select projects from Q2 2025. Strategy, leadership, or hands-on—let's talk.
+              Available for select projects from Q2 2025. Strategy, leadership, or hands-on–let's talk.
             </p>
           </div>
 

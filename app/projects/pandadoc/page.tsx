@@ -12,42 +12,51 @@ export default function PandaDocCaseStudy() {
       <ScrollToTop />
       <Header />
 
-      <div className="flex max-w-7xl mx-auto">
-        <aside className="hidden lg:block w-56 px-8 lg:px-12 pt-16 sticky top-24 self-start">
-          <Link
-            href="/#work"
-            scroll={false}
-            className="inline-flex items-baseline gap-2 text-xs font-mono tracking-wider uppercase text-muted-foreground hover:text-foreground transition-colors mb-16 leading-none"
-          >
-            <ArrowLeft className="w-3 h-3 shrink-0" />
-            All projects
-          </Link>
-
-          <nav className="space-y-4">
-            <a href="#tldr" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
-              TLDR
-            </a>
-            <a href="#overview" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
-              Overview
-            </a>
-            <a href="#research" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
-              Research
-            </a>
-            <a href="#solution" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
-              Solution
-            </a>
-            <a href="#outcomes" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
-              Outcomes
-            </a>
-            <a href="#reflection" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
-              Reflection
-            </a>
-          </nav>
-        </aside>
-
-        <main className="flex-1 px-8 lg:px-12 pt-24 pb-20 lg:pb-24 max-w-4xl">
-          <div className="mb-12">
+      <div className="max-w-7xl mx-auto pt-24 flex flex-col">
+        {/* Row 1: back link + category label on one horizontal line (same flex row for alignment) */}
+        <div className="flex w-full items-start">
+          <div className="hidden lg:block w-56 shrink-0 px-8 lg:px-12">
+            <Link
+              href="/#work"
+              scroll={false}
+              className="inline-flex items-baseline gap-2 text-xs font-mono tracking-wider uppercase text-muted-foreground hover:text-foreground transition-colors leading-none"
+            >
+              <ArrowLeft className="w-3 h-3 shrink-0" />
+              All projects
+            </Link>
+          </div>
+          <div className="min-w-0 flex-1 px-8 lg:px-12">
             <p className="font-mono text-xs text-muted-foreground mb-6 tracking-wider uppercase leading-none">DOCUMENT AUTOMATION</p>
+          </div>
+        </div>
+
+        {/* Row 2: spacer + main content */}
+        <div className="flex w-full items-start">
+          <div className="hidden lg:block w-56 shrink-0 px-8 lg:px-12" aria-hidden />
+          <aside className="hidden lg:block w-56 px-8 lg:px-12 fixed top-24 left-8 lg:left-[max(3rem,calc((100vw-80rem)/2+3rem))] pt-8" aria-label="Case study navigation">
+            <nav className="space-y-4" aria-label="Case study sections">
+              <a href="#tldr" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
+                TLDR
+              </a>
+              <a href="#overview" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
+                Overview
+              </a>
+              <a href="#research" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
+                Research
+              </a>
+              <a href="#solution" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
+                Solution
+              </a>
+              <a href="#outcomes" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
+                Outcomes
+              </a>
+              <a href="#reflection" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
+                Reflection
+              </a>
+            </nav>
+          </aside>
+          <main className="flex-1 px-8 lg:px-12 pb-20 lg:pb-24 max-w-4xl">
+          <div className="mb-12">
             <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl tracking-[-0.02em] leading-[1.2] mb-4 text-balance">
               PandaDoc: Reducing the &quot;workflow tax&quot;
             </h1>
@@ -141,7 +150,7 @@ export default function PandaDocCaseStudy() {
 
             <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
               <p>
-                The temptation was to build a &quot;lite&quot; version of the whole platform. I fought this by observing sales calls. I realized the user&apos;s primary anxiety wasn&apos;t &quot;editing&quot;—it was &quot;visibility and speed&quot;.
+                The temptation was to build a &quot;lite&quot; version of the whole platform. I fought this by observing sales calls. I realized the user&apos;s primary anxiety wasn&apos;t &quot;editing&quot;–it was &quot;visibility and speed&quot;.
               </p>
             </div>
 
@@ -236,7 +245,7 @@ export default function PandaDocCaseStudy() {
                 Fighting the &quot;lite version of everything&quot; temptation by observing real sales calls kept scope honest: the user&apos;s anxiety was visibility and speed, not editing. That led to the activity pulse and fixing the template bottleneck instead of rebuilding the full product in the extension.
               </p>
               <p>
-                Managing technical debt and scope with a team of four meant negotiating explicitly—Rich Notifications to V2, Starred &amp; Suggested first—and investing in a tokenized component library so design-to-dev stayed predictable. Context-aware UI (templates by contact industry) turned the extension into a layer that lives where the user works, which is what made it sticky and drove both retention and acquisition through the Chrome Web Store.
+                Managing technical debt and scope with a team of four meant negotiating explicitly–Rich Notifications to V2, Starred &amp; Suggested first–and investing in a tokenized component library so design-to-dev stayed predictable. Context-aware UI (templates by contact industry) turned the extension into a layer that lives where the user works, which is what made it sticky and drove both retention and acquisition through the Chrome Web Store.
               </p>
             </div>
           </section>
@@ -251,6 +260,7 @@ export default function PandaDocCaseStudy() {
             </Link>
           </div>
         </main>
+        </div>
       </div>
     </div>
   )

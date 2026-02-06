@@ -12,7 +12,7 @@ export function SquirllSection() {
     <section className="container mx-auto px-8 lg:px-12 py-8 md:py-12">
 
       <h2 className="text-2xl md:text-3xl leading-[1.1] font-serif mb-10 tracking-tight">
-        Squirll — 80% of budgeting on autopilot
+        Squirll – 80% of budgeting on autopilot
       </h2>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 mb-10">

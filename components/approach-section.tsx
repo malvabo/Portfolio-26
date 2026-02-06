@@ -36,7 +36,7 @@ export function ApproachSection() {
             How I design products that stick
           </h2>
           <p className="text-[15px] text-muted-foreground leading-relaxed">
-            A process that balances user empathy with business pragmatism—products people love that scale.
+            A process that balances user empathy with business pragmatism–products people love that scale.
           </p>
         </div>
 

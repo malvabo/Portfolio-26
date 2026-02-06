@@ -12,42 +12,51 @@ export default function BodySpecCaseStudy() {
       <ScrollToTop />
       <Header />
 
-      <div className="flex max-w-7xl mx-auto">
-        <aside className="hidden lg:block w-56 px-8 lg:px-12 pt-16 sticky top-24 self-start">
-          <Link
-            href="/#work"
-            scroll={false}
-            className="inline-flex items-baseline gap-2 text-xs font-mono tracking-wider uppercase text-muted-foreground hover:text-foreground transition-colors mb-16 leading-none"
-          >
-            <ArrowLeft className="w-3 h-3 shrink-0" />
-            All projects
-          </Link>
-
-          <nav className="space-y-4">
-            <a href="#tldr" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
-              TLDR
-            </a>
-            <a href="#problem" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
-              Discovery
-            </a>
-            <a href="#research" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
-              Research
-            </a>
-            <a href="#solution" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
-              Solution
-            </a>
-            <a href="#outcomes" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
-              Outcomes
-            </a>
-            <a href="#reflection" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
-              Reflection
-            </a>
-          </nav>
-        </aside>
-
-        <main className="flex-1 px-8 lg:px-12 pt-24 pb-20 lg:pb-24 max-w-4xl">
-          <div className="mb-12">
+      <div className="max-w-7xl mx-auto pt-24 flex flex-col">
+        {/* Row 1: back link + category label on one horizontal line (same flex row for alignment) */}
+        <div className="flex w-full items-start">
+          <div className="hidden lg:block w-56 shrink-0 px-8 lg:px-12">
+            <Link
+              href="/#work"
+              scroll={false}
+              className="inline-flex items-baseline gap-2 text-xs font-mono tracking-wider uppercase text-muted-foreground hover:text-foreground transition-colors leading-none"
+            >
+              <ArrowLeft className="w-3 h-3 shrink-0" />
+              All projects
+            </Link>
+          </div>
+          <div className="min-w-0 flex-1 px-8 lg:px-12">
             <p className="font-mono text-xs text-muted-foreground mb-6 tracking-wider uppercase leading-none">HEALTH TECH</p>
+          </div>
+        </div>
+
+        {/* Row 2: spacer + main content */}
+        <div className="flex w-full items-start">
+          <div className="hidden lg:block w-56 shrink-0 px-8 lg:px-12" aria-hidden />
+          <aside className="hidden lg:block w-56 px-8 lg:px-12 fixed top-24 left-8 lg:left-[max(3rem,calc((100vw-80rem)/2+3rem))] pt-8" aria-label="Case study navigation">
+            <nav className="space-y-4" aria-label="Case study sections">
+              <a href="#tldr" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
+                TLDR
+              </a>
+              <a href="#problem" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
+                Discovery
+              </a>
+              <a href="#research" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
+                Research
+              </a>
+              <a href="#solution" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
+                Solution
+              </a>
+              <a href="#outcomes" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
+                Outcomes
+              </a>
+              <a href="#reflection" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
+                Reflection
+              </a>
+            </nav>
+          </aside>
+          <main className="flex-1 px-8 lg:px-12 pb-20 lg:pb-24 max-w-4xl">
+          <div className="mb-12">
             <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl tracking-[-0.02em] leading-[1.2] mb-4 text-balance">
               BodySpec: Translating Health Intelligence
             </h1>
@@ -130,7 +139,7 @@ export default function BodySpecCaseStudy() {
             </h2>
             <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
               <p>
-                I knew I couldn’t be everywhere at once, so I turned our frontline staff into a research team. I developed a framework and trained our technicians across multiple states to conduct structured interviews during the scan process. This gave us hundreds of data points on real-world friction—insights we never would have caught in a lab.
+                I knew I couldn’t be everywhere at once, so I turned our frontline staff into a research team. I developed a framework and trained our technicians across multiple states to conduct structured interviews during the scan process. This gave us hundreds of data points on real-world friction–insights we never would have caught in a lab.
               </p>
               <p>
                 Through these technician-led interviews and my own usability testing, I identified a massive “post-scan drop-off.” Users were getting highly accurate data but had no mental model for how to use it. This realization shifted our entire strategy toward longitudinal tracking and health literacy.
@@ -232,7 +241,7 @@ export default function BodySpecCaseStudy() {
             </h2>
             <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
               <p>
-                Turning frontline staff into a research engine gave us scale and real-world friction we couldn’t get in a lab. The “post-scan drop-off” insight—that users had no mental model for their data—reframed the product from one-off scan to longitudinal habit, and that shift drove the entire design direction.
+                Turning frontline staff into a research engine gave us scale and real-world friction we couldn’t get in a lab. The “post-scan drop-off” insight–that users had no mental model for their data–reframed the product from one-off scan to longitudinal habit, and that shift drove the entire design direction.
               </p>
               <p>
                 Reducing interaction cost (location search, two-click checkout) and surfacing longitudinal trends in the dashboard turned BodySpec into a habit-forming platform. The work showed how research-led design can provide both immediate conversion gains and the strategic narrative that supports fundraising.
@@ -251,6 +260,7 @@ export default function BodySpecCaseStudy() {
             </Link>
           </div>
         </main>
+        </div>
       </div>
     </div>
   )

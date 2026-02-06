@@ -3,9 +3,9 @@ import Link from "next/link"
 
 export function TempStarsSection() {
   const images = [
-    { src: "/images/tempstars-clinic-profile-first.png", alt: "TempStars — Upper Canada Dental Centre profile with job details, neighborhood map, and office information" },
+    { src: "/images/tempstars-clinic-profile-first.png", alt: "TempStars – Upper Canada Dental Centre profile with job details, neighborhood map, and office information" },
     { src: "/images/tempstars-clinic-profile.png", alt: "TempStars dental centre profile with neighborhood and shift details" },
-    { src: "/images/tempstars-good-company.png", alt: "TempStars onboarding — You are in a good company" },
+    { src: "/images/tempstars-good-company.png", alt: "TempStars onboarding – You are in a good company" },
   ]
 
   return (
@@ -13,7 +13,7 @@ export function TempStarsSection() {
       <div className="border-t border-gray-300 mb-10" />
 
       <h2 className="text-2xl md:text-3xl leading-[1.1] font-serif mb-10 tracking-tight">
-        TempStars — Marketplace liquidity & trust for 25K+ dental professionals
+        TempStars – Marketplace liquidity & trust for 25K+ dental professionals
       </h2>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 mb-10">

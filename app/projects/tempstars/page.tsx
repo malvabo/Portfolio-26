@@ -13,7 +13,7 @@ const TEMPSTARS_CASE_IMAGES = [
   { src: "/images/tempstars-clinic-profile.png", alt: "Dental centre profile with neighborhood map and office details", width: 800, height: 1200 },
   { src: "/images/tempstars-phones-office-onboarding.png", alt: "Clinic detail and onboarding screen on mobile", width: 1200, height: 800 },
   { src: "/images/tempstars-onboarding-skills-photo.png", alt: "Onboarding: extra skills selection and photo upload", width: 1200, height: 800 },
-  { src: "/images/tempstars-good-company.png", alt: "You are in a good company — TempStars social proof screen", width: 800, height: 1200 },
+  { src: "/images/tempstars-good-company.png", alt: "You are in a good company – TempStars social proof screen", width: 800, height: 1200 },
 ]
 
 export default function TempStarsCaseStudy() {
@@ -22,45 +22,54 @@ export default function TempStarsCaseStudy() {
       <ScrollToTop />
       <Header />
 
-      <div className="flex max-w-7xl mx-auto">
-        <aside className="hidden lg:block w-56 px-8 lg:px-12 pt-16 sticky top-24 self-start">
-          <Link
-            href="/#work"
-            scroll={false}
-            className="inline-flex items-baseline gap-2 text-xs font-mono tracking-wider uppercase text-muted-foreground hover:text-foreground transition-colors mb-16 leading-none"
-          >
-            <ArrowLeft className="w-3 h-3 shrink-0" />
-            All projects
-          </Link>
-
-          <nav className="space-y-4">
-            <a href="#tldr" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
-              TLDR
-            </a>
-            <a href="#overview" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
-              Overview
-            </a>
-            <a href="#problem" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
-              Discovery
-            </a>
-            <a href="#research" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
-              Research
-            </a>
-            <a href="#solution" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
-              Solution
-            </a>
-            <a href="#outcomes" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
-              Outcomes
-            </a>
-            <a href="#reflection" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
-              Reflection
-            </a>
-          </nav>
-        </aside>
-
-        <main className="flex-1 px-8 lg:px-12 pt-24 pb-20 lg:pb-24 max-w-4xl">
-          <div className="mb-12">
+      <div className="max-w-7xl mx-auto pt-24 flex flex-col">
+        {/* Row 1: back link + category label on one horizontal line (same flex row for alignment) */}
+        <div className="flex w-full items-start">
+          <div className="hidden lg:block w-56 shrink-0 px-8 lg:px-12">
+            <Link
+              href="/#work"
+              scroll={false}
+              className="inline-flex items-baseline gap-2 text-xs font-mono tracking-wider uppercase text-muted-foreground hover:text-foreground transition-colors leading-none"
+            >
+              <ArrowLeft className="w-3 h-3 shrink-0" />
+              All projects
+            </Link>
+          </div>
+          <div className="min-w-0 flex-1 px-8 lg:px-12">
             <p className="font-mono text-xs text-muted-foreground mb-6 tracking-wider uppercase leading-none">MARKETPLACE / HEALTH TECH</p>
+          </div>
+        </div>
+
+        {/* Row 2: spacer + main content */}
+        <div className="flex w-full items-start">
+          <div className="hidden lg:block w-56 shrink-0 px-8 lg:px-12" aria-hidden />
+          <aside className="hidden lg:block w-56 px-8 lg:px-12 fixed top-24 left-8 lg:left-[max(3rem,calc((100vw-80rem)/2+3rem))] pt-8" aria-label="Case study navigation">
+            <nav className="space-y-4" aria-label="Case study sections">
+              <a href="#tldr" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
+                TLDR
+              </a>
+              <a href="#overview" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
+                Overview
+              </a>
+              <a href="#problem" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
+                Discovery
+              </a>
+              <a href="#research" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
+                Research
+              </a>
+              <a href="#solution" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
+                Solution
+              </a>
+              <a href="#outcomes" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
+                Outcomes
+              </a>
+              <a href="#reflection" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
+                Reflection
+              </a>
+            </nav>
+          </aside>
+          <main className="flex-1 px-8 lg:px-12 pb-20 lg:pb-24 max-w-4xl">
+          <div className="mb-12">
             <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl tracking-[-0.02em] leading-[1.2] mb-4 text-balance">
               TempStars: Transforming Marketplace Trust &amp; Activation
             </h1>
@@ -72,7 +81,7 @@ export default function TempStarsCaseStudy() {
           <div className="mb-12 rounded-xl overflow-hidden max-w-3xl mx-auto">
             <Image
               src="/images/tempstars-phones-hero.png"
-              alt="Dental centre profile and onboarding — two phones showing clinic detail and You are in a good company"
+              alt="Dental centre profile and onboarding – two phones showing clinic detail and You are in a good company"
               width={1200}
               height={800}
               className="w-full h-auto object-contain"
@@ -252,7 +261,7 @@ export default function TempStarsCaseStudy() {
                       />
                     </div>
                   </div>
-                  <p className="text-sm text-muted-foreground max-w-[750px]">Progressive disclosure: extra skills and photo; social proof — &quot;You are in a good company.&quot;</p>
+                  <p className="text-sm text-muted-foreground max-w-[750px]">Progressive disclosure: extra skills and photo; social proof – &quot;You are in a good company.&quot;</p>
                 </div>
               </div>
 
@@ -315,7 +324,7 @@ export default function TempStarsCaseStudy() {
             </h2>
             <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
               <p>
-                Starting with service mapping instead of UI surfaced the real &quot;trust tax.&quot; Fixing cancellation rules and adding information scent to shift cards wasn&apos;t just a design exercise—it was an operational maturing of the business. By combining policy reform with contextual onboarding, we turned TempStars from a &quot;leaky bucket&quot; into a scalable marketplace leader.
+                Starting with service mapping instead of UI surfaced the real &quot;trust tax.&quot; Fixing cancellation rules and adding information scent to shift cards wasn&apos;t just a design exercise–it was an operational maturing of the business. By combining policy reform with contextual onboarding, we turned TempStars from a &quot;leaky bucket&quot; into a scalable marketplace leader.
               </p>
             </div>
           </section>
@@ -331,6 +340,7 @@ export default function TempStarsCaseStudy() {
             </Link>
           </div>
         </main>
+        </div>
       </div>
     </div>
   )

@@ -5,7 +5,7 @@ export function TestimonialsSection() {
     {
       title: "Critical in AI development",
       keyPhrase: "excellent communicator",
-      text: "On a personal level, she was a joy to work with—friendly, funny and an excellent communicator.",
+      text: "On a personal level, she was a joy to work with–friendly, funny and an excellent communicator.",
       author: "Ophelie Jaschke",
       role: "CEO at lenox AI",
       linkedin: "#",
@@ -43,7 +43,7 @@ export function TestimonialsSection() {
     {
       title: "Incredibly talented designer",
       keyPhrase: "go above and beyond",
-      text: "A pleasure to work with—positive attitude and always go above and beyond.",
+      text: "A pleasure to work with–positive attitude and always go above and beyond.",
       author: "Nikolay Stefanov",
       role: "R&D Manager at BGO Software",
       linkedin: "#",

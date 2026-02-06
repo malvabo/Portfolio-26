@@ -11,23 +11,31 @@ export default function SquirllCaseStudy() {
       <ScrollToTop />
       <Header />
 
-      <div className="flex max-w-7xl mx-auto">
-        <aside className="hidden lg:block w-56 px-8 lg:px-12 pt-16 sticky top-24 self-start">
-          <Link
-            href="/#work"
-            scroll={false}
-            className="inline-flex items-baseline gap-2 text-xs font-mono tracking-wider uppercase text-muted-foreground hover:text-foreground transition-colors mb-16 leading-none"
-          >
-            <ArrowLeft className="w-3 h-3 shrink-0" />
-            All projects
-          </Link>
-        </aside>
-
-        <main className="flex-1 px-8 lg:px-12 pt-24 pb-20 lg:pb-24 max-w-4xl">
-          <div className="mb-12">
+      <div className="max-w-7xl mx-auto pt-24 flex flex-col">
+        {/* Row 1: back link + category label on one horizontal line (same flex row for alignment) */}
+        <div className="flex w-full items-start">
+          <div className="hidden lg:block w-56 shrink-0 px-8 lg:px-12">
+            <Link
+              href="/#work"
+              scroll={false}
+              className="inline-flex items-baseline gap-2 text-xs font-mono tracking-wider uppercase text-muted-foreground hover:text-foreground transition-colors leading-none"
+            >
+              <ArrowLeft className="w-3 h-3 shrink-0" />
+              All projects
+            </Link>
+          </div>
+          <div className="min-w-0 flex-1 px-8 lg:px-12">
             <p className="font-mono text-xs text-muted-foreground mb-6 tracking-wider uppercase leading-none">
               AI-POWERED FINANCE APP
             </p>
+          </div>
+        </div>
+
+        {/* Row 2: spacer + main content */}
+        <div className="flex w-full items-start">
+          <div className="hidden lg:block w-56 shrink-0 px-8 lg:px-12" aria-hidden />
+          <main className="flex-1 px-8 lg:px-12 pb-20 lg:pb-24 max-w-4xl">
+          <div className="mb-12">
             <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl tracking-[-0.02em] leading-[1.2] mb-4 text-balance">
               From idea to launch: AI-first finance app in 4 months
             </h1>
@@ -163,6 +171,7 @@ export default function SquirllCaseStudy() {
             </Link>
           </div>
         </main>
+        </div>
       </div>
     </div>
   )

@@ -107,7 +107,7 @@ export function WorkshopsSection() {
             <div className="relative w-full rounded-lg overflow-hidden shadow-lg ring-1 ring-white/10 bg-white/5 backdrop-blur-sm min-h-[120px]">
               <Image
                 src="/images/framework-ai-trust-sticker.png"
-                alt="Key claims and evidence framework — visual structure, evidence strength, source mapping"
+                alt="Key claims and evidence framework – visual structure, evidence strength, source mapping"
                 width={1200}
                 height={675}
                 className="w-full h-auto object-contain object-left-top"

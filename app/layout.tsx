@@ -17,7 +17,7 @@ const _lora = Lora({
 })
 
 export const metadata: Metadata = {
-  title: 'Product Designer — Crafting Digital Experiences That Scale',
+  title: 'Product Designer – Crafting Digital Experiences That Scale',
   description: 'Lead product designer specializing in user-centered design for high-growth startups. From vision to execution, I create products people love.',
   generator: 'v0.app',
   icons: {
