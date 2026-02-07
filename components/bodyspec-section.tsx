@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+import { MapPin } from "lucide-react"
 
 export function BodySpecSection() {
   const images = [
@@ -13,7 +14,7 @@ export function BodySpecSection() {
       <div className="border-t border-gray-300 mb-10" />
 
       <h2 className="text-2xl md:text-3xl leading-[1.1] font-serif mb-10 tracking-tight">
-        BodySpec – 20% more bookings for 500K+ users
+        BodySpec: 20% more bookings for 500K+ users
       </h2>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 mb-10">
@@ -54,8 +55,20 @@ export function BodySpecSection() {
           <div className="text-base leading-relaxed text-foreground space-y-0.5">
             <p>Senior Product Designer</p>
             <p>May 2022 - Apr 2023</p>
-            <p>London</p>
-            <p>Web, iOS</p>
+            <p className="inline-flex items-center gap-1.5">
+              <MapPin className="w-3.5 h-3.5 text-muted-foreground" />
+              London
+            </p>
+            <div className="flex flex-wrap gap-1.5 mt-1">
+              {["Web", "iOS"].map((platform) => (
+                <span
+                  key={platform}
+                  className="inline-block px-2 py-0.5 text-[13px] rounded-md bg-[#E8E3DD] text-[#6B5D4F]"
+                >
+                  {platform}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </div>

@@ -13,7 +13,7 @@ export function TempStarsSection() {
       <div className="border-t border-gray-300 mb-10" />
 
       <h2 className="text-2xl md:text-3xl leading-[1.1] font-serif mb-10 tracking-tight">
-        TempStars – Marketplace liquidity & trust for 25K+ dental professionals
+        TempStars: Marketplace liquidity & trust for 25K+ dental professionals
       </h2>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 mb-10">
@@ -58,7 +58,16 @@ export function TempStarsSection() {
           <div className="text-base leading-relaxed text-foreground space-y-0.5">
             <p>Lead Product Designer</p>
             <p>Shipped 2023</p>
-            <p>Web, Mobile</p>
+            <div className="flex flex-wrap gap-1.5 mt-1">
+              {["Web", "Mobile"].map((platform) => (
+                <span
+                  key={platform}
+                  className="inline-block px-2 py-0.5 text-[13px] rounded-md bg-[#E8E3DD] text-[#6B5D4F]"
+                >
+                  {platform}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </div>

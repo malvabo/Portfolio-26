@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Geist, Lora } from 'next/font/google'
+import localFont from 'next/font/local'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
@@ -13,6 +14,12 @@ const _lora = Lora({
   subsets: ['latin'],
   weight: ['400', '500', '600'],
   variable: '--font-serif',
+  display: 'swap'
+})
+
+const _messier = localFont({
+  src: './fonts/MessierWrits.ttf',
+  variable: '--font-handwriting',
   display: 'swap'
 })
 
@@ -46,7 +53,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`font-sans antialiased ${_geist.variable} ${_lora.variable}`}>
+      <body className={`font-sans antialiased ${_geist.variable} ${_lora.variable} ${_messier.variable}`}>
         {children}
         <Analytics />
       </body>

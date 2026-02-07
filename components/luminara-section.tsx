@@ -21,7 +21,7 @@ export function LuminaraSection() {
       <div className="border-t border-gray-300 mb-10" />
 
       <h2 className="text-2xl md:text-3xl leading-[1.1] font-serif mb-10 tracking-tight">
-        Luminara – One experience for clients and clinicians
+        Luminara: One experience for clients and clinicians
       </h2>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 mb-10">
@@ -54,7 +54,16 @@ export function LuminaraSection() {
             <p>Lead Product Designer</p>
             <p>July 2024 - Jan 2025</p>
             <p>Remote</p>
-            <p>Web, iOS, Android</p>
+            <div className="flex flex-wrap gap-1.5 mt-1">
+              {["Web", "iOS", "Android"].map((platform) => (
+                <span
+                  key={platform}
+                  className="inline-block px-2 py-0.5 text-[13px] rounded-md bg-[#E8E3DD] text-[#6B5D4F]"
+                >
+                  {platform}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </div>

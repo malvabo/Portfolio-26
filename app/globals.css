@@ -108,3 +108,9 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .font-handwriting {
+    font-family: var(--font-handwriting), cursive;
+  }
+}

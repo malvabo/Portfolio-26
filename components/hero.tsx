@@ -13,11 +13,11 @@ export function Hero() {
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-[1.2fr_1fr] gap-12 lg:gap-16 items-start">
           <div className="flex flex-col">
-            <h1 className="font-serif text-2xl md:text-3xl font-normal leading-[1.1] tracking-tight text-foreground">
-              <span className="block">Maria Borysova is a Product UX Designer at Amazon.</span>
+            <h1 className="font-serif text-2xl md:text-3xl font-normal leading-[1.3] tracking-tight text-foreground">
+              Maria Borysova is a Product UX Designer at Amazon.
             </h1>
-            <p className="mt-6 font-serif text-2xl md:text-3xl font-normal leading-[1.1] tracking-tight text-foreground max-w-xl">
-              I spend my time thinking and talking about AI Design: how to build trust, use AI to help and how to keep the &quot;human&quot; in the center.
+            <p className="mt-6 font-serif text-2xl md:text-3xl font-normal leading-[1.3] tracking-tight text-foreground max-w-xl">
+              She spends her time thinking and talking about AI Design: how to build trust, use AI to help and how to keep the &quot;human&quot; in the center.
             </p>
           </div>
 

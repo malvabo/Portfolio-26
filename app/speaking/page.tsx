@@ -45,6 +45,7 @@ export default function SpeakingPage() {
   const podcasts = [
     {
       title: "CTO Show",
+      link: "https://www.youtube.com/watch?v=1OJ-elvLVI8",
     },
     {
       title: "That Will Never Work",
@@ -75,18 +76,20 @@ export default function SpeakingPage() {
             </div>
 
             <section>
-              <div className="mb-8">
-                <span className="text-sm font-mono text-muted-foreground tracking-wider uppercase">
+              <div className="mb-6">
+                <span className="uppercase text-[13px] text-muted-foreground/70 font-mono tracking-wide mb-2 block">
                   Public Speaking
                 </span>
-                <h2 className="font-serif text-3xl md:text-4xl mt-3">Offline and online talks</h2>
+                <h2 className="font-serif text-2xl md:text-3xl leading-[1.1] tracking-tight text-foreground mb-6">
+                  Offline and online talks
+                </h2>
               </div>
 
               <div className="space-y-6">
                 {talks.map((talk, index) => (
-                  <div key={index} className="border-b border-border/40 pb-6 last:border-0">
-                    <h3 className="text-lg font-medium mb-1">{talk.title}</h3>
-                    {talk.subtitle && <p className="text-base leading-relaxed text-muted-foreground">{talk.subtitle}</p>}
+                  <div key={index} className="border-b border-gray-300/30 py-5 first:pt-0 last:border-b-0">
+                    <h3 className="text-[17px] font-medium text-foreground mb-1">{talk.title}</h3>
+                    {talk.subtitle && <p className="text-base leading-relaxed text-muted-foreground mt-1">{talk.subtitle}</p>}
                   </div>
                 ))}
                 <p className="text-muted-foreground italic pt-4">… and more to be added soon!</p>
@@ -94,46 +97,74 @@ export default function SpeakingPage() {
             </section>
 
             <section>
-              <div className="mb-8">
-                <span className="text-sm font-mono text-muted-foreground tracking-wider uppercase">
+              <div className="mb-6">
+                <span className="uppercase text-[13px] text-muted-foreground/70 font-mono tracking-wide mb-2 block">
                   Public appearances
                 </span>
-                <h2 className="font-serif text-3xl md:text-4xl mt-3">Interviews</h2>
+                <h2 className="font-serif text-2xl md:text-3xl leading-[1.1] tracking-tight text-foreground mb-6">
+                  Interviews
+                </h2>
               </div>
 
-              <div className="space-y-6">
+              <div className="space-y-0">
                 {interviews.map((interview, index) => (
-                  <div key={index} className="border-b border-border/40 pb-6 last:border-0">
+                  <div key={index} className="border-b border-gray-300/30 py-5 first:pt-0 last:border-b-0">
                     {interview.link ? (
                       <a
                         href={interview.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-lg font-medium mb-1 hover:opacity-70 transition-opacity inline-block"
+                        className="group block"
                       >
-                        {interview.title}
+                        <p className="font-medium text-foreground text-[17px] group-hover:text-primary transition-colors mb-1 inline-flex items-baseline gap-1.5">
+                          {interview.title}
+                          <svg className="inline-block w-3.5 h-3.5 mb-0.5 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                          </svg>
+                        </p>
+                        {interview.subtitle && <p className="text-base leading-relaxed text-muted-foreground mt-1">{interview.subtitle}</p>}
                       </a>
                     ) : (
-                      <h3 className="text-lg font-medium mb-1">{interview.title}</h3>
+                      <>
+                        <h3 className="font-medium text-foreground text-[17px] mb-1">{interview.title}</h3>
+                        {interview.subtitle && <p className="text-base leading-relaxed text-muted-foreground mt-1">{interview.subtitle}</p>}
+                      </>
                     )}
-                    {interview.subtitle && <p className="text-base leading-relaxed text-muted-foreground">{interview.subtitle}</p>}
                   </div>
                 ))}
               </div>
             </section>
 
             <section>
-              <div className="mb-8">
-                <span className="text-sm font-mono text-muted-foreground tracking-wider uppercase">
+              <div className="mb-6">
+                <span className="uppercase text-[13px] text-muted-foreground/70 font-mono tracking-wide mb-2 block">
                   Audio Content
                 </span>
-                <h2 className="font-serif text-3xl md:text-4xl mt-3">My podcast appearances</h2>
+                <h2 className="font-serif text-2xl md:text-3xl leading-[1.1] tracking-tight text-foreground mb-6">
+                  My podcast appearances
+                </h2>
               </div>
 
-              <div className="space-y-6">
+              <div className="space-y-0">
                 {podcasts.map((podcast, index) => (
-                  <div key={index} className="border-b border-border/40 pb-6 last:border-0">
-                    <h3 className="text-lg font-medium">{podcast.title}</h3>
+                  <div key={index} className="border-b border-gray-300/30 py-5 first:pt-0 last:border-b-0">
+                    {podcast.link ? (
+                      <a
+                        href={podcast.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group block"
+                      >
+                        <p className="font-medium text-foreground text-[17px] group-hover:text-primary transition-colors inline-flex items-baseline gap-1.5">
+                          {podcast.title}
+                          <svg className="inline-block w-3.5 h-3.5 mb-0.5 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                          </svg>
+                        </p>
+                      </a>
+                    ) : (
+                      <h3 className="font-medium text-foreground text-[17px]">{podcast.title}</h3>
+                    )}
                   </div>
                 ))}
                 <p className="text-muted-foreground italic pt-4">… and more to be added soon!</p>

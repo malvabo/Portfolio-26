@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
+import { MapPin } from "lucide-react"
 
 export function SquirllSection() {
   const images = [
@@ -12,7 +13,7 @@ export function SquirllSection() {
     <section className="container mx-auto px-8 lg:px-12 py-8 md:py-12">
 
       <h2 className="text-2xl md:text-3xl leading-[1.1] font-serif mb-10 tracking-tight">
-        Squirll – 80% of budgeting on autopilot
+        Squirll: 80% of budgeting on autopilot
       </h2>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 mb-10">
@@ -53,8 +54,20 @@ export function SquirllSection() {
           <div className="text-base leading-relaxed text-foreground space-y-0.5">
             <p>Lead Product Designer</p>
             <p>Sep 2024 - Apr 2025</p>
-            <p>London</p>
-            <p>Web, iOS</p>
+            <p className="inline-flex items-center gap-1.5">
+              <MapPin className="w-3.5 h-3.5 text-muted-foreground" />
+              London
+            </p>
+            <div className="flex flex-wrap gap-1.5 mt-1">
+              {["Web", "iOS"].map((platform) => (
+                <span
+                  key={platform}
+                  className="inline-block px-2 py-0.5 text-[13px] rounded-md bg-[#E8E3DD] text-[#6B5D4F]"
+                >
+                  {platform}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </div>

@@ -38,6 +38,8 @@ export function ArticlesSection() {
             <a
               key={index}
               href={article.link}
+              target="_blank"
+              rel="noopener noreferrer"
               className="block p-8 rounded-xl relative overflow-hidden group transition-all duration-700 bg-[#f5f3f1]"
             >
               <div
@@ -52,9 +54,9 @@ export function ArticlesSection() {
               />
 
               <div className="relative z-10">
-                <h3 className="font-serif text-[22px] tracking-[-0.02em] leading-[1.2] group-hover:text-white transition-colors duration-500 mb-2 inline-flex items-baseline gap-1.5">
+                <h3 className="font-serif text-[22px] tracking-[-0.02em] leading-[1.2] group-hover:text-white transition-colors duration-500 mb-2">
                   {article.title}
-                  <ArrowUpRight className="w-5 h-5 shrink-0 text-muted-foreground group-hover:text-white transition-colors duration-500" />
+                  <ArrowUpRight className="inline-block w-3.5 h-3.5 ml-1.5 mb-0.5 text-muted-foreground group-hover:text-white transition-colors duration-500" />
                 </h3>
                 <p className="text-muted-foreground leading-relaxed group-hover:text-white/90 transition-colors duration-500">
                   {article.description}

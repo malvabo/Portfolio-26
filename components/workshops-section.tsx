@@ -11,6 +11,7 @@ const workshops = [
       "Reducing friction in agentic interfaces",
       "Stepwise interaction patterns for complex tasks",
     ],
+    link: "https://luma.com/UxcelMaryWorkshop1",
   },
   {
     title: "Designing Interactive & Adaptive AI Features",
@@ -21,6 +22,7 @@ const workshops = [
       "Visual affordances for AI responses",
       "Optimizing interaction flows for engagement",
     ],
+    link: "https://luma.com/UxcelMaryWorkshop2",
   },
 ]
 
@@ -50,12 +52,18 @@ export function WorkshopsSection() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-10">
           {workshops.map((workshop, index) => (
-            <div
+            <Link
               key={index}
-              className="bg-[#F5F3F0] rounded-2xl p-6"
+              href={workshop.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#F5F3F0] rounded-2xl p-6 block hover:bg-[#ede9e4] transition-colors group"
             >
-              <h3 className="font-serif text-[22px] tracking-[-0.02em] leading-[1.15] text-foreground mb-3">
+              <h3 className="font-serif text-[22px] tracking-[-0.02em] leading-[1.15] text-foreground mb-3 group-hover:text-primary transition-colors">
                 {workshop.title}
+                <svg className="inline-block w-3.5 h-3.5 ml-1.5 mb-0.5 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
               </h3>
               <p className="text-base leading-relaxed text-foreground mb-4">
                 {workshop.description}
@@ -72,7 +80,7 @@ export function WorkshopsSection() {
                   </li>
                 ))}
               </ul>
-            </div>
+            </Link>
           ))}
         </div>
 

@@ -12,18 +12,9 @@ export default function AuthoticsCaseStudy() {
       <Header />
 
       <div className="max-w-7xl mx-auto pt-24 flex flex-col">
-        {/* Row 1: back link + category label on one horizontal line (same flex row for alignment) */}
+        {/* Row 1: spacer + category label */}
         <div className="flex w-full items-start">
-          <div className="hidden lg:block w-56 shrink-0 px-8 lg:px-12">
-            <Link
-              href="/#work"
-              scroll={false}
-              className="inline-flex items-baseline gap-2 text-xs font-mono tracking-wider uppercase text-muted-foreground hover:text-foreground transition-colors leading-none"
-            >
-              <ArrowLeft className="w-3 h-3 shrink-0" />
-              All projects
-            </Link>
-          </div>
+          <div className="hidden lg:block w-56 shrink-0 px-8 lg:px-12" aria-hidden />
           <div className="min-w-0 flex-1 px-8 lg:px-12">
             <p className="font-mono text-xs text-muted-foreground mb-6 tracking-wider uppercase leading-none">
               E-COMMERCE & HEALTH TECH
@@ -34,6 +25,16 @@ export default function AuthoticsCaseStudy() {
         {/* Row 2: spacer + main content */}
         <div className="flex w-full items-start">
           <div className="hidden lg:block w-56 shrink-0 px-8 lg:px-12" aria-hidden />
+          <aside className="hidden lg:block w-56 px-8 lg:px-12 fixed top-24 left-8 lg:left-[max(3rem,calc((100vw-80rem)/2+3rem))]" aria-label="Case study navigation">
+            <Link
+              href="/#work"
+              scroll={false}
+              className="inline-flex items-baseline gap-2 text-xs font-mono tracking-wider uppercase text-muted-foreground hover:text-foreground transition-colors leading-none"
+            >
+              <ArrowLeft className="w-3 h-3 shrink-0" />
+              All projects
+            </Link>
+          </aside>
           <main className="flex-1 px-8 lg:px-12 pb-20 lg:pb-24 max-w-4xl">
           <div className="mb-12">
             <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl tracking-[-0.02em] leading-[1.2] mb-4 text-balance">
@@ -61,7 +62,16 @@ export default function AuthoticsCaseStudy() {
               </div>
               <div>
                 <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-1">Platform</p>
-                <p className="leading-relaxed">Web, Mobile</p>
+                <div className="flex flex-wrap gap-1.5">
+                  {["Web", "Mobile"].map((platform) => (
+                    <span
+                      key={platform}
+                      className="inline-block px-2 py-0.5 text-[12px] rounded-md bg-[#E8E3DD] text-[#6B5D4F]"
+                    >
+                      {platform}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           </section>

@@ -5,18 +5,27 @@ const engagements = [
   {
     name: "How to web conference",
     description: "AI Design and Healthcare: Lessons in Changing Human Behavior",
+    link: "https://www.howtoweb.co/",
   },
   {
     name: "Demystifying Women's Health",
     description: "How to design engaging healthcare products",
+    link: "https://luma.com/9twxu4xb",
   },
   {
-    name: "UXcell webinar",
+    name: "UXcel webinar",
     description: "Designing for Healthtech: Behavior, AI & Building Trust",
+    link: "https://www.youtube.com/watch?v=JdMzQRB4d68",
   },
   {
     name: "Pixel Perfect webinar",
     description: "Addictive UX & Behavioural Design in Health-Tech",
+    link: "https://pixelperfect.world/learning-hub/",
+  },
+  {
+    name: "UXDX",
+    description: "Designing for Healthtech: Behavior, AI & Building Trust",
+    link: "https://www.youtube.com/watch?v=GPMzs47V6YQ",
   },
 ]
 
@@ -37,8 +46,27 @@ export function SpeakingIndustrySection() {
             <ul className="space-y-0">
               {engagements.map((item, idx) => (
                 <li key={idx} className="border-b border-gray-300/30 py-5 first:pt-0 last:border-b-0">
-                  <p className="font-medium text-foreground text-[17px]">{item.name}</p>
-                  <p className="text-base leading-relaxed text-muted-foreground mt-1">{item.description}</p>
+                  {item.link ? (
+                    <Link
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group block"
+                    >
+                      <p className="font-medium text-foreground text-[17px] group-hover:text-primary transition-colors">
+                        {item.name}
+                        <svg className="inline-block w-3.5 h-3.5 ml-1.5 mb-0.5 opacity-0 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                      </p>
+                      <p className="text-base leading-relaxed text-muted-foreground mt-1">{item.description}</p>
+                    </Link>
+                  ) : (
+                    <>
+                      <p className="font-medium text-foreground text-[17px]">{item.name}</p>
+                      <p className="text-base leading-relaxed text-muted-foreground mt-1">{item.description}</p>
+                    </>
+                  )}
                 </li>
               ))}
             </ul>
@@ -84,14 +112,15 @@ export function SpeakingIndustrySection() {
             </div>
             <div className="relative rounded-xl overflow-hidden bg-[#f1f1f1] border border-border/60 shadow-sm">
               <Image
-                src="https://framerusercontent.com/images/1OEM3USoZNobtLSElzYLzfWhhc.png?width=2020&height=1138"
-                alt="UXcel webinar"
+                src="/images/speaking-mary-podium.png"
+                alt="Mary Borysova speaking at podium"
                 fill
                 className="object-cover"
+                style={{ objectPosition: 'left center' }}
               />
               <div className="absolute inset-0 bg-black/20" />
               <div className="absolute bottom-0 left-0 right-0 p-3">
-                <p className="uppercase text-[11px] text-white/90 font-mono tracking-wider">UXcel webinar</p>
+                <p className="uppercase text-[11px] text-white/90 font-mono tracking-wider">Speaking event</p>
               </div>
             </div>
           </div>
