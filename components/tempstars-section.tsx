@@ -58,7 +58,7 @@ export function TempStarsSection() {
           <div className="text-base leading-relaxed text-foreground space-y-0.5">
             <p>Lead Product Designer</p>
             <p>Shipped 2023</p>
-            <div className="flex flex-wrap gap-1.5 mt-1">
+            <div className="flex flex-wrap gap-1.5 mt-2">
               {["Web", "Mobile"].map((platform) => (
                 <span
                   key={platform}

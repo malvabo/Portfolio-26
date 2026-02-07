@@ -54,7 +54,7 @@ export function LuminaraSection() {
             <p>Lead Product Designer</p>
             <p>July 2024 - Jan 2025</p>
             <p>Remote</p>
-            <div className="flex flex-wrap gap-1.5 mt-1">
+            <div className="flex flex-wrap gap-1.5 mt-2">
               {["Web", "iOS", "Android"].map((platform) => (
                 <span
                   key={platform}

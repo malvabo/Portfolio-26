@@ -1,6 +1,5 @@
 import Image from "next/image"
 import Link from "next/link"
-import { MapPin } from "lucide-react"
 
 export function BodySpecSection() {
   const images = [
@@ -55,11 +54,7 @@ export function BodySpecSection() {
           <div className="text-base leading-relaxed text-foreground space-y-0.5">
             <p>Senior Product Designer</p>
             <p>May 2022 - Apr 2023</p>
-            <p className="inline-flex items-center gap-1.5">
-              <MapPin className="w-3.5 h-3.5 text-muted-foreground" />
-              London
-            </p>
-            <div className="flex flex-wrap gap-1.5 mt-1">
+            <div className="flex flex-wrap gap-1.5 mt-2">
               {["Web", "iOS"].map((platform) => (
                 <span
                   key={platform}
