@@ -23,13 +23,13 @@ export function ArticlesSection() {
   ]
 
   return (
-    <section className="py-16 md:py-20 container mx-auto px-8 lg:px-12 bg-background">
+    <section className="pt-10 md:pt-12 pb-16 md:pb-20 container mx-auto px-8 lg:px-12 bg-background">
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center gap-2 mb-2">
           <span className="uppercase text-[13px] text-muted-foreground/70 font-mono tracking-wide">{"{04}"} Know more</span>
         </div>
 
-        <h2 className="font-serif text-2xl md:text-3xl leading-[1.1] tracking-tight text-foreground mb-6">
+        <h2 className="font-serif text-2xl md:text-3xl leading-[1.1] tracking-tight text-foreground mb-10">
           Deep dives on AI, trust & product
         </h2>
 
