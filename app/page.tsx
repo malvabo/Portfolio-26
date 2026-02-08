@@ -3,7 +3,6 @@ import { Hero } from "@/components/hero"
 import { WorkSection } from "@/components/work-section"
 import { AmazonSection } from "@/components/amazon-section"
 import { BodySpecSection } from "@/components/bodyspec-section"
-import { LuminaraSection } from "@/components/luminara-section"
 import { TempStarsSection } from "@/components/tempstars-section"
 import { SquirllSection } from "@/components/squirll-section"
 import { PandaDocSection } from "@/components/pandadoc-section"
@@ -23,11 +22,10 @@ export default function Home() {
         <TestimonialsSection />
         <WorkSection />
         <AmazonSection />
-        <SquirllSection />
         <BodySpecSection />
+        <SquirllSection />
         <PandaDocSection />
         <TempStarsSection />
-        <LuminaraSection />
         <ArticlesSection />
         <WorkshopsSection />
       </main>

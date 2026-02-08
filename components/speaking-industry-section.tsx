@@ -84,13 +84,14 @@ export function SpeakingIndustrySection() {
             </div>
           </div>
 
-          <div className="mt-8 lg:mt-0 grid grid-cols-2 grid-rows-2 gap-3 h-full">
-            <div className="row-span-2 relative rounded-xl overflow-hidden bg-[#f1f1f1] border border-border/60 shadow-sm">
+          <div className="mt-8 lg:mt-0 grid grid-cols-2 grid-rows-[1fr_1fr] gap-3 min-h-[280px] lg:min-h-[320px] h-full">
+            <div className="row-span-2 relative rounded-xl overflow-hidden bg-[#f1f1f1] border border-border/60 shadow-sm min-h-[200px] lg:min-h-0">
               <Image
                 src="/images/speaking-2.jpg"
                 alt="How to web conference"
                 fill
                 className="object-cover"
+                sizes="(max-width: 1024px) 50vw, 400px"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-4">
@@ -98,25 +99,27 @@ export function SpeakingIndustrySection() {
                 <p className="uppercase text-[11px] text-white/90 font-mono tracking-wider mt-0.5">Main stage</p>
               </div>
             </div>
-            <div className="relative rounded-xl overflow-hidden bg-[#f1f1f1] border border-border/60 shadow-sm">
+            <div className="relative rounded-xl overflow-hidden bg-[#f1f1f1] border border-border/60 shadow-sm min-h-[120px] lg:min-h-0">
               <Image
                 src="/images/speaking-1.jpg"
                 alt="Main stage"
                 fill
                 className="object-cover"
+                sizes="(max-width: 1024px) 50vw, 200px"
               />
               <div className="absolute inset-0 bg-black/20" />
               <div className="absolute bottom-0 left-0 right-0 p-3">
                 <p className="uppercase text-[11px] text-white/90 font-mono tracking-wider">Main stage</p>
               </div>
             </div>
-            <div className="relative rounded-xl overflow-hidden bg-[#f1f1f1] border border-border/60 shadow-sm">
+            <div className="relative rounded-xl overflow-hidden bg-[#f1f1f1] border border-border/60 shadow-sm min-h-[120px] lg:min-h-0">
               <Image
                 src="/images/speaking-mary-podium.png"
                 alt="Mary Borysova speaking at podium"
                 fill
                 className="object-cover"
                 style={{ objectPosition: 'left center' }}
+                sizes="(max-width: 1024px) 50vw, 200px"
               />
               <div className="absolute inset-0 bg-black/20" />
               <div className="absolute bottom-0 left-0 right-0 p-3">

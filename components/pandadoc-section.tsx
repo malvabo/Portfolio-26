@@ -11,7 +11,7 @@ export function PandaDocSection() {
   return (
     <section className="container mx-auto px-8 lg:px-12 pt-2 md:pt-3 pb-8 md:pb-12">
       <h2 className="text-2xl md:text-3xl leading-[1.1] font-serif mb-8 tracking-tight">
-        PandaDoc: One flow from draft to signed for 50K+ business users
+        PandaDoc: Designing one flow from draft to signed for 50K+ business users
       </h2>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 mb-10">

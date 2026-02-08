@@ -13,6 +13,7 @@ export function Footer() {
             </a>
           </div>
         </div>
+        <p className="text-[13px] text-muted-foreground/80 text-center mt-8">Designed with love and lots of mint tea</p>
       </div>
     </footer>
   )
