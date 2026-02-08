@@ -9,10 +9,8 @@ export function PandaDocSection() {
   ]
 
   return (
-    <section className="container mx-auto px-8 lg:px-12 py-8 md:py-12">
-      <div className="border-t border-gray-300 mb-10" />
-
-      <h2 className="text-2xl md:text-3xl leading-[1.1] font-serif mb-10 tracking-tight">
+    <section className="container mx-auto px-8 lg:px-12 pt-2 md:pt-3 pb-8 md:pb-12">
+      <h2 className="text-2xl md:text-3xl leading-[1.1] font-serif mb-8 tracking-tight">
         PandaDoc: One flow from draft to signed for 50K+ business users
       </h2>
 
@@ -64,19 +62,22 @@ export function PandaDocSection() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-3 lg:gap-12">
-        {images.map((image, idx) => (
-          <div key={idx} className="relative aspect-[4/3] overflow-hidden rounded-lg bg-gray-50 border border-gray-200">
-            <Image 
-              src={image.src || "/placeholder.svg"} 
-              alt={image.alt} 
-              fill 
-              className="object-cover"
-              style={idx === 2 ? { transform: 'scale(1.2)', transformOrigin: 'center' } : undefined}
-            />
-          </div>
-        ))}
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {images.map((image, idx) => (
+            <div key={idx} className="relative aspect-[4/3] overflow-hidden rounded-lg bg-gray-50 border border-gray-200">
+              <Image 
+                src={image.src || "/placeholder.svg"} 
+                alt={image.alt} 
+                fill 
+                className="object-cover"
+                style={idx === 2 ? { transform: 'scale(1.2)', transformOrigin: 'center' } : undefined}
+              />
+            </div>
+          ))}
+        </div>
       </div>
+      <div className="mt-8 border-t border-gray-300 mb-3" />
     </section>
   )
 }

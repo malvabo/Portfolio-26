@@ -35,11 +35,11 @@ const featuredArticle = {
 
 export function WorkshopsSection() {
   return (
-    <section className="py-12 md:py-16 container mx-auto px-8 lg:px-12">
+    <section className="pt-8 md:pt-10 pb-12 md:pb-16 container mx-auto px-8 lg:px-12">
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center gap-2 mb-2">
           <span className="uppercase text-[13px] text-muted-foreground/70 font-mono tracking-wide">
-            {"{01}"} WORKSHOPS & EDUCATION
+            {"{05}"} WORKSHOPS & EDUCATION
           </span>
         </div>
 

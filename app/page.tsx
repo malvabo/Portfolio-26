@@ -1,6 +1,7 @@
 import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
 import { WorkSection } from "@/components/work-section"
+import { AmazonSection } from "@/components/amazon-section"
 import { BodySpecSection } from "@/components/bodyspec-section"
 import { LuminaraSection } from "@/components/luminara-section"
 import { TempStarsSection } from "@/components/tempstars-section"
@@ -21,6 +22,7 @@ export default function Home() {
         <SpeakingIndustrySection />
         <TestimonialsSection />
         <WorkSection />
+        <AmazonSection />
         <SquirllSection />
         <BodySpecSection />
         <PandaDocSection />

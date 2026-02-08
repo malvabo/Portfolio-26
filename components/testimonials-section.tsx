@@ -4,8 +4,8 @@ export function TestimonialsSection() {
   const testimonials = [
     {
       title: "Critical in AI development",
-      keyPhrase: "excellent communicator",
-      text: "On a personal level, she was a joy to work with–friendly, funny and an excellent communicator.",
+      keyPhrase: "accessible and user-friendly",
+      text: "Most impressive was Mary's ability to make complex systems accessible and user-friendly.",
       author: "Ophelie Jaschke",
       role: "CEO at lenox AI",
       linkedin: "#",
@@ -34,25 +34,25 @@ export function TestimonialsSection() {
     {
       title: "Thorough and analytical",
       keyPhrase: "push the team to build with purpose",
-      text: "They question the status quo and ask the tough questions that push the team to build with purpose.",
+      text: "She questions the status quo and asks the tough questions that push the team to build with purpose.",
       author: "Carla Ruiz Entrecanales",
       role: "Venture Builder at ColdStart",
       linkedin: "#",
       avatar: "https://framerusercontent.com/images/Hd1E2e8ZG1g4zNUsGWNhHe5seg.jpeg?width=387&height=387",
     },
     {
-      title: "Incredibly talented designer",
-      keyPhrase: "go above and beyond",
-      text: "A pleasure to work with–positive attitude and always go above and beyond.",
-      author: "Nikolay Stefanov",
-      role: "R&D Manager at BGO Software",
+      title: "Strong recommendation",
+      keyPhrase: "communication skills, leadership qualities",
+      text: "I've worked under the leadership of Maria. Her superb communication skills, leadership qualities, enthusiastic personality are the reasons why I recommend her strongly.",
+      author: "Kateryna Lezhukh",
+      role: "Founder at Quema (presently)",
       linkedin: "#",
-      avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjzNikjRgqk-muIvC_aUGKYtBR38ySOKFEew&s",
+      avatar: "/images/kateryna-lezhukh.png",
     },
     {
       title: "Drives projects to completion",
-      keyPhrase: "Immerses themselves entirely",
-      text: "Immerses themselves entirely in the project to drive it to completion.",
+      keyPhrase: "reduce uncertainty for everyone",
+      text: "Immerses themselves entirely in the project to drive it to completion. Works to reduce uncertainty for everyone else to understand user needs.",
       author: "Konstantin Valiotti",
       role: "Director of Product at PandaDoc",
       linkedin: "#",
@@ -84,7 +84,7 @@ export function TestimonialsSection() {
 
       <div className="relative max-w-7xl mx-auto">
         <div className="flex items-center gap-2 mb-2">
-          <span className="uppercase text-[13px] text-muted-foreground/70 font-mono tracking-wide">TESTIMONIALS</span>
+          <span className="uppercase text-[13px] text-muted-foreground/70 font-mono tracking-wide">{"{02}"} TESTIMONIALS</span>
         </div>
 
         <h2 className="font-serif text-2xl md:text-3xl leading-[1.1] tracking-tight text-foreground mb-10">
@@ -95,7 +95,7 @@ export function TestimonialsSection() {
           {testimonials.map((testimonial, index) => (
             <div key={index} className="bg-[#f1f1f1] rounded-xl p-5 h-full flex flex-col">
               <p className="text-sm md:text-base leading-relaxed text-foreground/90 mb-4 flex-grow font-serif">
-                &ldquo;{highlightPhrase(testimonial.text, testimonial.keyPhrase)}&rdquo;
+                {highlightPhrase(testimonial.text, testimonial.keyPhrase)}
               </p>
 
               <div className="flex items-center gap-3 pt-4 border-t border-border/30">
