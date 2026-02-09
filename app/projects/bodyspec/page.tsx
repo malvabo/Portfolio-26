@@ -25,35 +25,35 @@ export default function BodySpecCaseStudy() {
         <div className="flex w-full items-start">
           <div className="hidden lg:block w-56 shrink-0 px-8 lg:px-12" aria-hidden />
           <aside className="hidden lg:block w-56 px-8 lg:px-12 fixed top-24 left-8 lg:left-[max(3rem,calc((100vw-80rem)/2+3rem))]" aria-label="Case study navigation">
-            <Link
-              href="/#work"
-              scroll={false}
+          <Link
+            href="/#work"
+            scroll={false}
               className="inline-flex items-baseline gap-2 text-xs font-mono tracking-wider uppercase text-muted-foreground hover:text-foreground transition-colors mb-16 leading-none"
-            >
+          >
               <ArrowLeft className="w-3 h-3 shrink-0" />
-              All projects
-            </Link>
+            All projects
+          </Link>
             <nav className="space-y-4" aria-label="Case study sections">
               <a href="#tldr" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
                 TLDR
-              </a>
-              <a href="#problem" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
-                Discovery
-              </a>
-              <a href="#research" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
-                Research
-              </a>
-              <a href="#solution" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
-                Solution
-              </a>
-              <a href="#outcomes" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
-                Outcomes
-              </a>
+            </a>
+            <a href="#problem" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
+              Discovery
+            </a>
+            <a href="#research" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
+              Research
+            </a>
+            <a href="#solution" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
+              Solution
+            </a>
+            <a href="#outcomes" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
+              Outcomes
+            </a>
               <a href="#reflection" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
                 Reflection
-              </a>
-            </nav>
-          </aside>
+            </a>
+          </nav>
+        </aside>
           <main className="flex-1 px-8 lg:px-12 pb-20 lg:pb-24 max-w-4xl">
           <div className="mb-12">
             <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl tracking-[-0.02em] leading-[1.2] mb-4 text-balance">
@@ -122,7 +122,7 @@ export default function BodySpecCaseStudy() {
               </li>
               <li className="flex gap-3">
                 <span className="text-muted-foreground mt-0.5">•</span>
-                <span><strong className="font-semibold text-foreground">Outcome:</strong> Provided the UX foundation for a successful $8.6M Series A funding round.</span>
+                <span><strong className="font-semibold text-foreground">Outcome:</strong> Provided the UX foundation for a successful $17.2M Series A funding round.</span>
               </li>
             </ul>
           </section>
@@ -171,17 +171,17 @@ export default function BodySpecCaseStudy() {
                   <p>
                     We also redesigned the results dashboard to emphasize longitudinal trends. By showing users how their body composition changed over time, we incentivized repeat scans and transformed BodySpec into a habit-forming platform.
                   </p>
-                </div>
+              </div>
 
                 <div className="mt-8 rounded-xl overflow-hidden">
-                  <Image
-                    src="/images/bodyspec-location-booking.webp"
-                    alt="BodySpec location booking interface on laptop"
-                    width={1200}
-                    height={900}
-                    className="w-full h-auto"
-                  />
-                </div>
+                <Image
+                  src="/images/bodyspec-location-booking.webp"
+                  alt="BodySpec location booking interface on laptop"
+                  width={1200}
+                  height={900}
+                  className="w-full h-auto"
+                />
+              </div>
               </div>
 
               <div>
@@ -190,24 +190,24 @@ export default function BodySpecCaseStudy() {
                   The legacy booking flow was a five-minute ordeal. Using the friction points identified in my tests, I redesigned the experience to be context-aware. By pre-filling availability based on geo-location and stripping out unnecessary fields, we reduced the path to checkout to just two clicks.
                 </p>
 
-                <div className="grid md:grid-cols-2 gap-6 mt-8">
-                  <div className="rounded-xl overflow-hidden">
-                    <Image
-                      src="/images/bodyspec-homepage-final.png"
-                      alt="BodySpec final homepage design with hero and benefits"
-                      width={1200}
-                      height={1200}
-                      className="w-full h-auto"
-                    />
-                  </div>
-                  <div className="rounded-xl overflow-hidden">
-                    <Image
-                      src="/images/bodyspec-booking-flow.png"
-                      alt="BodySpec mobile app booking interface"
-                      width={1200}
-                      height={1200}
-                      className="w-full h-auto"
-                    />
+              <div className="grid md:grid-cols-2 gap-6 mt-8">
+                <div className="rounded-xl overflow-hidden">
+                  <Image
+                    src="/images/bodyspec-homepage-final.png"
+                    alt="BodySpec final homepage design with hero and benefits"
+                    width={1200}
+                    height={1200}
+                    className="w-full h-auto"
+                  />
+                </div>
+                <div className="rounded-xl overflow-hidden">
+                  <Image
+                    src="/images/bodyspec-booking-flow.png"
+                    alt="BodySpec mobile app booking interface"
+                    width={1200}
+                    height={1200}
+                    className="w-full h-auto"
+                  />
                   </div>
                 </div>
               </div>
@@ -230,14 +230,14 @@ export default function BodySpecCaseStudy() {
                 <p className="text-sm leading-relaxed text-muted-foreground">reduction in checkout abandonment</p>
               </div>
               <div className="bg-background rounded-lg p-6">
-                <div className="text-2xl font-serif mb-2 tracking-[-0.02em]">$8.6M</div>
+                <div className="text-2xl font-serif mb-2 tracking-[-0.02em]">$17.2M</div>
                 <p className="text-sm leading-relaxed text-muted-foreground">Series A funding</p>
               </div>
             </div>
 
             <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
               <p>
-                The results were immediate: we saw a 20% lift in bookings and a 30% reduction in checkout abandonment. Beyond the UI, this work provided the strategic foundation that supported BodySpec’s $8.6M Series A funding.
+                The results were immediate: we saw a 20% lift in bookings and a 30% reduction in checkout abandonment. Beyond the UI, this work provided the strategic foundation that supported BodySpec’s $17.2M Series A funding.
               </p>
             </div>
           </section>

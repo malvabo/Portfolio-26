@@ -2,7 +2,7 @@ const impactTldr = [
   { label: "Growth", text: "Spearheaded the PandaDoc extension design, reducing document initiation time by 40%." },
   { label: "Scale", text: "Built a multi-state research operation for BodySpec, leading to a 30% reduction in abandonment." },
   { label: "Activation", text: "Corrected a 40% user drop-off for TempStars, driving a 25% YoY increase in shifts." },
-  { label: "Funding", text: "Provided the UX foundation for ventures securing over $8.6M in Series A funding." },
+  { label: "Funding", text: "Provided the UX foundation for ventures securing over $17.2M in Series A funding." },
 ]
 
 export function Hero() {

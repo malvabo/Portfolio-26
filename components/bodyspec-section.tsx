@@ -41,7 +41,7 @@ export function BodySpecSection() {
               <div className="text-sm text-muted-foreground opacity-80">Increase in bookings</div>
             </div>
             <div>
-              <div className="text-xl font-medium text-foreground mb-0.5">$8.6M</div>
+              <div className="text-xl font-medium text-foreground mb-0.5">$17.2M</div>
               <div className="text-sm text-muted-foreground opacity-80">Funding round secured</div>
             </div>
           </div>
