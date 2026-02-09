@@ -17,7 +17,7 @@ export function Hero() {
               Maria Borysova is a Product UX Designer at Amazon.
             </h1>
             <p className="mt-6 font-serif text-2xl md:text-3xl font-normal leading-[1.3] tracking-tight text-foreground max-w-xl">
-              She spends her time thinking and talking about AI Design: how to build trust, use AI to help and how to keep the &quot;human&quot; in the center.
+              She spends her time thinking and talking about AI Design: how to build trust, use AI to help and how to keep the human in the center.
             </p>
           </div>
 
