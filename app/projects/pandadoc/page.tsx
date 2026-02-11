@@ -58,7 +58,7 @@ export default function PandaDocCaseStudy() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-4 mb-8 pb-8 max-w-[750px]">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-4 mb-4 pb-8 max-w-[750px]">
             <div>
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Role</p>
               <p className="text-[15px] leading-relaxed">Senior Product Designer, Researcher</p>
@@ -86,7 +86,7 @@ export default function PandaDocCaseStudy() {
             </div>
           </div>
 
-          <section id="tldr" className="mb-16 p-8 bg-[#F5F3F0] rounded-xl max-w-[750px]">
+          <section id="tldr" className="mb-10 p-8 bg-[#F5F3F0] rounded-xl max-w-[750px]">
             <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">At a glance</h2>
 
             <ul className="space-y-2 text-[17px] leading-relaxed max-w-[750px]">
