@@ -81,7 +81,7 @@ export default function LuminaraCaseStudy() {
             </ul>
           </section>
 
-          <div className="mb-16 grid gap-4">
+          <div className="mb-16 grid gap-4 max-w-[750px]">
             {/* Hero image - wide */}
             <div className="rounded-xl overflow-hidden">
               <Image

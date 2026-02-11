@@ -110,7 +110,7 @@ export default function PandaDocCaseStudy() {
             </ul>
           </section>
 
-          <div className="mb-12 rounded-xl overflow-hidden">
+          <div className="mb-12 rounded-xl overflow-hidden max-w-[750px]">
             <Image
               src="https://framerusercontent.com/images/4DYcZ9CKBrks1ghCYxMeKxQS7uw.png?width=1556&height=1128"
               alt="PandaDoc extension listing in Chrome Web Store"
@@ -133,7 +133,7 @@ export default function PandaDocCaseStudy() {
             </div>
           </section>
 
-          <div className="mb-16 rounded-xl overflow-hidden">
+          <div className="mb-16 rounded-xl overflow-hidden max-w-[750px]">
             <Image
               src="https://framerusercontent.com/images/Q0a7y883B2Awo0qETG5pDxG9vo.png?width=1995&height=1657"
               alt="PandaDoc Chrome extension interface overview"
@@ -206,7 +206,7 @@ export default function PandaDocCaseStudy() {
               </div>
             </div>
 
-            <div className="mt-8 rounded-xl overflow-hidden">
+            <div className="mt-8 rounded-xl overflow-hidden max-w-[750px]">
               <Image
                 src="https://framerusercontent.com/images/0HlicyTYHrDXHzCAkHkt2wfolY.png?width=1578&height=788"
                 alt="PandaDoc extension interface showing document list and templates"

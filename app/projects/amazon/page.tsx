@@ -37,7 +37,7 @@ export default function AmazonCaseStudy() {
               </p>
             </div>
 
-            <div className="mb-16 grid gap-4">
+            <div className="mb-16 grid gap-4 max-w-[750px]">
               <div className="relative rounded-xl overflow-hidden">
                 <div className="relative w-full aspect-video [filter:blur(8px)] scale-105">
                   <Image

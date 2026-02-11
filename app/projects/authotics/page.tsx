@@ -68,7 +68,7 @@ export default function AuthoticsCaseStudy() {
             </div>
           </section>
 
-          <div className="mb-16 grid gap-4">
+          <div className="mb-16 grid gap-4 max-w-[750px]">
             {/* Row 1: Wide image */}
             <div className="rounded-xl overflow-hidden">
               <Image

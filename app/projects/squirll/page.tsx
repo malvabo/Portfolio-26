@@ -77,7 +77,7 @@ export default function SquirllCaseStudy() {
             </p>
           </section>
 
-          <div className="mb-16 grid gap-4">
+          <div className="mb-16 grid gap-4 max-w-[750px]">
             {/* Row 1: Wide image spanning full width */}
             <div className="rounded-xl overflow-hidden">
               <Image

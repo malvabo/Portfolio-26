@@ -170,7 +170,7 @@ export default function BodySpecCaseStudy() {
                   </p>
               </div>
 
-                <div className="mt-8 rounded-xl overflow-hidden">
+                <div className="mt-8 rounded-xl overflow-hidden max-w-[750px]">
                 <Image
                   src="/images/bodyspec-location-booking.webp"
                   alt="BodySpec location booking interface on laptop"
@@ -197,7 +197,7 @@ export default function BodySpecCaseStudy() {
                   </p>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-6 mt-8">
+                <div className="grid md:grid-cols-2 gap-6 mt-8 max-w-[750px]">
                   <div className="rounded-xl overflow-hidden">
                     <Image
                       src="/images/bodyspec-dexa-dashboard-1.png"
@@ -225,7 +225,7 @@ export default function BodySpecCaseStudy() {
                   The legacy booking flow was a five-minute ordeal. Using the friction points identified in my tests, I redesigned the experience to be context-aware. By pre-filling availability based on geo-location and stripping out unnecessary fields, we reduced the path to checkout to just two clicks.
                 </p>
 
-              <div className="grid md:grid-cols-2 gap-6 mt-8">
+              <div className="grid md:grid-cols-2 gap-6 mt-8 max-w-[750px]">
                 <div className="rounded-xl overflow-hidden">
                   <Image
                     src="/images/bodyspec-homepage-final.png"
