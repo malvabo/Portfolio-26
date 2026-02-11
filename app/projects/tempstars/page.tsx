@@ -110,10 +110,9 @@ export default function TempStarsCaseStudy() {
           </div>
 
           <section id="tldr" className="mb-16 p-8 bg-[#F5F3F0] rounded-xl max-w-[750px]">
-            <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-4">TLDR</p>
-            <h2 className="font-serif text-[2rem] leading-[1.2] tracking-[-0.02em] mb-6 text-balance">At a glance</h2>
+            <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">At a glance</h2>
 
-            <ul className="space-y-3 text-[17px] leading-relaxed max-w-[750px]">
+            <ul className="space-y-2 text-[17px] leading-relaxed max-w-[750px]">
               <li className="flex gap-3">
                 <span className="text-muted-foreground mt-0.5">•</span>
                 <span className="text-muted-foreground"><strong className="font-medium text-foreground">Impact:</strong> 20% surge in user activation and a 25% YoY increase in booked shifts.</span>
@@ -133,24 +132,24 @@ export default function TempStarsCaseStudy() {
             </ul>
           </section>
 
-          <section id="overview" className="mb-16">
-            <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-4">Overview</p>
-            <h2 className="font-serif text-[2rem] leading-[1.2] tracking-[-0.02em] mb-6 text-balance">
+          <section id="overview" className="mb-10">
+            <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Overview</p>
+            <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">
               Context and rationale
             </h2>
-            <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+            <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
               <p>
                 TempStars is Canada&apos;s largest dental staffing platform, but it faced a critical activation gap: 40% of signups never booked a shift. The product was suffering from an &quot;immature&quot; brand perception and opaque business rules. In a professional marketplace, if the platform doesn&apos;t feel like a partner, users won&apos;t trust it with their livelihood. My objective was to move the platform from a dated utility to a trusted, high-velocity service ecosystem.
               </p>
             </div>
           </section>
 
-          <section id="problem" className="mb-16">
-            <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-4">Discovery</p>
-            <h2 className="font-serif text-[2rem] leading-[1.2] tracking-[-0.02em] mb-6 text-balance">
+          <section id="problem" className="mb-10">
+            <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Discovery</p>
+            <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">
               The challenge of the &quot;ghost user&quot;
             </h2>
-            <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+            <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
               <p>
                 I began by auditing the end-to-end user journey to identify where the &quot;trust tax&quot; was highest. It wasn&apos;t just a UI problem; it was a systemic failure in the user&apos;s first 48 hours.
               </p>
@@ -163,27 +162,27 @@ export default function TempStarsCaseStudy() {
             </div>
           </section>
 
-          <section id="research" className="mb-16">
-            <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-4">Research</p>
-            <h2 className="font-serif text-[2rem] leading-[1.2] tracking-[-0.02em] mb-6 text-balance">
+          <section id="research" className="mb-10">
+            <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Research</p>
+            <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">
               The diagnosis of root causes
             </h2>
-            <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
+            <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-4">
               <p>
                 I moved beyond standard usability testing to map the service blueprint, uncovering two primary drivers of abandonment:
               </p>
             </div>
 
-            <div className="space-y-8 max-w-[750px]">
+            <div className="space-y-4 max-w-[750px]">
               <div>
-                <h3 className="font-serif text-xl leading-[1.3] tracking-[-0.02em] mb-2">Policy friction</h3>
+                <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium">Policy friction</h3>
                 <p className="text-[17px] leading-relaxed text-muted-foreground">
                   Interviews revealed that cancellation policies were punitively one-sided toward clinics. This destroyed platform trust before a user even worked their first hour.
                 </p>
               </div>
 
               <div>
-                <h3 className="font-serif text-xl leading-[1.3] tracking-[-0.02em] mb-2">Low information scent</h3>
+                <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium">Low information scent</h3>
                 <p className="text-[17px] leading-relaxed text-muted-foreground">
                   The &quot;search&quot; experience didn&apos;t account for the specialized mental models of dental professionals. A hygienist isn&apos;t looking for any job; they are looking for a specific clinical environment.
                 </p>
@@ -201,9 +200,9 @@ export default function TempStarsCaseStudy() {
             </div>
           </section>
 
-          <section id="solution" className="mb-16">
-            <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-4">Solution</p>
-            <h2 className="font-serif text-[2rem] leading-[1.2] tracking-[-0.02em] mb-6 text-balance">
+          <section id="solution" className="mb-10">
+            <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Solution</p>
+            <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">
               Execution: a phased operational recovery
             </h2>
 
@@ -213,7 +212,7 @@ export default function TempStarsCaseStudy() {
 
             <div className="space-y-12 max-w-[750px]">
               <div>
-                <h3 className="font-serif text-xl leading-[1.3] tracking-[-0.02em] mb-3">1. Stakeholder negotiation &amp; policy reform</h3>
+                <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium">1. Stakeholder negotiation &amp; policy reform</h3>
                 <p className="text-[17px] leading-relaxed text-muted-foreground">
                   I facilitated workshops with the founders to overhaul the cancellation policy. I argued that brand equity among hygienists was our most valuable asset. We successfully balanced the rules to provide more transparency and fairness, which immediately improved sentiment in our beta groups.
                 </p>
@@ -237,14 +236,14 @@ export default function TempStarsCaseStudy() {
                   />
                 </div>
               </div>
+              <p className="mt-1 text-sm text-muted-foreground max-w-[750px]">TempStars landing: Dental Temping the way it should be; last step: add your resume to help dental offices choose you.</p>
 
               <div>
-                <h3 className="font-serif text-xl leading-[1.3] tracking-[-0.02em] mb-3">2. Contextual onboarding (progressive disclosure)</h3>
+                <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium">2. Contextual onboarding (progressive disclosure)</h3>
                 <p className="text-[17px] leading-relaxed text-muted-foreground">
                   We replaced the static, overwhelming signup with a progressive disclosure model. By asking for specialized skills (e.g., specific software or equipment proficiency) upfront, we could pre-filter the marketplace. This allowed us to surface relevant shifts immediately, reducing the &quot;cognitive noise&quot; for new users.
                 </p>
-                <div className="mt-6 space-y-8">
-                  <p className="text-sm text-muted-foreground max-w-[750px]">Dental centre profile with neighborhood, safety, and shift details; clinic and onboarding in context.</p>
+                <div className="mt-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[750px]">
                     <div className="relative rounded-xl overflow-hidden bg-[#f5f5f5] h-[360px]">
                       <Image
@@ -263,12 +262,12 @@ export default function TempStarsCaseStudy() {
                       />
                     </div>
                   </div>
-                  <p className="text-sm text-muted-foreground max-w-[750px]">Progressive disclosure: extra skills and photo; social proof – &quot;You are in a good company.&quot;</p>
+                  <p className="mt-2 text-sm text-muted-foreground max-w-[750px]">Progressive disclosure: extra skills and photo; social proof – &quot;You are in a good company.&quot;</p>
                 </div>
               </div>
 
               <div>
-                <h3 className="font-serif text-xl leading-[1.3] tracking-[-0.02em] mb-3">3. Engineering information density</h3>
+                <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium">3. Engineering information density</h3>
                 <p className="text-[17px] leading-relaxed text-muted-foreground">
                   I restructured the shift pages to prioritize &quot;decision-making data.&quot; We moved clinical requirements and office logistics to the forefront. By providing high &quot;information scent,&quot; we eliminated the need for external research and gave users the confidence to book in real-time.
                 </p>
@@ -280,14 +279,15 @@ export default function TempStarsCaseStudy() {
                     height={800}
                     className="w-full h-auto object-contain"
                   />
+                  <p className="mt-2 text-sm text-muted-foreground">Before: dense shift detail with long PPE list. After: dental centre profile with tabs for dental office, neighborhood, safety, and shift details; map and clear decision data.</p>
                 </div>
               </div>
             </div>
           </section>
 
           <section id="outcomes" className="mb-16 p-8 bg-[#F5F3F0] rounded-xl max-w-[750px]">
-            <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-4">Outcomes</p>
-            <h2 className="font-serif text-[2rem] leading-[1.2] tracking-[-0.02em] mb-6 text-balance">
+            <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Outcomes</p>
+            <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">
               The impact of operational maturity
             </h2>
 
@@ -306,7 +306,7 @@ export default function TempStarsCaseStudy() {
               </div>
             </div>
 
-            <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+            <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
               <p>
                 <strong className="font-medium text-foreground">20% lift in activation:</strong> We successfully converted more &quot;signups&quot; into &quot;active workers&quot; by lowering the barrier to entry and increasing trust.
               </p>
@@ -319,12 +319,12 @@ export default function TempStarsCaseStudy() {
             </div>
           </section>
 
-          <section id="reflection" className="mb-16">
-            <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-4">Reflection</p>
-            <h2 className="font-serif text-[2rem] leading-[1.2] tracking-[-0.02em] mb-6 text-balance">
+          <section id="reflection" className="mb-10">
+            <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Reflection</p>
+            <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">
               Lessons in design leadership
             </h2>
-            <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+            <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
               <p>
                 Starting with service mapping instead of UI surfaced the real &quot;trust tax.&quot; Fixing cancellation rules and adding information scent to shift cards wasn&apos;t just a design exercise–it was an operational maturing of the business. By combining policy reform with contextual onboarding, we turned TempStars from a &quot;leaky bucket&quot; into a scalable marketplace leader.
               </p>

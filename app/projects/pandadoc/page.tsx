@@ -53,7 +53,7 @@ export default function PandaDocCaseStudy() {
             <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl tracking-[-0.02em] leading-[1.2] mb-4">
               PandaDoc: Simplifying document workflows for 50K+ users
             </h1>
-            <p className="text-[17px] text-muted-foreground leading-relaxed">
+            <p className="text-[17px] leading-relaxed text-muted-foreground">
               Driving product-led growth through contextual extension design.
             </p>
           </div>
@@ -87,10 +87,9 @@ export default function PandaDocCaseStudy() {
           </div>
 
           <section id="tldr" className="mb-16 p-8 bg-[#F5F3F0] rounded-xl max-w-[750px]">
-            <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-4">TLDR</p>
-            <h2 className="font-serif text-[2rem] leading-[1.2] tracking-[-0.02em] mb-6 text-balance">At a glance</h2>
+            <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">At a glance</h2>
 
-            <ul className="space-y-3 text-[17px] leading-relaxed max-w-[750px]">
+            <ul className="space-y-2 text-[17px] leading-relaxed max-w-[750px]">
               <li className="flex gap-3">
                 <span className="text-muted-foreground mt-0.5">•</span>
                 <span className="text-muted-foreground"><strong className="font-medium text-foreground">Impact:</strong> Reduced document initiation time by 40% for 50,000+ businesses.</span>
@@ -121,12 +120,12 @@ export default function PandaDocCaseStudy() {
             />
           </div>
 
-          <section id="overview" className="mb-16">
-            <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-4">Overview</p>
-            <h2 className="font-serif text-[2rem] leading-[1.2] tracking-[-0.02em] mb-6 text-balance">
+          <section id="overview" className="mb-10">
+            <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Overview</p>
+            <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">
               The challenge: the context-switching problem
             </h2>
-            <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+            <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
               <p>
                 Sales reps operate at high velocity. Every time a rep had to leave their CRM (Salesforce/HubSpot) to check a document status in the PandaDoc web app, they paid a &quot;switching tax.&quot; My objective was to move PandaDoc from a &quot;destination&quot; to a &quot;layer&quot; that lives where the user already works.
               </p>
@@ -142,11 +141,12 @@ export default function PandaDocCaseStudy() {
               className="w-full h-auto object-cover"
               style={{ objectPosition: "center center" }}
             />
+            <p className="mt-2 text-sm text-muted-foreground">PandaDoc Chrome extension interface overview.</p>
           </div>
 
-          <section id="research" className="mb-16">
-            <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-4">Research</p>
-            <h2 className="font-serif text-[2rem] leading-[1.2] tracking-[-0.02em] mb-6 text-balance">
+          <section id="research" className="mb-10">
+            <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Research</p>
+            <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">
               The strategy: functional scoping
             </h2>
 
@@ -156,9 +156,9 @@ export default function PandaDocCaseStudy() {
               </p>
             </div>
 
-            <div className="space-y-8 max-w-[750px]">
+            <div className="space-y-4 max-w-[750px]">
               <div>
-                <h3 className="font-serif text-xl leading-[1.3] tracking-[-0.02em] mb-2">
+                <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium">
                   The &quot;activity pulse&quot;
                 </h3>
                 <p className="text-[17px] leading-relaxed text-muted-foreground">
@@ -167,7 +167,7 @@ export default function PandaDocCaseStudy() {
               </div>
 
               <div>
-                <h3 className="font-serif text-xl leading-[1.3] tracking-[-0.02em] mb-2">
+                <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium">
                   The template bottleneck
                 </h3>
                 <p className="text-[17px] leading-relaxed text-muted-foreground">
@@ -177,29 +177,29 @@ export default function PandaDocCaseStudy() {
             </div>
           </section>
 
-          <section id="solution" className="mb-16">
-            <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-4">Solution</p>
-            <h2 className="font-serif text-[2rem] leading-[1.2] tracking-[-0.02em] mb-6 text-balance">
+          <section id="solution" className="mb-10">
+            <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Solution</p>
+            <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">
               The execution: managing technical debt &amp; scope
             </h2>
 
-            <div className="space-y-12 max-w-[750px]">
+            <div className="space-y-6 max-w-[750px]">
               <div>
-                <h3 className="font-serif text-xl leading-[1.3] tracking-[-0.02em] mb-3">The MVP negotiation</h3>
+                <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium">The MVP negotiation</h3>
                 <p className="text-[17px] leading-relaxed text-muted-foreground">
                   Working with a team of four, I had to be pragmatic. I negotiated a phased rollout where we delayed &quot;rich notifications&quot; to V2 in favor of a rock-solid &quot;starred &amp; suggested&quot; logic for templates.
                 </p>
               </div>
 
               <div>
-                <h3 className="font-serif text-xl leading-[1.3] tracking-[-0.02em] mb-3">Design-to-dev synergy</h3>
+                <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium">Design-to-dev synergy</h3>
                 <p className="text-[17px] leading-relaxed text-muted-foreground">
                   To ensure a 12-month project timeline stayed on track, I created a tokenized component library for the extension that matched the core web app. This reduced &quot;redline&quot; time by 50%.
                 </p>
               </div>
 
               <div>
-                <h3 className="font-serif text-xl leading-[1.3] tracking-[-0.02em] mb-3">Context-aware UI</h3>
+                <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium">Context-aware UI</h3>
                 <p className="text-[17px] leading-relaxed text-muted-foreground">
                   We engineered the extension to &quot;read&quot; the browser context. If a user was on a specific CRM contact page, the extension would automatically surface templates related to that contact&apos;s industry.
                 </p>
@@ -215,16 +215,17 @@ export default function PandaDocCaseStudy() {
                 className="w-full h-auto object-cover"
                 style={{ objectPosition: "center center" }}
               />
+              <p className="mt-2 text-sm text-muted-foreground">PandaDoc extension interface showing document list and templates.</p>
             </div>
           </section>
 
           <section id="outcomes" className="mb-16 p-8 bg-[#F5F3F0] rounded-xl max-w-[750px]">
-            <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-4">Outcomes</p>
-            <h2 className="font-serif text-[2rem] leading-[1.2] tracking-[-0.02em] mb-6 text-balance">
+            <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Outcomes</p>
+            <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">
               The impact: frictionless automation
             </h2>
 
-            <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+            <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
               <p>
                 <strong className="font-medium text-foreground">Efficiency:</strong> Estimated 40% reduction in the time required to initiate a new document.
               </p>
@@ -237,12 +238,12 @@ export default function PandaDocCaseStudy() {
             </div>
           </section>
 
-          <section id="reflection" className="mb-16">
-            <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-4">Reflection</p>
-            <h2 className="font-serif text-[2rem] leading-[1.2] tracking-[-0.02em] mb-6 text-balance">
+          <section id="reflection" className="mb-10">
+            <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Reflection</p>
+            <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">
               Lessons learned
             </h2>
-            <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+            <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
               <p>
                 Fighting the &quot;lite version of everything&quot; temptation by observing real sales calls kept scope honest: the user&apos;s anxiety was visibility and speed, not editing. That led to the activity pulse and fixing the template bottleneck instead of rebuilding the full product in the extension.
               </p>

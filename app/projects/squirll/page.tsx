@@ -69,8 +69,7 @@ export default function SquirllCaseStudy() {
           </div>
 
           <section id="tldr" className="mb-16 p-8 bg-[#F5F3F0] rounded-xl max-w-[750px]">
-            <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-4">TLDR</p>
-            <h2 className="font-serif text-[2rem] leading-[1.2] tracking-[-0.02em] mb-6 text-balance">At a glance</h2>
+            <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">At a glance</h2>
 
             <p className="text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
               Budgeting is a chore that most people quit. I led the design of an AI-driven platform that does the heavy lifting for you. By using Computer Vision to &quot;read&quot; receipts and automate 80% of data entry, we turned a tedious manual task into a seamless, autopilot experience.
@@ -100,6 +99,7 @@ export default function SquirllCaseStudy() {
                 className="w-full h-auto object-cover"
               />
             </div>
+            <p className="mt-2 text-sm text-muted-foreground">Squirll financial dashboard.</p>
 
             <div className="grid grid-cols-2 gap-4">
               <div className="rounded-xl overflow-hidden">
@@ -121,6 +121,7 @@ export default function SquirllCaseStudy() {
                 />
               </div>
             </div>
+            <p className="mt-2 text-sm text-muted-foreground">Squirll spending analytics; interface details.</p>
 
             {/* Row 4: Two images side by side */}
             <div className="grid grid-cols-2 gap-4">
@@ -143,6 +144,7 @@ export default function SquirllCaseStudy() {
                 />
               </div>
             </div>
+            <p className="mt-2 text-sm text-muted-foreground">Squirll interface design; app experience.</p>
 
             {/* Row 5: Two images side by side */}
             <div className="grid grid-cols-2 gap-4">
@@ -165,6 +167,7 @@ export default function SquirllCaseStudy() {
                 />
               </div>
             </div>
+            <p className="mt-2 text-sm text-muted-foreground">Squirll AI features; app screens.</p>
           </div>
 
           <div className="border-t border-border/50 pt-16">

@@ -101,10 +101,9 @@ export default function BodySpecCaseStudy() {
           </div>
 
           <section id="tldr" className="mb-16 p-8 bg-[#F5F3F0] rounded-xl max-w-[750px]">
-            <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-4">TLDR</p>
-            <h2 className="font-serif text-[2rem] leading-[1.2] tracking-[-0.02em] mb-6 text-balance">At a glance</h2>
+            <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">At a glance</h2>
 
-            <ul className="space-y-3 text-[17px] leading-relaxed max-w-[750px]">
+            <ul className="space-y-2 text-[17px] leading-relaxed max-w-[750px]">
               <li className="flex gap-3">
                 <span className="text-muted-foreground mt-0.5">•</span>
                 <span className="text-muted-foreground"><strong className="font-medium text-foreground">Impact:</strong> 30% reduction in checkout abandonment and 20% lift in total bookings.</span>
@@ -125,24 +124,24 @@ export default function BodySpecCaseStudy() {
           </section>
 
 
-          <section id="problem" className="mb-16">
-            <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-4">Discovery</p>
-            <h2 className="font-serif text-[2rem] leading-[1.2] tracking-[-0.02em] mb-6 text-balance">
+          <section id="problem" className="mb-10">
+            <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Discovery</p>
+            <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">
               The challenge: breaking the &quot;one-off&quot; cycle
             </h2>
-            <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+            <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
               <p>
                 BodySpec is the gold standard for body composition, but the product was stuck in a transactional loop. People would get one scan, feel overwhelmed by the data, and never return. My goal was to move the service from a clinical “one-off” to a longitudinal health habit.
               </p>
             </div>
           </section>
 
-          <section id="research" className="mb-16">
-            <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-4">Research</p>
-            <h2 className="font-serif text-[2rem] leading-[1.2] tracking-[-0.02em] mb-6 text-balance">
+          <section id="research" className="mb-10">
+            <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Research</p>
+            <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">
               Building a distributed intelligence engine
             </h2>
-            <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+            <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
               <p>
                 I knew I couldn’t be everywhere at once, so I turned our frontline staff into a research team. I developed a framework and trained our technicians across multiple states to conduct structured interviews during the scan process. This gave us hundreds of data points on real-world friction–insights we never would have caught in a lab.
               </p>
@@ -152,16 +151,16 @@ export default function BodySpecCaseStudy() {
             </div>
           </section>
 
-          <section id="solution" className="mb-16">
-            <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-4">Solution</p>
-            <h2 className="font-serif text-[2rem] leading-[1.2] tracking-[-0.02em] mb-6 text-balance">
+          <section id="solution" className="mb-10">
+            <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Solution</p>
+            <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">
               The execution
             </h2>
 
             <div className="space-y-16">
               <div>
-                <h3 className="font-serif text-2xl leading-[1.2] tracking-[-0.02em] mb-4">Reducing interaction cost</h3>
-                <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+                <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium">Reducing interaction cost</h3>
+                <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                   <p>
                     Through a deep-dive audit and research studies, I identified the “location search” as the primary bottleneck. I redesigned the experience to be context-aware, pre-filling availability based on geo-location and reducing the path to checkout to just two clicks.
                   </p>
@@ -178,12 +177,13 @@ export default function BodySpecCaseStudy() {
                   height={900}
                   className="w-full h-auto"
                 />
+                <p className="mt-2 text-sm text-muted-foreground">BodySpec location booking interface on laptop.</p>
               </div>
               </div>
 
               <div>
-                <h3 className="font-serif text-2xl leading-[1.2] tracking-[-0.02em] mb-4">Transforming data into narrative</h3>
-                <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+                <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium">Transforming data into narrative</h3>
+                <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                   <p>
                     The core value of BodySpec lies in the DEXA scan, a clinical-grade data set that is notoriously difficult for the average person to interpret. My goal was to transform a wall of numbers into an actionable health narrative across both the mobile app and the downloadable PDF reports.
                   </p>
@@ -217,10 +217,11 @@ export default function BodySpecCaseStudy() {
                     />
                   </div>
                 </div>
+                <p className="mt-2 text-sm text-muted-foreground max-w-[750px]">BodySpec DEXA scan dashboard showing body fat percentage visualization with color-coded zones; body fat analysis with peer comparison charts and percentile data.</p>
               </div>
 
               <div>
-                <h3 className="font-serif text-2xl leading-[1.2] tracking-[-0.02em] mb-4">The 2-click commitment</h3>
+                <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium">The 2-click commitment</h3>
                 <p className="text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                   The legacy booking flow was a five-minute ordeal. Using the friction points identified in my tests, I redesigned the experience to be context-aware. By pre-filling availability based on geo-location and stripping out unnecessary fields, we reduced the path to checkout to just two clicks.
                 </p>
@@ -245,16 +246,17 @@ export default function BodySpecCaseStudy() {
                   />
                   </div>
                 </div>
+                <p className="mt-2 text-sm text-muted-foreground max-w-[750px]">BodySpec final homepage design with hero and benefits; mobile app booking interface.</p>
               </div>
             </div>
           </section>
 
-          <section id="constraints" className="mb-16">
-            <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-4">Constraints</p>
-            <h2 className="font-serif text-[2rem] leading-[1.2] tracking-[-0.02em] mb-6 text-balance">
+          <section id="constraints" className="mb-10">
+            <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Constraints</p>
+            <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">
               Balancing technical debt with investor deadlines
             </h2>
-            <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+            <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
               <p>
                 While the vision for the BodySpec redesign was expansive, we faced a critical constraint: a high-stakes investment round was approaching, and we needed a live, functional product to demonstrate growth and engagement to potential backers. With limited engineering resources and a rigid deadline, I had to pivot from the &apos;ideal&apos; architectural solution to a high-velocity design strategy.
               </p>
@@ -265,8 +267,8 @@ export default function BodySpecCaseStudy() {
           </section>
 
           <section id="outcomes" className="mb-16 p-8 bg-[#F5F3F0] rounded-xl max-w-[750px]">
-            <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-4">Outcomes</p>
-            <h2 className="font-serif text-[2rem] leading-[1.2] tracking-[-0.02em] mb-6 text-balance">
+            <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Outcomes</p>
+            <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">
               The impact
             </h2>
 
@@ -285,19 +287,19 @@ export default function BodySpecCaseStudy() {
               </div>
             </div>
 
-            <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+            <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
               <p>
                 The results were immediate: we saw a 20% lift in bookings and a 30% reduction in checkout abandonment. Beyond the UI, this work provided the strategic foundation that supported BodySpec’s $17.2M Series A funding.
               </p>
             </div>
           </section>
 
-          <section id="reflection" className="mb-16">
-            <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-4">Reflection</p>
-            <h2 className="font-serif text-[2rem] leading-[1.2] tracking-[-0.02em] mb-6 text-balance">
+          <section id="reflection" className="mb-10">
+            <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Reflection</p>
+            <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">
               Lessons learned
             </h2>
-            <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+            <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
               <p>
                 Turning frontline staff into a research engine gave us scale and real-world friction we couldn’t get in a lab. The “post-scan drop-off” insight–that users had no mental model for their data–reframed the product from one-off scan to longitudinal habit, and that shift drove the entire design direction.
               </p>

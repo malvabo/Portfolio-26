@@ -66,10 +66,9 @@ export default function LuminaraCaseStudy() {
           </div>
 
           <section id="tldr" className="mb-16 p-8 bg-[#F5F3F0] rounded-xl max-w-[750px]">
-            <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-4">TLDR</p>
-            <h2 className="font-serif text-[2rem] leading-[1.2] tracking-[-0.02em] mb-6 text-balance">At a glance</h2>
+            <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">At a glance</h2>
 
-            <ul className="space-y-3 text-[17px] leading-relaxed max-w-[750px]">
+            <ul className="space-y-2 text-[17px] leading-relaxed max-w-[750px]">
               <li className="flex gap-3">
                 <span className="text-muted-foreground mt-0.5">•</span>
                 <span className="text-muted-foreground">Mental health: client–therapist booking, sessions, meditation, provider dashboards.</span>
@@ -114,6 +113,7 @@ export default function LuminaraCaseStudy() {
                 />
               </div>
             </div>
+            <p className="mt-2 text-sm text-muted-foreground">Luminara interface detail; mobile interface.</p>
           </div>
 
           <div className="border-t border-border/50 pt-16">

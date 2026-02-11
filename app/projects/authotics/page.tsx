@@ -101,6 +101,7 @@ export default function AuthoticsCaseStudy() {
                 />
               </div>
             </div>
+            <p className="mt-2 text-sm text-muted-foreground">Authotics consultation flow; product recommendations.</p>
           </div>
 
           <div className="border-t border-border/50 pt-16">

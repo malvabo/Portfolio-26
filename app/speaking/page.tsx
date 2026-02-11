@@ -1,7 +1,5 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import Link from "next/link"
-import { ArrowLeft } from "lucide-react"
 
 export default function SpeakingPage() {
   const talks = [
@@ -57,17 +55,9 @@ export default function SpeakingPage() {
       <Header />
       <main className="pt-24 pb-16 container mx-auto px-8 lg:px-12">
         <div className="max-w-5xl">
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            <span className="text-[17px]">Back to home</span>
-          </Link>
-
-          <div className="space-y-20">
+          <div className="space-y-10">
             <div>
-              <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl mb-6 text-balance leading-[1.2]">
+              <h1 className="font-serif text-2xl md:text-3xl leading-[1.1] tracking-tight text-foreground mb-6">
                 My contribution to the community
               </h1>
               <p className="text-[17px] text-muted-foreground max-w-3xl">
@@ -76,39 +66,31 @@ export default function SpeakingPage() {
             </div>
 
             <section>
-              <div className="mb-6">
-                <span className="uppercase text-[13px] text-muted-foreground/70 font-mono tracking-wide mb-2 block">
-                  Public Speaking
-                </span>
-                <h2 className="font-serif text-2xl md:text-3xl leading-[1.1] tracking-tight text-foreground mb-6">
-                  Offline and online talks
-                </h2>
-              </div>
-
-              <div className="space-y-6">
-                {talks.map((talk, index) => (
-                  <div key={index} className="border-b border-gray-300/30 py-5 first:pt-0 last:border-b-0">
+              <div className="space-y-3">
+                <div className="py-3">
+                  <h3 className="text-[17px] font-medium text-foreground mb-1">{talks[0].title}</h3>
+                  {talks[0].subtitle && <p className="text-base leading-relaxed text-muted-foreground mt-1">{talks[0].subtitle}</p>}
+                </div>
+                {talks.slice(1).map((talk, index) => (
+                  <div key={index + 1} className="py-3">
                     <h3 className="text-[17px] font-medium text-foreground mb-1">{talk.title}</h3>
                     {talk.subtitle && <p className="text-base leading-relaxed text-muted-foreground mt-1">{talk.subtitle}</p>}
                   </div>
                 ))}
-                <p className="text-muted-foreground italic pt-4">… and more to be added soon!</p>
+                <p className="text-muted-foreground italic pt-2">… and more to be added soon!</p>
               </div>
             </section>
 
-            <section>
+            <section className="mt-16">
               <div className="mb-6">
-                <span className="uppercase text-[13px] text-muted-foreground/70 font-mono tracking-wide mb-2 block">
-                  Public appearances
-                </span>
-                <h2 className="font-serif text-2xl md:text-3xl leading-[1.1] tracking-tight text-foreground mb-6">
+                <h2 className="font-serif text-2xl md:text-3xl leading-[1.1] tracking-tight text-foreground">
                   Interviews
                 </h2>
               </div>
 
               <div className="space-y-0">
                 {interviews.map((interview, index) => (
-                  <div key={index} className="border-b border-gray-300/30 py-5 first:pt-0 last:border-b-0">
+                  <div key={index} className="py-5">
                     {interview.link ? (
                       <a
                         href={interview.link}
@@ -137,17 +119,14 @@ export default function SpeakingPage() {
 
             <section>
               <div className="mb-6">
-                <span className="uppercase text-[13px] text-muted-foreground/70 font-mono tracking-wide mb-2 block">
-                  Audio Content
-                </span>
-                <h2 className="font-serif text-2xl md:text-3xl leading-[1.1] tracking-tight text-foreground mb-6">
+                <h2 className="font-serif text-2xl md:text-3xl leading-[1.1] tracking-tight text-foreground">
                   My podcast appearances
                 </h2>
               </div>
 
               <div className="space-y-0">
                 {podcasts.map((podcast, index) => (
-                  <div key={index} className="border-b border-gray-300/30 py-5 first:pt-0 last:border-b-0">
+                  <div key={index} className="py-5">
                     {podcast.link ? (
                       <a
                         href={podcast.link}
@@ -167,7 +146,7 @@ export default function SpeakingPage() {
                     )}
                   </div>
                 ))}
-                <p className="text-muted-foreground italic pt-4">… and more to be added soon!</p>
+                <p className="text-muted-foreground italic pt-2">… and more to be added soon!</p>
               </div>
             </section>
           </div>
