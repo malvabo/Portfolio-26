@@ -12,40 +12,32 @@ export default function SquirllCaseStudy() {
       <Header />
 
       <div className="max-w-7xl mx-auto pt-24 flex flex-col">
-        {/* Row 1: spacer + category label */}
-        <div className="flex w-full items-start">
-          <div className="hidden lg:block w-56 shrink-0 px-8 lg:px-12" aria-hidden />
-          <div className="min-w-0 flex-1 px-8 lg:px-12">
-            <p className="font-mono text-xs text-muted-foreground mb-6 tracking-wider uppercase leading-none">
-              AI-POWERED FINANCE APP
-            </p>
-          </div>
-        </div>
-
         {/* Row 2: spacer + main content */}
         <div className="flex w-full items-start">
           <div className="hidden lg:block w-56 shrink-0 px-8 lg:px-12" aria-hidden />
-          <aside className="hidden lg:block w-56 px-8 lg:px-12 fixed top-24 left-8 lg:left-[max(3rem,calc((100vw-80rem)/2+3rem))]" aria-label="Case study navigation">
+          <aside className="hidden lg:block w-56 px-8 lg:px-12 fixed top-24 left-8 lg:left-[max(0px,calc((100vw-80rem)/2))]" aria-label="Case study navigation">
             <Link
               href="/#work"
               scroll={false}
-              className="inline-flex items-baseline gap-2 text-xs font-mono tracking-wider uppercase text-muted-foreground hover:text-foreground transition-colors leading-none"
+              className="block text-xs font-mono tracking-wider uppercase text-muted-foreground hover:text-foreground transition-colors mb-16 leading-none"
             >
-              <ArrowLeft className="w-3 h-3 shrink-0" />
-              All projects
+              <span className="inline-flex items-baseline gap-2">
+                <ArrowLeft className="w-3 h-3 shrink-0" />
+                All projects
+              </span>
             </Link>
           </aside>
-          <main className="flex-1 px-8 lg:px-12 pb-20 lg:pb-24 max-w-4xl">
-          <div className="mb-12">
-            <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl tracking-[-0.02em] leading-[1.2] mb-4 text-balance">
-              From idea to launch: AI-first finance app in 4 months
+          <main className="flex-1 px-8 lg:px-12 pb-20 lg:pb-24">
+          <div className="mb-12 max-w-[750px]">
+            <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl tracking-[-0.02em] leading-[1.2] mb-4">
+              Squirll: Automating 80% of budgeting with AI
             </h1>
             <p className="text-[17px] leading-relaxed text-muted-foreground">
               AI-powered finance app that makes managing money smart and enjoyable.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-4 mb-8 pb-8 border-b border-border/30">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-4 mb-8 pb-8 border-b border-border/30 max-w-[750px]">
             <div>
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Role</p>
               <p className="text-[15px] leading-relaxed">Lead Product Designer</p>
@@ -76,7 +68,7 @@ export default function SquirllCaseStudy() {
             </div>
           </div>
 
-          <section id="tldr" className="mb-16 p-8 bg-[#F5F3F0] rounded-xl max-w-3xl">
+          <section id="tldr" className="mb-16 p-8 bg-[#F5F3F0] rounded-xl max-w-[750px]">
             <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-4">TLDR</p>
             <h2 className="font-serif text-[2rem] leading-[1.2] tracking-[-0.02em] mb-6 text-balance">At a glance</h2>
 

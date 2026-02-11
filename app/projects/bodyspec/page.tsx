@@ -13,58 +13,55 @@ export default function BodySpecCaseStudy() {
       <Header />
 
       <div className="max-w-7xl mx-auto pt-24 flex flex-col">
-        {/* Row 1: spacer + category label */}
-        <div className="flex w-full items-start">
-          <div className="hidden lg:block w-56 shrink-0 px-8 lg:px-12" aria-hidden />
-          <div className="min-w-0 flex-1 px-8 lg:px-12">
-            <p className="font-mono text-xs text-muted-foreground mb-6 tracking-wider uppercase leading-none">HEALTH TECH</p>
-          </div>
-        </div>
-
         {/* Row 2: spacer + main content */}
         <div className="flex w-full items-start">
           <div className="hidden lg:block w-56 shrink-0 px-8 lg:px-12" aria-hidden />
-          <aside className="hidden lg:block w-56 px-8 lg:px-12 fixed top-24 left-8 lg:left-[max(3rem,calc((100vw-80rem)/2+3rem))]" aria-label="Case study navigation">
-          <Link
-            href="/#work"
-            scroll={false}
-              className="inline-flex items-baseline gap-2 text-xs font-mono tracking-wider uppercase text-muted-foreground hover:text-foreground transition-colors mb-16 leading-none"
-          >
-              <ArrowLeft className="w-3 h-3 shrink-0" />
-            All projects
-          </Link>
+          <aside className="hidden lg:block w-56 px-8 lg:px-12 fixed top-24 left-8 lg:left-[max(0px,calc((100vw-80rem)/2))]" aria-label="Case study navigation">
+            <Link
+              href="/#work"
+              scroll={false}
+              className="block text-xs font-mono tracking-wider uppercase text-muted-foreground hover:text-foreground transition-colors mb-10 leading-none"
+            >
+              <span className="inline-flex items-baseline gap-2">
+                <ArrowLeft className="w-3 h-3 shrink-0" />
+                All projects
+              </span>
+            </Link>
             <nav className="space-y-4" aria-label="Case study sections">
-              <a href="#tldr" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
+              <a href="#tldr" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">
                 TLDR
-            </a>
-            <a href="#problem" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
-              Discovery
-            </a>
-            <a href="#research" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
-              Research
-            </a>
-            <a href="#solution" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
-              Solution
-            </a>
-            <a href="#outcomes" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
-              Outcomes
-            </a>
-              <a href="#reflection" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
+              </a>
+              <a href="#problem" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">
+                Discovery
+              </a>
+              <a href="#research" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">
+                Research
+              </a>
+              <a href="#solution" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">
+                Solution
+              </a>
+              <a href="#constraints" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">
+                Constraints
+              </a>
+              <a href="#outcomes" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">
+                Outcomes
+              </a>
+              <a href="#reflection" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">
                 Reflection
-            </a>
-          </nav>
-        </aside>
-          <main className="flex-1 px-8 lg:px-12 pb-20 lg:pb-24 max-w-4xl">
-          <div className="mb-12">
-            <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl tracking-[-0.02em] leading-[1.2] mb-4 text-balance">
-              BodySpec: Translating Health Intelligence
+              </a>
+            </nav>
+          </aside>
+          <main className="flex-1 px-8 lg:px-12 pb-20 lg:pb-24">
+          <div className="mb-12 max-w-[750px]">
+            <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl tracking-[-0.02em] leading-[1.2] mb-4">
+              BodySpec: Driving 20% more bookings for 500K+ users
             </h1>
             <p className="text-[17px] leading-relaxed text-muted-foreground">
-              How we turned a clinical curiosity into a high-conversion health platform.
+              How we transformed complex body composition data into an intuitive consumer experience.
             </p>
           </div>
 
-          <div className="mb-12 rounded-xl overflow-hidden">
+          <div className="mb-12 rounded-xl overflow-hidden max-w-[750px]">
             <Image
               src="https://framerusercontent.com/images/vv2onQFZ97C3KH8T7xcOTJbKZs.png"
               alt="BodySpec app interface showing health metrics"
@@ -75,7 +72,7 @@ export default function BodySpecCaseStudy() {
             />
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-4 mb-8 pb-8 border-b border-border/30">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-4 mb-8 pb-8 border-b border-border/30 max-w-[750px]">
             <div>
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Role</p>
               <p className="text-[15px] leading-relaxed">Lead Product Designer, Research Lead</p>
@@ -103,26 +100,26 @@ export default function BodySpecCaseStudy() {
             </div>
           </div>
 
-          <section id="tldr" className="mb-16 p-8 bg-[#F5F3F0] rounded-xl max-w-3xl">
+          <section id="tldr" className="mb-16 p-8 bg-[#F5F3F0] rounded-xl max-w-[750px]">
             <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-4">TLDR</p>
             <h2 className="font-serif text-[2rem] leading-[1.2] tracking-[-0.02em] mb-6 text-balance">At a glance</h2>
 
-            <ul className="space-y-3 text-[15px] leading-relaxed max-w-[750px]">
+            <ul className="space-y-3 text-[17px] leading-relaxed max-w-[750px]">
               <li className="flex gap-3">
                 <span className="text-muted-foreground mt-0.5">•</span>
-                <span><strong className="font-semibold text-foreground">Impact:</strong> 30% reduction in checkout abandonment and 20% lift in total bookings.</span>
+                <span className="text-muted-foreground"><strong className="font-medium text-foreground">Impact:</strong> 30% reduction in checkout abandonment and 20% lift in total bookings.</span>
               </li>
               <li className="flex gap-3">
                 <span className="text-muted-foreground mt-0.5">•</span>
-                <span><strong className="font-semibold text-foreground">Scale:</strong> Trained technicians across multiple states to act as a distributed research engine.</span>
+                <span className="text-muted-foreground"><strong className="font-medium text-foreground">Scale:</strong> Trained technicians across multiple states to act as a distributed research engine.</span>
               </li>
               <li className="flex gap-3">
                 <span className="text-muted-foreground mt-0.5">•</span>
-                <span><strong className="font-semibold text-foreground">Strategy:</strong> Shifted user behavior from &quot;one-off scans&quot; to longitudinal health tracking.</span>
+                <span className="text-muted-foreground"><strong className="font-medium text-foreground">Strategy:</strong> Shifted user behavior from &quot;one-off scans&quot; to longitudinal health tracking.</span>
               </li>
               <li className="flex gap-3">
                 <span className="text-muted-foreground mt-0.5">•</span>
-                <span><strong className="font-semibold text-foreground">Outcome:</strong> Provided the UX foundation for a successful $17.2M Series A funding round.</span>
+                <span className="text-muted-foreground"><strong className="font-medium text-foreground">Outcome:</strong> Provided the UX foundation for a successful $17.2M Series A funding round.</span>
               </li>
             </ul>
           </section>
@@ -185,6 +182,44 @@ export default function BodySpecCaseStudy() {
               </div>
 
               <div>
+                <h3 className="font-serif text-2xl leading-[1.2] tracking-[-0.02em] mb-4">Transforming data into narrative</h3>
+                <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+                  <p>
+                    The core value of BodySpec lies in the DEXA scan, a clinical-grade data set that is notoriously difficult for the average person to interpret. My goal was to transform a wall of numbers into an actionable health narrative across both the mobile app and the downloadable PDF reports.
+                  </p>
+                  <p>
+                    <span className="text-foreground font-medium">The Mobile Dashboard</span><br />
+                    I designed a high-glanceability mobile interface that uses color-coded zones and relative-to-peer percentiles. Instead of just seeing Total Mass, users now see a breakdown of lean muscle vs. visceral fat, helping them understand their body beyond the scale.
+                  </p>
+                  <p>
+                    <span className="text-foreground font-medium">The PDF Report</span><br />
+                    Recognizing that many users share these results with personal trainers or doctors, I redesigned the PDF report to be both a deep-dive data sheet and a visual progress map. I simplified the regional assessment graphs (arms, legs, trunk) and added a &quot;What does this mean?&quot; layer to the Bone Mineral Density (BMD) scores to reduce user anxiety and prompt informed conversations with healthcare providers.
+                  </p>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-6 mt-8">
+                  <div className="rounded-xl overflow-hidden">
+                    <Image
+                      src="/images/bodyspec-dexa-dashboard-1.png"
+                      alt="BodySpec DEXA scan dashboard showing body fat percentage visualization with color-coded zones"
+                      width={1200}
+                      height={900}
+                      className="w-full h-auto"
+                    />
+                  </div>
+                  <div className="rounded-xl overflow-hidden">
+                    <Image
+                      src="/images/bodyspec-dexa-dashboard-2.png"
+                      alt="BodySpec body fat analysis with peer comparison charts and percentile data"
+                      width={1200}
+                      height={900}
+                      className="w-full h-auto"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div>
                 <h3 className="font-serif text-2xl leading-[1.2] tracking-[-0.02em] mb-4">The 2-click commitment</h3>
                 <p className="text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                   The legacy booking flow was a five-minute ordeal. Using the friction points identified in my tests, I redesigned the experience to be context-aware. By pre-filling availability based on geo-location and stripping out unnecessary fields, we reduced the path to checkout to just two clicks.
@@ -214,7 +249,22 @@ export default function BodySpecCaseStudy() {
             </div>
           </section>
 
-          <section id="outcomes" className="mb-16 p-8 bg-[#F5F3F0] rounded-xl max-w-3xl">
+          <section id="constraints" className="mb-16">
+            <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-4">Constraints</p>
+            <h2 className="font-serif text-[2rem] leading-[1.2] tracking-[-0.02em] mb-6 text-balance">
+              Balancing technical debt with investor deadlines
+            </h2>
+            <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+              <p>
+                While the vision for the BodySpec redesign was expansive, we faced a critical constraint: a high-stakes investment round was approaching, and we needed a live, functional product to demonstrate growth and engagement to potential backers. With limited engineering resources and a rigid deadline, I had to pivot from the &apos;ideal&apos; architectural solution to a high-velocity design strategy.
+              </p>
+              <p>
+                I facilitated a &quot;middle ground&quot; approach—identifying the absolute core metrics users needed to see to feel value. We prioritized a lean, front-end heavy implementation that utilized existing data structures to ensure we hit the launch date. This &apos;V1&apos; allowed us to secure the necessary funding, which I then leveraged to lead a second, more robust iteration that integrated the complex data visualizations and personalized AI insights we originally envisioned.
+              </p>
+            </div>
+          </section>
+
+          <section id="outcomes" className="mb-16 p-8 bg-[#F5F3F0] rounded-xl max-w-[750px]">
             <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-4">Outcomes</p>
             <h2 className="font-serif text-[2rem] leading-[1.2] tracking-[-0.02em] mb-6 text-balance">
               The impact

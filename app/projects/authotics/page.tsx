@@ -12,32 +12,24 @@ export default function AuthoticsCaseStudy() {
       <Header />
 
       <div className="max-w-7xl mx-auto pt-24 flex flex-col">
-        {/* Row 1: spacer + category label */}
-        <div className="flex w-full items-start">
-          <div className="hidden lg:block w-56 shrink-0 px-8 lg:px-12" aria-hidden />
-          <div className="min-w-0 flex-1 px-8 lg:px-12">
-            <p className="font-mono text-xs text-muted-foreground mb-6 tracking-wider uppercase leading-none">
-              E-COMMERCE & HEALTH TECH
-            </p>
-          </div>
-        </div>
-
         {/* Row 2: spacer + main content */}
         <div className="flex w-full items-start">
           <div className="hidden lg:block w-56 shrink-0 px-8 lg:px-12" aria-hidden />
-          <aside className="hidden lg:block w-56 px-8 lg:px-12 fixed top-24 left-8 lg:left-[max(3rem,calc((100vw-80rem)/2+3rem))]" aria-label="Case study navigation">
+          <aside className="hidden lg:block w-56 px-8 lg:px-12 fixed top-24 left-8 lg:left-[max(0px,calc((100vw-80rem)/2))]" aria-label="Case study navigation">
             <Link
               href="/#work"
               scroll={false}
-              className="inline-flex items-baseline gap-2 text-xs font-mono tracking-wider uppercase text-muted-foreground hover:text-foreground transition-colors leading-none"
+              className="block text-xs font-mono tracking-wider uppercase text-muted-foreground hover:text-foreground transition-colors mb-16 leading-none"
             >
-              <ArrowLeft className="w-3 h-3 shrink-0" />
-              All projects
+              <span className="inline-flex items-baseline gap-2">
+                <ArrowLeft className="w-3 h-3 shrink-0" />
+                All projects
+              </span>
             </Link>
           </aside>
-          <main className="flex-1 px-8 lg:px-12 pb-20 lg:pb-24 max-w-4xl">
-          <div className="mb-12">
-            <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl tracking-[-0.02em] leading-[1.2] mb-4 text-balance">
+          <main className="flex-1 px-8 lg:px-12 pb-20 lg:pb-24">
+          <div className="mb-12 max-w-[750px]">
+            <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl tracking-[-0.02em] leading-[1.2] mb-4">
               Authotics: 3D AI consultation for custom orthotics
             </h1>
             <p className="text-[17px] leading-relaxed text-muted-foreground">
@@ -45,7 +37,7 @@ export default function AuthoticsCaseStudy() {
             </p>
           </div>
 
-          <section id="tldr" className="mb-16 p-5 bg-[#F5F3F0] rounded-xl max-w-3xl">
+          <section id="tldr" className="mb-16 p-5 bg-[#F5F3F0] rounded-xl max-w-[750px]">
             <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-3">TLDR</p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-2 text-[14px]">
               <div>

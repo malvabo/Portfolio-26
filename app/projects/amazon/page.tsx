@@ -15,28 +15,21 @@ export default function AmazonCaseStudy() {
       <div className="max-w-7xl mx-auto pt-24 flex flex-col">
         <div className="flex w-full items-start">
           <div className="hidden lg:block w-56 shrink-0 px-8 lg:px-12" aria-hidden />
-          <div className="min-w-0 flex-1 px-8 lg:px-12">
-            <p className="font-mono text-xs text-muted-foreground mb-6 tracking-wider uppercase leading-none">
-              SHIPPING & LOGISTICS
-            </p>
-          </div>
-        </div>
-
-        <div className="flex w-full items-start">
-          <div className="hidden lg:block w-56 shrink-0 px-8 lg:px-12" aria-hidden />
-          <aside className="hidden lg:block w-56 px-8 lg:px-12 fixed top-24 left-8 lg:left-[max(3rem,calc((100vw-80rem)/2+3rem))]" aria-label="Case study navigation">
+          <aside className="hidden lg:block w-56 px-8 lg:px-12 fixed top-24 left-8 lg:left-[max(0px,calc((100vw-80rem)/2))]" aria-label="Case study navigation">
             <Link
               href="/#work"
               scroll={false}
-              className="inline-flex items-baseline gap-2 text-xs font-mono tracking-wider uppercase text-muted-foreground hover:text-foreground transition-colors leading-none"
+              className="block text-xs font-mono tracking-wider uppercase text-muted-foreground hover:text-foreground transition-colors mb-16 leading-none"
             >
-              <ArrowLeft className="w-3 h-3 shrink-0" />
-              All projects
+              <span className="inline-flex items-baseline gap-2">
+                <ArrowLeft className="w-3 h-3 shrink-0" />
+                All projects
+              </span>
             </Link>
           </aside>
-          <main className="flex-1 px-8 lg:px-12 pb-20 lg:pb-24 max-w-4xl">
-            <div className="mb-12">
-              <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl tracking-[-0.02em] leading-[1.2] mb-4 text-balance">
+          <main className="flex-1 px-8 lg:px-12 pb-20 lg:pb-24">
+            <div className="mb-12 max-w-[750px]">
+              <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl tracking-[-0.02em] leading-[1.2] mb-4">
                 Building the future of shipping at Amazon
               </h1>
               <p className="text-[17px] leading-relaxed text-muted-foreground">

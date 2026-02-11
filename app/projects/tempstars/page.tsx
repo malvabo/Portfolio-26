@@ -23,61 +23,55 @@ export default function TempStarsCaseStudy() {
       <Header />
 
       <div className="max-w-7xl mx-auto pt-24 flex flex-col">
-        {/* Row 1: spacer + category label */}
-        <div className="flex w-full items-start">
-          <div className="hidden lg:block w-56 shrink-0 px-8 lg:px-12" aria-hidden />
-          <div className="min-w-0 flex-1 px-8 lg:px-12">
-            <p className="font-mono text-xs text-muted-foreground mb-6 tracking-wider uppercase leading-none">MARKETPLACE / HEALTH TECH</p>
-          </div>
-        </div>
-
         {/* Row 2: spacer + main content */}
         <div className="flex w-full items-start">
           <div className="hidden lg:block w-56 shrink-0 px-8 lg:px-12" aria-hidden />
-          <aside className="hidden lg:block w-56 px-8 lg:px-12 fixed top-24 left-8 lg:left-[max(3rem,calc((100vw-80rem)/2+3rem))]" aria-label="Case study navigation">
+          <aside className="hidden lg:block w-56 px-8 lg:px-12 fixed top-24 left-8 lg:left-[max(0px,calc((100vw-80rem)/2))]" aria-label="Case study navigation">
             <Link
               href="/#work"
               scroll={false}
-              className="inline-flex items-baseline gap-2 text-xs font-mono tracking-wider uppercase text-muted-foreground hover:text-foreground transition-colors mb-16 leading-none"
+              className="block text-xs font-mono tracking-wider uppercase text-muted-foreground hover:text-foreground transition-colors mb-10 leading-none"
             >
-              <ArrowLeft className="w-3 h-3 shrink-0" />
-              All projects
+              <span className="inline-flex items-baseline gap-2">
+                <ArrowLeft className="w-3 h-3 shrink-0" />
+                All projects
+              </span>
             </Link>
             <nav className="space-y-4" aria-label="Case study sections">
-              <a href="#tldr" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
+              <a href="#tldr" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">
                 TLDR
               </a>
-              <a href="#overview" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
+              <a href="#overview" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">
                 Overview
               </a>
-              <a href="#problem" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
+              <a href="#problem" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">
                 Discovery
               </a>
-              <a href="#research" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
+              <a href="#research" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">
                 Research
               </a>
-              <a href="#solution" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
+              <a href="#solution" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">
                 Solution
               </a>
-              <a href="#outcomes" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
+              <a href="#outcomes" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">
                 Outcomes
               </a>
-              <a href="#reflection" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
+              <a href="#reflection" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">
                 Reflection
               </a>
             </nav>
           </aside>
-          <main className="flex-1 px-8 lg:px-12 pb-20 lg:pb-24 max-w-4xl">
-          <div className="mb-12">
-            <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl tracking-[-0.02em] leading-[1.2] mb-4 text-balance">
-              TempStars: Transforming Marketplace Trust &amp; Activation
+          <main className="flex-1 px-8 lg:px-12 pb-20 lg:pb-24">
+          <div className="mb-12 max-w-[750px]">
+            <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl tracking-[-0.02em] leading-[1.2] mb-4">
+              TempStars: Building marketplace liquidity for 25K+ dentists
             </h1>
             <p className="text-[17px] leading-relaxed text-muted-foreground">
               Building trust in a marketplace for dental professionals
             </p>
           </div>
 
-          <div className="mb-12 rounded-xl overflow-hidden max-w-3xl mx-auto">
+          <div className="mb-12 rounded-xl overflow-hidden max-w-[750px]">
             <Image
               src="/images/tempstars-phones-hero.png"
               alt="Dental centre profile and onboarding – two phones showing clinic detail and You are in a good company"
@@ -87,7 +81,7 @@ export default function TempStarsCaseStudy() {
             />
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-4 mb-8 pb-8 border-b border-border/30">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-4 mb-8 pb-8 border-b border-border/30 max-w-[750px]">
             <div>
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Role</p>
               <p className="text-[15px] leading-relaxed">Lead Product Designer, Research</p>
@@ -115,26 +109,26 @@ export default function TempStarsCaseStudy() {
             </div>
           </div>
 
-          <section id="tldr" className="mb-16 p-8 bg-[#F5F3F0] rounded-xl max-w-3xl">
+          <section id="tldr" className="mb-16 p-8 bg-[#F5F3F0] rounded-xl max-w-[750px]">
             <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-4">TLDR</p>
             <h2 className="font-serif text-[2rem] leading-[1.2] tracking-[-0.02em] mb-6 text-balance">At a glance</h2>
 
-            <ul className="space-y-3 text-[15px] leading-relaxed max-w-[750px]">
+            <ul className="space-y-3 text-[17px] leading-relaxed max-w-[750px]">
               <li className="flex gap-3">
                 <span className="text-muted-foreground mt-0.5">•</span>
-                <span><strong className="font-semibold text-foreground">Impact:</strong> 20% surge in user activation and a 25% YoY increase in booked shifts.</span>
+                <span className="text-muted-foreground"><strong className="font-medium text-foreground">Impact:</strong> 20% surge in user activation and a 25% YoY increase in booked shifts.</span>
               </li>
               <li className="flex gap-3">
                 <span className="text-muted-foreground mt-0.5">•</span>
-                <span><strong className="font-semibold text-foreground">Velocity:</strong> Slashed the &quot;time-to-first-offer&quot; from 7 days to 2 days.</span>
+                <span className="text-muted-foreground"><strong className="font-medium text-foreground">Velocity:</strong> Slashed the &quot;time-to-first-offer&quot; from 7 days to 2 days.</span>
               </li>
               <li className="flex gap-3">
                 <span className="text-muted-foreground mt-0.5">•</span>
-                <span><strong className="font-semibold text-foreground">Policy:</strong> Facilitated stakeholder workshops to overhaul cancellation rules and restore platform trust.</span>
+                <span className="text-muted-foreground"><strong className="font-medium text-foreground">Policy:</strong> Facilitated stakeholder workshops to overhaul cancellation rules and restore platform trust.</span>
               </li>
               <li className="flex gap-3">
                 <span className="text-muted-foreground mt-0.5">•</span>
-                <span><strong className="font-semibold text-foreground">Systems:</strong> Replaced static registration with a progressive, skill-based matching engine.</span>
+                <span className="text-muted-foreground"><strong className="font-medium text-foreground">Systems:</strong> Replaced static registration with a progressive, skill-based matching engine.</span>
               </li>
             </ul>
           </section>
@@ -161,10 +155,10 @@ export default function TempStarsCaseStudy() {
                 I began by auditing the end-to-end user journey to identify where the &quot;trust tax&quot; was highest. It wasn&apos;t just a UI problem; it was a systemic failure in the user&apos;s first 48 hours.
               </p>
               <p>
-                <strong className="font-semibold text-foreground">The 40% drop-off:</strong> Data showed that users were interested enough to register but too intimidated or confused to commit to a shift.
+                <strong className="font-medium text-foreground">The 40% drop-off:</strong> Data showed that users were interested enough to register but too intimidated or confused to commit to a shift.
               </p>
               <p>
-                <strong className="font-semibold text-foreground">Information scarcity:</strong> Users were frequently leaving the app to &quot;Google&quot; dental offices before applying because our shift cards lacked the critical details (parking, equipment, team size) needed for a split-second professional decision.
+                <strong className="font-medium text-foreground">Information scarcity:</strong> Users were frequently leaving the app to &quot;Google&quot; dental offices before applying because our shift cards lacked the critical details (parking, equipment, team size) needed for a split-second professional decision.
               </p>
             </div>
           </section>
@@ -195,7 +189,7 @@ export default function TempStarsCaseStudy() {
                 </p>
               </div>
             </div>
-            <div className="mt-8 rounded-xl overflow-hidden max-w-3xl mx-auto">
+            <div className="mt-8 rounded-xl overflow-hidden max-w-[750px]">
               <Image
                 src={TEMPSTARS_CASE_IMAGES[2].src}
                 alt={TEMPSTARS_CASE_IMAGES[2].alt}
@@ -225,7 +219,7 @@ export default function TempStarsCaseStudy() {
                 </p>
               </div>
 
-              <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl mx-auto">
+              <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-[750px]">
                 <div className="relative rounded-xl overflow-hidden bg-[#f5f5f5] h-[320px]">
                   <Image
                     src="/images/tempstars-landing-phone.png"
@@ -251,7 +245,7 @@ export default function TempStarsCaseStudy() {
                 </p>
                 <div className="mt-6 space-y-8">
                   <p className="text-sm text-muted-foreground max-w-[750px]">Dental centre profile with neighborhood, safety, and shift details; clinic and onboarding in context.</p>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[750px]">
                     <div className="relative rounded-xl overflow-hidden bg-[#f5f5f5] h-[360px]">
                       <Image
                         src={TEMPSTARS_CASE_IMAGES[5].src}
@@ -278,7 +272,7 @@ export default function TempStarsCaseStudy() {
                 <p className="text-[17px] leading-relaxed text-muted-foreground">
                   I restructured the shift pages to prioritize &quot;decision-making data.&quot; We moved clinical requirements and office logistics to the forefront. By providing high &quot;information scent,&quot; we eliminated the need for external research and gave users the confidence to book in real-time.
                 </p>
-                <div className="mt-6 rounded-xl overflow-hidden max-w-3xl mx-auto">
+                <div className="mt-6 rounded-xl overflow-hidden max-w-[750px]">
                   <Image
                     src="/images/tempstars-information-scent-before-after.png"
                     alt="Before: dense shift detail with long PPE list. After: dental centre profile with tabs for dental office, neighborhood, safety, and shift details; map and clear decision data."
@@ -291,7 +285,7 @@ export default function TempStarsCaseStudy() {
             </div>
           </section>
 
-          <section id="outcomes" className="mb-16 p-8 bg-[#F5F3F0] rounded-xl max-w-3xl">
+          <section id="outcomes" className="mb-16 p-8 bg-[#F5F3F0] rounded-xl max-w-[750px]">
             <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-4">Outcomes</p>
             <h2 className="font-serif text-[2rem] leading-[1.2] tracking-[-0.02em] mb-6 text-balance">
               The impact of operational maturity
@@ -314,13 +308,13 @@ export default function TempStarsCaseStudy() {
 
             <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
               <p>
-                <strong className="font-semibold text-foreground">20% lift in activation:</strong> We successfully converted more &quot;signups&quot; into &quot;active workers&quot; by lowering the barrier to entry and increasing trust.
+                <strong className="font-medium text-foreground">20% lift in activation:</strong> We successfully converted more &quot;signups&quot; into &quot;active workers&quot; by lowering the barrier to entry and increasing trust.
               </p>
               <p>
-                <strong className="font-semibold text-foreground">Velocity:</strong> The average &quot;time-to-first-offer&quot; dropped from 7 days to 2 days.
+                <strong className="font-medium text-foreground">Velocity:</strong> The average &quot;time-to-first-offer&quot; dropped from 7 days to 2 days.
               </p>
               <p>
-                <strong className="font-semibold text-foreground">Marketplace liquidity:</strong> Booked shifts increased by 25% YoY as a direct result of the trust-based redesign.
+                <strong className="font-medium text-foreground">Marketplace liquidity:</strong> Booked shifts increased by 25% YoY as a direct result of the trust-based redesign.
               </p>
             </div>
           </section>

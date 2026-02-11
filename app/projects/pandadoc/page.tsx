@@ -13,58 +13,52 @@ export default function PandaDocCaseStudy() {
       <Header />
 
       <div className="max-w-7xl mx-auto pt-24 flex flex-col">
-        {/* Row 1: spacer + category label */}
-        <div className="flex w-full items-start">
-          <div className="hidden lg:block w-56 shrink-0 px-8 lg:px-12" aria-hidden />
-          <div className="min-w-0 flex-1 px-8 lg:px-12">
-            <p className="font-mono text-xs text-muted-foreground mb-6 tracking-wider uppercase leading-none">DOCUMENT AUTOMATION</p>
-          </div>
-        </div>
-
         {/* Row 2: spacer + main content */}
         <div className="flex w-full items-start">
           <div className="hidden lg:block w-56 shrink-0 px-8 lg:px-12" aria-hidden />
-          <aside className="hidden lg:block w-56 px-8 lg:px-12 fixed top-24 left-8 lg:left-[max(3rem,calc((100vw-80rem)/2+3rem))]" aria-label="Case study navigation">
+          <aside className="hidden lg:block w-56 px-8 lg:px-12 fixed top-24 left-8 lg:left-[max(0px,calc((100vw-80rem)/2))]" aria-label="Case study navigation">
             <Link
               href="/#work"
               scroll={false}
-              className="inline-flex items-baseline gap-2 text-xs font-mono tracking-wider uppercase text-muted-foreground hover:text-foreground transition-colors mb-16 leading-none"
+              className="block text-xs font-mono tracking-wider uppercase text-muted-foreground hover:text-foreground transition-colors mb-10 leading-none"
             >
-              <ArrowLeft className="w-3 h-3 shrink-0" />
-              All projects
+              <span className="inline-flex items-baseline gap-2">
+                <ArrowLeft className="w-3 h-3 shrink-0" />
+                All projects
+              </span>
             </Link>
             <nav className="space-y-4" aria-label="Case study sections">
-              <a href="#tldr" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
+              <a href="#tldr" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">
                 TLDR
               </a>
-              <a href="#overview" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
+              <a href="#overview" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">
                 Overview
               </a>
-              <a href="#research" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
+              <a href="#research" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">
                 Research
               </a>
-              <a href="#solution" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
+              <a href="#solution" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">
                 Solution
               </a>
-              <a href="#outcomes" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
+              <a href="#outcomes" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">
                 Outcomes
               </a>
-              <a href="#reflection" className="block text-[17px] text-muted-foreground hover:text-foreground transition-colors">
+              <a href="#reflection" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">
                 Reflection
               </a>
             </nav>
           </aside>
-          <main className="flex-1 px-8 lg:px-12 pb-20 lg:pb-24 max-w-4xl">
-          <div className="mb-12">
-            <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl tracking-[-0.02em] leading-[1.2] mb-4 text-balance">
-              PandaDoc: Reducing the &quot;workflow tax&quot;
+          <main className="flex-1 px-8 lg:px-12 pb-20 lg:pb-24">
+          <div className="mb-12 max-w-[750px]">
+            <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl tracking-[-0.02em] leading-[1.2] mb-4">
+              PandaDoc: Simplifying document workflows for 50K+ users
             </h1>
             <p className="text-[17px] text-muted-foreground leading-relaxed">
               Driving product-led growth through contextual extension design.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-4 mb-8 pb-8 border-b border-border/30">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-4 mb-8 pb-8 border-b border-border/30 max-w-[750px]">
             <div>
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Role</p>
               <p className="text-[15px] leading-relaxed">Senior Product Designer, Researcher</p>
@@ -92,26 +86,26 @@ export default function PandaDocCaseStudy() {
             </div>
           </div>
 
-          <section id="tldr" className="mb-16 p-8 bg-[#F5F3F0] rounded-xl max-w-3xl">
+          <section id="tldr" className="mb-16 p-8 bg-[#F5F3F0] rounded-xl max-w-[750px]">
             <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-4">TLDR</p>
             <h2 className="font-serif text-[2rem] leading-[1.2] tracking-[-0.02em] mb-6 text-balance">At a glance</h2>
 
-            <ul className="space-y-3 text-[15px] leading-relaxed max-w-[750px]">
+            <ul className="space-y-3 text-[17px] leading-relaxed max-w-[750px]">
               <li className="flex gap-3">
                 <span className="text-muted-foreground mt-0.5">•</span>
-                <span><strong className="font-semibold text-foreground">Impact:</strong> Reduced document initiation time by 40% for 50,000+ businesses.</span>
+                <span className="text-muted-foreground"><strong className="font-medium text-foreground">Impact:</strong> Reduced document initiation time by 40% for 50,000+ businesses.</span>
               </li>
               <li className="flex gap-3">
                 <span className="text-muted-foreground mt-0.5">•</span>
-                <span><strong className="font-semibold text-foreground">Efficiency:</strong> Eliminated the &quot;Context-Switching Tax&quot; by embedding tools into CRMs and Gmail.</span>
+                <span className="text-muted-foreground"><strong className="font-medium text-foreground">Efficiency:</strong> Eliminated the &quot;Context-Switching Tax&quot; by embedding tools into CRMs and Gmail.</span>
               </li>
               <li className="flex gap-3">
                 <span className="text-muted-foreground mt-0.5">•</span>
-                <span><strong className="font-semibold text-foreground">Execution:</strong> Negotiated a phased V1/V2 rollout to prioritize high-value &quot;Activity Pulse&quot; features.</span>
+                <span className="text-muted-foreground"><strong className="font-medium text-foreground">Execution:</strong> Negotiated a phased V1/V2 rollout to prioritize high-value &quot;Activity Pulse&quot; features.</span>
               </li>
               <li className="flex gap-3">
                 <span className="text-muted-foreground mt-0.5">•</span>
-                <span><strong className="font-semibold text-foreground">Growth:</strong> Created a new organic acquisition channel via the Chrome Web Store.</span>
+                <span className="text-muted-foreground"><strong className="font-medium text-foreground">Growth:</strong> Created a new organic acquisition channel via the Chrome Web Store.</span>
               </li>
             </ul>
           </section>
@@ -224,7 +218,7 @@ export default function PandaDocCaseStudy() {
             </div>
           </section>
 
-          <section id="outcomes" className="mb-16 p-8 bg-[#F5F3F0] rounded-xl max-w-3xl">
+          <section id="outcomes" className="mb-16 p-8 bg-[#F5F3F0] rounded-xl max-w-[750px]">
             <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-4">Outcomes</p>
             <h2 className="font-serif text-[2rem] leading-[1.2] tracking-[-0.02em] mb-6 text-balance">
               The impact: frictionless automation
@@ -232,13 +226,13 @@ export default function PandaDocCaseStudy() {
 
             <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
               <p>
-                <strong className="font-semibold text-foreground">Efficiency:</strong> Estimated 40% reduction in the time required to initiate a new document.
+                <strong className="font-medium text-foreground">Efficiency:</strong> Estimated 40% reduction in the time required to initiate a new document.
               </p>
               <p>
-                <strong className="font-semibold text-foreground">Retention:</strong> The extension became a &quot;sticky&quot; feature, increasing Daily Active Usage (DAU) among our highest-value tiers.
+                <strong className="font-medium text-foreground">Retention:</strong> The extension became a &quot;sticky&quot; feature, increasing Daily Active Usage (DAU) among our highest-value tiers.
               </p>
               <p>
-                <strong className="font-semibold text-foreground">Acquisition:</strong> Leveraged the Chrome Web Store as a new organic funnel, driving new account signups through the &quot;marketplace effect&quot;.
+                <strong className="font-medium text-foreground">Acquisition:</strong> Leveraged the Chrome Web Store as a new organic funnel, driving new account signups through the &quot;marketplace effect&quot;.
               </p>
             </div>
           </section>
