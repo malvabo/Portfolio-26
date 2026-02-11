@@ -81,7 +81,7 @@ export default function TempStarsCaseStudy() {
             />
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-4 mb-8 pb-8 border-b border-border/30 max-w-[750px]">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-4 mb-8 pb-8 max-w-[750px]">
             <div>
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Role</p>
               <p className="text-[15px] leading-relaxed">Lead Product Designer, Research</p>
@@ -331,7 +331,7 @@ export default function TempStarsCaseStudy() {
             </div>
           </section>
 
-          <div className="border-t border-border/50 pt-16">
+          <div className="pt-16">
             <Link
               href="/#work"
               scroll={false}

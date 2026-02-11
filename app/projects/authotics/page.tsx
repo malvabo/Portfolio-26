@@ -104,7 +104,7 @@ export default function AuthoticsCaseStudy() {
             <p className="mt-2 text-sm text-muted-foreground">Authotics consultation flow; product recommendations.</p>
           </div>
 
-          <div className="border-t border-border/50 pt-16">
+          <div className="pt-16">
             <Link
               href="/#work"
               className="inline-flex items-center gap-2 text-[17px] hover:opacity-70 transition-opacity"

@@ -58,7 +58,7 @@ export default function PandaDocCaseStudy() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-4 mb-8 pb-8 border-b border-border/30 max-w-[750px]">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-4 mb-8 pb-8 max-w-[750px]">
             <div>
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Role</p>
               <p className="text-[15px] leading-relaxed">Senior Product Designer, Researcher</p>
@@ -253,7 +253,7 @@ export default function PandaDocCaseStudy() {
             </div>
           </section>
 
-          <div className="border-t border-border/50 pt-16">
+          <div className="pt-16">
             <Link
               href="/#work"
               className="inline-flex items-center gap-2 text-[17px] hover:opacity-70 transition-opacity"

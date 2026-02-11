@@ -72,7 +72,7 @@ export default function BodySpecCaseStudy() {
             />
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-4 mb-8 pb-8 border-b border-border/30 max-w-[750px]">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-4 mb-8 pb-8 max-w-[750px]">
             <div>
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Role</p>
               <p className="text-[15px] leading-relaxed">Lead Product Designer, Research Lead</p>
@@ -266,13 +266,13 @@ export default function BodySpecCaseStudy() {
             </div>
           </section>
 
-          <section id="outcomes" className="mb-16 p-8 bg-[#F5F3F0] rounded-xl max-w-[750px]">
+          <section id="outcomes" className="mb-10 p-8 bg-[#F5F3F0] rounded-xl max-w-[750px]">
             <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Outcomes</p>
             <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">
               The impact
             </h2>
 
-            <div className="grid md:grid-cols-3 gap-4 mb-8">
+            <div className="grid md:grid-cols-3 gap-4 mb-4">
               <div className="bg-background rounded-lg p-6">
                 <div className="text-2xl font-serif mb-2 tracking-[-0.02em]">20%</div>
                 <p className="text-sm leading-relaxed text-muted-foreground">lift in bookings</p>
@@ -309,7 +309,7 @@ export default function BodySpecCaseStudy() {
             </div>
           </section>
 
-          <div className="border-t border-border/50 pt-16">
+          <div className="pt-16">
             <Link
               href="/#work"
               scroll={false}
