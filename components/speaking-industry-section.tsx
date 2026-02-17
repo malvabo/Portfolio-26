@@ -8,9 +8,9 @@ const engagements = [
     link: "https://www.howtoweb.co/",
   },
   {
-    name: "Demystifying Women's Health",
-    description: "How to design engaging healthcare products",
-    link: "https://luma.com/9twxu4xb",
+    name: "DDX conference",
+    description: "How does Product Research & UX Strategy change in an accelerated world of innovation?",
+    link: "https://www.ddxconference.com/dubai-agenda",
   },
   {
     name: "UXcel webinar",
@@ -23,9 +23,9 @@ const engagements = [
     link: "https://pixelperfect.world/learning-hub/",
   },
   {
-    name: "UXDX",
-    description: "Designing for Healthtech: Behavior, AI & Building Trust",
-    link: "https://www.youtube.com/watch?v=GPMzs47V6YQ",
+    name: "DDX conference",
+    description: "The New Face of Healthcare: Behavior, AI, and Gamification",
+    link: "https://www.ddxconference.com/dubai-agenda",
   },
 ]
 
@@ -114,11 +114,11 @@ export function SpeakingIndustrySection() {
             </div>
             <div className="relative rounded-xl overflow-hidden bg-[#f1f1f1] border border-border/60 shadow-sm min-h-[120px] lg:min-h-0">
               <Image
-                src="/images/speaking-mary-podium.png"
-                alt="Mary Borysova speaking at podium"
+                src="/images/speaking-event-3.png"
+                alt="Speaking event"
                 fill
                 className="object-cover"
-                style={{ objectPosition: 'left center' }}
+                style={{ objectPosition: 'center center' }}
                 sizes="(max-width: 1024px) 50vw, 200px"
               />
               <div className="absolute inset-0 bg-black/20" />

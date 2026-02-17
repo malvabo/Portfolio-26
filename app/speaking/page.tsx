@@ -8,8 +8,8 @@ export default function SpeakingPage() {
       subtitle: '"AI Design and Healthcare: Lessons in Changing Human Behavior"',
     },
     {
-      title: "Product Design event about healthtech product design",
-      subtitle: "Demystifying Women's Health",
+      title: "DDX conference",
+      subtitle: "How does Product Research & UX Strategy change in an accelerated world of innovation?",
     },
     {
       title: "UXcell webinar",
