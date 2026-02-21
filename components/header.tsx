@@ -33,7 +33,7 @@ export function Header() {
             href="/"
             className="text-base font-sans font-medium tracking-tight text-foreground hover:text-primary transition-colors"
           >
-            Maria Borysova
+            Mary Borysova
           </Link>
 
           <nav className="hidden md:flex items-center gap-10">
