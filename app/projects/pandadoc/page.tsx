@@ -253,6 +253,74 @@ export default function PandaDocCaseStudy() {
             </div>
           </section>
 
+          <section className="mb-10">
+            <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-6 text-balance">
+              Visual concepts
+            </h2>
+            
+            {/* First row: 3 images */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 max-w-[750px]">
+              <div className="rounded-xl overflow-hidden">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="https://framerusercontent.com/images/36QN27uzjdn0I0NRODeqroemKg.gif?width=800&height=600"
+                  alt="Visual concept 1"
+                  className="w-full h-auto object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div className="rounded-xl overflow-hidden">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="https://framerusercontent.com/images/h8j2HVtqZw9cF41U8kgNenx1cAQ.gif?width=800&height=600"
+                  alt="Visual concept 2"
+                  className="w-full h-auto object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div className="rounded-xl overflow-hidden">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="https://framerusercontent.com/images/fDzLwnqxSQneJkAWE2uqm1npsE.png?scale-down-to=1024&width=1434&height=1024"
+                  alt="Visual concept 3"
+                  className="w-full h-auto object-cover"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+
+            {/* Second row: 3 images */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-[750px]">
+              <div className="rounded-xl overflow-hidden">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="https://framerusercontent.com/images/hfdH6vAd1K7DFoW6iOaSvBrKWp8.png?width=1600&height=1200"
+                  alt="Visual concept 4"
+                  className="w-full h-auto object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div className="rounded-xl overflow-hidden">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="https://framerusercontent.com/images/iJ22Wao5QDVPyjFx5tPGd3OqeY.png?width=1600&height=1200"
+                  alt="Visual concept 5"
+                  className="w-full h-auto object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div className="rounded-xl overflow-hidden">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="https://framerusercontent.com/images/ztk85hchhdEzbxEFAiDFkXnGklc.png?width=1600&height=1200"
+                  alt="Visual concept 6"
+                  className="w-full h-auto object-cover"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </section>
+
           <div className="pt-16">
             <Link
               href="/#work"
