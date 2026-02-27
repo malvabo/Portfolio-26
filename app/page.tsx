@@ -25,10 +25,10 @@ export default function Home() {
         <WorkSection />
         <AmazonSection />
         <PAASection />
-        <BodySpecSection />
-        <SquirllSection />
-        <PandaDocSection />
         <TempStarsSection />
+        <PandaDocSection />
+        <SquirllSection />
+        <BodySpecSection />
         <ArticlesSection />
         <VisualConceptsSection />
         <WorkshopsSection />
