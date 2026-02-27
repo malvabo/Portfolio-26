@@ -99,7 +99,7 @@ export default function SquirllCaseStudy() {
                 className="w-full h-auto object-cover"
               />
             </div>
-            <p className="mt-2 text-sm text-muted-foreground">Squirll financial dashboard.</p>
+            <p className="mt-2 text-sm text-muted-foreground">Squirll financial dashboard</p>
 
             <div className="grid grid-cols-2 gap-4">
               <div className="rounded-xl overflow-hidden">
@@ -121,7 +121,7 @@ export default function SquirllCaseStudy() {
                 />
               </div>
             </div>
-            <p className="mt-2 text-sm text-muted-foreground">Squirll spending analytics; interface details.</p>
+            <p className="mt-2 text-sm text-muted-foreground">Squirll spending analytics; interface details</p>
 
             {/* Row 4: Two images side by side */}
             <div className="grid grid-cols-2 gap-4">
@@ -144,7 +144,7 @@ export default function SquirllCaseStudy() {
                 />
               </div>
             </div>
-            <p className="mt-2 text-sm text-muted-foreground">Squirll interface design; app experience.</p>
+            <p className="mt-2 text-sm text-muted-foreground">Squirll interface design; app experience</p>
 
             {/* Row 5: Two images side by side */}
             <div className="grid grid-cols-2 gap-4">
@@ -167,7 +167,7 @@ export default function SquirllCaseStudy() {
                 />
               </div>
             </div>
-            <p className="mt-2 text-sm text-muted-foreground">Squirll AI features; app screens.</p>
+            <p className="mt-2 text-sm text-muted-foreground">Squirll AI features; app screens</p>
           </div>
 
           <div className="pt-16">

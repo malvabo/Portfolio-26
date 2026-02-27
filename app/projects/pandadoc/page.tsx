@@ -46,6 +46,9 @@ export default function PandaDocCaseStudy() {
               <a href="#reflection" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">
                 Reflection
               </a>
+              <a href="#visual-concepts" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">
+                Visual concepts
+              </a>
             </nav>
           </aside>
           <main className="flex-1 px-8 lg:px-12 pb-20 lg:pb-24">
@@ -141,7 +144,7 @@ export default function PandaDocCaseStudy() {
               className="w-full h-auto object-cover"
               style={{ objectPosition: "center center" }}
             />
-            <p className="mt-2 text-sm text-muted-foreground">PandaDoc Chrome extension interface overview.</p>
+            <p className="mt-2 text-sm text-muted-foreground">PandaDoc Chrome extension interface overview</p>
           </div>
 
           <section id="research" className="mb-10">
@@ -215,7 +218,7 @@ export default function PandaDocCaseStudy() {
                 className="w-full h-auto object-cover"
                 style={{ objectPosition: "center center" }}
               />
-              <p className="mt-2 text-sm text-muted-foreground">PandaDoc extension interface showing document list and templates.</p>
+              <p className="mt-2 text-sm text-muted-foreground">PandaDoc extension interface showing document list and templates</p>
             </div>
           </section>
 
@@ -238,6 +241,80 @@ export default function PandaDocCaseStudy() {
             </div>
           </section>
 
+          <section id="visual-concepts" className="mb-10">
+            <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-6 text-balance">
+              Visual concepts
+            </h2>
+            
+            {/* First row: 3 images */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 max-w-[750px]">
+              <div className="rounded-xl overflow-hidden bg-muted/30 min-h-[180px]">
+                <img
+                  src="https://framerusercontent.com/images/36QN27uzjdn0I0NRODeqroemKg.gif?width=800&height=600"
+                  alt="Visual concept 1"
+                  className="w-full h-auto object-cover block"
+                  loading="lazy"
+                  width={800}
+                  height={600}
+                />
+              </div>
+              <div className="rounded-xl overflow-hidden bg-muted/30 min-h-[180px]">
+                <img
+                  src="https://framerusercontent.com/images/h8j2HVtqZw9cF41U8kgNenx1cAQ.gif?width=800&height=600"
+                  alt="Visual concept 2"
+                  className="w-full h-auto object-cover block"
+                  loading="lazy"
+                  width={800}
+                  height={600}
+                />
+              </div>
+              <div className="rounded-xl overflow-hidden bg-muted/30 min-h-[180px]">
+                <img
+                  src="https://framerusercontent.com/images/fDzLwnqxSQneJkAWE2uqm1npsE.png?scale-down-to=1024&width=1434&height=1024"
+                  alt="Visual concept 3"
+                  className="w-full h-auto object-cover block"
+                  loading="lazy"
+                  width={800}
+                  height={600}
+                />
+              </div>
+            </div>
+
+            {/* Second row: 3 images */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-[750px]">
+              <div className="rounded-xl overflow-hidden bg-muted/30 min-h-[180px]">
+                <img
+                  src="https://framerusercontent.com/images/hfdH6vAd1K7DFoW6iOaSvBrKWp8.png?width=1600&height=1200"
+                  alt="Visual concept 4"
+                  className="w-full h-auto object-cover block"
+                  loading="lazy"
+                  width={800}
+                  height={600}
+                />
+              </div>
+              <div className="rounded-xl overflow-hidden bg-muted/30 min-h-[180px]">
+                <img
+                  src="https://framerusercontent.com/images/iJ22Wao5QDVPyjFx5tPGd3OqeY.png?width=1600&height=1200"
+                  alt="Visual concept 5"
+                  className="w-full h-auto object-cover block"
+                  loading="lazy"
+                  width={800}
+                  height={600}
+                />
+              </div>
+              <div className="rounded-xl overflow-hidden bg-muted/30 min-h-[180px]">
+                <img
+                  src="https://framerusercontent.com/images/ztk85hchhdEzbxEFAiDFkXnGklc.png?width=1600&height=1200"
+                  alt="Visual concept 6"
+                  className="w-full h-auto object-cover block"
+                  loading="lazy"
+                  width={800}
+                  height={600}
+                />
+              </div>
+            </div>
+          </section>
+
           <section id="reflection" className="mb-10">
             <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Reflection</p>
             <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">
@@ -250,74 +327,6 @@ export default function PandaDocCaseStudy() {
               <p>
                 Managing technical debt and scope with a team of four meant negotiating explicitly–Rich Notifications to V2, Starred &amp; Suggested first–and investing in a tokenized component library so design-to-dev stayed predictable. Context-aware UI (templates by contact industry) turned the extension into a layer that lives where the user works, which is what made it sticky and drove both retention and acquisition through the Chrome Web Store.
               </p>
-            </div>
-          </section>
-
-          <section className="mb-10">
-            <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-6 text-balance">
-              Visual concepts
-            </h2>
-            
-            {/* First row: 3 images */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4 max-w-[750px]">
-              <div className="rounded-xl overflow-hidden">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://framerusercontent.com/images/36QN27uzjdn0I0NRODeqroemKg.gif?width=800&height=600"
-                  alt="Visual concept 1"
-                  className="w-full h-auto object-cover"
-                  loading="lazy"
-                />
-              </div>
-              <div className="rounded-xl overflow-hidden">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://framerusercontent.com/images/h8j2HVtqZw9cF41U8kgNenx1cAQ.gif?width=800&height=600"
-                  alt="Visual concept 2"
-                  className="w-full h-auto object-cover"
-                  loading="lazy"
-                />
-              </div>
-              <div className="rounded-xl overflow-hidden">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://framerusercontent.com/images/fDzLwnqxSQneJkAWE2uqm1npsE.png?scale-down-to=1024&width=1434&height=1024"
-                  alt="Visual concept 3"
-                  className="w-full h-auto object-cover"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-
-            {/* Second row: 3 images */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-[750px]">
-              <div className="rounded-xl overflow-hidden">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://framerusercontent.com/images/hfdH6vAd1K7DFoW6iOaSvBrKWp8.png?width=1600&height=1200"
-                  alt="Visual concept 4"
-                  className="w-full h-auto object-cover"
-                  loading="lazy"
-                />
-              </div>
-              <div className="rounded-xl overflow-hidden">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://framerusercontent.com/images/iJ22Wao5QDVPyjFx5tPGd3OqeY.png?width=1600&height=1200"
-                  alt="Visual concept 5"
-                  className="w-full h-auto object-cover"
-                  loading="lazy"
-                />
-              </div>
-              <div className="rounded-xl overflow-hidden">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://framerusercontent.com/images/ztk85hchhdEzbxEFAiDFkXnGklc.png?width=1600&height=1200"
-                  alt="Visual concept 6"
-                  className="w-full h-auto object-cover"
-                  loading="lazy"
-                />
-              </div>
             </div>
           </section>
 

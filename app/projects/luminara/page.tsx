@@ -113,7 +113,7 @@ export default function LuminaraCaseStudy() {
                 />
               </div>
             </div>
-            <p className="mt-2 text-sm text-muted-foreground">Luminara interface detail; mobile interface.</p>
+            <p className="mt-2 text-sm text-muted-foreground">Luminara interface detail; mobile interface</p>
           </div>
 
           <div className="pt-16">

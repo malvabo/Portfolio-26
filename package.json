@@ -4,8 +4,8 @@
   "private": true,
   "packageManager": "npm@10.9.2",
   "scripts": {
-    "build": "next build",
-    "dev": "NEXT_DISABLE_TURBOPACK=1 CHOKIDAR_USEPOLLING=true next dev -H localhost -p 3000",
+    "build": "next build --webpack",
+    "dev": "CHOKIDAR_USEPOLLING=true next dev --webpack -H 0.0.0.0 -p 3000",
     "lint": "eslint .",
     "start": "next start"
   },

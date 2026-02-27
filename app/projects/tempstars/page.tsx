@@ -196,7 +196,7 @@ export default function TempStarsCaseStudy() {
                 height={TEMPSTARS_CASE_IMAGES[2].height}
                 className="w-full h-auto object-contain"
               />
-              <p className="mt-2 text-sm text-muted-foreground">UX onboarding survey (HYG Canada) and shifts distribution.</p>
+              <p className="mt-2 text-sm text-muted-foreground">UX onboarding survey (HYG Canada) and shifts distribution</p>
             </div>
           </section>
 
@@ -236,7 +236,7 @@ export default function TempStarsCaseStudy() {
                   />
                 </div>
               </div>
-              <p className="mt-1 text-sm text-muted-foreground max-w-[750px]">TempStars landing: Dental Temping the way it should be; last step: add your resume to help dental offices choose you.</p>
+              <p className="mt-1 text-sm text-muted-foreground max-w-[750px]">TempStars landing: Dental Temping the way it should be; last step: add your resume to help dental offices choose you</p>
 
               <div>
                 <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium">2. Contextual onboarding (progressive disclosure)</h3>
@@ -262,7 +262,7 @@ export default function TempStarsCaseStudy() {
                       />
                     </div>
                   </div>
-                  <p className="mt-2 text-sm text-muted-foreground max-w-[750px]">Progressive disclosure: extra skills and photo; social proof – &quot;You are in a good company.&quot;</p>
+                  <p className="mt-2 text-sm text-muted-foreground max-w-[750px]">Progressive disclosure: extra skills and photo; social proof – &quot;You are in a good company&quot;</p>
                 </div>
               </div>
 
@@ -274,12 +274,12 @@ export default function TempStarsCaseStudy() {
                 <div className="mt-6 rounded-xl overflow-hidden max-w-[750px]">
                   <Image
                     src="/images/tempstars-information-scent-before-after.png"
-                    alt="Before: dense shift detail with long PPE list. After: dental centre profile with tabs for dental office, neighborhood, safety, and shift details; map and clear decision data."
+                    alt="Before: dense shift detail with long PPE list. After: dental centre profile with tabs for dental office, neighborhood, safety, and shift details; map and clear decision data"
                     width={1200}
                     height={800}
                     className="w-full h-auto object-contain"
                   />
-                  <p className="mt-2 text-sm text-muted-foreground">Before: dense shift detail with long PPE list. After: dental centre profile with tabs for dental office, neighborhood, safety, and shift details; map and clear decision data.</p>
+                  <p className="mt-2 text-sm text-muted-foreground">Before: dense shift detail with long PPE list. After: dental centre profile with tabs for dental office, neighborhood, safety, and shift details; map and clear decision data</p>
                 </div>
               </div>
             </div>

@@ -177,7 +177,7 @@ export default function BodySpecCaseStudy() {
                   height={900}
                   className="w-full h-auto"
                 />
-                <p className="mt-2 text-sm text-muted-foreground">BodySpec location booking interface on laptop.</p>
+                <p className="mt-2 text-sm text-muted-foreground">BodySpec location booking interface on laptop</p>
               </div>
               </div>
 
@@ -217,7 +217,7 @@ export default function BodySpecCaseStudy() {
                     />
                   </div>
                 </div>
-                <p className="mt-2 text-sm text-muted-foreground max-w-[750px]">BodySpec DEXA scan dashboard showing body fat percentage visualization with color-coded zones; body fat analysis with peer comparison charts and percentile data.</p>
+                <p className="mt-2 text-sm text-muted-foreground max-w-[750px]">BodySpec DEXA scan dashboard showing body fat percentage visualization with color-coded zones; body fat analysis with peer comparison charts and percentile data</p>
               </div>
 
               <div>
@@ -246,7 +246,7 @@ export default function BodySpecCaseStudy() {
                   />
                   </div>
                 </div>
-                <p className="mt-2 text-sm text-muted-foreground max-w-[750px]">BodySpec final homepage design with hero and benefits; mobile app booking interface.</p>
+                <p className="mt-2 text-sm text-muted-foreground max-w-[750px]">BodySpec final homepage design with hero and benefits; mobile app booking interface</p>
               </div>
             </div>
           </section>
