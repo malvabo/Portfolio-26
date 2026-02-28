@@ -114,3 +114,29 @@
     font-family: var(--font-handwriting), cursive;
   }
 }
+
+/* Hero text reveal animation (Kyson Dana style) */
+@keyframes hero-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-hero-reveal {
+  animation: hero-reveal 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-hero-reveal-delay-1 {
+  animation: hero-reveal 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.15s forwards;
+  opacity: 0;
+}
+
+.animate-hero-reveal-delay-2 {
+  animation: hero-reveal 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.35s forwards;
+  opacity: 0;
+}
