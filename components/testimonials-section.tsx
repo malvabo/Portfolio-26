@@ -84,7 +84,7 @@ export function TestimonialsSection() {
 
       <div className="relative max-w-7xl mx-auto">
         <div className="flex items-center gap-2 mb-2">
-          <span className="uppercase text-[13px] text-muted-foreground/70 font-mono tracking-wide">{"{02}"} TESTIMONIALS</span>
+          <span className="uppercase text-[13px] text-muted-foreground/70 font-mono tracking-wide">{"{01}"} TESTIMONIALS</span>
         </div>
 
         <h2 className="font-serif text-2xl md:text-3xl leading-[1.1] tracking-tight text-foreground mb-10">

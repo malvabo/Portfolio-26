@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 
@@ -90,19 +91,11 @@ export default function SpeakingPage() {
     <div className="min-h-screen">
       <Header />
       <main className="pt-24 pb-16 container mx-auto px-8 lg:px-12">
-        <div className="max-w-5xl">
-          <div className="space-y-10">
-            <div>
-              <h1 className="font-serif text-2xl md:text-3xl leading-[1.1] tracking-tight text-foreground mb-6">
-                My contribution to the community
-              </h1>
-              <p className="text-[17px] text-muted-foreground max-w-3xl">
-                Public speaking, podcast appearances, and interviews
-              </p>
-            </div>
-
-            <section>
-              <div className="space-y-3">
+        <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-12 lg:items-start">
+          <div className="min-w-0">
+            <div className="space-y-10">
+              <section>
+                <div className="space-y-3">
                 <div className="py-3">
                   {talks[0].link ? (
                     <a
@@ -152,17 +145,17 @@ export default function SpeakingPage() {
                   </div>
                 ))}
                 <p className="text-muted-foreground italic pt-2">… and more to be added soon!</p>
-              </div>
-            </section>
+                </div>
+              </section>
 
-            <section className="mt-16">
-              <div className="mb-6">
+              <section className="mt-16">
+                <div className="mb-6">
                 <h2 className="font-serif text-2xl md:text-3xl leading-[1.1] tracking-tight text-foreground">
                   Interviews
                 </h2>
-              </div>
+                </div>
 
-              <div className="space-y-0">
+                <div className="space-y-0">
                 {interviews.map((interview, index) => (
                   <div key={index} className="py-5">
                     {interview.link ? (
@@ -188,17 +181,17 @@ export default function SpeakingPage() {
                     )}
                   </div>
                 ))}
-              </div>
-            </section>
+                </div>
+              </section>
 
-            <section>
-              <div className="mb-6">
-                <h2 className="font-serif text-2xl md:text-3xl leading-[1.1] tracking-tight text-foreground">
-                  My podcast appearances
-                </h2>
-              </div>
+              <section>
+                <div className="mb-6">
+                  <h2 className="font-serif text-2xl md:text-3xl leading-[1.1] tracking-tight text-foreground">
+                    My podcast appearances
+                  </h2>
+                </div>
 
-              <div className="space-y-0">
+                <div className="space-y-0">
                 {podcasts.map((podcast, index) => (
                   <div key={index} className="py-5">
                     {podcast.link ? (
@@ -221,8 +214,53 @@ export default function SpeakingPage() {
                   </div>
                 ))}
                 <p className="text-muted-foreground italic pt-2">… and more to be added soon!</p>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <div className="mt-12 lg:mt-0 grid grid-cols-2 grid-rows-[1fr_1fr] gap-3 min-h-[360px] lg:min-h-[420px]">
+            <div className="row-span-2 relative rounded-xl overflow-hidden bg-[#f1f1f1] border border-border/60 shadow-sm min-h-[280px] lg:min-h-0">
+              <Image
+                src="/images/speaking-2.jpg"
+                alt="How to web conference"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 50vw, 400px"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-4">
+                <p className="uppercase text-[11px] text-white/80 font-mono tracking-wider">How to web conference</p>
+                <p className="uppercase text-[11px] text-white/90 font-mono tracking-wider mt-0.5">Main stage</p>
               </div>
-            </section>
+            </div>
+            <div className="relative rounded-xl overflow-hidden bg-[#f1f1f1] border border-border/60 shadow-sm min-h-[160px] lg:min-h-0">
+              <Image
+                src="/images/speaking-1.jpg"
+                alt="Main stage"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 50vw, 200px"
+              />
+              <div className="absolute inset-0 bg-black/20" />
+              <div className="absolute bottom-0 left-0 right-0 p-3">
+                <p className="uppercase text-[11px] text-white/90 font-mono tracking-wider">Main stage</p>
+              </div>
+            </div>
+            <div className="relative rounded-xl overflow-hidden bg-[#f1f1f1] border border-border/60 shadow-sm min-h-[160px] lg:min-h-0">
+              <Image
+                src="/images/speaking-event-3.png"
+                alt="Speaking event"
+                fill
+                className="object-cover"
+                style={{ objectPosition: "center center" }}
+                sizes="(max-width: 1024px) 50vw, 200px"
+              />
+              <div className="absolute inset-0 bg-black/20" />
+              <div className="absolute bottom-0 left-0 right-0 p-3">
+                <p className="uppercase text-[11px] text-white/90 font-mono tracking-wider">Speaking event</p>
+              </div>
+            </div>
           </div>
         </div>
       </main>

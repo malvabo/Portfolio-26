@@ -13,7 +13,7 @@ export function VisualConceptsSection() {
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center gap-2 mb-2">
           <span className="uppercase text-[13px] text-muted-foreground/70 font-mono tracking-wide">
-            {"{05}"} VISUAL CONCEPTS
+            {"{04}"} VISUAL CONCEPTS
           </span>
         </div>
 
