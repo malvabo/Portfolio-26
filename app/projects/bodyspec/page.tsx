@@ -151,6 +151,18 @@ export default function BodySpecCaseStudy() {
             </div>
           </section>
 
+          <section id="pivot" className="mb-10">
+            <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Pivot</p>
+            <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">
+              From data density to narrative motivation
+            </h2>
+            <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+              <p>
+                My initial hypothesis was to simplify the dashboard for clarity. However, user testing revealed that simplicity wasn&apos;t the goal, meaning was. I pivoted the design strategy from a one-off data report to a longitudinal progress narrative. By focusing on the change over time rather than a single scan, we increased user retention.
+              </p>
+            </div>
+          </section>
+
           <section id="solution" className="mb-10">
             <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Solution</p>
             <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">
