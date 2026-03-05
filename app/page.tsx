@@ -4,7 +4,6 @@ import { AnimatedSection } from "@/components/animated-section"
 import { WorkSection } from "@/components/work-section"
 import { AmazonSection } from "@/components/amazon-section"
 import { BodySpecSection } from "@/components/bodyspec-section"
-import { TempStarsSection } from "@/components/tempstars-section"
 import { SquirllSection } from "@/components/squirll-section"
 import { PandaDocSection } from "@/components/pandadoc-section"
 import { PAASection } from "@/components/paa-section"
@@ -31,9 +30,6 @@ export default function Home() {
         </AnimatedSection>
         <AnimatedSection>
           <PAASection />
-        </AnimatedSection>
-        <AnimatedSection>
-          <TempStarsSection />
         </AnimatedSection>
         <AnimatedSection>
           <PandaDocSection />
