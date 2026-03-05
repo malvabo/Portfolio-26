@@ -38,26 +38,27 @@ export function Hero() {
       stagger: 0.12,
       ease: "power2.out",
     })
+    tl.addLabel("titleDone")
     if (paragraph) {
       tl.from(paragraph, {
         duration: 0.45,
         opacity: 0,
         ease: "power2.out",
-      }, "+=0")
+      }, "titleDone")
     }
     if (arrow) {
       tl.from(arrow, {
-        duration: 0.35,
+        duration: 0.4,
         opacity: 0,
         ease: "power2.out",
-      }, "<")
+      }, "titleDone+=1")
     }
     if (images) {
       tl.from(images, {
         duration: 0.45,
         opacity: 0,
         ease: "power2.out",
-      }, "<0.15")
+      }, "titleDone+=1")
     }
   }, [])
 
