@@ -29,9 +29,10 @@ export function ArticlesSection() {
           <span className="uppercase text-[13px] text-muted-foreground/70 font-mono tracking-wide">{"{03}"} Know more</span>
         </div>
 
-        <h2 className="font-serif text-2xl md:text-3xl leading-[1.1] tracking-tight text-foreground mb-10">
+        <h2 className="font-serif text-2xl md:text-3xl leading-[1.1] tracking-tight text-foreground mb-2">
           Deep dives on AI, trust & product
         </h2>
+        <p className="text-sm text-muted-foreground opacity-70 mb-10">Read by 100,000+ designers</p>
 
         <div className="grid gap-8 md:grid-cols-3">
           {articles.map((article, index) => (
