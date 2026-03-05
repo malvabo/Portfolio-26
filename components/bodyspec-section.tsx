@@ -37,8 +37,8 @@ export function BodySpecSection() {
           </h3>
           <div className="space-y-4">
             <div>
-              <div className="text-xl font-medium text-foreground mb-0.5">+20%</div>
-              <div className="text-sm text-muted-foreground opacity-80">Increase in bookings</div>
+              <div className="text-xl font-medium text-foreground mb-0.5">$2M+</div>
+              <div className="text-sm text-muted-foreground opacity-80">in annual recurring revenue (ARR) potential</div>
             </div>
             <div>
               <div className="text-xl font-medium text-foreground mb-0.5">$17.2M</div>

@@ -95,7 +95,7 @@ export default function PandaDocCaseStudy() {
             <ul className="space-y-2 text-[17px] leading-relaxed max-w-[750px]">
               <li className="flex gap-3">
                 <span className="text-muted-foreground mt-0.5">•</span>
-                <span className="text-muted-foreground"><strong className="font-medium text-foreground">Impact:</strong> Reduced document initiation time by 40% for 50,000+ businesses.</span>
+                <span className="text-muted-foreground"><strong className="font-medium text-foreground">Impact:</strong> Spearheaded the Chrome ecosystem design, reducing document turnaround time by 40%. By eliminating workflow friction for 50k+ businesses, the redesign saved an estimated 10,000+ sales hours monthly, directly accelerating global deal velocity.</span>
               </li>
               <li className="flex gap-3">
                 <span className="text-muted-foreground mt-0.5">•</span>

@@ -106,7 +106,7 @@ export default function BodySpecCaseStudy() {
             <ul className="space-y-2 text-[17px] leading-relaxed max-w-[750px]">
               <li className="flex gap-3">
                 <span className="text-muted-foreground mt-0.5">•</span>
-                <span className="text-muted-foreground"><strong className="font-medium text-foreground">Impact:</strong> 30% reduction in checkout abandonment and 20% lift in total bookings.</span>
+                <span className="text-muted-foreground"><strong className="font-medium text-foreground">Impact:</strong> Redesigned the core scheduling engine, driving a 20% increase in booking conversion that unlocked an estimated $2M+ in annual recurring revenue (ARR) potential.</span>
               </li>
               <li className="flex gap-3">
                 <span className="text-muted-foreground mt-0.5">•</span>

@@ -40,6 +40,10 @@ export function PandaDocSection() {
               <div className="text-xl font-medium text-foreground mb-0.5">50K+</div>
               <div className="text-sm text-muted-foreground opacity-80">Businesses reached</div>
             </div>
+            <div>
+              <div className="text-xl font-medium text-foreground mb-0.5">40%</div>
+              <div className="text-sm text-muted-foreground opacity-80">Reduction in document turnaround</div>
+            </div>
           </div>
         </div>
 
