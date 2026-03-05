@@ -40,24 +40,24 @@ export function Hero() {
     })
     if (paragraph) {
       tl.from(paragraph, {
-        duration: 0.5,
+        duration: 0.45,
         opacity: 0,
         ease: "power2.out",
-      }, "+=0.1")
+      }, "+=0")
     }
     if (arrow) {
       tl.from(arrow, {
-        duration: 0.4,
+        duration: 0.35,
         opacity: 0,
         ease: "power2.out",
-      }, "+=0.15")
+      }, "<")
     }
     if (images) {
       tl.from(images, {
-        duration: 0.4,
+        duration: 0.45,
         opacity: 0,
         ease: "power2.out",
-      }, "+=0.05")
+      }, "<0.15")
     }
   }, [])
 
