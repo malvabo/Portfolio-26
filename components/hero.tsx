@@ -21,7 +21,15 @@ export function Hero() {
     const images = imagesRef.current
     if (words.length === 0) return
 
-    const tl = gsap.timeline()
+    const hasPlayed = sessionStorage.getItem("heroAnimated")
+    if (hasPlayed) {
+      gsap.set([words, paragraph, arrow, images].filter(Boolean), { opacity: 1, y: 0 })
+      return
+    }
+
+    const tl = gsap.timeline({
+      onComplete: () => sessionStorage.setItem("heroAnimated", "true"),
+    })
     tl.from(words, {
       duration: 0.9,
       opacity: 0,
@@ -30,10 +38,10 @@ export function Hero() {
     })
     if (paragraph) {
       tl.from(paragraph, {
-        duration: 0.6,
+        duration: 0.5,
         opacity: 0,
         ease: "power2.out",
-      }, "+=0.2")
+      }, "+=0.1")
     }
     if (arrow) {
       tl.from(arrow, {
@@ -44,10 +52,10 @@ export function Hero() {
     }
     if (images) {
       tl.from(images, {
-        duration: 0.5,
+        duration: 0.4,
         opacity: 0,
         ease: "power2.out",
-      }, "+=0.1")
+      }, "+=0.05")
     }
   }, [])
 
@@ -78,7 +86,7 @@ export function Hero() {
               ref={paragraphRef}
               className="font-sans text-[17px] leading-relaxed text-muted-foreground"
             >
-              Designing, building, thinking and talking about tech. Contributed to unicorn startups, worked with venture builders, founded profitable companies.
+              Focused on behavioral psychology, AI products, and measurable growth. Contributed to unicorn startups, worked with venture builders, founded profitable companies.
             </p>
 
             <div ref={arrowRef} className="flex justify-start mt-4 mb-2">
