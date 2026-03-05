@@ -10,6 +10,7 @@ const PAA_IMAGES = [
 export function PAASection() {
   return (
     <section className="container mx-auto px-8 lg:px-12 pt-2 md:pt-3 pb-8 md:pb-12">
+      <span className="inline-block mb-3 px-2.5 py-0.5 text-[11px] font-mono uppercase tracking-widest rounded-md bg-[#E8E3DD] text-[#6B5D4F]">Series C</span>
       <h2 className="text-2xl md:text-3xl leading-[1.1] font-serif mb-8 tracking-tight">
         PAA: Scaling Clinical Efficiency through AI-Driven Workflows
       </h2>

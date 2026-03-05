@@ -4,7 +4,7 @@ export function AmazonSection() {
   return (
     <section className="container mx-auto px-8 lg:px-12 pt-5 md:pt-6 pb-8 md:pb-12">
       <h2 className="text-2xl md:text-3xl leading-[1.1] font-serif mb-4 tracking-tight">
-        Building the future of shipping at Amazon
+        Amazon: Architecting systems for global logistics scale
       </h2>
       <p className="text-base leading-relaxed text-foreground mb-10">
         Want to know more? Let&apos;s talk!
