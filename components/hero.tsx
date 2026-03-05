@@ -4,6 +4,9 @@ import { useEffect, useRef } from "react"
 import Image from "next/image"
 import gsap from "gsap"
 
+// Module-level flag: resets on full page reload, persists during client-side navigation
+let heroHasPlayed = false
+
 const heroWords = [
   "Hi,", "I", "am", "Mary", "—", "Product", "UX", "Designer", "currently", "shaping", "tech", "at", "Amazon."
 ]
@@ -21,14 +24,13 @@ export function Hero() {
     const images = imagesRef.current
     if (words.length === 0) return
 
-    const hasPlayed = sessionStorage.getItem("heroAnimated")
-    if (hasPlayed) {
-      gsap.set([words, paragraph, arrow, images].filter(Boolean), { opacity: 1, y: 0 })
+    if (heroHasPlayed) {
+      gsap.set([...words, paragraph, arrow, images].filter(Boolean), { opacity: 1 })
       return
     }
 
     const tl = gsap.timeline({
-      onComplete: () => sessionStorage.setItem("heroAnimated", "true"),
+      onComplete: () => { heroHasPlayed = true },
     })
     tl.from(words, {
       duration: 0.9,
