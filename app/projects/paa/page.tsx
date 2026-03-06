@@ -72,7 +72,7 @@ export default function PAACaseStudy() {
             </div>
 
             {/* Cover image */}
-            <div className="mb-12">
+            <div className="mb-12 max-w-[750px]">
               <div className="rounded-xl overflow-hidden">
                 <Image
                   src="/images/paa-cover.png"
@@ -81,7 +81,7 @@ export default function PAACaseStudy() {
                   height={1932}
                   unoptimized
                   className="w-full h-auto object-cover"
-                  sizes="100vw"
+                  sizes="(max-width: 768px) 100vw, 750px"
                 />
               </div>
             </div>
@@ -138,7 +138,7 @@ export default function PAACaseStudy() {
               </div>
 
               {/* Image — centered, full content width */}
-              <div className="mb-4">
+              <div className="mb-4 max-w-[750px]">
                 <div className="rounded-xl overflow-hidden">
                   <Image
                     src="/images/paa-0.png"
@@ -147,7 +147,7 @@ export default function PAACaseStudy() {
                     height={1780}
                     unoptimized
                     className="w-full h-auto object-cover"
-                    sizes="100vw"
+                    sizes="(max-width: 768px) 100vw, 750px"
                   />
                 </div>
                 <p className="mt-3 text-sm text-muted-foreground text-center">Every task looked the same. Past due, due today, due next week — identical visual weight.</p>
@@ -192,7 +192,7 @@ export default function PAACaseStudy() {
               </div>
 
               {/* Image — centered */}
-              <div className="mb-8">
+              <div className="mb-8 max-w-[750px]">
                 <div className="rounded-xl overflow-hidden">
                   <Image
                     src="/images/paa-1.png"
@@ -201,7 +201,7 @@ export default function PAACaseStudy() {
                     height={1302}
                     unoptimized
                     className="w-full h-auto object-cover"
-                    sizes="100vw"
+                    sizes="(max-width: 768px) 100vw, 750px"
                   />
                 </div>
                 <p className="mt-3 text-sm text-muted-foreground text-center">Annotated journey map showing moments of context-switching and status hunting</p>
@@ -232,7 +232,7 @@ export default function PAACaseStudy() {
               </div>
 
               {/* Wireframe spread — centered */}
-              <div className="mb-10">
+              <div className="mb-10 max-w-[750px]">
                 <div className="rounded-xl overflow-hidden">
                   <Image
                     src="/images/paa-3.png"
@@ -241,7 +241,7 @@ export default function PAACaseStudy() {
                     height={3450}
                     unoptimized
                     className="w-full h-auto object-cover"
-                    sizes="100vw"
+                    sizes="(max-width: 768px) 100vw, 750px"
                   />
                 </div>
                 <p className="mt-3 text-sm text-muted-foreground text-center">Progression from a unified feed model (left) to the two-tier structure (right)</p>
@@ -267,7 +267,7 @@ export default function PAACaseStudy() {
               </div>
 
               {/* Message comparison image */}
-              <div className="my-10">
+              <div className="my-10 max-w-[750px]">
                 <div className="rounded-xl overflow-hidden">
                   <Image
                     src="/images/paa-4.png"
@@ -276,7 +276,7 @@ export default function PAACaseStudy() {
                     height={2790}
                     unoptimized
                     className="w-full h-auto object-cover"
-                    sizes="100vw"
+                    sizes="(max-width: 768px) 100vw, 750px"
                   />
                 </div>
                 <p className="mt-3 text-sm text-muted-foreground text-center">Old state (messages buried in separate tab) vs. new contextual drawer — clinical data stays visible</p>
@@ -291,7 +291,7 @@ export default function PAACaseStudy() {
               </h2>
 
               {/* Final dashboard image */}
-              <div className="mb-10">
+              <div className="mb-10 max-w-[750px]">
                 <div className="rounded-xl overflow-hidden">
                   <Image
                     src="/images/paa-5.png"
@@ -300,7 +300,7 @@ export default function PAACaseStudy() {
                     height={3576}
                     unoptimized
                     className="w-full h-auto object-cover"
-                    sizes="100vw"
+                    sizes="(max-width: 768px) 100vw, 750px"
                   />
                 </div>
                 <p className="mt-3 text-sm text-muted-foreground text-center">Final dashboard: urgency tiles, message tile, and filterable task table</p>
@@ -360,7 +360,7 @@ export default function PAACaseStudy() {
               </div>
 
               {/* Assessment completion screen */}
-              <div className="mb-10">
+              <div className="mb-10 max-w-[750px]">
                 <div className="rounded-xl overflow-hidden">
                   <Image
                     src="/images/paa-2.png"
@@ -369,7 +369,7 @@ export default function PAACaseStudy() {
                     height={2085}
                     unoptimized
                     className="w-full h-auto object-cover"
-                    sizes="100vw"
+                    sizes="(max-width: 768px) 100vw, 750px"
                   />
                 </div>
                 <p className="mt-3 text-sm text-muted-foreground text-center">Assessment completion — a clean &quot;Generate Documentation&quot; CTA at the end of a completed form</p>
@@ -421,7 +421,7 @@ export default function PAACaseStudy() {
               </h2>
 
               {/* Before/after */}
-              <div className="mb-10">
+              <div className="mb-10 max-w-[750px]">
                 <div className="rounded-xl overflow-hidden">
                   <Image
                     src="/images/paa-5.png"
@@ -430,7 +430,7 @@ export default function PAACaseStudy() {
                     height={3576}
                     unoptimized
                     className="w-full h-auto object-cover"
-                    sizes="100vw"
+                    sizes="(max-width: 768px) 100vw, 750px"
                   />
                 </div>
                 <p className="mt-3 text-sm text-muted-foreground text-center">Legacy flat table → new dashboard with urgency tiles and contextual integration</p>
