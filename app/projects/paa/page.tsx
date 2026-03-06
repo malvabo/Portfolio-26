@@ -114,7 +114,7 @@ export default function PAACaseStudy() {
                   Post-acute care is one of the highest-stakes settings in healthcare. Patients have just left acute hospital settings. Their care plans are complex, payer authorizations are time-sensitive, and regulatory documentation is non-negotiable.
                 </p>
                 <p>
-                  The digital tools running these workflows are almost always built on paper logic. Forms got digitized. Checklists moved to screens. The underlying mental model — flat, undifferentiated, one-row-per-task — stayed the same as the binder it replaced.
+                  The digital tools running these workflows are almost always built on paper logic. Forms got digitized. Checklists moved to screens. The underlying mental model stayed the same.
                 </p>
                 <p>
                   PAA is an AI-based platform built to manage patient care in post-acute settings. When I joined, the platform had real clinical data. The interface had no way to make it actionable.
