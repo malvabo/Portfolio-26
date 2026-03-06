@@ -257,16 +257,8 @@ export default function PAACaseStudy() {
                     The model that emerged was a two-tier structure. A compact row of urgency tiles at the top answers: am I on fire right now? A filterable task table below answers: what do I work through next?
                   </p>
                 </div>
-
-                <div>
-                  <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium text-foreground">Phase 2: The message problem</h3>
-                  <p>
-                    The hardest interaction problem wasn&apos;t the task table — it was messages. Document requests needed to be visible from the clinical surface without cluttering it. After several rounds of exploration (inline threads, notification badges, expandable rows), I landed on the Actionable Tile pattern: messages surface as a primary urgency tile, clicking opens a contextual drawer with the patient&apos;s clinical data alongside the thread. The patient context never disappears.
-                  </p>
-                </div>
               </div>
 
-              {/* Message comparison image */}
               <div className="my-10 max-w-[750px]">
                 <div className="rounded-xl overflow-hidden">
                   <Image
@@ -281,17 +273,17 @@ export default function PAACaseStudy() {
                 </div>
                 <p className="mt-3 text-sm text-muted-foreground text-center">Old state (messages buried in separate tab) vs. new contextual drawer — clinical data stays visible</p>
               </div>
-            </section>
 
-            {/* The Solution */}
-            <section id="solution" className="mb-12">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">The Solution</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-6 max-w-[750px]">
-                A hierarchy that makes the system&apos;s knowledge actionable
-              </h2>
+              <div className="space-y-8 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+                <div>
+                  <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium text-foreground">Phase 2: The message problem</h3>
+                  <p>
+                    The hardest interaction problem wasn&apos;t the task table — it was messages. Document requests needed to be visible from the clinical surface without cluttering it. After several rounds of exploration (inline threads, notification badges, expandable rows), I landed on the Actionable Tile pattern: messages surface as a primary urgency tile, clicking opens a contextual drawer with the patient&apos;s clinical data alongside the thread. The patient context never disappears.
+                  </p>
+                </div>
+              </div>
 
-              {/* Final dashboard image */}
-              <div className="mb-10 max-w-[750px]">
+              <div className="my-10 max-w-[750px]">
                 <div className="rounded-xl overflow-hidden">
                   <Image
                     src="/images/paa-5.png"
@@ -305,6 +297,14 @@ export default function PAACaseStudy() {
                 </div>
                 <p className="mt-3 text-sm text-muted-foreground text-center">Final dashboard: urgency tiles, message tile, and filterable task table</p>
               </div>
+            </section>
+
+            {/* The Solution */}
+            <section id="solution" className="mb-12">
+              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">The Solution</p>
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-6 max-w-[750px]">
+                A hierarchy that makes the system&apos;s knowledge actionable
+              </h2>
 
               <div className="space-y-8 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <div>
@@ -334,6 +334,21 @@ export default function PAACaseStudy() {
                   </p>
                 </div>
               </div>
+
+              <div className="mt-10 max-w-[750px]">
+                <div className="rounded-xl overflow-hidden">
+                  <Image
+                    src="/images/paa-2.png"
+                    alt="Assessment completion screen showing the Generate Documentation CTA"
+                    width={2916}
+                    height={2085}
+                    unoptimized
+                    className="w-full h-auto object-cover"
+                    sizes="(max-width: 768px) 100vw, 750px"
+                  />
+                </div>
+                <p className="mt-3 text-sm text-muted-foreground text-center">Assessment completion — a clean &quot;Generate Documentation&quot; CTA at the end of a completed form</p>
+              </div>
             </section>
 
             {/* The AI Layer */}
@@ -359,22 +374,6 @@ export default function PAACaseStudy() {
                 </div>
               </div>
 
-              {/* Assessment completion screen */}
-              <div className="mb-10 max-w-[750px]">
-                <div className="rounded-xl overflow-hidden">
-                  <Image
-                    src="/images/paa-2.png"
-                    alt="Assessment completion screen showing the Generate Documentation CTA"
-                    width={2916}
-                    height={2085}
-                    unoptimized
-                    className="w-full h-auto object-cover"
-                    sizes="(max-width: 768px) 100vw, 750px"
-                  />
-                </div>
-                <p className="mt-3 text-sm text-muted-foreground text-center">Assessment completion — a clean &quot;Generate Documentation&quot; CTA at the end of a completed form</p>
-              </div>
-
               <div className="space-y-6 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <div>
                   <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium text-foreground">The design call: draft, don&apos;t decide</h3>
@@ -387,16 +386,25 @@ export default function PAACaseStudy() {
                   <p className="mt-3">
                     The generation model worked from two inputs: the structured assessment data and the SNF qualification criteria under CMS guidelines. It knew what regulatory language payers needed to see. The assessment told it what the patient&apos;s situation was. The output was a draft narrative, ready for review.
                   </p>
-                  <p className="mt-3 font-medium text-foreground">No confidence scores. No uncertainty flags. Just a clean draft.</p>
                 </div>
+              </div>
 
-                <div>
-                  <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium text-foreground">Why no confidence scores</h3>
-                  <p>
-                    This was a considered design decision, not a technical gap. Confidence scores in clinical documentation create a specific problem: they invite clinicians to second-guess their own assessment findings based on model uncertainty, rather than using their judgment to evaluate the output. That inverts the authority structure. The clinician owns the documentation. The AI drafts it.
-                  </p>
+              <div className="my-10 max-w-[750px]">
+                <div className="rounded-xl overflow-hidden">
+                  <Image
+                    src="/images/paa-ai-draft.png"
+                    alt="AI-generated clinical documentation draft review screen"
+                    width={2168}
+                    height={1446}
+                    unoptimized
+                    className="w-full h-auto object-cover"
+                    sizes="(max-width: 768px) 100vw, 750px"
+                  />
                 </div>
+                <p className="mt-3 text-sm text-muted-foreground text-center">AI-generated draft — structured for review, edit, and sign. No confidence scores.</p>
+              </div>
 
+              <div className="space-y-6 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <div>
                   <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium text-foreground">Edge cases</h3>
                   <p>
