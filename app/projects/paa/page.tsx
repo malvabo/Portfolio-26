@@ -27,65 +27,52 @@ export default function PAACaseStudy() {
               </span>
             </Link>
             <nav className="space-y-4" aria-label="Case study sections">
-              <a href="#tldr" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">
-                TLDR
-              </a>
-              <a href="#overview" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">
-                Overview
-              </a>
-              <a href="#challenge" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">
-                The Challenge
-              </a>
-              <a href="#explorations" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">
-                Design Explorations
-              </a>
-              <a href="#solution" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">
-                The Solution
-              </a>
-              <a href="#outcome" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">
-                The Outcome
-              </a>
+              <a href="#tldr" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Impact at a Glance</a>
+              <a href="#space" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">The Space</a>
+              <a href="#problem" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">The Problem</a>
+              <a href="#discovery" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Discovery</a>
+              <a href="#explorations" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Design Exploration</a>
+              <a href="#solution" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">The Solution</a>
+              <a href="#ai" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">The AI Layer</a>
+              <a href="#outcome" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Outcome</a>
+              <a href="#retro" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">What I&apos;d Do Differently</a>
+              <a href="#argument" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">The Argument</a>
             </nav>
           </aside>
+
           <main className="flex-1 px-8 lg:px-12 pb-20 lg:pb-24">
-            <div className="mb-12 max-w-[750px]">
+
+            {/* Header */}
+            <div className="mb-8 max-w-[750px]">
               <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl tracking-[-0.02em] leading-[1.2] mb-4">
-                PAA: Scaling Clinical Efficiency through AI-Driven Workflows
+                PAA: Designing Clinical Intelligence at the Point of Care
               </h1>
               <p className="text-[17px] leading-relaxed text-muted-foreground">
-                Transforming a high-density data environment into a prioritized, actionable interface for post-acute care.
+                Role: Lead Product Designer · Platform: Web Dashboard · Team: 2 PMs, Engineering
               </p>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-4 mb-4 pb-8 max-w-[750px]">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-4 mb-10 pb-8 max-w-[750px]">
               <div>
                 <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Role</p>
-                <p className="text-[15px] leading-relaxed">Lead Designer</p>
+                <p className="text-[15px] leading-relaxed">Lead Product Designer</p>
               </div>
               <div>
-                <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Context</p>
-                <p className="text-[15px] leading-relaxed">Post-acute care platform</p>
+                <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Platform</p>
+                <p className="text-[15px] leading-relaxed">Web Dashboard</p>
               </div>
               <div>
                 <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Team</p>
                 <p className="text-[15px] leading-relaxed">2 PMs, Engineering</p>
               </div>
               <div>
-                <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Platform</p>
-                <div className="flex flex-wrap gap-1.5">
-                  {["Web", "Dashboard"].map((platform) => (
-                    <span
-                      key={platform}
-                      className="inline-block px-2 py-0.5 text-[13px] rounded-md bg-[#E8E3DD] text-[#6B5D4F]"
-                    >
-                      {platform}
-                    </span>
-                  ))}
-                </div>
+                <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Stage</p>
+                <span className="inline-block px-2 py-0.5 text-[13px] rounded-md bg-[#E8E3DD] text-[#6B5D4F]">Series C</span>
               </div>
             </div>
 
-            <div className="mb-10 max-w-[750px]">
+            {/* Cover image */}
+            <div className="mb-12">
               <div className="rounded-xl overflow-hidden">
                 <Image
                   src="/images/paa-cover.png"
@@ -94,315 +81,435 @@ export default function PAACaseStudy() {
                   height={1932}
                   unoptimized
                   className="w-full h-auto object-cover"
-                  sizes="(max-width: 768px) 100vw, 750px"
+                  sizes="100vw"
                 />
               </div>
             </div>
 
-            <section id="tldr" className="mb-10 p-8 bg-[#F5F3F0] rounded-xl max-w-[750px]">
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">At a glance</h2>
-
-              <ul className="space-y-2 text-[17px] leading-relaxed max-w-[750px]">
+            {/* Impact at a glance */}
+            <section id="tldr" className="mb-12 p-8 bg-[#F5F3F0] rounded-xl max-w-[750px]">
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4">Impact at a glance</h2>
+              <ul className="space-y-2 text-[17px] leading-relaxed">
                 <li className="flex gap-3">
                   <span className="text-muted-foreground mt-0.5">•</span>
-                  <span className="text-muted-foreground"><strong className="font-medium text-foreground">Impact:</strong> The redesigned dashboard is live, shifting the team from reactive fire-fighting to proactive care management.</span>
+                  <span className="text-muted-foreground"><strong className="font-medium text-foreground">40% time saved</strong> by eliminating patient status hunting and missed document chasing</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-muted-foreground mt-0.5">•</span>
-                  <span className="text-muted-foreground"><strong className="font-medium text-foreground">Efficiency:</strong> 40% time saved by eliminating the need to hunt for patient status and missed documents.</span>
+                  <span className="text-muted-foreground">Shifted care teams from reactive fire-fighting to proactive task management</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-muted-foreground mt-0.5">•</span>
-                  <span className="text-muted-foreground"><strong className="font-medium text-foreground">Execution:</strong> Introduced a tiered system with time-sensitivity categorization and contextual messaging integration.</span>
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-muted-foreground mt-0.5">•</span>
-                  <span className="text-muted-foreground"><strong className="font-medium text-foreground">Next:</strong> Analysis of user behavior to refine the AI categorization logic for future releases.</span>
+                  <span className="text-muted-foreground">Shipped a tiered urgency system, contextual message integration, and AI-generated clinical documentation within a single dashboard surface</span>
                 </li>
               </ul>
             </section>
 
-            <section id="overview" className="mb-10">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Overview</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">
-                About PAA
+            {/* The Space */}
+            <section id="space" className="mb-12">
+              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Context</p>
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-6 max-w-[750px]">
+                The Space
               </h2>
-              <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+              <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>
-                  PAA is an AI-based platform providing real-time predictive analytics to manage patient care in post-acute settings. As the lead designer, I spearheaded the dashboard redesign to solve critical bottlenecks in clinician task management. The goal was to transform a high-density data environment into a prioritized, actionable interface that reduces patient service delays.
+                  Post-acute care is one of the highest-stakes settings in healthcare. Patients have just left acute hospital settings. Their care plans are complex, payer authorizations are time-sensitive, and regulatory documentation is non-negotiable.
+                </p>
+                <p>
+                  The digital tools running these workflows are almost always built on paper logic. Forms got digitized. Checklists moved to screens. The underlying mental model — flat, undifferentiated, one-row-per-task — stayed the same as the binder it replaced.
+                </p>
+                <p>
+                  PAA is an AI-based platform built to manage patient care in post-acute settings. When I joined, the platform had real clinical data. The interface had no way to make it actionable.
                 </p>
               </div>
             </section>
 
-            <section id="challenge" className="mb-10">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">The Challenge</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">
-                Clinicians drowning in a &quot;flat&quot; information architecture
+            {/* The Problem */}
+            <section id="problem" className="mb-12">
+              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">The Problem</p>
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-6 max-w-[750px]">
+                Every task looked the same
               </h2>
 
-              <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
+              <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
-                  The legacy system treated all tasks as equal, causing cognitive fatigue and missed deadlines.
+                  Every task in the legacy dashboard had the same visual weight. &quot;Past due by three days&quot; looked identical to &quot;due next week.&quot; Document requests from physicians were buried in a separate chat tab, disconnected from the task list entirely.
                 </p>
               </div>
 
-              <div className="mb-8 max-w-[750px]">
+              {/* Image — centered, full content width */}
+              <div className="mb-4">
                 <div className="rounded-xl overflow-hidden">
                   <Image
                     src="/images/paa-0.png"
-                    alt="Task breakdown by category and age with no clear prioritization cues"
+                    alt="Legacy dashboard — a flat, unsorted task table with no visual urgency hierarchy"
                     width={3250}
                     height={1780}
                     unoptimized
                     className="w-full h-auto object-cover"
-                    sizes="(max-width: 768px) 100vw, 750px"
+                    sizes="100vw"
                   />
                 </div>
-                <p className="mt-2 text-sm text-muted-foreground">Task breakdown by category and age with no clear prioritization cues</p>
+                <p className="mt-3 text-sm text-muted-foreground text-center">Every task looked the same. Past due, due today, due next week — identical visual weight.</p>
               </div>
 
-              <div className="space-y-4 max-w-[750px]">
+              <div className="space-y-6 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mt-10">
+                <p>Three failure modes defined the system:</p>
+
                 <div>
-                  <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium">
-                    Prioritization Paralysis
-                  </h3>
-                  <p className="text-[17px] leading-relaxed text-muted-foreground">
-                    No visual distinction between &quot;past due&quot; and &quot;due today&quot; tasks.
-                  </p>
+                  <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-2 font-medium text-foreground">Prioritization paralysis</h3>
+                  <p>Clinicians had to manually re-triage their entire task list every time they logged in. The interface provided no urgency signal — no distinction between a task that would trigger a regulatory penalty and one that could wait a week.</p>
                 </div>
 
                 <div>
-                  <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium">
-                    Information Silos
-                  </h3>
-                  <p className="text-[17px] leading-relaxed text-muted-foreground">
-                    Critical document requests were buried in a separate chat tab, isolated from the clinical task list.
-                  </p>
+                  <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-2 font-medium text-foreground">Information silos</h3>
+                  <p>In post-acute care, payers and physicians constantly request updated clinical notes, authorizations, and care summaries via messaging. That thread lived in a separate tab, invisible from the clinical task view. Clinicians had to context-switch between two surfaces to understand the full picture of a single patient.</p>
                 </div>
 
                 <div>
-                  <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium">
-                    Service Gaps
-                  </h3>
-                  <p className="text-[17px] leading-relaxed text-muted-foreground">
-                    Lack of urgency indicators led to a high volume of patients not being served in time.
-                  </p>
+                  <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-2 font-medium text-foreground">No escalation trigger</h3>
+                  <p>Without urgency cues, overdue tasks stayed overdue. Not because clinicians were negligent — because the interface never made the urgency visible.</p>
                 </div>
+
+                <p className="font-medium text-foreground">One number crystallized it: 40% of clinician time was going to navigation, not care.</p>
               </div>
             </section>
 
-            <section id="explorations" className="mb-10">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Design Explorations</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">
-                Balancing Density &amp; Feasibility
+            {/* Discovery */}
+            <section id="discovery" className="mb-12">
+              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Research</p>
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-6 max-w-[750px]">
+                Discovery
               </h2>
 
-              <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
+              <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
-                  I developed 30+ screen iterations, moving from high-level concepting to granular stress-testing with the engineering team.
+                  I ran working sessions with clinical staff — case managers, care coordinators, and admissions teams — structured around a single question: what&apos;s the last thing that made you feel behind?
+                </p>
+                <p>
+                  The answers were consistent. They didn&apos;t feel behind because of workload. They felt behind because they couldn&apos;t see what mattered. The information existed in the system. It wasn&apos;t reaching the surface.
                 </p>
               </div>
 
-              <div className="mb-10 max-w-[750px]">
+              {/* Image — centered */}
+              <div className="mb-8">
+                <div className="rounded-xl overflow-hidden">
+                  <Image
+                    src="/images/paa-1.png"
+                    alt="Clinician pain points across the shift — login, task review, messaging, documentation"
+                    width={2895}
+                    height={1302}
+                    unoptimized
+                    className="w-full h-auto object-cover"
+                    sizes="100vw"
+                  />
+                </div>
+                <p className="mt-3 text-sm text-muted-foreground text-center">Annotated journey map showing moments of context-switching and status hunting</p>
+              </div>
+
+              <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+                <p>Two insights shaped the design direction:</p>
+                <p>
+                  The cost of a context switch is non-trivial in clinical settings. Every tab change, every search, every scroll through an undifferentiated list pulls attention away from patient care. These micro-costs accumulate into system-level gaps.
+                </p>
+                <p>
+                  The gap wasn&apos;t missing data — it was missing hierarchy. PAA had task age, document request timestamps, and care plan status. None of it was reaching the interface in a form clinicians could act on. The design mandate became: close the gap between what the system knows and what the clinician sees.
+                </p>
+              </div>
+            </section>
+
+            {/* Design Exploration */}
+            <section id="explorations" className="mb-12">
+              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Design Exploration</p>
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-6 max-w-[750px]">
+                30+ iterations, driven by clinical edge cases
+              </h2>
+
+              <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
+                <p>
+                  I developed 30+ screen iterations, moving from structural concepting to granular stress-testing. The clinical edge cases drove the iteration volume: a clinician with 47 open tasks, a facility managing patients across three payer categories, a morning when everything is past due at once.
+                </p>
+              </div>
+
+              {/* Wireframe spread — centered */}
+              <div className="mb-10">
                 <div className="rounded-xl overflow-hidden">
                   <Image
                     src="/images/paa-3.png"
-                    alt="PAA dashboard design variations: tile interactions, filters, message integration, and urgency indicators"
+                    alt="Early wireframe iterations — progression from unified feed model to two-tier structure"
                     width={4740}
                     height={3450}
                     unoptimized
                     className="w-full h-auto object-cover"
-                    sizes="(max-width: 768px) 100vw, 750px"
+                    sizes="100vw"
                   />
                 </div>
-                <p className="mt-2 text-sm text-muted-foreground">Design variations &amp; key flows</p>
+                <p className="mt-3 text-sm text-muted-foreground text-center">Progression from a unified feed model (left) to the two-tier structure (right)</p>
               </div>
 
-              <div className="space-y-6 max-w-[750px]">
+              <div className="space-y-8 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <div>
-                  <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium">
-                    Phase 1: Structural Discovery
-                  </h3>
-                  <p className="text-[17px] leading-relaxed text-muted-foreground">
-                    I explored different mental models for task grouping. Initial wireframes focused on a unified feed, but user testing revealed that clinicians needed a &quot;separation of concerns&quot; between immediate risks and general maintenance. The first iteration introduced a patient table showing who needs to be served based on priorities, plus a suggested task categorization that covers the full care journey—from admission through discharge.
+                  <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium text-foreground">Phase 1: Structural model</h3>
+                  <p>
+                    Early wireframes explored a unified prioritized feed — everything in one list, sorted by urgency. Clinical staff feedback revealed the problem quickly. Clinicians need to distinguish between immediate risks (regulatory penalties, care gaps) and general maintenance (ongoing tasks that are important but not urgent). A unified feed collapses that distinction.
                   </p>
-                </div>
-
-                <div className="mt-8 max-w-[750px]">
-                  <div className="rounded-xl overflow-hidden">
-                    <Image
-                      src="/images/paa-1.png"
-                      alt="First iteration: patient table with prioritization and new task categorization covering admission to discharge"
-                      width={2895}
-                      height={1302}
-                      unoptimized
-                      className="w-full h-auto object-cover"
-                      sizes="(max-width: 768px) 100vw, 750px"
-                    />
-                  </div>
-                  <p className="mt-2 text-sm text-muted-foreground">First iteration: patient table by priority and task categorization across admission to discharge</p>
-                </div>
-
-                <div>
-                  <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium">
-                    Phase 2: Technical Feasibility &amp; Trade-offs
-                  </h3>
-                  <p className="text-[17px] leading-relaxed text-muted-foreground">
-                    After validating the &quot;Action vs. Overview&quot; model, I focused on the micro-interactions. In a clinical setting, every extra click is a distraction. I audited the existing task flow and identified an opportunity to save 40% of clinician time that was being lost to hunting for patient status and missed documents.
+                  <p className="mt-3">
+                    The model that emerged was a two-tier structure. A compact row of urgency tiles at the top answers: am I on fire right now? A filterable task table below answers: what do I work through next?
                   </p>
                 </div>
 
                 <div>
-                  <p className="text-[17px] leading-relaxed text-muted-foreground">
-                    I led deep-dives with the 2 Product Managers and Engineering to audit data latency. We debated the &quot;Cost of Attention,&quot; specifically how to surface document requests from the chat without cluttering the clinical UI. This led to the &quot;Actionable Tile&quot; pattern, where &quot;Unread Messages&quot; are no longer hidden in the patient profiles but high-level entry points.
+                  <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium text-foreground">Phase 2: The message problem</h3>
+                  <p>
+                    The hardest interaction problem wasn&apos;t the task table — it was messages. Document requests needed to be visible from the clinical surface without cluttering it. After several rounds of exploration (inline threads, notification badges, expandable rows), I landed on the Actionable Tile pattern: messages surface as a primary urgency tile, clicking opens a contextual drawer with the patient&apos;s clinical data alongside the thread. The patient context never disappears.
                   </p>
                 </div>
+              </div>
 
-                <div className="rounded-xl overflow-hidden max-w-[750px] my-8">
+              {/* Message comparison image */}
+              <div className="my-10">
+                <div className="rounded-xl overflow-hidden">
                   <Image
                     src="/images/paa-4.png"
-                    alt="Actionable Tile pattern with contextual modals and workflows"
+                    alt="Old state: messages buried in separate tab vs. new contextual drawer with clinical data visible"
                     width={5688}
                     height={2790}
                     unoptimized
                     className="w-full h-auto object-cover"
-                    sizes="(max-width: 768px) 100vw, 750px"
+                    sizes="100vw"
                   />
                 </div>
-
-                <div>
-                  <p className="text-[17px] leading-relaxed text-muted-foreground">
-                    Instead of a separate chat tab, I implemented a system of slide-out drawers and modals that keep the patient&apos;s clinical data in view while discussing document needs.
-                  </p>
-                </div>
-
-                <div className="max-w-[750px] my-8">
-                  <div className="rounded-xl overflow-hidden">
-                    <Image
-                      src="/images/paa-2.png"
-                      alt="Modal keeping patient clinical data in view while discussing document needs"
-                      width={2916}
-                      height={2085}
-                      unoptimized
-                      className="w-full h-auto object-cover"
-                      sizes="(max-width: 768px) 100vw, 750px"
-                    />
-                  </div>
-                  <p className="mt-2 text-sm text-muted-foreground">Modal with patient context in view</p>
-                </div>
+                <p className="mt-3 text-sm text-muted-foreground text-center">Old state (messages buried in separate tab) vs. new contextual drawer — clinical data stays visible</p>
               </div>
             </section>
 
-            <section id="solution" className="mb-10">
+            {/* The Solution */}
+            <section id="solution" className="mb-12">
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">The Solution</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">
-                A New Hierarchy
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-6 max-w-[750px]">
+                A hierarchy that makes the system&apos;s knowledge actionable
               </h2>
 
-              <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-6">
-                <p>
-                  The final design introduces a tiered system that automates the clinician&apos;s triage process.
-                </p>
+              {/* Final dashboard image */}
+              <div className="mb-10">
+                <div className="rounded-xl overflow-hidden">
+                  <Image
+                    src="/images/paa-5.png"
+                    alt="Final dashboard — Pending Actions tile row at top, task table below with urgency indicators"
+                    width={6056}
+                    height={3576}
+                    unoptimized
+                    className="w-full h-auto object-cover"
+                    sizes="100vw"
+                  />
+                </div>
+                <p className="mt-3 text-sm text-muted-foreground text-center">Final dashboard: urgency tiles, message tile, and filterable task table</p>
               </div>
 
-              <div className="space-y-6 max-w-[750px]">
+              <div className="space-y-8 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <div>
-                  <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium">
-                    Pending Actions UI
-                  </h3>
-                  <p className="text-[17px] leading-relaxed text-muted-foreground">
-                    High-contrast tiles at the top categorize tasks by time-sensitivity (e.g., &quot;2 past due&quot;) for a quick status check.
+                  <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium text-foreground">Pending Actions tiles</h3>
+                  <p>
+                    A compact row of high-contrast tiles at the top of the dashboard. Each tile shows an aggregate count by time-sensitivity category — past due, due today, unread messages. The full urgency picture of a shift is readable in under three seconds. No scrolling, no scanning rows.
+                  </p>
+                  <p className="mt-3">
+                    Arriving at three tiles took eight iterations. Any more and the top layer becomes its own scanning exercise.
                   </p>
                 </div>
 
                 <div>
-                  <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium">
-                    Message Integration
-                  </h3>
-                  <p className="text-[17px] leading-relaxed text-muted-foreground">
-                    &quot;Unread Messages&quot; now lives as a primary tile. Clicking a message surfaces a contextual chat overlay, allowing clinicians to review patient&apos;s requests without losing their place on the dashboard.
-                  </p>
-                </div>
-
-                <div className="max-w-[750px] my-8">
-                  <div className="rounded-xl overflow-hidden">
-                    <Image
-                      src="/images/paa-5.png"
-                      alt="Pending Actions tiles, patient table with urgency indicators, and contextual message cues"
-                      width={6056}
-                      height={3576}
-                      unoptimized
-                      className="w-full h-auto object-cover"
-                      sizes="(max-width: 768px) 100vw, 750px"
-                    />
-                  </div>
-                  <p className="mt-2 text-sm text-muted-foreground">Pending Actions tiles, patient table with urgency indicators, and contextual message cues</p>
-                </div>
-
-                <div>
-                  <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium">
-                    Zero-Layer Actions
-                  </h3>
-                  <p className="text-[17px] leading-relaxed text-muted-foreground">
-                    The task table below provides granular control, allowing clinicians to filter by &quot;Due&quot; date, &quot;Task&quot; type, or &quot;Facility&quot; to manage their specific workload.
-                  </p>
-                </div>
-              </div>
-
-            </section>
-
-            <section id="outcome" className="mb-16 p-8 bg-[#F5F3F0] rounded-xl max-w-[750px]">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">The Outcome</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">
-                Shifting from reactive to proactive care
-              </h2>
-
-              <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-6">
-                <p>
-                  The redesigned dashboard is live, shifting the team from reactive fire-fighting to proactive care management. Clinicians now have a clear view of what needs attention and can act on it without getting lost in a flat list of tasks.
-                </p>
-              </div>
-
-              <div className="space-y-4 max-w-[750px]">
-                <div>
-                  <h3 className="font-serif text-[1.25rem] leading-[1.3] tracking-[-0.02em] mb-2 font-medium text-foreground">
-                    Primary KPI
-                  </h3>
-                  <p className="text-[17px] leading-relaxed text-muted-foreground">
-                    Tracking the reduction in &quot;Past Due&quot; task volume per clinician.
+                  <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium text-foreground">Contextual message integration</h3>
+                  <p>
+                    The Unread Messages tile has the same visual weight as the urgency tiles. Clicking it opens a slide-out drawer: message thread on one side, patient&apos;s clinical data on the other. Clinicians can read a document request, review the patient&apos;s current status, and respond without leaving the dashboard or losing their place.
                   </p>
                 </div>
 
                 <div>
-                  <h3 className="font-serif text-[1.25rem] leading-[1.3] tracking-[-0.02em] mb-2 font-medium text-foreground">
-                    Quantitative Metrics
-                  </h3>
-                  <p className="text-[17px] leading-relaxed text-muted-foreground">
-                    We are tracking the reduction in &quot;Past Due&quot; task volume and the average &quot;Time-to-Action&quot; for new document requests.
+                  <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium text-foreground">Zero-layer task table</h3>
+                  <p>
+                    Below the tiles, a filterable task table gives granular control — filter by due date, task type, facility, or patient. This is where the work gets done. The tiles get you oriented. The table gets you executing.
                   </p>
-                </div>
-
-                <div>
-                  <h3 className="font-serif text-[1.25rem] leading-[1.3] tracking-[-0.02em] mb-2 font-medium text-foreground">
-                    Qualitative Feedback
-                  </h3>
-                  <p className="text-[17px] leading-relaxed text-muted-foreground">
-                    Early feedback indicates a perceived improvement in daily workflow efficiency and much higher clarity regarding task categorization.
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="font-serif text-[1.25rem] leading-[1.3] tracking-[-0.02em] mb-2 font-medium text-foreground">
-                    Next Steps
-                  </h3>
-                  <p className="text-[17px] leading-relaxed text-muted-foreground">
-                    Analysis of user behavior to refine the AI categorization logic for future releases.
+                  <p className="mt-3">
+                    The design principle throughout: progressive disclosure. The interface answers the most urgent question first, then gives you tools to go deeper.
                   </p>
                 </div>
               </div>
             </section>
 
-            <div className="pt-16">
+            {/* The AI Layer */}
+            <section id="ai" className="mb-12">
+              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">AI Layer</p>
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-6 max-w-[750px]">
+                Documentation at the end of the assessment
+              </h2>
+
+              <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
+                <p>
+                  Shipping the dashboard solved the workflow problem. The second challenge was the one that created the most clinician time loss: documentation.
+                </p>
+
+                <div>
+                  <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 mt-4 font-medium text-foreground">The burden</h3>
+                  <p>
+                    Skilled nursing facilities operate under strict CMS frameworks. Every patient interaction requires documentation. Every care plan requires an update. The documentation isn&apos;t overhead — it&apos;s the record that determines whether a patient continues to receive covered care.
+                  </p>
+                  <p className="mt-3">
+                    Clinicians were completing structured assessments — capturing functional scores, clinical observations, care plan status — and then writing the same information again, manually, in the narrative format required for SNF qualification and payer authorization. The data existed. The documentation had to be created from scratch.
+                  </p>
+                </div>
+              </div>
+
+              {/* Assessment completion screen */}
+              <div className="mb-10">
+                <div className="rounded-xl overflow-hidden">
+                  <Image
+                    src="/images/paa-2.png"
+                    alt="Assessment completion screen showing the Generate Documentation CTA"
+                    width={2916}
+                    height={2085}
+                    unoptimized
+                    className="w-full h-auto object-cover"
+                    sizes="100vw"
+                  />
+                </div>
+                <p className="mt-3 text-sm text-muted-foreground text-center">Assessment completion — a clean &quot;Generate Documentation&quot; CTA at the end of a completed form</p>
+              </div>
+
+              <div className="space-y-6 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+                <div>
+                  <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium text-foreground">The design call: draft, don&apos;t decide</h3>
+                  <p>
+                    The temptation with AI-generated documentation is to make the AI visible — show confidence scores, surface model reasoning, flag uncertainty. We made the opposite call deliberately.
+                  </p>
+                  <p className="mt-3">
+                    A clinician who has just completed an assessment knows the patient&apos;s situation. They don&apos;t need a second opinion from the model. They need a draft they can review, edit, and sign. The AI&apos;s job is to eliminate blank-page cognitive load, not to participate in clinical judgment.
+                  </p>
+                  <p className="mt-3">
+                    The generation model worked from two inputs: the structured assessment data and the SNF qualification criteria under CMS guidelines. It knew what regulatory language payers needed to see. The assessment told it what the patient&apos;s situation was. The output was a draft narrative, ready for review.
+                  </p>
+                  <p className="mt-3 font-medium text-foreground">No confidence scores. No uncertainty flags. Just a clean draft.</p>
+                </div>
+
+                <div>
+                  <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium text-foreground">Why no confidence scores</h3>
+                  <p>
+                    This was a considered design decision, not a technical gap. Confidence scores in clinical documentation create a specific problem: they invite clinicians to second-guess their own assessment findings based on model uncertainty, rather than using their judgment to evaluate the output. That inverts the authority structure. The clinician owns the documentation. The AI drafts it.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium text-foreground">Edge cases</h3>
+                  <p>
+                    What if the assessment data is incomplete? What if the clinical picture doesn&apos;t fit standard SNF language? We built explicit states for both: a warning when required fields are missing, and a clear escalation path to manual documentation. The AI generation is a starting point, never a gate.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium text-foreground">What we chose not to build</h3>
+                  <p>
+                    There were requests to add proactive SNF qualification pre-screening — flagging patients whose profile might not qualify before the assessment was complete. We deferred it. Clinicians needed to trust the documentation generation before they could trust the AI making qualification judgments. Introducing predictive disqualification in the same release would have undermined both. It&apos;s a clear next step, sequenced deliberately.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            {/* Outcome */}
+            <section id="outcome" className="mb-12">
+              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Outcome</p>
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-6 max-w-[750px]">
+                From reactive to proactive care
+              </h2>
+
+              {/* Before/after */}
+              <div className="mb-10">
+                <div className="rounded-xl overflow-hidden">
+                  <Image
+                    src="/images/paa-5.png"
+                    alt="Before/after — legacy flat table on the left, new dashboard with urgency tiles on the right"
+                    width={6056}
+                    height={3576}
+                    unoptimized
+                    className="w-full h-auto object-cover"
+                    sizes="100vw"
+                  />
+                </div>
+                <p className="mt-3 text-sm text-muted-foreground text-center">Legacy flat table → new dashboard with urgency tiles and contextual integration</p>
+              </div>
+
+              <div className="p-8 bg-[#F5F3F0] rounded-xl max-w-[750px]">
+                <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground">
+                  <p>The redesigned dashboard is live.</p>
+                  <ul className="space-y-3">
+                    <li className="flex gap-3">
+                      <span className="mt-0.5">•</span>
+                      <span><strong className="font-medium text-foreground">40% reduction in time-to-task.</strong> Time spent navigating to find patient status and locate missed documents, measured against baseline.</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <span className="mt-0.5">•</span>
+                      <span>Past-due task volume per clinician is the primary KPI being tracked. Early data shows a meaningful reduction.</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <span className="mt-0.5">•</span>
+                      <span>Time-to-action on document requests has compressed since the Actionable Tile integration shipped.</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <span className="mt-0.5">•</span>
+                      <span>Qualitative signal from clinical users: <em>&quot;I know what I&apos;m walking into now.&quot;</em></span>
+                    </li>
+                    <li className="flex gap-3">
+                      <span className="mt-0.5">•</span>
+                      <span>The AI documentation generation reduced time from completed assessment to finalized documentation. Because the model is grounded in SNF criteria, drafts also require fewer compliance revision cycles.</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            {/* What I'd Do Differently */}
+            <section id="retro" className="mb-12">
+              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Retrospective</p>
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-6 max-w-[750px]">
+                What I&apos;d Do Differently
+              </h2>
+              <div className="space-y-6 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+                <div>
+                  <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-2 font-medium text-foreground">Earlier research on AI trust mechanics</h3>
+                  <p>
+                    The decision to remove confidence scores was made on design logic and clinical risk reasoning, not on direct research with clinicians about how they process AI-generated text. I stand behind the call, but I&apos;d want to validate it with the skeptics first. Their edge cases are the ones that break assumptions.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-2 font-medium text-foreground">A tighter feedback loop on draft quality</h3>
+                  <p>
+                    We built a flagging mechanism for unusable drafts. We didn&apos;t build a lightweight system to capture why a draft was flagged. That signal is the most valuable input for model improvement, and it should have been in the first release.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-2 font-medium text-foreground">Edge states earlier in the process</h3>
+                  <p>
+                    The &quot;incomplete data&quot; warning was designed late, when edge cases surfaced in QA. In clinical software, edge states aren&apos;t exceptions — they&apos;re the cases that determine whether clinicians trust the system when it matters most. They belong in the design system from day one.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            {/* The Argument */}
+            <section id="argument" className="mb-16 p-8 bg-[#F5F3F0] rounded-xl max-w-[750px]">
+              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">The Argument</p>
+              <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground">
+                <p>
+                  PAA isn&apos;t a case study about adding AI to a dashboard. It&apos;s about the gap between what a system knows and what a clinician can act on.
+                </p>
+                <p>
+                  The platform had task age, document request timestamps, care plan status, assessment data. The interface was surfacing none of it in a usable form. The design work was creating a hierarchy that made the system&apos;s knowledge actionable — at the right moment, at the right level of detail, without adding cognitive load to people already managing high-stakes complexity.
+                </p>
+                <p>
+                  The AI documentation layer extends the same logic. The assessment captures the knowledge. The regulatory framework defines what needs to be communicated. The design closes the gap between the two — so the clinician&apos;s time goes to patient care, not form-filling.
+                </p>
+              </div>
+            </section>
+
+            <div className="pt-8">
               <Link
                 href="/#work"
                 className="inline-flex items-center gap-2 text-[17px] hover:opacity-70 transition-opacity"
