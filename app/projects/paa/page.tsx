@@ -27,16 +27,14 @@ export default function PAACaseStudy() {
               </span>
             </Link>
             <nav className="space-y-4" aria-label="Case study sections">
-              <a href="#tldr" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Impact at a Glance</a>
-              <a href="#space" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">The Space</a>
-              <a href="#problem" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">The Problem</a>
-              <a href="#discovery" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Discovery</a>
-              <a href="#explorations" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Design Exploration</a>
-              <a href="#solution" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">The Solution</a>
-              <a href="#ai" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">The AI Layer</a>
-              <a href="#outcome" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Outcome</a>
-              <a href="#retro" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">What I&apos;d Do Differently</a>
-              <a href="#argument" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">The Argument</a>
+              <a href="#tldr" className="block text-[13px] text-muted-foreground hover:text-foreground transition-colors">Impact at a Glance</a>
+              <a href="#space" className="block text-[13px] text-muted-foreground hover:text-foreground transition-colors">The Space</a>
+              <a href="#problem" className="block text-[13px] text-muted-foreground hover:text-foreground transition-colors">The Problem</a>
+              <a href="#discovery" className="block text-[13px] text-muted-foreground hover:text-foreground transition-colors">Discovery</a>
+              <a href="#explorations" className="block text-[13px] text-muted-foreground hover:text-foreground transition-colors">Design Exploration</a>
+              <a href="#solution" className="block text-[13px] text-muted-foreground hover:text-foreground transition-colors">The Solution</a>
+              <a href="#ai" className="block text-[13px] text-muted-foreground hover:text-foreground transition-colors">The AI Layer</a>
+              <a href="#outcome" className="block text-[13px] text-muted-foreground hover:text-foreground transition-colors">Outcome</a>
             </nav>
           </aside>
 
