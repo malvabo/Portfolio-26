@@ -27,14 +27,12 @@ export default function PAACaseStudy() {
               </span>
             </Link>
             <nav className="space-y-4" aria-label="Case study sections">
-              <a href="#tldr" className="block text-[13px] text-muted-foreground hover:text-foreground transition-colors">Impact at a Glance</a>
-              <a href="#space" className="block text-[13px] text-muted-foreground hover:text-foreground transition-colors">The Space</a>
-              <a href="#problem" className="block text-[13px] text-muted-foreground hover:text-foreground transition-colors">The Problem</a>
-              <a href="#discovery" className="block text-[13px] text-muted-foreground hover:text-foreground transition-colors">Discovery</a>
-              <a href="#explorations" className="block text-[13px] text-muted-foreground hover:text-foreground transition-colors">Design Exploration</a>
-              <a href="#solution" className="block text-[13px] text-muted-foreground hover:text-foreground transition-colors">The Solution</a>
-              <a href="#ai" className="block text-[13px] text-muted-foreground hover:text-foreground transition-colors">The AI Layer</a>
-              <a href="#outcome" className="block text-[13px] text-muted-foreground hover:text-foreground transition-colors">Outcome</a>
+              <a href="#space" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">The Space</a>
+              <a href="#problem" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">The Problem</a>
+              <a href="#discovery" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Discovery</a>
+              <a href="#explorations" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Design Exploration</a>
+              <a href="#solution" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">The Solution</a>
+              <a href="#ai" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">The AI Layer</a>
             </nav>
           </aside>
 
@@ -114,9 +112,6 @@ export default function PAACaseStudy() {
                   Post-acute care is one of the highest-stakes settings in healthcare. Patients have just left acute hospital settings. Their care plans are complex, payer authorizations are time-sensitive, and regulatory documentation is non-negotiable.
                 </p>
                 <p>
-                  The digital tools running these workflows are almost always built on paper logic. Forms got digitized. Checklists moved to screens. The underlying mental model stayed the same.
-                </p>
-                <p>
                   PAA is an AI-based platform built to manage patient care in post-acute settings. When I joined, the platform had real clinical data. The interface had no way to make it actionable.
                 </p>
               </div>
@@ -131,16 +126,16 @@ export default function PAACaseStudy() {
 
               <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
-                  Every task in the legacy dashboard had the same visual weight. &quot;Past due by three days&quot; looked identical to &quot;due next week.&quot; Document requests from physicians were buried in a separate chat tab, disconnected from the task list entirely.
+                  Every task in the legacy dashboard had the same visual weight. Document requests from physicians were buried in a separate chat tab, disconnected from the task list entirely.
                 </p>
               </div>
 
-              {/* Image — centered, full content width */}
+              {/* Image,centered, full content width */}
               <div className="mb-4 max-w-[750px]">
                 <div className="rounded-xl overflow-hidden">
                   <Image
                     src="/images/paa-0.png"
-                    alt="Legacy dashboard — a flat, unsorted task table with no visual urgency hierarchy"
+                    alt="Legacy dashboard,a flat, unsorted task table with no visual urgency hierarchy"
                     width={3250}
                     height={1780}
                     unoptimized
@@ -148,7 +143,7 @@ export default function PAACaseStudy() {
                     sizes="(max-width: 768px) 100vw, 750px"
                   />
                 </div>
-                <p className="mt-3 text-sm text-muted-foreground text-center">Every task looked the same. Past due, due today, due next week — identical visual weight.</p>
+                <p className="mt-3 text-sm text-muted-foreground text-center">Every task looked the same. Past due, due today, due next week, identical visual weight.</p>
               </div>
 
               <div className="space-y-6 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mt-10">
@@ -156,7 +151,7 @@ export default function PAACaseStudy() {
 
                 <div>
                   <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-2 font-medium text-foreground">Prioritization paralysis</h3>
-                  <p>Clinicians had to manually re-triage their entire task list every time they logged in. The interface provided no urgency signal — no distinction between a task that would trigger a regulatory penalty and one that could wait a week.</p>
+                  <p>Clinicians had to manually re-triage their entire task list every time they logged in. The interface provided no urgency signal, no distinction between a task that would trigger a regulatory penalty and one that could wait a week.</p>
                 </div>
 
                 <div>
@@ -166,10 +161,10 @@ export default function PAACaseStudy() {
 
                 <div>
                   <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-2 font-medium text-foreground">No escalation trigger</h3>
-                  <p>Without urgency cues, overdue tasks stayed overdue. Not because clinicians were negligent — because the interface never made the urgency visible.</p>
+                  <p>Without urgency cues, overdue tasks stayed overdue. Not because clinicians were negligent, because the interface never made the urgency visible.</p>
                 </div>
 
-                <p className="font-medium text-foreground">One number crystallized it: 40% of clinician time was going to navigation, not care.</p>
+                <p className="font-medium text-foreground">One number crystallized it: most of the clinician time was going to navigation, not care.</p>
               </div>
             </section>
 
@@ -182,19 +177,19 @@ export default function PAACaseStudy() {
 
               <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
-                  I ran working sessions with clinical staff — case managers, care coordinators, and admissions teams — structured around a single question: what&apos;s the last thing that made you feel behind?
+                  I ran working sessions with clinical staff, case managers, care coordinators, and admissions teams, structured around a single question: what&apos;s the last thing that made you feel behind?
                 </p>
                 <p>
                   The answers were consistent. They didn&apos;t feel behind because of workload. They felt behind because they couldn&apos;t see what mattered. The information existed in the system. It wasn&apos;t reaching the surface.
                 </p>
               </div>
 
-              {/* Image — centered */}
+              {/* Image,centered */}
               <div className="mb-8 max-w-[750px]">
                 <div className="rounded-xl overflow-hidden">
                   <Image
                     src="/images/paa-1.png"
-                    alt="Clinician pain points across the shift — login, task review, messaging, documentation"
+                    alt="Clinician pain points across the shift,login, task review, messaging, documentation"
                     width={2895}
                     height={1302}
                     unoptimized
@@ -211,7 +206,7 @@ export default function PAACaseStudy() {
                   The cost of a context switch is non-trivial in clinical settings. Every tab change, every search, every scroll through an undifferentiated list pulls attention away from patient care. These micro-costs accumulate into system-level gaps.
                 </p>
                 <p>
-                  The gap wasn&apos;t missing data — it was missing hierarchy. PAA had task age, document request timestamps, and care plan status. None of it was reaching the interface in a form clinicians could act on. The design mandate became: close the gap between what the system knows and what the clinician sees.
+                  The gap wasn&apos;t missing data, it was missing hierarchy. PAA had task age, document request timestamps, and care plan status. None of it was reaching the interface in a form clinicians could act on.
                 </p>
               </div>
             </section>
@@ -225,16 +220,16 @@ export default function PAACaseStudy() {
 
               <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
-                  I developed 30+ screen iterations, moving from structural concepting to granular stress-testing. The clinical edge cases drove the iteration volume: a clinician with 47 open tasks, a facility managing patients across three payer categories, a morning when everything is past due at once.
+                  I developed 30+ screen iterations, moving from structural concepting to granular stress-testing.
                 </p>
               </div>
 
-              {/* Wireframe spread — centered */}
+              {/* Wireframe spread,centered */}
               <div className="mb-10 max-w-[750px]">
                 <div className="rounded-xl overflow-hidden">
                   <Image
                     src="/images/paa-3.png"
-                    alt="Early wireframe iterations — progression from unified feed model to two-tier structure"
+                    alt="Early wireframe iterations,progression from unified feed model to two-tier structure"
                     width={4740}
                     height={3450}
                     unoptimized
@@ -249,10 +244,7 @@ export default function PAACaseStudy() {
                 <div>
                   <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium text-foreground">Phase 1: Structural model</h3>
                   <p>
-                    Early wireframes explored a unified prioritized feed — everything in one list, sorted by urgency. Clinical staff feedback revealed the problem quickly. Clinicians need to distinguish between immediate risks (regulatory penalties, care gaps) and general maintenance (ongoing tasks that are important but not urgent). A unified feed collapses that distinction.
-                  </p>
-                  <p className="mt-3">
-                    The model that emerged was a two-tier structure. A compact row of urgency tiles at the top answers: am I on fire right now? A filterable task table below answers: what do I work through next?
+                    Early wireframes explored a unified prioritized feed, everything in one list, sorted by urgency. Clinicians needed to distinguish between immediate risks (regulatory penalties, care gaps) and general maintenance (ongoing tasks that are important but not urgent). A unified feed collapsed that distinction.
                   </p>
                 </div>
               </div>
@@ -269,14 +261,37 @@ export default function PAACaseStudy() {
                     sizes="(max-width: 768px) 100vw, 750px"
                   />
                 </div>
-                <p className="mt-3 text-sm text-muted-foreground text-center">Old state (messages buried in separate tab) vs. new contextual drawer — clinical data stays visible</p>
+                <p className="mt-3 text-sm text-muted-foreground text-center">Old state (messages buried in separate tab) vs. new contextual drawer, clinical data stays visible</p>
+              </div>
+
+              <div className="space-y-8 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+                <div>
+                  <p>
+                    The model that emerged was a two-tier structure. A compact row of urgency tiles at the top answers: am I on fire right now? A filterable task table below answers: what do I work through next?
+                  </p>
+                </div>
+              </div>
+
+              <div className="my-10 max-w-[750px]">
+                <div className="rounded-xl overflow-hidden">
+                  <Image
+                    src="/images/paa-messages.png"
+                    alt="PAA two-tier dashboard structure"
+                    width={1600}
+                    height={1000}
+                    unoptimized
+                    className="w-full h-auto object-cover"
+                    sizes="(max-width: 768px) 100vw, 750px"
+                  />
+                </div>
+                <p className="mt-3 text-sm text-muted-foreground text-center">Two-tier structure: urgency tiles for immediate orientation, task table for execution</p>
               </div>
 
               <div className="space-y-8 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <div>
                   <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium text-foreground">Phase 2: The message problem</h3>
                   <p>
-                    The hardest interaction problem wasn&apos;t the task table — it was messages. Document requests needed to be visible from the clinical surface without cluttering it. After several rounds of exploration (inline threads, notification badges, expandable rows), I landed on the Actionable Tile pattern: messages surface as a primary urgency tile, clicking opens a contextual drawer with the patient&apos;s clinical data alongside the thread. The patient context never disappears.
+                    Document requests needed to be visible from the clinical surface without cluttering it. After several rounds of exploration (inline threads, notification badges, expandable rows), I landed on the Actionable Tile pattern: messages surface as a primary urgency tile, clicking opens a contextual drawer with the patient&apos;s clinical data alongside the thread. The patient context never disappears.
                   </p>
                 </div>
               </div>
@@ -285,7 +300,7 @@ export default function PAACaseStudy() {
                 <div className="rounded-xl overflow-hidden">
                   <Image
                     src="/images/paa-5.png"
-                    alt="Final dashboard — Pending Actions tile row at top, task table below with urgency indicators"
+                    alt="Final dashboard,Pending Actions tile row at top, task table below with urgency indicators"
                     width={6056}
                     height={3576}
                     unoptimized
@@ -308,27 +323,14 @@ export default function PAACaseStudy() {
                 <div>
                   <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium text-foreground">Pending Actions tiles</h3>
                   <p>
-                    A compact row of high-contrast tiles at the top of the dashboard. Each tile shows an aggregate count by time-sensitivity category — past due, due today, unread messages. The full urgency picture of a shift is readable in under three seconds. No scrolling, no scanning rows.
-                  </p>
-                  <p className="mt-3">
-                    Arriving at three tiles took eight iterations. Any more and the top layer becomes its own scanning exercise.
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium text-foreground">Contextual message integration</h3>
-                  <p>
-                    The Unread Messages tile has the same visual weight as the urgency tiles. Clicking it opens a slide-out drawer: message thread on one side, patient&apos;s clinical data on the other. Clinicians can read a document request, review the patient&apos;s current status, and respond without leaving the dashboard or losing their place.
+                    A compact row of high-contrast tiles at the top of the dashboard. Each tile shows an aggregate count by time-sensitivity category, past due, due today, unread messages. The full urgency picture of a shift is readable in under three seconds.
                   </p>
                 </div>
 
                 <div>
                   <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium text-foreground">Zero-layer task table</h3>
                   <p>
-                    Below the tiles, a filterable task table gives granular control — filter by due date, task type, facility, or patient. This is where the work gets done. The tiles get you oriented. The table gets you executing.
-                  </p>
-                  <p className="mt-3">
-                    The design principle throughout: progressive disclosure. The interface answers the most urgent question first, then gives you tools to go deeper.
+                    Below the tiles, a filterable task table gives granular control, filter by due date, task type, facility, or patient. This is where the work gets done.
                   </p>
                 </div>
               </div>
@@ -345,7 +347,30 @@ export default function PAACaseStudy() {
                     sizes="(max-width: 768px) 100vw, 750px"
                   />
                 </div>
-                <p className="mt-3 text-sm text-muted-foreground text-center">Assessment completion — a clean &quot;Generate Documentation&quot; CTA at the end of a completed form</p>
+                <p className="mt-3 text-sm text-muted-foreground text-center">Assessment completion, a clean &quot;Generate Documentation&quot; CTA at the end of a completed form</p>
+              </div>
+
+              <div className="space-y-8 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+                <div>
+                  <p className="mt-3">
+                    The design principle throughout: progressive disclosure. The interface answers the most urgent question first, then gives you tools to go deeper.
+                  </p>
+                </div>
+              </div>
+
+              <div className="my-10 max-w-[750px]">
+                <div className="rounded-xl overflow-hidden">
+                  <Image
+                    src="/images/paa-tasks.png"
+                    alt="PAA task table detail"
+                    width={1600}
+                    height={1000}
+                    unoptimized
+                    className="w-full h-auto object-cover"
+                    sizes="(max-width: 768px) 100vw, 750px"
+                  />
+                </div>
+                <p className="mt-3 text-sm text-muted-foreground text-center">Status hierarchy: tiles surface the critical picture, the table handles the detail</p>
               </div>
             </section>
 
@@ -364,10 +389,10 @@ export default function PAACaseStudy() {
                 <div>
                   <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 mt-4 font-medium text-foreground">The burden</h3>
                   <p>
-                    Skilled nursing facilities operate under strict CMS frameworks. Every patient interaction requires documentation. Every care plan requires an update. The documentation isn&apos;t overhead — it&apos;s the record that determines whether a patient continues to receive covered care.
+                    Skilled nursing facilities operate under strict CMS frameworks. Every patient interaction requires documentation. Every care plan requires an update. The documentation isn&apos;t overhead, it&apos;s the record that determines whether a patient continues to receive covered care.
                   </p>
                   <p className="mt-3">
-                    Clinicians were completing structured assessments — capturing functional scores, clinical observations, care plan status — and then writing the same information again, manually, in the narrative format required for SNF qualification and payer authorization. The data existed. The documentation had to be created from scratch.
+                    Clinicians were completing structured assessments, capturing functional scores, clinical observations, care plan status, and then writing the same information again, manually, in the narrative format required for SNF qualification and payer authorization.
                   </p>
                 </div>
               </div>
@@ -376,12 +401,6 @@ export default function PAACaseStudy() {
                 <div>
                   <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium text-foreground">The design call: draft, don&apos;t decide</h3>
                   <p>
-                    The temptation with AI-generated documentation is to make the AI visible — show confidence scores, surface model reasoning, flag uncertainty. We made the opposite call deliberately.
-                  </p>
-                  <p className="mt-3">
-                    A clinician who has just completed an assessment knows the patient&apos;s situation. They don&apos;t need a second opinion from the model. They need a draft they can review, edit, and sign. The AI&apos;s job is to eliminate blank-page cognitive load, not to participate in clinical judgment.
-                  </p>
-                  <p className="mt-3">
                     The generation model worked from two inputs: the structured assessment data and the SNF qualification criteria under CMS guidelines. It knew what regulatory language payers needed to see. The assessment told it what the patient&apos;s situation was. The output was a draft narrative, ready for review.
                   </p>
                 </div>
@@ -390,86 +409,58 @@ export default function PAACaseStudy() {
               <div className="my-10 max-w-[750px]">
                 <div className="rounded-xl overflow-hidden">
                   <Image
-                    src="/images/paa-ai-draft.png"
-                    alt="AI-generated clinical documentation draft review screen"
-                    width={2168}
-                    height={1446}
+                    src="/images/paa-doc2.png"
+                    alt="PAA documentation draft"
+                    width={1600}
+                    height={1000}
                     unoptimized
                     className="w-full h-auto object-cover"
                     sizes="(max-width: 768px) 100vw, 750px"
                   />
                 </div>
-                <p className="mt-3 text-sm text-muted-foreground text-center">AI-generated draft — structured for review, edit, and sign. No confidence scores.</p>
+                <p className="mt-3 text-sm text-muted-foreground text-center">Generated draft narrative, pre-populated from assessment data and CMS criteria, ready for clinician review</p>
               </div>
+
 
               <div className="space-y-6 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <div>
                   <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium text-foreground">Edge cases</h3>
                   <p>
-                    What if the assessment data is incomplete? What if the clinical picture doesn&apos;t fit standard SNF language? We built explicit states for both: a warning when required fields are missing, and a clear escalation path to manual documentation. The AI generation is a starting point, never a gate.
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium text-foreground">What we chose not to build</h3>
-                  <p>
-                    There were requests to add proactive SNF qualification pre-screening — flagging patients whose profile might not qualify before the assessment was complete. We deferred it. Clinicians needed to trust the documentation generation before they could trust the AI making qualification judgments. Introducing predictive disqualification in the same release would have undermined both. It&apos;s a clear next step, sequenced deliberately.
+                    What if the assessment data is incomplete? What if the clinical picture doesn&apos;t fit standard SNF language? We built explicit states for both: a warning when required fields are missing, and a clear escalation path to manual documentation.
                   </p>
                 </div>
               </div>
-            </section>
 
-            {/* Outcome */}
-            <section id="outcome" className="mb-12">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Outcome</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-6 max-w-[750px]">
-                From reactive to proactive care
-              </h2>
 
-              {/* Before/after */}
-              <div className="mb-10 max-w-[750px]">
+              <div className="space-y-6 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+                <div>
+                  <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium text-foreground">Protecting system integrity.</h3>
+                  <p>
+                    There was a less obvious risk to design against: gaming. If clinicians could see the AI-generated draft before the assessment was locked, the incentive structure breaks, read the output, go back, adjust clinical responses to get a more favorable documentation result. Not because findings changed, but because the AI signaled a compliance gap.
+                  </p>
+                  <p className="mt-4">
+                    The fix was architectural: generation only triggers after the assessment is submitted and locked. Clinicians can edit the narrative draft, but cannot alter the underlying assessment data. Clinical integrity and documentation accuracy stay aligned.
+                  </p>
+                </div>
+              </div>
+
+              <div className="my-10 max-w-[750px]">
                 <div className="rounded-xl overflow-hidden">
                   <Image
-                    src="/images/paa-5.png"
-                    alt="Before/after — legacy flat table on the left, new dashboard with urgency tiles on the right"
-                    width={6056}
-                    height={3576}
+                    src="/images/paa-discharge.png"
+                    alt="PAA discharge documentation"
+                    width={1600}
+                    height={1000}
                     unoptimized
                     className="w-full h-auto object-cover"
                     sizes="(max-width: 768px) 100vw, 750px"
                   />
                 </div>
-                <p className="mt-3 text-sm text-muted-foreground text-center">Legacy flat table → new dashboard with urgency tiles and contextual integration</p>
+                <p className="mt-3 text-sm text-muted-foreground text-center">Discharge documentation flow, sequenced for clinical review before submission</p>
               </div>
 
-              <div className="p-8 bg-[#F5F3F0] rounded-xl max-w-[750px]">
-                <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground">
-                  <p>The redesigned dashboard is live.</p>
-                  <ul className="space-y-3">
-                    <li className="flex gap-3">
-                      <span className="mt-0.5">•</span>
-                      <span><strong className="font-medium text-foreground">40% reduction in time-to-task.</strong> Time spent navigating to find patient status and locate missed documents, measured against baseline.</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <span className="mt-0.5">•</span>
-                      <span>Past-due task volume per clinician is the primary KPI being tracked. Early data shows a meaningful reduction.</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <span className="mt-0.5">•</span>
-                      <span>Time-to-action on document requests has compressed since the Actionable Tile integration shipped.</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <span className="mt-0.5">•</span>
-                      <span>Qualitative signal from clinical users: <em>&quot;I know what I&apos;m walking into now.&quot;</em></span>
-                    </li>
-                    <li className="flex gap-3">
-                      <span className="mt-0.5">•</span>
-                      <span>The AI documentation generation reduced time from completed assessment to finalized documentation. Because the model is grounded in SNF criteria, drafts also require fewer compliance revision cycles.</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
             </section>
+
 
             {/* What I'd Do Differently */}
             <section id="retro" className="mb-12">
@@ -479,21 +470,15 @@ export default function PAACaseStudy() {
               </h2>
               <div className="space-y-6 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <div>
-                  <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-2 font-medium text-foreground">Earlier research on AI trust mechanics</h3>
+                  <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-2 font-medium text-foreground">Build the clinical feedback loop from day one.</h3>
                   <p>
-                    The decision to remove confidence scores was made on design logic and clinical risk reasoning, not on direct research with clinicians about how they process AI-generated text. I stand behind the call, but I&apos;d want to validate it with the skeptics first. Their edge cases are the ones that break assumptions.
+                    When I joined, there was no structured channel between design and clinical staff. I pushed to make it a regular fixture, scheduled reviews with care coordinators on real screens, not abstract questions. Clinicians don&apos;t tell you what they want; they show you where they hesitate. That cadence should exist before the first wireframe.
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-2 font-medium text-foreground">A tighter feedback loop on draft quality</h3>
+                  <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-2 font-medium text-foreground">Get legally clean access to real clinical data earlier.</h3>
                   <p>
-                    We built a flagging mechanism for unusable drafts. We didn&apos;t build a lightweight system to capture why a draft was flagged. That signal is the most valuable input for model improvement, and it should have been in the first release.
-                  </p>
-                </div>
-                <div>
-                  <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-2 font-medium text-foreground">Edge states earlier in the process</h3>
-                  <p>
-                    The &quot;incomplete data&quot; warning was designed late, when edge cases surfaced in QA. In clinical software, edge states aren&apos;t exceptions — they&apos;re the cases that determine whether clinicians trust the system when it matters most. They belong in the design system from day one.
+                    Setting up HIPAA-compliant access to anonymized accounts takes time and legal coordination. We got there late. Testing with realistic task volumes and edge-case clinical profiles earlier would have caught problems we only found in QA. On any healthcare project, this is a first-week priority.
                   </p>
                 </div>
               </div>
@@ -507,10 +492,7 @@ export default function PAACaseStudy() {
                   PAA isn&apos;t a case study about adding AI to a dashboard. It&apos;s about the gap between what a system knows and what a clinician can act on.
                 </p>
                 <p>
-                  The platform had task age, document request timestamps, care plan status, assessment data. The interface was surfacing none of it in a usable form. The design work was creating a hierarchy that made the system&apos;s knowledge actionable — at the right moment, at the right level of detail, without adding cognitive load to people already managing high-stakes complexity.
-                </p>
-                <p>
-                  The AI documentation layer extends the same logic. The assessment captures the knowledge. The regulatory framework defines what needs to be communicated. The design closes the gap between the two — so the clinician&apos;s time goes to patient care, not form-filling.
+                  The platform had task age, document request timestamps, care plan status, assessment data. The interface was surfacing none of it in a usable form. The design work was creating a hierarchy that made the system&apos;s knowledge actionable, at the right moment, at the right level of detail, without adding cognitive load to people already managing high-stakes complexity.
                 </p>
               </div>
             </section>

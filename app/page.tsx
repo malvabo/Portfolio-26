@@ -5,8 +5,9 @@ import { WorkSection } from "@/components/work-section"
 import { AmazonSection } from "@/components/amazon-section"
 import { BodySpecSection } from "@/components/bodyspec-section"
 import { SquirllSection } from "@/components/squirll-section"
-import { PandaDocSection } from "@/components/pandadoc-section"
+// import { PandaDocSection } from "@/components/pandadoc-section"
 import { PAASection } from "@/components/paa-section"
+import { VeeqoSection } from "@/components/veeqo-section"
 import { ArticlesSection } from "@/components/articles-section"
 import { TestimonialsSection } from "@/components/testimonials-section"
 import { VisualConceptsSection } from "@/components/visual-concepts-section"
@@ -32,8 +33,11 @@ export default function Home() {
           <PAASection />
         </AnimatedSection>
         <AnimatedSection>
-          <PandaDocSection />
+          <VeeqoSection />
         </AnimatedSection>
+        {/* <AnimatedSection>
+          <PandaDocSection />
+        </AnimatedSection> */}
         <AnimatedSection>
           <SquirllSection />
         </AnimatedSection>
