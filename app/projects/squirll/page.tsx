@@ -125,8 +125,25 @@ export default function SquirllCaseStudy() {
                   &ldquo;The product should feel like a premium spa.&rdquo;
                 </p>
                 <p className="text-[15px] leading-relaxed text-muted-foreground">
-                  Not a dashboard, not a financial tool — an environment where the user arrives and immediately feels that something capable is handling things, without being asked to do anything themselves. Defined before any visual work began, presented to founders and PM as a filter for every decision that followed.
+                  Not a dashboard, not a financial tool but an environment where the user arrives and immediately feels that something capable is handling things, without being asked to do anything themselves. Defined before any visual work began, I presented to founders and PM as a filter for every decision that followed.
                 </p>
+              </div>
+
+              <div className="grid grid-cols-2 gap-4 max-w-[750px] mt-8">
+                <div className="rounded-xl overflow-hidden">
+                  <LightboxImage
+                    src="/images/sq-6.png"
+                    alt="Squirll design exploration"
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
+                <div className="rounded-xl overflow-hidden">
+                  <LightboxImage
+                    src="/images/sq-7.png"
+                    alt="Squirll design exploration"
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
               </div>
 
               <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
