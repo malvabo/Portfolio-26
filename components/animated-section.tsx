@@ -31,8 +31,8 @@ export function AnimatedSection({ children, className = "", delayOnLoad }: Anima
         {
           opacity: 1,
           y: 0,
-          duration: 0.7,
-          delay: 0.15,
+          duration: 0.5,
+          delay: 0.05,
           ease: "power2.out",
           scrollTrigger: {
             trigger: el,

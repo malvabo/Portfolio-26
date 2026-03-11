@@ -19,7 +19,7 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <AnimatedSection delayOnLoad={2.8}>
+        <AnimatedSection delayOnLoad={1.6}>
           <TestimonialsSection />
         </AnimatedSection>
         <AnimatedSection>

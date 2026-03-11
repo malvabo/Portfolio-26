@@ -33,32 +33,32 @@ export function Hero() {
       onComplete: () => { heroHasPlayed = true },
     })
     tl.from(words, {
-      duration: 0.9,
+      duration: 0.5,
       opacity: 0,
-      stagger: 0.12,
+      stagger: 0.07,
       ease: "power2.out",
     })
     tl.addLabel("titleDone")
     if (paragraph) {
       tl.from(paragraph, {
-        duration: 0.45,
+        duration: 0.35,
         opacity: 0,
         ease: "power2.out",
       }, "titleDone")
     }
     if (arrow) {
       tl.from(arrow, {
-        duration: 0.4,
+        duration: 0.3,
         opacity: 0,
         ease: "power2.out",
-      }, "titleDone+=1")
+      }, "titleDone+=0.3")
     }
     if (images) {
       tl.from(images, {
-        duration: 0.45,
+        duration: 0.35,
         opacity: 0,
         ease: "power2.out",
-      }, "titleDone+=1")
+      }, "titleDone+=0.3")
     }
   }, [])
 
@@ -89,7 +89,7 @@ export function Hero() {
               ref={paragraphRef}
               className="font-sans text-[17px] leading-relaxed text-muted-foreground"
             >
-              Focused on behavioral psychology, AI products, and measurable growth. Contributed to unicorn startups, worked with venture builders, founded profitable companies.
+              Focused on behavioral psychology, AI products, and measurable growth. Contributed to unicorn startups, worked with venture builders, shipped products to millions of users.
             </p>
 
             <div ref={arrowRef} className="flex justify-start mt-4 mb-2">
