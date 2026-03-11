@@ -35,6 +35,7 @@ export default function SquirllCaseStudy() {
               <a href="#typography" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Typography</a>
               <a href="#illustration" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Illustration</a>
               <a href="#dashboard" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Dashboard</a>
+              <a href="#accessibility" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Accessibility</a>
               <a href="#outcome" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Outcome</a>
               <a href="#reflections" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Reflections</a>
             </nav>
@@ -145,6 +146,7 @@ export default function SquirllCaseStudy() {
                   />
                 </div>
               </div>
+              <p className="text-sm text-muted-foreground max-w-[750px] mt-3 mb-8">Early drafts shared with the team to align on direction before any visual production began.</p>
 
               <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>Research on arousal and interface design informed this directly. Dark backgrounds lower arousal, reducing the alertness and vigilance that light backgrounds trigger. The implicit message across light-background finance apps is: <em>pay attention to this</em>. The implicit message we were designing toward was the opposite — <em>this is already taken care of</em>. That framing became the filter for every visual decision that followed.</p>
@@ -297,10 +299,6 @@ export default function SquirllCaseStudy() {
                 />
               </div>
 
-              <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
-                <p>Nothing in the screens moves, but everything is designed as though it will. The glow suggests pulse, the card stack suggests fanning out, the line graph suggests it&apos;s being drawn in real time. This implication of motion creates a sense that the product is alive without adding cognitive load - and when animation arrives in later iterations, it will feel inevitable rather than decorative, because the static frames already contain it as a latent quality.</p>
-              </div>
-
               <div className="grid gap-4 max-w-[750px]">
                 <div className="grid grid-cols-2 gap-4">
                   <div className="rounded-xl overflow-hidden">
@@ -357,6 +355,17 @@ export default function SquirllCaseStudy() {
               <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>The line graph was a framing decision. The amber accent was a category break. The serif appeared precisely where the product needed to feel human rather than automated.</p>
                 <p>Each of these decisions could have gone the other way and still shipped. The difference between a functional interface and a considered one is that these were made with a specific user feeling as the target, argued for in reviews with the team, and connected back to behavior rather than aesthetics.</p>
+              </div>
+            </section>
+
+            {/* Accessibility */}
+            <section id="accessibility" className="mb-14">
+              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Accessibility</p>
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-6 max-w-[750px]">
+                Accessibility
+              </h2>
+              <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+                <p>Dark backgrounds with warm accents create specific contrast challenges. I ran WCAG AA checks across every text and data surface - the amber on near-black pairing required the most iteration, particularly at small sizes. Touch targets were held to 44x44px minimum.</p>
               </div>
             </section>
 
