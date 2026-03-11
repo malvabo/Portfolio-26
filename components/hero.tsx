@@ -8,7 +8,7 @@ import gsap from "gsap"
 let heroHasPlayed = false
 
 const heroWords = [
-  "Hi,", "I", "am", "Mary", "—", "Product", "UX", "Designer", "currently", "shaping", "tech", "at", "Amazon."
+  "Hi,", "I", "am", "Mary", "-", "Product", "UX", "Designer", "currently", "shaping", "tech", "at", "Amazon."
 ]
 
 export function Hero() {

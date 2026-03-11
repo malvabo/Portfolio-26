@@ -1,5 +1,5 @@
 import Link from "next/link"
-import Image from "next/image"
+import { LightboxImage } from "@/components/lightbox-image"
 
 const PAA_IMAGES = [
   { src: "/images/paa-3.png", alt: "PAA dashboard design variations" },
@@ -52,7 +52,6 @@ export function PAASection() {
           <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">Role</h3>
           <div className="text-base leading-relaxed text-foreground space-y-0.5">
             <p>Lead Designer</p>
-            <p>Post-acute care platform</p>
             <div className="flex flex-wrap gap-1.5 mt-2">
               {["Web", "Dashboard"].map((platform) => (
                 <span
@@ -70,8 +69,8 @@ export function PAASection() {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {PAA_IMAGES.map((image, idx) => (
-            <div key={idx} className="relative aspect-[4/3] overflow-hidden rounded-lg bg-gray-50 border border-gray-200">
-              <Image src={image.src || "/placeholder.svg"} alt={image.alt} fill className="object-cover" />
+            <div key={idx} className="relative aspect-[4/3] overflow-hidden rounded-lg bg-gray-50 border border-gray-200 group">
+              <LightboxImage src={image.src || "/placeholder.svg"} alt={image.alt} className="w-full h-full object-cover" />
             </div>
           ))}
         </div>

@@ -1,12 +1,14 @@
 "use client"
+import { LightboxImage } from "@/components/lightbox-image"
 
 import Link from "next/link"
-import Image from "next/image"
 import { ArrowLeft, MapPin } from "lucide-react"
 import { ScrollToTop } from "@/components/scroll-to-top"
 import { Header } from "@/components/header"
+import { PasswordGate } from "@/components/password-gate"
 export default function SquirllCaseStudy() {
   return (
+    <PasswordGate password="Mary2026">
     <div className="min-h-screen bg-background">
       <ScrollToTop />
       <Header />
@@ -79,7 +81,7 @@ export default function SquirllCaseStudy() {
           <div className="mb-16 grid gap-4 max-w-[750px]">
             {/* Row 1: Wide image spanning full width */}
             <div className="rounded-xl overflow-hidden">
-              <Image
+              <LightboxImage
                 src="/images/squirll-collage-1.jpg"
                 alt="Squirll app interface overview"
                 width={4000}
@@ -91,7 +93,7 @@ export default function SquirllCaseStudy() {
 
             {/* Row 2: Full width square image */}
             <div className="rounded-xl overflow-hidden">
-              <Image
+              <LightboxImage
                 src="/images/squirll-collage-2.jpg"
                 alt="Squirll financial dashboard"
                 width={2856}
@@ -103,7 +105,7 @@ export default function SquirllCaseStudy() {
 
             <div className="grid grid-cols-2 gap-4">
               <div className="rounded-xl overflow-hidden">
-                <Image
+                <LightboxImage
                   src="/images/squirll-collage-4.jpg"
                   alt="Squirll spending analytics"
                   width={2907}
@@ -112,7 +114,7 @@ export default function SquirllCaseStudy() {
                 />
               </div>
               <div className="rounded-xl overflow-hidden">
-                <Image
+                <LightboxImage
                   src="/images/squirll-collage-3.jpg"
                   alt="Squirll interface details"
                   width={2048}
@@ -126,7 +128,7 @@ export default function SquirllCaseStudy() {
             {/* Row 4: Two images side by side */}
             <div className="grid grid-cols-2 gap-4">
               <div className="rounded-xl overflow-hidden">
-                <Image
+                <LightboxImage
                   src="/images/squirll-collage-8.jpg"
                   alt="Squirll interface design"
                   width={2856}
@@ -135,7 +137,7 @@ export default function SquirllCaseStudy() {
                 />
               </div>
               <div className="rounded-xl overflow-hidden">
-                <Image
+                <LightboxImage
                   src="/images/squirll-collage-7.jpg"
                   alt="Squirll app experience"
                   width={2048}
@@ -149,7 +151,7 @@ export default function SquirllCaseStudy() {
             {/* Row 5: Two images side by side */}
             <div className="grid grid-cols-2 gap-4">
               <div className="rounded-xl overflow-hidden">
-                <Image
+                <LightboxImage
                   src="/images/squirll-collage-5.jpg"
                   alt="Squirll AI features"
                   width={2526}
@@ -158,7 +160,7 @@ export default function SquirllCaseStudy() {
                 />
               </div>
               <div className="rounded-xl overflow-hidden">
-                <Image
+                <LightboxImage
                   src="/images/squirll-collage-6.jpg"
                   alt="Squirll app screens"
                   width={3405}
@@ -183,5 +185,6 @@ export default function SquirllCaseStudy() {
         </div>
       </div>
     </div>
+    </PasswordGate>
   )
 }

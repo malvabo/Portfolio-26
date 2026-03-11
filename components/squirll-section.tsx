@@ -1,4 +1,4 @@
-import Image from "next/image"
+import { LightboxImage } from "@/components/lightbox-image"
 import Link from "next/link"
 
 export function SquirllSection() {
@@ -70,8 +70,8 @@ export function SquirllSection() {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {images.map((image, idx) => (
-            <div key={idx} className="relative aspect-[4/3] overflow-hidden rounded-lg bg-gray-50 border border-gray-200">
-              <Image src={image.src || "/placeholder.svg"} alt={image.alt} fill className="object-cover" />
+            <div key={idx} className="relative aspect-[4/3] overflow-hidden rounded-lg bg-gray-50 border border-gray-200 group">
+              <LightboxImage src={image.src || "/placeholder.svg"} alt={image.alt} className="w-full h-full object-cover" />
             </div>
           ))}
         </div>

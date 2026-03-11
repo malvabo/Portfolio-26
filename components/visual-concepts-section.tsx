@@ -1,3 +1,6 @@
+"use client"
+import { LightboxImage } from "@/components/lightbox-image"
+
 export function VisualConceptsSection() {
   const images = [
     { src: "https://framerusercontent.com/images/36QN27uzjdn0I0NRODeqroemKg.gif?width=800&height=600", alt: "Visual concept 1" },
@@ -24,13 +27,10 @@ export function VisualConceptsSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full">
           {images.map((img, index) => (
             <div key={index} className="rounded-xl overflow-hidden bg-muted/30 min-h-[180px]">
-              <img
+              <LightboxImage
                 src={img.src}
                 alt={img.alt}
                 className="w-full h-auto object-cover block"
-                loading="lazy"
-                width={800}
-                height={600}
               />
             </div>
           ))}

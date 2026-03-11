@@ -2,9 +2,9 @@ import Image from "next/image"
 import Link from "next/link"
 
 const VEEQO_IMAGES = [
-  { src: "/images/vq-doc1.jpg", alt: "Veeqo document library redesign" },
-  { src: "/images/vq-doc2.png", alt: "HTML editor with AI assist and live preview" },
-  { src: "/images/vq-doc3.png", alt: "Failure states across generation and batch errors" },
+  { src: "/images/vq1.png", alt: "Veeqo document library redesign" },
+  { src: "/images/vq2.png", alt: "HTML editor with AI assist and live preview" },
+  { src: "/images/vq3.png", alt: "Failure states across generation and batch errors" },
 ]
 
 export function VeeqoSection() {
@@ -19,7 +19,7 @@ export function VeeqoSection() {
         <div>
           <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">About</h3>
           <p className="text-base leading-relaxed text-foreground">
-            Veeqo&apos;s entire document infrastructure — invoices, customs forms, packing slips — ran on a third-party PDF tool we had no control over. I led the design of a full replacement: an HTML-based engine with AI-assisted editing, a rebuilt document library, and a human migration path for the enterprise accounts most at risk of churning.
+            Veeqo&apos;s entire document infrastructure - invoices, customs forms, packing slips - ran on a third-party PDF tool we had no control over. I led the design of a full replacement: an HTML-based engine with AI-assisted editing, a rebuilt document library, and a human migration path for the enterprise accounts most at risk of churning.
           </p>
           <Link
             href="/projects/veeqo"
@@ -36,23 +36,13 @@ export function VeeqoSection() {
           <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">
             Results
           </h3>
-          <div className="space-y-4">
-            <div>
-              <div className="text-xl font-medium text-foreground mb-0.5">0% churn</div>
-              <div className="text-sm text-muted-foreground opacity-80">Among top-tier enterprise accounts during the transition</div>
-            </div>
-            <div>
-              <div className="text-xl font-medium text-foreground mb-0.5">30%</div>
-              <div className="text-sm text-muted-foreground opacity-80">Reduction in how-to support tickets vs. the old system</div>
-            </div>
-          </div>
+          <p className="text-sm text-muted-foreground opacity-80">Results under NDA</p>
         </div>
 
         <div>
           <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">Role</h3>
           <div className="text-base leading-relaxed text-foreground space-y-0.5">
-            <p>Staff Product Designer</p>
-            <p>Full platform migration</p>
+            <p>Product Designer</p>
             <div className="flex flex-wrap gap-1.5 mt-2">
               {["Web", "Document Automation"].map((platform) => (
                 <span

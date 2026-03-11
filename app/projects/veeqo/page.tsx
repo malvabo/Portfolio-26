@@ -1,4 +1,5 @@
 "use client"
+import { LightboxImage } from "@/components/lightbox-image"
 
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
@@ -31,11 +32,9 @@ export default function VeeqoCaseStudy() {
             <nav className="space-y-4" aria-label="Case study sections">
               <a href="#context" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Context</a>
               <a href="#discovery" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Discovery</a>
-              <a href="#reframe" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Problem Reframe</a>
+              <a href="#iterations" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">What We Tried</a>
               <a href="#strategy" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Strategy</a>
-              <a href="#process" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Design Process</a>
               <a href="#design" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Design Decisions</a>
-              <a href="#challenges" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Challenges</a>
               <a href="#outcomes" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Outcomes</a>
               <a href="#reflections" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Reflections</a>
             </nav>
@@ -55,10 +54,10 @@ export default function VeeqoCaseStudy() {
             </div>
 
             {/* Meta grid */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-4 mb-10 pb-8 max-w-[750px]">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-4 mb-6 pb-4 max-w-[750px]">
               <div>
                 <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Role</p>
-                <p className="text-[15px] leading-relaxed">Staff Product Designer</p>
+                <p className="text-[15px] leading-relaxed">Product Designer</p>
               </div>
               <div>
                 <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Scope</p>
@@ -66,11 +65,22 @@ export default function VeeqoCaseStudy() {
               </div>
               <div>
                 <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Team</p>
-                <p className="text-[15px] leading-relaxed">Eng + Seller Success</p>
+                <p className="text-[15px] leading-relaxed">Team lead, 3 engineers, PM, VP of Product, VP of Design, Client Success</p>
               </div>
               <div>
                 <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Constraint</p>
                 <p className="text-[15px] leading-relaxed">Limited eng bandwidth</p>
+              </div>
+            </div>
+
+            {/* Cover image */}
+            <div className="mb-12 max-w-[750px]">
+              <div className="rounded-xl overflow-hidden">
+                <img
+                  src="/images/vq1.png"
+                  alt="Veeqo document system"
+                  className="w-full h-auto object-cover"
+                />
               </div>
             </div>
 
@@ -81,9 +91,15 @@ export default function VeeqoCaseStudy() {
                 A dependency we had to cut.
               </h2>
               <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
-                <p>Veeqo is a multi-channel shipping platform acquired by Amazon. Documents sit at the core of every order: packing slips, invoices, customs forms, returns labels. The entire system ran on a third-party PDF tool the team had no control over. No extensibility, real technical risk, and a single external dependency the business could not afford to keep.</p>
-                <p>Through early discovery workshops, I helped surface the case for replacing it entirely. My job then became designing what came next.</p>
-                <p>When I stepped in, the brief was already shifting. We were mid-migration to the US market, the primary stakeholder had just exited, and the engineering team was stretched thin. None of that changed the core problem, but it shaped every decision about what was realistic to ship.</p>
+                <p>Veeqo is a multi-channel shipping platform acquired by Amazon, and documents sit at the core of every order - packing slips, invoices, customs forms, returns labels. The entire system ran on a third-party PDF tool with no extensibility, real technical risk, and a vendor dependency the business couldn&apos;t afford to keep. Through early discovery workshops, I helped surface the case for replacing it entirely.</p>
+                <div className="rounded-xl overflow-hidden">
+                  <LightboxImage src="/images/vq-doc7.png" alt="The system we replaced" className="w-full h-auto object-cover" />
+                </div>
+                <p className="text-sm text-muted-foreground text-center">The system we replaced - the third-party template library and its drag-and-drop editor had no extensibility and no API control</p>
+                <div>
+                  <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2 mt-6">Business goals</p>
+                  <p>Three things had to happen simultaneously: eliminate the third-party PDF dependency, protect retention among top-tier enterprise accounts at genuine churn risk, and reclaim technical ownership so the team could ship new document types without being blocked by an external vendor.</p>
+                </div>
               </div>
             </section>
 
@@ -94,16 +110,8 @@ export default function VeeqoCaseStudy() {
                 Not one user. Two completely different problems.
               </h2>
               <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
-                <p>Support data and seller success conversations surfaced something important fast: &quot;fixing documents&quot; meant entirely different things depending on who you asked.</p>
                 <p>Through discovery, I realized we weren&apos;t designing for a monolith. We had two distinct &quot;user worlds&quot; with a massive gap between them.</p>
-                <ul className="space-y-3 mt-2">
-                  <li>
-                    <strong className="text-foreground font-medium">The SMB World:</strong> They wanted &quot;it just works.&quot; Clean defaults, fast loading, and zero setup. They didn&apos;t care about the tech; they cared about the speed.
-                  </li>
-                  <li>
-                    <strong className="text-foreground font-medium">The Enterprise World:</strong> They had &quot;Frankenstein&quot; templates: highly customized layouts with specific branding and logic baked in. To them, losing the old PDF editor wasn&apos;t a minor UX change; it was a broken business process.
-                  </li>
-                </ul>
+                <p>Enterprise sellers were ops-heavy teams running complex, multi-brand fulfillment operations - many had spent years building customized templates with business logic embedded directly in their layouts. For these sellers, the document system wasn&apos;t a feature. It was infrastructure. SMB sellers needed clean defaults and reliable generation. Most had never touched the legacy editor - their ask was simple: a logo, a brand colour, and documents that worked without setup overhead.</p>
               </div>
 
               {/* Segment diagram */}
@@ -139,21 +147,27 @@ export default function VeeqoCaseStudy() {
                   </div>
                 </div>
               </div>
+            </section>
 
-              {/* Pull quote */}
-              <div className="border-l-2 border-border pl-7 my-10 max-w-[750px]">
-                <p className="font-serif text-[1.375rem] leading-[1.35] text-foreground">
-                  Losing the PDF editor wasn&apos;t a UX inconvenience for enterprise accounts. It was a workflow disruption, and that made it a retention problem.
-                </p>
+            {/* Research */}
+            <section id="research" className="mb-14">
+              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-6">Research</p>
+              <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+                <p>Support tickets gave me an early read on where friction lived. Enterprise sellers filed around customization limits and template reliability, while SMB tickets clustered around setup confusion and generation failures - two different problems showing up in the same queue.</p>
+                <p>A competitive scan of ShipStation, Shopify, and similar platforms revealed a consistent gap: rigid pre-built templates on one end, full code editors on the other, with nobody solving the middle ground well. That gap shaped the layered approach.</p>
+                <p>The most important signal came from pulling earlier seller interview synthesis from Dovetail. Sellers needed significantly more customization than the platform assumed - not for aesthetic reasons, but because their fulfillment flows were genuinely unique and their documents needed to reflect that operational reality.</p>
               </div>
             </section>
 
             {/* Problem Redefinition */}
             <section id="reframe" className="mb-14">
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Problem Redefinition</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-8 max-w-[750px]">
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-6 max-w-[750px]">
                 The brief changed. Twice.
               </h2>
+              <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
+                <p>When I stepped in, the brief was already shifting. We were mid-migration to the US market, the primary stakeholder had just exited, and engineering was stretched thin - none of which changed the core problem, but it shaped every decision about what was realistic to ship.</p>
+              </div>
 
               {/* Brief evolution */}
               <div className="flex flex-col max-w-[750px] mb-8 divide-y divide-[#EBEBEB] border border-[#EBEBEB] bg-white">
@@ -181,6 +195,56 @@ export default function VeeqoCaseStudy() {
               </div>
             </section>
 
+            {/* Design Iterations */}
+            <section id="iterations" className="mb-14">
+              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">What we tried first</p>
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-6 max-w-[750px]">
+                Ideating, testing and iterating.
+              </h2>
+              <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+                <p>When drafting the early concepts, I covered library structure, editor interactions, branding model, and failure states.</p>
+                <p>Drag and drop was the obvious starting point - familiar, no code required. We moved away from it because the build cost was too high for the engineering bandwidth we had, and it wouldn&apos;t have supported the complexity enterprise sellers needed.</p>
+              </div>
+              <div className="rounded-xl overflow-hidden max-w-[750px] my-6">
+                <LightboxImage src="/images/vq-doc10.png" alt="Design exploration" className="w-full h-auto object-cover" />
+              </div>
+              <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+                <p>A simple document table without previews surfaced a problem from a similar internal project: sellers don&apos;t name their documents consistently, so without a visual anchor the list became noise and finding the right template was harder than it should have been.</p>
+              </div>
+              <div className="rounded-xl overflow-hidden max-w-[750px] my-6">
+                <LightboxImage src="/images/vq-doc9.png" alt="Design iterations" className="w-full h-auto object-cover" />
+              </div>
+              <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+                <p>HTML as an &quot;advanced&quot; button on ready-to-go templates felt like a clean handoff between modes, but it made exploration harder to justify - sellers are less likely to discover what&apos;s possible when it&apos;s hidden behind an advanced label. As the number of templates scaled, the pattern would have broken down anyway.</p>
+              </div>
+              <div className="rounded-xl overflow-hidden max-w-[750px] my-6">
+                <LightboxImage src="/images/vq-doc8.png" alt="Four editing modes" className="w-full h-auto object-cover" />
+              </div>
+            </section>
+
+            {/* Design Process */}
+            <section id="process" className="mb-14">
+              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Design Process</p>
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-6 max-w-[750px]">
+                Design process with the team.
+              </h2>
+              <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
+                <p>With a stakeholder exit mid-project and engineering stretched thin, the collaboration model had to be tight.</p>
+                <p>Engineering was in the room from day one. We caught at least two directions that looked good in Figma but wouldn&apos;t have survived production before anyone had invested heavily in them. Feedback cycles were short and rough - early directions over polished concepts, with sessions used to pressure-test assumptions rather than present for sign-off.</p>
+                <p>When the PRD lost its owner I picked that up too, running alignment sessions to keep the brief anchored as scope kept expanding.</p>
+              </div>
+
+              {/* Process flow */}
+              <div className="flex flex-wrap gap-2 max-w-[750px] mb-8">
+                {["Segment research", "Tech assessment", "Strategic framing", "Library redesign", "Branding model", "Failure states"].map((step, i) => (
+                  <span key={i} className="inline-flex items-center gap-2.5 border border-[#EBEBEB] rounded-full px-4 py-2 text-[14px] text-foreground bg-white">
+                    <span className="font-mono text-[10px] text-muted-foreground">0{i + 1}</span>
+                    {step}
+                  </span>
+                ))}
+              </div>
+            </section>
+
             {/* Strategy */}
             <section id="strategy" className="mb-14">
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Strategy</p>
@@ -188,16 +252,7 @@ export default function VeeqoCaseStudy() {
                 HTML over PDF. Here&apos;s how we made it viable.
               </h2>
               <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
-                <p>We faced a hard choice: rebuild a complex drag-and-drop UI (months of work) or move to an HTML-based engine (scalable but higher friction for non-coders).</p>
-                <p>We chose the &quot;Layered Power&quot; approach:</p>
-                <ol className="space-y-3 mt-2 list-none">
-                  <li>
-                    <strong className="text-foreground font-medium">1. For Everyone:</strong> An AI-assisted HTML editor. Tell the AI &quot;make the logo bigger and move the address to the footer,&quot; and it writes the code for you.
-                  </li>
-                  <li>
-                    <strong className="text-foreground font-medium">2. For the Risky 1%:</strong> A &quot;Human-in-the-loop&quot; migration. For our biggest Enterprise accounts, our Support team handled the heavy lifting of porting their templates.
-                  </li>
-                </ol>
+                <p>We chose HTML over a drag-and-drop rebuild - more scalable, but higher friction for non-technical users. The layered model was how we made it work for both segments.</p>
               </div>
 
               {/* Decision table */}
@@ -217,134 +272,13 @@ export default function VeeqoCaseStudy() {
                   <div className="p-4 border-r border-[#EBEBEB] text-[13px] text-red-600">Churn risk on key accounts</div>
                   <div className="p-4 text-[13px] text-emerald-700">No impact</div>
                 </div>
-                <div className="grid grid-cols-[170px_1fr_1fr] bg-[#F5F3F0]">
-                  <div className="p-4 border-r border-[#EBEBEB] text-[13px] font-medium text-foreground">HTML + AI assist ✓</div>
-                  <div className="p-4 border-r border-[#EBEBEB] text-[13px] text-emerald-700">More powerful for technical users + human migration for biggest accounts</div>
+                <div className="grid grid-cols-[170px_1fr_1fr] bg-emerald-50">
+                  <div className="p-4 border-r border-emerald-100 text-[13px] font-medium text-emerald-800">HTML + AI assist ✓</div>
+                  <div className="p-4 border-r border-emerald-100 text-[13px] text-emerald-700">More powerful for technical users + human migration for biggest accounts</div>
                   <div className="p-4 text-[13px] text-emerald-700">Clean defaults, zero friction</div>
                 </div>
               </div>
 
-              {/* Three layer cards */}
-              <div className="flex flex-col max-w-[750px] divide-y divide-[#EBEBEB] border border-[#EBEBEB] bg-white">
-                <div className="flex items-start gap-6 p-6">
-                  <span className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground pt-0.5 shrink-0 w-[60px]">Layer 1</span>
-                  <div>
-                    <p className="text-[15px] font-medium text-foreground mb-2">AI-assisted HTML editor</p>
-                    <p className="text-[14px] text-muted-foreground leading-relaxed">Describe what you want in plain language, get a starting template. HTML is always visible, no black box.</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-6 p-6">
-                  <span className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground pt-0.5 shrink-0 w-[60px]">Layer 2</span>
-                  <div>
-                    <p className="text-[15px] font-medium text-foreground mb-2">Live preview + in-product guides</p>
-                    <p className="text-[14px] text-muted-foreground leading-relaxed">Non-technical ops teams validate changes without touching markup. Contextual guidance built in, not linked out.</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-6 p-6">
-                  <span className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground pt-0.5 shrink-0 w-[60px]">Layer 3</span>
-                  <div>
-                    <p className="text-[15px] font-medium text-foreground mb-2">Human-assisted migration</p>
-                    <p className="text-[14px] text-muted-foreground leading-relaxed">For highest-risk enterprise accounts: direct support-team migration. Not scalable, but right for the accounts that mattered.</p>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            {/* Design Process */}
-            <section id="process" className="mb-14">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Design Process</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-6 max-w-[750px]">
-                Engineering in the room from day one.
-              </h2>
-              <div className="text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
-                <p>On platform work with real constraints, treating engineering as a later-stage reviewer is time wasted. The eng lead was in every session. That kept us off at least two directions that would have looked good in Figma and failed in production.</p>
-              </div>
-
-              {/* Process flow */}
-              <div className="flex flex-col max-w-[750px] mb-8 divide-y divide-[#EBEBEB] border border-[#EBEBEB] bg-white">
-                <div className="flex items-start gap-6 p-5">
-                  <span className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground pt-0.5 shrink-0 w-[28px]">01</span>
-                  <div>
-                    <p className="text-[14px] font-medium text-foreground mb-1">Segment research</p>
-                    <p className="text-[13px] text-muted-foreground leading-relaxed">Support data + seller success. Map enterprise vs. SMB needs.</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-6 p-5">
-                  <span className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground pt-0.5 shrink-0 w-[28px]">02</span>
-                  <div>
-                    <p className="text-[14px] font-medium text-foreground mb-1">Tech assessment</p>
-                    <p className="text-[13px] text-muted-foreground leading-relaxed">API constraints, failure modes, migration scope with eng lead.</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-6 p-5">
-                  <span className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground pt-0.5 shrink-0 w-[28px]">03</span>
-                  <div>
-                    <p className="text-[14px] font-medium text-foreground mb-1">Strategic framing</p>
-                    <p className="text-[13px] text-muted-foreground leading-relaxed">Decision doc: which path, why, what it costs per segment.</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-6 p-5">
-                  <span className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground pt-0.5 shrink-0 w-[28px]">04</span>
-                  <div>
-                    <p className="text-[14px] font-medium text-foreground mb-1">Library redesign</p>
-                    <p className="text-[13px] text-muted-foreground leading-relaxed">Central hub, version model, template hierarchy, 6 doc types.</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-6 p-5">
-                  <span className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground pt-0.5 shrink-0 w-[28px]">05</span>
-                  <div>
-                    <p className="text-[14px] font-medium text-foreground mb-1">Branding model</p>
-                    <p className="text-[13px] text-muted-foreground leading-relaxed">Multi-brand hierarchy mapped before a single screen designed.</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-6 p-5">
-                  <span className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground pt-0.5 shrink-0 w-[28px]">06</span>
-                  <div>
-                    <p className="text-[14px] font-medium text-foreground mb-1">Failure states first</p>
-                    <p className="text-[13px] text-muted-foreground leading-relaxed">Slow gen, full failure, partial batch errors: primary paths, not cleanup.</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Images */}
-              <div className="flex flex-col gap-6 max-w-[750px]">
-                <div>
-                  <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Category-Aware Templates</p>
-                  <p className="text-[17px] leading-relaxed text-muted-foreground mb-5">Users don&apos;t start with a blank page. They get a base template pre-built with the fields most common to their document type — Invoices vs. Pick Lists, each with their own defaults.</p>
-                  <div className="rounded-xl overflow-hidden">
-                    <img
-                      src="/images/vq-doc1.jpg"
-                      alt="Veeqo document library redesign"
-                      className="w-full h-auto object-cover"
-                    />
-                  </div>
-                  <p className="mt-3 text-sm text-muted-foreground text-center">Document library redesign: template overview, version states, and doc type grouping</p>
-                </div>
-                <div>
-                  <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">The Data Dropdown</p>
-                  <p className="text-[17px] leading-relaxed text-muted-foreground mb-5">I replaced the need to memorise API variables with a searchable field-picker. Want to add &quot;Bin Location&quot;? Select it from the dropdown, and the correct variable is injected. It turned a coding task into a selection task. The live preview sits directly alongside the code — sellers see the result of every line change instantly.</p>
-                  <div className="rounded-xl overflow-hidden">
-                    <img
-                      src="/images/vq-doc2.png"
-                      alt="HTML editor with AI assist and live preview"
-                      className="w-full h-auto object-cover"
-                    />
-                  </div>
-                  <p className="mt-3 text-sm text-muted-foreground text-center">HTML editor with AI assist, live preview alongside markup</p>
-                </div>
-                <div>
-                  <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Designing for a Broken API</p>
-                  <p className="text-[17px] leading-relaxed text-muted-foreground mb-5">In platform work, the happy path is a lie. Our internal API was unstable during the handoff — documents were timing out in production.</p>
-                  <div className="rounded-xl overflow-hidden">
-                    <img
-                      src="/images/vq-doc3.png"
-                      alt="Failure states across generation and batch errors"
-                      className="w-full h-auto object-cover"
-                    />
-                  </div>
-                  <p className="mt-3 text-sm text-muted-foreground text-center">Failure states: generation failures, timeouts, and partial batch errors</p>
-                </div>
-              </div>
             </section>
 
             {/* Design Decisions */}
@@ -356,21 +290,84 @@ export default function VeeqoCaseStudy() {
               <div className="space-y-10 max-w-[750px]">
                 <div>
                   <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium text-foreground">The document library</h3>
-                  <p className="text-[17px] leading-relaxed text-muted-foreground">Six document types, multiple brands, version states, and two seller segments — all landing in the same place. The temptation was to organise by brand, since that&apos;s what stakeholders talked about most. But watching how sellers actually navigated, they think in doc types first, brands second. So the hierarchy follows that. Version history stays inline rather than buried in a separate panel, because an ops team member checking &quot;did this update take?&quot; shouldn&apos;t have to go digging.</p>
+                  <p className="text-[17px] leading-relaxed text-muted-foreground mb-6">Six document types, multiple brands, version states, and two seller segments - all landing in the same place. The temptation was to organise by brand, since that&apos;s what stakeholders talked about most. But watching how sellers actually navigated, they think in doc types first, brands second. So the hierarchy follows that. Version history stays inline rather than buried in a separate panel, because an ops team member checking &quot;did this update take?&quot; shouldn&apos;t have to go digging.</p>
+                  <div className="flex flex-col divide-y divide-[#EBEBEB] border border-[#EBEBEB] bg-white">
+                    <div className="flex items-start gap-6 p-6">
+                      <span className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground pt-0.5 shrink-0 w-[60px]">Layer 0</span>
+                      <div>
+                        <p className="text-[15px] font-medium text-foreground mb-2">Ready-to-go templates</p>
+                        <p className="text-[14px] text-muted-foreground leading-relaxed">Simple toggle-based controls and live preview for sellers who just need clean defaults without touching any code.</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-6 p-6">
+                      <span className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground pt-0.5 shrink-0 w-[60px]">Layer 1</span>
+                      <div>
+                        <p className="text-[15px] font-medium text-foreground mb-2">AI-assisted HTML editor</p>
+                        <p className="text-[14px] text-muted-foreground leading-relaxed">Sellers describe what they want, the AI writes the code. HTML is always visible alongside the output, so nothing is a black box. Live preview + in-product guides.</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-6 p-6">
+                      <span className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground pt-0.5 shrink-0 w-[60px]">Layer 3</span>
+                      <div>
+                        <p className="text-[15px] font-medium text-foreground mb-2">Human-assisted migration</p>
+                        <p className="text-[14px] text-muted-foreground leading-relaxed">The Seller Success team ported existing templates for the highest-risk enterprise accounts directly. Not scalable, but the right call for accounts too important to leave to self-serve.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Images */}
+              <div className="flex flex-col gap-6 max-w-[750px] mt-10">
+                <div>
+                  <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Category-Aware Templates</p>
+                  <p className="text-[17px] leading-relaxed text-muted-foreground mb-5">Users don&apos;t start with a blank page. They get a base template pre-built with the fields most common to their document type - Invoices vs. Pick Lists, each with their own defaults.</p>
+                  <div className="rounded-xl overflow-hidden">
+                    <LightboxImage src="/images/vq-doc1.jpg" alt="Veeqo document library redesign" className="w-full h-auto object-cover" />
+                  </div>
+                  <p className="mt-3 text-sm text-muted-foreground text-center">Document library redesign: template overview, version states, and doc type grouping</p>
+                </div>
+                <div>
+                  <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">The Data Dropdown</p>
+                  <p className="text-[17px] leading-relaxed text-muted-foreground mb-5">The data dropdown replaced memorising API variable names with a searchable field-picker - select Bin Location from the list and the correct variable is injected directly. A coding task becomes a selection task, with live preview updating alongside every change.</p>
+                  <div className="rounded-xl overflow-hidden">
+                    <LightboxImage src="/images/vq-doc2.png" alt="HTML editor with AI assist and live preview" className="w-full h-auto object-cover" />
+                  </div>
+                  <p className="mt-3 text-sm text-muted-foreground text-center">HTML editor with AI assist, live preview alongside markup</p>
+                </div>
+                <div>
+                  <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Designing for a Broken API</p>
+                  <p className="text-[17px] leading-relaxed text-muted-foreground mb-5">In platform work, the happy path is a lie. Our internal API was unstable during the handoff - documents were timing out in production.</p>
+                  <div className="rounded-xl overflow-hidden">
+                    <LightboxImage src="/images/vq-doc3.png" alt="Failure states across generation and batch errors" className="w-full h-auto object-cover" />
+                  </div>
+                  <p className="mt-3 text-sm text-muted-foreground text-center">Failure states: generation failures, timeouts, and partial batch errors</p>
+                </div>
+                <div>
+                  <p className="text-[17px] leading-relaxed text-muted-foreground mb-4">Version selection at print time - sellers choose which custom template to use per doc type without leaving the print flow.</p>
+                  <div className="rounded-xl overflow-hidden">
+                    <LightboxImage src="/images/vq-doc5.png" alt="Version selection at print time" className="w-full h-auto object-cover" />
+                  </div>
+                </div>
+                <div>
+                  <p className="text-[17px] leading-relaxed text-muted-foreground mb-4">Brand-to-template mapping - each brand links to its own document versions across all doc types, resolving the multi-brand complexity.</p>
+                  <div className="rounded-xl overflow-hidden">
+                    <LightboxImage src="/images/vq-doc6.png" alt="Brand-to-template mapping" className="w-full h-auto object-cover" />
+                  </div>
                 </div>
               </div>
             </section>
 
             {/* Challenges */}
             <section id="challenges" className="mb-14">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">What made this hard</p>
+              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Behind the scenes</p>
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-6 max-w-[750px]">
                 The honest version.
               </h2>
               <div className="max-w-[750px] border-t border-border">
                 <div className="py-6 border-b border-border">
                   <p className="text-[16px] font-medium text-foreground mb-2">Scope expanded constantly</p>
-                  <p className="text-[15px] text-muted-foreground leading-relaxed">Started as a feature. Became a library redesign + doc pages + unplanned design system work + new branding section. Each was necessary. None were scoped for.</p>
+                  <p className="text-[15px] text-muted-foreground leading-relaxed">Started as a feature and later became a big design project 0→1. I addressed it by building a modular foundation. I realized that treating these as isolated tasks would lead to massive technical and design debt. In collaboration we created a centralized component library.</p>
                 </div>
                 <div className="py-6 border-b border-border">
                   <p className="text-[16px] font-medium text-foreground mb-2">Key stakeholder pulled mid-project</p>
@@ -378,18 +375,18 @@ export default function VeeqoCaseStudy() {
                 </div>
                 <div className="py-6 border-b border-border">
                   <p className="text-[16px] font-medium text-foreground mb-2">API unstable at handoff</p>
-                  <p className="text-[15px] text-muted-foreground leading-relaxed">Generation was slow and failing in production. I designed failure states across every surface as first-class work: slow gen, full failure, partial batch errors, all mapped and designed.</p>
+                  <p className="text-[15px] text-muted-foreground leading-relaxed">Generation was slow and failing in production. I designed failure states across every surface: slow gen, full failure, partial batch errors, etc.</p>
                 </div>
                 <div className="py-6 border-b border-border">
                   <p className="text-[16px] font-medium text-foreground mb-2">Branding more complex than expected</p>
-                  <p className="text-[15px] text-muted-foreground leading-relaxed">Parent brands, sub-brands, co-brands, per-template assignment, no-logo states. I mapped the full hierarchy before designing a single screen. Getting this wrong was a data model problem, not just a UI one.</p>
+                  <p className="text-[15px] text-muted-foreground leading-relaxed">Parent brands, sub-brands, co-brands, per-template assignment, no-logo states. I mapped the hierarchy before designing the screens.</p>
                 </div>
               </div>
             </section>
 
             {/* Outcomes */}
             <section id="outcomes" className="mb-14">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Outcomes</p>
+              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Impact</p>
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-6 max-w-[750px]">
                 We successfully sunset the third-party dependency.
               </h2>
@@ -401,11 +398,11 @@ export default function VeeqoCaseStudy() {
                   </li>
                   <li className="flex gap-3">
                     <span className="text-muted-foreground mt-0.5">•</span>
-                    <span className="text-muted-foreground">Custom fields and new doc types now ship in days, not months — technical ownership fully reclaimed</span>
+                    <span className="text-muted-foreground">Days not months - custom fields and new document types now ship on a timeline the team owns</span>
                   </li>
                   <li className="flex gap-3">
                     <span className="text-muted-foreground mt-0.5">•</span>
-                    <span className="text-muted-foreground"><strong className="font-medium text-foreground">30% reduction</strong> in how-to support tickets vs. the old system</span>
+                    <span className="text-muted-foreground"><strong className="font-medium text-foreground">30% reduction</strong> in how-to support tickets vs. the legacy system</span>
                   </li>
                 </ul>
               </div>
@@ -420,15 +417,16 @@ export default function VeeqoCaseStudy() {
               <div className="space-y-6 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <div>
                   <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-2 font-medium text-foreground">Engineering from day one saves more time than it costs.</h3>
-                  <p>On platform work with real constraints, late feasibility reviews are waste. The eng lead was in every session here. That kept us off at least two directions that would have looked good in Figma and died in production.</p>
+                  <p>Late feasibility reviews on platform work are waste, and having the engineering lead in every session kept us off directions that would have never survived production.</p>
                 </div>
+
                 <div>
                   <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-2 font-medium text-foreground">Sometimes the right design is a human process.</h3>
-                  <p>The manual migration path wasn&apos;t scalable. It was the right call. Not every gap needs a product feature, especially when the accounts at stake are too important to get wrong.</p>
+                  <p>The manual migration path wasn&apos;t scalable and it was still the right call - not every problem needs a product solution, especially when the accounts at stake are too important to get wrong on the first pass.</p>
                 </div>
                 <div>
-                  <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-2 font-medium text-foreground">Picking up the PRD wasn&apos;t scope creep. It was protecting the outcome.</h3>
-                  <p>When the stakeholder left, someone had to keep the brief anchored. I&apos;ve come to see this kind of ownership as part of operating at staff level. Not extra work, just the work.</p>
+                  <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-2 font-medium text-foreground">Picking up the PRD when the stakeholder left wasn&apos;t scope creep.</h3>
+                  <p>It was protecting the outcome, and I&apos;ve come to see that kind of ownership as part of what operating at staff level actually means.</p>
                 </div>
               </div>
             </section>

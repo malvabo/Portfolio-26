@@ -2,7 +2,6 @@ import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
 import { AnimatedSection } from "@/components/animated-section"
 import { WorkSection } from "@/components/work-section"
-import { AmazonSection } from "@/components/amazon-section"
 import { BodySpecSection } from "@/components/bodyspec-section"
 import { SquirllSection } from "@/components/squirll-section"
 // import { PandaDocSection } from "@/components/pandadoc-section"
@@ -27,13 +26,10 @@ export default function Home() {
           <WorkSection />
         </AnimatedSection>
         <AnimatedSection>
-          <AmazonSection />
+          <VeeqoSection />
         </AnimatedSection>
         <AnimatedSection>
           <PAASection />
-        </AnimatedSection>
-        <AnimatedSection>
-          <VeeqoSection />
         </AnimatedSection>
         {/* <AnimatedSection>
           <PandaDocSection />

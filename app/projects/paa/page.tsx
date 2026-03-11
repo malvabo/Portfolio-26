@@ -1,7 +1,7 @@
 "use client"
+import { LightboxImage } from "@/components/lightbox-image"
 
 import Link from "next/link"
-import Image from "next/image"
 import { ArrowLeft } from "lucide-react"
 import { ScrollToTop } from "@/components/scroll-to-top"
 import { Header } from "@/components/header"
@@ -48,7 +48,7 @@ export default function PAACaseStudy() {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-4 mb-10 pb-8 max-w-[750px]">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-4 mb-6 pb-4 max-w-[750px]">
               <div>
                 <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Role</p>
                 <p className="text-[15px] leading-relaxed">Lead Product Designer</p>
@@ -70,7 +70,7 @@ export default function PAACaseStudy() {
             {/* Cover image */}
             <div className="mb-12 max-w-[750px]">
               <div className="rounded-xl overflow-hidden">
-                <Image
+                <LightboxImage
                   src="/images/paa-cover.png"
                   alt="PAA dashboard"
                   width={2416}
@@ -133,7 +133,7 @@ export default function PAACaseStudy() {
               {/* Image,centered, full content width */}
               <div className="mb-4 max-w-[750px]">
                 <div className="rounded-xl overflow-hidden">
-                  <Image
+                  <LightboxImage
                     src="/images/paa-0.png"
                     alt="Legacy dashboard,a flat, unsorted task table with no visual urgency hierarchy"
                     width={3250}
@@ -184,22 +184,6 @@ export default function PAACaseStudy() {
                 </p>
               </div>
 
-              {/* Image,centered */}
-              <div className="mb-8 max-w-[750px]">
-                <div className="rounded-xl overflow-hidden">
-                  <Image
-                    src="/images/paa-1.png"
-                    alt="Clinician pain points across the shift,login, task review, messaging, documentation"
-                    width={2895}
-                    height={1302}
-                    unoptimized
-                    className="w-full h-auto object-cover"
-                    sizes="(max-width: 768px) 100vw, 750px"
-                  />
-                </div>
-                <p className="mt-3 text-sm text-muted-foreground text-center">Annotated journey map showing moments of context-switching and status hunting</p>
-              </div>
-
               <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>Two insights shaped the design direction:</p>
                 <p>
@@ -227,7 +211,7 @@ export default function PAACaseStudy() {
               {/* Wireframe spread,centered */}
               <div className="mb-10 max-w-[750px]">
                 <div className="rounded-xl overflow-hidden">
-                  <Image
+                  <LightboxImage
                     src="/images/paa-3.png"
                     alt="Early wireframe iterations,progression from unified feed model to two-tier structure"
                     width={4740}
@@ -251,7 +235,7 @@ export default function PAACaseStudy() {
 
               <div className="my-10 max-w-[750px]">
                 <div className="rounded-xl overflow-hidden">
-                  <Image
+                  <LightboxImage
                     src="/images/paa-4.png"
                     alt="Old state: messages buried in separate tab vs. new contextual drawer with clinical data visible"
                     width={5688}
@@ -272,19 +256,19 @@ export default function PAACaseStudy() {
                 </div>
               </div>
 
-              <div className="my-10 max-w-[750px]">
+              <div className="mb-8 max-w-[750px]">
                 <div className="rounded-xl overflow-hidden">
-                  <Image
-                    src="/images/paa-messages.png"
-                    alt="PAA two-tier dashboard structure"
-                    width={1600}
-                    height={1000}
+                  <LightboxImage
+                    src="/images/paa-1.png"
+                    alt="Clinician pain points across the shift,login, task review, messaging, documentation"
+                    width={2895}
+                    height={1302}
                     unoptimized
                     className="w-full h-auto object-cover"
                     sizes="(max-width: 768px) 100vw, 750px"
                   />
                 </div>
-                <p className="mt-3 text-sm text-muted-foreground text-center">Two-tier structure: urgency tiles for immediate orientation, task table for execution</p>
+                <p className="mt-3 text-sm text-muted-foreground text-center">Annotated journey map showing moments of context-switching and status hunting</p>
               </div>
 
               <div className="space-y-8 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
@@ -298,7 +282,7 @@ export default function PAACaseStudy() {
 
               <div className="my-10 max-w-[750px]">
                 <div className="rounded-xl overflow-hidden">
-                  <Image
+                  <LightboxImage
                     src="/images/paa-5.png"
                     alt="Final dashboard,Pending Actions tile row at top, task table below with urgency indicators"
                     width={6056}
@@ -326,7 +310,24 @@ export default function PAACaseStudy() {
                     A compact row of high-contrast tiles at the top of the dashboard. Each tile shows an aggregate count by time-sensitivity category, past due, due today, unread messages. The full urgency picture of a shift is readable in under three seconds.
                   </p>
                 </div>
+              </div>
 
+              <div className="my-10 max-w-[750px]">
+                <div className="rounded-xl overflow-hidden">
+                  <LightboxImage
+                    src="/images/paa-messages.png"
+                    alt="PAA two-tier dashboard structure"
+                    width={1600}
+                    height={1000}
+                    unoptimized
+                    className="w-full h-auto object-cover"
+                    sizes="(max-width: 768px) 100vw, 750px"
+                  />
+                </div>
+                <p className="mt-3 text-sm text-muted-foreground text-center">Two-tier structure: urgency tiles for immediate orientation, task table for execution</p>
+              </div>
+
+              <div className="space-y-8 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <div>
                   <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium text-foreground">Zero-layer task table</h3>
                   <p>
@@ -337,7 +338,7 @@ export default function PAACaseStudy() {
 
               <div className="mt-10 max-w-[750px]">
                 <div className="rounded-xl overflow-hidden">
-                  <Image
+                  <LightboxImage
                     src="/images/paa-2.png"
                     alt="Assessment completion screen showing the Generate Documentation CTA"
                     width={2916}
@@ -360,7 +361,7 @@ export default function PAACaseStudy() {
 
               <div className="my-10 max-w-[750px]">
                 <div className="rounded-xl overflow-hidden">
-                  <Image
+                  <LightboxImage
                     src="/images/paa-tasks.png"
                     alt="PAA task table detail"
                     width={1600}
@@ -408,7 +409,7 @@ export default function PAACaseStudy() {
 
               <div className="my-10 max-w-[750px]">
                 <div className="rounded-xl overflow-hidden">
-                  <Image
+                  <LightboxImage
                     src="/images/paa-doc2.png"
                     alt="PAA documentation draft"
                     width={1600}
@@ -419,16 +420,6 @@ export default function PAACaseStudy() {
                   />
                 </div>
                 <p className="mt-3 text-sm text-muted-foreground text-center">Generated draft narrative, pre-populated from assessment data and CMS criteria, ready for clinician review</p>
-              </div>
-
-
-              <div className="space-y-6 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
-                <div>
-                  <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium text-foreground">Edge cases</h3>
-                  <p>
-                    What if the assessment data is incomplete? What if the clinical picture doesn&apos;t fit standard SNF language? We built explicit states for both: a warning when required fields are missing, and a clear escalation path to manual documentation.
-                  </p>
-                </div>
               </div>
 
 
@@ -446,7 +437,7 @@ export default function PAACaseStudy() {
 
               <div className="my-10 max-w-[750px]">
                 <div className="rounded-xl overflow-hidden">
-                  <Image
+                  <LightboxImage
                     src="/images/paa-discharge.png"
                     alt="PAA discharge documentation"
                     width={1600}
