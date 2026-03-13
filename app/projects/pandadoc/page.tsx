@@ -136,7 +136,7 @@ export default function PandaDocCaseStudy() {
               className="w-full h-auto object-cover"
               style={{ objectPosition: "center center" }}
             />
-            <p className="mt-2 text-sm text-muted-foreground">PandaDoc Chrome extension interface overview</p>
+            <p className="mt-2 text-sm text-muted-foreground">Chrome extension panel — activity pulse, document status, and template access in a single sidebar layer</p>
           </div>
 
           <section id="research" className="mb-10">
@@ -305,6 +305,7 @@ export default function PandaDocCaseStudy() {
                 />
               </div>
             </div>
+            <p className="mt-4 text-sm text-muted-foreground max-w-[750px] text-center">Visual direction explorations — motion concepts, layout variations, and interaction models for the extension UI</p>
           </section>
 
           <section id="reflection" className="mb-10">

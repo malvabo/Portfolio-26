@@ -199,18 +199,21 @@ export default function VeeqoCaseStudy() {
               <div className="rounded-xl overflow-hidden max-w-[750px] my-6">
                 <LightboxImage src="/images/vq-doc10.png" alt="Design exploration" className="w-full h-auto object-cover" />
               </div>
+              <p className="text-sm text-muted-foreground max-w-[750px] mt-3 text-center mb-6">Drag-and-drop editor exploration — ruled out due to engineering cost and enterprise complexity</p>
               <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>A simple document table without previews surfaced a problem from a similar internal project: sellers don&apos;t name their documents consistently, so without a visual anchor the list became noise and finding the right template was harder than it should have been.</p>
               </div>
               <div className="rounded-xl overflow-hidden max-w-[750px] my-6">
                 <LightboxImage src="/images/vq-doc9.png" alt="Design iterations" className="w-full h-auto object-cover" />
               </div>
+              <p className="text-sm text-muted-foreground max-w-[750px] mt-3 text-center mb-6">Document table without visual previews — sellers couldn&apos;t reliably identify templates by name alone</p>
               <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>HTML as an &quot;advanced&quot; button on ready-to-go templates felt like a clean handoff between modes, but it made exploration harder to justify - sellers are less likely to discover what&apos;s possible when it&apos;s hidden behind an advanced label. As the number of templates scaled, the pattern would have broken down anyway.</p>
               </div>
               <div className="rounded-xl overflow-hidden max-w-[750px] my-6">
                 <LightboxImage src="/images/vq-doc8.png" alt="Four editing modes" className="w-full h-auto object-cover" />
               </div>
+              <p className="text-sm text-muted-foreground max-w-[750px] mt-3 text-center">HTML editor as an advanced mode toggle — discoverability was too low to scale</p>
             </section>
 
             {/* Design Process */}
@@ -379,12 +382,14 @@ export default function VeeqoCaseStudy() {
                   <div className="rounded-xl overflow-hidden">
                     <LightboxImage src="/images/vq1.png" alt="Document setup with branding and version configuration" className="w-full h-auto object-cover" />
                   </div>
+                  <p className="text-sm text-muted-foreground mt-3 text-center">Version selection at print time — pick a custom template per document type without leaving the print flow</p>
                 </div>
                 <div>
                   <p className="text-[17px] leading-relaxed text-muted-foreground mb-4">Brand-to-template mapping - each brand links to its own document versions across all doc types, resolving the multi-brand complexity.</p>
                   <div className="rounded-xl overflow-hidden">
                     <LightboxImage src="/images/vq2.png" alt="Printing templates with HTML editor and live preview" className="w-full h-auto object-cover" />
                   </div>
+                  <p className="text-sm text-muted-foreground mt-3 text-center">Brand-to-template mapping — each brand links to its own document versions across all document types</p>
                 </div>
               </div>
             </section>

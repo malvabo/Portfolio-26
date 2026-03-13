@@ -181,7 +181,7 @@ export default function BodySpecCaseStudy() {
                   height={900}
                   className="w-full h-auto"
                 />
-                <p className="mt-2 text-sm text-muted-foreground">BodySpec location booking interface on laptop</p>
+                <p className="mt-2 text-sm text-muted-foreground">Geo-aware location search — pre-filled availability reduces booking to two clicks</p>
               </div>
               </div>
 

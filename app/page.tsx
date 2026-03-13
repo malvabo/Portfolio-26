@@ -2,8 +2,8 @@ import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
 import { AnimatedSection } from "@/components/animated-section"
 import { WorkSection } from "@/components/work-section"
-import { BodySpecSection } from "@/components/bodyspec-section"
 import { SquirllSection } from "@/components/squirll-section"
+import { TempStarsSection } from "@/components/tempstars-section"
 // import { PandaDocSection } from "@/components/pandadoc-section"
 import { PAASection } from "@/components/paa-section"
 import { VeeqoSection } from "@/components/veeqo-section"
@@ -38,7 +38,7 @@ export default function Home() {
           <SquirllSection />
         </AnimatedSection>
         <AnimatedSection>
-          <BodySpecSection />
+          <TempStarsSection />
         </AnimatedSection>
         <AnimatedSection>
           <ArticlesSection />

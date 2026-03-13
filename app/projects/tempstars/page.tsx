@@ -42,11 +42,17 @@ export default function TempStarsCaseStudy() {
               <a href="#research" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">
                 Research
               </a>
+              <a href="#collaboration" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">
+                Collaboration
+              </a>
               <a href="#solution" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">
                 Solution
               </a>
               <a href="#outcomes" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">
                 Outcomes
+              </a>
+              <a href="#roadmap" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">
+                Roadmap
               </a>
               <a href="#reflection" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">
                 Reflection
@@ -107,19 +113,19 @@ export default function TempStarsCaseStudy() {
             <ul className="space-y-2 text-[17px] leading-relaxed max-w-[750px]">
               <li className="flex gap-3">
                 <span className="text-muted-foreground mt-0.5">•</span>
-                <span className="text-muted-foreground"><strong className="font-medium text-foreground">Impact:</strong> 20% surge in user activation and a 25% YoY increase in booked shifts.</span>
+                <span className="text-muted-foreground"><strong className="font-medium text-foreground">Impact:</strong> 20% increase in user activation and a 25% YoY increase in booked shifts.</span>
               </li>
               <li className="flex gap-3">
                 <span className="text-muted-foreground mt-0.5">•</span>
-                <span className="text-muted-foreground"><strong className="font-medium text-foreground">Velocity:</strong> Slashed the &quot;time-to-first-offer&quot; from 7 days to 2 days.</span>
+                <span className="text-muted-foreground"><strong className="font-medium text-foreground">Velocity:</strong> Reduced time-to-first-offer from 7 days to 2 days.</span>
               </li>
               <li className="flex gap-3">
                 <span className="text-muted-foreground mt-0.5">•</span>
-                <span className="text-muted-foreground"><strong className="font-medium text-foreground">Policy:</strong> Facilitated stakeholder workshops to overhaul cancellation rules and restore platform trust.</span>
+                <span className="text-muted-foreground"><strong className="font-medium text-foreground">Policy:</strong> Ran workshops with founders to revise cancellation rules that were pushing hygienists away.</span>
               </li>
               <li className="flex gap-3">
                 <span className="text-muted-foreground mt-0.5">•</span>
-                <span className="text-muted-foreground"><strong className="font-medium text-foreground">Systems:</strong> Replaced static registration with a progressive, skill-based matching engine.</span>
+                <span className="text-muted-foreground"><strong className="font-medium text-foreground">Systems:</strong> Replaced a generic signup flow with progressive onboarding tied to skill-based matching.</span>
               </li>
             </ul>
           </section>
@@ -131,7 +137,7 @@ export default function TempStarsCaseStudy() {
             </h2>
             <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
               <p>
-                TempStars is Canada&apos;s largest dental staffing platform, but it faced a critical activation gap: 40% of signups never booked a shift. The product was suffering from an &quot;immature&quot; brand perception and opaque business rules. In a professional marketplace, if the platform doesn&apos;t feel like a partner, users won&apos;t trust it with their livelihood. My objective was to move the platform from a dated utility to a trusted, high-velocity service ecosystem.
+                TempStars is Canada&apos;s largest dental staffing platform. When I joined, 40% of signups never booked a shift. The product looked dated, the business rules were unclear to users, and hygienists didn&apos;t feel like the platform was working in their interest. My job was to understand why people weren&apos;t coming back and fix the underlying problems.
               </p>
             </div>
           </section>
@@ -143,13 +149,13 @@ export default function TempStarsCaseStudy() {
             </h2>
             <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
               <p>
-                I began by auditing the end-to-end user journey to identify where the &quot;trust tax&quot; was highest. It wasn&apos;t just a UI problem; it was a systemic failure in the user&apos;s first 48 hours.
+                I started by mapping the end-to-end user journey to understand where people were dropping off. The problems were concentrated in the first 48 hours after signup.
               </p>
               <p>
-                <strong className="font-medium text-foreground">The 40% drop-off:</strong> Data showed that users were interested enough to register but too intimidated or confused to commit to a shift.
+                <strong className="font-medium text-foreground">The 40% drop-off:</strong> Users were registering but not booking. Some were put off by the cancellation policy before they even took a shift. Others simply didn&apos;t have enough information to feel confident applying.
               </p>
               <p>
-                <strong className="font-medium text-foreground">Information scarcity:</strong> Users were frequently leaving the app to &quot;Google&quot; dental offices before applying because our shift cards lacked the critical details (parking, equipment, team size) needed for a split-second professional decision.
+                <strong className="font-medium text-foreground">Missing context:</strong> Users were leaving the app to look up dental offices on Google before applying, because shift cards didn&apos;t include the details they needed - parking, equipment, team size, office culture.
               </p>
             </div>
           </section>
@@ -159,10 +165,25 @@ export default function TempStarsCaseStudy() {
             <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">
               Finding the root causes
             </h2>
-            <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-4">
+            <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-6">
               <p>
-                I moved beyond standard usability testing to map the service blueprint, uncovering two primary drivers of abandonment:
+                I ran a mixed-methods research programme to move beyond surface-level symptoms - mapping the full service experience, not just the app.
               </p>
+            </div>
+
+            <div className="max-w-[750px] mb-8 border border-[#EBEBEB] rounded-xl overflow-hidden divide-y divide-[#EBEBEB]">
+              <div className="flex gap-6 p-4">
+                <span className="font-medium text-foreground text-[15px] shrink-0 w-40">User interviews</span>
+                <span className="text-[15px] text-muted-foreground">15 in-depth sessions with dentists and hygienists to map mental models, motivations, and friction points across the full job-search journey.</span>
+              </div>
+              <div className="flex gap-6 p-4">
+                <span className="font-medium text-foreground text-[15px] shrink-0 w-40">Usability studies</span>
+                <span className="text-[15px] text-muted-foreground">Moderated sessions on the existing onboarding and shift-search flows to pinpoint where users stalled or abandoned.</span>
+              </div>
+              <div className="flex gap-6 p-4">
+                <span className="font-medium text-foreground text-[15px] shrink-0 w-40">Data analysis</span>
+                <span className="text-[15px] text-muted-foreground">Analysed quantitative data to identify drop-off points and surface the biggest issues - 40% signup-to-activation gap, 7-day time-to-first-offer, and shift abandonment rates by user segment.</span>
+              </div>
             </div>
 
             <div className="space-y-4 max-w-[750px]">
@@ -176,7 +197,7 @@ export default function TempStarsCaseStudy() {
               <div>
                 <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium">Low information scent</h3>
                 <p className="text-[17px] leading-relaxed text-muted-foreground">
-                  The &quot;search&quot; experience didn&apos;t account for the specialized mental models of dental professionals. A hygienist isn&apos;t looking for any job; they are looking for a specific clinical environment.
+                  The &quot;search&quot; experience didn&apos;t account for the specialised mental models of dental professionals. A hygienist isn&apos;t looking for any job; they are looking for a specific clinical environment.
                 </p>
               </div>
             </div>
@@ -188,7 +209,27 @@ export default function TempStarsCaseStudy() {
                 height={TEMPSTARS_CASE_IMAGES[2].height}
                 className="w-full h-auto object-contain"
               />
-              <p className="mt-2 text-sm text-muted-foreground">UX onboarding survey (HYG Canada) and shifts distribution</p>
+              <p className="mt-2 text-sm text-muted-foreground text-center">UX onboarding survey (HYG Canada) and shifts distribution</p>
+            </div>
+          </section>
+
+          <section id="collaboration" className="mb-10">
+            <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Collaboration</p>
+            <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-8 max-w-[750px]">
+              Collaboration with the team
+            </h2>
+
+            <div className="space-y-10 max-w-[750px]">
+              <div>
+                <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium">Weekly feasibility sprints</h3>
+                <p className="text-[17px] leading-relaxed text-muted-foreground">
+                  We ran weekly feasibility sprints where I shared lo-fi wireframes of the matching logic before high-fidelity design began. This prevented us from designing matching filters that the database couldn&apos;t query in real-time.
+                </p>
+                <p className="text-[17px] leading-relaxed text-muted-foreground mt-4">
+                  I also shared service blueprints, customer journey maps, and issue priority maps with the team to keep everyone aligned on the full picture - not just the screens.
+                </p>
+              </div>
+
             </div>
           </section>
 
@@ -206,34 +247,15 @@ export default function TempStarsCaseStudy() {
               <div>
                 <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium">1. Stakeholder negotiation &amp; policy reform</h3>
                 <p className="text-[17px] leading-relaxed text-muted-foreground">
-                  I facilitated workshops with the founders to overhaul the cancellation policy. I argued that brand equity among hygienists was our most valuable asset. We successfully balanced the rules to provide more transparency and fairness, which immediately improved sentiment in our beta groups.
+                  I ran workshops with the founders to revisit the cancellation policy. The existing rules were heavily weighted toward clinics, and hygienists knew it. I made the case that retaining hygienists mattered more than the short-term fee revenue - a churned office represented around $12k in lost LTV over 12 months. The policy change improved sentiment quickly in our beta group and unblocked a lot of users who had been hesitant to commit.
                 </p>
               </div>
 
-              <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-[750px]">
-                <div className="relative rounded-xl overflow-hidden bg-[#f5f5f5] h-[320px]">
-                  <LightboxImage
-                    src="/images/tempstars-landing-phone.png"
-                    alt="TempStars landing: Dental Temping the way it should be"
-                    fill
-                    className="object-cover object-top"
-                  />
-                </div>
-                <div className="relative rounded-xl overflow-hidden bg-[#f5f5f5] h-[320px]">
-                  <LightboxImage
-                    src="/images/tempstars-resume-step.png"
-                    alt="Last step: add your resume to help dental offices choose you"
-                    fill
-                    className="object-cover object-top"
-                  />
-                </div>
-              </div>
-              <p className="mt-1 text-sm text-muted-foreground max-w-[750px]">TempStars landing: Dental Temping the way it should be; last step: add your resume to help dental offices choose you</p>
 
               <div>
                 <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium">2. Contextual onboarding (progressive disclosure)</h3>
                 <p className="text-[17px] leading-relaxed text-muted-foreground">
-                  We replaced the static, overwhelming signup with a progressive disclosure model. By asking for specialized skills (e.g., specific software or equipment proficiency) upfront, we could pre-filter the marketplace. This allowed us to surface relevant shifts immediately, reducing the &quot;cognitive noise&quot; for new users.
+                  We replaced the one-size-fits-all signup with a shorter, staged flow. By capturing specific skills early - software experience, equipment familiarity - we could show relevant shifts straight away rather than presenting an undifferentiated list. Fewer steps upfront, but more useful results on the other side.
                 </p>
                 <div className="mt-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[750px]">
@@ -254,14 +276,24 @@ export default function TempStarsCaseStudy() {
                       />
                     </div>
                   </div>
-                  <p className="mt-2 text-sm text-muted-foreground max-w-[750px]">Progressive disclosure: extra skills and photo; social proof – &quot;You are in a good company&quot;</p>
+                  <p className="mt-2 text-sm text-muted-foreground max-w-[750px] text-center">Skills selection, photo upload, and social proof screen</p>
                 </div>
+                <p className="text-[17px] leading-relaxed text-muted-foreground mt-6">
+                  I collaborated with Engineering to move from free-text skills to a standardised skill taxonomy. This allowed us to build a weighted matching algorithm. I defined the UX logic for &quot;hard skills&quot; (must-haves like experience with specific equipment) vs. &quot;soft preferences&quot; (nice-to-haves like specific software knowledge).
+                </p>
               </div>
 
               <div>
-                <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium">3. Engineering information density</h3>
+                <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium">Edge-case logic</h3>
                 <p className="text-[17px] leading-relaxed text-muted-foreground">
-                  I restructured the shift pages to prioritize &quot;decision-making data.&quot; We moved clinical requirements and office logistics to the forefront. By providing high &quot;information scent,&quot; we eliminated the need for external research and gave users the confidence to book in real-time.
+                  I designed the logic for partial matches. If no 100% match was found within 10 miles, how should the system decay the constraints? I mapped the hierarchy prioritising license verification over proximity to ensure patient safety while maintaining fulfillment rates.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium">3. More useful shift pages</h3>
+                <p className="text-[17px] leading-relaxed text-muted-foreground">
+                  I restructured the shift detail page to surface the information hygienists actually needed before applying - clinical setup, office culture, parking, location context. The goal was simple: stop users having to leave the app to make a decision.
                 </p>
                 <div className="mt-6 rounded-xl overflow-hidden max-w-[750px]">
                   <LightboxImage
@@ -271,7 +303,7 @@ export default function TempStarsCaseStudy() {
                     height={800}
                     className="w-full h-auto object-contain"
                   />
-                  <p className="mt-2 text-sm text-muted-foreground">Before: dense shift detail with long PPE list. After: dental centre profile with tabs for dental office, neighborhood, safety, and shift details; map and clear decision data</p>
+                  <p className="mt-2 text-sm text-muted-foreground text-center">Before: dense shift card. After: dental centre profile with clear decision-making context</p>
                 </div>
               </div>
             </div>
@@ -300,14 +332,78 @@ export default function TempStarsCaseStudy() {
 
             <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
               <p>
-                <strong className="font-medium text-foreground">20% lift in activation:</strong> We successfully converted more &quot;signups&quot; into &quot;active workers&quot; by lowering the barrier to entry and increasing trust.
+                <strong className="font-medium text-foreground">20% lift in activation:</strong> More signups converted to active workers. Fewer people were bouncing at the policy or the onboarding stage.
               </p>
               <p>
-                <strong className="font-medium text-foreground">Velocity:</strong> The average &quot;time-to-first-offer&quot; dropped from 7 days to 2 days.
+                <strong className="font-medium text-foreground">Velocity:</strong> Time-to-first-offer dropped from 7 days to 2 days, mainly because the matching was more targeted from day one.
               </p>
               <p>
-                <strong className="font-medium text-foreground">Marketplace liquidity:</strong> Booked shifts increased by 25% YoY as a direct result of the trust-based redesign.
+                <strong className="font-medium text-foreground">Booked shifts:</strong> Up 25% YoY. A combination of more active workers in the system and shifts being easier to evaluate and apply for.
               </p>
+            </div>
+          </section>
+
+          <section id="roadmap" className="mb-10">
+            <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Roadmap</p>
+            <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-8 max-w-[750px]">
+              Stages set in motion
+            </h2>
+
+            <div className="max-w-[750px]">
+              <div className="relative">
+                <div className="hidden md:block absolute top-[28px] left-[calc(16.67%-8px)] right-[calc(16.67%-8px)] h-px bg-[#EBEBEB] z-0" />
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 relative z-10">
+
+                  <div>
+                    <div className="flex items-center gap-2 mb-3">
+                      <div className="w-4 h-4 rounded-full bg-foreground shrink-0" />
+                      <span className="font-mono text-[10px] uppercase tracking-wider text-foreground">Phase 1 · Immediate</span>
+                    </div>
+                    <div className="border border-[#EBEBEB] rounded-xl p-4 bg-white space-y-2">
+                      <p className="text-[13px] font-medium text-foreground mb-3">The Fix</p>
+                      {["Sunset the punitive cancellation policy", "Launch Skill-Based Matching MVP", "Stabilise the leaky bucket"].map((item) => (
+                        <div key={item} className="flex items-start gap-2">
+                          <span className="text-emerald-500 mt-0.5 text-[13px]">✓</span>
+                          <span className="text-[13px] text-muted-foreground">{item}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <div className="flex items-center gap-2 mb-3">
+                      <div className="w-4 h-4 rounded-full border-2 border-foreground bg-background shrink-0" />
+                      <span className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground">Phase 2 · 6–12 Months</span>
+                    </div>
+                    <div className="border border-[#EBEBEB] rounded-xl p-4 bg-[#F5F3F0] space-y-2">
+                      <p className="text-[13px] font-medium text-foreground mb-3">Scaling</p>
+                      {["Transition from Search & Book to Algorithmic Dispatch", "Proactively push shifts to best-suited hygienists before they search", "Data-driven matching from new skill engine"].map((item) => (
+                        <div key={item} className="flex items-start gap-2">
+                          <span className="text-muted-foreground/40 mt-0.5 text-[13px]">○</span>
+                          <span className="text-[13px] text-muted-foreground">{item}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <div className="flex items-center gap-2 mb-3">
+                      <div className="w-4 h-4 rounded-full border-2 border-[#EBEBEB] bg-background shrink-0" />
+                      <span className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground">Phase 3 · 24 Months+</span>
+                    </div>
+                    <div className="border border-[#EBEBEB] rounded-xl p-4 bg-white space-y-2">
+                      <p className="text-[13px] font-medium text-foreground mb-3">Ecosystem Expansion</p>
+                      {["Launch TempStars Academy", "Identify skill shortages from taxonomy data", "Offer certified training - marketplace becomes career platform", "Trust Score and Skill Taxonomy as growth levers"].map((item) => (
+                        <div key={item} className="flex items-start gap-2">
+                          <span className="text-muted-foreground/30 mt-0.5 text-[13px]">○</span>
+                          <span className="text-[13px] text-muted-foreground">{item}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                </div>
+              </div>
             </div>
           </section>
 
@@ -318,7 +414,7 @@ export default function TempStarsCaseStudy() {
             </h2>
             <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
               <p>
-                Starting with service mapping instead of UI surfaced the real &quot;trust tax.&quot; Fixing cancellation rules and adding information scent to shift cards wasn&apos;t just a design exercise–it was an operational maturing of the business. By combining policy reform with contextual onboarding, we turned TempStars from a &quot;leaky bucket&quot; into a scalable marketplace leader.
+                Starting with service mapping rather than jumping into UI meant we caught problems that wouldn&apos;t have been visible from the screens alone. The cancellation policy was the clearest example - it was a bigger blocker than any UX issue, and no amount of onboarding polish would have fixed it. Getting that sorted first made the rest of the work land properly. The main thing I&apos;d take from this project: product decisions and design decisions are often the same decision.
               </p>
             </div>
           </section>
