@@ -224,11 +224,11 @@ export default function SquirllCaseStudy() {
                 <p>Sans-serif carried all functional UI – readable, neutral, nothing in the way. DM Serif Display came in for titles and insight headlines only: the moments where the product needed to feel like it was saying something that mattered, not just displaying data.</p>
               </div>
 
-              <div className="rounded-xl overflow-hidden max-w-[750px] mt-8 aspect-square">
+              <div className="rounded-xl overflow-hidden max-w-[750px] mt-8">
                 <LightboxImage
                   src="/images/sq-4.jpg"
                   alt="Squirll 3D illustration"
-                  className="w-full h-full object-cover"
+                  className="w-full h-auto object-cover"
                 />
               </div>
               <p className="text-sm text-muted-foreground max-w-[750px] mt-4 text-center">3D AI insight illustration</p>
@@ -296,11 +296,11 @@ export default function SquirllCaseStudy() {
                 <p>The glowing circle at the centre of the dashboard is doing one thing: lowering the user&apos;s guard. Before any number is read, the composition signals that this is a calm environment – something is in control, and it isn&apos;t asking anything of you yet.</p>
               </div>
 
-              <div className="rounded-xl overflow-hidden max-w-[750px] mt-8 aspect-square">
+              <div className="rounded-xl overflow-hidden max-w-[750px] mt-8">
                 <LightboxImage
                   src="/images/sq-3.jpg"
                   alt="Squirll analytics dashboard"
-                  className="w-full h-full object-cover"
+                  className="w-full h-auto object-cover"
                 />
               </div>
               <p className="text-sm text-muted-foreground max-w-[750px] mt-4 text-center mb-6">Analytics line graph view</p>
