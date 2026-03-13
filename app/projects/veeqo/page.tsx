@@ -37,7 +37,7 @@ export default function VeeqoCaseStudy() {
 
             {/* Header */}
             <div className="mb-8 max-w-[750px]">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-3">Amazon · Veeqo · Document Automation</p>
+              <p className="font-mono text-[13px] uppercase tracking-wider text-muted-foreground mb-3">Amazon · Veeqo · Document Automation</p>
               <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl tracking-[-0.02em] leading-[1.15] mb-4">
                 Amazon: Replacing a critical document system for 50,000+ sellers
               </h1>
@@ -49,19 +49,19 @@ export default function VeeqoCaseStudy() {
             {/* Meta grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-4 mb-6 pb-4 max-w-[750px]">
               <div>
-                <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Role</p>
+                <p className="font-mono text-[13px] uppercase tracking-wider text-muted-foreground mb-2">Role</p>
                 <p className="text-[15px] leading-relaxed">Product Designer</p>
               </div>
               <div>
-                <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Scope</p>
+                <p className="font-mono text-[13px] uppercase tracking-wider text-muted-foreground mb-2">Scope</p>
                 <p className="text-[15px] leading-relaxed">Full platform migration</p>
               </div>
               <div>
-                <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Team</p>
+                <p className="font-mono text-[13px] uppercase tracking-wider text-muted-foreground mb-2">Team</p>
                 <p className="text-[15px] leading-relaxed">Team lead, 3 engineers, PM, VP of Product, VP of Design, Client Success</p>
               </div>
               <div>
-                <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Constraint</p>
+                <p className="font-mono text-[13px] uppercase tracking-wider text-muted-foreground mb-2">Constraint</p>
                 <p className="text-[15px] leading-relaxed">Limited eng bandwidth</p>
               </div>
             </div>
@@ -79,7 +79,7 @@ export default function VeeqoCaseStudy() {
 
             {/* Context */}
             <section id="context" className="mb-14">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Context</p>
+              <p className="font-mono text-[13px] uppercase tracking-wider text-muted-foreground mb-2">Context</p>
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-6 max-w-[750px]">
                 Removing a third-party dependency
               </h2>
@@ -90,7 +90,7 @@ export default function VeeqoCaseStudy() {
                 </div>
                 <p className="text-sm text-muted-foreground text-center">The system we replaced - the third-party template library and its drag-and-drop editor had no extensibility and no API control</p>
                 <div>
-                  <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2 mt-6">Business goals</p>
+                  <p className="font-mono text-[13px] uppercase tracking-wider text-muted-foreground mb-2 mt-6">Business goals</p>
                   <p>Three things had to happen simultaneously: eliminate the third-party PDF dependency, protect retention among top-tier enterprise accounts at genuine churn risk, and reclaim technical ownership so the team could ship new document types without being blocked by an external vendor.</p>
                 </div>
               </div>
@@ -98,7 +98,7 @@ export default function VeeqoCaseStudy() {
 
             {/* Discovery */}
             <section id="discovery" className="mb-14">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Discovery</p>
+              <p className="font-mono text-[13px] uppercase tracking-wider text-muted-foreground mb-2">Discovery</p>
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-6 max-w-[750px]">
                 Two users with very different needs
               </h2>
@@ -175,7 +175,7 @@ export default function VeeqoCaseStudy() {
 
             {/* Problem Redefinition */}
             <section id="reframe" className="mb-14">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Problem Definition</p>
+              <p className="font-mono text-[13px] uppercase tracking-wider text-muted-foreground mb-2">Problem Definition</p>
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-6 max-w-[750px]">
                 Team Alignment on the Problem to Solve
               </h2>
@@ -188,7 +188,7 @@ export default function VeeqoCaseStudy() {
 
             {/* Design Iterations */}
             <section id="iterations" className="mb-14">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">What we tried first</p>
+              <p className="font-mono text-[13px] uppercase tracking-wider text-muted-foreground mb-2">What we tried first</p>
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-6 max-w-[750px]">
                 Ideating, testing and iterating
               </h2>
@@ -211,15 +211,11 @@ export default function VeeqoCaseStudy() {
               <div className="rounded-xl overflow-hidden max-w-[750px] my-6">
                 <LightboxImage src="/images/vq-doc8.png" alt="Four editing modes" className="w-full h-auto object-cover" />
               </div>
-              <div className="rounded-xl overflow-hidden max-w-[750px] my-6">
-                <LightboxImage src="/images/vq-doc11.png" alt="Information architecture before and after" className="w-full h-auto object-cover" />
-              </div>
-              <p className="text-sm text-muted-foreground max-w-[750px] mt-2">Navigation structure before and after – flattening document types under a single library</p>
             </section>
 
             {/* Design Process */}
             <section id="process" className="mb-14">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Design Process</p>
+              <p className="font-mono text-[13px] uppercase tracking-wider text-muted-foreground mb-2">Design Process</p>
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-6 max-w-[750px]">
                 Design process with the team
               </h2>
@@ -233,7 +229,7 @@ export default function VeeqoCaseStudy() {
 
             {/* Strategy */}
             <section id="strategy" className="mb-14">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Strategy</p>
+              <p className="font-mono text-[13px] uppercase tracking-wider text-muted-foreground mb-2">Strategy</p>
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-6 max-w-[750px]">
                 Account migration
               </h2>
@@ -267,7 +263,7 @@ export default function VeeqoCaseStudy() {
 
             {/* Design Decisions */}
             <section id="design" className="mb-14">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Key Design Decisions</p>
+              <p className="font-mono text-[13px] uppercase tracking-wider text-muted-foreground mb-2">Key Design Decisions</p>
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-8 max-w-[750px]">
                 What went into the work
               </h2>
@@ -355,7 +351,7 @@ export default function VeeqoCaseStudy() {
               {/* Images */}
               <div className="flex flex-col gap-6 max-w-[750px] mt-10">
                 <div>
-                  <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Category-Aware Templates</p>
+                  <p className="font-mono text-[13px] uppercase tracking-wider text-muted-foreground mb-2">Category-Aware Templates</p>
                   <p className="text-[17px] leading-relaxed text-muted-foreground mb-5">Users don&apos;t start with a blank page. They get a base template pre-built with the fields most common to their document type - Invoices vs. Pick Lists, each with their own defaults.</p>
                   <div className="rounded-xl overflow-hidden">
                     <LightboxImage src="/images/vq-doc2.jpg" alt="Veeqo document library redesign" className="w-full h-auto object-cover" />
@@ -363,7 +359,7 @@ export default function VeeqoCaseStudy() {
                   <p className="mt-3 text-sm text-muted-foreground text-center">Document library redesign: pre-built defaults alongside custom HTML + AI templates</p>
                 </div>
                 <div>
-                  <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">The Data Dropdown</p>
+                  <p className="font-mono text-[13px] uppercase tracking-wider text-muted-foreground mb-2">The Data Dropdown</p>
                   <p className="text-[17px] leading-relaxed text-muted-foreground mb-5">The data dropdown replaced memorising API variable names with a searchable field-picker - select Bin Location from the list and the correct variable is injected directly. A coding task becomes a selection task, with live preview updating alongside every change.</p>
                   <div className="rounded-xl overflow-hidden">
                     <LightboxImage src="/images/vq-doc4.png" alt="HTML editor with AI assist and live preview" className="w-full h-auto object-cover" />
@@ -371,7 +367,7 @@ export default function VeeqoCaseStudy() {
                   <p className="mt-3 text-sm text-muted-foreground text-center">HTML editor with AI assist, live preview alongside markup</p>
                 </div>
                 <div>
-                  <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Failure States</p>
+                  <p className="font-mono text-[13px] uppercase tracking-wider text-muted-foreground mb-2">Failure States</p>
                   <p className="text-[17px] leading-relaxed text-muted-foreground mb-5">Field priorities were driven by data – frequency of mention across support tickets and seller interviews determined which variables made it into the first release. Most-used fields shipped first, edge cases queued behind them.</p>
                   <div className="rounded-xl overflow-hidden">
                     <LightboxImage src="/images/vq3.png" alt="Final document output across formats" className="w-full h-auto object-cover" />
@@ -396,7 +392,7 @@ export default function VeeqoCaseStudy() {
 
             {/* Outcomes */}
             <section id="outcomes" className="mb-14">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Impact</p>
+              <p className="font-mono text-[13px] uppercase tracking-wider text-muted-foreground mb-2">Impact</p>
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-6 max-w-[750px]">
                 We successfully sunset the third-party dependency
               </h2>
@@ -424,7 +420,7 @@ export default function VeeqoCaseStudy() {
 
             {/* Future Vision */}
             <section id="future" className="mb-14">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Future Vision</p>
+              <p className="font-mono text-[13px] uppercase tracking-wider text-muted-foreground mb-2">Future Vision</p>
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-6 max-w-[750px]">
                 What this migration makes possible
               </h2>
@@ -495,7 +491,7 @@ export default function VeeqoCaseStudy() {
 
             {/* Reflections */}
             <section id="reflections" className="mb-12">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Reflections</p>
+              <p className="font-mono text-[13px] uppercase tracking-wider text-muted-foreground mb-2">Reflections</p>
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-6 max-w-[750px]">
                 How this changed the way the team works
               </h2>
