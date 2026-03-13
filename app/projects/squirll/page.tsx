@@ -47,7 +47,7 @@ export default function SquirllCaseStudy() {
             <div className="mb-8 max-w-[750px]">
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-3">0→1 · Personal Finance · AI</p>
               <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl tracking-[-0.02em] leading-[1.15] mb-4">
-                Squirll: Automating 80% of budgeting with AI
+                Squirll: Defining the Design Language and Brand Expression
               </h1>
               <p className="text-[17px] leading-relaxed text-muted-foreground">
                 A 0-to-1 AI finance platform. One designer, two founders, seven months.
@@ -87,7 +87,7 @@ export default function SquirllCaseStudy() {
             <div className="mb-12 max-w-[750px]">
               <div className="rounded-[20px] overflow-hidden aspect-[16/9]">
                 <LightboxImage
-                  src="/images/squirll-collage-4.jpg"
+                  src="/images/squirll-collage-1.jpg"
                   alt="Squirll spending analytics"
                   className="w-full h-full object-cover"
                 />
@@ -245,10 +245,6 @@ export default function SquirllCaseStudy() {
                 <p>Showing actual interface too early in onboarding asks users to parse something before they&apos;ve decided to trust it. I needed illustration that communicated the product promise without requiring any interpretation from the user.</p>
               </div>
 
-              <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
-                <p>For the insights screen I chose 3D over flat, because flat illustration has become so widespread in consumer software that it&apos;s stopped carrying meaning. Three-dimensional form creates associations that flat can&apos;t manufacture - depth, layers, intelligence operating beneath the surface. The cobalt blue of that illustration is the only cool tone in an otherwise warm palette, deliberately separating what the AI is doing from what the user sees as a result.</p>
-              </div>
-
               <div className="grid grid-cols-2 gap-4 max-w-[750px] mt-8">
                 {["Sq1", "Sq2"].map((name) => (
                   <div key={name} className="rounded-xl overflow-hidden bg-black aspect-square">
@@ -271,7 +267,23 @@ export default function SquirllCaseStudy() {
                   className="w-full h-auto object-cover"
                 />
               </div>
-              <p className="text-sm text-muted-foreground max-w-[750px] mt-4 text-center">Onboarding orbital illustration</p>
+              <p className="text-sm text-muted-foreground max-w-[750px] mt-4 text-center mb-8">Onboarding orbital illustration</p>
+
+              <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+                <p>For the insights screen I chose 3D over flat, because flat illustration has become so widespread in consumer software that it&apos;s stopped carrying meaning. Three-dimensional form creates associations that flat can&apos;t manufacture - depth, layers, intelligence operating beneath the surface. The cobalt blue of that illustration is the only cool tone in an otherwise warm palette, deliberately separating what the AI is doing from what the user sees as a result.</p>
+              </div>
+
+              <div className="rounded-xl overflow-hidden max-w-[750px] mt-8 bg-black">
+                <video
+                  src="/images/Sq-full.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              <p className="text-sm text-muted-foreground max-w-[750px] mt-4 text-center">Uploading a receipt flow</p>
             </section>
 
             {/* Dashboard */}
@@ -293,18 +305,14 @@ export default function SquirllCaseStudy() {
               </div>
               <p className="text-sm text-muted-foreground max-w-[750px] mt-4 text-center mb-6">Analytics line graph view</p>
 
-              <div className="rounded-xl overflow-hidden max-w-[750px] mt-8 bg-black">
-                <video
-                  src="/images/Sq-full.mp4"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
+              <div className="rounded-xl overflow-hidden max-w-[750px] mt-8">
+                <LightboxImage
+                  src="/images/SQ-44.jpg"
+                  alt="Squirll analytics and messages screens"
                   className="w-full h-auto object-cover"
                 />
               </div>
-              <p className="text-sm text-muted-foreground max-w-[750px] mt-4 text-center">Uploading a receipt flow</p>
-
+              <p className="text-sm text-muted-foreground max-w-[750px] mt-4 text-center">Analytics and merchant messages</p>
             </section>
 
             {/* Craft */}

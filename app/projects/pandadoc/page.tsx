@@ -1,6 +1,5 @@
 "use client"
 import { LightboxImage } from "@/components/lightbox-image"
-import { LightboxImage } from "@/components/lightbox-image"
 
 import Link from "next/link"
 import { ArrowLeft } from "lucide-react"
