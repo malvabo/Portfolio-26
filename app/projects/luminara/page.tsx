@@ -1,7 +1,8 @@
 "use client"
+import { LightboxImage } from "@/components/lightbox-image"
 
 import Link from "next/link"
-import Image from "next/image"
+import { BackLinkSidebar, BackLinkFooter } from "@/components/back-link"
 import { ArrowLeft } from "lucide-react"
 import { ScrollToTop } from "@/components/scroll-to-top"
 import { Header } from "@/components/header"
@@ -16,16 +17,7 @@ export default function LuminaraCaseStudy() {
         <div className="flex w-full items-start">
           <div className="hidden lg:block w-56 shrink-0 px-8 lg:px-12" aria-hidden />
           <aside className="hidden lg:block w-56 px-8 lg:px-12 fixed top-24 left-8 lg:left-[max(0px,calc((100vw-80rem)/2))]" aria-label="Case study navigation">
-            <Link
-              href="/#work"
-              scroll={false}
-              className="block text-xs font-mono tracking-wider uppercase text-muted-foreground hover:text-foreground transition-colors mb-16 leading-none"
-            >
-              <span className="inline-flex items-baseline gap-2">
-                <ArrowLeft className="w-3 h-3 shrink-0" />
-                All projects
-              </span>
-            </Link>
+            <BackLinkSidebar />
           </aside>
           <main className="flex-1 px-8 lg:px-12 pb-20 lg:pb-24">
           <div className="mb-12 max-w-[750px]">
@@ -83,7 +75,7 @@ export default function LuminaraCaseStudy() {
           <div className="mb-16 grid gap-4 max-w-[750px]">
             {/* Hero image - wide */}
             <div className="rounded-xl overflow-hidden">
-              <Image
+              <LightboxImage
                 src="/images/luminara-1.png"
                 alt="Luminara app interface overview"
                 width={1504}
@@ -95,7 +87,7 @@ export default function LuminaraCaseStudy() {
             {/* Two images side by side */}
             <div className="grid grid-cols-2 gap-4">
               <div className="rounded-xl overflow-hidden">
-                <Image
+                <LightboxImage
                   src="/images/luminara-2.png"
                   alt="Luminara interface detail"
                   width={1588}
@@ -104,7 +96,7 @@ export default function LuminaraCaseStudy() {
                 />
               </div>
               <div className="rounded-xl overflow-hidden">
-                <Image
+                <LightboxImage
                   src="/images/luminara-3.png"
                   alt="Luminara mobile interface"
                   width={1620}
@@ -117,13 +109,7 @@ export default function LuminaraCaseStudy() {
           </div>
 
           <div className="pt-16">
-            <Link
-              href="/#work"
-              className="inline-flex items-center gap-2 text-[17px] hover:opacity-70 transition-opacity"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Back to all projects
-            </Link>
+            <BackLinkFooter />
           </div>
         </main>
         </div>
