@@ -71,7 +71,7 @@ export function VeeqoSection() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
             </svg>
             <span className="text-[11px] font-mono text-gray-500 tracking-wide">Under NDA · </span>
-            <a href="mailto:mary.borysova@gmail.com" className="text-[11px] font-mono text-gray-700 tracking-wide hover:text-gray-900 transition-colors underline underline-offset-2">request access</a>
+            <a href="mailto:borysova.mary@gmail.com" className="text-[11px] font-mono text-gray-700 tracking-wide hover:text-gray-900 transition-colors underline underline-offset-2">request access</a>
           </div>
         </div>
       </div>
