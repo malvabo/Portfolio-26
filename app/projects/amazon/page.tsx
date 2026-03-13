@@ -1,7 +1,7 @@
 "use client"
+import { LightboxImage } from "@/components/lightbox-image"
 
 import Link from "next/link"
-import Image from "next/image"
 import { ArrowLeft } from "lucide-react"
 import { ScrollToTop } from "@/components/scroll-to-top"
 import { Header } from "@/components/header"
@@ -40,7 +40,7 @@ export default function AmazonCaseStudy() {
             <div className="mb-16 grid gap-4 max-w-[750px]">
               <div className="relative rounded-xl overflow-hidden">
                 <div className="relative w-full aspect-video [filter:blur(8px)] scale-105">
-                  <Image
+                  <LightboxImage
                     src="/images/amazon-sales-dashboard.jpg"
                     alt="Amazon project (NDA)"
                     fill

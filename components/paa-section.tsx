@@ -2,9 +2,9 @@ import Link from "next/link"
 import { LightboxImage } from "@/components/lightbox-image"
 
 const PAA_IMAGES = [
-  { src: "/images/paa-3.png", alt: "PAA dashboard design variations" },
-  { src: "/images/paa-2.png", alt: "PAA Patient Tracker dashboard" },
-  { src: "/images/paa-5.png", alt: "PAA Pending Actions and task table" },
+  { src: "/images/paa_11.png", alt: "PAA Patient Tracker dashboard with pending actions" },
+  { src: "/images/paa-12.png", alt: "PAA confirm patient discharge modal" },
+  { src: "/images/paa-13.png", alt: "PAA patient documents view" },
 ]
 
 export function PAASection() {

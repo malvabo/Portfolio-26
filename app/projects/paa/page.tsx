@@ -69,9 +69,9 @@ export default function PAACaseStudy() {
 
             {/* Cover image */}
             <div className="mb-12 max-w-[750px]">
-              <div className="rounded-xl overflow-hidden">
+              <div className="rounded-[20px] overflow-hidden transform-gpu">
                 <LightboxImage
-                  src="/images/paa-cover.png"
+                  src="/images/paa_cover.png"
                   alt="PAA dashboard"
                   width={2416}
                   height={1932}
@@ -105,7 +105,7 @@ export default function PAACaseStudy() {
             <section id="space" className="mb-12">
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Context</p>
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-6 max-w-[750px]">
-                The Space
+                The environment
               </h2>
               <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>
@@ -119,12 +119,15 @@ export default function PAACaseStudy() {
 
             {/* The Problem */}
             <section id="problem" className="mb-12">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">The Problem</p>
+              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Research</p>
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-6 max-w-[750px]">
-                Every task looked the same
+                Problem discovery
               </h2>
 
               <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
+                <p>
+                  I ran working sessions with clinical staff, case managers, care coordinators, and admissions teams, structured around a single question: what&apos;s the last thing that made you feel behind?
+                </p>
                 <p>
                   Every task in the legacy dashboard had the same visual weight. Document requests from physicians were buried in a separate chat tab, disconnected from the task list entirely.
                 </p>
@@ -164,34 +167,6 @@ export default function PAACaseStudy() {
                   <p>Without urgency cues, overdue tasks stayed overdue. Not because clinicians were negligent, because the interface never made the urgency visible.</p>
                 </div>
 
-                <p className="font-medium text-foreground">One number crystallized it: most of the clinician time was going to navigation, not care.</p>
-              </div>
-            </section>
-
-            {/* Discovery */}
-            <section id="discovery" className="mb-12">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Research</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-6 max-w-[750px]">
-                Discovery
-              </h2>
-
-              <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
-                <p>
-                  I ran working sessions with clinical staff, case managers, care coordinators, and admissions teams, structured around a single question: what&apos;s the last thing that made you feel behind?
-                </p>
-                <p>
-                  The answers were consistent. They didn&apos;t feel behind because of workload. They felt behind because they couldn&apos;t see what mattered. The information existed in the system. It wasn&apos;t reaching the surface.
-                </p>
-              </div>
-
-              <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
-                <p>Two insights shaped the design direction:</p>
-                <p>
-                  The cost of a context switch is non-trivial in clinical settings. Every tab change, every search, every scroll through an undifferentiated list pulls attention away from patient care. These micro-costs accumulate into system-level gaps.
-                </p>
-                <p>
-                  The gap wasn&apos;t missing data, it was missing hierarchy. PAA had task age, document request timestamps, and care plan status. None of it was reaching the interface in a form clinicians could act on.
-                </p>
               </div>
             </section>
 
@@ -199,7 +174,7 @@ export default function PAACaseStudy() {
             <section id="explorations" className="mb-12">
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Design Exploration</p>
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-6 max-w-[750px]">
-                30+ iterations, driven by clinical edge cases
+                Iterating through many design directions
               </h2>
 
               <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
@@ -256,7 +231,7 @@ export default function PAACaseStudy() {
                 </div>
               </div>
 
-              <div className="mb-8 max-w-[750px]">
+              <div className="mt-10 mb-8 max-w-[750px]">
                 <div className="rounded-xl overflow-hidden">
                   <LightboxImage
                     src="/images/paa-1.png"
@@ -300,7 +275,7 @@ export default function PAACaseStudy() {
             <section id="solution" className="mb-12">
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">The Solution</p>
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-6 max-w-[750px]">
-                A hierarchy that makes the system&apos;s knowledge actionable
+                Designing an information hierarchy
               </h2>
 
               <div className="space-y-8 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
@@ -425,7 +400,7 @@ export default function PAACaseStudy() {
 
               <div className="space-y-6 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <div>
-                  <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium text-foreground">Protecting system integrity.</h3>
+                  <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium text-foreground">Protecting system integrity</h3>
                   <p>
                     There was a less obvious risk to design against: gaming. If clinicians could see the AI-generated draft before the assessment was locked, the incentive structure breaks, read the output, go back, adjust clinical responses to get a more favorable documentation result. Not because findings changed, but because the AI signaled a compliance gap.
                   </p>
@@ -461,13 +436,13 @@ export default function PAACaseStudy() {
               </h2>
               <div className="space-y-6 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <div>
-                  <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-2 font-medium text-foreground">Build the clinical feedback loop from day one.</h3>
+                  <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-2 font-medium text-foreground">Build the clinical feedback loop from day one</h3>
                   <p>
                     When I joined, there was no structured channel between design and clinical staff. I pushed to make it a regular fixture, scheduled reviews with care coordinators on real screens, not abstract questions. Clinicians don&apos;t tell you what they want; they show you where they hesitate. That cadence should exist before the first wireframe.
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-2 font-medium text-foreground">Get legally clean access to real clinical data earlier.</h3>
+                  <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-2 font-medium text-foreground">Get legally clean access to real clinical data earlier</h3>
                   <p>
                     Setting up HIPAA-compliant access to anonymized accounts takes time and legal coordination. We got there late. Testing with realistic task volumes and edge-case clinical profiles earlier would have caught problems we only found in QA. On any healthcare project, this is a first-week priority.
                   </p>

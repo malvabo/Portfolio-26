@@ -1,7 +1,7 @@
 "use client"
+import { LightboxImage } from "@/components/lightbox-image"
 
 import Link from "next/link"
-import Image from "next/image"
 import { ArrowLeft } from "lucide-react"
 import { ScrollToTop } from "@/components/scroll-to-top"
 import { Header } from "@/components/header"
@@ -72,7 +72,7 @@ export default function TempStarsCaseStudy() {
           </div>
 
           <div className="mb-12 rounded-xl overflow-hidden max-w-[750px]">
-            <Image
+            <LightboxImage
               src="/images/tempstars-phones-hero.png"
               alt="Dental centre profile and onboarding – two phones showing clinic detail and You are in a good company"
               width={1200}
@@ -147,7 +147,7 @@ export default function TempStarsCaseStudy() {
           <section id="problem" className="mb-10">
             <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Discovery</p>
             <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">
-              The challenge of the &quot;ghost user&quot;
+              Understanding inactive users
             </h2>
             <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
               <p>
@@ -165,7 +165,7 @@ export default function TempStarsCaseStudy() {
           <section id="research" className="mb-10">
             <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Research</p>
             <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">
-              The diagnosis of root causes
+              Finding the root causes
             </h2>
             <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-4">
               <p>
@@ -189,7 +189,7 @@ export default function TempStarsCaseStudy() {
               </div>
             </div>
             <div className="mt-8 rounded-xl overflow-hidden max-w-[750px]">
-              <Image
+              <LightboxImage
                 src={TEMPSTARS_CASE_IMAGES[2].src}
                 alt={TEMPSTARS_CASE_IMAGES[2].alt}
                 width={TEMPSTARS_CASE_IMAGES[2].width}
@@ -203,7 +203,7 @@ export default function TempStarsCaseStudy() {
           <section id="solution" className="mb-10">
             <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Solution</p>
             <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">
-              Execution: a phased operational recovery
+              Rolling it out in phases
             </h2>
 
             <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
@@ -220,7 +220,7 @@ export default function TempStarsCaseStudy() {
 
               <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-[750px]">
                 <div className="relative rounded-xl overflow-hidden bg-[#f5f5f5] h-[320px]">
-                  <Image
+                  <LightboxImage
                     src="/images/tempstars-landing-phone.png"
                     alt="TempStars landing: Dental Temping the way it should be"
                     fill
@@ -228,7 +228,7 @@ export default function TempStarsCaseStudy() {
                   />
                 </div>
                 <div className="relative rounded-xl overflow-hidden bg-[#f5f5f5] h-[320px]">
-                  <Image
+                  <LightboxImage
                     src="/images/tempstars-resume-step.png"
                     alt="Last step: add your resume to help dental offices choose you"
                     fill
@@ -246,7 +246,7 @@ export default function TempStarsCaseStudy() {
                 <div className="mt-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[750px]">
                     <div className="relative rounded-xl overflow-hidden bg-[#f5f5f5] h-[360px]">
-                      <Image
+                      <LightboxImage
                         src={TEMPSTARS_CASE_IMAGES[5].src}
                         alt={TEMPSTARS_CASE_IMAGES[5].alt}
                         fill
@@ -254,7 +254,7 @@ export default function TempStarsCaseStudy() {
                       />
                     </div>
                     <div className="relative rounded-xl overflow-hidden bg-[#f5f5f5] h-[360px]">
-                      <Image
+                      <LightboxImage
                         src={TEMPSTARS_CASE_IMAGES[6].src}
                         alt={TEMPSTARS_CASE_IMAGES[6].alt}
                         fill
@@ -272,7 +272,7 @@ export default function TempStarsCaseStudy() {
                   I restructured the shift pages to prioritize &quot;decision-making data.&quot; We moved clinical requirements and office logistics to the forefront. By providing high &quot;information scent,&quot; we eliminated the need for external research and gave users the confidence to book in real-time.
                 </p>
                 <div className="mt-6 rounded-xl overflow-hidden max-w-[750px]">
-                  <Image
+                  <LightboxImage
                     src="/images/tempstars-information-scent-before-after.png"
                     alt="Before: dense shift detail with long PPE list. After: dental centre profile with tabs for dental office, neighborhood, safety, and shift details; map and clear decision data"
                     width={1200}
@@ -288,7 +288,7 @@ export default function TempStarsCaseStudy() {
           <section id="outcomes" className="mb-16 p-8 bg-[#F5F3F0] rounded-xl max-w-[750px]">
             <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Outcomes</p>
             <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">
-              The impact of operational maturity
+              The impact
             </h2>
 
             <div className="grid md:grid-cols-3 gap-4 mb-8">

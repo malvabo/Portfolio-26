@@ -1,7 +1,7 @@
 "use client"
+import { LightboxImage } from "@/components/lightbox-image"
 
 import Link from "next/link"
-import Image from "next/image"
 import { ArrowLeft } from "lucide-react"
 import { ScrollToTop } from "@/components/scroll-to-top"
 import { Header } from "@/components/header"
@@ -62,7 +62,7 @@ export default function BodySpecCaseStudy() {
           </div>
 
           <div className="mb-12 rounded-xl overflow-hidden max-w-[750px]">
-            <Image
+            <LightboxImage
               src="https://framerusercontent.com/images/vv2onQFZ97C3KH8T7xcOTJbKZs.png"
               alt="BodySpec app interface showing health metrics"
               width={2048}
@@ -127,7 +127,7 @@ export default function BodySpecCaseStudy() {
           <section id="problem" className="mb-10">
             <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Discovery</p>
             <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">
-              The challenge: breaking the &quot;one-off&quot; cycle
+              Breaking the one-time visit cycle
             </h2>
             <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
               <p>
@@ -139,7 +139,7 @@ export default function BodySpecCaseStudy() {
           <section id="research" className="mb-10">
             <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Research</p>
             <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">
-              Building a distributed intelligence engine
+              Building a distributed research approach
             </h2>
             <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
               <p>
@@ -154,7 +154,7 @@ export default function BodySpecCaseStudy() {
           <section id="pivot" className="mb-10">
             <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Pivot</p>
             <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">
-              From data density to narrative motivation
+              Turning data into motivation
             </h2>
             <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
               <p>
@@ -182,7 +182,7 @@ export default function BodySpecCaseStudy() {
               </div>
 
                 <div className="mt-8 rounded-xl overflow-hidden max-w-[750px]">
-                <Image
+                <LightboxImage
                   src="/images/bodyspec-location-booking.webp"
                   alt="BodySpec location booking interface on laptop"
                   width={1200}
@@ -211,7 +211,7 @@ export default function BodySpecCaseStudy() {
 
                 <div className="grid md:grid-cols-2 gap-6 mt-8 max-w-[750px]">
                   <div className="rounded-xl overflow-hidden">
-                    <Image
+                    <LightboxImage
                       src="/images/bodyspec-dexa-dashboard-1.png"
                       alt="BodySpec DEXA scan dashboard showing body fat percentage visualization with color-coded zones"
                       width={1200}
@@ -220,7 +220,7 @@ export default function BodySpecCaseStudy() {
                     />
                   </div>
                   <div className="rounded-xl overflow-hidden">
-                    <Image
+                    <LightboxImage
                       src="/images/bodyspec-dexa-dashboard-2.png"
                       alt="BodySpec body fat analysis with peer comparison charts and percentile data"
                       width={1200}
@@ -240,7 +240,7 @@ export default function BodySpecCaseStudy() {
 
               <div className="grid md:grid-cols-2 gap-6 mt-8 max-w-[750px]">
                 <div className="rounded-xl overflow-hidden">
-                  <Image
+                  <LightboxImage
                     src="/images/bodyspec-homepage-final.png"
                     alt="BodySpec final homepage design with hero and benefits"
                     width={1200}
@@ -249,7 +249,7 @@ export default function BodySpecCaseStudy() {
                   />
                 </div>
                 <div className="rounded-xl overflow-hidden">
-                  <Image
+                  <LightboxImage
                     src="/images/bodyspec-booking-flow.png"
                     alt="BodySpec mobile app booking interface"
                     width={1200}
@@ -273,7 +273,7 @@ export default function BodySpecCaseStudy() {
                 While the vision for the BodySpec redesign was expansive, we faced a critical constraint: a high-stakes investment round was approaching, and we needed a live, functional product to demonstrate growth and engagement to potential backers. With limited engineering resources and a rigid deadline, I had to pivot from the &apos;ideal&apos; architectural solution to a high-velocity design strategy.
               </p>
               <p>
-                I facilitated a &quot;middle ground&quot; approach—identifying the absolute core metrics users needed to see to feel value. We prioritized a lean, front-end heavy implementation that utilized existing data structures to ensure we hit the launch date. This &apos;V1&apos; allowed us to secure the necessary funding, which I then leveraged to lead a second, more robust iteration that integrated the complex data visualizations and personalized AI insights we originally envisioned.
+                I facilitated a &quot;middle ground&quot; approach-identifying the absolute core metrics users needed to see to feel value. We prioritized a lean, front-end heavy implementation that utilized existing data structures to ensure we hit the launch date. This &apos;V1&apos; allowed us to secure the necessary funding, which I then leveraged to lead a second, more robust iteration that integrated the complex data visualizations and personalized AI insights we originally envisioned.
               </p>
             </div>
           </section>

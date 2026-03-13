@@ -1,7 +1,8 @@
 "use client"
+import { LightboxImage } from "@/components/lightbox-image"
+import { LightboxImage } from "@/components/lightbox-image"
 
 import Link from "next/link"
-import Image from "next/image"
 import { ArrowLeft } from "lucide-react"
 import { ScrollToTop } from "@/components/scroll-to-top"
 import { Header } from "@/components/header"
@@ -113,7 +114,7 @@ export default function PandaDocCaseStudy() {
           </section>
 
           <div className="mb-12 rounded-xl overflow-hidden max-w-[750px]">
-            <Image
+            <LightboxImage
               src="https://framerusercontent.com/images/4DYcZ9CKBrks1ghCYxMeKxQS7uw.png?width=1556&height=1128"
               alt="PandaDoc extension listing in Chrome Web Store"
               width={1556}
@@ -126,7 +127,7 @@ export default function PandaDocCaseStudy() {
           <section id="overview" className="mb-10">
             <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Overview</p>
             <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">
-              The challenge: the context-switching problem
+              The challenge
             </h2>
             <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
               <p>
@@ -136,7 +137,7 @@ export default function PandaDocCaseStudy() {
           </section>
 
           <div className="mb-16 rounded-xl overflow-hidden max-w-[750px]">
-            <Image
+            <LightboxImage
               src="https://framerusercontent.com/images/Q0a7y883B2Awo0qETG5pDxG9vo.png?width=1995&height=1657"
               alt="PandaDoc Chrome extension interface overview"
               width={1995}
@@ -150,7 +151,7 @@ export default function PandaDocCaseStudy() {
           <section id="research" className="mb-10">
             <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Research</p>
             <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">
-              The strategy: functional scoping
+              The strategy
             </h2>
 
             <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
@@ -183,7 +184,7 @@ export default function PandaDocCaseStudy() {
           <section id="solution" className="mb-10">
             <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Solution</p>
             <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">
-              The execution: managing technical debt &amp; scope
+              The execution
             </h2>
 
             <div className="space-y-6 max-w-[750px]">
@@ -210,7 +211,7 @@ export default function PandaDocCaseStudy() {
             </div>
 
             <div className="mt-8 rounded-xl overflow-hidden max-w-[750px]">
-              <Image
+              <LightboxImage
                 src="https://framerusercontent.com/images/0HlicyTYHrDXHzCAkHkt2wfolY.png?width=1578&height=788"
                 alt="PandaDoc extension interface showing document list and templates"
                 width={1578}
@@ -225,7 +226,7 @@ export default function PandaDocCaseStudy() {
           <section id="outcomes" className="mb-16 p-8 bg-[#F5F3F0] rounded-xl max-w-[750px]">
             <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Outcomes</p>
             <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">
-              The impact: frictionless automation
+              The impact
             </h2>
 
             <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
