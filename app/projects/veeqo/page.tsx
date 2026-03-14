@@ -181,19 +181,21 @@ export default function VeeqoCaseStudy() {
               </h2>
               <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>When drafting the early concepts, I covered library structure, editor interactions, branding model, and failure states.</p>
-                <p>Drag and drop was the obvious starting point - familiar, no code required. We moved away from it because the build cost was too high for the engineering bandwidth we had, and it wouldn&apos;t have supported the complexity enterprise sellers needed.</p>
               </div>
               <div className="rounded-xl overflow-hidden max-w-[750px] my-6">
                 <LightboxImage src="/images/vq-doc10.png" alt="Design exploration" className="w-full h-auto object-cover" />
+              </div>
+              <p className="text-sm text-muted-foreground max-w-[750px] mt-3 text-center mb-6">Early ideation</p>
+              <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+                <p>Drag and drop was the obvious starting point - familiar, no code required. We moved away from it because the build cost was too high for the engineering bandwidth we had, and it wouldn&apos;t have supported the complexity enterprise sellers needed.</p>
+              </div>
+              <div className="rounded-xl overflow-hidden max-w-[750px] my-6">
+                <LightboxImage src="/images/vq-doc12.png" alt="Drag-and-drop editor exploration" className="w-full h-auto object-cover" />
               </div>
               <p className="text-sm text-muted-foreground max-w-[750px] mt-3 text-center mb-6">Drag-and-drop editor exploration — ruled out due to engineering cost and enterprise complexity</p>
               <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>A simple document table without previews surfaced a problem from a similar internal project: sellers don&apos;t name their documents consistently, so without a visual anchor the list became noise and finding the right template was harder than it should have been.</p>
               </div>
-              <div className="rounded-xl overflow-hidden max-w-[750px] my-6">
-                <LightboxImage src="/images/vq-doc9.png" alt="Design iterations" className="w-full h-auto object-cover" />
-              </div>
-              <p className="text-sm text-muted-foreground max-w-[750px] mt-3 text-center mb-6">Document table without visual previews — sellers couldn&apos;t reliably identify templates by name alone</p>
               <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>HTML as an &quot;advanced&quot; button on ready-to-go templates felt like a clean handoff between modes, but it made exploration harder to justify - sellers are less likely to discover what&apos;s possible when it&apos;s hidden behind an advanced label. As the number of templates scaled, the pattern would have broken down anyway.</p>
               </div>
