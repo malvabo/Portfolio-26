@@ -84,7 +84,7 @@ export default function VeeqoCaseStudy() {
                 Removing a third-party dependency
               </h2>
               <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
-                <p>Veeqo is a multi-channel shipping platform acquired by Amazon, and documents sit at the core of every order - packing slips, invoices, customs forms, returns labels. The entire system ran on a third-party PDF tool with no extensibility, real technical risk, and a vendor dependency the business couldn&apos;t afford to keep. Through early discovery workshops, I helped surface the case for replacing it entirely.</p>
+                <p>Veeqo is a multi-channel shipping platform acquired by Amazon, and documents sit at the core of every order - packing slips, invoices, customs forms, returns labels. The entire system for UK sellers ran on a third-party PDF tool with no extensibility, real technical risk, and a vendor dependency the business couldn&apos;t afford to keep. We planned to move UK sellers to US version of the product to reduce costs for support and ensure consistent brand experience.</p>
                 <div className="rounded-xl overflow-hidden">
                   <LightboxImage src="/images/vq-doc7.png" alt="The system we replaced" className="w-full h-auto object-cover" />
                 </div>
@@ -159,30 +159,17 @@ export default function VeeqoCaseStudy() {
             {/* Research */}
             <section id="research" className="mb-14">
               <div className="bg-[#F5F3F0] rounded-xl p-6 max-w-[750px] space-y-4">
-                <p className="text-[15px] text-foreground leading-relaxed">A competitive scan of ShipStation, Shopify, and similar platforms revealed a consistent gap: rigid pre-built templates on one end, full code editors on the other, with nobody solving the middle ground well. That gap shaped the layered approach.</p>
+                <p className="text-[15px] text-foreground leading-relaxed">A competitive scan of ShipStation, Shopify, and similar platforms revealed a consistent gap: rigid pre-built templates on one end, full code editors on the other.</p>
                 <div className="space-y-3">
                   <div className="p-4 bg-white rounded-lg">
                     <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-2">Support tickets</p>
-                    <p className="text-[14px] text-foreground leading-relaxed">Enterprise sellers filed around customisation limits and template reliability. SMB tickets clustered around setup confusion and generation failures. Two distinct problem sets landing in the same queue.</p>
+                    <p className="text-[14px] text-foreground leading-relaxed">Enterprise sellers filed around customisation limits and template reliability. SMB tickets clustered around setup confusion and generation failures.</p>
                   </div>
                   <div className="p-4 bg-white rounded-lg">
                     <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-2">Seller interviews · Dovetail</p>
-                    <p className="text-[14px] text-foreground leading-relaxed">Sellers needed significantly more customisation than the platform assumed – not for aesthetic reasons, but because their fulfillment flows were genuinely unique and their documents needed to reflect that operational reality.</p>
+                    <p className="text-[14px] text-foreground leading-relaxed">Sellers needed significantly more customisation than the platform assumed. Not for aesthetic reasons, but because their fulfillment flows were genuinely unique and their documents needed to reflect that operational reality.</p>
                   </div>
                 </div>
-              </div>
-            </section>
-
-            {/* Problem Redefinition */}
-            <section id="reframe" className="mb-14">
-              <p className="font-mono text-[13px] uppercase tracking-wider text-muted-foreground mb-2">Problem Definition</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-6 max-w-[750px]">
-                Team Alignment on the Problem to Solve
-              </h2>
-              <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
-                <p>When I stepped in, the brief was already shifting. We were mid-migration to the US market, the primary stakeholder had just exited, and engineering was stretched thin.</p>
-                <p>Engineering was in the room from day one. We caught at least two directions that looked good in Figma but wouldn&apos;t have survived production before anyone had invested heavily in them. Feedback cycles were short and rough - early directions over polished concepts, with sessions used to pressure-test assumptions rather than present for sign-off.</p>
-                <p>When the PRD lost its owner I picked that up too, running alignment sessions to keep the brief anchored as scope kept expanding.</p>
               </div>
             </section>
 
@@ -216,18 +203,15 @@ export default function VeeqoCaseStudy() {
               <p className="text-sm text-muted-foreground max-w-[750px] mt-3 text-center">HTML editor as an advanced mode toggle — discoverability was too low to scale</p>
             </section>
 
-            {/* Design Process */}
-            <section id="process" className="mb-14">
+            {/* Team Alignment */}
+            <section id="reframe" className="mb-14">
               <p className="font-mono text-[13px] uppercase tracking-wider text-muted-foreground mb-2">Design Process</p>
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-6 max-w-[750px]">
-                Design process with the team
+                Team Alignment
               </h2>
               <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
-                <p>With a stakeholder exit mid-project and engineering stretched thin, the collaboration model had to be tight.</p>
-                <p>Engineering was in the room from day one. We caught at least two directions that looked good in Figma but wouldn&apos;t have survived production before anyone had invested heavily in them. Feedback cycles were short and rough - early directions over polished concepts, with sessions used to pressure-test assumptions rather than present for sign-off.</p>
-                <p>When the PRD lost its owner I picked that up too, running alignment sessions to keep the brief anchored as scope kept expanding.</p>
+                <p>When I stepped in, the brief was already shifting. We were mid-migration of the product to the US version, the primary stakeholder was new to the company, and engineering was stretched thin.</p>
               </div>
-
             </section>
 
             {/* Strategy */}
@@ -259,7 +243,7 @@ export default function VeeqoCaseStudy() {
               </div>
 
               <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
-                <p>We faced a choice: build an automated migration tool (4 months) or a high-touch manual white-glove service (2 weeks). I advocated for the manual path for enterprise accounts. While not technically scalable, it allowed us to sunset the expensive third-party vendor 3 months earlier, saving the business $X00k in licensing fees.</p>
+                <p>We faced a choice: build an automated migration tool (4 months) or a high-touch manual white-glove service (2 weeks). I advocated for the manual path for enterprise accounts. While not technically scalable, it allowed us to meet the wider company deadline for migration to the US version of the product.</p>
               </div>
 
             </section>
@@ -356,10 +340,6 @@ export default function VeeqoCaseStudy() {
                 <div>
                   <p className="font-mono text-[13px] uppercase tracking-wider text-muted-foreground mb-2">Category-Aware Templates</p>
                   <p className="text-[17px] leading-relaxed text-muted-foreground mb-5">Users don&apos;t start with a blank page. They get a base template pre-built with the fields most common to their document type - Invoices vs. Pick Lists, each with their own defaults.</p>
-                  <div className="rounded-xl overflow-hidden">
-                    <LightboxImage src="/images/vq-doc2.jpg" alt="Veeqo document library redesign" className="w-full h-auto object-cover" />
-                  </div>
-                  <p className="mt-3 text-sm text-muted-foreground text-center">Document library redesign: pre-built defaults alongside custom HTML + AI templates</p>
                 </div>
                 <div>
                   <p className="font-mono text-[13px] uppercase tracking-wider text-muted-foreground mb-2">The Data Dropdown</p>
@@ -370,12 +350,15 @@ export default function VeeqoCaseStudy() {
                   <p className="mt-3 text-sm text-muted-foreground text-center">HTML editor with AI assist, live preview alongside markup</p>
                 </div>
                 <div>
-                  <p className="font-mono text-[13px] uppercase tracking-wider text-muted-foreground mb-2">Failure States</p>
+                  <p className="font-mono text-[13px] uppercase tracking-wider text-muted-foreground mb-2">Research based additional settings</p>
                   <p className="text-[17px] leading-relaxed text-muted-foreground mb-5">Field priorities were driven by data – frequency of mention across support tickets and seller interviews determined which variables made it into the first release. Most-used fields shipped first, edge cases queued behind them.</p>
-                  <div className="rounded-xl overflow-hidden">
-                    <LightboxImage src="/images/vq3.png" alt="Final document output across formats" className="w-full h-auto object-cover" />
+                  <div className="rounded-xl overflow-hidden mb-3">
+                    <LightboxImage src="/images/vq-doc2.jpg" alt="Document library redesign" className="w-full h-auto object-cover" />
                   </div>
-                  <p className="mt-3 text-sm text-muted-foreground text-center">Final document output – invoice templates across different seller configurations</p>
+                  <p className="mt-3 text-sm text-muted-foreground text-center mb-6">Document library redesign: pre-built defaults alongside custom HTML + AI templates</p>
+                  <div className="rounded-xl overflow-hidden">
+                    <LightboxImage src="/images/vq-doc0.png" alt="Additional settings" className="w-full h-auto object-cover" />
+                  </div>
                 </div>
                 <div>
                   <p className="text-[17px] leading-relaxed text-muted-foreground mb-4">Version selection at print time - sellers choose which custom template to use per doc type without leaving the print flow.</p>
@@ -390,6 +373,9 @@ export default function VeeqoCaseStudy() {
                     <LightboxImage src="/images/vq2.png" alt="Printing templates with HTML editor and live preview" className="w-full h-auto object-cover" />
                   </div>
                   <p className="text-sm text-muted-foreground mt-3 text-center">Brand-to-template mapping — each brand links to its own document versions across all document types</p>
+                  <div className="rounded-xl overflow-hidden mt-6">
+                    <LightboxImage src="/images/vq-doc2.jpg" alt="Document library" className="w-full h-auto object-cover" />
+                  </div>
                 </div>
               </div>
             </section>
@@ -491,6 +477,10 @@ export default function VeeqoCaseStudy() {
 
                   </div>
                 </div>
+              </div>
+
+              <div className="rounded-xl overflow-hidden max-w-[750px] mt-10">
+                <LightboxImage src="/images/vq_doc.png" alt="Future vision" className="w-full h-auto object-cover" />
               </div>
             </section>
 
