@@ -267,7 +267,7 @@ export default function SquirllCaseStudy() {
               </div>
 
               <div className="flex gap-4 mt-8 max-w-[750px]">
-                <div className="flex-1 rounded-xl overflow-hidden bg-black" style={{ minHeight: "480px" }}>
+                <div className="flex-1 rounded-xl overflow-hidden bg-black aspect-square">
                   <video
                     src="/images/Sq-full.mp4"
                     autoPlay
@@ -277,13 +277,10 @@ export default function SquirllCaseStudy() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="flex-1 rounded-xl overflow-hidden bg-black" style={{ minHeight: "480px" }}>
-                  <video
-                    src="/images/anim_SQ.mov"
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
+                <div className="flex-1 rounded-xl overflow-hidden aspect-square">
+                  <LightboxImage
+                    src="/images/squirll-collage-7.jpg"
+                    alt="Squirll app experience"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -330,19 +327,22 @@ export default function SquirllCaseStudy() {
                 <p>The difference between a functional interface and a considered one is that these were made with a specific user feeling as the target, argued for in reviews with the team, and connected back to behavior rather than aesthetics.</p>
               </div>
 
-              <div className="grid grid-cols-2 gap-4 max-w-[750px] mt-8">
-                <div className="rounded-xl overflow-hidden">
+              <div className="flex gap-4 max-w-[750px] mt-8">
+                <div className="flex-1 rounded-xl overflow-hidden aspect-square">
                   <LightboxImage
                     src="/images/squirll-collage-8.jpg"
                     alt="Squirll interface design"
-                    className="w-full h-auto object-cover aspect-square"
+                    className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="rounded-xl overflow-hidden">
-                  <LightboxImage
-                    src="/images/squirll-collage-7.jpg"
-                    alt="Squirll app experience"
-                    className="w-full h-auto object-cover aspect-square"
+                <div className="flex-1 rounded-xl overflow-hidden bg-black aspect-square">
+                  <video
+                    src="/images/anim_SQ.mov"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-full object-cover"
                   />
                 </div>
               </div>
