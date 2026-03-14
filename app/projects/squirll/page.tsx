@@ -266,15 +266,27 @@ export default function SquirllCaseStudy() {
                 <p>For the insights screen I chose 3D over flat, because flat illustration has become so widespread in consumer software that it&apos;s stopped carrying meaning. Three-dimensional form creates associations that flat can&apos;t manufacture - depth, layers, intelligence operating beneath the surface. The cobalt blue of that illustration is the only cool tone in an otherwise warm palette, deliberately separating what the AI is doing from what the user sees as a result.</p>
               </div>
 
-              <div className="rounded-xl overflow-hidden max-w-[750px] mt-8 bg-black" style={{ minHeight: "480px" }}>
-                <video
-                  src="/images/Sq-full.mp4"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="w-full h-full object-cover"
-                />
+              <div className="flex gap-4 mt-8 max-w-[750px]">
+                <div className="flex-1 rounded-xl overflow-hidden bg-black" style={{ minHeight: "480px" }}>
+                  <video
+                    src="/images/Sq-full.mp4"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="flex-1 rounded-xl overflow-hidden bg-black" style={{ minHeight: "480px" }}>
+                  <video
+                    src="/images/anim_SQ.mov"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
               <p className="text-sm text-muted-foreground max-w-[750px] mt-4 text-center">Uploading a receipt flow</p>
             </section>
