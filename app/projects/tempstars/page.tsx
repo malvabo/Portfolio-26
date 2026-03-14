@@ -194,6 +194,14 @@ export default function TempStarsCaseStudy() {
                 </p>
               </div>
 
+              <div className="rounded-xl overflow-hidden max-w-[750px]">
+                <img
+                  src="/images/ts_workshop.png"
+                  alt="Workshop"
+                  className="w-full h-auto"
+                />
+              </div>
+
               <div>
                 <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium">Low information scent</h3>
                 <p className="text-[17px] leading-relaxed text-muted-foreground">
