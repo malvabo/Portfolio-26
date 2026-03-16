@@ -265,8 +265,28 @@ export default function TempStarsCaseStudy() {
                 <p className="text-[17px] leading-relaxed text-muted-foreground">
                   I ran workshops with the founders to revisit the cancellation policy. The existing rules were heavily weighted toward clinics, and hygienists knew it. I made the case that retaining hygienists mattered more than the short-term fee revenue - a churned office represented around $12k in lost LTV over 12 months. The policy change improved sentiment quickly in our beta group and unblocked a lot of users who had been hesitant to commit.
                 </p>
+                <div className="mt-6 rounded-xl overflow-hidden max-w-[750px]">
+                  <LightboxImage
+                    src="/images/TS-11.png"
+                    alt="Workshop session — revisiting cancellation policy with founders"
+                    className="w-full h-auto"
+                  />
+                </div>
               </div>
 
+              <div>
+                <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium">Broad ideation before convergence</h3>
+                <p className="text-[17px] leading-relaxed text-muted-foreground">
+                  Before committing to a direction, I generated 10+ distinct design approaches to the core problem. I shared these broadly - with the team and with power users - to gather early signal on what resonated before investing in high-fidelity work. This helped surface assumptions quickly and avoided anchoring too early on any single solution.
+                </p>
+                <div className="mt-6 rounded-xl overflow-hidden max-w-[750px]">
+                  <LightboxImage
+                    src="/images/TS-12.png"
+                    alt="10+ design approaches explored before converging on a direction"
+                    className="w-full h-auto"
+                  />
+                </div>
+              </div>
 
               <div>
                 <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium">2. Contextual onboarding (progressive disclosure)</h3>
@@ -334,40 +354,6 @@ export default function TempStarsCaseStudy() {
             </div>
           </section>
 
-          <section id="outcomes" className="mb-16 p-8 bg-[#F5F3F0] rounded-xl max-w-[750px]">
-            <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Outcomes</p>
-            <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">
-              The impact
-            </h2>
-
-            <div className="grid md:grid-cols-3 gap-4 mb-8">
-              <div className="bg-background rounded-lg p-6">
-                <div className="text-2xl font-serif mb-2 tracking-[-0.02em]">20%</div>
-                <p className="text-sm leading-relaxed text-muted-foreground">Lift in activation (signups → active workers)</p>
-              </div>
-              <div className="bg-background rounded-lg p-6">
-                <p className="text-sm font-medium text-foreground mb-2">Velocity</p>
-                <p className="text-sm leading-relaxed text-muted-foreground">Time-to-first-offer: 7 days → 2 days</p>
-              </div>
-              <div className="bg-background rounded-lg p-6">
-                <div className="text-2xl font-serif mb-2 tracking-[-0.02em]">25%</div>
-                <p className="text-sm leading-relaxed text-muted-foreground">YoY increase in booked shifts</p>
-              </div>
-            </div>
-
-            <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
-              <p>
-                <strong className="font-medium text-foreground">20% lift in activation:</strong> More signups converted to active workers. Fewer people were bouncing at the policy or the onboarding stage.
-              </p>
-              <p>
-                <strong className="font-medium text-foreground">Velocity:</strong> Time-to-first-offer dropped from 7 days to 2 days, mainly because the matching was more targeted from day one.
-              </p>
-              <p>
-                <strong className="font-medium text-foreground">Booked shifts:</strong> Up 25% YoY. A combination of more active workers in the system and shifts being easier to evaluate and apply for.
-              </p>
-            </div>
-          </section>
-
           <section id="roadmap" className="mb-10">
             <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Roadmap</p>
             <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-8 max-w-[750px]">
@@ -429,6 +415,40 @@ export default function TempStarsCaseStudy() {
 
                 </div>
               </div>
+            </div>
+          </section>
+
+          <section id="outcomes" className="mb-16 p-8 bg-[#F5F3F0] rounded-xl max-w-[750px]">
+            <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Outcomes</p>
+            <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">
+              The impact
+            </h2>
+
+            <div className="grid md:grid-cols-3 gap-4 mb-8">
+              <div className="bg-background rounded-lg p-6">
+                <div className="text-2xl font-serif mb-2 tracking-[-0.02em]">20%</div>
+                <p className="text-sm leading-relaxed text-muted-foreground">Lift in activation (signups → active workers)</p>
+              </div>
+              <div className="bg-background rounded-lg p-6">
+                <p className="text-sm font-medium text-foreground mb-2">Velocity</p>
+                <p className="text-sm leading-relaxed text-muted-foreground">Time-to-first-offer: 7 days → 2 days</p>
+              </div>
+              <div className="bg-background rounded-lg p-6">
+                <div className="text-2xl font-serif mb-2 tracking-[-0.02em]">25%</div>
+                <p className="text-sm leading-relaxed text-muted-foreground">YoY increase in booked shifts</p>
+              </div>
+            </div>
+
+            <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+              <p>
+                <strong className="font-medium text-foreground">20% lift in activation:</strong> More signups converted to active workers. Fewer people were bouncing at the policy or the onboarding stage.
+              </p>
+              <p>
+                <strong className="font-medium text-foreground">Velocity:</strong> Time-to-first-offer dropped from 7 days to 2 days, mainly because the matching was more targeted from day one.
+              </p>
+              <p>
+                <strong className="font-medium text-foreground">Booked shifts:</strong> Up 25% YoY. A combination of more active workers in the system and shifts being easier to evaluate and apply for.
+              </p>
             </div>
           </section>
 
