@@ -348,20 +348,20 @@ export default function VeeqoCaseStudy() {
                   <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Category-aware template defaults - pre-built field sets per document type</p>
                 </div>
                 <div>
-                  <p className="font-mono text-[13px] uppercase tracking-wider text-muted-foreground mb-2">The Data Dropdown</p>
-                  <p className="text-[17px] leading-relaxed text-muted-foreground mb-5">The data dropdown replaced memorising API variable names with a searchable field-picker - select Bin Location from the list and the correct variable is injected directly. A coding task becomes a selection task, with live preview updating alongside every change.</p>
-                  <div className="rounded-xl overflow-hidden">
-                    <LightboxImage src="/images/vq-doc4.png" alt="HTML editor with AI assist and live preview" className="w-full h-auto object-cover" />
-                  </div>
-                  <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">HTML editor with AI assist, live preview alongside markup</p>
-                </div>
-                <div>
                   <p className="font-mono text-[13px] uppercase tracking-wider text-muted-foreground mb-2">Research based additional settings</p>
                   <p className="text-[17px] leading-relaxed text-muted-foreground mb-5">Field priorities were driven by data – frequency of mention across support tickets and seller interviews determined which variables made it into the first release. Most-used fields shipped first, edge cases queued behind them.</p>
                   <div className="rounded-xl overflow-hidden mb-3">
                     <LightboxImage src="/images/vq-doc2.jpg" alt="Document library redesign" className="w-full h-auto object-cover" />
                   </div>
                   <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-6">Document library redesign: pre-built defaults alongside custom HTML + AI templates</p>
+                </div>
+                <div>
+                  <p className="font-mono text-[13px] uppercase tracking-wider text-muted-foreground mb-2">Document customisation</p>
+                  <p className="text-[17px] leading-relaxed text-muted-foreground mb-5">The data dropdown replaced memorising API variable names with a searchable field-picker - select Bin Location from the list and the correct variable is injected directly. A coding task becomes a selection task, with live preview updating alongside every change.</p>
+                  <div className="rounded-xl overflow-hidden">
+                    <LightboxImage src="/images/vq-doc4.png" alt="HTML editor with AI assist and live preview" className="w-full h-auto object-cover" />
+                  </div>
+                  <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">HTML editor with AI assist, live preview alongside markup</p>
                 </div>
                 <div>
                   <p className="text-[17px] leading-relaxed text-muted-foreground mb-4">Version selection at print time - sellers choose which custom template to use per doc type without leaving the print flow.</p>
@@ -379,6 +379,7 @@ export default function VeeqoCaseStudy() {
                   <div className="rounded-xl overflow-hidden mt-6">
                     <LightboxImage src="/images/vq-doc2.jpg" alt="Document library" className="w-full h-auto object-cover" />
                   </div>
+                  <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Multi-brand document library - template versions mapped per brand across all document types</p>
                 </div>
               </div>
             </section>
