@@ -251,7 +251,7 @@ export default function SquirllCaseStudy() {
                   </div>
                 ))}
               </div>
-              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-8">Animated onboarding illustrations — orbital radial glow and account-linking motion</p>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-8">Animated onboarding illustrations - orbital radial glow and account-linking motion</p>
 
               <div className="rounded-xl overflow-hidden max-w-[750px] mt-8">
                 <LightboxImage

@@ -192,7 +192,7 @@ export default function VeeqoCaseStudy() {
               <div className="rounded-xl overflow-hidden max-w-[750px] my-6">
                 <LightboxImage src="/images/vq-doc12.png" alt="Drag-and-drop editor exploration" className="w-full h-auto object-cover" />
               </div>
-              <p className="text-sm text-muted-foreground max-w-[750px] mt-3 text-center mb-6">Drag-and-drop editor exploration — ruled out due to engineering cost and enterprise complexity</p>
+              <p className="text-sm text-muted-foreground max-w-[750px] mt-3 text-center mb-6">Drag-and-drop editor exploration - ruled out due to engineering cost and enterprise complexity</p>
               <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>A simple document table without previews surfaced a problem from a similar internal project: sellers don&apos;t name their documents consistently, so without a visual anchor the list became noise and finding the right template was harder than it should have been.</p>
               </div>
@@ -202,7 +202,7 @@ export default function VeeqoCaseStudy() {
               <div className="rounded-xl overflow-hidden max-w-[750px] my-6">
                 <LightboxImage src="/images/vq-doc8.png" alt="Four editing modes" className="w-full h-auto object-cover" />
               </div>
-              <p className="text-sm text-muted-foreground max-w-[750px] mt-3 text-center">HTML editor as an advanced mode toggle — discoverability was too low to scale</p>
+              <p className="text-sm text-muted-foreground max-w-[750px] mt-3 text-center">Early ideation drafts</p>
             </section>
 
             {/* Team Alignment */}
@@ -367,14 +367,14 @@ export default function VeeqoCaseStudy() {
                   <div className="rounded-xl overflow-hidden">
                     <LightboxImage src="/images/vq1.png" alt="Document setup with branding and version configuration" className="w-full h-auto object-cover" />
                   </div>
-                  <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Version selection at print time — pick a custom template per document type without leaving the print flow</p>
+                  <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Version selection at print time - pick a custom template per document type without leaving the print flow</p>
                 </div>
                 <div>
                   <p className="text-[17px] leading-relaxed text-muted-foreground mb-4">Brand-to-template mapping - each brand links to its own document versions across all doc types, resolving the multi-brand complexity.</p>
                   <div className="rounded-xl overflow-hidden">
                     <LightboxImage src="/images/vq2.png" alt="Printing templates with HTML editor and live preview" className="w-full h-auto object-cover" />
                   </div>
-                  <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Brand-to-template mapping — each brand links to its own document versions across all document types</p>
+                  <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Brand-to-template mapping - each brand links to its own document versions across all document types</p>
                   <div className="rounded-xl overflow-hidden mt-6">
                     <LightboxImage src="/images/vq-doc2.jpg" alt="Document library" className="w-full h-auto object-cover" />
                   </div>
