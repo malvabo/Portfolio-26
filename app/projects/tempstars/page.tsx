@@ -236,6 +236,13 @@ export default function TempStarsCaseStudy() {
                 <p className="text-[17px] leading-relaxed text-muted-foreground mt-4">
                   I also shared service blueprints, customer journey maps, and issue priority maps with the team to keep everyone aligned on the full picture - not just the screens.
                 </p>
+                <div className="mt-6 rounded-xl overflow-hidden max-w-[750px]">
+                  <LightboxImage
+                    src="/images/ts_workshop.png"
+                    alt="Workshop artefacts — service blueprints and journey maps shared with the team"
+                    className="w-full h-auto"
+                  />
+                </div>
               </div>
 
             </div>
