@@ -197,7 +197,7 @@ export default function TempStarsCaseStudy() {
                   alt="Workshop"
                   className="w-full h-auto"
                 />
-                <p className="mt-2 text-sm text-muted-foreground text-center">Cancellation policy friction - journey mapping session</p>
+                <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Cancellation policy friction - journey mapping session</p>
               </div>
 
             </div>
@@ -227,7 +227,7 @@ export default function TempStarsCaseStudy() {
                 height={TEMPSTARS_CASE_IMAGES[2].height}
                 className="w-full h-auto object-contain"
               />
-              <p className="mt-2 text-sm text-muted-foreground text-center">UX onboarding survey (HYG Canada) and shifts distribution</p>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">UX onboarding survey (HYG Canada) and shifts distribution</p>
             </div>
           </section>
 
@@ -252,7 +252,7 @@ export default function TempStarsCaseStudy() {
                     alt="Service blueprints and journey maps shared with the team"
                     className="w-full h-auto"
                   />
-                  <p className="mt-2 text-sm text-muted-foreground text-center">Service blueprints and customer journey maps shared with the team</p>
+                  <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Service blueprints and customer journey maps shared with the team</p>
                 </div>
               </div>
 
@@ -277,7 +277,7 @@ export default function TempStarsCaseStudy() {
                     alt="Workshop session - revisiting cancellation policy with founders"
                     className="w-full h-auto"
                   />
-                  <p className="mt-2 text-sm text-muted-foreground text-center">Workshop session - revisiting cancellation policy with founders</p>
+                  <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Workshop session - revisiting cancellation policy with founders</p>
                 </div>
               </div>
 
@@ -292,7 +292,7 @@ export default function TempStarsCaseStudy() {
                     alt="10+ design approaches explored before converging on a direction"
                     className="w-full h-auto"
                   />
-                  <p className="mt-2 text-sm text-muted-foreground text-center">10+ design approaches explored before converging on a direction</p>
+                  <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">10+ design approaches explored before converging on a direction</p>
                 </div>
               </div>
 
@@ -320,7 +320,7 @@ export default function TempStarsCaseStudy() {
                       />
                     </div>
                   </div>
-                  <p className="mt-2 text-sm text-muted-foreground max-w-[750px] text-center">Skills selection, photo upload, and social proof screen</p>
+                  <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Skills selection, photo upload, and social proof screen</p>
                 </div>
                 <p className="text-[17px] leading-relaxed text-muted-foreground mt-6">
                   I collaborated with Engineering to move from free-text skills to a standardised skill taxonomy. This allowed us to build a weighted matching algorithm. I defined the UX logic for &quot;hard skills&quot; (must-haves like experience with specific equipment) vs. &quot;soft preferences&quot; (nice-to-haves like specific software knowledge).
@@ -350,7 +350,7 @@ export default function TempStarsCaseStudy() {
                     />
                   </div>
                 </div>
-                <p className="mt-2 text-sm text-muted-foreground max-w-[750px] text-center">Redesigned shift detail page and resume upload step</p>
+                <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Redesigned shift detail page and resume upload step</p>
               </div>
             </div>
           </section>
@@ -383,7 +383,7 @@ export default function TempStarsCaseStudy() {
                 alt="Usability testing findings"
                 className="w-full h-auto"
               />
-              <p className="mt-2 text-sm text-muted-foreground text-center">Usability testing findings - hygiene detail placement and parking priority</p>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Usability testing findings - hygiene detail placement and parking priority</p>
             </div>
           </section>
 
