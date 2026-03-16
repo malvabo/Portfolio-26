@@ -200,6 +200,7 @@ export default function TempStarsCaseStudy() {
                   alt="Workshop"
                   className="w-full h-auto"
                 />
+                <p className="mt-2 text-sm text-muted-foreground text-center">Cancellation policy friction — journey mapping session</p>
               </div>
 
               <div className="rounded-xl overflow-hidden max-w-[750px]">
@@ -239,10 +240,11 @@ export default function TempStarsCaseStudy() {
                 </p>
                 <div className="mt-6 rounded-xl overflow-hidden max-w-[750px]">
                   <LightboxImage
-                    src="/images/TS_5.png"
+                    src="/images/TS_5.png?v=2"
                     alt="Service blueprints and journey maps shared with the team"
                     className="w-full h-auto"
                   />
+                  <p className="mt-2 text-sm text-muted-foreground text-center">Service blueprints and customer journey maps shared with the team</p>
                 </div>
               </div>
 
@@ -271,6 +273,7 @@ export default function TempStarsCaseStudy() {
                     alt="Workshop session — revisiting cancellation policy with founders"
                     className="w-full h-auto"
                   />
+                  <p className="mt-2 text-sm text-muted-foreground text-center">Workshop session — revisiting cancellation policy with founders</p>
                 </div>
               </div>
 
@@ -285,6 +288,7 @@ export default function TempStarsCaseStudy() {
                     alt="10+ design approaches explored before converging on a direction"
                     className="w-full h-auto"
                   />
+                  <p className="mt-2 text-sm text-muted-foreground text-center">10+ design approaches explored before converging on a direction</p>
                 </div>
               </div>
 
@@ -350,6 +354,7 @@ export default function TempStarsCaseStudy() {
                     />
                   </div>
                 </div>
+                <p className="mt-2 text-sm text-muted-foreground max-w-[750px] text-center">Redesigned shift detail page and resume upload step</p>
               </div>
             </div>
           </section>
