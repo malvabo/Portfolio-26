@@ -135,7 +135,7 @@ export default function SquirllCaseStudy() {
                   />
                 </div>
               </div>
-              <p className="text-sm text-muted-foreground max-w-[750px] mt-4 text-center mb-6">Early direction drafts</p>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-6">Early direction drafts</p>
 
               <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>Research on arousal and interface design informed this directly. Dark backgrounds lower arousal, reducing the alertness and vigilance that light backgrounds trigger. The implicit message across light-background finance apps is: <em>pay attention to this</em>. The implicit message we were designing toward was the opposite – <em>this is already taken care of</em>. That framing became the filter for every visual decision that followed.</p>
@@ -190,7 +190,7 @@ export default function SquirllCaseStudy() {
                   className="w-full h-auto object-cover"
                 />
               </div>
-              <p className="text-sm text-muted-foreground max-w-[750px] mt-4 text-center mb-6">Warm dark palette applied</p>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-6">Warm dark palette applied</p>
 
               <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>The near-black base removes the aesthetic memory of bank statements and spreadsheets, the associations people carry from every finance tool they&apos;ve already abandoned. The radial glow in onboarding anchors the composition and implies that something intelligent is active beneath the surface, without carrying the urgency or anxiety of an alert.</p>
@@ -203,7 +203,7 @@ export default function SquirllCaseStudy() {
                   className="w-full h-auto object-cover"
                 />
               </div>
-              <p className="text-sm text-muted-foreground max-w-[750px] mt-4 text-center">Color direction exploration</p>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Color direction exploration</p>
             </section>
 
             {/* Typography */}
@@ -223,7 +223,7 @@ export default function SquirllCaseStudy() {
                   className="w-full h-auto object-cover"
                 />
               </div>
-              <p className="text-sm text-muted-foreground max-w-[750px] mt-4 text-center">3D AI insight illustration</p>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">3D AI insight illustration</p>
 
             </section>
 
@@ -251,7 +251,7 @@ export default function SquirllCaseStudy() {
                   </div>
                 ))}
               </div>
-              <p className="text-sm text-muted-foreground max-w-[750px] mt-4 text-center mb-8">Animated onboarding illustrations — orbital radial glow and account-linking motion</p>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-8">Animated onboarding illustrations — orbital radial glow and account-linking motion</p>
 
               <div className="rounded-xl overflow-hidden max-w-[750px] mt-8">
                 <LightboxImage
@@ -260,7 +260,7 @@ export default function SquirllCaseStudy() {
                   className="w-full h-auto object-cover"
                 />
               </div>
-              <p className="text-sm text-muted-foreground max-w-[750px] mt-4 text-center mb-8">Onboarding orbital illustration</p>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-8">Onboarding orbital illustration</p>
 
               <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>For the insights screen I chose 3D over flat, because flat illustration has become so widespread in consumer software that it&apos;s stopped carrying meaning. Three-dimensional form creates associations that flat can&apos;t manufacture - depth, layers, intelligence operating beneath the surface. The cobalt blue of that illustration is the only cool tone in an otherwise warm palette, deliberately separating what the AI is doing from what the user sees as a result.</p>
@@ -285,7 +285,7 @@ export default function SquirllCaseStudy() {
                   />
                 </div>
               </div>
-              <p className="text-sm text-muted-foreground max-w-[750px] mt-4 text-center">Uploading a receipt flow</p>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Uploading a receipt flow</p>
             </section>
 
             {/* Dashboard */}
@@ -305,7 +305,7 @@ export default function SquirllCaseStudy() {
                   className="w-full h-auto object-cover"
                 />
               </div>
-              <p className="text-sm text-muted-foreground max-w-[750px] mt-4 text-center mb-6">Analytics line graph view</p>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-6">Analytics line graph view</p>
 
               <div className="rounded-xl overflow-hidden max-w-[750px] mt-8">
                 <LightboxImage
@@ -314,7 +314,7 @@ export default function SquirllCaseStudy() {
                   className="w-full h-auto object-cover"
                 />
               </div>
-              <p className="text-sm text-muted-foreground max-w-[750px] mt-4 text-center">Analytics and merchant messages</p>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Analytics and merchant messages</p>
             </section>
 
             {/* Craft */}
@@ -346,7 +346,7 @@ export default function SquirllCaseStudy() {
                   />
                 </div>
               </div>
-              <p className="text-sm text-muted-foreground max-w-[750px] mt-4 text-center">Dark mode interface details</p>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Dark mode interface details</p>
             </section>
 
             {/* Accessibility */}

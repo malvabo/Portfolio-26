@@ -88,7 +88,7 @@ export default function VeeqoCaseStudy() {
                 <div className="rounded-xl overflow-hidden">
                   <LightboxImage src="/images/vq-doc7.png" alt="The system we replaced" className="w-full h-auto object-cover" />
                 </div>
-                <p className="text-sm text-muted-foreground text-center">The system we replaced - the third-party template library and its drag-and-drop editor had no extensibility and no API control</p>
+                <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">The system we replaced - the third-party template library and its drag-and-drop editor had no extensibility and no API control</p>
                 <div>
                   <p className="font-mono text-[13px] uppercase tracking-wider text-muted-foreground mb-2 mt-6">Business goals</p>
                   <p>Three things had to happen simultaneously: eliminate the third-party PDF dependency, protect retention among top-tier enterprise accounts at genuine churn risk, and reclaim technical ownership so the team could ship new document types without being blocked by an external vendor.</p>
@@ -349,7 +349,7 @@ export default function VeeqoCaseStudy() {
                   <div className="rounded-xl overflow-hidden">
                     <LightboxImage src="/images/vq-doc4.png" alt="HTML editor with AI assist and live preview" className="w-full h-auto object-cover" />
                   </div>
-                  <p className="mt-3 text-sm text-muted-foreground text-center">HTML editor with AI assist, live preview alongside markup</p>
+                  <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">HTML editor with AI assist, live preview alongside markup</p>
                 </div>
                 <div>
                   <p className="font-mono text-[13px] uppercase tracking-wider text-muted-foreground mb-2">Research based additional settings</p>
@@ -357,9 +357,9 @@ export default function VeeqoCaseStudy() {
                   <div className="rounded-xl overflow-hidden mb-3">
                     <LightboxImage src="/images/vq-doc2.jpg" alt="Document library redesign" className="w-full h-auto object-cover" />
                   </div>
-                  <p className="mt-3 text-sm text-muted-foreground text-center mb-6">Document library redesign: pre-built defaults alongside custom HTML + AI templates</p>
+                  <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-6">Document library redesign: pre-built defaults alongside custom HTML + AI templates</p>
                   <div className="rounded-xl overflow-hidden">
-                    <LightboxImage src="/images/vq-doc0.png" alt="Additional settings" className="w-full h-auto object-cover" />
+                    <LightboxImage src="/images/vq-doc0.jpg" alt="Additional settings" className="w-full h-auto object-cover" />
                   </div>
                 </div>
                 <div>
@@ -367,14 +367,14 @@ export default function VeeqoCaseStudy() {
                   <div className="rounded-xl overflow-hidden">
                     <LightboxImage src="/images/vq1.png" alt="Document setup with branding and version configuration" className="w-full h-auto object-cover" />
                   </div>
-                  <p className="text-sm text-muted-foreground mt-3 text-center">Version selection at print time — pick a custom template per document type without leaving the print flow</p>
+                  <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Version selection at print time — pick a custom template per document type without leaving the print flow</p>
                 </div>
                 <div>
                   <p className="text-[17px] leading-relaxed text-muted-foreground mb-4">Brand-to-template mapping - each brand links to its own document versions across all doc types, resolving the multi-brand complexity.</p>
                   <div className="rounded-xl overflow-hidden">
                     <LightboxImage src="/images/vq2.png" alt="Printing templates with HTML editor and live preview" className="w-full h-auto object-cover" />
                   </div>
-                  <p className="text-sm text-muted-foreground mt-3 text-center">Brand-to-template mapping — each brand links to its own document versions across all document types</p>
+                  <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Brand-to-template mapping — each brand links to its own document versions across all document types</p>
                   <div className="rounded-xl overflow-hidden mt-6">
                     <LightboxImage src="/images/vq-doc2.jpg" alt="Document library" className="w-full h-auto object-cover" />
                   </div>
