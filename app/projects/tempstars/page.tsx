@@ -310,15 +310,24 @@ export default function TempStarsCaseStudy() {
                 <p className="text-[17px] leading-relaxed text-muted-foreground">
                   I restructured the shift detail page to surface the information hygienists actually needed before applying - clinical setup, office culture, parking, location context. The goal was simple: stop users having to leave the app to make a decision.
                 </p>
-                <div className="mt-6 rounded-xl overflow-hidden max-w-[750px]">
-                  <LightboxImage
-                    src="/images/tempstars-information-scent-before-after.png"
-                    alt="Before: dense shift detail with long PPE list. After: dental centre profile with tabs for dental office, neighborhood, safety, and shift details; map and clear decision data"
-                    width={1200}
-                    height={800}
-                    className="w-full h-auto object-contain"
-                  />
-                  <p className="mt-2 text-sm text-muted-foreground text-center">Before: dense shift card. After: dental centre profile with clear decision-making context</p>
+                <div className="mt-6 flex gap-4 max-w-[750px]">
+                  <div className="flex-1 rounded-xl overflow-hidden bg-black aspect-[9/16]">
+                    <video
+                      src="/images/TS1.mp4"
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="flex-1 rounded-xl overflow-hidden aspect-[9/16]">
+                    <LightboxImage
+                      src="/images/tempstars-resume-step.png"
+                      alt="TempStars resume step screen"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
