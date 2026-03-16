@@ -364,6 +364,7 @@ export default function VeeqoCaseStudy() {
                   <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">HTML editor with AI assist, live preview alongside markup</p>
                 </div>
                 <div>
+                  <p className="font-mono text-[13px] uppercase tracking-wider text-muted-foreground mb-2">Product brands and associated documents</p>
                   <p className="text-[17px] leading-relaxed text-muted-foreground mb-4">Brand-to-template mapping - each brand links to its own document versions across all doc types, resolving the multi-brand complexity.</p>
 
                   {/* Brand scheme diagram */}
@@ -391,52 +392,44 @@ export default function VeeqoCaseStudy() {
                         <div className="w-px h-full bg-[#DDDDD8]" />
                       </div>
 
-                      {/* Brand A */}
+                      {/* Brand A - Dior 2026 */}
                       <div className="flex-1">
                         <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-2">Brand</p>
-                        <div className="border border-[#B8DFBA] rounded-xl bg-white p-3">
-                          <p className="text-[12px] font-medium text-foreground mb-2.5">Brand A</p>
+                        <div className="border border-[#DDDDD8] rounded-xl bg-white p-3">
+                          <p className="text-[12px] font-medium text-foreground mb-2.5">Dior 2026</p>
                           <div className="space-y-1.5">
                             <div className="flex items-center justify-between gap-2">
-                              <span className="text-[11px] text-muted-foreground">Invoice</span>
+                              <span className="text-[11px] text-muted-foreground">Invoice Dior</span>
                               <span className="text-[10px] px-1.5 py-0.5 rounded-md bg-[#DCFCE7] text-[#166534] shrink-0">Ready to go</span>
                             </div>
                             <div className="flex items-center justify-between gap-2">
-                              <span className="text-[11px] text-muted-foreground">Packing slip</span>
+                              <span className="text-[11px] text-muted-foreground">Packing slip Dior</span>
                               <span className="text-[10px] px-1.5 py-0.5 rounded-md bg-[#DBEAFE] text-[#1d4ed8] shrink-0">Custom</span>
                             </div>
                             <div className="flex items-center justify-between gap-2">
                               <span className="text-[11px] text-muted-foreground">Pick list</span>
                               <span className="text-[10px] px-1.5 py-0.5 rounded-md bg-[#DCFCE7] text-[#166534] shrink-0">Ready to go</span>
-                            </div>
-                            <div className="flex items-center justify-between gap-2">
-                              <span className="text-[11px] text-muted-foreground">Return label</span>
-                              <span className="text-[10px] px-1.5 py-0.5 rounded-md bg-[#DBEAFE] text-[#1d4ed8] shrink-0">Custom</span>
                             </div>
                           </div>
                         </div>
                       </div>
 
-                      {/* Brand B */}
+                      {/* Brand B - Chanel */}
                       <div className="flex-1">
                         <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-2">Brand</p>
-                        <div className="border border-[#B8DFBA] rounded-xl bg-white p-3">
-                          <p className="text-[12px] font-medium text-foreground mb-2.5">Brand B</p>
+                        <div className="border border-[#DDDDD8] rounded-xl bg-white p-3">
+                          <p className="text-[12px] font-medium text-foreground mb-2.5">Chanel</p>
                           <div className="space-y-1.5">
                             <div className="flex items-center justify-between gap-2">
-                              <span className="text-[11px] text-muted-foreground">Invoice</span>
-                              <span className="text-[10px] px-1.5 py-0.5 rounded-md bg-[#DBEAFE] text-[#1d4ed8] shrink-0">Custom</span>
-                            </div>
-                            <div className="flex items-center justify-between gap-2">
-                              <span className="text-[11px] text-muted-foreground">Packing slip</span>
+                              <span className="text-[11px] text-muted-foreground">Invoice Chanel</span>
                               <span className="text-[10px] px-1.5 py-0.5 rounded-md bg-[#DCFCE7] text-[#166534] shrink-0">Ready to go</span>
                             </div>
                             <div className="flex items-center justify-between gap-2">
-                              <span className="text-[11px] text-muted-foreground">Pick list</span>
+                              <span className="text-[11px] text-muted-foreground">Packing slip Chanel</span>
                               <span className="text-[10px] px-1.5 py-0.5 rounded-md bg-[#DBEAFE] text-[#1d4ed8] shrink-0">Custom</span>
                             </div>
                             <div className="flex items-center justify-between gap-2">
-                              <span className="text-[11px] text-muted-foreground">Return label</span>
+                              <span className="text-[11px] text-muted-foreground">Pick list</span>
                               <span className="text-[10px] px-1.5 py-0.5 rounded-md bg-[#DCFCE7] text-[#166534] shrink-0">Ready to go</span>
                             </div>
                           </div>
