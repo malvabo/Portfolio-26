@@ -342,6 +342,10 @@ export default function VeeqoCaseStudy() {
                 <div>
                   <p className="font-mono text-[13px] uppercase tracking-wider text-muted-foreground mb-2">Category-Aware Templates</p>
                   <p className="text-[17px] leading-relaxed text-muted-foreground mb-5">Users don&apos;t start with a blank page. They get a base template pre-built with the fields most common to their document type - Invoices vs. Pick Lists, each with their own defaults.</p>
+                  <div className="rounded-xl overflow-hidden">
+                    <LightboxImage src="/images/vq-doc0.jpg" alt="Additional settings" className="w-full h-auto object-cover" />
+                  </div>
+                  <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Category-aware template defaults - pre-built field sets per document type</p>
                 </div>
                 <div>
                   <p className="font-mono text-[13px] uppercase tracking-wider text-muted-foreground mb-2">The Data Dropdown</p>
@@ -358,9 +362,6 @@ export default function VeeqoCaseStudy() {
                     <LightboxImage src="/images/vq-doc2.jpg" alt="Document library redesign" className="w-full h-auto object-cover" />
                   </div>
                   <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-6">Document library redesign: pre-built defaults alongside custom HTML + AI templates</p>
-                  <div className="rounded-xl overflow-hidden">
-                    <LightboxImage src="/images/vq-doc0.jpg" alt="Additional settings" className="w-full h-auto object-cover" />
-                  </div>
                 </div>
                 <div>
                   <p className="text-[17px] leading-relaxed text-muted-foreground mb-4">Version selection at print time - sellers choose which custom template to use per doc type without leaving the print flow.</p>
