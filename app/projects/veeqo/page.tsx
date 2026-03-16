@@ -372,6 +372,87 @@ export default function VeeqoCaseStudy() {
                 </div>
                 <div>
                   <p className="text-[17px] leading-relaxed text-muted-foreground mb-4">Brand-to-template mapping - each brand links to its own document versions across all doc types, resolving the multi-brand complexity.</p>
+
+                  {/* Brand scheme diagram */}
+                  <div className="rounded-xl bg-[#F5F3F0] p-5 mb-6">
+                    <div className="flex gap-3 items-start">
+
+                      {/* Company Default */}
+                      <div className="shrink-0 w-[170px]">
+                        <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-2">Company default</p>
+                        <div className="border border-[#DDDDD8] rounded-xl bg-white p-3">
+                          <p className="text-[12px] font-medium text-foreground mb-2.5">Default brand</p>
+                          <div className="space-y-1.5">
+                            {["Invoice", "Packing slip", "Pick list", "Return label"].map((doc) => (
+                              <div key={doc} className="flex items-center justify-between gap-2">
+                                <span className="text-[11px] text-muted-foreground">{doc}</span>
+                                <span className="text-[10px] px-1.5 py-0.5 rounded-md bg-[#EBEBEB] text-muted-foreground shrink-0">Default</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Divider */}
+                      <div className="flex items-center self-stretch pt-7">
+                        <div className="w-px h-full bg-[#DDDDD8]" />
+                      </div>
+
+                      {/* Brand A */}
+                      <div className="flex-1">
+                        <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-2">Brand</p>
+                        <div className="border border-[#B8DFBA] rounded-xl bg-white p-3">
+                          <p className="text-[12px] font-medium text-foreground mb-2.5">Brand A</p>
+                          <div className="space-y-1.5">
+                            <div className="flex items-center justify-between gap-2">
+                              <span className="text-[11px] text-muted-foreground">Invoice</span>
+                              <span className="text-[10px] px-1.5 py-0.5 rounded-md bg-[#DCFCE7] text-[#166534] shrink-0">Ready to go</span>
+                            </div>
+                            <div className="flex items-center justify-between gap-2">
+                              <span className="text-[11px] text-muted-foreground">Packing slip</span>
+                              <span className="text-[10px] px-1.5 py-0.5 rounded-md bg-[#DBEAFE] text-[#1d4ed8] shrink-0">Custom</span>
+                            </div>
+                            <div className="flex items-center justify-between gap-2">
+                              <span className="text-[11px] text-muted-foreground">Pick list</span>
+                              <span className="text-[10px] px-1.5 py-0.5 rounded-md bg-[#DCFCE7] text-[#166534] shrink-0">Ready to go</span>
+                            </div>
+                            <div className="flex items-center justify-between gap-2">
+                              <span className="text-[11px] text-muted-foreground">Return label</span>
+                              <span className="text-[10px] px-1.5 py-0.5 rounded-md bg-[#DBEAFE] text-[#1d4ed8] shrink-0">Custom</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Brand B */}
+                      <div className="flex-1">
+                        <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-2">Brand</p>
+                        <div className="border border-[#B8DFBA] rounded-xl bg-white p-3">
+                          <p className="text-[12px] font-medium text-foreground mb-2.5">Brand B</p>
+                          <div className="space-y-1.5">
+                            <div className="flex items-center justify-between gap-2">
+                              <span className="text-[11px] text-muted-foreground">Invoice</span>
+                              <span className="text-[10px] px-1.5 py-0.5 rounded-md bg-[#DBEAFE] text-[#1d4ed8] shrink-0">Custom</span>
+                            </div>
+                            <div className="flex items-center justify-between gap-2">
+                              <span className="text-[11px] text-muted-foreground">Packing slip</span>
+                              <span className="text-[10px] px-1.5 py-0.5 rounded-md bg-[#DCFCE7] text-[#166534] shrink-0">Ready to go</span>
+                            </div>
+                            <div className="flex items-center justify-between gap-2">
+                              <span className="text-[11px] text-muted-foreground">Pick list</span>
+                              <span className="text-[10px] px-1.5 py-0.5 rounded-md bg-[#DBEAFE] text-[#1d4ed8] shrink-0">Custom</span>
+                            </div>
+                            <div className="flex items-center justify-between gap-2">
+                              <span className="text-[11px] text-muted-foreground">Return label</span>
+                              <span className="text-[10px] px-1.5 py-0.5 rounded-md bg-[#DCFCE7] text-[#166534] shrink-0">Ready to go</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
                   <div className="rounded-xl overflow-hidden">
                     <LightboxImage src="/images/vq2.png" alt="Printing templates with HTML editor and live preview" className="w-full h-auto object-cover" />
                   </div>
