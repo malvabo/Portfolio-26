@@ -492,7 +492,7 @@ export default function TempStarsCaseStudy() {
             </h2>
             <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
               <p>
-                Starting with service mapping rather than jumping into UI meant we caught problems that wouldn&apos;t have been visible from the screens alone. The cancellation policy was the clearest example - it was a bigger blocker than any UX issue, and no amount of onboarding polish would have fixed it. Getting that sorted first made the rest of the work land properly. The main thing I&apos;d take from this project: product decisions and design decisions are often the same decision.
+                Starting with service mapping rather than jumping into UI meant we caught problems that wouldn&apos;t have been visible from the screens alone. The cancellation policy was the clearest example - it was a bigger blocker than any UX issue, and no amount of onboarding polish would have fixed it. Getting that sorted first made the rest of the work land properly. The main thing I&apos;d take from this project: operations decisions and design decisions are often the same decision.
               </p>
             </div>
           </section>
