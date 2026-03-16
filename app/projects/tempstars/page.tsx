@@ -186,6 +186,14 @@ export default function TempStarsCaseStudy() {
               </div>
             </div>
 
+            <div className="rounded-xl overflow-hidden max-w-[750px] mb-8">
+              <LightboxImage
+                src="/images/TS-vid.png"
+                alt="Data analysis — drop-off points and activation gap"
+                className="w-full h-auto"
+              />
+            </div>
+
             <div className="space-y-4 max-w-[750px]">
               <div>
                 <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium">Policy friction</h3>
@@ -257,13 +265,9 @@ export default function TempStarsCaseStudy() {
               Rolling it out in phases
             </h2>
 
-            <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
-              <p>I tackled the redesign through three strategic pillars:</p>
-            </div>
-
             <div className="space-y-12 max-w-[750px]">
               <div>
-                <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium">1. Stakeholder negotiation &amp; policy reform</h3>
+                <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium">Stakeholder negotiation &amp; policy reform</h3>
                 <p className="text-[17px] leading-relaxed text-muted-foreground">
                   I ran workshops with the founders to revisit the cancellation policy. The existing rules were heavily weighted toward clinics, and hygienists knew it. I made the case that retaining hygienists mattered more than the short-term fee revenue - a churned office represented around $12k in lost LTV over 12 months. The policy change improved sentiment quickly in our beta group and unblocked a lot of users who had been hesitant to commit.
                 </p>
@@ -293,7 +297,7 @@ export default function TempStarsCaseStudy() {
               </div>
 
               <div>
-                <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium">2. Contextual onboarding (progressive disclosure)</h3>
+                <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium">Contextual onboarding (progressive disclosure)</h3>
                 <p className="text-[17px] leading-relaxed text-muted-foreground">
                   We replaced the one-size-fits-all signup with a shorter, staged flow. By capturing specific skills early - software experience, equipment familiarity - we could show relevant shifts straight away rather than presenting an undifferentiated list. Fewer steps upfront, but more useful results on the other side.
                 </p>
@@ -324,19 +328,11 @@ export default function TempStarsCaseStudy() {
               </div>
 
               <div>
-                <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium">Edge-case logic</h3>
-                <p className="text-[17px] leading-relaxed text-muted-foreground">
-                  I designed the logic for partial matches. If no 100% match was found within 10 miles, how should the system decay the constraints? I mapped the hierarchy prioritising license verification over proximity to ensure patient safety while maintaining fulfillment rates.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium">3. More useful shift pages</h3>
                 <p className="text-[17px] leading-relaxed text-muted-foreground">
                   I restructured the shift detail page to surface the information hygienists actually needed before applying - clinical setup, office culture, parking, location context. The goal was simple: stop users having to leave the app to make a decision.
                 </p>
                 <div className="mt-6 flex gap-4 max-w-[750px]">
-                  <div className="flex-1 rounded-xl overflow-hidden bg-black aspect-[9/16]">
+                  <div className="flex-1 rounded-xl overflow-hidden bg-black aspect-[3/4]">
                     <video
                       src="/images/TS1.mp4"
                       autoPlay
@@ -346,7 +342,7 @@ export default function TempStarsCaseStudy() {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <div className="flex-1 rounded-xl overflow-hidden aspect-[9/16]">
+                  <div className="flex-1 rounded-xl overflow-hidden aspect-[3/4]">
                     <LightboxImage
                       src="/images/tempstars-resume-step.png"
                       alt="TempStars resume step screen"
@@ -357,6 +353,13 @@ export default function TempStarsCaseStudy() {
                 <p className="mt-2 text-sm text-muted-foreground max-w-[750px] text-center">Redesigned shift detail page and resume upload step</p>
               </div>
             </div>
+          </section>
+
+          <section className="mb-10 max-w-[750px]">
+            <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium">Edge-case logic</h3>
+            <p className="text-[17px] leading-relaxed text-muted-foreground">
+              I designed the logic for partial matches. If no 100% match was found within 10 miles, how should the system decay the constraints? I mapped the hierarchy prioritising license verification over proximity to ensure patient safety while maintaining fulfillment rates.
+            </p>
           </section>
 
           <section id="roadmap" className="mb-10">
