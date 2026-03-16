@@ -202,22 +202,23 @@ export default function TempStarsCaseStudy() {
                 />
               </div>
 
+              <div className="rounded-xl overflow-hidden max-w-[750px]">
+                <LightboxImage
+                  src={TEMPSTARS_CASE_IMAGES[2].src}
+                  alt={TEMPSTARS_CASE_IMAGES[2].alt}
+                  width={TEMPSTARS_CASE_IMAGES[2].width}
+                  height={TEMPSTARS_CASE_IMAGES[2].height}
+                  className="w-full h-auto object-contain"
+                />
+                <p className="mt-2 text-sm text-muted-foreground text-center">UX onboarding survey (HYG Canada) and shifts distribution</p>
+              </div>
+
               <div>
                 <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium">Low information scent</h3>
                 <p className="text-[17px] leading-relaxed text-muted-foreground">
                   The &quot;search&quot; experience didn&apos;t account for the specialised mental models of dental professionals. A hygienist isn&apos;t looking for any job; they are looking for a specific clinical environment.
                 </p>
               </div>
-            </div>
-            <div className="mt-8 rounded-xl overflow-hidden max-w-[750px]">
-              <LightboxImage
-                src={TEMPSTARS_CASE_IMAGES[2].src}
-                alt={TEMPSTARS_CASE_IMAGES[2].alt}
-                width={TEMPSTARS_CASE_IMAGES[2].width}
-                height={TEMPSTARS_CASE_IMAGES[2].height}
-                className="w-full h-auto object-contain"
-              />
-              <p className="mt-2 text-sm text-muted-foreground text-center">UX onboarding survey (HYG Canada) and shifts distribution</p>
             </div>
           </section>
 
@@ -238,8 +239,8 @@ export default function TempStarsCaseStudy() {
                 </p>
                 <div className="mt-6 rounded-xl overflow-hidden max-w-[750px]">
                   <LightboxImage
-                    src="/images/ts_workshop.png"
-                    alt="Workshop artefacts — service blueprints and journey maps shared with the team"
+                    src="/images/TS_5.png"
+                    alt="Service blueprints and journey maps shared with the team"
                     className="w-full h-auto"
                   />
                 </div>
