@@ -186,7 +186,7 @@ export default function TempStarsCaseStudy() {
               </div>
             </div>
 
-            <div className="rounded-xl overflow-hidden max-w-[750px] mb-8">
+            <div className="rounded-xl overflow-hidden max-w-[400px] mb-8">
               <LightboxImage
                 src="/images/TS-vid.png"
                 alt="Data analysis — drop-off points and activation gap"
@@ -200,15 +200,6 @@ export default function TempStarsCaseStudy() {
                 <p className="text-[17px] leading-relaxed text-muted-foreground">
                   Interviews revealed that cancellation policies were punitively one-sided toward clinics. This destroyed platform trust before a user even worked their first hour.
                 </p>
-              </div>
-
-              <div className="rounded-xl overflow-hidden max-w-[750px]">
-                <img
-                  src="/images/ts_workshop.png"
-                  alt="Workshop"
-                  className="w-full h-auto"
-                />
-                <p className="mt-2 text-sm text-muted-foreground text-center">Cancellation policy friction — journey mapping session</p>
               </div>
 
               <div className="rounded-xl overflow-hidden max-w-[750px]">
@@ -227,6 +218,23 @@ export default function TempStarsCaseStudy() {
                 <p className="text-[17px] leading-relaxed text-muted-foreground">
                   The &quot;search&quot; experience didn&apos;t account for the specialised mental models of dental professionals. A hygienist isn&apos;t looking for any job; they are looking for a specific clinical environment.
                 </p>
+              </div>
+
+              <div className="rounded-xl overflow-hidden max-w-[750px]">
+                <img
+                  src="/images/ts_workshop.png"
+                  alt="Workshop"
+                  className="w-full h-auto"
+                />
+                <p className="mt-2 text-sm text-muted-foreground text-center">Cancellation policy friction — journey mapping session</p>
+              </div>
+
+              <div className="rounded-xl overflow-hidden max-w-[750px]">
+                <LightboxImage
+                  src="/images/TS-9.png"
+                  alt="Additional research findings"
+                  className="w-full h-auto"
+                />
               </div>
             </div>
           </section>
@@ -360,6 +368,23 @@ export default function TempStarsCaseStudy() {
             <p className="text-[17px] leading-relaxed text-muted-foreground">
               I designed the logic for partial matches. If no 100% match was found within 10 miles, how should the system decay the constraints? I mapped the hierarchy prioritising license verification over proximity to ensure patient safety while maintaining fulfillment rates.
             </p>
+          </section>
+
+          <section className="mb-10 max-w-[750px]">
+            <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium">Usability testing</h3>
+            <p className="text-[17px] leading-relaxed text-muted-foreground mb-4">
+              I ran usability testing on the redesigned flow with 8 participants — a mix of occasional, regular, and frequent users. No critical issues were found. Key feedback shaped two refinements:
+            </p>
+            <ul className="space-y-2 text-[17px] leading-relaxed text-muted-foreground">
+              <li className="flex gap-3">
+                <span className="mt-1.5 shrink-0">•</span>
+                <span>Parking information should be surfaced at the top — users cited it as a deciding factor before they even looked at pay.</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="mt-1.5 shrink-0">•</span>
+                <span>Hygiene detail was being skipped by a significant number of users, so it was moved lower to reduce visual noise on first scan.</span>
+              </li>
+            </ul>
           </section>
 
           <section id="roadmap" className="mb-10">
