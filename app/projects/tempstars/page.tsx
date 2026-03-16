@@ -36,11 +36,11 @@ export default function TempStarsCaseStudy() {
               <a href="#overview" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">
                 Overview
               </a>
-              <a href="#problem" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">
-                Discovery
-              </a>
               <a href="#research" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">
                 Research
+              </a>
+              <a href="#problem" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">
+                Discovery
               </a>
               <a href="#collaboration" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">
                 Collaboration
@@ -142,24 +142,6 @@ export default function TempStarsCaseStudy() {
             </div>
           </section>
 
-          <section id="problem" className="mb-10">
-            <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Discovery</p>
-            <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">
-              Understanding inactive users
-            </h2>
-            <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
-              <p>
-                I started by mapping the end-to-end user journey to understand where people were dropping off. The problems were concentrated in the first 48 hours after signup.
-              </p>
-              <p>
-                <strong className="font-medium text-foreground">The 40% drop-off:</strong> Users were registering but not booking. Some were put off by the cancellation policy before they even took a shift. Others simply didn&apos;t have enough information to feel confident applying.
-              </p>
-              <p>
-                <strong className="font-medium text-foreground">Missing context:</strong> Users were leaving the app to look up dental offices on Google before applying, because shift cards didn&apos;t include the details they needed - parking, equipment, team size, office culture.
-              </p>
-            </div>
-          </section>
-
           <section id="research" className="mb-10">
             <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Research</p>
             <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">
@@ -167,7 +149,7 @@ export default function TempStarsCaseStudy() {
             </h2>
             <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-6">
               <p>
-                I ran a mixed-methods research programme to move beyond surface-level symptoms - mapping the full service experience, not just the app.
+                I ran a mixed-methods research to move beyond surface-level symptoms - mapping the full service experience, not just the app.
               </p>
             </div>
 
@@ -189,7 +171,7 @@ export default function TempStarsCaseStudy() {
             <div className="rounded-xl overflow-hidden max-w-[400px] mb-8">
               <LightboxImage
                 src="/images/TS-vid.png"
-                alt="Data analysis — drop-off points and activation gap"
+                alt="Data analysis - drop-off points and activation gap"
                 className="w-full h-auto"
               />
             </div>
@@ -200,17 +182,6 @@ export default function TempStarsCaseStudy() {
                 <p className="text-[17px] leading-relaxed text-muted-foreground">
                   Interviews revealed that cancellation policies were punitively one-sided toward clinics. This destroyed platform trust before a user even worked their first hour.
                 </p>
-              </div>
-
-              <div className="rounded-xl overflow-hidden max-w-[750px]">
-                <LightboxImage
-                  src={TEMPSTARS_CASE_IMAGES[2].src}
-                  alt={TEMPSTARS_CASE_IMAGES[2].alt}
-                  width={TEMPSTARS_CASE_IMAGES[2].width}
-                  height={TEMPSTARS_CASE_IMAGES[2].height}
-                  className="w-full h-auto object-contain"
-                />
-                <p className="mt-2 text-sm text-muted-foreground text-center">UX onboarding survey (HYG Canada) and shifts distribution</p>
               </div>
 
               <div>
@@ -226,16 +197,37 @@ export default function TempStarsCaseStudy() {
                   alt="Workshop"
                   className="w-full h-auto"
                 />
-                <p className="mt-2 text-sm text-muted-foreground text-center">Cancellation policy friction — journey mapping session</p>
+                <p className="mt-2 text-sm text-muted-foreground text-center">Cancellation policy friction - journey mapping session</p>
               </div>
 
-              <div className="rounded-xl overflow-hidden max-w-[750px]">
-                <LightboxImage
-                  src="/images/TS-9.png"
-                  alt="Additional research findings"
-                  className="w-full h-auto"
-                />
-              </div>
+            </div>
+          </section>
+
+          <section id="problem" className="mb-10">
+            <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Discovery</p>
+            <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">
+              Understanding inactive users
+            </h2>
+            <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+              <p>
+                I started by mapping the end-to-end user journey to understand where people were dropping off. The problems were concentrated in the first 48 hours after signup.
+              </p>
+              <p>
+                <strong className="font-medium text-foreground">The 40% drop-off:</strong> Users were registering but not booking. Some were put off by the cancellation policy before they even took a shift. Others simply didn&apos;t have enough information to feel confident applying.
+              </p>
+              <p>
+                <strong className="font-medium text-foreground">Missing context:</strong> Users were leaving the app to look up dental offices on Google before applying, because shift cards didn&apos;t include the details they needed - parking, equipment, team size, office culture.
+              </p>
+            </div>
+            <div className="rounded-xl overflow-hidden max-w-[750px] mt-6">
+              <LightboxImage
+                src={TEMPSTARS_CASE_IMAGES[2].src}
+                alt={TEMPSTARS_CASE_IMAGES[2].alt}
+                width={TEMPSTARS_CASE_IMAGES[2].width}
+                height={TEMPSTARS_CASE_IMAGES[2].height}
+                className="w-full h-auto object-contain"
+              />
+              <p className="mt-2 text-sm text-muted-foreground text-center">UX onboarding survey (HYG Canada) and shifts distribution</p>
             </div>
           </section>
 
@@ -282,10 +274,10 @@ export default function TempStarsCaseStudy() {
                 <div className="mt-6 rounded-xl overflow-hidden max-w-[750px]">
                   <LightboxImage
                     src="/images/TS-11.png"
-                    alt="Workshop session — revisiting cancellation policy with founders"
+                    alt="Workshop session - revisiting cancellation policy with founders"
                     className="w-full h-auto"
                   />
-                  <p className="mt-2 text-sm text-muted-foreground text-center">Workshop session — revisiting cancellation policy with founders</p>
+                  <p className="mt-2 text-sm text-muted-foreground text-center">Workshop session - revisiting cancellation policy with founders</p>
                 </div>
               </div>
 
@@ -335,7 +327,7 @@ export default function TempStarsCaseStudy() {
                 </p>
               </div>
 
-              <div>
+              <div className="!mt-6">
                 <p className="text-[17px] leading-relaxed text-muted-foreground">
                   I restructured the shift detail page to surface the information hygienists actually needed before applying - clinical setup, office culture, parking, location context. The goal was simple: stop users having to leave the app to make a decision.
                 </p>
@@ -373,18 +365,26 @@ export default function TempStarsCaseStudy() {
           <section className="mb-10 max-w-[750px]">
             <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium">Usability testing</h3>
             <p className="text-[17px] leading-relaxed text-muted-foreground mb-4">
-              I ran usability testing on the redesigned flow with 8 participants — a mix of occasional, regular, and frequent users. No critical issues were found. Key feedback shaped two refinements:
+              I ran usability testing on the redesigned flow with 8 participants - a mix of occasional, regular, and frequent users. No critical issues were found. Key feedback shaped two refinements:
             </p>
             <ul className="space-y-2 text-[17px] leading-relaxed text-muted-foreground">
               <li className="flex gap-3">
                 <span className="mt-1.5 shrink-0">•</span>
-                <span>Parking information should be surfaced at the top — users cited it as a deciding factor before they even looked at pay.</span>
+                <span>Parking information should be surfaced at the top - users cited it as a deciding factor before they even looked at pay.</span>
               </li>
               <li className="flex gap-3">
                 <span className="mt-1.5 shrink-0">•</span>
                 <span>Hygiene detail was being skipped by a significant number of users, so it was moved lower to reduce visual noise on first scan.</span>
               </li>
             </ul>
+            <div className="rounded-xl overflow-hidden max-w-[750px] mt-6">
+              <LightboxImage
+                src="/images/TS-9.png"
+                alt="Usability testing findings"
+                className="w-full h-auto"
+              />
+              <p className="mt-2 text-sm text-muted-foreground text-center">Usability testing findings - hygiene detail placement and parking priority</p>
+            </div>
           </section>
 
           <section id="roadmap" className="mb-10">
