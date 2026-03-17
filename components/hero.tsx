@@ -29,36 +29,20 @@ export function Hero() {
       return
     }
 
+    const titleEl = wordRefs.current[0]?.closest("h1") as HTMLElement | null
+    const ease = "power2.out"
     const tl = gsap.timeline({
       onComplete: () => { heroHasPlayed = true },
     })
-    tl.from(words, {
-      duration: 0.5,
-      opacity: 0,
-      stagger: 0.07,
-      ease: "power2.out",
-    })
-    tl.addLabel("titleDone")
+    tl.from(titleEl ?? words, { duration: 0.5, opacity: 0, y: 24, ease })
     if (paragraph) {
-      tl.from(paragraph, {
-        duration: 0.35,
-        opacity: 0,
-        ease: "power2.out",
-      }, "titleDone")
+      tl.from(paragraph, { duration: 0.5, opacity: 0, y: 24, ease }, "-=0.3")
     }
     if (arrow) {
-      tl.from(arrow, {
-        duration: 0.3,
-        opacity: 0,
-        ease: "power2.out",
-      }, "titleDone+=0.3")
+      tl.from(arrow, { duration: 0.4, opacity: 0, y: 16, ease }, "-=0.3")
     }
     if (images) {
-      tl.from(images, {
-        duration: 0.35,
-        opacity: 0,
-        ease: "power2.out",
-      }, "titleDone+=0.3")
+      tl.from(images, { duration: 0.5, opacity: 0, y: 24, ease }, "-=0.3")
     }
   }, [])
 
