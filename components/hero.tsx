@@ -10,13 +10,13 @@ export function Hero() {
         }
         .hero-reveal {
           opacity: 0;
-          animation: fadeInUp 0.8s ease-in forwards;
+          animation: fadeInUp 0.4s ease-in forwards;
           backface-visibility: hidden;
         }
-        .hero-reveal-1 { animation-delay: 0.1s; }
-        .hero-reveal-2 { animation-delay: 0.3s; }
-        .hero-reveal-3 { animation-delay: 0.45s; }
-        .hero-reveal-4 { animation-delay: 0.6s; }
+        .hero-reveal-1 { animation-delay: 0.05s; }
+        .hero-reveal-2 { animation-delay: 0.15s; }
+        .hero-reveal-3 { animation-delay: 0.22s; }
+        .hero-reveal-4 { animation-delay: 0.3s; }
       `}</style>
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col gap-8">
