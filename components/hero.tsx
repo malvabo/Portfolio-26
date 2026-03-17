@@ -32,9 +32,10 @@ export function Hero() {
     const titleEl = wordRefs.current[0]?.closest("h1") as HTMLElement | null
     const targets = [titleEl ?? words, paragraph, arrow, images].filter(Boolean)
     gsap.from(targets, {
-      duration: 0.35,
+      duration: 0.5,
       opacity: 0,
-      ease: "power1.out",
+      y: 10,
+      ease: "power2.inOut",
       stagger: 0.08,
       onComplete: () => { heroHasPlayed = true },
     })
