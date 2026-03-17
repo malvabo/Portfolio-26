@@ -21,7 +21,15 @@ export function Hero() {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col gap-8">
           <h1 className="hero-reveal hero-reveal-1 font-serif text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-normal leading-[1.15] tracking-[-0.02em] text-foreground w-full max-w-7xl">
-            Hi, I am Mary -<br />Product UX Designer currently shaping tech at Amazon.
+            {(["Hi,","I","am","Mary","-","Product","UX","Designer","currently","shaping","tech","at","Amazon."] as string[]).map((word, i) => (
+              <span key={i}>
+                <span className="inline-block overflow-hidden align-bottom pb-[0.12em]">
+                  <span className="inline-block">{word}</span>
+                  {i < 12 && i !== 7 && i !== 3 && i !== 4 ? "\u00A0" : ""}
+                </span>
+                {i === 7 && <br />}
+              </span>
+            ))}
           </h1>
           <div className="w-full max-w-[360px] lg:max-w-[440px] lg:ml-auto mt-8">
             <p className="hero-reveal hero-reveal-2 font-sans text-[17px] leading-relaxed text-muted-foreground">
