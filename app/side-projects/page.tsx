@@ -1,5 +1,9 @@
+"use client"
+
+import { useState } from "react"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { X } from "lucide-react"
 
 const projects = [
   {
@@ -15,6 +19,9 @@ const projects = [
 ]
 
 export default function SideProjects() {
+  const [active, setActive] = useState<number | null>(null)
+  const project = active !== null ? projects[active] : null
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -25,13 +32,17 @@ export default function SideProjects() {
           </h1>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-[750px]">
-          {projects.map((project, i) => (
-            <div key={i} className="flex flex-col gap-3">
-              <div className="rounded-xl overflow-hidden bg-[#F5F3F0] aspect-video">
-                {project.video ? (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-[750px]">
+          {projects.map((p, i) => (
+            <button
+              key={i}
+              onClick={() => setActive(i)}
+              className="text-left group rounded-2xl overflow-hidden border border-border/60 bg-background hover:border-border transition-all duration-200 hover:shadow-md focus:outline-none"
+            >
+              <div className="aspect-video bg-[#F5F3F0] overflow-hidden">
+                {p.video ? (
                   <video
-                    src={project.video}
+                    src={p.video}
                     autoPlay
                     loop
                     muted
@@ -42,15 +53,58 @@ export default function SideProjects() {
                   <div className="w-full h-full" />
                 )}
               </div>
-              <div>
-                <p className="text-[15px] font-medium text-foreground mb-1">{project.title}</p>
-                <p className="text-[14px] text-muted-foreground leading-relaxed">{project.description}</p>
+              <div className="p-4">
+                <p className="text-[15px] font-medium text-foreground mb-1">{p.title}</p>
+                <p className="text-[13px] text-muted-foreground leading-relaxed">{p.description}</p>
               </div>
-            </div>
+            </button>
           ))}
         </div>
       </main>
       <Footer />
+
+      {/* Modal */}
+      {project && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-6"
+          onClick={() => setActive(null)}
+        >
+          <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" />
+          <div
+            className="relative bg-background rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-center justify-between px-6 pt-6 pb-4">
+              <h2 className="text-[18px] font-medium text-foreground">{project.title}</h2>
+              <button
+                onClick={() => setActive(null)}
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
+                <X size={20} />
+              </button>
+            </div>
+            <div className="px-6 pb-6 flex flex-col gap-4">
+              <div className="rounded-xl overflow-hidden bg-[#F5F3F0] aspect-video">
+                {project.video ? (
+                  <video
+                    key={project.video}
+                    src={project.video}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    controls
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <div className="w-full h-full" />
+                )}
+              </div>
+              <p className="text-[15px] text-muted-foreground leading-relaxed">{project.description}</p>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
