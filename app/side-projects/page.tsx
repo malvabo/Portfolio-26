@@ -37,7 +37,7 @@ export default function SideProjects() {
             <button
               key={i}
               onClick={() => setActive(i)}
-              className="text-left group rounded-2xl overflow-hidden border border-border/60 bg-background hover:border-border transition-all duration-200 hover:shadow-md focus:outline-none"
+              className="text-left group rounded-2xl overflow-hidden border border-border/30 bg-background hover:border-border/60 shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer focus:outline-none"
             >
               <div className="aspect-video bg-[#F5F3F0] overflow-hidden">
                 {p.video ? (
@@ -69,9 +69,9 @@ export default function SideProjects() {
           className="fixed inset-0 z-50 flex items-center justify-center p-6"
           onClick={() => setActive(null)}
         >
-          <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" />
+          <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" />
           <div
-            className="relative bg-background rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto"
+            className="relative bg-background rounded-2xl shadow-xl w-full max-w-4xl max-h-[90vh] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex items-center justify-between px-6 pt-6 pb-4">
