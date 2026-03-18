@@ -50,11 +50,11 @@ export default function VeeqoCaseStudy() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-4 mb-6 pb-4 max-w-[750px]">
               <div>
                 <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Role</p>
-                <p className="text-[15px] leading-relaxed">Product Designer</p>
+                <span className="inline-block px-2 py-0.5 text-[13px] rounded-md bg-[#E8E3DD] text-[#6B5D4F]">Product Designer</span>
               </div>
               <div>
                 <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Scope</p>
-                <p className="text-[15px] leading-relaxed">Full platform migration</p>
+                <span className="inline-block px-2 py-0.5 text-[13px] rounded-md bg-[#E8E3DD] text-[#6B5D4F]">Full platform migration</span>
               </div>
               <div>
                 <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Team</p>
@@ -62,7 +62,7 @@ export default function VeeqoCaseStudy() {
               </div>
               <div>
                 <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Constraint</p>
-                <p className="text-[15px] leading-relaxed">Limited eng bandwidth</p>
+                <span className="inline-block px-2 py-0.5 text-[13px] rounded-md bg-[#E8E3DD] text-[#6B5D4F]">Limited eng bandwidth</span>
               </div>
             </div>
 
