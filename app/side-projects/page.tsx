@@ -9,7 +9,7 @@ const projects = [
   {
     video: "/images/poetry1.mp4",
     title: "Poetry & Media",
-    description: "A tool that helps produce visual social media content in poetry niche easily.",
+    description: "A tool that makes production of visual social media content in poetry niche easily. Just choose the background, styling for the text, adjust the content on the page and download the asset.",
   },
   {
     video: "/images/script2.mp4",
