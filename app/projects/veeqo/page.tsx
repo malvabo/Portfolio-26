@@ -70,7 +70,7 @@ export default function VeeqoCaseStudy() {
             <div className="mb-12 max-w-[750px]">
               <div className="rounded-xl overflow-hidden transform-gpu">
                 <img
-                  src="/images/vq_cover.png"
+                  src="/images/vq_cover_cropped.png"
                   alt="Veeqo document system"
                   className="w-full h-auto object-cover"
                 />
