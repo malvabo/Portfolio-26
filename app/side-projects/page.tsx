@@ -7,6 +7,11 @@ const projects = [
     title: "Poetry & Media",
     description: "A tool that helps produce visual social media content in poetry niche easily.",
   },
+  {
+    video: "",
+    title: "Talk Script Analysis Tool",
+    description: "A solution that allows to analyze the content of the talk, spot the gaps, localize it for different cultures and find opportunities how to make the story more engaging.",
+  },
 ]
 
 export default function SideProjects() {
@@ -23,15 +28,19 @@ export default function SideProjects() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-[750px]">
           {projects.map((project, i) => (
             <div key={i} className="flex flex-col gap-3">
-              <div className="rounded-xl overflow-hidden bg-[#F5F3F0]">
-                <video
-                  src={project.video}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="w-full h-auto"
-                />
+              <div className="rounded-xl overflow-hidden bg-[#F5F3F0] aspect-video">
+                {project.video ? (
+                  <video
+                    src={project.video}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <div className="w-full h-full" />
+                )}
               </div>
               <div>
                 <p className="text-[15px] font-medium text-foreground mb-1">{project.title}</p>
