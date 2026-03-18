@@ -86,7 +86,7 @@ export default function VeeqoCaseStudy() {
               <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>Veeqo is a multi-channel shipping platform acquired by Amazon, and documents sit at the core of every order - packing slips, invoices, customs forms, returns labels. The entire system for UK sellers ran on a third-party PDF tool with no extensibility, real technical risk, and a vendor dependency the business couldn&apos;t afford to keep. We planned to move UK sellers to US version of the product to reduce costs for support and ensure consistent brand experience.</p>
                 <div className="rounded-xl overflow-hidden">
-                  <LightboxImage src="/images/vq-doc7.png" alt="The system we replaced" className="w-full h-auto object-cover" />
+                  <LightboxImage src="/images/vq-doc7-preview.webp" lightboxSrc="/images/vq-doc7.webp" alt="The system we replaced" className="w-full h-auto object-cover" loading="eager" />
                 </div>
                 <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">The system we replaced - the third-party template library and its drag-and-drop editor had no extensibility and no API control</p>
                 <div>

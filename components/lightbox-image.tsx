@@ -8,6 +8,9 @@ interface LightboxImageProps {
   src: string
   alt: string
   className?: string
+  /** Separate high-res src shown in the lightbox (defaults to src) */
+  lightboxSrc?: string
+  loading?: "lazy" | "eager"
   // Accept (and ignore) Next.js Image-specific props so this is a drop-in replacement
   width?: number | string
   height?: number | string
@@ -18,7 +21,7 @@ interface LightboxImageProps {
   [key: string]: unknown
 }
 
-export function LightboxImage({ src, alt, className, width: _w, height: _h, unoptimized: _u, sizes: _s, priority: _p, fill: _f, ...rest }: LightboxImageProps) {
+export function LightboxImage({ src, alt, className, lightboxSrc, loading = "lazy", width: _w, height: _h, unoptimized: _u, sizes: _s, priority: _p, fill: _f, ...rest }: LightboxImageProps) {
   const [open, setOpen] = useState(false)
   const [mounted, setMounted] = useState(false)
 
@@ -44,6 +47,7 @@ export function LightboxImage({ src, alt, className, width: _w, height: _h, unop
           src={src}
           alt={alt}
           className={className ?? ""}
+          loading={loading}
           {...rest}
         />
         <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
@@ -66,7 +70,7 @@ export function LightboxImage({ src, alt, className, width: _w, height: _h, unop
             <X className="w-5 h-5" />
           </button>
           <img
-            src={src}
+            src={lightboxSrc ?? src}
             alt={alt}
             className="max-w-[92vw] max-h-[92vh] object-contain rounded-lg shadow-2xl"
             onClick={(e) => e.stopPropagation()}
