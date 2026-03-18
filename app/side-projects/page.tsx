@@ -8,7 +8,7 @@ const projects = [
     description: "A tool that helps produce visual social media content in poetry niche easily.",
   },
   {
-    video: "",
+    video: "/images/script.mp4",
     title: "Talk Script Analysis Tool",
     description: "A solution that allows to analyze the content of the talk, spot the gaps, localize it for different cultures and find opportunities how to make the story more engaging.",
   },
