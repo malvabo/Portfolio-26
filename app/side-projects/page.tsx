@@ -8,7 +8,7 @@ import { X } from "lucide-react"
 const projects = [
   {
     video: "/images/poetry1.mp4",
-    title: "Poetry & Media",
+    title: "Poetry & Media Generation",
     description: "A tool that makes production of visual social media content in poetry niche easily. Just choose the background, styling for the text, adjust the content on the page and download the asset.",
   },
   {
@@ -37,7 +37,7 @@ export default function SideProjects() {
             <button
               key={i}
               onClick={() => setActive(i)}
-              className="text-left group rounded-2xl overflow-hidden border border-border/30 bg-background hover:border-border/60 shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer focus:outline-none"
+              className="text-left group rounded-2xl overflow-hidden border border-border/20 bg-background hover:border-border/40 shadow-[0_1px_4px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)] transition-all duration-300 cursor-pointer focus:outline-none"
             >
               <div className="aspect-video bg-[#F5F3F0] overflow-hidden">
                 {p.video ? (
