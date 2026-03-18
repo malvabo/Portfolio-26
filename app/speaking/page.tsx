@@ -90,7 +90,7 @@ export default function SpeakingPage() {
   return (
     <div className="min-h-screen">
       <Header />
-      <main className="max-w-7xl mx-auto px-8 lg:px-12 pt-32 pb-24">
+      <main className="max-w-7xl mx-auto px-8 lg:px-12 pt-24 pb-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-12 lg:items-start">
           <div className="min-w-0">
             <div className="space-y-10">
