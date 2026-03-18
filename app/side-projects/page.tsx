@@ -26,7 +26,7 @@ export default function SideProjects() {
     <div className="min-h-screen bg-background">
       <Header />
       <main className="max-w-7xl mx-auto px-8 lg:px-12 pt-32 pb-24">
-        <div className="mb-12 max-w-[750px]">
+        <div className="mb-8 max-w-[750px]">
           <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl tracking-[-0.02em] leading-[1.2]">
             AI experiments
           </h1>
