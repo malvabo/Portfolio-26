@@ -49,6 +49,12 @@ export function Header() {
             >
               Speaking
             </Link>
+            <Link
+              href="/side-projects"
+              className="text-[15px] font-sans text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Side projects
+            </Link>
             <a
               href="https://medium.com/@maria_borysova"
               target="_blank"
