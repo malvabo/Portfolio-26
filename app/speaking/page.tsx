@@ -95,6 +95,11 @@ export default function SpeakingPage() {
           <div className="min-w-0">
             <div className="space-y-10">
               <section>
+                <div className="mb-8">
+                  <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl tracking-[-0.02em] leading-[1.2]">
+                    My speaking engagements
+                  </h1>
+                </div>
                 <div className="space-y-3">
                 <div className="py-3">
                   {talks[0].link ? (
