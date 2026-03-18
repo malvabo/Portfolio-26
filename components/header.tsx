@@ -53,7 +53,7 @@ export function Header() {
               href="/side-projects"
               className="text-[15px] font-sans text-muted-foreground hover:text-foreground transition-colors"
             >
-              Side projects
+              AI experiments
             </Link>
             <a
               href="https://medium.com/@maria_borysova"
