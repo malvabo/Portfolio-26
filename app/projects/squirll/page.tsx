@@ -77,7 +77,7 @@ export default function SquirllCaseStudy() {
 
             {/* Cover image */}
             <div className="mb-12 max-w-[750px]">
-              <div className="rounded-[20px] overflow-hidden aspect-[16/9]">
+              <div className="rounded-xl overflow-hidden aspect-[16/9]">
                 <LightboxImage
                   src="/images/squirll-collage-1.jpg"
                   alt="Squirll spending analytics"

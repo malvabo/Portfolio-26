@@ -68,7 +68,7 @@ export default function VeeqoCaseStudy() {
 
             {/* Cover image */}
             <div className="mb-12 max-w-[750px]">
-              <div className="rounded-[20px] overflow-hidden transform-gpu">
+              <div className="rounded-xl overflow-hidden transform-gpu">
                 <img
                   src="/images/vq_cover.png"
                   alt="Veeqo document system"
