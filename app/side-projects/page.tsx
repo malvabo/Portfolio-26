@@ -4,8 +4,8 @@ import { Footer } from "@/components/footer"
 const projects = [
   {
     video: "/images/poetry1.mov",
-    title: "Poetry & Script",
-    description: "A generative poetry tool that turns spoken phrases into visual scripts.",
+    title: "Poetry & Media",
+    description: "A tool that helps produce visual social media content in poetry niche easily.",
   },
 ]
 
