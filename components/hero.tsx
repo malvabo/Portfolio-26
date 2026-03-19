@@ -21,13 +21,13 @@ export function Hero() {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col gap-8">
           <h1 className="hero-reveal hero-reveal-1 font-serif text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-normal leading-[1.15] tracking-[-0.02em] text-foreground w-full max-w-7xl">
-            {(["Hi,","I","am","Mary","-","Product","UX","Designer","currently","shaping","tech","at","Amazon."] as string[]).map((word, i) => (
+            {(["Hi,","I","am","Mary,","Product","UX","Designer","currently","shaping","tech","at","Amazon."] as string[]).map((word, i) => (
               <span key={i}>
                 <span className="inline-block overflow-hidden align-bottom pb-[0.12em]">
                   <span className="inline-block">{word}</span>
-                  {i < 12 && i !== 7 && i !== 3 && i !== 4 ? "\u00A0" : ""}
+                  {i < 11 && i !== 6 && i !== 3 ? "\u00A0" : ""}
                 </span>
-                {i === 7 && <br />}
+                {i === 6 && <br />}
               </span>
             ))}
           </h1>
