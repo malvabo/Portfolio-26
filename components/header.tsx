@@ -51,8 +51,11 @@ export function Header() {
             </Link>
             <Link
               href="/side-projects"
-              className="text-[15px] font-sans text-muted-foreground hover:text-foreground transition-colors"
+              className="inline-flex items-center gap-1.5 text-[15px] font-sans text-muted-foreground hover:text-foreground transition-colors"
             >
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/>
+              </svg>
               AI experiments
             </Link>
             <a
