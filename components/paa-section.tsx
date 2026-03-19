@@ -70,7 +70,7 @@ export function PAASection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {PAA_IMAGES.map((image, idx) => (
             <div key={idx} className="relative aspect-[4/3] overflow-hidden rounded-lg bg-gray-50 border border-gray-200 group">
-              <LightboxImage src={image.src || "/placeholder.svg"} alt={image.alt} className="w-full h-full object-cover" />
+              <LightboxImage src={image.src || "/placeholder.svg"} alt={image.alt} className="absolute inset-0 w-full h-full object-cover block" />
             </div>
           ))}
         </div>
