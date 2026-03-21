@@ -62,7 +62,7 @@ export default function PAACaseStudy() {
             <div className="mb-12 max-w-[750px]">
               <div className="rounded-xl overflow-hidden transform-gpu">
                 <LightboxImage
-                  src="/images/Paa11.png"
+                  src="/images/paa_11.png"
                   alt="PAA dashboard"
                   className="w-full h-auto object-cover"
                 />
