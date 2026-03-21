@@ -554,7 +554,7 @@ export default function VeeqoCaseStudy() {
                         <span className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground">V3 · AI Document Intelligence</span>
                       </div>
                       <div className="border border-[#EBEBEB] rounded-xl p-4 bg-white space-y-2">
-                        {["AI-generated docs from seller order flows", "Smart field suggestions based on fulfillment patterns", "Automated improvement recommendations per template", "Tag-based organisation", "Version diff & rollback"].map((item) => (
+                        {["AI-generated docs", "Smart field suggestions based on fulfillment patterns", "Automated improvement recommendations per template"].map((item) => (
                           <div key={item} className="flex items-start gap-2">
                             <span className="text-muted-foreground/30 mt-0.5 text-[13px]">○</span>
                             <span className="text-[13px] text-muted-foreground">{item}</span>
@@ -585,7 +585,7 @@ export default function VeeqoCaseStudy() {
                 </div>
                 <div>
                   <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-2 font-medium text-foreground">Owning the brief when it lost its owner</h3>
-                  <p>When the primary stakeholder exited mid-project, I picked up the PRD to keep alignment anchored. That act of ownership is what allowed the project to ship without a restart.</p>
+                  <p>When our primary stakeholder moved on mid-project, I stepped in to help manage the PRD and documentation. My goal was simply to keep our shared vision clear and the requirements anchored, which helped the team stay on track. This approach set a precedent for the design team to step into broader product ownership roles during complex transitions.</p>
                 </div>
               </div>
             </section>
