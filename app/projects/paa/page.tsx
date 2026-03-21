@@ -224,7 +224,7 @@ export default function PAACaseStudy() {
               </div>
 
 
-              <div className="space-y-8 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+              <div className="space-y-8 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mt-10">
                 <div>
                   <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium text-foreground">Pending Actions tiles</h3>
                   <p>
@@ -252,7 +252,7 @@ export default function PAACaseStudy() {
                 <div>
                   <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium text-foreground">Challenge 2: The message problem</h3>
                   <p>
-                    Document requests needed to be visible from the clinical surface without cluttering it. After several rounds of exploration (inline threads, notification badges, expandable rows), I landed on the Actionable Tile pattern: messages surface as a primary urgency tile, clicking opens a contextual drawer with the patient&apos;s clinical data alongside the thread. The patient context never disappears.
+                    Document requests were only accessible via Messages and were often ignored for days. They needed to be visible from the clinical surface since unanswered requests delayed the clinical processes. After several rounds of exploration (inline threads, notification badges, expandable rows), I landed on the actionable tile pattern: messages surface as a primary urgency tile, clicking opens a contextual drawer with the patient&apos;s clinical data alongside the thread. The patient context never disappears.
                   </p>
                 </div>
               </div>
@@ -389,16 +389,18 @@ export default function PAACaseStudy() {
               </h2>
               <div className="p-8 bg-[#F5F3F0] rounded-xl max-w-[750px] mb-8">
                 <ul className="space-y-2 text-[17px] leading-relaxed">
-                  {[
-                    "Shipped a tiered urgency system, contextual message integration, and AI-generated clinical documentation within a single dashboard surface",
-                    "40% time saved with optimized clinical workflows",
-                    "Quality feedback: improved clinician satisfaction",
-                  ].map((item, i) => (
-                    <li key={i} className="flex gap-3">
-                      <span className="text-muted-foreground mt-0.5">•</span>
-                      <span className="text-muted-foreground">{item}</span>
-                    </li>
-                  ))}
+                  <li className="flex gap-3">
+                    <span className="text-muted-foreground mt-0.5">•</span>
+                    <span className="text-muted-foreground">Shipped a tiered urgency system, contextual message integration, and AI-generated clinical documentation within a single dashboard surface</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-muted-foreground mt-0.5">•</span>
+                    <span className="text-muted-foreground"><span className="font-semibold text-foreground">40% time saved</span> with optimized clinical workflows</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-muted-foreground mt-0.5">•</span>
+                    <span className="text-muted-foreground">Quality feedback: improved clinician satisfaction</span>
+                  </li>
                 </ul>
               </div>
             </section>
