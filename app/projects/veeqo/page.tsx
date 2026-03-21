@@ -188,7 +188,7 @@ export default function VeeqoCaseStudy() {
               </div>
               <p className="text-sm text-muted-foreground max-w-[750px] mt-3 text-center mb-6">Early ideation</p>
               <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
-                <p>Drag and drop was the obvious starting point - familiar, no code required. We moved away from it because the build cost was too high for the engineering bandwidth we had, and it wouldn&apos;t have supported the complexity enterprise sellers needed.</p>
+                <p>Drag and drop was the obvious starting point - familiar for the sellers, no code required. However, after critique sessions with the team, I moved away from it because the build cost was too high for the engineering bandwidth we had. Simple versions of drag and drop tool wouldn&apos;t have supported the complexity enterprise sellers needed.</p>
               </div>
               <div className="rounded-xl overflow-hidden max-w-[750px] my-6">
                 <LightboxImage src="/images/vq-doc12.png" alt="Drag-and-drop editor exploration" className="w-full h-auto object-cover" />
