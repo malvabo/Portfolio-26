@@ -178,6 +178,15 @@ export default function SquirllCaseStudy() {
                 </div>
               </div>
 
+              <div className="rounded-xl overflow-hidden max-w-[750px] mt-8">
+                <LightboxImage
+                  src="/images/sq-bl.png"
+                  alt="Squirll color direction exploration"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-6">Color direction exploration</p>
+
               <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>The blue had an argument behind it: credibility borrowed from category convention, a trust signal. But the more we worked through it, the clearer it became that it was solving the wrong problem. Squirll wasn&apos;t competing with banks - it was competing with the anxious, approximate version of money management people do in their heads.</p>
               </div>
@@ -194,15 +203,6 @@ export default function SquirllCaseStudy() {
               <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>The near-black base removes the aesthetic memory of bank statements and spreadsheets, the associations people carry from every finance tool they&apos;ve already abandoned.</p>
               </div>
-
-              <div className="rounded-xl overflow-hidden max-w-[750px] mt-8">
-                <LightboxImage
-                  src="/images/sq-bl.png"
-                  alt="Squirll color direction exploration"
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Color direction exploration</p>
             </section>
 
             {/* Typography */}
