@@ -192,7 +192,7 @@ export default function PAACaseStudy() {
 
               <div className="space-y-8 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <div>
-                  <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium text-foreground">Challenge 1: Structural model</h3>
+                  <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium text-foreground">Challenge 1: New structural model</h3>
                   <p>
                     In the early wireframes I explored a unified prioritized feed, everything in one list, sorted by urgency. Clinicians needed to distinguish between immediate risks (regulatory penalties, care gaps) and general maintenance (ongoing tasks that are important but not urgent).
                   </p>
@@ -223,20 +223,6 @@ export default function PAACaseStudy() {
                 <p>Which led me to further ideation and changing the architecture of the top bar. By running card sorting sessions, I collected the data on how the tasks would be best grouped to reflect the acuity for the clinicians. Pending actions with visual markers of &quot;past due&quot; should help the clinician see where to put the effort at first. Patient overview included tasks and status updates to keep the clinician in loop.</p>
               </div>
 
-              <div className="mt-10 mb-8 max-w-[750px]">
-                <div className="rounded-xl overflow-hidden">
-                  <LightboxImage
-                    src="/images/paa-1.png"
-                    alt="Clinician pain points across the shift,login, task review, messaging, documentation"
-                    width={2895}
-                    height={1302}
-                    unoptimized
-                    className="w-full h-auto object-cover"
-                    sizes="(max-width: 768px) 100vw, 750px"
-                  />
-                </div>
-                <p className="mt-3 text-sm text-muted-foreground text-center">Annotated journey map showing moments of context-switching and status hunting</p>
-              </div>
 
               <div className="space-y-8 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <div>
