@@ -23,7 +23,6 @@ export default function PAACaseStudy() {
               <a href="#problem" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">The Problem</a>
               <a href="#discovery" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Discovery</a>
               <a href="#explorations" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Design Exploration</a>
-              <a href="#solution" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">The Solution</a>
               <a href="#ai" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">The AI Layer</a>
             </nav>
           </aside>
@@ -296,25 +295,19 @@ export default function PAACaseStudy() {
                     sizes="(max-width: 768px) 100vw, 750px"
                   />
                 </div>
-                <p className="mt-3 text-sm text-muted-foreground text-center">Two-tier structure: urgency tiles for immediate orientation, task table for execution</p>
               </div>
             </section>
 
             {/* The Solution */}
             <section id="solution" className="mb-12">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">The Solution</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 max-w-[750px]">
-                Designing an information hierarchy
-              </h2>
-
               <div className="space-y-8 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <div>
                   <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium text-foreground">Zero-layer task table</h3>
                   <p>
-                    Below the tiles, a filterable task table gives granular control, filter by due date, task type, facility, or patient. This is where the work gets done.
+                    Below the tiles, a filterable task table gives granular control, filter by due date, task type, facility, or patient.
                   </p>
                   <p className="mt-3">
-                    The design principle throughout: progressive disclosure. The interface answers the most urgent question first, then gives you tools to go deeper.
+                    The design principle I used here was progressive disclosure. The interface answers the most urgent question first, then gives you tools to go deeper, for example, click on the Upload documents and instantly see the documents without leaving the Home page.
                   </p>
                 </div>
               </div>
