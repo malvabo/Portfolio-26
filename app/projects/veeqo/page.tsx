@@ -423,7 +423,7 @@ export default function VeeqoCaseStudy() {
                           <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-2">Amazon</p>
                           <div className="border border-[#EBEBEB] rounded-lg p-3 bg-[#F5F3F0] space-y-1.5">
                             {["Invoice", "Shipping label", "Return label"].map((doc) => (
-                              <div key={doc} className="text-[11px] text-muted-foreground">{doc}</div>
+                              <div key={doc} className="text-[13px] text-muted-foreground">{doc}</div>
                             ))}
                           </div>
                         </div>
@@ -438,9 +438,9 @@ export default function VeeqoCaseStudy() {
                           <p className="font-mono text-[10px] uppercase tracking-wider text-red-400 mb-2">3rd party tool · External</p>
                           <div className="border border-red-100 rounded-lg p-3 bg-red-50/20 space-y-1.5">
                             {["Invoice Dior Spring", "Return label Chanel Spring", "Shipping label Perfumes Summer"].map((doc) => (
-                              <div key={doc} className="text-[11px] text-muted-foreground">{doc}</div>
+                              <div key={doc} className="text-[13px] text-muted-foreground">{doc}</div>
                             ))}
-                            <div className="text-[11px] text-muted-foreground/40">···</div>
+                            <div className="text-[13px] text-muted-foreground/40">···</div>
                           </div>
                         </div>
                       </div>
@@ -464,11 +464,11 @@ export default function VeeqoCaseStudy() {
                               { label: "Return label", brands: ["Dior Spring"] },
                             ].map(({ label, brands }) => (
                               <div key={label} className="rounded-lg bg-white border border-emerald-100 p-2.5">
-                                <p className="text-[11px] font-medium text-foreground mb-1">{label}</p>
-                                <p className="text-[10px] text-muted-foreground mb-1.5">Brands tied to it</p>
+                                <p className="text-[13px] font-medium text-foreground mb-1">{label}</p>
+                                <p className="text-[11px] text-muted-foreground mb-1.5">Brands tied to it</p>
                                 <div className="flex flex-wrap gap-1">
                                   {brands.map((b) => (
-                                    <span key={b} className="text-[10px] px-1.5 py-0.5 rounded-md bg-emerald-50 border border-emerald-100 text-muted-foreground">{b}</span>
+                                    <span key={b} className="text-[11px] px-1.5 py-0.5 rounded-md bg-emerald-50 border border-emerald-100 text-muted-foreground">{b}</span>
                                   ))}
                                 </div>
                               </div>
