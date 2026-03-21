@@ -195,10 +195,11 @@ export default function VeeqoCaseStudy() {
               </div>
               <p className="text-sm text-muted-foreground max-w-[750px] mt-3 text-center mb-6">Drag-and-drop editor exploration - ruled out due to engineering cost and enterprise complexity</p>
               <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
-                <p>A simple document table without previews surfaced a problem from a similar internal project: sellers don&apos;t name their documents consistently, so without a visual anchor the list became noise and finding the right template was harder than it should have been.</p>
+                <p className="font-medium text-foreground">Direction 2:</p>
+                <p>Simple document table without previews surfaced a problem from a similar internal project: sellers don&apos;t name their documents consistently. Without a visual anchor the list became noise and finding the right template was harder than it should have been.</p>
               </div>
               <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
-                <p>HTML as an &quot;advanced&quot; button on ready-to-go templates felt like a clean handoff between modes, but it made exploration harder to justify - sellers are less likely to discover what&apos;s possible when it&apos;s hidden behind an advanced label. As the number of templates scaled, the pattern would have broken down.</p>
+                <p>HTML as an &quot;advanced&quot; button on existing settings made exploration harder to justify - sellers are less likely to discover what&apos;s possible when it&apos;s hidden behind an advanced label. As the number of templates scaled, the pattern would have broken down.</p>
               </div>
               <div className="rounded-xl overflow-hidden max-w-[750px] my-6">
                 <LightboxImage src="/images/vq-doc8.png" alt="Four editing modes" className="w-full h-auto object-cover" />
