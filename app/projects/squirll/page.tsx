@@ -94,7 +94,6 @@ export default function SquirllCaseStudy() {
               </h2>
               <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>Squirll is an AI-driven personal finance platform that connects to your accounts, reads your patterns, and surfaces what matters automatically. I joined as the sole designer on a contract basis, working directly with two founders, a PM, and a team of three engineers.</p>
-                <p>Most people don&apos;t abandon finance apps because the features fail - they abandon them because opening the app feels like a confrontation. Every session is a reckoning with decisions already made. That was the brief beneath the brief.</p>
               </div>
             </section>
 
@@ -114,7 +113,7 @@ export default function SquirllCaseStudy() {
                 <p className="font-serif text-[1.375rem] leading-[1.4] tracking-[-0.02em] text-foreground mb-3">
                   &ldquo;The product should feel like a premium spa.&rdquo;
                 </p>
-                <p className="text-[15px] leading-relaxed text-muted-foreground">
+                <p className="text-[17px] leading-relaxed text-muted-foreground">
                   Not a dashboard, not a financial tool but an environment where the user arrives and immediately feels that something capable is handling things, without being asked to do anything themselves. Defined before any visual work began, I presented to founders and PM as a filter for every decision that followed.
                 </p>
               </div>
