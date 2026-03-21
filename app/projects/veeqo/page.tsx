@@ -381,68 +381,56 @@ export default function VeeqoCaseStudy() {
 
                   {/* Brand scheme diagram */}
                   <div className="rounded-xl bg-[#F5F3F0] p-5 mb-6">
-                    <div className="flex gap-3 items-start">
+                    <div className="grid grid-cols-[1fr_36px_1fr] gap-3 items-center">
 
-                      {/* Company Default */}
-                      <div className="shrink-0 w-[170px]">
-                        <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-2">Company default</p>
-                        <div className="border border-[#DDDDD8] rounded-xl bg-white p-3">
-                          <p className="text-[12px] font-medium text-foreground mb-2.5">Default brand</p>
-                          <div className="space-y-1.5">
-                            {["Invoice", "Packing slip", "Pick list", "Return label"].map((doc) => (
-                              <div key={doc} className="flex items-center justify-between gap-2">
-                                <span className="text-[11px] text-muted-foreground">{doc}</span>
-                                <span className="text-[10px] px-1.5 py-0.5 rounded-md bg-[#EBEBEB] text-muted-foreground shrink-0">Default</span>
+                      {/* Old way: two columns */}
+                      <div className="space-y-3">
+                        {/* 3rd party tool */}
+                        <div>
+                          <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-2">3rd party tool</p>
+                          <div className="border border-dashed border-red-200 rounded-xl bg-white p-3">
+                            <div className="space-y-1.5">
+                              {["Invoice Dior Spring", "Return label Chanel Spring", "Shipping label Perfumes Summer"].map((doc) => (
+                                <div key={doc} className="text-[11px] text-muted-foreground">{doc}</div>
+                              ))}
+                              <div className="text-[11px] text-muted-foreground/40">···</div>
+                            </div>
+                          </div>
+                        </div>
+                        {/* Amazon simple settings */}
+                        <div>
+                          <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-2">Simple document settings in Amazon</p>
+                          <div className="border border-[#DDDDD8] rounded-xl bg-white p-3">
+                            <div className="space-y-1.5">
+                              {["Invoice", "Shipping label", "Return label"].map((doc) => (
+                                <div key={doc} className="text-[11px] text-muted-foreground">{doc}</div>
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Arrow */}
+                      <div className="flex flex-col items-center gap-1">
+                        <svg width="28" height="14" viewBox="0 0 28 14" fill="none">
+                          <path d="M0 7h22M16 1l6 6-6 6" stroke="#D1D5DB" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                        <span className="font-mono text-[9px] uppercase tracking-wider text-muted-foreground/60 text-center leading-tight">old<br/>way</span>
+                      </div>
+
+                      {/* New: Document library */}
+                      <div>
+                        <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-2">Document library</p>
+                        <div className="border border-emerald-200 rounded-xl bg-white p-3">
+                          <div className="space-y-2">
+                            <div className="rounded-lg bg-emerald-50/60 border border-emerald-100 p-2.5">
+                              <p className="text-[11px] font-medium text-foreground mb-1">Document version</p>
+                              <p className="text-[10px] text-muted-foreground">Brands tied to it</p>
+                              <div className="flex flex-wrap gap-1 mt-1.5">
+                                {["Dior Spring", "Dior Summer", "Dior Winter"].map((b) => (
+                                  <span key={b} className="text-[10px] px-1.5 py-0.5 rounded-md bg-white border border-emerald-100 text-muted-foreground">{b}</span>
+                                ))}
                               </div>
-                            ))}
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Divider */}
-                      <div className="flex items-center self-stretch pt-7">
-                        <div className="w-px h-full bg-[#DDDDD8]" />
-                      </div>
-
-                      {/* Brand A - Dior 2026 */}
-                      <div className="flex-1">
-                        <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-2">Brand</p>
-                        <div className="border border-[#DDDDD8] rounded-xl bg-white p-3">
-                          <p className="text-[12px] font-medium text-foreground mb-2.5">Dior 2026</p>
-                          <div className="space-y-1.5">
-                            <div className="flex items-center justify-between gap-2">
-                              <span className="text-[11px] text-muted-foreground">Invoice Dior</span>
-                              <span className="text-[10px] px-1.5 py-0.5 rounded-md bg-[#DCFCE7] text-[#166534] shrink-0">Ready to go</span>
-                            </div>
-                            <div className="flex items-center justify-between gap-2">
-                              <span className="text-[11px] text-muted-foreground">Packing slip Dior</span>
-                              <span className="text-[10px] px-1.5 py-0.5 rounded-md bg-[#DBEAFE] text-[#1d4ed8] shrink-0">Custom</span>
-                            </div>
-                            <div className="flex items-center justify-between gap-2">
-                              <span className="text-[11px] text-muted-foreground">Pick list</span>
-                              <span className="text-[10px] px-1.5 py-0.5 rounded-md bg-[#DCFCE7] text-[#166534] shrink-0">Ready to go</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Brand B - Chanel */}
-                      <div className="flex-1">
-                        <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-2">Brand</p>
-                        <div className="border border-[#DDDDD8] rounded-xl bg-white p-3">
-                          <p className="text-[12px] font-medium text-foreground mb-2.5">Chanel</p>
-                          <div className="space-y-1.5">
-                            <div className="flex items-center justify-between gap-2">
-                              <span className="text-[11px] text-muted-foreground">Invoice Chanel</span>
-                              <span className="text-[10px] px-1.5 py-0.5 rounded-md bg-[#DCFCE7] text-[#166534] shrink-0">Ready to go</span>
-                            </div>
-                            <div className="flex items-center justify-between gap-2">
-                              <span className="text-[11px] text-muted-foreground">Packing slip Chanel</span>
-                              <span className="text-[10px] px-1.5 py-0.5 rounded-md bg-[#DBEAFE] text-[#1d4ed8] shrink-0">Custom</span>
-                            </div>
-                            <div className="flex items-center justify-between gap-2">
-                              <span className="text-[11px] text-muted-foreground">Pick list</span>
-                              <span className="text-[10px] px-1.5 py-0.5 rounded-md bg-[#DCFCE7] text-[#166534] shrink-0">Ready to go</span>
                             </div>
                           </div>
                         </div>
