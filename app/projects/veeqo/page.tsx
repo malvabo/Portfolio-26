@@ -216,11 +216,11 @@ export default function VeeqoCaseStudy() {
                 <p>I decided on the following architectural approach:</p>
                 <ul className="space-y-3 list-none">
                   <li className="flex gap-3">
-                    <span className="mt-[0.35em] shrink-0 w-1.5 h-1.5 rounded-full bg-muted-foreground/40 mt-2.5" />
+                    <span className="mt-[11px] shrink-0 w-1.5 h-1.5 rounded-full bg-muted-foreground" />
                     <span>For SMBs who just wanted things to work, I designed Category-Aware Templates. By using pre-configured settings based on the document type, we eliminated the &quot;blank canvas&quot; anxiety and handled the 80% use case with simple toggles.</span>
                   </li>
                   <li className="flex gap-3">
-                    <span className="mt-[0.35em] shrink-0 w-1.5 h-1.5 rounded-full bg-muted-foreground/40 mt-2.5" />
+                    <span className="mt-[11px] shrink-0 w-1.5 h-1.5 rounded-full bg-muted-foreground" />
                     <span>Enterprise sellers and sellers with high operational complexity would use HTML and AI editor. I decided on providing a library of high-quality, pre-coded base templates so most users would only need to change a couple of lines of CSS, rather than writing code from a blank screen.</span>
                   </li>
                 </ul>
