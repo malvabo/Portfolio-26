@@ -390,12 +390,13 @@ export default function VeeqoCaseStudy() {
                   <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Category-aware template defaults - pre-built field sets per document type</p>
                 </div>
                 <div>
-                  <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Research based additional settings</p>
-                  <p className="text-[17px] leading-relaxed text-muted-foreground mb-5">Field priorities were driven by data – frequency of mention across support tickets and seller interviews determined which variables made it into the first release. Most-used fields shipped first, edge cases queued behind them.</p>
+                  <p className="text-[17px] leading-relaxed text-muted-foreground mb-5">Users can either use Ready-to-go template with simple toggle-based settings, create a document variant from scratch or use one of the HTML variants. HTML variants are based on the most common setups and help users speed up the custom document creation.</p>
                   <div className="rounded-xl overflow-hidden">
                     <LightboxImage src="/images/vq11.png" alt="Research based additional settings" className="w-full h-auto object-cover" />
                   </div>
                   <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Research-informed field set — most-requested variables surfaced first</p>
+                  <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2 mt-6">Ready-to-go template</p>
+                  <p className="text-[17px] leading-relaxed text-muted-foreground mb-5">Field priorities were driven by data – frequency of mention across support tickets and seller interviews determined which variables made it into the first release. Most-used fields shipped first, edge cases queued behind them.</p>
                   <div className="rounded-xl overflow-hidden mt-4">
                     <LightboxImage src="/images/vq-doc31.png" alt="Research based additional settings detail" className="w-full h-auto object-cover" />
                   </div>
