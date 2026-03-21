@@ -356,34 +356,7 @@ export default function PAACaseStudy() {
                 <div>
                   <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium text-foreground">Speeding up the qualification workflows</h3>
                   <p>
-                    The generation model worked from two inputs: the structured assessment data and the SNF qualification criteria under CMS guidelines. We knew what information clinicians needed to see. We generated a structured summary that was strictly following SNF criteria to make it easier and faster for clinicians to make a decision and provide the judgement and data behind it to the payors.
-                  </p>
-                </div>
-              </div>
-
-              <div className="my-10 max-w-[750px]">
-                <div className="rounded-xl overflow-hidden">
-                  <LightboxImage
-                    src="/images/paa-doc2.png"
-                    alt="PAA documentation draft"
-                    width={1600}
-                    height={1000}
-                    unoptimized
-                    className="w-full h-auto object-cover"
-                    sizes="(max-width: 768px) 100vw, 750px"
-                  />
-                </div>
-                <p className="mt-3 text-sm text-muted-foreground text-center">Generated draft narrative, pre-populated from assessment data and CMS criteria, ready for clinician review</p>
-              </div>
-
-
-              <div className="space-y-6 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
-                <div>
-                  <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium text-foreground">Protecting system integrity</h3>
-                  <p>
-                    There was a less obvious risk to design against: gaming. If clinicians could see the AI-generated draft before the assessment was locked, the incentive structure would break. Clinicians could read the output, go back, adjust clinical responses to get a more favorable documentation result.                   </p>
-                  <p className="mt-4">
-                    I designed a solution where generation only triggers after the assessment is submitted and locked. Clinicians can edit the narrative draft, but cannot alter the underlying assessment data. Clinical integrity and documentation accuracy stay aligned.
+                    I generated a structured summary that was strictly following SNF criteria to make it easier and faster for clinicians to make a decision and provide the judgement and data behind it to the payors.
                   </p>
                 </div>
               </div>
@@ -403,6 +376,33 @@ export default function PAACaseStudy() {
                 <p className="mt-3 text-sm text-muted-foreground text-center">Discharge documentation flow, sequenced for clinical review before submission</p>
               </div>
 
+              <div className="space-y-6 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+                <div>
+                  <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium text-foreground">Protecting system integrity</h3>
+                  <p>
+                    There was a less obvious risk to design against: gaming. If clinicians could see the AI-generated draft before the assessment was locked, the incentive structure would break. Clinicians could read the output, go back, adjust clinical responses to get a more favorable documentation result.
+                  </p>
+                  <p className="mt-4">
+                    I designed a solution where generation only triggers after the assessment is submitted and locked. Clinicians can edit the narrative draft, but cannot alter the underlying assessment data. Clinical integrity and documentation accuracy stay aligned.
+                  </p>
+                </div>
+              </div>
+
+              <div className="my-10 max-w-[750px]">
+                <div className="rounded-xl overflow-hidden">
+                  <LightboxImage
+                    src="/images/paa-doc2.png"
+                    alt="PAA documentation draft"
+                    width={1600}
+                    height={1000}
+                    unoptimized
+                    className="w-full h-auto object-cover"
+                    sizes="(max-width: 768px) 100vw, 750px"
+                  />
+                </div>
+                <p className="mt-3 text-sm text-muted-foreground text-center">Generated draft narrative, pre-populated from assessment data and CMS criteria, ready for clinician review</p>
+              </div>
+
             </section>
 
 
@@ -416,7 +416,7 @@ export default function PAACaseStudy() {
                 <div>
                   <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-2 font-medium text-foreground">Build the clinical feedback loop from day one</h3>
                   <p>
-                    When I joined, there was no structured channel between design and clinical staff. I pushed to make it a regular fixture, scheduled reviews with care coordinators on real screens, not abstract questions. Clinicians don&apos;t tell you what they want; they show you where they hesitate. That cadence should exist before the first wireframe.
+                    When I joined, there was no structured channel between design and clinical staff. I pushed to make it a regular fixture, scheduled reviews with care coordinators on real screens. Clinicians don&apos;t tell you what they want, they show you where they hesitate. That cadence should exist before the first wireframe.
                   </p>
                 </div>
                 <div>
