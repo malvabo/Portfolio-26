@@ -209,12 +209,12 @@ export default function VeeqoCaseStudy() {
 
             {/* Team Alignment */}
             <section id="reframe" className="mb-14">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Design Process</p>
+              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Collaboration</p>
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 max-w-[750px]">
                 Team Alignment
               </h2>
               <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
-                <p>When I stepped in, the brief was already shifting. We were mid-migration of the product to the US version, the primary stakeholder was new to the company, and engineering was stretched thin.</p>
+                <p>When I stepped in, we were mid-migration of the product to the US version, the primary stakeholder was new to the company, and engineering was stretched thin. I had to be the primary decision maker, ensure that the solution covers both business and user needs, is technically feasible now and will be scalable in the future.</p>
               </div>
             </section>
 
