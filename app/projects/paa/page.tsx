@@ -199,6 +199,10 @@ export default function PAACaseStudy() {
                 </div>
               </div>
 
+              <div className="space-y-6 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+                <p>I designed a simple model that has a two-tier structure. A compact row of urgency tiles at the top to answer: am I on fire right now? A filterable task table below to answer: what do I work through next?</p>
+              </div>
+
               <div className="my-10 max-w-[750px]">
                 <div className="rounded-xl overflow-hidden">
                   <LightboxImage
@@ -215,7 +219,6 @@ export default function PAACaseStudy() {
               </div>
 
               <div className="space-y-6 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
-                <p>I designed a simple model that has a two-tier structure. A compact row of urgency tiles at the top to answer: am I on fire right now? A filterable task table below to answer: what do I work through next?</p>
                 <p>This first design iteration was welcome by the clinical team however I have spotted a problem: the tasks were not grouped based on the priority for the clinician.</p>
                 <p>Which led me to further ideation and changing the architecture of the top bar. By running card sorting sessions, I collected the data on how the tasks would be best grouped to reflect the acuity for the clinicians. Pending actions with visual markers of &quot;past due&quot; should help the clinician see where to put the effort at first. Patient overview included tasks and status updates to keep the clinician in loop.</p>
               </div>
