@@ -14,7 +14,7 @@ export function VeeqoSection() {
         <span className="inline-block px-2.5 py-0.5 text-[11px] font-mono uppercase tracking-widest rounded-md bg-[#E8E3DD] text-[#6B5D4F]">Big tech</span>
       </div>
       <h2 className="text-2xl md:text-3xl leading-[1.1] font-serif mb-8 tracking-tight">
-        Amazon: Replacing a critical document system for 50,000+ sellers
+        Amazon: Redesigning a document system for 50,000+ sellers
       </h2>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 mb-10">

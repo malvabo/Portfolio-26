@@ -39,7 +39,7 @@ export default function VeeqoCaseStudy() {
             <div className="mb-8 max-w-[750px]">
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-3">Amazon · Veeqo · Document Automation</p>
               <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl tracking-[-0.02em] leading-[1.15] mb-4">
-                Amazon: Replacing a critical document system for 50,000+ sellers
+                Amazon: Redesigning a document system for 50,000+ sellers
               </h1>
               <p className="text-[17px] leading-relaxed text-muted-foreground">
                 Migrating Veeqo&apos;s document infrastructure off a third-party dependency, across two seller segments, an unstable API, and a scope that kept growing.
