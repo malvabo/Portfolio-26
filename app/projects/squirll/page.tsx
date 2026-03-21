@@ -233,7 +233,7 @@ export default function SquirllCaseStudy() {
                 Building trust through illustration
               </h2>
               <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
-                <p>Showing actual interface too early in onboarding asks users to parse something before they&apos;ve decided to trust it. I needed illustration that communicated the product promise without requiring any interpretation from the user.</p>
+                <p>For the insights screen I chose 3D over flat, because flat illustration has become so widespread in consumer software that it&apos;s stopped carrying meaning. Three-dimensional form creates associations that flat can&apos;t manufacture - depth, layers, intelligence operating beneath the surface. The cobalt blue of that illustration is the only cool tone in an otherwise warm palette, deliberately separating what the AI is doing from what the user sees as a result.</p>
               </div>
 
               <div className="grid grid-cols-2 gap-4 max-w-[750px] mt-8">
@@ -260,10 +260,6 @@ export default function SquirllCaseStudy() {
                 />
               </div>
               <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-8">Onboarding orbital illustration</p>
-
-              <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
-                <p>For the insights screen I chose 3D over flat, because flat illustration has become so widespread in consumer software that it&apos;s stopped carrying meaning. Three-dimensional form creates associations that flat can&apos;t manufacture - depth, layers, intelligence operating beneath the surface. The cobalt blue of that illustration is the only cool tone in an otherwise warm palette, deliberately separating what the AI is doing from what the user sees as a result.</p>
-              </div>
 
               <div className="flex gap-4 mt-8 max-w-[750px]">
                 <div className="flex-1 rounded-xl overflow-hidden bg-black aspect-square">
@@ -318,15 +314,7 @@ export default function SquirllCaseStudy() {
 
             {/* Craft */}
             <section id="craft" className="mb-14">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Craft</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 max-w-[750px]">
-                Craft and attention to detail
-              </h2>
-              <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
-                <p>The difference between a functional interface and a considered one is that these were made with a specific user feeling as the target, argued for in reviews with the team, and connected back to behavior rather than aesthetics.</p>
-              </div>
-
-              <div className="flex gap-4 max-w-[750px] mt-8">
+              <div className="flex gap-4 max-w-[750px]">
                 <div className="flex-1 rounded-xl overflow-hidden aspect-square">
                   <LightboxImage
                     src="/images/squirll-collage-8.jpg"
