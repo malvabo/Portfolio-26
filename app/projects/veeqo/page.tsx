@@ -227,48 +227,6 @@ export default function VeeqoCaseStudy() {
                   </li>
                 </ul>
               </div>
-            </section>
-
-            {/* Strategy */}
-            <section id="strategy" className="mb-14">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Strategy</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 max-w-[750px]">
-                Account migration
-              </h2>
-              {/* Decision table */}
-              <div className="border border-[#EBEBEB] max-w-[750px] mb-8 overflow-hidden bg-white">
-                <div className="grid grid-cols-[200px_1fr_1fr_1fr] border-b border-[#EBEBEB] bg-[#F5F3F0]">
-                  <div className="p-4 border-r border-[#EBEBEB]" />
-                  <div className="p-4 border-r border-[#EBEBEB] font-mono text-[10px] uppercase tracking-wider text-muted-foreground">Lead time</div>
-                  <div className="p-4 border-r border-[#EBEBEB] font-mono text-[10px] uppercase tracking-wider text-muted-foreground">Enterprise risk</div>
-                  <div className="p-4 font-mono text-[10px] uppercase tracking-wider text-muted-foreground">Vendor savings</div>
-                </div>
-                <div className="grid grid-cols-[200px_1fr_1fr_1fr] border-b border-[#EBEBEB]">
-                  <div className="p-4 border-r border-[#EBEBEB] text-[13px] font-medium text-foreground">Automated migration tool</div>
-                  <div className="p-4 border-r border-[#EBEBEB] text-[13px] text-red-600">4 months</div>
-                  <div className="p-4 border-r border-[#EBEBEB] text-[13px] text-muted-foreground">Accounts exposed for longer</div>
-                  <div className="p-4 text-[13px] text-muted-foreground">Vendor stays on 3 months longer</div>
-                </div>
-                <div className="grid grid-cols-[200px_1fr_1fr_1fr] bg-emerald-50">
-                  <div className="p-4 border-r border-emerald-100 text-[13px] font-medium text-emerald-800">White-glove manual ✓</div>
-                  <div className="p-4 border-r border-emerald-100 text-[13px] text-emerald-700">2 weeks</div>
-                  <div className="p-4 border-r border-emerald-100 text-[13px] text-emerald-700">0% churn · hands-on porting</div>
-                  <div className="p-4 text-[13px] text-emerald-700">$X00k saved · sunset 3 months early</div>
-                </div>
-              </div>
-
-              <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
-                <p>We faced a choice: build an automated migration tool (4 months) or a high-touch manual white-glove service (2 weeks). I advocated for the manual path for enterprise accounts. While not technically scalable, it allowed us to meet the wider company deadline for migration to the US version of the product.</p>
-              </div>
-
-            </section>
-
-            {/* Design Decisions */}
-            <section id="design" className="mb-14">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Key Design Decisions</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-8 max-w-[750px]">
-                What went into the work
-              </h2>
 
               {/* Before / After architecture */}
               <div className="max-w-[750px] mb-12">
@@ -349,6 +307,49 @@ export default function VeeqoCaseStudy() {
 
                 </div>
               </div>
+            </section>
+
+            {/* Strategy */}
+            <section id="strategy" className="mb-14">
+              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Strategy</p>
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 max-w-[750px]">
+                Account migration
+              </h2>
+              {/* Decision table */}
+              <div className="border border-[#EBEBEB] max-w-[750px] mb-8 overflow-hidden bg-white">
+                <div className="grid grid-cols-[200px_1fr_1fr_1fr] border-b border-[#EBEBEB] bg-[#F5F3F0]">
+                  <div className="p-4 border-r border-[#EBEBEB]" />
+                  <div className="p-4 border-r border-[#EBEBEB] font-mono text-[10px] uppercase tracking-wider text-muted-foreground">Lead time</div>
+                  <div className="p-4 border-r border-[#EBEBEB] font-mono text-[10px] uppercase tracking-wider text-muted-foreground">Enterprise risk</div>
+                  <div className="p-4 font-mono text-[10px] uppercase tracking-wider text-muted-foreground">Vendor savings</div>
+                </div>
+                <div className="grid grid-cols-[200px_1fr_1fr_1fr] border-b border-[#EBEBEB]">
+                  <div className="p-4 border-r border-[#EBEBEB] text-[13px] font-medium text-foreground">Automated migration tool</div>
+                  <div className="p-4 border-r border-[#EBEBEB] text-[13px] text-red-600">4 months</div>
+                  <div className="p-4 border-r border-[#EBEBEB] text-[13px] text-muted-foreground">Accounts exposed for longer</div>
+                  <div className="p-4 text-[13px] text-muted-foreground">Vendor stays on 3 months longer</div>
+                </div>
+                <div className="grid grid-cols-[200px_1fr_1fr_1fr] bg-emerald-50">
+                  <div className="p-4 border-r border-emerald-100 text-[13px] font-medium text-emerald-800">White-glove manual ✓</div>
+                  <div className="p-4 border-r border-emerald-100 text-[13px] text-emerald-700">2 weeks</div>
+                  <div className="p-4 border-r border-emerald-100 text-[13px] text-emerald-700">0% churn · hands-on porting</div>
+                  <div className="p-4 text-[13px] text-emerald-700">$X00k saved · sunset 3 months early</div>
+                </div>
+              </div>
+
+              <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+                <p>We faced a choice: build an automated migration tool (4 months) or a high-touch manual white-glove service (2 weeks). I advocated for the manual path for enterprise accounts. While not technically scalable, it allowed us to meet the wider company deadline for migration to the US version of the product.</p>
+              </div>
+
+            </section>
+
+            {/* Design Decisions */}
+            <section id="design" className="mb-14">
+              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Key Design Decisions</p>
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-8 max-w-[750px]">
+                What went into the work
+              </h2>
+
 
               {/* Images */}
               <div className="flex flex-col gap-6 max-w-[750px] mt-10">
