@@ -215,6 +215,17 @@ export default function VeeqoCaseStudy() {
               </h2>
               <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>When I stepped in, we were mid-migration of the product to the US version, the primary stakeholder was new to the company, and engineering was stretched thin. I had to be the primary decision maker, ensure that the solution covers both business and user needs, is technically feasible now and will be scalable in the future.</p>
+                <p>I decided on the following architectural approach:</p>
+                <ul className="space-y-3 list-none">
+                  <li className="flex gap-3">
+                    <span className="mt-[0.35em] shrink-0 w-1.5 h-1.5 rounded-full bg-muted-foreground/40 mt-2.5" />
+                    <span>For SMBs who just wanted things to work, I designed Category-Aware Templates. By using pre-configured settings based on the document type, we eliminated the &quot;blank canvas&quot; anxiety and handled the 80% use case with simple toggles.</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="mt-[0.35em] shrink-0 w-1.5 h-1.5 rounded-full bg-muted-foreground/40 mt-2.5" />
+                    <span>Enterprise sellers and sellers with high operational complexity would use HTML and AI editor. I decided on providing a library of high-quality, pre-coded base templates so most users would only need to change a couple of lines of CSS, rather than writing code from a blank screen.</span>
+                  </li>
+                </ul>
               </div>
             </section>
 
