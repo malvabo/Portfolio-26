@@ -195,7 +195,7 @@ export default function PAACaseStudy() {
                 <div>
                   <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium text-foreground">Challenge 1: Structural model</h3>
                   <p>
-                    Early wireframes explored a unified prioritized feed, everything in one list, sorted by urgency. Clinicians needed to distinguish between immediate risks (regulatory penalties, care gaps) and general maintenance (ongoing tasks that are important but not urgent). A unified feed collapsed that distinction.
+                    In the early wireframes I explored a unified prioritized feed, everything in one list, sorted by urgency. Clinicians needed to distinguish between immediate risks (regulatory penalties, care gaps) and general maintenance (ongoing tasks that are important but not urgent).
                   </p>
                 </div>
               </div>
@@ -215,12 +215,10 @@ export default function PAACaseStudy() {
                 <p className="mt-3 text-sm text-muted-foreground text-center">Old state (messages buried in separate tab) vs. new contextual drawer, clinical data stays visible</p>
               </div>
 
-              <div className="space-y-8 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
-                <div>
-                  <p>
-                    The model that emerged was a two-tier structure. A compact row of urgency tiles at the top answers: am I on fire right now? A filterable task table below answers: what do I work through next?
-                  </p>
-                </div>
+              <div className="space-y-6 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+                <p>I designed a simple model that has a two-tier structure. A compact row of urgency tiles at the top to answer: am I on fire right now? A filterable task table below to answer: what do I work through next?</p>
+                <p>This first design iteration was welcome by the clinical team however I have spotted a problem: the tasks were not grouped based on the priority for the clinician.</p>
+                <p>Which led me to further ideation and changing the architecture of the top bar. By running card sorting sessions, I collected the data on how the tasks would be best grouped to reflect the acuity for the clinicians. Pending actions with visual markers of &quot;past due&quot; should help the clinician see where to put the effort at first. Patient overview included tasks and status updates to keep the clinician in loop.</p>
               </div>
 
               <div className="mt-10 mb-8 max-w-[750px]">
