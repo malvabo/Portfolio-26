@@ -516,80 +516,67 @@ export default function VeeqoCaseStudy() {
 
               {/* Roadmap */}
               <div className="max-w-[750px]">
-                {/* Timeline header — desktop only */}
-                <div className="hidden md:flex items-center gap-2 mb-5">
-                  <div className="flex items-center gap-1.5 shrink-0">
-                    <div className="w-3 h-3 rounded-full bg-foreground shrink-0" />
-                    <span className="font-mono text-[10px] uppercase tracking-wider text-foreground whitespace-nowrap">V1 · Shipped</span>
-                  </div>
-                  <div className="flex-1 flex items-center gap-0.5 mx-1">
+                <div className="relative">
+                  {/* Connecting line + arrows — desktop only */}
+                  <div className="hidden md:flex absolute top-[7px] left-[4px] right-0 items-center z-0 pointer-events-none">
                     <div className="flex-1 h-px bg-[#EBEBEB]" />
-                    <svg width="10" height="7" viewBox="0 0 10 7" fill="none" className="shrink-0">
-                      <path d="M0 3.5h7M5 1l2.5 2.5L5 6" stroke="#D1D5DB" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <svg width="7" height="5" viewBox="0 0 7 5" fill="none" className="shrink-0">
+                      <path d="M0 2.5h4.5M3 1l2 1.5-2 1.5" stroke="#D1D5DB" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
-                  </div>
-                  <div className="flex items-center gap-1.5 shrink-0">
-                    <div className="w-3 h-3 rounded-full border-2 border-foreground bg-background shrink-0" />
-                    <span className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground whitespace-nowrap">V2 · Template Intelligence</span>
-                  </div>
-                  <div className="flex-1 flex items-center gap-0.5 mx-1">
                     <div className="flex-1 h-px bg-[#EBEBEB]" />
-                    <svg width="10" height="7" viewBox="0 0 10 7" fill="none" className="shrink-0">
-                      <path d="M0 3.5h7M5 1l2.5 2.5L5 6" stroke="#D1D5DB" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <svg width="7" height="5" viewBox="0 0 7 5" fill="none" className="shrink-0">
+                      <path d="M0 2.5h4.5M3 1l2 1.5-2 1.5" stroke="#D1D5DB" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
-                  </div>
-                  <div className="flex items-center gap-1.5 shrink-0">
-                    <div className="w-3 h-3 rounded-full border-2 border-[#EBEBEB] bg-background shrink-0" />
-                    <span className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground whitespace-nowrap">V3 · AI Document Intelligence</span>
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  {/* V1 - Shipped */}
-                  <div>
-                    <div className="flex md:hidden items-center gap-2 mb-3">
-                      <div className="w-3 h-3 rounded-full bg-foreground shrink-0" />
-                      <span className="font-mono text-[10px] uppercase tracking-wider text-foreground">V1 · Shipped</span>
-                    </div>
-                    <div className="border border-[#EBEBEB] rounded-xl p-4 bg-white space-y-2">
-                      {["Core infrastructure migration", "HTML editor + AI assist", "Toggle-based defaults", "Enterprise white-glove migration"].map((item) => (
-                        <div key={item} className="flex items-start gap-2">
-                          <span className="text-emerald-500 mt-0.5 text-[13px]">✓</span>
-                          <span className="text-[13px] text-muted-foreground">{item}</span>
-                        </div>
-                      ))}
-                    </div>
+                    <div className="flex-1 h-px bg-[#EBEBEB]" />
                   </div>
 
-                  {/* V2 */}
-                  <div>
-                    <div className="flex md:hidden items-center gap-2 mb-3">
-                      <div className="w-3 h-3 rounded-full border-2 border-foreground bg-background shrink-0" />
-                      <span className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground">V2 · Template Intelligence</span>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 relative z-10">
+                    {/* V1 - Shipped */}
+                    <div>
+                      <div className="flex items-center gap-1.5 mb-3">
+                        <div className="w-2 h-2 rounded-full bg-foreground shrink-0" />
+                        <span className="font-mono text-[10px] uppercase tracking-wider text-foreground">V1 · Shipped</span>
+                      </div>
+                      <div className="border border-[#EBEBEB] rounded-xl p-4 bg-white space-y-2">
+                        {["Core infrastructure migration", "HTML editor + AI assist", "Toggle-based defaults", "Enterprise white-glove migration"].map((item) => (
+                          <div key={item} className="flex items-start gap-2">
+                            <span className="text-emerald-500 mt-0.5 text-[13px]">✓</span>
+                            <span className="text-[13px] text-muted-foreground">{item}</span>
+                          </div>
+                        ))}
+                      </div>
                     </div>
-                    <div className="border border-[#EBEBEB] rounded-xl p-4 bg-[#F5F3F0] space-y-2">
-                      {["Expanded template library", "Featured & most-popular surfacing", "Seller starring / favourites", "AI-generated docs"].map((item) => (
-                        <div key={item} className="flex items-start gap-2">
-                          <span className="text-muted-foreground/40 mt-0.5 text-[13px]">○</span>
-                          <span className="text-[13px] text-muted-foreground">{item}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
 
-                  {/* V3 */}
-                  <div>
-                    <div className="flex md:hidden items-center gap-2 mb-3">
-                      <div className="w-3 h-3 rounded-full border-2 border-[#EBEBEB] bg-background shrink-0" />
-                      <span className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground">V3 · AI Document Intelligence</span>
+                    {/* V2 */}
+                    <div>
+                      <div className="flex items-center gap-1.5 mb-3">
+                        <div className="w-2 h-2 rounded-full border border-foreground bg-background shrink-0" />
+                        <span className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground">V2 · Template Intelligence</span>
+                      </div>
+                      <div className="border border-[#EBEBEB] rounded-xl p-4 bg-[#F5F3F0] space-y-2">
+                        {["Expanded template library", "Featured & most-popular surfacing", "Seller starring / favourites", "AI-generated docs"].map((item) => (
+                          <div key={item} className="flex items-start gap-2">
+                            <span className="text-muted-foreground/40 mt-0.5 text-[13px]">○</span>
+                            <span className="text-[13px] text-muted-foreground">{item}</span>
+                          </div>
+                        ))}
+                      </div>
                     </div>
-                    <div className="border border-[#EBEBEB] rounded-xl p-4 bg-white space-y-2">
-                      {["AI-generated docs", "Smart field suggestions based on fulfillment patterns", "Automated improvement recommendations per template"].map((item) => (
-                        <div key={item} className="flex items-start gap-2">
-                          <span className="text-muted-foreground/30 mt-0.5 text-[13px]">○</span>
-                          <span className="text-[13px] text-muted-foreground">{item}</span>
-                        </div>
-                      ))}
+
+                    {/* V3 */}
+                    <div>
+                      <div className="flex items-center gap-1.5 mb-3">
+                        <div className="w-2 h-2 rounded-full border border-[#EBEBEB] bg-background shrink-0" />
+                        <span className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground">V3 · AI Document Intelligence</span>
+                      </div>
+                      <div className="border border-[#EBEBEB] rounded-xl p-4 bg-white space-y-2">
+                        {["AI-generated docs", "Smart field suggestions based on fulfillment patterns", "Automated improvement recommendations per template"].map((item) => (
+                          <div key={item} className="flex items-start gap-2">
+                            <span className="text-muted-foreground/30 mt-0.5 text-[13px]">○</span>
+                            <span className="text-[13px] text-muted-foreground">{item}</span>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>

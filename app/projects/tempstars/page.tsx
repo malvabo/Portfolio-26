@@ -395,12 +395,24 @@ export default function TempStarsCaseStudy() {
 
             <div className="max-w-[750px]">
               <div className="relative">
-                <div className="hidden md:block absolute top-[28px] left-[calc(16.67%-8px)] right-[calc(16.67%-8px)] h-px bg-[#EBEBEB] z-0" />
+                {/* Connecting line + arrows — desktop only */}
+                <div className="hidden md:flex absolute top-[7px] left-[4px] right-0 items-center z-0 pointer-events-none">
+                  <div className="flex-1 h-px bg-[#EBEBEB]" />
+                  <svg width="7" height="5" viewBox="0 0 7 5" fill="none" className="shrink-0">
+                    <path d="M0 2.5h4.5M3 1l2 1.5-2 1.5" stroke="#D1D5DB" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                  <div className="flex-1 h-px bg-[#EBEBEB]" />
+                  <svg width="7" height="5" viewBox="0 0 7 5" fill="none" className="shrink-0">
+                    <path d="M0 2.5h4.5M3 1l2 1.5-2 1.5" stroke="#D1D5DB" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                  <div className="flex-1 h-px bg-[#EBEBEB]" />
+                </div>
+
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 relative z-10">
 
                   <div>
-                    <div className="flex items-center gap-2 mb-3">
-                      <div className="w-4 h-4 rounded-full bg-foreground shrink-0" />
+                    <div className="flex items-center gap-1.5 mb-3">
+                      <div className="w-2 h-2 rounded-full bg-foreground shrink-0" />
                       <span className="font-mono text-[10px] uppercase tracking-wider text-foreground">Phase 1 · Immediate</span>
                     </div>
                     <div className="border border-[#EBEBEB] rounded-xl p-4 bg-white space-y-2">
@@ -415,8 +427,8 @@ export default function TempStarsCaseStudy() {
                   </div>
 
                   <div>
-                    <div className="flex items-center gap-2 mb-3">
-                      <div className="w-4 h-4 rounded-full border-2 border-foreground bg-background shrink-0" />
+                    <div className="flex items-center gap-1.5 mb-3">
+                      <div className="w-2 h-2 rounded-full border border-foreground bg-background shrink-0" />
                       <span className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground">Phase 2 · 6–12 Months</span>
                     </div>
                     <div className="border border-[#EBEBEB] rounded-xl p-4 bg-[#F5F3F0] space-y-2">
@@ -431,8 +443,8 @@ export default function TempStarsCaseStudy() {
                   </div>
 
                   <div>
-                    <div className="flex items-center gap-2 mb-3">
-                      <div className="w-4 h-4 rounded-full border-2 border-[#EBEBEB] bg-background shrink-0" />
+                    <div className="flex items-center gap-1.5 mb-3">
+                      <div className="w-2 h-2 rounded-full border border-[#EBEBEB] bg-background shrink-0" />
                       <span className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground">Phase 3 · 24 Months+</span>
                     </div>
                     <div className="border border-[#EBEBEB] rounded-xl p-4 bg-white space-y-2">
