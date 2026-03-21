@@ -378,8 +378,7 @@ export default function VeeqoCaseStudy() {
                 <div>
                   <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Product brands and associated documents</p>
                   <p className="text-[17px] leading-relaxed text-muted-foreground mb-4">The most significant logical gap in the old system was the inheritance model. Enterprise sellers often manage 5–10 distinct brands under one Veeqo account, each requiring its own visual identity and fields.</p>
-                  <p className="text-[17px] leading-relaxed text-muted-foreground mb-4">I designed a system where each document type acts as a folder. Inside, users can create infinite variants (HTML templates) and map them specifically to one or more brands. To prevent &quot;template soup&quot; the document variant page explicitly shows which brands are currently inheriting that specific template. If user edits the document variant, they can instantly see that it will affect Dior, Chanel, and 10 other brands simultaneously.</p>
-                  <p className="text-[17px] leading-relaxed text-muted-foreground mb-4">On the level of brands, a user can set the document variants that would be tied to it.</p>
+                  <p className="text-[17px] leading-relaxed text-muted-foreground mb-4">I designed a system where each document type acts as a folder. Inside, users can create infinite variants (HTML templates) and map them specifically to one or more brands.</p>
 
                   {/* Brand scheme diagram */}
                   <div className="rounded-xl bg-[#F5F3F0] p-5 mb-6">
@@ -450,14 +449,16 @@ export default function VeeqoCaseStudy() {
                     </div>
                   </div>
 
+                  <p className="text-[17px] leading-relaxed text-muted-foreground mb-4 mt-6">To prevent &quot;template soup&quot; the document variant page explicitly shows which brands are currently inheriting that specific template. If user edits the document variant, they can instantly see that it will affect Dior, Chanel, and 10 other brands simultaneously.</p>
+                  <div className="rounded-xl overflow-hidden mt-4">
+                    <LightboxImage src="/images/vq-doc2.jpg" alt="Document library" className="w-full h-auto object-cover" />
+                  </div>
+                  <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Multi-brand document library - template versions mapped per brand across all document types</p>
+                  <p className="text-[17px] leading-relaxed text-muted-foreground mt-6 mb-4">On the level of brands, a user can set the document variants that would be tied to it.</p>
                   <div className="rounded-xl overflow-hidden">
                     <LightboxImage src="/images/vq2.png" alt="Printing templates with HTML editor and live preview" className="w-full h-auto object-cover" />
                   </div>
                   <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Brand-to-template mapping - each brand links to its own document versions across all document types</p>
-                  <div className="rounded-xl overflow-hidden mt-6">
-                    <LightboxImage src="/images/vq-doc2.jpg" alt="Document library" className="w-full h-auto object-cover" />
-                  </div>
-                  <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Multi-brand document library - template versions mapped per brand across all document types</p>
                   <p className="text-[17px] leading-relaxed text-muted-foreground mt-6 mb-4">Version selection at print time - sellers choose which custom template to use per doc type without leaving the print flow.</p>
                   <div className="rounded-xl overflow-hidden">
                     <LightboxImage src="/images/vq1.png" alt="Document setup with branding and version configuration" className="w-full h-auto object-cover" />
@@ -516,7 +517,7 @@ export default function VeeqoCaseStudy() {
 
                     {/* V1 - Shipped */}
                     <div>
-                      <div className="flex items-center gap-2 mb-3">
+                      <div className="flex items-center gap-2 mb-5">
                         <div className="w-4 h-4 rounded-full bg-foreground shrink-0" />
                         <span className="font-mono text-[10px] uppercase tracking-wider text-foreground">V1 · Shipped</span>
                       </div>
@@ -532,7 +533,7 @@ export default function VeeqoCaseStudy() {
 
                     {/* V2 */}
                     <div>
-                      <div className="flex items-center gap-2 mb-3">
+                      <div className="flex items-center gap-2 mb-5">
                         <div className="w-4 h-4 rounded-full border-2 border-foreground bg-background shrink-0" />
                         <span className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground">V2 · Template Intelligence</span>
                       </div>
@@ -548,7 +549,7 @@ export default function VeeqoCaseStudy() {
 
                     {/* V3 */}
                     <div>
-                      <div className="flex items-center gap-2 mb-3">
+                      <div className="flex items-center gap-2 mb-5">
                         <div className="w-4 h-4 rounded-full border-2 border-[#EBEBEB] bg-background shrink-0" />
                         <span className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground">V3 · AI Document Intelligence</span>
                       </div>
