@@ -361,6 +361,9 @@ export default function VeeqoCaseStudy() {
                 <div>
                   <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Research based additional settings</p>
                   <p className="text-[17px] leading-relaxed text-muted-foreground mb-5">Field priorities were driven by data – frequency of mention across support tickets and seller interviews determined which variables made it into the first release. Most-used fields shipped first, edge cases queued behind them.</p>
+                  <div className="rounded-xl overflow-hidden">
+                    <LightboxImage src="/images/vq-doc3.png" alt="Research based additional settings" className="w-full h-auto object-cover" />
+                  </div>
                 </div>
                 <div>
                   <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">HTML Editor</p>
