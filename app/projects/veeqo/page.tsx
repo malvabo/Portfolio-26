@@ -114,10 +114,10 @@ export default function VeeqoCaseStudy() {
               <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>Veeqo is a multi-channel shipping platform acquired by Amazon, and documents sit at the core of every order - packing slips, invoices, customs forms, returns labels. The company planned to move UK sellers to US version of the product to ensure consistent brand experience for sellers across all countries and make further updates across countries smooth.</p>
                 <p>UK sellers were using 3rd party solution enabling advanced customisation of the documents. US sellers had only basic editing. Not to lose UK sellers we needed to migrate the solution and include the advanced editing.</p>
+                <p>The third-party editor had no extensibility and no API control.</p>
                 <div className="rounded-xl overflow-hidden">
                   <LightboxImage src="/images/vq-doc7-preview.webp" lightboxSrc="/images/vq-doc7.webp" alt="The system we replaced" className="w-full h-auto object-cover" loading="eager" />
                 </div>
-                <p>The third-party editor had no extensibility and no API control.</p>
                 <div>
                   <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2 mt-6">Business goals</p>
                   <p>Three things had to happen simultaneously: eliminate the third-party PDF dependency, protect retention among top-tier enterprise accounts from the UK, and reclaim technical ownership so the team could ship new document types without being blocked by an external vendor.</p>
@@ -192,11 +192,11 @@ export default function VeeqoCaseStudy() {
                 <div className="space-y-3">
                   <div className="p-4 bg-[#F5F3F0] rounded-lg">
                     <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-2">Support tickets</p>
-                    <p className="text-[14px] text-foreground leading-relaxed">Enterprise sellers filed around customisation limits and template reliability. SMB tickets clustered around setup confusion and generation failures.</p>
+                    <p className="text-[17px] text-foreground leading-relaxed">Enterprise sellers filed around customisation limits and template reliability. SMB tickets clustered around setup confusion and generation failures.</p>
                   </div>
                   <div className="p-4 bg-[#F5F3F0] rounded-lg">
                     <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-2">Seller interviews · Dovetail</p>
-                    <p className="text-[14px] text-foreground leading-relaxed">Their fulfillment flows were unique and their documents needed to reflect these operational needs.</p>
+                    <p className="text-[17px] text-foreground leading-relaxed">Their fulfillment flows were unique and their documents needed to reflect these operational needs.</p>
                   </div>
                 </div>
               </div>
@@ -248,11 +248,11 @@ export default function VeeqoCaseStudy() {
                 <ul className="space-y-3 list-none">
                   <li className="flex gap-3">
                     <span className="mt-[11px] shrink-0 w-1.5 h-1.5 rounded-full bg-muted-foreground" />
-                    <span>For SMBs who just wanted things to work, I designed Category-Aware Templates. By using pre-configured settings based on the document type, we eliminated the &quot;blank canvas&quot; anxiety and handled the 80% use case with simple toggles.</span>
+                    <span><span className="font-semibold text-foreground">For SMBs</span> who just wanted things to work, I designed Category-Aware Templates. By using pre-configured settings based on the document type, we eliminated the &quot;blank canvas&quot; anxiety and handled the 80% use case with simple toggles.</span>
                   </li>
                   <li className="flex gap-3">
                     <span className="mt-[11px] shrink-0 w-1.5 h-1.5 rounded-full bg-muted-foreground" />
-                    <span>Enterprise sellers and sellers with high operational complexity would use HTML and AI editor. I decided on providing a library of high-quality, pre-coded base templates so most users would only need to change a couple of lines of CSS, rather than writing code from a blank screen.</span>
+                    <span><span className="font-semibold text-foreground">Enterprise sellers and sellers with high operational complexity</span> would use HTML and AI editor. I decided on providing a library of high-quality, pre-coded base templates so most users would only need to change a couple of lines of CSS, rather than writing code from a blank screen.</span>
                   </li>
                 </ul>
               </div>
@@ -407,7 +407,7 @@ export default function VeeqoCaseStudy() {
                   <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">HTML editor with AI assist, live preview alongside markup</p>
                 </div>
                 <div>
-                  <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Product brands and associated documents</p>
+                  <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-3 font-medium text-foreground">Product brands and associated documents</h3>
                   <p className="text-[17px] leading-relaxed text-muted-foreground mb-4">The most significant logical gap in the old system was the inheritance model. Enterprise sellers often manage 5–10 distinct brands under one Veeqo account, each requiring its own visual identity and fields.</p>
                   <p className="text-[17px] leading-relaxed text-muted-foreground mb-4">I designed a system where each document type acts as a folder. Inside, users can create infinite variants (HTML templates) and map them specifically to one or more brands.</p>
 
