@@ -233,9 +233,8 @@ export default function VeeqoCaseStudy() {
                   {/* Before */}
                   <div>
                     <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-2">Before</p>
-                    {/* Veeqo box */}
                     <div className="border border-[#EBEBEB] rounded-xl p-4 bg-white">
-                      <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-3">Veeqo</p>
+                      <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-3">Amazon</p>
                       <div className="border border-[#EBEBEB] rounded-lg p-3 bg-[#F5F3F0]">
                         <p className="text-[13px] font-medium text-foreground mb-2">Document Settings</p>
                         <div className="flex items-center gap-2">
@@ -273,7 +272,7 @@ export default function VeeqoCaseStudy() {
                   <div className="flex flex-col">
                     <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-2">After</p>
                     <div className="border border-emerald-200 rounded-xl p-4 bg-emerald-50/30 flex-1">
-                      <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-3">Veeqo</p>
+                      <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-3">Amazon</p>
                       <div className="border border-emerald-100 rounded-lg p-3 bg-emerald-50/30">
                         <p className="text-[13px] font-medium text-foreground mb-3">Document Library</p>
                         {/* Option 1 */}
@@ -389,14 +388,13 @@ export default function VeeqoCaseStudy() {
                       {/* Before */}
                       <div>
                         <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-2">Before</p>
-                        {/* 3rd party tool */}
-                        <div className="border border-dashed border-red-200 rounded-xl p-4 bg-white mb-2">
-                          <p className="font-mono text-[10px] uppercase tracking-wider text-red-400 mb-2">3rd party tool · External</p>
-                          <div className="border border-red-100 rounded-lg p-3 bg-red-50/20 space-y-1.5">
-                            {["Invoice Dior Spring", "Return label Chanel Spring", "Shipping label Perfumes Summer"].map((doc) => (
+                        {/* Amazon simple settings */}
+                        <div className="border border-[#EBEBEB] rounded-xl p-4 bg-white mb-2">
+                          <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-2">Amazon</p>
+                          <div className="border border-[#EBEBEB] rounded-lg p-3 bg-[#F5F3F0] space-y-1.5">
+                            {["Invoice", "Shipping label", "Return label"].map((doc) => (
                               <div key={doc} className="text-[11px] text-muted-foreground">{doc}</div>
                             ))}
-                            <div className="text-[11px] text-muted-foreground/40">···</div>
                           </div>
                         </div>
                         {/* Plus connector */}
@@ -405,13 +403,14 @@ export default function VeeqoCaseStudy() {
                             <path d="M5 1v8M1 5h8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
                           </svg>
                         </div>
-                        {/* Amazon simple settings */}
-                        <div className="border border-[#EBEBEB] rounded-xl p-4 bg-white">
-                          <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-2">Simple document settings in Amazon</p>
-                          <div className="border border-[#EBEBEB] rounded-lg p-3 bg-[#F5F3F0] space-y-1.5">
-                            {["Invoice", "Shipping label", "Return label"].map((doc) => (
+                        {/* 3rd party tool */}
+                        <div className="border border-dashed border-red-200 rounded-xl p-4 bg-white">
+                          <p className="font-mono text-[10px] uppercase tracking-wider text-red-400 mb-2">3rd party tool · External</p>
+                          <div className="border border-red-100 rounded-lg p-3 bg-red-50/20 space-y-1.5">
+                            {["Invoice Dior Spring", "Return label Chanel Spring", "Shipping label Perfumes Summer"].map((doc) => (
                               <div key={doc} className="text-[11px] text-muted-foreground">{doc}</div>
                             ))}
+                            <div className="text-[11px] text-muted-foreground/40">···</div>
                           </div>
                         </div>
                       </div>
@@ -428,16 +427,22 @@ export default function VeeqoCaseStudy() {
                         <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-2">After</p>
                         <div className="border border-emerald-200 rounded-xl p-4 bg-emerald-50/30 flex-1">
                           <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-3">Document library</p>
-                          <div className="border border-emerald-100 rounded-lg p-3 bg-emerald-50/30">
-                            <div className="rounded-lg bg-white border border-emerald-100 p-2.5">
-                              <p className="text-[11px] font-medium text-foreground mb-1">Document version</p>
-                              <p className="text-[10px] text-muted-foreground mb-1.5">Brands tied to it</p>
-                              <div className="flex flex-wrap gap-1">
-                                {["Dior Spring", "Dior Summer", "Dior Winter"].map((b) => (
-                                  <span key={b} className="text-[10px] px-1.5 py-0.5 rounded-md bg-emerald-50 border border-emerald-100 text-muted-foreground">{b}</span>
-                                ))}
+                          <div className="border border-emerald-100 rounded-lg p-3 bg-emerald-50/30 space-y-2">
+                            {[
+                              { label: "Invoice", brands: ["Dior Spring", "Dior Summer", "Dior Winter"] },
+                              { label: "Shipping label", brands: ["Dior Spring", "Chanel"] },
+                              { label: "Return label", brands: ["Dior Spring"] },
+                            ].map(({ label, brands }) => (
+                              <div key={label} className="rounded-lg bg-white border border-emerald-100 p-2.5">
+                                <p className="text-[11px] font-medium text-foreground mb-1">{label}</p>
+                                <p className="text-[10px] text-muted-foreground mb-1.5">Brands tied to it</p>
+                                <div className="flex flex-wrap gap-1">
+                                  {brands.map((b) => (
+                                    <span key={b} className="text-[10px] px-1.5 py-0.5 rounded-md bg-emerald-50 border border-emerald-100 text-muted-foreground">{b}</span>
+                                  ))}
+                                </div>
                               </div>
-                            </div>
+                            ))}
                           </div>
                         </div>
                       </div>
