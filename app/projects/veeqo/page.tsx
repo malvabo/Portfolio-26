@@ -89,7 +89,7 @@ export default function VeeqoCaseStudy() {
                 <div className="rounded-xl overflow-hidden">
                   <LightboxImage src="/images/vq-doc7-preview.webp" lightboxSrc="/images/vq-doc7.webp" alt="The system we replaced" className="w-full h-auto object-cover" loading="eager" />
                 </div>
-                <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">The system we replaced - the third-party template library and its drag-and-drop editor had no extensibility and no API control</p>
+                <p>The third-party editor had no extensibility and no API control.</p>
                 <div>
                   <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2 mt-6">Business goals</p>
                   <p>Three things had to happen simultaneously: eliminate the third-party PDF dependency, protect retention among top-tier enterprise accounts from the UK, and reclaim technical ownership so the team could ship new document types without being blocked by an external vendor.</p>
@@ -160,16 +160,10 @@ export default function VeeqoCaseStudy() {
             {/* Research */}
             <section id="research" className="mb-14">
               <div className="max-w-[750px] space-y-4">
-                <p className="text-[15px] text-foreground leading-relaxed">A competitive scan of ShipStation, Shopify, and similar platforms revealed a consistent gap: rigid pre-built templates on one end, full code editors on the other.</p>
-                <div className="space-y-3">
-                  <div className="p-4 bg-[#F5F3F0] rounded-lg">
-                    <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-2">Support tickets</p>
-                    <p className="text-[14px] text-foreground leading-relaxed">Enterprise sellers filed around customisation limits and template reliability. SMB tickets clustered around setup confusion and generation failures.</p>
-                  </div>
-                  <div className="p-4 bg-[#F5F3F0] rounded-lg">
-                    <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-2">Seller interviews · Dovetail</p>
-                    <p className="text-[14px] text-foreground leading-relaxed">Their fulfillment flows were unique and their documents needed to reflect these operational needs.</p>
-                  </div>
+                <p className="text-[17px] leading-relaxed text-muted-foreground">ShipStation, Shopify, and similar platforms showed the same gap: rigid pre-built templates on one end, full code editors on the other.</p>
+                <div className="p-4 bg-[#F5F3F0] rounded-lg">
+                  <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-2">Seller interviews · Dovetail</p>
+                  <p className="text-[14px] text-foreground leading-relaxed">Their fulfillment flows were unique and their documents needed to reflect these operational needs.</p>
                 </div>
               </div>
             </section>
@@ -188,17 +182,21 @@ export default function VeeqoCaseStudy() {
               </div>
               <p className="text-sm text-muted-foreground max-w-[750px] mt-3 text-center mb-6">Early ideation</p>
               <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
-                <p>Drag and drop was the obvious starting point - familiar for the sellers, no code required. However, after critique sessions with the team, I moved away from it because the build cost was too high for the engineering bandwidth we had. Simple versions of drag and drop tool wouldn&apos;t have supported the complexity enterprise sellers needed.</p>
+                <p>Enterprise sellers filed around customisation limits and template reliability. SMB tickets clustered around setup confusion and generation failures.</p>
+              </div>
+              <div className="max-w-[750px] mt-6">
+                <p className="font-medium text-foreground text-[17px] mb-1">Direction 1:</p>
+                <p className="text-[17px] leading-relaxed text-muted-foreground">Drag and drop was the obvious starting point - familiar for the sellers, no code required. However, after critique sessions with the team, I moved away from it because the build cost was too high for the engineering bandwidth we had. Simple versions of drag and drop tool wouldn&apos;t have supported the complexity enterprise sellers needed.</p>
               </div>
               <div className="rounded-xl overflow-hidden max-w-[750px] my-6">
                 <LightboxImage src="/images/vq-doc12.png" alt="Drag-and-drop editor exploration" className="w-full h-auto object-cover" />
               </div>
               <p className="text-sm text-muted-foreground max-w-[750px] mt-3 text-center mb-6">Drag-and-drop editor exploration - ruled out due to engineering cost and enterprise complexity</p>
-              <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
-                <p className="font-medium text-foreground">Direction 2:</p>
-                <p>Simple document table without previews surfaced a problem from a similar internal project: sellers don&apos;t name their documents consistently. Without a visual anchor the list became noise and finding the right template was harder than it should have been.</p>
+              <div className="max-w-[750px] mt-6">
+                <p className="font-medium text-foreground text-[17px] mb-1">Direction 2:</p>
+                <p className="text-[17px] leading-relaxed text-muted-foreground">Simple document table without previews surfaced a problem from a similar internal project: sellers don&apos;t name their documents consistently. Without a visual anchor the list became noise and finding the right template was harder than it should have been.</p>
               </div>
-              <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+              <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mt-8">
                 <p>HTML as an &quot;advanced&quot; button on existing settings made exploration harder to justify - sellers are less likely to discover what&apos;s possible when it&apos;s hidden behind an advanced label. As the number of templates scaled, the pattern would have broken down.</p>
               </div>
               <div className="rounded-xl overflow-hidden max-w-[750px] my-6">
