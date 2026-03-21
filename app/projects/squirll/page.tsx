@@ -137,7 +137,7 @@ export default function SquirllCaseStudy() {
               <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-6">Early direction drafts</p>
 
               <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
-                <p>Research on arousal and interface design informed this directly. Dark backgrounds lower arousal, reducing the alertness and vigilance that light backgrounds trigger. The implicit message across light-background finance apps is: <em>pay attention to this</em>. The implicit message we were designing toward was the opposite – <em>this is already taken care of</em>. That framing became the filter for every visual decision that followed.</p>
+                <p>Research on arousal and interface design informed this directly. Dark backgrounds lower arousal, reducing the alertness and vigilance that light backgrounds trigger. The implicit message across light-background finance apps is: pay attention to this. The implicit message we were designing toward was the opposite – this is already taken care of. That framing became the filter for every visual decision that followed.</p>
               </div>
             </section>
 
@@ -179,7 +179,7 @@ export default function SquirllCaseStudy() {
               </div>
 
               <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
-                <p>The blue had a genuine argument behind it - credibility borrowed from category convention, the kind of trust signal institutions have spent decades building. But the more we worked through it, the clearer it became that it was solving the wrong problem. Squirll wasn&apos;t competing with banks - it was competing with the anxious, approximate version of money management people do in their heads. Warm dark won.</p>
+                <p>The blue had an argument behind it: credibility borrowed from category convention, a trust signal. But the more we worked through it, the clearer it became that it was solving the wrong problem. Squirll wasn&apos;t competing with banks - it was competing with the anxious, approximate version of money management people do in their heads.</p>
               </div>
 
               <div className="rounded-xl overflow-hidden max-w-[750px] mt-8">
@@ -192,7 +192,7 @@ export default function SquirllCaseStudy() {
               <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-6">Warm dark palette applied</p>
 
               <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
-                <p>The near-black base removes the aesthetic memory of bank statements and spreadsheets, the associations people carry from every finance tool they&apos;ve already abandoned. The radial glow in onboarding anchors the composition and implies that something intelligent is active beneath the surface, without carrying the urgency or anxiety of an alert.</p>
+                <p>The near-black base removes the aesthetic memory of bank statements and spreadsheets, the associations people carry from every finance tool they&apos;ve already abandoned.</p>
               </div>
 
               <div className="rounded-xl overflow-hidden max-w-[750px] mt-8">
