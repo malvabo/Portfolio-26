@@ -364,14 +364,10 @@ export default function VeeqoCaseStudy() {
                 <div>
                   <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Research based additional settings</p>
                   <p className="text-[17px] leading-relaxed text-muted-foreground mb-5">Field priorities were driven by data – frequency of mention across support tickets and seller interviews determined which variables made it into the first release. Most-used fields shipped first, edge cases queued behind them.</p>
-                  <div className="rounded-xl overflow-hidden mb-3">
-                    <LightboxImage src="/images/vq-doc2.jpg" alt="Document library redesign" className="w-full h-auto object-cover" />
-                  </div>
-                  <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-6">Document library redesign: pre-built defaults alongside custom HTML + AI templates</p>
                 </div>
                 <div>
-                  <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Document customisation</p>
-                  <p className="text-[17px] leading-relaxed text-muted-foreground mb-5">The data dropdown replaced memorising API variable names with a searchable field-picker - select Bin Location from the list and the correct variable is injected directly. A coding task becomes a selection task, with live preview updating alongside every change.</p>
+                  <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">HTML Editor</p>
+                  <p className="text-[17px] leading-relaxed text-muted-foreground mb-5">The data dropdown replaced memorising API variable names with a searchable field-picker. Select Bin Location from the list and the correct variable would be injected directly.</p>
                   <div className="rounded-xl overflow-hidden">
                     <LightboxImage src="/images/vq-doc4.png" alt="HTML editor with AI assist and live preview" className="w-full h-auto object-cover" />
                   </div>
@@ -379,7 +375,9 @@ export default function VeeqoCaseStudy() {
                 </div>
                 <div>
                   <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Product brands and associated documents</p>
-                  <p className="text-[17px] leading-relaxed text-muted-foreground mb-4">Brand-to-template mapping - each brand links to its own document versions across all doc types, resolving the multi-brand complexity.</p>
+                  <p className="text-[17px] leading-relaxed text-muted-foreground mb-4">The most significant logical gap in the old system was the inheritance model. Enterprise sellers often manage 5–10 distinct brands under one Veeqo account, each requiring its own visual identity and fields.</p>
+                  <p className="text-[17px] leading-relaxed text-muted-foreground mb-4">I designed a system where each document type acts as a folder. Inside, users can create infinite variants (HTML templates) and map them specifically to one or more brands. To prevent &quot;template soup,&quot; the Document Variant page explicitly shows which brands are currently inheriting that specific template. If user edits the &quot;Default&quot; HTML, they can instantly see that it will update Dior, Chanel, and 10 other brands simultaneously.</p>
+                  <p className="text-[17px] leading-relaxed text-muted-foreground mb-4">On the level of brands, a user can set the document variants that would be tied to it.</p>
 
                   {/* Brand scheme diagram */}
                   <div className="rounded-xl bg-[#F5F3F0] p-5 mb-6">
