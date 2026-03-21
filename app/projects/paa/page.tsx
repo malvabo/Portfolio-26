@@ -138,8 +138,6 @@ export default function PAACaseStudy() {
               </div>
 
               <div className="space-y-6 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mt-10">
-                <p>Three failure modes defined the system:</p>
-
                 <div>
                   <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-2 font-medium text-foreground">Prioritization paralysis</h3>
                   <p>Clinicians had to manually re-triage their entire task list every time they logged in. The interface provided no urgency signal, no distinction between a task that would trigger a regulatory penalty and one that could wait a week.</p>
@@ -152,7 +150,7 @@ export default function PAACaseStudy() {
 
                 <div>
                   <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-2 font-medium text-foreground">No escalation trigger</h3>
-                  <p>Without urgency cues, overdue tasks stayed overdue. Not because clinicians were negligent, because the interface never made the urgency visible.</p>
+                  <p>Without urgency cues, overdue tasks stayed overdue.</p>
                 </div>
 
               </div>
@@ -166,6 +164,12 @@ export default function PAACaseStudy() {
               </h2>
 
               <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
+                <p>My goal was to solve for these 3 key problems and design a dashboard for the clinicians to get answers to the following questions:</p>
+                <ul className="space-y-2 list-none">
+                  <li className="flex gap-3"><span className="shrink-0 w-1.5 h-1.5 rounded-full bg-muted-foreground/40 mt-2.5" /><span>What do I have to act on now?</span></li>
+                  <li className="flex gap-3"><span className="shrink-0 w-1.5 h-1.5 rounded-full bg-muted-foreground/40 mt-2.5" /><span>Among these tasks, which ones are acute?</span></li>
+                  <li className="flex gap-3"><span className="shrink-0 w-1.5 h-1.5 rounded-full bg-muted-foreground/40 mt-2.5" /><span>What did I miss?</span></li>
+                </ul>
                 <p>
                   I developed 30+ screen iterations, moving from structural concepting to granular stress-testing.
                 </p>
