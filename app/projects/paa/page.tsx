@@ -257,20 +257,6 @@ export default function PAACaseStudy() {
                 </div>
               </div>
 
-              <div className="my-10 max-w-[750px]">
-                <div className="rounded-xl overflow-hidden">
-                  <LightboxImage
-                    src="/images/paa-5.png"
-                    alt="Final dashboard,Pending Actions tile row at top, task table below with urgency indicators"
-                    width={6056}
-                    height={3576}
-                    unoptimized
-                    className="w-full h-auto object-cover"
-                    sizes="(max-width: 768px) 100vw, 750px"
-                  />
-                </div>
-                <p className="mt-3 text-sm text-muted-foreground text-center">Final dashboard: urgency tiles, message tile, and filterable task table</p>
-              </div>
 
               <div className="my-10 max-w-[750px]">
                 <div className="rounded-xl overflow-hidden">
@@ -296,7 +282,7 @@ export default function PAACaseStudy() {
                     Below the tiles, a filterable task table gives granular control, filter by due date, task type, facility, or patient.
                   </p>
                   <p className="mt-3">
-                    The design principle I used here was progressive disclosure. The interface answers the most urgent question first, then gives you tools to go deeper, for example, click on the Upload documents and instantly see the documents without leaving the Home page.
+                    The design principle I used here was progressive disclosure. The interface answers the most urgent question first, then gives you tools to go deeper, for example, click on the Review documents and instantly see the documents without leaving the Home page, approve them and finish the task.
                   </p>
                 </div>
               </div>
