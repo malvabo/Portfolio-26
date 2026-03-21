@@ -167,7 +167,7 @@ export default function PAACaseStudy() {
                 <ul className="space-y-2 list-none">
                   <li className="flex gap-3"><span className="shrink-0 w-1.5 h-1.5 rounded-full bg-muted-foreground/40 mt-2.5" /><span>What do I have to act on now?</span></li>
                   <li className="flex gap-3"><span className="shrink-0 w-1.5 h-1.5 rounded-full bg-muted-foreground/40 mt-2.5" /><span>Among these tasks, which ones are acute?</span></li>
-                  <li className="flex gap-3"><span className="shrink-0 w-1.5 h-1.5 rounded-full bg-muted-foreground/40 mt-2.5" /><span>What did I miss?</span></li>
+                  <li className="flex gap-3"><span className="shrink-0 w-1.5 h-1.5 rounded-full bg-muted-foreground/40 mt-2.5" /><span>Which tasks are not a priority but require my contribution to unblock others?</span></li>
                 </ul>
                 <p>
                   I developed 30+ screen iterations, moving from structural concepting to granular stress-testing.
