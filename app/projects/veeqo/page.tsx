@@ -92,7 +92,7 @@ export default function VeeqoCaseStudy() {
                 <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">The system we replaced - the third-party template library and its drag-and-drop editor had no extensibility and no API control</p>
                 <div>
                   <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2 mt-6">Business goals</p>
-                  <p>Three things had to happen simultaneously: eliminate the third-party PDF dependency, protect retention among top-tier enterprise accounts at genuine churn risk, and reclaim technical ownership so the team could ship new document types without being blocked by an external vendor.</p>
+                  <p>Three things had to happen simultaneously: eliminate the third-party PDF dependency, protect retention among top-tier enterprise accounts from the UK, and reclaim technical ownership so the team could ship new document types without being blocked by an external vendor.</p>
                 </div>
               </div>
             </section>
@@ -104,7 +104,7 @@ export default function VeeqoCaseStudy() {
                 Two users with very different needs
               </h2>
               <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
-                <p>Discovery revealed two seller segments sharing one system but with completely different relationships to it.</p>
+                <p>I conducted discovery using our internal research documentation. I understood that there two seller segments working with the documents but with completely different relationships to the document management.</p>
               </div>
 
               {/* Segment comparison table */}
