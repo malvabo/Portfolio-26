@@ -339,8 +339,8 @@ export default function PAACaseStudy() {
               <div className="my-10 max-w-[750px]">
                 <div className="rounded-xl overflow-hidden">
                   <LightboxImage
-                    src="/images/paa-discharge.png"
-                    alt="PAA discharge documentation"
+                    src="/images/paa-doc2.png"
+                    alt="PAA documentation draft"
                     width={1600}
                     height={1000}
                     unoptimized
@@ -348,7 +348,7 @@ export default function PAACaseStudy() {
                     sizes="(max-width: 768px) 100vw, 750px"
                   />
                 </div>
-                <p className="mt-3 text-sm text-muted-foreground text-center">Discharge documentation flow, sequenced for clinical review before submission</p>
+                <p className="mt-3 text-sm text-muted-foreground text-center">Generated draft narrative, pre-populated from assessment data and CMS criteria, ready for clinician review</p>
               </div>
 
               <div className="space-y-6 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
@@ -366,8 +366,8 @@ export default function PAACaseStudy() {
               <div className="my-10 max-w-[750px]">
                 <div className="rounded-xl overflow-hidden">
                   <LightboxImage
-                    src="/images/paa-doc2.png"
-                    alt="PAA documentation draft"
+                    src="/images/paa-discharge.png"
+                    alt="PAA discharge documentation"
                     width={1600}
                     height={1000}
                     unoptimized
@@ -375,7 +375,7 @@ export default function PAACaseStudy() {
                     sizes="(max-width: 768px) 100vw, 750px"
                   />
                 </div>
-                <p className="mt-3 text-sm text-muted-foreground text-center">Generated draft narrative, pre-populated from assessment data and CMS criteria, ready for clinician review</p>
+                <p className="mt-3 text-sm text-muted-foreground text-center">Discharge documentation flow, sequenced for clinical review before submission</p>
               </div>
 
             </section>
