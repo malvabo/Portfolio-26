@@ -159,16 +159,16 @@ export default function VeeqoCaseStudy() {
 
             {/* Research */}
             <section id="research" className="mb-14">
-              <div className="bg-[#F5F3F0] rounded-xl p-6 max-w-[750px] space-y-4">
+              <div className="max-w-[750px] space-y-4">
                 <p className="text-[15px] text-foreground leading-relaxed">A competitive scan of ShipStation, Shopify, and similar platforms revealed a consistent gap: rigid pre-built templates on one end, full code editors on the other.</p>
                 <div className="space-y-3">
-                  <div className="p-4 bg-white rounded-lg">
+                  <div className="p-4 bg-[#F5F3F0] rounded-lg">
                     <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-2">Support tickets</p>
                     <p className="text-[14px] text-foreground leading-relaxed">Enterprise sellers filed around customisation limits and template reliability. SMB tickets clustered around setup confusion and generation failures.</p>
                   </div>
-                  <div className="p-4 bg-white rounded-lg">
+                  <div className="p-4 bg-[#F5F3F0] rounded-lg">
                     <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-2">Seller interviews · Dovetail</p>
-                    <p className="text-[14px] text-foreground leading-relaxed">Sellers needed significantly more customisation than the platform assumed. Not for aesthetic reasons, but because their fulfillment flows were genuinely unique and their documents needed to reflect that operational reality.</p>
+                    <p className="text-[14px] text-foreground leading-relaxed">Their fulfillment flows were unique and their documents needed to reflect these operational needs.</p>
                   </div>
                 </div>
               </div>
@@ -181,7 +181,7 @@ export default function VeeqoCaseStudy() {
                 Ideating, testing and iterating
               </h2>
               <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
-                <p>When drafting the early concepts, I covered library structure, editor interactions, branding model, and failure states.</p>
+                <p>I kicked off my design process by diverging and ideating on as many solutions as possible to find the most optimal for us. I covered library structure, editor interactions, branding model, and failure states.</p>
               </div>
               <div className="rounded-xl overflow-hidden max-w-[750px] my-6">
                 <LightboxImage src="/images/vq-doc10.png" alt="Design exploration" className="w-full h-auto object-cover" />
