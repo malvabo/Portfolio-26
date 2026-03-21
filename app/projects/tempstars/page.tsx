@@ -233,7 +233,7 @@ export default function TempStarsCaseStudy() {
 
           <section id="collaboration" className="mb-10">
             <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Collaboration</p>
-            <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-8 max-w-[750px]">
+            <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 max-w-[750px]">
               Collaboration with the team
             </h2>
 
@@ -389,7 +389,7 @@ export default function TempStarsCaseStudy() {
 
           <section id="roadmap" className="mb-10">
             <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Roadmap</p>
-            <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-8 max-w-[750px]">
+            <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 max-w-[750px]">
               Stages set in motion
             </h2>
 

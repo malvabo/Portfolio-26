@@ -92,7 +92,7 @@ export default function PAACaseStudy() {
             {/* The Space */}
             <section id="space" className="mb-12">
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Context</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-6 max-w-[750px]">
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 max-w-[750px]">
                 The environment
               </h2>
               <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
@@ -108,7 +108,7 @@ export default function PAACaseStudy() {
             {/* The Problem */}
             <section id="problem" className="mb-12">
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Research</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-6 max-w-[750px]">
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 max-w-[750px]">
                 Problem discovery
               </h2>
 
@@ -161,7 +161,7 @@ export default function PAACaseStudy() {
             {/* Design Exploration */}
             <section id="explorations" className="mb-12">
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Design Exploration</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-6 max-w-[750px]">
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 max-w-[750px]">
                 Iterating through many design directions
               </h2>
 
@@ -301,7 +301,7 @@ export default function PAACaseStudy() {
             {/* The Solution */}
             <section id="solution" className="mb-12">
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">The Solution</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-6 max-w-[750px]">
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 max-w-[750px]">
                 Designing an information hierarchy
               </h2>
 
@@ -337,7 +337,7 @@ export default function PAACaseStudy() {
             {/* The AI Layer */}
             <section id="ai" className="mb-12">
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">AI Layer</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-6 max-w-[750px]">
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 max-w-[750px]">
                 Documentation at the end of the assessment
               </h2>
 
@@ -414,7 +414,7 @@ export default function PAACaseStudy() {
             {/* What I'd Do Differently */}
             <section id="retro" className="mb-12">
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Retrospective</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-6 max-w-[750px]">
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 max-w-[750px]">
                 What I&apos;d Do Differently
               </h2>
               <div className="space-y-6 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
