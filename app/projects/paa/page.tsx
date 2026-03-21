@@ -270,6 +270,7 @@ export default function PAACaseStudy() {
                     sizes="(max-width: 768px) 100vw, 750px"
                   />
                 </div>
+                <p className="mt-3 text-sm text-muted-foreground text-center">Contextual drawer: message thread and patient clinical data visible side by side</p>
               </div>
             </section>
 

@@ -118,6 +118,7 @@ export default function VeeqoCaseStudy() {
                 <div className="rounded-xl overflow-hidden">
                   <LightboxImage src="/images/vq-doc7-preview.webp" lightboxSrc="/images/vq-doc7.webp" alt="The system we replaced" className="w-full h-auto object-cover" loading="eager" />
                 </div>
+                <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Legacy third-party editor — no API access, no extensibility</p>
                 <div>
                   <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2 mt-6">Business goals</p>
                   <p>Three things had to happen simultaneously: eliminate the third-party PDF dependency, protect retention among top-tier enterprise accounts from the UK, and reclaim technical ownership so the team could ship new document types without being blocked by an external vendor.</p>
@@ -394,9 +395,11 @@ export default function VeeqoCaseStudy() {
                   <div className="rounded-xl overflow-hidden">
                     <LightboxImage src="/images/vq11.png" alt="Research based additional settings" className="w-full h-auto object-cover" />
                   </div>
+                  <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Research-informed field set — most-requested variables surfaced first</p>
                   <div className="rounded-xl overflow-hidden mt-4">
                     <LightboxImage src="/images/vq-doc31.png" alt="Research based additional settings detail" className="w-full h-auto object-cover" />
                   </div>
+                  <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Additional settings panel — data-priority field ordering</p>
                 </div>
                 <div>
                   <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">HTML Editor</p>
@@ -594,6 +597,7 @@ export default function VeeqoCaseStudy() {
               <div className="rounded-xl overflow-hidden max-w-[750px] mt-10">
                 <LightboxImage src="/images/vq_doc.png" alt="Future vision" className="w-full h-auto object-cover" />
               </div>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Future vision: document intelligence layer built on owned infrastructure</p>
             </section>
 
             {/* Reflections */}
