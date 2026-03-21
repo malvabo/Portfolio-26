@@ -324,7 +324,7 @@ export default function SquirllCaseStudy() {
                 </div>
                 <div className="flex-1 rounded-xl overflow-hidden bg-black aspect-square">
                   <video
-                    src="/images/anim_SQ.mp4"
+                    src="/images/anim_SQ2.mp4"
                     autoPlay
                     loop
                     muted
