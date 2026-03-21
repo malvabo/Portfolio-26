@@ -344,13 +344,12 @@ export default function VeeqoCaseStudy() {
             {/* Design Decisions */}
             <section id="design" className="mb-14">
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Key Design Decisions</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-8 max-w-[750px]">
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 max-w-[750px]">
                 What went into the work
               </h2>
 
-
               {/* Images */}
-              <div className="flex flex-col gap-6 max-w-[750px] mt-10">
+              <div className="flex flex-col gap-6 max-w-[750px]">
                 <div>
                   <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Category-Aware Templates</p>
                   <p className="text-[17px] leading-relaxed text-muted-foreground mb-5">Users don&apos;t start with a blank page. They get a base template pre-built with the fields most common to their document type - Invoices vs. Pick Lists, each with their own defaults.</p>
@@ -374,59 +373,62 @@ export default function VeeqoCaseStudy() {
                 <div>
                   <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Product brands and associated documents</p>
                   <p className="text-[17px] leading-relaxed text-muted-foreground mb-4">The most significant logical gap in the old system was the inheritance model. Enterprise sellers often manage 5–10 distinct brands under one Veeqo account, each requiring its own visual identity and fields.</p>
-                  <p className="text-[17px] leading-relaxed text-muted-foreground mb-4">I designed a system where each document type acts as a folder. Inside, users can create infinite variants (HTML templates) and map them specifically to one or more brands. To prevent &quot;template soup,&quot; the Document Variant page explicitly shows which brands are currently inheriting that specific template. If user edits the &quot;Default&quot; HTML, they can instantly see that it will update Dior, Chanel, and 10 other brands simultaneously.</p>
+                  <p className="text-[17px] leading-relaxed text-muted-foreground mb-4">I designed a system where each document type acts as a folder. Inside, users can create infinite variants (HTML templates) and map them specifically to one or more brands. To prevent &quot;template soup&quot; the document variant page explicitly shows which brands are currently inheriting that specific template. If user edits the document variant, they can instantly see that it will affect Dior, Chanel, and 10 other brands simultaneously.</p>
                   <p className="text-[17px] leading-relaxed text-muted-foreground mb-4">On the level of brands, a user can set the document variants that would be tied to it.</p>
 
                   {/* Brand scheme diagram */}
                   <div className="rounded-xl bg-[#F5F3F0] p-5 mb-6">
-                    <div className="grid grid-cols-[1fr_36px_1fr] gap-3 items-center">
+                    <div className="grid grid-cols-1 md:grid-cols-[1fr_40px_1fr] gap-3 items-stretch">
 
-                      {/* Old way: two columns */}
-                      <div className="space-y-3">
+                      {/* Before */}
+                      <div>
+                        <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-2">Before</p>
                         {/* 3rd party tool */}
-                        <div>
-                          <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-2">3rd party tool</p>
-                          <div className="border border-dashed border-red-200 rounded-xl bg-white p-3">
-                            <div className="space-y-1.5">
-                              {["Invoice Dior Spring", "Return label Chanel Spring", "Shipping label Perfumes Summer"].map((doc) => (
-                                <div key={doc} className="text-[11px] text-muted-foreground">{doc}</div>
-                              ))}
-                              <div className="text-[11px] text-muted-foreground/40">···</div>
-                            </div>
+                        <div className="border border-dashed border-red-200 rounded-xl p-4 bg-white mb-2">
+                          <p className="font-mono text-[10px] uppercase tracking-wider text-red-400 mb-2">3rd party tool · External</p>
+                          <div className="border border-red-100 rounded-lg p-3 bg-red-50/20 space-y-1.5">
+                            {["Invoice Dior Spring", "Return label Chanel Spring", "Shipping label Perfumes Summer"].map((doc) => (
+                              <div key={doc} className="text-[11px] text-muted-foreground">{doc}</div>
+                            ))}
+                            <div className="text-[11px] text-muted-foreground/40">···</div>
                           </div>
                         </div>
+                        {/* Plus connector */}
+                        <div className="flex justify-center my-2 text-muted-foreground/40">
+                          <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                            <path d="M5 1v8M1 5h8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                          </svg>
+                        </div>
                         {/* Amazon simple settings */}
-                        <div>
+                        <div className="border border-[#EBEBEB] rounded-xl p-4 bg-white">
                           <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-2">Simple document settings in Amazon</p>
-                          <div className="border border-[#DDDDD8] rounded-xl bg-white p-3">
-                            <div className="space-y-1.5">
-                              {["Invoice", "Shipping label", "Return label"].map((doc) => (
-                                <div key={doc} className="text-[11px] text-muted-foreground">{doc}</div>
-                              ))}
-                            </div>
+                          <div className="border border-[#EBEBEB] rounded-lg p-3 bg-[#F5F3F0] space-y-1.5">
+                            {["Invoice", "Shipping label", "Return label"].map((doc) => (
+                              <div key={doc} className="text-[11px] text-muted-foreground">{doc}</div>
+                            ))}
                           </div>
                         </div>
                       </div>
 
                       {/* Arrow */}
-                      <div className="flex flex-col items-center gap-1">
-                        <svg width="28" height="14" viewBox="0 0 28 14" fill="none">
-                          <path d="M0 7h22M16 1l6 6-6 6" stroke="#D1D5DB" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      <div className="hidden md:flex items-center justify-center pt-10">
+                        <svg width="32" height="16" viewBox="0 0 32 16" fill="none">
+                          <path d="M0 8h26M20 2l6 6-6 6" stroke="#D1D5DB" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                         </svg>
-                        <span className="font-mono text-[9px] uppercase tracking-wider text-muted-foreground/60 text-center leading-tight">old<br/>way</span>
                       </div>
 
-                      {/* New: Document library */}
-                      <div>
-                        <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-2">Document library</p>
-                        <div className="border border-emerald-200 rounded-xl bg-white p-3">
-                          <div className="space-y-2">
-                            <div className="rounded-lg bg-emerald-50/60 border border-emerald-100 p-2.5">
+                      {/* After */}
+                      <div className="flex flex-col">
+                        <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-2">After</p>
+                        <div className="border border-emerald-200 rounded-xl p-4 bg-emerald-50/30 flex-1">
+                          <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-3">Document library</p>
+                          <div className="border border-emerald-100 rounded-lg p-3 bg-emerald-50/30">
+                            <div className="rounded-lg bg-white border border-emerald-100 p-2.5">
                               <p className="text-[11px] font-medium text-foreground mb-1">Document version</p>
-                              <p className="text-[10px] text-muted-foreground">Brands tied to it</p>
-                              <div className="flex flex-wrap gap-1 mt-1.5">
+                              <p className="text-[10px] text-muted-foreground mb-1.5">Brands tied to it</p>
+                              <div className="flex flex-wrap gap-1">
                                 {["Dior Spring", "Dior Summer", "Dior Winter"].map((b) => (
-                                  <span key={b} className="text-[10px] px-1.5 py-0.5 rounded-md bg-white border border-emerald-100 text-muted-foreground">{b}</span>
+                                  <span key={b} className="text-[10px] px-1.5 py-0.5 rounded-md bg-emerald-50 border border-emerald-100 text-muted-foreground">{b}</span>
                                 ))}
                               </div>
                             </div>
@@ -490,14 +492,14 @@ export default function VeeqoCaseStudy() {
                 What this migration makes possible
               </h2>
               <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
-                <p>The migration wasn&apos;t the end state. Moving off the third-party dependency gave the team full ownership of the template infrastructure for the first time. What that ownership enables is a V2 that was never possible under the old system: a document library that learns from seller behaviour rather than just storing what sellers configure.</p>
+                <p>The migration wasn&apos;t the end state. Moving off the third-party dependency gave the team full ownership of the template infrastructure for the first time.</p>
               </div>
 
               {/* Roadmap */}
               <div className="max-w-[750px]">
                 <div className="relative">
                   {/* Connecting line */}
-                  <div className="hidden md:block absolute top-[28px] left-[calc(16.67%-8px)] right-[calc(16.67%-8px)] h-px bg-[#EBEBEB] z-0" />
+                  <div className="hidden md:block absolute top-[28px] left-[calc(16.67%-8px)] right-[calc(16.67%-8px)] h-px bg-foreground z-0" />
 
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4 relative z-10">
 
@@ -508,7 +510,7 @@ export default function VeeqoCaseStudy() {
                         <span className="font-mono text-[10px] uppercase tracking-wider text-foreground">V1 · Shipped</span>
                       </div>
                       <div className="border border-[#EBEBEB] rounded-xl p-4 bg-white space-y-2">
-                        {["Core infrastructure migration", "HTML editor + AI assist", "Toggle-based defaults", "Failure state coverage", "Enterprise white-glove migration"].map((item) => (
+                        {["Core infrastructure migration", "HTML editor + AI assist", "Toggle-based defaults", "Enterprise white-glove migration"].map((item) => (
                           <div key={item} className="flex items-start gap-2">
                             <span className="text-emerald-500 mt-0.5 text-[13px]">✓</span>
                             <span className="text-[13px] text-muted-foreground">{item}</span>
@@ -524,7 +526,7 @@ export default function VeeqoCaseStudy() {
                         <span className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground">V2 · Template Intelligence</span>
                       </div>
                       <div className="border border-[#EBEBEB] rounded-xl p-4 bg-[#F5F3F0] space-y-2">
-                        {["Expanded template library", "Featured & most-popular surfacing", "Seller starring / favourites", "Usage-based recommendations"].map((item) => (
+                        {["Expanded template library", "Featured & most-popular surfacing", "Seller starring / favourites", "AI-generated docs"].map((item) => (
                           <div key={item} className="flex items-start gap-2">
                             <span className="text-muted-foreground/40 mt-0.5 text-[13px]">○</span>
                             <span className="text-[13px] text-muted-foreground">{item}</span>
