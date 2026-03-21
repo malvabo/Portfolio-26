@@ -84,7 +84,8 @@ export default function VeeqoCaseStudy() {
                 Removing a third-party dependency
               </h2>
               <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
-                <p>Veeqo is a multi-channel shipping platform acquired by Amazon, and documents sit at the core of every order - packing slips, invoices, customs forms, returns labels. The entire system for UK sellers ran on a third-party PDF tool with no extensibility, real technical risk, and a vendor dependency the business couldn&apos;t afford to keep. We planned to move UK sellers to US version of the product to reduce costs for support and ensure consistent brand experience.</p>
+                <p>Veeqo is a multi-channel shipping platform acquired by Amazon, and documents sit at the core of every order - packing slips, invoices, customs forms, returns labels. The company planned to move UK sellers to US version of the product to ensure consistent brand experience for sellers across all countries and make further updates across countries smooth.</p>
+                <p>UK sellers were using 3rd party solution enabling advanced customisation of the documents. US sellers had only basic editing. Not to lose UK sellers we needed to migrate the solution and include the advanced editing.</p>
                 <div className="rounded-xl overflow-hidden">
                   <LightboxImage src="/images/vq-doc7-preview.webp" lightboxSrc="/images/vq-doc7.webp" alt="The system we replaced" className="w-full h-auto object-cover" loading="eager" />
                 </div>
