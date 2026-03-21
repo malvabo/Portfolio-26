@@ -406,6 +406,28 @@ export default function PAACaseStudy() {
             </section>
 
 
+            {/* Impact */}
+            <section id="impact" className="mb-12">
+              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Impact</p>
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 max-w-[750px]">
+                Impact at a glance
+              </h2>
+              <div className="p-8 bg-[#F5F3F0] rounded-xl max-w-[750px]">
+                <ul className="space-y-4">
+                  {[
+                    "Shipped a tiered urgency system, contextual message integration, and AI-generated clinical documentation within a single dashboard surface",
+                    "40% time saved with optimized clinical workflows",
+                    "Quality feedback: improved clinician satisfaction",
+                  ].map((item, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-foreground shrink-0" />
+                      <span className="text-[17px] leading-relaxed text-foreground">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </section>
+
             {/* What I'd Do Differently */}
             <section id="retro" className="mb-12">
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Retrospective</p>
