@@ -589,6 +589,34 @@ export default function VeeqoCaseStudy() {
               <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Future vision: document intelligence layer built on owned infrastructure</p>
             </section>
 
+            {/* Impact at end */}
+            <section id="impact-end" className="mb-14">
+              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Impact</p>
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-6 max-w-[750px]">
+                Impact at a glance
+              </h2>
+              <div className="p-8 bg-[#F5F3F0] rounded-xl max-w-[750px] mb-8">
+                <ul className="space-y-2 text-[17px] leading-relaxed">
+                  <li className="flex gap-3">
+                    <span className="text-muted-foreground mt-0.5">•</span>
+                    <span className="text-muted-foreground">Successfully migrated the core document infrastructure for <span className="font-semibold text-foreground">50k+</span> sellers, securing <span className="font-semibold text-foreground">$15B+</span> in annual GMV from potential service interruptions</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-muted-foreground mt-0.5">•</span>
+                    <span className="text-muted-foreground"><span className="font-semibold text-foreground">0% churn</span> among top-tier enterprise accounts during the transition</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-muted-foreground mt-0.5">•</span>
+                    <span className="text-muted-foreground"><span className="font-semibold text-foreground">Days not months</span> — custom fields and new document types now ship on a timeline the team owns</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-muted-foreground mt-0.5">•</span>
+                    <span className="text-muted-foreground"><span className="font-semibold text-foreground">30% reduction</span> in how-to support tickets vs. the legacy system</span>
+                  </li>
+                </ul>
+              </div>
+            </section>
+
             {/* Next Milestone */}
             <section id="next-milestone" className="mb-14">
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Next Milestone</p>
