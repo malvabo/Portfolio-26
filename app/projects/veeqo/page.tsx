@@ -29,6 +29,7 @@ export default function VeeqoCaseStudy() {
               <a href="#design" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Design Decisions</a>
               <a href="#outcomes" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Outcomes</a>
               <a href="#future" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Future Vision</a>
+              <a href="#next-milestone" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Next Milestone</a>
               <a href="#reflections" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Reflections</a>
             </nav>
           </aside>
@@ -586,6 +587,21 @@ export default function VeeqoCaseStudy() {
                 <LightboxImage src="/images/vq_doc.png" alt="Future vision" className="w-full h-auto object-cover" />
               </div>
               <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Future vision: document intelligence layer built on owned infrastructure</p>
+            </section>
+
+            {/* Next Milestone */}
+            <section id="next-milestone" className="mb-14">
+              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Next Milestone</p>
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-6 max-w-[750px]">
+                Leveraging AI for document creation
+              </h2>
+              <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+                <p>The core problem was technical literacy. Enterprise documents require complex custom logic (HTML/CSS), but warehouse managers aren&apos;t developers — they can&apos;t code.</p>
+                <p>Instead of building a complex GUI we wouldn&apos;t be able to technically support in the first iteration of the product, I designed a workflow where the user provides natural language intent.</p>
+                <p>I worked closely with the backend engineers to define the technical specifications. I translated our internal Shopify Liquid logic into the system instructions. I ensured the prompt followed our specific ways of iterating through lists and data fetching.</p>
+                <p>Users now have to provide the LLM of their choice with our specific technical documentation: the internal rules, the liquid tags, and the span and div structures our backend requires to render correctly. After that, they would paste the result into our interface and save the result.</p>
+                <p>This reduced the white-glove support we had to provide, as sellers could now self-serve their migration through a guided, AI-assisted interface.</p>
+              </div>
             </section>
 
             {/* Reflections */}
