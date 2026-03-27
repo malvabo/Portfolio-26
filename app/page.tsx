@@ -7,6 +7,7 @@ import { TempStarsSection } from "@/components/tempstars-section"
 // import { PandaDocSection } from "@/components/pandadoc-section"
 import { PAASection } from "@/components/paa-section"
 import { VeeqoSection } from "@/components/veeqo-section"
+import { VeraSection } from "@/components/vera-section"
 import { ArticlesSection } from "@/components/articles-section"
 import { TestimonialsSection } from "@/components/testimonials-section"
 import { VisualConceptsSection } from "@/components/visual-concepts-section"
@@ -19,11 +20,11 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <AnimatedSection delayOnLoad={1.6}>
-          <TestimonialsSection />
-        </AnimatedSection>
         <AnimatedSection>
           <WorkSection />
+        </AnimatedSection>
+        <AnimatedSection>
+          <VeraSection />
         </AnimatedSection>
         <AnimatedSection>
           <VeeqoSection />
@@ -39,6 +40,9 @@ export default function Home() {
         </AnimatedSection>
         <AnimatedSection>
           <TempStarsSection />
+        </AnimatedSection>
+        <AnimatedSection delayOnLoad={0}>
+          <TestimonialsSection />
         </AnimatedSection>
         <AnimatedSection>
           <ArticlesSection />
