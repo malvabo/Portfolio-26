@@ -1,9 +1,9 @@
 import Image from "next/image"
 
 const VERA_IMAGES = [
-  { src: "/images/vera1.png", alt: "AI shipping rate suggestion with contextual reasoning" },
-  { src: "/images/vera2.png", alt: "Ask Vera: conversational analytics with sales performance chart" },
-  { src: "/images/vera3.png", alt: "AI-generated actions: shipping savings insights and inventory recommendations" },
+  { src: "/images/aivq1.png", alt: "AI shipping rate suggestion with contextual reasoning" },
+  { src: "/images/aivq3.png", alt: "AI-generated actions: shipping savings insights and inventory recommendations" },
+  { src: "/images/aivq2.png", alt: "Ask Vera: conversational analytics with sales performance chart" },
 ]
 
 export function VeraSection() {
