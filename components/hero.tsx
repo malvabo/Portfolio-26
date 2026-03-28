@@ -33,7 +33,7 @@ export function Hero() {
           </h1>
           <div className="w-full max-w-[360px] lg:max-w-[440px] lg:ml-auto mt-8">
             <p className="hero-reveal hero-reveal-2 font-sans text-[17px] leading-relaxed text-muted-foreground">
-              Focused on behavioral psychology, AI products, and measurable growth. Contributed to unicorn startups, worked with venture builders, shipped products to millions of users.
+              Focused on behavioral psychology, AI products, and measurable growth. Contributed to unicorn startups, worked with venture building studio, shipped products to millions of users.
             </p>
             <div className="hero-reveal hero-reveal-3 flex justify-start mt-4 mb-2">
               <svg width="40" height="48" viewBox="0 0 24 28" fill="none" className="text-[#f97316]" aria-hidden>
