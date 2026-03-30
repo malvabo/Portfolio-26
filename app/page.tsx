@@ -12,7 +12,6 @@ import { ArticlesSection } from "@/components/articles-section"
 import { TestimonialsSection } from "@/components/testimonials-section"
 import { VisualConceptsSection } from "@/components/visual-concepts-section"
 import { WorkshopsSection } from "@/components/workshops-section"
-import { MarqueeCarousel } from "@/components/marquee-carousel"
 import { Footer } from "@/components/footer"
 
 export default function Home() {
@@ -21,7 +20,6 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <MarqueeCarousel />
         <AnimatedSection>
           <WorkSection />
         </AnimatedSection>
