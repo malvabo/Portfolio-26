@@ -38,7 +38,7 @@ export function VeeqoSection() {
           <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">
             Results
           </h3>
-          <p className="text-sm text-muted-foreground opacity-80">Results under NDA</p>
+          <p className="text-sm text-muted-foreground opacity-80">Guest area</p>
         </div>
 
         <div>
@@ -72,7 +72,7 @@ export function VeeqoSection() {
             <svg className="w-3 h-3 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
             </svg>
-            <span className="text-[11px] font-mono text-gray-500 tracking-wide">Under NDA · </span>
+            <span className="text-[11px] font-mono text-gray-500 tracking-wide">Guest area · </span>
             <a href="mailto:borysova.mary@gmail.com" className="text-[11px] font-mono text-gray-700 tracking-wide hover:text-gray-900 transition-colors underline underline-offset-2">request access</a>
           </div>
         </div>
