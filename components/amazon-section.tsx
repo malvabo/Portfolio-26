@@ -18,7 +18,7 @@ export function AmazonSection() {
             </div>
             <div className="absolute inset-0 z-20 flex items-center justify-center bg-black/30">
               <span className="font-mono text-sm md:text-base font-semibold tracking-widest uppercase text-white/95 px-4 py-2 rounded border border-white/40 bg-black/40 backdrop-blur-sm">
-                NDA
+                Guest area
               </span>
             </div>
           </div>

@@ -28,7 +28,7 @@ export function VeraSection() {
           <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">
             Results
           </h3>
-          <p className="text-sm text-muted-foreground opacity-80">Results under NDA</p>
+          <p className="text-sm text-muted-foreground opacity-80">Guest area</p>
         </div>
 
         <div>
