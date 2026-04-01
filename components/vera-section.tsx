@@ -1,5 +1,4 @@
 import Image from "next/image"
-import Link from "next/link"
 
 const VERA_IMAGES = [
   { src: "/images/aivq1.png", alt: "AI shipping rate suggestion with contextual reasoning" },
