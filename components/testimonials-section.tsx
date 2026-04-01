@@ -3,35 +3,6 @@ import Image from "next/image"
 export function TestimonialsSection() {
   const testimonials = [
     {
-      title: "Critical in AI development",
-      keyPhrase: "accessible and user-friendly",
-      text: "Most impressive was Mary's ability to make complex systems accessible and user-friendly.",
-      author: "Ophelie Jaschke",
-      role: "CEO at lenox AI",
-      linkedin: "#",
-      avatar:
-        "https://framerusercontent.com/images/efv2jdJ0YVFcD3jXRKJ9b14U.jpeg?scale-down-to=512&width=800&height=800",
-    },
-    {
-      title: "Outstanding skills",
-      keyPhrase: "meticulous attention to details",
-      text: "Great at understanding user needs and pays meticulous attention to details.",
-      author: "Igor Stefaniuk",
-      role: "Principal Product Manager at PandaDoc",
-      linkedin: "#",
-      avatar:
-        "https://framerusercontent.com/images/prBHH86UxUaOP1ZIk3IsNlTTxg.jpeg?scale-down-to=512&width=560&height=560",
-    },
-    {
-      title: "Invaluable asset to any team",
-      keyPhrase: "invaluable asset to any team",
-      text: "Their ability to understand, incorporate feedback, and take action make them an invaluable asset to any team. Fast, communicative, and a pleasure to work with.",
-      author: "Roy Shi",
-      role: "CEO at Bodyspec",
-      linkedin: "#",
-      avatar: "https://framerusercontent.com/images/ifGTqzqKAHeynuxWWbsSMMbwfMg.jpeg?width=378&height=378",
-    },
-    {
       title: "Thorough and analytical",
       keyPhrase: "push the team to build with purpose",
       text: "She questions the status quo and asks the tough questions that push the team to build with purpose.",
@@ -77,20 +48,8 @@ export function TestimonialsSection() {
   }
 
   return (
-    <section className="relative py-8 md:py-10 container mx-auto px-8 lg:px-12 overflow-hidden">
-      <div className="absolute inset-0 opacity-[0.03]">
-        <div className="absolute top-1/4 left-1/3 w-[800px] h-[800px] rounded-full bg-gradient-to-br from-purple-500 to-pink-500 blur-[120px]" />
-      </div>
-
+    <section className="relative pt-10 pb-8 md:pb-10 container mx-auto px-8 lg:px-12 overflow-hidden">
       <div className="relative max-w-7xl mx-auto">
-        <div className="flex items-center gap-2 mb-2">
-          <span className="uppercase text-[13px] text-muted-foreground/70 font-mono tracking-wide">{"{02}"} TESTIMONIALS</span>
-        </div>
-
-        <h2 className="font-serif text-2xl md:text-3xl leading-[1.1] tracking-tight text-foreground mb-10">
-          What teams I've worked with say
-        </h2>
-
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {testimonials.map((testimonial, index) => (
             <div key={index} className="bg-[#f1f1f1] rounded-xl p-5 h-full flex flex-col">

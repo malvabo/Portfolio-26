@@ -20,6 +20,9 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <AnimatedSection delayOnLoad={0}>
+          <TestimonialsSection />
+        </AnimatedSection>
         <AnimatedSection>
           <WorkSection />
         </AnimatedSection>
@@ -40,9 +43,6 @@ export default function Home() {
         </AnimatedSection>
         <AnimatedSection>
           <TempStarsSection />
-        </AnimatedSection>
-        <AnimatedSection delayOnLoad={0}>
-          <TestimonialsSection />
         </AnimatedSection>
         <AnimatedSection>
           <ArticlesSection />

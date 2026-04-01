@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export function Hero() {
   return (
-    <section className="pt-32 pb-20 lg:pt-40 lg:pb-24 container mx-auto px-8 lg:px-12 relative overflow-hidden">
+    <section className="pt-32 pb-5 lg:pt-40 lg:pb-5 container mx-auto px-8 lg:px-12 relative overflow-hidden">
       <style>{`
         @keyframes fadeInUp {
           from { opacity: 0; transform: translateY(10px); }
@@ -33,7 +33,7 @@ export function Hero() {
           </h1>
           <div className="w-full max-w-[360px] lg:max-w-[440px] lg:ml-auto mt-8">
             <p className="hero-reveal hero-reveal-2 font-sans text-[17px] leading-relaxed text-muted-foreground">
-              I design AI-powered products for complex, high-stakes workflows at scale. Currently at Amazon, building tools that help 50,000+ sellers manage fulfillment and shipping. Before that: 0-to-1 startups, venture studios, unicorns.
+              I design AI-powered products for complex, high-stakes workflows at scale. Currently at Amazon, before that: 0-to-1 startups, venture studios, unicorns.
             </p>
             <div className="hero-reveal hero-reveal-3 flex justify-start mt-4 mb-2">
               <svg width="40" height="48" viewBox="0 0 24 28" fill="none" className="text-[#f97316]" aria-hidden>

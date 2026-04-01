@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 
 const VERA_IMAGES = [
   { src: "/images/aivq1.png", alt: "AI shipping rate suggestion with contextual reasoning" },
@@ -22,6 +23,15 @@ export function VeraSection() {
           <p className="text-base leading-relaxed text-foreground">
             Design of the solution that continuously monitors seller operations to drive improvements in efficiency, performance, and growth. Helping sellers to spot hidden revenue losses from inventory and orchestrate fulfillment to optimise shipping outcomes.
           </p>
+          <Link
+            href="/projects/vera"
+            className="inline-flex items-center gap-2 mt-6 px-5 py-2.5 text-sm font-medium rounded-full bg-white/40 backdrop-blur-md border border-gray-300/50 hover:bg-white/60 hover:border-gray-400/60 transition-all duration-300 shadow-sm hover:shadow-md"
+          >
+            Read more
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </Link>
         </div>
 
         <div>
