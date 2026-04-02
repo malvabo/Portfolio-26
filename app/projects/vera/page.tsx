@@ -57,8 +57,8 @@ export default function VeraCaseStudy() {
                 <p className="text-[15px] leading-relaxed">0-to-1 AI feature on a legacy platform</p>
               </div>
               <div>
-                <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Results</p>
-                <span className="inline-block px-2 py-0.5 text-[13px] rounded-md bg-[#E8E3DD] text-[#6B5D4F]">Guest area</span>
+                <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Team</p>
+                <p className="text-[15px] leading-relaxed">2 Product Managers, VP of Design, VP of Product, Tech Lead, Engineering team, Data Science team</p>
               </div>
             </div>
 
@@ -150,7 +150,7 @@ export default function VeraCaseStudy() {
                   <div className="overflow-hidden rounded-xl border border-gray-100">
                     <Image src="/images/vq_ai9.png" alt="Cross-functional workshop boards" width={1200} height={675} className="w-full h-auto" />
                   </div>
-                  <p className="mt-3 text-[13px] text-muted-foreground leading-relaxed">Four structured workshop prompts — from seller empathy and workflow pain points through competitive analysis and strategic prioritization — run across the full cross-functional team.</p>
+                  <p className="mt-3 text-[13px] text-muted-foreground leading-relaxed">Cross-functional workshops: seller empathy, workflow pain points, competitive analysis, and strategic prioritization.</p>
                 </div>
 
                 <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground">
@@ -160,7 +160,7 @@ export default function VeraCaseStudy() {
                   <div className="overflow-hidden rounded-xl border border-gray-100">
                     <Image src="/images/vq_ai8.png" alt="Shipping Optimization opportunity map" width={1200} height={675} className="w-full h-auto" />
                   </div>
-                  <p className="mt-3 text-[13px] text-muted-foreground leading-relaxed">Systems map of the seller lifecycle across six AI intervention categories — from shipping cost intelligence and ad spend efficiency to inventory, pricing, marketplace fees, and product demand forecasting.</p>
+                  <p className="mt-3 text-[13px] text-muted-foreground leading-relaxed">Systems map: six AI intervention categories across the seller lifecycle.</p>
                 </div>
 
                   <p>I synthesized quantitative analytics with historical qualitative research to build a weighted prioritization matrix. I evaluated every potential intervention point across the seller lifecycle against four key dimensions:</p>
@@ -180,7 +180,7 @@ export default function VeraCaseStudy() {
                       <p><span className="font-semibold text-foreground">Shipping Rate Intelligence.</span> This is the highest-frequency touchpoint in Veeqo. By optimizing this daily micro-decision, we could directly influence operational retention - making the tool indispensable to the seller&apos;s bottom line.</p>
                     </div>
                     <div className="border-l-2 border-foreground/20 pl-4">
-                      <p><span className="font-semibold text-foreground">Predictive Analytics Insights:</span> This was our Unfair Advantage. Because Veeqo already owned the deep order and inventory data, we had the &ldquo;raw materials&rdquo; to build a diagnostic layer that competitors were not yet offering.</p>
+                      <p><span className="font-semibold text-foreground">Predictive Analytics Insights.</span> This was our Unfair Advantage. Because Veeqo already owned the deep order and inventory data, we had the &ldquo;raw materials&rdquo; to build a diagnostic layer that competitors were not yet offering.</p>
                     </div>
                   </div>
 
@@ -230,24 +230,37 @@ export default function VeraCaseStudy() {
               <div className="space-y-4 max-w-[750px] text-[17px] leading-relaxed text-muted-foreground">
                 <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-1 font-medium text-foreground">Global Ingress (The Persistent Mental Model)</h3>
                 <p>Positioned in the top navigation to establish AI as a platform-level utility rather than a localized feature. This was a strategic pragmatic choice: it bypassed the technical debt of fragmented page templates while providing a unified &ldquo;Intelligence Layer&rdquo; across the entire ecosystem.</p>
+                <p>The following screens are early drafts and ideation - exploring how the flow could progress from baseline manual selection to inline AI suggestion to an expanded drawer with Recommended, Cheapest, and Fastest tiers.</p>
+              </div>
+
+              <div className="mt-6 max-w-[750px] grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                <div>
+                  <div className="overflow-hidden rounded-xl border border-gray-100">
+                    <Image src="/images/vq_ai11.png" alt="Analytics page wireframe with contextual insight cards" width={800} height={600} className="w-full h-auto" />
+                  </div>
+                  <p className="mt-3 text-[13px] text-muted-foreground leading-relaxed">Profit Analyzer: insight cards above charts, interpreting data rather than repeating it.</p>
+                </div>
+                <div>
+                  <div className="overflow-hidden rounded-xl border border-gray-100">
+                    <Image src="/images/vq_ai12.png" alt="Veeqo orders page — shipping rate selection before and after AI" width={1200} height={900} className="w-full h-auto" />
+                  </div>
+                  <p className="mt-3 text-[13px] text-muted-foreground leading-relaxed">Baseline manual selection → inline AI suggestion → expanded drawer with Recommended / Cheapest / Fastest tiers.</p>
+                </div>
+              </div>
+
+              <div className="space-y-4 max-w-[750px] text-[17px] leading-relaxed text-muted-foreground">
                 <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-1 font-medium text-foreground">Embedded Insight Cards</h3>
                 <p>On data-heavy pages like the Profit Analyzer, I moved from &ldquo;Data Visualization&rdquo; to &ldquo;Data Interpretation.&rdquo; We shift the burden of synthesis from the user to the system.</p>
                 <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-1 font-medium text-foreground">Inline Operational Context</h3>
                 <p>By embedding insights directly into the high-velocity inventory workflow, I reduced the interaction cost of pivoting between analysis and execution.</p>
               </div>
 
-              <div className="mt-8 max-w-[750px] grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="mt-8 max-w-[750px]">
                 <div>
                   <div className="overflow-hidden rounded-xl border border-gray-100">
                     <Image src="/images/vq_ai10.png" alt="Orders page wireframe with inline suggestions and persistent entry point" width={800} height={600} className="w-full h-auto" />
                   </div>
-                  <p className="mt-3 text-[13px] text-muted-foreground leading-relaxed">Orders page — inline suggestions surface at the row level, with a persistent nav entry point and a right-hand action center.</p>
-                </div>
-                <div>
-                  <div className="overflow-hidden rounded-xl border border-gray-100">
-                    <Image src="/images/vq_ai11.png" alt="Analytics page wireframe with contextual insight cards" width={800} height={600} className="w-full h-auto" />
-                  </div>
-                  <p className="mt-3 text-[13px] text-muted-foreground leading-relaxed">Profit Analyzer page — contextual insight cards sit above the charts, interpreting the data rather than repeating it.</p>
+                  <p className="mt-3 text-[13px] text-muted-foreground leading-relaxed">Orders page: inline suggestions, persistent nav entry point, right-hand action center.</p>
                 </div>
               </div>
             </section>
@@ -278,14 +291,14 @@ export default function VeraCaseStudy() {
                   <div className="overflow-hidden rounded-xl border border-gray-100">
                     <Image src="/images/vq_ai12.png" alt="Veeqo orders page — shipping rate selection before and after AI" width={1200} height={900} className="w-full h-auto" />
                   </div>
-                  <p className="mt-3 text-[13px] text-muted-foreground leading-relaxed">Four-state progression: manual rate selection (baseline) → AI suggestion appearing inline → expanded recommendation drawer with Recommended / Cheapest / Fastest tiers → final production view.</p>
+                  <p className="mt-3 text-[13px] text-muted-foreground leading-relaxed">Baseline manual selection → inline AI suggestion → expanded drawer with Recommended / Cheapest / Fastest tiers.</p>
                 </div>
 
                 <div className="my-4">
                   <div className="overflow-hidden rounded-xl border border-gray-100">
                     <Image src="/images/vq_ai13.png" alt="Shipping rate rationale cards" width={1200} height={675} className="w-full h-auto" />
                   </div>
-                  <p className="mt-3 text-[13px] text-muted-foreground leading-relaxed">Rationale cards surface multiple trust signals per recommendation — cost savings, delivery reliability, historical usage, and package compatibility — so every suggestion is something the seller can verify before acting.</p>
+                  <p className="mt-3 text-[13px] text-muted-foreground leading-relaxed">Rationale cards: cost savings, delivery reliability, historical usage, and package compatibility per suggestion.</p>
                 </div>
 
                 <p>I also maintained the Decision Support Layer by keeping the full list but adding color-coded Visual Affordances to signal which other rates remain &ldquo;Near-Optimal.&rdquo; This automated approach to fulfillment successfully reduced the &ldquo;Time-to-Label&rdquo; from an average of 15 seconds per order to under 3 seconds.</p>
@@ -294,7 +307,7 @@ export default function VeraCaseStudy() {
                   <div className="overflow-hidden rounded-xl border border-gray-100">
                     <Image src="/images/vq_ai15-2.png" alt="Final production design — AI suggestion in the Veeqo shipping drawer" width={1200} height={800} className="w-full h-auto" />
                   </div>
-                  <p className="mt-3 text-[13px] text-muted-foreground leading-relaxed">Final production design — the AI Suggestion occupies the top position with a reasoning summary, followed by Cheapest and Fastest alternatives, each with delivery date and cost clearly visible.</p>
+                  <p className="mt-3 text-[13px] text-muted-foreground leading-relaxed">Final production: AI Suggestion at top with reasoning, Cheapest and Fastest alternatives below.</p>
                 </div>
               </div>
             </section>
@@ -327,7 +340,7 @@ export default function VeraCaseStudy() {
                 <div className="overflow-hidden rounded-xl border border-gray-100">
                   <Image src="/images/vq_ai15.png" alt="AI feedback widget — thumbs up/down and detailed feedback popover" width={1200} height={675} className="w-full h-auto" />
                 </div>
-                <p className="mt-3 text-[13px] text-muted-foreground leading-relaxed">Feedback mechanism for AI suggestions — a lightweight trust loop letting sellers flag factually incorrect or irrelevant recommendations, feeding signal back to improve model accuracy over time.</p>
+                <p className="mt-3 text-[13px] text-muted-foreground leading-relaxed">Feedback widget: sellers flag incorrect or irrelevant suggestions, feeding signal back to the model.</p>
               </div>
             </section>
 
