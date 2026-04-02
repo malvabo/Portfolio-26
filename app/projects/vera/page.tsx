@@ -367,7 +367,7 @@ export default function VeraCaseStudy() {
               <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>We moved from a blank slate to a functional, trusted intelligence layer by hitting these early benchmarks:</p>
                 <p><span className="font-semibold text-foreground">Operational Efficiency:</span> We successfully collapsed the &ldquo;Time-to-Label&rdquo; from 15 seconds down to 3 seconds for our pilot sellers.</p>
-                <p>Our &ldquo;Insight-to-Action&rdquo; conversion showed that 60% of sellers who engaged with the &ldquo;Reasoning Tag&rdquo; followed through with the recommended action, proving our explainability framework worked.</p>
+                <p>Our insight-to-action conversion showed that 62% of sellers who engaged with the insights followed through with the action.</p>
                 <p><span className="font-semibold text-foreground">Strategic Buy-in:</span> Based on our discovery and the strength of the initial framework, we secured the long-term mandate.</p>
               </div>
             </section>
