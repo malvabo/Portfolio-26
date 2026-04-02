@@ -146,8 +146,22 @@ export default function VeraCaseStudy() {
                 <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-6 max-w-[750px]">Defining the Framework &amp; Organizational Alignment</h2>
                 <p className="text-[17px] leading-relaxed text-muted-foreground mb-6">To move the organization from &ldquo;exploration&rdquo; to &ldquo;execution,&rdquo; I led a series of cross-functional strategic workshops.</p>
 
+                <div className="my-6 max-w-[750px]">
+                  <div className="overflow-hidden rounded-xl border border-gray-100">
+                    <Image src="/images/vq_ai9.png" alt="Cross-functional workshop boards" width={1200} height={675} className="w-full h-auto" />
+                  </div>
+                  <p className="mt-3 text-[13px] text-muted-foreground leading-relaxed">Four structured workshop prompts — from seller empathy and workflow pain points through competitive analysis and strategic prioritization — run across the full cross-functional team.</p>
+                </div>
+
                 <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground">
                   <p>I mapped the full seller lifecycle to identify high-leverage &ldquo;Intervention Points&rdquo; where AI could reduce operational latency.</p>
+
+                <div className="my-6 max-w-[750px]">
+                  <div className="overflow-hidden rounded-xl border border-gray-100">
+                    <Image src="/images/vq_ai8.png" alt="Shipping Optimization opportunity map" width={1200} height={675} className="w-full h-auto" />
+                  </div>
+                  <p className="mt-3 text-[13px] text-muted-foreground leading-relaxed">Systems map of the seller lifecycle across six AI intervention categories — from shipping cost intelligence and ad spend efficiency to inventory, pricing, marketplace fees, and product demand forecasting.</p>
+                </div>
 
                   <p>I synthesized quantitative analytics with historical qualitative research to build a weighted prioritization matrix. I evaluated every potential intervention point across the seller lifecycle against four key dimensions:</p>
                   <div className="border border-[#EBEBEB] rounded-xl p-6 bg-white">
@@ -221,6 +235,21 @@ export default function VeraCaseStudy() {
                 <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-1 font-medium text-foreground">Inline Operational Context</h3>
                 <p>By embedding insights directly into the high-velocity inventory workflow, I reduced the interaction cost of pivoting between analysis and execution.</p>
               </div>
+
+              <div className="mt-8 max-w-[750px] grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <div className="overflow-hidden rounded-xl border border-gray-100">
+                    <Image src="/images/vq_ai10.png" alt="Orders page wireframe with inline suggestions and persistent entry point" width={800} height={600} className="w-full h-auto" />
+                  </div>
+                  <p className="mt-3 text-[13px] text-muted-foreground leading-relaxed">Orders page — inline suggestions surface at the row level, with a persistent nav entry point and a right-hand action center.</p>
+                </div>
+                <div>
+                  <div className="overflow-hidden rounded-xl border border-gray-100">
+                    <Image src="/images/vq_ai11.png" alt="Analytics page wireframe with contextual insight cards" width={800} height={600} className="w-full h-auto" />
+                  </div>
+                  <p className="mt-3 text-[13px] text-muted-foreground leading-relaxed">Profit Analyzer page — contextual insight cards sit above the charts, interpreting the data rather than repeating it.</p>
+                </div>
+              </div>
             </section>
 
             {/* Automating the Shipping Rate */}
@@ -244,7 +273,29 @@ export default function VeraCaseStudy() {
                   ))}
                 </div>
                 <p>Instead of overwhelming the user with raw data, I introduced &ldquo;The Prime Suggestion&rdquo; as a high-visibility highlight at the top of the selection drawer. Each suggestion is accompanied by a Reasoning Tag, such as &ldquo;Fastest + Cheapest&rdquo; or &ldquo;Best Value: Saves $1.40 with 2-day delivery,&rdquo; to provide immediate clarity on the underlying logic.</p>
+
+                <div className="my-4">
+                  <div className="overflow-hidden rounded-xl border border-gray-100">
+                    <Image src="/images/vq_ai12.png" alt="Veeqo orders page — shipping rate selection before and after AI" width={1200} height={900} className="w-full h-auto" />
+                  </div>
+                  <p className="mt-3 text-[13px] text-muted-foreground leading-relaxed">Four-state progression: manual rate selection (baseline) → AI suggestion appearing inline → expanded recommendation drawer with Recommended / Cheapest / Fastest tiers → final production view.</p>
+                </div>
+
+                <div className="my-4">
+                  <div className="overflow-hidden rounded-xl border border-gray-100">
+                    <Image src="/images/vq_ai13.png" alt="Shipping rate rationale cards" width={1200} height={675} className="w-full h-auto" />
+                  </div>
+                  <p className="mt-3 text-[13px] text-muted-foreground leading-relaxed">Rationale cards surface multiple trust signals per recommendation — cost savings, delivery reliability, historical usage, and package compatibility — so every suggestion is something the seller can verify before acting.</p>
+                </div>
+
                 <p>I also maintained the Decision Support Layer by keeping the full list but adding color-coded Visual Affordances to signal which other rates remain &ldquo;Near-Optimal.&rdquo; This automated approach to fulfillment successfully reduced the &ldquo;Time-to-Label&rdquo; from an average of 15 seconds per order to under 3 seconds.</p>
+
+                <div className="my-4">
+                  <div className="overflow-hidden rounded-xl border border-gray-100">
+                    <Image src="/images/vq_ai15-2.png" alt="Final production design — AI suggestion in the Veeqo shipping drawer" width={1200} height={800} className="w-full h-auto" />
+                  </div>
+                  <p className="mt-3 text-[13px] text-muted-foreground leading-relaxed">Final production design — the AI Suggestion occupies the top position with a reasoning summary, followed by Cheapest and Fastest alternatives, each with delivery date and cost clearly visible.</p>
+                </div>
               </div>
             </section>
 
@@ -270,6 +321,13 @@ export default function VeraCaseStudy() {
                 <p>
                   Any team (Tax, Inventory, or Marketing) can &ldquo;plug&rdquo; their data into our UI components. This ensures that no matter who builds the feature, it looks and feels like part of the same cohesive system.
                 </p>
+              </div>
+
+              <div className="mt-8 max-w-[750px]">
+                <div className="overflow-hidden rounded-xl border border-gray-100">
+                  <Image src="/images/vq_ai15.png" alt="AI feedback widget — thumbs up/down and detailed feedback popover" width={1200} height={675} className="w-full h-auto" />
+                </div>
+                <p className="mt-3 text-[13px] text-muted-foreground leading-relaxed">Feedback mechanism for AI suggestions — a lightweight trust loop letting sellers flag factually incorrect or irrelevant recommendations, feeding signal back to improve model accuracy over time.</p>
               </div>
             </section>
 
