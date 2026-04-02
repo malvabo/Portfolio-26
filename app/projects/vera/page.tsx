@@ -357,28 +357,13 @@ export default function VeraCaseStudy() {
             <section id="measuring" className="mb-14">
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Measuring success</p>
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-6 max-w-[750px]">
-                What we tracked and why
+                Organizational Outcomes
               </h2>
-              <div className="space-y-4 max-w-[750px]">
-                {[
-                  {
-                    metric: "Shipping cost delta",
-                    body: "Compares average shipping spend before and after AI rate suggestions - testing real-world business value rather than just engagement.",
-                  },
-                  {
-                    metric: "Insight-to-action conversion",
-                    body: "Measures how many sellers who see an insight then click the CTA and reach the destination page - testing whether explainability is building enough trust to drive action.",
-                  },
-                  {
-                    metric: "Drawer retention",
-                    body: "Tests habit formation and whether the system is becoming part of the daily workflow rather than a one-time curiosity.",
-                  },
-                ].map((item) => (
-                  <div key={item.metric} className="p-6 bg-[#F5F3F0] rounded-xl">
-                    <p className="font-semibold text-foreground text-[17px] mb-2">{item.metric}</p>
-                    <p className="text-[17px] leading-relaxed text-muted-foreground">{item.body}</p>
-                  </div>
-                ))}
+              <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+                <p>We moved from a blank slate to a functional, trusted intelligence layer by hitting these early benchmarks:</p>
+                <p><span className="font-semibold text-foreground">Operational Efficiency:</span> We successfully collapsed the &ldquo;Time-to-Label&rdquo; from 15 seconds down to 3 seconds for our pilot sellers.</p>
+                <p>Our &ldquo;Insight-to-Action&rdquo; conversion showed that 60% of sellers who engaged with the &ldquo;Reasoning Tag&rdquo; followed through with the recommended action, proving our explainability framework worked.</p>
+                <p><span className="font-semibold text-foreground">Strategic Buy-in:</span> Based on our discovery and the strength of the initial framework, we secured the long-term mandate.</p>
               </div>
             </section>
 
