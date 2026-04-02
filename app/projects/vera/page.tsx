@@ -382,6 +382,16 @@ export default function VeraCaseStudy() {
               </div>
             </section>
 
+            {/* Driving the AI shift */}
+            <section className="mb-14">
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-6 max-w-[750px]">
+                Driving the AI shift
+              </h2>
+              <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+                <p>I initiated and led a series of AI behavioral workshops, teaching the broader design and product teams. I collected and documented interaction patterns for AI trust, creating a shared library of how we handle things like &ldquo;wait states,&rdquo; &ldquo;explainability,&rdquo; and &ldquo;user interrogation.&rdquo; I leveled up the team&apos;s collective ability to build intelligent products.</p>
+              </div>
+            </section>
+
             <div className="border-t border-border/50 pt-16">
               <BackLinkFooter />
             </div>
