@@ -339,6 +339,11 @@ export default function VeraCaseStudy() {
                 </div>
                 <p className="mt-3 text-[13px] text-muted-foreground leading-relaxed">Feedback widget: sellers flag incorrect or irrelevant suggestions, feeding signal back to the model.</p>
               </div>
+              <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mt-8">
+                <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-1 font-medium text-foreground">Designing for scalability</h3>
+                <p>At the start of a pilot, a simple list of insights feels manageable, but I knew that as our AI model matured, this &ldquo;flat&rdquo; UI would eventually collapse under its own weight. We already had basic filtering in place to let sellers toggle between Shipping and Profit issues, but the real challenge was thinking about true cognitive scalability.</p>
+                <p>To prevent &ldquo;Insight Fatigue&rdquo; as we scale to hundreds of recommendations, I architected a transition from a Static List to Dynamic Categorical Clustering. Instead of forcing a seller to manually filter through noise, the system begins to group insights by Business Intent - such as &ldquo;Immediate Revenue Leaks&rdquo; versus &ldquo;Long-term Efficiency Bets.&rdquo;</p>
+              </div>
             </section>
 
             {/* Ranking logic */}
