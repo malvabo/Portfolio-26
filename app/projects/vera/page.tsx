@@ -228,23 +228,20 @@ export default function VeraCaseStudy() {
                 Instead of a single &ldquo;AI feature,&rdquo; I created a modal entry system designed to meet sellers at varying levels of intent.
               </p>
               <div className="space-y-4 max-w-[750px] text-[17px] leading-relaxed text-muted-foreground">
+                <p>Veeqo&apos;s platform had rigid page templates. Instead of fighting for a total refactor, I made a pragmatic decision to start with a global navigation drawer and insights not changing the current layout but surfacing on top of the existing frames. This allowed us to ship a unified AI experience across the entire site in less time it would have taken to edit individual pages.</p>
+                <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-1 font-medium text-foreground">The Hallucination Guardrails</h3>
+                <p>A 1% error rate is a 100% trust failure. I worked with the Data Science engineers to set confidence thresholds. If the model&apos;s certainty dropped below 90%, the UI was designed to suppress the insight entirely rather than risk giving a seller a poor recommendation.</p>
                 <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-1 font-medium text-foreground">Global Ingress (The Persistent Mental Model)</h3>
                 <p>Positioned in the top navigation to establish AI as a platform-level utility rather than a localized feature. This was a strategic pragmatic choice: it bypassed the technical debt of fragmented page templates while providing a unified &ldquo;Intelligence Layer&rdquo; across the entire ecosystem.</p>
                 <p>The following screens are early drafts and ideation - exploring how the flow could progress from baseline manual selection to inline AI suggestion to an expanded drawer with Recommended, Cheapest, and Fastest tiers.</p>
               </div>
 
-              <div className="mt-6 max-w-[750px] grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+              <div className="mt-6 max-w-[750px] mb-6">
                 <div>
                   <div className="overflow-hidden rounded-xl border border-gray-100">
                     <Image src="/images/vq_ai11.png" alt="Analytics page wireframe with contextual insight cards" width={800} height={600} className="w-full h-auto" />
                   </div>
                   <p className="mt-3 text-[13px] text-muted-foreground leading-relaxed">Profit Analyzer: insight cards above charts, interpreting data rather than repeating it.</p>
-                </div>
-                <div>
-                  <div className="overflow-hidden rounded-xl border border-gray-100">
-                    <Image src="/images/vq_ai12.png" alt="Veeqo orders page — shipping rate selection before and after AI" width={1200} height={900} className="w-full h-auto" />
-                  </div>
-                  <p className="mt-3 text-[13px] text-muted-foreground leading-relaxed">Baseline manual selection → inline AI suggestion → expanded drawer with Recommended / Cheapest / Fastest tiers.</p>
                 </div>
               </div>
 
