@@ -326,10 +326,10 @@ export default function VeraCaseStudy() {
                   The conversational mode exists specifically for that group. Every insight in both modes shows its reasoning so that the recommendation is always something the seller can interrogate before they trust it.
                 </p>
                 <p>
-                  I designed a standardized insight template.
+                  I realized early on that for AI to scale, I couldn&apos;t be the bottleneck for every new alert. I designed a standardized insight schema, a &ldquo;plug-and-play&rdquo; framework for any data source on the platform.
                 </p>
                 <p>
-                  Any team (Tax, Inventory, or Marketing) can &ldquo;plug&rdquo; their data into our UI components. This ensures that no matter who builds the feature, it looks and feels like part of the same cohesive system.
+                  I created a modular system where any team (Inventory, Shipping or Fulfillment) could feed their data into our components. Each template was built with the same hierarchy: the impact headline, the chain of evidence, and the direct action. This ensured that the mental model for how to &ldquo;read and act&rdquo; stayed identical.
                 </p>
               </div>
 
