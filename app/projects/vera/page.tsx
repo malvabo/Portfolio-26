@@ -358,20 +358,6 @@ export default function VeraCaseStudy() {
               </div>
             </section>
 
-            {/* Measuring success */}
-            <section id="measuring" className="mb-14">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Measuring success</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-6 max-w-[750px]">
-                Organizational Outcomes
-              </h2>
-              <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
-                <p>We moved from a blank slate to a functional, trusted intelligence layer by hitting these early benchmarks:</p>
-                <p><span className="font-semibold text-foreground">Operational Efficiency:</span> We successfully collapsed the &ldquo;Time-to-Label&rdquo; from 15 seconds down to 3 seconds for our pilot sellers.</p>
-                <p>Our insight-to-action conversion showed that 62% of sellers who engaged with the insights followed through with the action.</p>
-                <p><span className="font-semibold text-foreground">Strategic Buy-in:</span> Based on our discovery and the strength of the initial framework, we secured the long-term mandate.</p>
-              </div>
-            </section>
-
             {/* Driving the AI shift */}
             <section className="mb-14">
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-6 max-w-[750px]">
@@ -385,6 +371,20 @@ export default function VeraCaseStudy() {
                   <Image src="/images/vq_ai20.png" alt="AI behavioral workshop slides including trust calibration framework" width={1200} height={800} className="w-full h-auto" />
                 </div>
                 <p className="mt-3 text-[13px] text-muted-foreground leading-relaxed">Workshop materials: trust calibration framework covering over-reliance, under-trust, and the interaction patterns documented for the team.</p>
+              </div>
+            </section>
+
+            {/* Measuring success */}
+            <section id="measuring" className="mb-14">
+              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Measuring success</p>
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-6 max-w-[750px]">
+                Organizational Outcomes
+              </h2>
+              <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+                <p>We moved from a blank slate to a functional, trusted intelligence layer by hitting these early benchmarks:</p>
+                <p><span className="font-semibold text-foreground">Operational Efficiency:</span> We successfully collapsed the &ldquo;Time-to-Label&rdquo; from 15 seconds down to 3 seconds for our pilot sellers.</p>
+                <p>Our insight-to-action conversion showed that 62% of sellers who engaged with the insights followed through with the action.</p>
+                <p><span className="font-semibold text-foreground">Strategic Buy-in:</span> Based on our discovery and the strength of the initial framework, we secured the long-term mandate.</p>
               </div>
             </section>
 
