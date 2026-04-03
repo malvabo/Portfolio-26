@@ -63,21 +63,23 @@ export default function VeraCaseStudy() {
             </div>
 
             {/* Impact at a glance */}
-            <div className="mb-12 max-w-[750px]">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-4">Impact at a glance</p>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                {[
-                  { stat: "15s → 3s", label: "Time-to-Label per order" },
-                  { stat: "50,000+", label: "Sellers on the platform" },
-                  { stat: "0 → 1", label: "AI initiative from scratch" },
-                ].map((item) => (
-                  <div key={item.stat} className="border border-[#EBEBEB] rounded-xl p-5 bg-white">
-                    <p className="font-serif text-[1.75rem] leading-[1.1] tracking-[-0.02em] text-foreground mb-1">{item.stat}</p>
-                    <p className="text-[13px] leading-relaxed text-muted-foreground">{item.label}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <section className="mb-12 p-8 bg-[#F5F3F0] rounded-xl max-w-[750px]">
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4">Impact at a glance</h2>
+              <ul className="space-y-2 text-[17px] leading-relaxed">
+                <li className="flex gap-3">
+                  <span className="text-muted-foreground mt-0.5">•</span>
+                  <span className="text-muted-foreground">Reduced &ldquo;Time-to-Label&rdquo; from <span className="font-semibold text-foreground">15 seconds to 3 seconds</span> per order for pilot sellers</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-muted-foreground mt-0.5">•</span>
+                  <span className="text-muted-foreground"><span className="font-semibold text-foreground">62%</span> insight-to-action conversion - sellers who engaged with insights followed through with the recommended action</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-muted-foreground mt-0.5">•</span>
+                  <span className="text-muted-foreground">Built a 0-to-1 AI initiative across a platform of <span className="font-semibold text-foreground">50,000+</span> sellers, securing long-term mandate</span>
+                </li>
+              </ul>
+            </section>
 
             {/* Cover images */}
             <div className="mb-12 max-w-[750px]">
