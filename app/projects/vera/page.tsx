@@ -380,6 +380,12 @@ export default function VeraCaseStudy() {
               <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>I initiated and led a series of AI behavioral workshops, teaching the broader design and product teams. I collected and documented interaction patterns for AI trust, creating a shared library of how we handle things like &ldquo;wait states,&rdquo; &ldquo;explainability,&rdquo; and &ldquo;user interrogation.&rdquo; I leveled up the team&apos;s collective ability to build intelligent products.</p>
               </div>
+              <div className="mt-6 max-w-[750px]">
+                <div className="overflow-hidden rounded-xl border border-gray-100">
+                  <Image src="/images/vq_ai20.png" alt="AI behavioral workshop slides including trust calibration framework" width={1200} height={800} className="w-full h-auto" />
+                </div>
+                <p className="mt-3 text-[13px] text-muted-foreground leading-relaxed">Workshop materials: trust calibration framework covering over-reliance, under-trust, and the interaction patterns documented for the team.</p>
+              </div>
             </section>
 
             <div className="border-t border-border/50 pt-16">
