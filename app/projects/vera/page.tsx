@@ -404,10 +404,10 @@ export default function VeraCaseStudy() {
                   <Image src="/images/ribbon_714.png" alt="Indigo Design Award Winner 2026" width={205} height={410} className="w-full h-auto" />
                 </div>
                 <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground pt-1">
-                  <p className="font-semibold text-foreground text-[17px]">Indigo Award</p>
-                  <p>x1 Gold Award | Application</p>
-                  <p>x1 Silver Award | Branding for Banking &amp; Finances</p>
-                  <p>x1 Silver Award | UX, Interface &amp; Navigation</p>
+                  <a href="https://indigoaward.com/winners/12153" target="_blank" rel="noopener noreferrer" className="font-semibold text-foreground text-[17px] hover:underline">Indigo Award</a>
+                  <p><a href="https://indigoaward.com/winners/12153" target="_blank" rel="noopener noreferrer" className="hover:underline">x1 Gold Award | Application</a></p>
+                  <p><a href="https://indigoaward.com/winners/12153" target="_blank" rel="noopener noreferrer" className="hover:underline">x1 Silver Award | Branding for Banking &amp; Finances</a></p>
+                  <p><a href="https://indigoaward.com/winners/12153" target="_blank" rel="noopener noreferrer" className="hover:underline">x1 Silver Award | UX, Interface &amp; Navigation</a></p>
                 </div>
               </div>
             </section>
