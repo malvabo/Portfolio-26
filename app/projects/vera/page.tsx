@@ -390,6 +390,28 @@ export default function VeraCaseStudy() {
               </div>
             </section>
 
+            {/* Workshops & Awards */}
+            <section className="mb-14">
+              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Workshops &amp; Education</p>
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-8 max-w-[750px]">
+                AI &amp; Behavioral Design Workshops
+              </h2>
+
+              <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-6 font-medium text-foreground">Awards</h3>
+
+              <div className="flex items-start gap-6 max-w-[750px]">
+                <div className="shrink-0 w-[72px]">
+                  <Image src="/images/ribbon_714.png" alt="Indigo Design Award Winner 2026" width={205} height={410} className="w-full h-auto" />
+                </div>
+                <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground pt-1">
+                  <p className="font-semibold text-foreground text-[17px]">Indigo Award</p>
+                  <p>x1 Gold Award | Application</p>
+                  <p>x1 Silver Award | Branding for Banking &amp; Finances</p>
+                  <p>x1 Silver Award | UX, Interface &amp; Navigation</p>
+                </div>
+              </div>
+            </section>
+
             <div className="border-t border-border/50 pt-16">
               <BackLinkFooter />
             </div>
