@@ -421,7 +421,7 @@ export default function VeeqoCaseStudy() {
                     <div className="grid grid-cols-1 md:grid-cols-[1fr_40px_1fr] gap-3 items-stretch">
 
                       {/* Before */}
-                      <div>
+                      <div className="flex flex-col">
                         <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-2">Before</p>
                         {/* Amazon simple settings */}
                         <div className="border border-[#EBEBEB] rounded-xl p-4 bg-white mb-2">
@@ -439,7 +439,7 @@ export default function VeeqoCaseStudy() {
                           </svg>
                         </div>
                         {/* 3rd party tool */}
-                        <div className="border border-dashed border-red-200 rounded-xl p-4 bg-white">
+                        <div className="border border-dashed border-red-200 rounded-xl p-4 bg-white flex-1">
                           <p className="font-mono text-[10px] uppercase tracking-wider text-red-400 mb-2">3rd party tool · External</p>
                           <div className="border border-red-100 rounded-lg p-3 bg-red-50/20 space-y-1.5">
                             {["Invoice Dior Spring", "Return label Chanel Spring", "Shipping label Perfumes Summer"].map((doc) => (
@@ -579,12 +579,12 @@ export default function VeeqoCaseStudy() {
                   {/* Connecting line + arrows — runs through dot row only */}
                   <div className="hidden md:flex absolute top-[10px] left-[4px] right-[4px] items-center z-0 pointer-events-none">
                     <div className="flex-1 h-px bg-[#EBEBEB]" />
-                    <svg width="21" height="15" viewBox="0 0 7 5" fill="none" className="shrink-0">
-                      <path d="M0 2.5h4.5M3 1l2 1.5-2 1.5" stroke="#D1D5DB" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <svg width="7" height="5" viewBox="0 0 7 5" fill="none" className="shrink-0">
+                      <path d="M0 2.5h4.5M3 1l2 1.5-2 1.5" stroke="#9CA3AF" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                     <div className="flex-1 h-px bg-[#EBEBEB]" />
-                    <svg width="21" height="15" viewBox="0 0 7 5" fill="none" className="shrink-0">
-                      <path d="M0 2.5h4.5M3 1l2 1.5-2 1.5" stroke="#D1D5DB" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <svg width="7" height="5" viewBox="0 0 7 5" fill="none" className="shrink-0">
+                      <path d="M0 2.5h4.5M3 1l2 1.5-2 1.5" stroke="#9CA3AF" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                     <div className="flex-1 h-px bg-[#EBEBEB]" />
                   </div>

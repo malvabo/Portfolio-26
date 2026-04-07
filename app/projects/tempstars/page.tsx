@@ -398,12 +398,12 @@ export default function TempStarsCaseStudy() {
                 {/* Connecting line + arrows — desktop only */}
                 <div className="hidden md:flex absolute top-[7px] left-[4px] right-0 items-center z-0 pointer-events-none">
                   <div className="flex-1 h-px bg-[#EBEBEB]" />
-                  <svg width="21" height="15" viewBox="0 0 7 5" fill="none" className="shrink-0">
-                    <path d="M0 2.5h4.5M3 1l2 1.5-2 1.5" stroke="#D1D5DB" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <svg width="7" height="5" viewBox="0 0 7 5" fill="none" className="shrink-0">
+                    <path d="M0 2.5h4.5M3 1l2 1.5-2 1.5" stroke="#9CA3AF" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                   <div className="flex-1 h-px bg-[#EBEBEB]" />
-                  <svg width="21" height="15" viewBox="0 0 7 5" fill="none" className="shrink-0">
-                    <path d="M0 2.5h4.5M3 1l2 1.5-2 1.5" stroke="#D1D5DB" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <svg width="7" height="5" viewBox="0 0 7 5" fill="none" className="shrink-0">
+                    <path d="M0 2.5h4.5M3 1l2 1.5-2 1.5" stroke="#9CA3AF" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                   <div className="flex-1 h-px bg-[#EBEBEB]" />
                 </div>
