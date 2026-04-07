@@ -505,6 +505,21 @@ export default function VeeqoCaseStudy() {
             </section>
 
 
+            {/* Skeleton states */}
+            <section className="mb-14">
+              <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-6">
+                <p>Added some Rive-based skeleton states to the UI. These will be displayed when the API lags, ensuring the app feels responsive while the documents are still fetching.</p>
+              </div>
+              <div className="max-w-[750px] grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="overflow-hidden rounded-xl border border-gray-100">
+                  <video src="/images/skeleton.mov" autoPlay loop muted playsInline className="w-full h-auto" />
+                </div>
+                <div className="overflow-hidden rounded-xl border border-gray-100">
+                  <video src="/images/skeleton2.mov" autoPlay loop muted playsInline className="w-full h-auto" />
+                </div>
+              </div>
+            </section>
+
             {/* Impact at end */}
             <section id="impact-end" className="mb-14">
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Impact</p>
@@ -564,11 +579,11 @@ export default function VeeqoCaseStudy() {
                   {/* Connecting line + arrows — runs through dot row only */}
                   <div className="hidden md:flex absolute top-[10px] left-[4px] right-[4px] items-center z-0 pointer-events-none">
                     <div className="flex-1 h-px bg-[#EBEBEB]" />
-                    <svg width="7" height="5" viewBox="0 0 7 5" fill="none" className="shrink-0">
+                    <svg width="21" height="15" viewBox="0 0 7 5" fill="none" className="shrink-0">
                       <path d="M0 2.5h4.5M3 1l2 1.5-2 1.5" stroke="#D1D5DB" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                     <div className="flex-1 h-px bg-[#EBEBEB]" />
-                    <svg width="7" height="5" viewBox="0 0 7 5" fill="none" className="shrink-0">
+                    <svg width="21" height="15" viewBox="0 0 7 5" fill="none" className="shrink-0">
                       <path d="M0 2.5h4.5M3 1l2 1.5-2 1.5" stroke="#D1D5DB" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                     <div className="flex-1 h-px bg-[#EBEBEB]" />
@@ -577,9 +592,6 @@ export default function VeeqoCaseStudy() {
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4 relative z-10">
                     {/* V1 - Shipped */}
                     <div>
-                      <div className="h-5 flex items-center mb-2">
-                        <div className="w-2 h-2 rounded-full bg-foreground shrink-0" />
-                      </div>
                       <p className="font-mono text-[10px] uppercase tracking-wider text-foreground mb-3">V1 · Shipped</p>
                       <div className="border border-[#EBEBEB] rounded-xl p-4 bg-white space-y-2">
                         {["Core infrastructure migration", "HTML editor + AI assist", "Toggle-based defaults", "Enterprise white-glove migration"].map((item) => (
@@ -593,9 +605,6 @@ export default function VeeqoCaseStudy() {
 
                     {/* V2 */}
                     <div>
-                      <div className="h-5 flex items-center mb-2">
-                        <div className="w-2 h-2 rounded-full border border-foreground bg-background shrink-0" />
-                      </div>
                       <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-3">V2 · Template Intelligence</p>
                       <div className="border border-[#EBEBEB] rounded-xl p-4 bg-[#F5F3F0] space-y-2">
                         {["Expanded template library", "Featured & most-popular surfacing", "Seller starring / favourites", "AI-generated docs"].map((item) => (
@@ -609,9 +618,6 @@ export default function VeeqoCaseStudy() {
 
                     {/* V3 */}
                     <div>
-                      <div className="h-5 flex items-center mb-2">
-                        <div className="w-2 h-2 rounded-full border border-[#EBEBEB] bg-background shrink-0" />
-                      </div>
                       <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-3">V3 · AI Document Intelligence</p>
                       <div className="border border-[#EBEBEB] rounded-xl p-4 bg-white space-y-2">
                         {["AI-generated docs", "Smart field suggestions based on fulfillment patterns", "Automated improvement recommendations per template"].map((item) => (
