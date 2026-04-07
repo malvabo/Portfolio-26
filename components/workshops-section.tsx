@@ -124,6 +124,22 @@ export function WorkshopsSection() {
             </div>
           </div>
         </div>
+
+        {/* Awards */}
+        <div className="mt-12 pt-10 border-t border-gray-200">
+          <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-6 font-medium text-foreground">Awards</h3>
+          <div className="flex items-stretch gap-6 max-w-[750px]">
+            <div className="shrink-0 w-[72px] relative">
+              <Image src="/images/ribbon_714.png" alt="Indigo Design Award Winner 2026" fill className="object-contain object-top" />
+            </div>
+            <div className="text-[17px] leading-relaxed text-muted-foreground pt-1">
+              <a href="https://indigoaward.com/winners/12153" target="_blank" rel="noopener noreferrer" className="font-semibold text-foreground text-[17px] hover:underline block">Indigo Award</a>
+              <p className="mt-6"><a href="https://indigoaward.com/winners/12153" target="_blank" rel="noopener noreferrer" className="hover:underline">x1 Gold Award | Application</a></p>
+              <p className="mt-3"><a href="https://indigoaward.com/winners/12153" target="_blank" rel="noopener noreferrer" className="hover:underline">x1 Silver Award | Branding for Banking &amp; Finances</a></p>
+              <p className="mt-3"><a href="https://indigoaward.com/winners/12153" target="_blank" rel="noopener noreferrer" className="hover:underline">x1 Silver Award | UX, Interface &amp; Navigation</a></p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   )
