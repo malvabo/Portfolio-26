@@ -75,15 +75,19 @@ export default function PAACaseStudy() {
               <ul className="space-y-2 text-[17px] leading-relaxed">
                 <li className="flex gap-3">
                   <span className="text-muted-foreground mt-0.5">•</span>
-                  <span className="text-muted-foreground"><strong className="font-medium text-foreground">40% time saved</strong> by eliminating patient status hunting and missed document chasing</span>
+                  <span className="text-muted-foreground">Led end-to-end design of a clinical intelligence dashboard in a 0-to-1 environment with no editable design precedent - drove discovery, ran card sorting with clinical staff, and owned the full interaction model</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-muted-foreground mt-0.5">•</span>
-                  <span className="text-muted-foreground">Shifted care teams from reactive fire-fighting to proactive task management</span>
+                  <span className="text-muted-foreground">Identified a structural integrity risk in the AI documentation and designed a lock-before-generate sequence that preserved clinical data integrity</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-muted-foreground mt-0.5">•</span>
-                  <span className="text-muted-foreground">Shipped a tiered urgency system, contextual message integration, and AI-generated clinical documentation within a single dashboard surface</span>
+                  <span className="text-muted-foreground"><span className="font-semibold text-foreground">40% time saved</span> on clinical workflows, measured post-launch across care coordinator workflows</span>
+                </li>
+                <li className="flex gap-3">
+                  <span className="text-muted-foreground mt-0.5">•</span>
+                  <span className="text-muted-foreground">Unlocked multi-million deals with Tier-1 players like Kaiser, Humana, United Healthcare</span>
                 </li>
               </ul>
             </section>
@@ -392,15 +396,19 @@ export default function PAACaseStudy() {
                 <ul className="space-y-2 text-[17px] leading-relaxed">
                   <li className="flex gap-3">
                     <span className="text-muted-foreground mt-0.5">•</span>
-                    <span className="text-muted-foreground">Shipped a tiered urgency system, contextual message integration, and AI-generated clinical documentation within a single dashboard surface</span>
+                    <span className="text-muted-foreground">Led end-to-end design of a clinical intelligence dashboard in a 0-to-1 environment with no editable design precedent - drove discovery, ran card sorting with clinical staff, and owned the full interaction model</span>
                   </li>
                   <li className="flex gap-3">
                     <span className="text-muted-foreground mt-0.5">•</span>
-                    <span className="text-muted-foreground"><span className="font-semibold text-foreground">40% time saved</span> with optimized clinical workflows</span>
+                    <span className="text-muted-foreground">Identified a structural integrity risk in the AI documentation and designed a lock-before-generate sequence that preserved clinical data integrity</span>
                   </li>
                   <li className="flex gap-3">
                     <span className="text-muted-foreground mt-0.5">•</span>
-                    <span className="text-muted-foreground">Quality feedback: improved clinician satisfaction</span>
+                    <span className="text-muted-foreground"><span className="font-semibold text-foreground">40% time saved</span> on clinical workflows, measured post-launch across care coordinator workflows</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-muted-foreground mt-0.5">•</span>
+                    <span className="text-muted-foreground">Unlocked multi-million deals with Tier-1 players like Kaiser, Humana, United Healthcare</span>
                   </li>
                 </ul>
               </div>
