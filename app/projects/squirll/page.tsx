@@ -312,6 +312,17 @@ export default function SquirllCaseStudy() {
               <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Analytics and merchant messages</p>
             </section>
 
+            {/* Accessibility */}
+            <section id="accessibility" className="mb-14">
+              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Accessibility</p>
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 max-w-[750px]">
+                Accessibility
+              </h2>
+              <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+                <p>Dark backgrounds with warm accents create specific contrast challenges. I ran WCAG AA checks across every text and data surface - the amber on near-black pairing required the most iteration, particularly at small sizes. Touch targets were held to 44x44px minimum.</p>
+              </div>
+            </section>
+
             {/* Craft */}
             <section id="craft" className="mb-14">
               <div className="flex gap-4 max-w-[750px]">
@@ -334,17 +345,6 @@ export default function SquirllCaseStudy() {
                 </div>
               </div>
               <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Dark mode interface details</p>
-            </section>
-
-            {/* Accessibility */}
-            <section id="accessibility" className="mb-14">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Accessibility</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 max-w-[750px]">
-                Accessibility
-              </h2>
-              <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
-                <p>Dark backgrounds with warm accents create specific contrast challenges. I ran WCAG AA checks across every text and data surface - the amber on near-black pairing required the most iteration, particularly at small sizes. Touch targets were held to 44x44px minimum.</p>
-              </div>
             </section>
 
             {/* Outcome */}
