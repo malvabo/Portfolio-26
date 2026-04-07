@@ -10,56 +10,56 @@ const VEEQO_IMAGES = [
 export function VeeqoSection() {
   return (
     <section className="container mx-auto px-8 lg:px-12 pt-8 pb-8 md:pb-12">
-      <div className="flex gap-2 mb-3">
-        <span className="inline-block px-2.5 py-0.5 text-[11px] font-mono uppercase tracking-widest rounded-md bg-[#E8E3DD] text-[#6B5D4F]">Big tech</span>
-      </div>
-      <h2 className="text-2xl md:text-3xl leading-[1.1] font-serif mb-8 tracking-tight">
-        Amazon: Redesigning a document system for 50,000+ sellers
-      </h2>
-
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 mb-10">
-        <div>
-          <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">About</h3>
-          <p className="text-base leading-relaxed text-foreground">
-            The entire document infrastructure - invoices, customs forms, packing slips - ran on a third-party PDF tool we had no control over. I led the design of a full replacement: an HTML-based engine with AI-assisted editing, a rebuilt document library, and a migration path for the enterprise accounts.
-          </p>
-          <Link
-            href="/projects/veeqo"
-            className="inline-flex items-center gap-2 mt-6 px-5 py-2.5 text-sm font-medium rounded-full bg-white/40 backdrop-blur-md border border-gray-300/50 hover:bg-white/60 hover:border-gray-400/60 transition-all duration-300 shadow-sm hover:shadow-md"
-          >
-            Read more
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </Link>
+      <div className="max-w-7xl mx-auto">
+        <div className="flex gap-2 mb-3">
+          <span className="inline-block px-2.5 py-0.5 text-[11px] font-mono uppercase tracking-widest rounded-md bg-[#E8E3DD] text-[#6B5D4F]">Big tech</span>
         </div>
+        <h2 className="text-2xl md:text-3xl leading-[1.1] font-serif mb-8 tracking-tight">
+          Amazon: Redesigning a document system for 50,000+ sellers
+        </h2>
 
-        <div>
-          <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">
-            Results
-          </h3>
-          <p className="text-sm text-muted-foreground opacity-80">Guest area</p>
-        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 mb-10">
+          <div>
+            <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">About</h3>
+            <p className="text-base leading-relaxed text-foreground">
+              The entire document infrastructure - invoices, customs forms, packing slips - ran on a third-party PDF tool we had no control over. I led the design of a full replacement: an HTML-based engine with AI-assisted editing, a rebuilt document library, and a migration path for the enterprise accounts.
+            </p>
+            <Link
+              href="/projects/veeqo"
+              className="inline-flex items-center gap-2 mt-6 px-5 py-2.5 text-sm font-medium rounded-full bg-white/40 backdrop-blur-md border border-gray-300/50 hover:bg-white/60 hover:border-gray-400/60 transition-all duration-300 shadow-sm hover:shadow-md"
+            >
+              Read more
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+          </div>
 
-        <div>
-          <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">Role</h3>
-          <div className="text-base leading-relaxed text-foreground space-y-0.5">
-            <p>Product Designer</p>
-            <div className="flex flex-wrap gap-1.5 mt-2">
-              {["Web", "Document Automation"].map((platform) => (
-                <span
-                  key={platform}
-                  className="inline-block px-2 py-0.5 text-[13px] rounded-md bg-[#E8E3DD] text-[#6B5D4F]"
-                >
-                  {platform}
-                </span>
-              ))}
+          <div>
+            <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">
+              Results
+            </h3>
+            <p className="text-sm text-muted-foreground opacity-80">Guest area</p>
+          </div>
+
+          <div>
+            <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">Role</h3>
+            <div className="text-base leading-relaxed text-foreground space-y-0.5">
+              <p>Product Designer</p>
+              <div className="flex flex-wrap gap-1.5 mt-2">
+                {["Web", "Document Automation"].map((platform) => (
+                  <span
+                    key={platform}
+                    className="inline-block px-2 py-0.5 text-[13px] rounded-md bg-[#E8E3DD] text-[#6B5D4F]"
+                  >
+                    {platform}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div className="max-w-7xl mx-auto">
         <div className="relative">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {VEEQO_IMAGES.map((image, idx) => (
@@ -76,8 +76,8 @@ export function VeeqoSection() {
             <a href="mailto:borysova.mary@gmail.com" className="text-[11px] font-mono text-gray-700 tracking-wide hover:text-gray-900 transition-colors underline underline-offset-2">request access</a>
           </div>
         </div>
+        <div className="mt-8 border-t border-gray-300 mb-3" />
       </div>
-      <div className="mt-8 border-t border-gray-300 mb-3" />
     </section>
   )
 }

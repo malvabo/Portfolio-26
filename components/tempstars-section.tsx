@@ -10,6 +10,7 @@ export function TempStarsSection() {
 
   return (
     <section className="container mx-auto px-8 lg:px-12 pt-2 md:pt-3 pb-8 md:pb-12">
+      <div className="max-w-7xl mx-auto">
       <h2 className="text-2xl md:text-3xl leading-[1.1] font-serif mb-10 tracking-tight">
         TempStars: Building marketplace liquidity for 25K+ dentists
       </h2>
@@ -70,16 +71,15 @@ export function TempStarsSection() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {images.map((image, idx) => (
             <div key={idx} className="relative aspect-[4/3] overflow-hidden rounded-lg bg-gray-50 border border-gray-200">
               <Image src={image.src} alt={image.alt} fill className="object-cover" />
             </div>
           ))}
         </div>
-      </div>
       <div className="mt-8 border-t border-gray-300 mb-3" />
+      </div>
     </section>
   )
 }

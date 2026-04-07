@@ -4,6 +4,7 @@ import Link from "next/link"
 export function SquirllSection() {
   return (
     <section className="container mx-auto px-8 lg:px-12 pt-2 md:pt-3 pb-8 md:pb-12">
+      <div className="max-w-7xl mx-auto">
       <span className="inline-block mb-3 px-2.5 py-0.5 text-[11px] font-mono uppercase tracking-widest rounded-md bg-[#E8E3DD] text-[#6B5D4F]">0→1 Early Stage</span>
       <h2 className="text-2xl md:text-3xl leading-[1.1] font-serif mb-8 tracking-tight">
         Squirll: Defining the Design Language and Brand Expression
@@ -61,8 +62,7 @@ export function SquirllSection() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-black">
             <video src="/images/Sq1.mp4" autoPlay loop muted playsInline className="w-full h-full object-cover" />
           </div>
@@ -73,8 +73,8 @@ export function SquirllSection() {
             <LightboxImage src="/images/squirll-collage-2.jpg" alt="Squirll onboarding orbital illustration" className="w-full h-full object-cover" />
           </div>
         </div>
-      </div>
       <div className="mt-8 border-t border-gray-300 mb-3" />
+      </div>
     </section>
   )
 }

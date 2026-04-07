@@ -5,7 +5,7 @@ export function AmazonSection() {
     <section className="container mx-auto px-8 lg:px-12 pt-5 md:pt-6 pb-8 md:pb-12">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {[1, 2, 3].map((i) => (
+          {[1, 2, 3].map((i) => (
           <div key={i} className="relative aspect-[4/3] rounded-lg overflow-hidden bg-gray-50 border border-gray-200">
             <div className="absolute inset-0 z-10 [filter:blur(8px)] scale-105">
               <Image

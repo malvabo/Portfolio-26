@@ -10,6 +10,7 @@ const PAA_IMAGES = [
 export function PAASection() {
   return (
     <section className="container mx-auto px-8 lg:px-12 pt-2 md:pt-3 pb-8 md:pb-12">
+      <div className="max-w-7xl mx-auto">
       <span className="inline-block mb-3 px-2.5 py-0.5 text-[11px] font-mono uppercase tracking-widest rounded-md bg-[#E8E3DD] text-[#6B5D4F]">Series C</span>
       <h2 className="text-2xl md:text-3xl leading-[1.1] font-serif mb-8 tracking-tight">
         PAA: Scaling Clinical Efficiency through AI-Driven Workflows
@@ -66,16 +67,15 @@ export function PAASection() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {PAA_IMAGES.map((image, idx) => (
             <div key={idx} className="relative aspect-[4/3] overflow-hidden rounded-lg bg-gray-50 border border-gray-200 group">
               <LightboxImage src={image.src || "/placeholder.svg"} alt={image.alt} className="absolute inset-0 w-full h-full object-cover block" />
             </div>
           ))}
         </div>
-      </div>
       <div className="mt-8 border-t border-gray-300 mb-3" />
+      </div>
     </section>
   )
 }
