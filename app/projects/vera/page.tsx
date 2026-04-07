@@ -390,13 +390,8 @@ export default function VeraCaseStudy() {
               </div>
             </section>
 
-            {/* Workshops & Awards */}
+            {/* Awards */}
             <section className="mb-14">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Workshops &amp; Education</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-8 max-w-[750px]">
-                AI &amp; Behavioral Design Workshops
-              </h2>
-
               <h3 className="font-serif text-[1.375rem] leading-[1.3] tracking-[-0.02em] mb-6 font-medium text-foreground">Awards</h3>
 
               <div className="flex items-stretch gap-6 max-w-[750px]">
