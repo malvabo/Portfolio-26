@@ -90,7 +90,7 @@ export default function TempStarsCaseStudy() {
             </div>
             <div>
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Team</p>
-              <p className="text-[15px] leading-relaxed">Cross-functional</p>
+              <p className="text-[15px] leading-relaxed">Product manager, customer success manager, data analyst, engineering team</p>
             </div>
             <div>
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Platform</p>

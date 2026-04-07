@@ -51,19 +51,19 @@ export default function VeeqoCaseStudy() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-4 mb-6 pb-4 max-w-[750px]">
               <div>
                 <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Role</p>
-                <span className="inline-block px-2 py-0.5 text-[13px] rounded-md bg-[#E8E3DD] text-[#6B5D4F]">Product Designer</span>
+                <p className="text-[15px] leading-relaxed">Product Designer</p>
               </div>
               <div>
-                <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Scope</p>
-                <span className="inline-block px-2 py-0.5 text-[13px] rounded-md bg-[#E8E3DD] text-[#6B5D4F]">Full platform migration</span>
+                <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Platform</p>
+                <p className="text-[15px] leading-relaxed">Web</p>
               </div>
               <div>
                 <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Team</p>
-                <p className="text-[15px] leading-relaxed">Team lead, 3 engineers, PM, VP of Product, VP of Design, Client Success</p>
+                <p className="text-[15px] leading-relaxed">2 PMs, Engineering team (3 people)</p>
               </div>
               <div>
-                <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Constraint</p>
-                <span className="inline-block px-2 py-0.5 text-[13px] rounded-md bg-[#E8E3DD] text-[#6B5D4F]">Limited eng bandwidth</span>
+                <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Timeline</p>
+                <p className="text-[15px] leading-relaxed">3 months</p>
               </div>
             </div>
 

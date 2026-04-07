@@ -46,15 +46,15 @@ export default function PAACaseStudy() {
               </div>
               <div>
                 <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Platform</p>
-                <p className="text-[15px] leading-relaxed">Web Dashboard</p>
+                <p className="text-[15px] leading-relaxed">Web</p>
               </div>
               <div>
                 <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Team</p>
-                <p className="text-[15px] leading-relaxed">2 PMs, Engineering</p>
+                <p className="text-[15px] leading-relaxed">2 PMs, Engineering team</p>
               </div>
               <div>
-                <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Stage</p>
-                <span className="inline-block px-2 py-0.5 text-[13px] rounded-md bg-[#E8E3DD] text-[#6B5D4F]">Series C</span>
+                <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Timeline</p>
+                <p className="text-[15px] leading-relaxed">6 months</p>
               </div>
             </div>
 
