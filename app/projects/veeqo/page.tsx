@@ -558,6 +558,11 @@ export default function VeeqoCaseStudy() {
                 <p>The core problem was technical literacy. Enterprise documents require complex custom logic (HTML/CSS), but warehouse managers aren&apos;t developers — they can&apos;t code.</p>
                 <p>Instead of building a complex GUI we wouldn&apos;t be able to technically support in the first iteration of the product, I designed a workflow where the user provides natural language intent.</p>
                 <p>I worked closely with the backend engineers to define the technical specifications. I translated our internal Shopify Liquid logic into the system instructions. I ensured the prompt followed our specific ways of iterating through lists and data fetching.</p>
+              </div>
+              <div className="rounded-xl overflow-hidden my-6 max-w-[750px]">
+                <LightboxImage src="/images/aidocs.png" alt="AI documentation and system instructions" className="w-full h-auto object-cover" />
+              </div>
+              <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>Users now have to provide the LLM of their choice with our specific technical documentation: the internal rules, the liquid tags, and the span and div structures our backend requires to render correctly. After that, they would paste the result into our interface and save the result.</p>
                 <p>This reduced the white-glove support we had to provide, as sellers could now self-serve their migration through a guided, AI-assisted interface.</p>
               </div>
