@@ -134,9 +134,9 @@ export function WorkshopsSection() {
             </div>
             <div className="text-[17px] leading-relaxed text-muted-foreground pt-1">
               <a href="https://indigoaward.com/winners/12153" target="_blank" rel="noopener noreferrer" className="font-serif text-[22px] tracking-[-0.02em] leading-[1.15] text-foreground mb-3 hover:underline block">Indigo Award</a>
-              <p className="mt-6"><a href="https://indigoaward.com/winners/12153" target="_blank" rel="noopener noreferrer" className="hover:underline">x1 Gold Award | Application</a></p>
-              <p className="mt-3"><a href="https://indigoaward.com/winners/12153" target="_blank" rel="noopener noreferrer" className="hover:underline">x1 Silver Award | Branding for Banking &amp; Finances</a></p>
-              <p className="mt-3"><a href="https://indigoaward.com/winners/12153" target="_blank" rel="noopener noreferrer" className="hover:underline">x1 Silver Award | UX, Interface &amp; Navigation</a></p>
+              <p className="mt-4"><a href="https://indigoaward.com/winners/12153" target="_blank" rel="noopener noreferrer" className="hover:underline">x1 Gold Award | Application</a></p>
+              <p className="mt-1"><a href="https://indigoaward.com/winners/12153" target="_blank" rel="noopener noreferrer" className="hover:underline">x1 Silver Award | Branding for Banking &amp; Finances</a></p>
+              <p className="mt-1"><a href="https://indigoaward.com/winners/12153" target="_blank" rel="noopener noreferrer" className="hover:underline">x1 Silver Award | UX, Interface &amp; Navigation</a></p>
             </div>
           </div>
         </div>
