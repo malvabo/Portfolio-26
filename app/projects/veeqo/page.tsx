@@ -581,14 +581,14 @@ export default function VeeqoCaseStudy() {
               {/* Roadmap */}
               <div className="max-w-[750px]">
                 {/* Labels row — 10px above the line */}
-                <div className="hidden md:grid grid-cols-3 gap-4 mb-[10px]">
+                <div className="hidden md:grid grid-cols-3 gap-4 mb-[5px]">
                   <p className="font-mono text-[10px] uppercase tracking-wider text-foreground">V1 · Shipped</p>
                   <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground">V2 · Template Intelligence</p>
                   <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground">V3 · AI Document Intelligence</p>
                 </div>
 
                 {/* Connecting line + arrows */}
-                <div className="hidden md:flex items-center mb-4">
+                <div className="hidden md:flex items-center mb-[5px]">
                   <div className="flex-1 h-px bg-[#EBEBEB]" />
                   <svg width="14" height="10" viewBox="0 0 14 10" fill="none" className="shrink-0">
                     <path d="M0 5h9M6 2l4 3-4 3" stroke="#9CA3AF" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/>
