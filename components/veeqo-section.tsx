@@ -12,7 +12,7 @@ export function VeeqoSection() {
     <section className="container mx-auto px-8 lg:px-12 pt-8 pb-8 md:pb-12">
       <div className="max-w-7xl mx-auto">
         <div className="flex gap-2 mb-3">
-          <span className="inline-block px-2.5 py-0.5 text-[11px] font-mono uppercase tracking-widest rounded-md bg-[#E8E3DD] text-[#6B5D4F]">Big tech</span>
+          <span className="inline-block px-2.5 py-0.5 text-[11px] font-mono uppercase tracking-normal rounded-md bg-[#E8E3DD] text-[#6B5D4F]">Big tech</span>
         </div>
         <h2 className="text-2xl md:text-3xl leading-[1.1] font-serif mb-8 tracking-tight">
           Amazon: Redesigning a document system for 50,000+ sellers
@@ -50,7 +50,7 @@ export function VeeqoSection() {
                 {["Web", "Document Automation"].map((platform) => (
                   <span
                     key={platform}
-                    className="inline-block px-2 py-0.5 text-[13px] rounded-md bg-[#E8E3DD] text-[#6B5D4F]"
+                    className="inline-block px-2 py-0.5 text-[13px] tracking-tight rounded-md bg-[#E8E3DD] text-[#6B5D4F]"
                   >
                     {platform}
                   </span>
@@ -69,7 +69,7 @@ export function VeeqoSection() {
                   <svg className="w-3 h-3 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                   </svg>
-                  <span className="text-[11px] font-mono text-gray-500 tracking-wide">Guest area · Available during the interview</span>
+                  <span className="text-[11px] font-mono text-gray-500 tracking-wide">Guest area</span>
                 </div>
               )}
             </div>

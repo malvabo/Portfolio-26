@@ -19,7 +19,7 @@ export default function PAACaseStudy() {
           <aside className="hidden lg:block w-56 px-8 lg:px-12 fixed top-24 left-8 lg:left-[max(0px,calc((100vw-80rem)/2))]" aria-label="Case study navigation">
             <BackLinkSidebar />
             <nav className="space-y-4" aria-label="Case study sections">
-              <a href="#tldr" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Impact at a glance</a>
+              <a href="#tldr" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Impact</a>
               <a href="#space" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Context</a>
               <a href="#problem" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Research</a>
               <a href="#explorations" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Design Exploration</a>
@@ -72,13 +72,13 @@ export default function PAACaseStudy() {
               </div>
             </div>
 
-            {/* Impact at a glance */}
+            {/* Impact */}
             <section id="tldr" className="mb-12 p-8 bg-[#F5F3F0] rounded-xl max-w-[750px]">
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4">Impact at a glance</h2>
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4">Impact</h2>
               <ul className="space-y-2 text-[17px] leading-relaxed">
                 <li className="flex gap-3">
                   <span className="text-muted-foreground mt-0.5">•</span>
-                  <span className="text-muted-foreground">Led end-to-end design of a clinical intelligence dashboard in a 0-to-1 environment with no editable design precedent - drove discovery, ran card sorting with clinical staff, and owned the full interaction model</span>
+                  <span className="text-muted-foreground"><span className="font-semibold text-foreground">Led end-to-end design of a clinical intelligence dashboard in a 0-to-1 environment with no editable design precedent - drove discovery, ran card sorting with clinical staff, and owned the full interaction model</span></span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-muted-foreground mt-0.5">•</span>
@@ -393,13 +393,13 @@ export default function PAACaseStudy() {
             <section id="impact" className="mb-12">
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Impact</p>
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 max-w-[750px]">
-                Impact at a glance
+                Impact
               </h2>
               <div className="p-8 bg-[#F5F3F0] rounded-xl max-w-[750px] mb-8">
                 <ul className="space-y-2 text-[17px] leading-relaxed">
                   <li className="flex gap-3">
                     <span className="text-muted-foreground mt-0.5">•</span>
-                    <span className="text-muted-foreground">Led end-to-end design of a clinical intelligence dashboard in a 0-to-1 environment with no editable design precedent - drove discovery, ran card sorting with clinical staff, and owned the full interaction model</span>
+                    <span className="text-muted-foreground"><span className="font-semibold text-foreground">Led end-to-end design of a clinical intelligence dashboard in a 0-to-1 environment with no editable design precedent - drove discovery, ran card sorting with clinical staff, and owned the full interaction model</span></span>
                   </li>
                   <li className="flex gap-3">
                     <span className="text-muted-foreground mt-0.5">•</span>
