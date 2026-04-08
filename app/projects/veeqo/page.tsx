@@ -580,58 +580,63 @@ export default function VeeqoCaseStudy() {
 
               {/* Roadmap */}
               <div className="max-w-[750px]">
-                <div className="relative">
-                  {/* Connecting line + arrows — runs through dot row only */}
-                  <div className="hidden md:flex absolute top-[10px] left-[4px] right-[4px] items-center z-0 pointer-events-none">
-                    <div className="flex-1 h-px bg-[#EBEBEB]" />
-                    <svg width="7" height="5" viewBox="0 0 7 5" fill="none" className="shrink-0">
-                      <path d="M0 2.5h4.5M3 1l2 1.5-2 1.5" stroke="#9CA3AF" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                    <div className="flex-1 h-px bg-[#EBEBEB]" />
-                    <svg width="7" height="5" viewBox="0 0 7 5" fill="none" className="shrink-0">
-                      <path d="M0 2.5h4.5M3 1l2 1.5-2 1.5" stroke="#9CA3AF" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                    <div className="flex-1 h-px bg-[#EBEBEB]" />
+                {/* Labels row — 10px above the line */}
+                <div className="hidden md:grid grid-cols-3 gap-4 mb-[10px]">
+                  <p className="font-mono text-[10px] uppercase tracking-wider text-foreground">V1 · Shipped</p>
+                  <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground">V2 · Template Intelligence</p>
+                  <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground">V3 · AI Document Intelligence</p>
+                </div>
+
+                {/* Connecting line + arrows */}
+                <div className="hidden md:flex items-center mb-4">
+                  <div className="flex-1 h-px bg-[#EBEBEB]" />
+                  <svg width="14" height="10" viewBox="0 0 14 10" fill="none" className="shrink-0">
+                    <path d="M0 5h9M6 2l4 3-4 3" stroke="#9CA3AF" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                  <div className="flex-1 h-px bg-[#EBEBEB]" />
+                  <svg width="14" height="10" viewBox="0 0 14 10" fill="none" className="shrink-0">
+                    <path d="M0 5h9M6 2l4 3-4 3" stroke="#9CA3AF" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                  <div className="flex-1 h-px bg-[#EBEBEB]" />
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  {/* V1 - Shipped */}
+                  <div>
+                    <p className="md:hidden font-mono text-[10px] uppercase tracking-wider text-foreground mb-3">V1 · Shipped</p>
+                    <div className="border border-[#EBEBEB] rounded-xl p-4 bg-white space-y-2">
+                      {["Core infrastructure migration", "HTML editor + AI assist", "Toggle-based defaults", "Enterprise white-glove migration"].map((item) => (
+                        <div key={item} className="flex items-start gap-2">
+                          <span className="text-emerald-500 mt-0.5 text-[13px]">✓</span>
+                          <span className="text-[13px] text-muted-foreground">{item}</span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 relative z-10">
-                    {/* V1 - Shipped */}
-                    <div>
-                      <p className="font-mono text-[10px] uppercase tracking-wider text-foreground mb-3">V1 · Shipped</p>
-                      <div className="border border-[#EBEBEB] rounded-xl p-4 bg-white space-y-2">
-                        {["Core infrastructure migration", "HTML editor + AI assist", "Toggle-based defaults", "Enterprise white-glove migration"].map((item) => (
-                          <div key={item} className="flex items-start gap-2">
-                            <span className="text-emerald-500 mt-0.5 text-[13px]">✓</span>
-                            <span className="text-[13px] text-muted-foreground">{item}</span>
-                          </div>
-                        ))}
-                      </div>
+                  {/* V2 */}
+                  <div>
+                    <p className="md:hidden font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-3">V2 · Template Intelligence</p>
+                    <div className="border border-[#EBEBEB] rounded-xl p-4 bg-[#F5F3F0] space-y-2">
+                      {["Expanded template library", "Featured & most-popular surfacing", "Seller starring / favourites", "AI-generated docs"].map((item) => (
+                        <div key={item} className="flex items-start gap-2">
+                          <span className="text-muted-foreground/40 mt-0.5 text-[13px]">○</span>
+                          <span className="text-[13px] text-muted-foreground">{item}</span>
+                        </div>
+                      ))}
                     </div>
+                  </div>
 
-                    {/* V2 */}
-                    <div>
-                      <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-3">V2 · Template Intelligence</p>
-                      <div className="border border-[#EBEBEB] rounded-xl p-4 bg-[#F5F3F0] space-y-2">
-                        {["Expanded template library", "Featured & most-popular surfacing", "Seller starring / favourites", "AI-generated docs"].map((item) => (
-                          <div key={item} className="flex items-start gap-2">
-                            <span className="text-muted-foreground/40 mt-0.5 text-[13px]">○</span>
-                            <span className="text-[13px] text-muted-foreground">{item}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* V3 */}
-                    <div>
-                      <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-3">V3 · AI Document Intelligence</p>
-                      <div className="border border-[#EBEBEB] rounded-xl p-4 bg-white space-y-2">
-                        {["AI-generated docs", "Smart field suggestions based on fulfillment patterns", "Automated improvement recommendations per template"].map((item) => (
-                          <div key={item} className="flex items-start gap-2">
-                            <span className="text-muted-foreground/30 mt-0.5 text-[13px]">○</span>
-                            <span className="text-[13px] text-muted-foreground">{item}</span>
-                          </div>
-                        ))}
-                      </div>
+                  {/* V3 */}
+                  <div>
+                    <p className="md:hidden font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-3">V3 · AI Document Intelligence</p>
+                    <div className="border border-[#EBEBEB] rounded-xl p-4 bg-white space-y-2">
+                      {["AI-generated docs", "Smart field suggestions based on fulfillment patterns", "Automated improvement recommendations per template"].map((item) => (
+                        <div key={item} className="flex items-start gap-2">
+                          <span className="text-muted-foreground/30 mt-0.5 text-[13px]">○</span>
+                          <span className="text-[13px] text-muted-foreground">{item}</span>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 </div>
