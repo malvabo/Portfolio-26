@@ -19,11 +19,14 @@ export default function PAACaseStudy() {
           <aside className="hidden lg:block w-56 px-8 lg:px-12 fixed top-24 left-8 lg:left-[max(0px,calc((100vw-80rem)/2))]" aria-label="Case study navigation">
             <BackLinkSidebar />
             <nav className="space-y-4" aria-label="Case study sections">
-              <a href="#space" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">The Space</a>
-              <a href="#problem" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">The Problem</a>
-              <a href="#discovery" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Discovery</a>
+              <a href="#tldr" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Impact at a glance</a>
+              <a href="#space" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Context</a>
+              <a href="#problem" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Research</a>
               <a href="#explorations" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Design Exploration</a>
-              <a href="#ai" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">The AI Layer</a>
+              <a href="#solution" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">The Solution</a>
+              <a href="#ai" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">AI Layer</a>
+              <a href="#impact" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Impact</a>
+              <a href="#retro" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Retrospective</a>
             </nav>
           </aside>
 

@@ -24,7 +24,7 @@ export default function VeeqoCaseStudy() {
             <nav className="space-y-4" aria-label="Case study sections">
               <a href="#context" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Context</a>
               <a href="#discovery" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Discovery</a>
-              <a href="#iterations" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">What We Tried</a>
+              <a href="#iterations" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Design iterations</a>
               <a href="#strategy" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Strategy</a>
               <a href="#design" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Design Decisions</a>
               <a href="#outcomes" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Outcomes</a>
@@ -206,7 +206,7 @@ export default function VeeqoCaseStudy() {
 
             {/* Design Iterations */}
             <section id="iterations" className="mb-14">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">What we tried first</p>
+              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Design iterations</p>
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 max-w-[750px]">
                 Ideating, testing and iterating
               </h2>
