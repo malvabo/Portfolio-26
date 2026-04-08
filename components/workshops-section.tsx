@@ -127,7 +127,7 @@ export function WorkshopsSection() {
 
         {/* Awards */}
         <div className="mt-12">
-          <h2 className="font-serif text-2xl md:text-3xl leading-[1.1] tracking-tight text-foreground mb-6">Awards</h2>
+          <h2 className="font-serif text-2xl md:text-3xl leading-[1.1] tracking-tight text-foreground mb-10">Awards</h2>
           <div className="flex items-stretch gap-6 max-w-[750px]">
             <div className="shrink-0 w-[72px] relative">
               <Image src="/images/ribbon_714.png" alt="Indigo Design Award Winner 2026" fill className="object-contain object-top" />

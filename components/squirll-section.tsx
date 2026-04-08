@@ -73,7 +73,6 @@ export function SquirllSection() {
             <LightboxImage src="/images/squirll-collage-2.jpg" alt="Squirll onboarding orbital illustration" className="w-full h-full object-cover" />
           </div>
         </div>
-      <div className="mt-8 border-t border-gray-300 mb-3" />
       </div>
     </section>
   )

@@ -63,7 +63,6 @@ export function VeraSection() {
             </div>
           ))}
         </div>
-        <div className="mt-8 border-t border-gray-300 mb-3" />
       </div>
     </section>
   )
