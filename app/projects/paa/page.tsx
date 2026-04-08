@@ -78,7 +78,7 @@ export default function PAACaseStudy() {
               <ul className="space-y-2 text-[17px] leading-relaxed">
                 <li className="flex gap-3">
                   <span className="text-muted-foreground mt-0.5">•</span>
-                  <span className="text-muted-foreground"><span className="font-semibold text-foreground">Led end-to-end design of a clinical intelligence dashboard in a 0-to-1 environment with no editable design precedent - drove discovery, ran card sorting with clinical staff, and owned the full interaction model</span></span>
+                  <span className="text-muted-foreground">Led end-to-end design of a clinical intelligence dashboard in a <span className="font-semibold text-foreground">0-to-1</span> environment with no editable design precedent - drove discovery, ran card sorting with clinical staff, and owned the full interaction model</span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-muted-foreground mt-0.5">•</span>
@@ -399,7 +399,7 @@ export default function PAACaseStudy() {
                 <ul className="space-y-2 text-[17px] leading-relaxed">
                   <li className="flex gap-3">
                     <span className="text-muted-foreground mt-0.5">•</span>
-                    <span className="text-muted-foreground"><span className="font-semibold text-foreground">Led end-to-end design of a clinical intelligence dashboard in a 0-to-1 environment with no editable design precedent - drove discovery, ran card sorting with clinical staff, and owned the full interaction model</span></span>
+                    <span className="text-muted-foreground">Led end-to-end design of a clinical intelligence dashboard in a <span className="font-semibold text-foreground">0-to-1</span> environment with no editable design precedent - drove discovery, ran card sorting with clinical staff, and owned the full interaction model</span>
                   </li>
                   <li className="flex gap-3">
                     <span className="text-muted-foreground mt-0.5">•</span>
