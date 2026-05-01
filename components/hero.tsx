@@ -49,7 +49,7 @@ export function Hero() {
       `}</style>
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col gap-8">
-          <h1 className="hero-headline hero-reveal hero-reveal-1 font-sans text-base md:text-lg font-normal leading-[1.4] tracking-normal text-muted-foreground w-full max-w-7xl relative z-30">
+          <h1 className="hero-headline hero-reveal hero-reveal-1 font-sans text-lg md:text-xl font-normal leading-[1.4] tracking-normal text-muted-foreground w-full max-w-7xl relative z-30">
             {(["Hi,","I","am","Mary,","Product","UX","Designer","currently","shaping","tech","at","Amazon."] as string[]).map((word, i) => (
               <span key={i}>
                 {i === 9 ? (
