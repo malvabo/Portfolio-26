@@ -17,23 +17,68 @@ export function Hero() {
         .hero-reveal-2 { animation-delay: 0.15s; }
         .hero-reveal-3 { animation-delay: 0.22s; }
         .hero-reveal-4 { animation-delay: 0.3s; }
+        .hero-headline > span { transition: opacity 0.3s ease; }
+        .hero-headline:has(.tech-wrap:hover) > span:not(:has(.tech-wrap)) { opacity: 0.2; }
+        .tech-hover-image {
+          opacity: 0;
+          transform: translate(-50%, -50%) scale(0.9);
+          transition: opacity 0.35s ease, transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+        .tech-wrap:hover .tech-hover-image {
+          opacity: 1;
+          transform: translate(-50%, -50%) scale(1);
+        }
       `}</style>
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col gap-8">
-          <h1 className="hero-reveal hero-reveal-1 font-serif text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-normal leading-[1.15] tracking-[-0.02em] text-foreground w-full max-w-7xl">
+          <h1 className="hero-headline hero-reveal hero-reveal-1 font-serif text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-normal leading-[1.15] tracking-[-0.02em] text-foreground w-full max-w-7xl">
             {(["Hi,","I","am","Mary,","Product","UX","Designer","currently","shaping","tech","at","Amazon."] as string[]).map((word, i) => (
               <span key={i}>
-                <span className="inline-block overflow-hidden align-bottom pb-[0.12em]">
-                  <span className="inline-block">{word}</span>
-                  {i < 11 && i !== 6 ? "\u00A0" : ""}
-                </span>
+                {i === 9 ? (
+                  <span className="tech-wrap relative inline-block align-middle cursor-pointer">
+                    <span
+                      aria-hidden
+                      className="tech-hover-image absolute left-1/2 top-1/2 w-[clamp(220px,28vw,420px)] aspect-[4/3] rounded-md overflow-hidden shadow-2xl ring-1 ring-black/10 pointer-events-none"
+                    >
+                      <Image
+                        src="/images/amazon-sales-dashboard.jpg"
+                        alt=""
+                        fill
+                        sizes="420px"
+                        className="object-cover"
+                      />
+                    </span>
+                    <span className="relative inline-flex items-center gap-[0.25em] border border-foreground rounded-[3px] px-[0.4em] py-[0.05em] leading-none bg-background">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        aria-hidden
+                        className="w-[0.55em] h-[0.55em] shrink-0"
+                      >
+                        <path
+                          d="M7 17L17 7M17 7H8M17 7V16"
+                          stroke="currentColor"
+                          strokeWidth="2.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                      <span className="inline-block">{word}</span>
+                    </span>
+                  </span>
+                ) : (
+                  <span className="inline-block overflow-hidden align-bottom pb-[0.12em]">
+                    <span className="inline-block">{word}</span>
+                  </span>
+                )}
+                {i < 11 && i !== 6 ? "\u00A0" : ""}
                 {i === 6 && <br />}
               </span>
             ))}
           </h1>
           <div className="w-full max-w-[360px] lg:max-w-[440px] lg:ml-auto mt-8">
-            <p className="hero-reveal hero-reveal-2 font-sans text-[17px] leading-relaxed text-muted-foreground">
-              I design AI-powered products for complex, high-stakes workflows at scale. Currently at Amazon, before that: 0-to-1 startups, venture studios, unicorns.
+            <p className="hero-reveal hero-reveal-2 font-sans text-[19px] leading-relaxed text-muted-foreground">
+              I design AI-powered products for complex, high-stakes workflows at scale. Shipped 0→1 products, won design awards, worked with venture studios and unicorns.
             </p>
             <div className="hero-reveal hero-reveal-3 flex justify-start mt-4 mb-2">
               <svg width="40" height="48" viewBox="0 0 24 28" fill="none" className="text-[#0F5CA2]" aria-hidden>
