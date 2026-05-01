@@ -94,7 +94,7 @@ export function Hero() {
               </span>
             ))}
           </h1>
-          <div className="w-full max-w-7xl mt-4 relative z-30">
+          <div className="w-full max-w-[520px] mt-4 relative z-30">
             <p className="hero-reveal hero-reveal-2 font-serif text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-normal leading-[1.15] tracking-[-0.02em] text-foreground relative z-10">
               I design AI-powered products for complex, high-stakes workflows at scale. Shipped 0→1 products, won{" "}
               <a
