@@ -124,7 +124,7 @@ export function Hero() {
                   design awards
                 </span>
               </a>
-              , worked with venture studios and unicorns. Building graph150 in my free time.
+              , worked with venture studios and unicorns. By night: vibe-coding graph150.
             </p>
             <div className="hero-reveal hero-reveal-3 flex justify-start mt-4 mb-2">
               <svg width="40" height="48" viewBox="0 0 24 28" fill="none" className="text-[#0F5CA2]" aria-hidden>
