@@ -125,7 +125,7 @@ vibe-coding
 
           <div className="hero-reveal hero-reveal-3 w-full max-w-[700px] mt-[20px] relative z-30 flex flex-col gap-y-1">
             {[
-              { label: "Amazon: new document system", href: "#work" },
+              { label: "Amazon: new document system", href: "/projects/amazon" },
               { label: "PAA: AI clinical workflows", href: "#paa" },
               { label: "Squirll: 0→1 design", href: "#squirll" },
               { label: "Tempstars: redesign of the marketplace", href: "#tempstars" },
