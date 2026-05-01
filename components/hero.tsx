@@ -17,14 +17,12 @@ export function Hero() {
         .hero-reveal-2 { animation-delay: 0.15s; }
         .hero-reveal-3 { animation-delay: 0.22s; }
         .hero-reveal-4 { animation-delay: 0.3s; }
-        .hero-headline > span { transition: opacity 0.3s ease; }
-        .hero-headline:has(.tech-wrap:hover) > span:not(:has(.tech-wrap)) { opacity: 0.2; }
-        .tech-hover-image {
+        .workflows-hover-image {
           opacity: 0;
           transform: translate(-50%, -50%) scale(0.9);
           transition: opacity 0.35s ease, transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
         }
-        .tech-wrap:hover .tech-hover-image {
+        .workflows-wrap:hover .workflows-hover-image {
           opacity: 1;
           transform: translate(-50%, -50%) scale(1);
         }
@@ -49,54 +47,45 @@ export function Hero() {
       `}</style>
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col gap-8">
-          <h1 className="hero-headline hero-reveal hero-reveal-1 font-sans text-lg md:text-xl font-normal leading-[1.4] tracking-normal text-muted-foreground w-full max-w-7xl relative z-30">
-            {(["Hi,","I","am","Mary,","Product","UX","Designer","currently","shaping","tech","at","Amazon."] as string[]).map((word, i) => (
-              <span key={i}>
-                {i === 9 ? (
-                  <span className="tech-wrap relative inline-block align-bottom pb-[0.12em] cursor-pointer z-50 hover:z-[60]">
-                    <span
-                      aria-hidden
-                      className="tech-hover-image absolute left-1/2 top-1/2 w-[clamp(360px,46vw,720px)] aspect-[16/9] rounded-md overflow-hidden shadow-2xl ring-1 ring-black/10 pointer-events-none"
-                    >
-                      <Image
-                        src="/amz_image.jpeg"
-                        alt=""
-                        fill
-                        sizes="720px"
-                        className="object-cover"
-                      />
-                    </span>
-                    <span className="relative border border-foreground rounded-[3px] px-[0.3em] bg-background whitespace-nowrap">
-                      <svg
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        aria-hidden
-                        className="inline-block w-[0.715em] h-[0.715em] mr-[0.15em] -translate-y-[0.05em]"
-                      >
-                        <path
-                          d="M7 17L17 7M17 7H8M17 7V16"
-                          stroke="currentColor"
-                          strokeWidth="1.92"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                      {word}
-                    </span>
-                  </span>
-                ) : (
-                  <span className="inline-block overflow-hidden align-bottom pb-[0.12em]">
-                    <span className="inline-block">{word}</span>
-                  </span>
-                )}
-                {i < 11 && i !== 6 ? " " : ""}
-                {i === 6 && <br />}
-              </span>
-            ))}
+          <h1 className="hero-reveal hero-reveal-1 font-sans text-lg md:text-xl font-normal leading-[1.4] tracking-normal text-muted-foreground w-full max-w-7xl relative z-30">
+            Hi, I am Mary, Product UX Designer<br />
+            currently shaping tech at Amazon.
           </h1>
           <div className="w-full max-w-[520px] mt-4 relative z-30">
             <p className="hero-reveal hero-reveal-2 font-serif text-[32px] font-normal leading-[40px] tracking-[-0.02em] text-foreground relative z-10">
-              I design AI-powered products for complex workflows at scale. Shipped 0→1 products, won{" "}
+              I design AI-powered products for complex{" "}
+              <span className="workflows-wrap relative inline-block cursor-pointer z-50 hover:z-[60]">
+                <span
+                  aria-hidden
+                  className="workflows-hover-image absolute left-1/2 top-1/2 w-[clamp(360px,46vw,720px)] aspect-[16/9] rounded-md overflow-hidden shadow-2xl ring-1 ring-black/10 pointer-events-none"
+                >
+                  <Image
+                    src="/amz_image.jpeg"
+                    alt=""
+                    fill
+                    sizes="720px"
+                    className="object-cover"
+                  />
+                </span>
+                <span className="relative border border-current rounded-[3px] px-[0.3em] bg-background whitespace-nowrap">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    aria-hidden
+                    className="inline-block w-[0.715em] h-[0.715em] mr-[0.15em] -translate-y-[0.05em]"
+                  >
+                    <path
+                      d="M7 17L17 7M17 7H8M17 7V16"
+                      stroke="currentColor"
+                      strokeWidth="1.92"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                  workflows
+                </span>
+              </span>
+              {" "}at scale. Shipped 0→1 products, won{" "}
               <a
                 href="/images/Sq1.mp4"
                 target="_blank"
