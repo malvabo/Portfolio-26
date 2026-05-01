@@ -95,7 +95,7 @@ export function Hero() {
             ))}
           </h1>
           <div className="w-full max-w-[360px] lg:max-w-[440px] lg:ml-auto mt-8 relative z-30">
-            <p className="hero-reveal hero-reveal-2 font-sans text-[19px] leading-relaxed text-muted-foreground">
+            <p className="hero-reveal hero-reveal-2 font-sans text-[19px] leading-relaxed text-muted-foreground relative z-10">
               I design AI-powered products for complex, high-stakes workflows at scale. Shipped 0→1 products, won{" "}
               <a
                 href="/images/Sq1.mp4"
