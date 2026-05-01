@@ -173,7 +173,6 @@ export function Hero() {
               { label: "Squirll: Defining the Design Language and Brand Expression", href: "/projects/squirll" },
               { label: "TempStars: Building marketplace liquidity for 25K+ dentists", href: "/projects/tempstars" },
               { label: "Deep dives on AI, trust & product", href: "/side-projects" },
-              { label: "AI & Behavioral Design Workshops", href: "/speaking" },
             ].map(({ label, href }) => (
               <a
                 key={label}
