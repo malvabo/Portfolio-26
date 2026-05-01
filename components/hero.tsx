@@ -44,7 +44,7 @@ export function Hero() {
             {(["Hi,","I","am","Mary,","Product","UX","Designer","currently","shaping","tech","at","Amazon."] as string[]).map((word, i) => (
               <span key={i}>
                 {i === 9 ? (
-                  <span className="tech-wrap relative inline-block align-baseline cursor-pointer translate-y-[-0.12em]">
+                  <span className="tech-wrap relative inline-block cursor-pointer">
                     <span
                       aria-hidden
                       className="tech-hover-image absolute left-1/2 top-1/2 w-[clamp(360px,46vw,720px)] aspect-[16/9] rounded-md overflow-hidden shadow-2xl ring-1 ring-black/10 pointer-events-none"
@@ -57,12 +57,12 @@ export function Hero() {
                         className="object-cover"
                       />
                     </span>
-                    <span className="relative inline-flex items-center gap-[0.2em] border border-foreground rounded-[3px] px-[0.3em] py-0 leading-none bg-background -my-[0.08em] align-baseline">
+                    <span className="relative border border-foreground rounded-[3px] px-[0.3em] bg-background whitespace-nowrap">
                       <svg
                         viewBox="0 0 24 24"
                         fill="none"
                         aria-hidden
-                        className="w-[0.55em] h-[0.55em] shrink-0"
+                        className="inline-block w-[0.55em] h-[0.55em] mr-[0.15em] -translate-y-[0.05em]"
                       >
                         <path
                           d="M7 17L17 7M17 7H8M17 7V16"
@@ -72,7 +72,7 @@ export function Hero() {
                           strokeLinejoin="round"
                         />
                       </svg>
-                      <span className="inline-block">{word}</span>
+                      {word}
                     </span>
                   </span>
                 ) : (
@@ -92,7 +92,7 @@ export function Hero() {
                 href="/images/Sq1.mp4"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="awards-tag relative inline-block align-baseline cursor-pointer translate-y-[-0.1em] text-foreground no-underline"
+                className="awards-tag relative inline-block cursor-pointer text-foreground no-underline"
               >
                 <span
                   aria-hidden
@@ -107,12 +107,12 @@ export function Hero() {
                     className="w-full h-full object-cover"
                   />
                 </span>
-                <span className="relative inline-flex items-center gap-[0.2em] border border-foreground rounded-[3px] px-[0.3em] py-0 leading-none bg-background -my-[0.08em] align-baseline">
+                <span className="relative border border-foreground rounded-[3px] px-[0.3em] bg-background whitespace-nowrap">
                   <svg
                     viewBox="0 0 24 24"
                     fill="none"
                     aria-hidden
-                    className="w-[0.55em] h-[0.55em] shrink-0"
+                    className="inline-block w-[0.55em] h-[0.55em] mr-[0.15em] -translate-y-[0.05em]"
                   >
                     <path
                       d="M7 17L17 7M17 7H8M17 7V16"
@@ -122,7 +122,7 @@ export function Hero() {
                       strokeLinejoin="round"
                     />
                   </svg>
-                  <span className="inline-block">design awards</span>
+                  design awards
                 </span>
               </a>
               , worked with venture studios and unicorns.
