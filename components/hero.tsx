@@ -92,7 +92,7 @@ export function Hero() {
                 href="/images/Sq1.mp4"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="awards-tag relative inline-block align-bottom pb-[0.12em] cursor-pointer text-foreground no-underline z-50"
+                className="awards-tag relative inline-block cursor-pointer text-foreground no-underline z-50"
               >
                 <span
                   aria-hidden
