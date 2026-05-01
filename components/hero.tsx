@@ -71,12 +71,12 @@ export function Hero() {
                         viewBox="0 0 24 24"
                         fill="none"
                         aria-hidden
-                        className="inline-block w-[0.55em] h-[0.55em] mr-[0.15em] -translate-y-[0.05em]"
+                        className="inline-block w-[0.715em] h-[0.715em] mr-[0.15em] -translate-y-[0.05em]"
                       >
                         <path
                           d="M7 17L17 7M17 7H8M17 7V16"
                           stroke="currentColor"
-                          strokeWidth="2.5"
+                          strokeWidth="1.92"
                           strokeLinecap="round"
                           strokeLinejoin="round"
                         />
@@ -120,12 +120,12 @@ export function Hero() {
                     viewBox="0 0 24 24"
                     fill="none"
                     aria-hidden
-                    className="inline-block w-[0.55em] h-[0.55em] mr-[0.15em] -translate-y-[0.05em]"
+                    className="inline-block w-[0.715em] h-[0.715em] mr-[0.15em] -translate-y-[0.05em]"
                   >
                     <path
                       d="M7 17L17 7M17 7H8M17 7V16"
                       stroke="currentColor"
-                      strokeWidth="2.5"
+                      strokeWidth="1.92"
                       strokeLinecap="round"
                       strokeLinejoin="round"
                     />
@@ -158,12 +158,12 @@ export function Hero() {
                     viewBox="0 0 24 24"
                     fill="none"
                     aria-hidden
-                    className="inline-block w-[0.55em] h-[0.55em] mr-[0.15em] -translate-y-[0.05em]"
+                    className="inline-block w-[0.715em] h-[0.715em] mr-[0.15em] -translate-y-[0.05em]"
                   >
                     <path
                       d="M7 17L17 7M17 7H8M17 7V16"
                       stroke="currentColor"
-                      strokeWidth="2.5"
+                      strokeWidth="1.92"
                       strokeLinecap="round"
                       strokeLinejoin="round"
                     />
