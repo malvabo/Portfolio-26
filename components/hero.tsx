@@ -66,7 +66,7 @@ export function Hero() {
                         className="object-cover"
                       />
                     </span>
-                    <span className="relative border border-foreground rounded-[3px] px-[0.3em] bg-background whitespace-nowrap">
+                    <span className="relative border border-foreground rounded-[3px] px-[0.3em] bg-background whitespace-nowrap text-[1.3em]">
                       <svg
                         viewBox="0 0 24 24"
                         fill="none"
@@ -115,7 +115,7 @@ export function Hero() {
                     className="object-cover"
                   />
                 </span>
-                <span className="relative border border-current rounded-[3px] px-[0.3em] bg-background whitespace-nowrap">
+                <span className="relative border border-current rounded-[3px] px-[0.3em] bg-background whitespace-nowrap text-[1.3em]">
                   <svg
                     viewBox="0 0 24 24"
                     fill="none"
@@ -153,7 +153,7 @@ export function Hero() {
                     className="w-full h-full object-cover"
                   />
                 </span>
-                <span className="relative border border-current rounded-[3px] px-[0.3em] bg-background whitespace-nowrap">
+                <span className="relative border border-current rounded-[3px] px-[0.3em] bg-background whitespace-nowrap text-[1.3em]">
                   <svg
                     viewBox="0 0 24 24"
                     fill="none"
