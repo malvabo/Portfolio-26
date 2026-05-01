@@ -105,7 +105,7 @@ export function Hero() {
               >
                 <span
                   aria-hidden
-                  className="awards-hover-video absolute left-1/2 top-1/2 w-[clamp(280px,36vw,540px)] aspect-[4/3] rounded-md overflow-hidden shadow-2xl ring-1 ring-black/10 pointer-events-none"
+                  className="awards-hover-video absolute left-1/2 top-1/2 w-[clamp(280px,36vw,540px)] aspect-[16/9] rounded-md overflow-hidden shadow-2xl ring-1 ring-black/10 pointer-events-none"
                 >
                   <Image
                     src="/images/squirll-collage-2.jpg"
