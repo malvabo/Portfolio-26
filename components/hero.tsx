@@ -124,7 +124,7 @@ export function Hero() {
               </a>
               ,<br />
               worked with venture studios and unicorns.<br />
-              By night:{" "}
+              By night{" "}
               <a
                 href="/nodes4.mp4"
                 target="_blank"
