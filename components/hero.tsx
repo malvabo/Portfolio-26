@@ -53,7 +53,7 @@ export function Hero() {
           </h1>
           <div className="w-full max-w-[640px] mt-[20px] relative z-30">
             <p className="hero-reveal hero-reveal-2 font-sans text-[30px] font-normal leading-[44px] tracking-[-0.02em] text-foreground relative z-10">
-              Designing AI-powered products for complex{" "}
+              Designing AI products for complex{" "}
               <span className="workflows-wrap relative inline-block cursor-pointer z-50 hover:z-[60]">
                 <span
                   aria-hidden
