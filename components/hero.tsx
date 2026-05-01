@@ -37,6 +37,15 @@ export function Hero() {
           opacity: 1;
           transform: translate(-50%, -50%) scale(1);
         }
+        .graph-hover-video {
+          opacity: 0;
+          transform: translate(-50%, -50%) scale(0.9);
+          transition: opacity 0.35s ease, transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+        .graph-tag:hover .graph-hover-video {
+          opacity: 1;
+          transform: translate(-50%, -50%) scale(1);
+        }
       `}</style>
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col gap-8">
@@ -106,7 +115,7 @@ export function Hero() {
                     className="object-cover"
                   />
                 </span>
-                <span className="relative border border-muted-foreground rounded-[3px] px-[0.3em] bg-background whitespace-nowrap">
+                <span className="relative border border-current rounded-[3px] px-[0.3em] bg-background whitespace-nowrap">
                   <svg
                     viewBox="0 0 24 24"
                     fill="none"
@@ -124,7 +133,45 @@ export function Hero() {
                   design awards
                 </span>
               </a>
-              , worked with venture studios and unicorns. By night: vibe-coding graph150.
+              , worked with venture studios and unicorns. By night: vibe-coding{" "}
+              <a
+                href="/videos/nodes4.mp4"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="graph-tag relative inline-block cursor-pointer text-muted-foreground no-underline z-50"
+              >
+                <span
+                  aria-hidden
+                  className="graph-hover-video absolute left-1/2 top-1/2 w-[clamp(280px,36vw,540px)] aspect-video rounded-md overflow-hidden shadow-2xl ring-1 ring-black/10 pointer-events-none bg-black"
+                >
+                  <video
+                    src="/videos/nodes4.mp4"
+                    muted
+                    loop
+                    playsInline
+                    autoPlay
+                    className="w-full h-full object-cover"
+                  />
+                </span>
+                <span className="relative border border-current rounded-[3px] px-[0.3em] bg-background whitespace-nowrap">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    aria-hidden
+                    className="inline-block w-[0.55em] h-[0.55em] mr-[0.15em] -translate-y-[0.05em]"
+                  >
+                    <path
+                      d="M7 17L17 7M17 7H8M17 7V16"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                  graph150
+                </span>
+              </a>
+              .
             </p>
             <div className="hero-reveal hero-reveal-3 flex justify-start mt-4 mb-2">
               <svg width="20" height="48" viewBox="0 0 24 28" fill="none" className="text-[#0F5CA2]" aria-hidden>
