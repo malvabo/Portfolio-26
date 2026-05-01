@@ -51,7 +51,7 @@ export function Hero() {
             Hi, I am Mary, Product UX Designer<br />
             currently shaping tech at Amazon.
           </h1>
-          <div className="w-full max-w-[650px] mt-[20px] relative z-30">
+          <div className="w-full max-w-[720px] mt-[20px] relative z-30">
             <p className="hero-reveal hero-reveal-2 font-serif text-[30px] font-normal leading-[44px] tracking-[-0.02em] text-foreground relative z-10">
               I design AI-powered products for complex{" "}
               <span className="workflows-wrap relative inline-block cursor-pointer z-50 hover:z-[60]">
