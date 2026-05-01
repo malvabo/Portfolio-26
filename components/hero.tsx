@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export function Hero() {
   return (
-    <section className="pt-32 pb-5 lg:pt-40 lg:pb-5 container mx-auto px-8 lg:px-12 relative overflow-hidden">
+    <section className="pt-32 pb-5 lg:pt-40 lg:pb-5 container mx-auto px-8 lg:px-12 relative">
       <style>{`
         @keyframes fadeInUp {
           from { opacity: 0; transform: translateY(10px); }
