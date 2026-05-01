@@ -59,7 +59,7 @@ export function Hero() {
                       className="tech-hover-image absolute left-1/2 top-1/2 w-[clamp(360px,46vw,720px)] aspect-[16/9] rounded-md overflow-hidden shadow-2xl ring-1 ring-black/10 pointer-events-none"
                     >
                       <Image
-                        src="/images/amazon-sales-dashboard.jpg"
+                        src="/amz_image.jpeg"
                         alt=""
                         fill
                         sizes="720px"
@@ -135,7 +135,7 @@ export function Hero() {
               </a>
               , worked with venture studios and unicorns. By night: vibe-coding{" "}
               <a
-                href="/videos/nodes4.mp4"
+                href="/nodes4.mp4"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="graph-tag relative inline-block cursor-pointer text-muted-foreground no-underline z-50"
@@ -145,7 +145,7 @@ export function Hero() {
                   className="graph-hover-video absolute left-1/2 top-1/2 w-[clamp(280px,36vw,540px)] aspect-video rounded-md overflow-hidden shadow-2xl ring-1 ring-black/10 pointer-events-none bg-black"
                 >
                   <video
-                    src="/videos/nodes4.mp4"
+                    src="/nodes4.mp4"
                     muted
                     loop
                     playsInline
