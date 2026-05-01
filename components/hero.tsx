@@ -89,7 +89,7 @@ export function Hero() {
                     <span className="inline-block">{word}</span>
                   </span>
                 )}
-                {i < 11 && i !== 6 ? "\u00A0" : ""}
+                {i < 11 && i !== 6 ? " " : ""}
                 {i === 6 && <br />}
               </span>
             ))}
