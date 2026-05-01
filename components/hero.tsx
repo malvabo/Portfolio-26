@@ -183,7 +183,7 @@ export function Hero() {
           <div className="hero-reveal hero-reveal-3 w-full max-w-[700px] mt-[20px] relative z-30 flex flex-col gap-y-1">
             {[
               { label: "Deep dives on AI, trust & product", href: "/side-projects" },
-              { label: "Visual concepts", href: "/speaking" },
+              { label: "AI & Behavioral Design Workshops", href: "/speaking" },
             ].map(({ label, href }) => (
               <a
                 key={label}
