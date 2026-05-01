@@ -40,7 +40,7 @@ export function Hero() {
       `}</style>
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col gap-8">
-          <h1 className="hero-headline hero-reveal hero-reveal-1 font-serif text-xl md:text-2xl lg:text-3xl xl:text-4xl font-normal leading-[1.15] tracking-[-0.02em] text-foreground w-full max-w-7xl">
+          <h1 className="hero-headline hero-reveal hero-reveal-1 font-serif text-xl md:text-2xl lg:text-3xl xl:text-4xl font-normal leading-[1.15] tracking-[-0.02em] text-foreground w-full max-w-7xl relative z-30">
             {(["Hi,","I","am","Mary,","Product","UX","Designer","currently","shaping","tech","at","Amazon."] as string[]).map((word, i) => (
               <span key={i}>
                 {i === 9 ? (
@@ -50,7 +50,7 @@ export function Hero() {
                       className="tech-hover-image absolute left-1/2 top-1/2 w-[clamp(360px,46vw,720px)] aspect-[16/9] rounded-md overflow-hidden shadow-2xl ring-1 ring-black/10 pointer-events-none"
                     >
                       <Image
-                        src="/amz_image.jpeg"
+                        src="/images/amazon-sales-dashboard.jpg"
                         alt=""
                         fill
                         sizes="720px"
@@ -85,7 +85,7 @@ export function Hero() {
               </span>
             ))}
           </h1>
-          <div className="w-full max-w-[360px] lg:max-w-[440px] lg:ml-auto mt-8">
+          <div className="w-full max-w-[360px] lg:max-w-[440px] lg:ml-auto mt-8 relative z-30">
             <p className="hero-reveal hero-reveal-2 font-sans text-[19px] leading-relaxed text-muted-foreground">
               I design AI-powered products for complex, high-stakes workflows at scale. Shipped 0→1 products, won{" "}
               <a
