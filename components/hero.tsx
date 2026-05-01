@@ -48,8 +48,7 @@ export function Hero() {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col">
           <h1 className="hero-reveal hero-reveal-1 font-sans text-lg md:text-xl font-normal leading-[1.4] tracking-normal text-muted-foreground w-full max-w-7xl relative z-30">
-            Hi, I am Mary, Product UX Designer<br />
-            currently shaping tech at Amazon
+            Mary, Product Designer at Amazon
           </h1>
           <div className="w-full max-w-[700px] mt-[20px] relative z-40">
             <p className="hero-reveal hero-reveal-2 font-sans text-[30px] font-normal leading-[44px] tracking-[-0.02em] text-foreground relative z-10">
