@@ -41,7 +41,7 @@ export function Hero() {
                       className="tech-hover-image absolute left-1/2 top-1/2 w-[clamp(360px,46vw,720px)] aspect-[16/9] rounded-md overflow-hidden shadow-2xl ring-1 ring-black/10 pointer-events-none"
                     >
                       <Image
-                        src="/images/amazon-prime-delivery.jpg"
+                        src="/images/amazon-sales-dashboard.jpg"
                         alt=""
                         fill
                         sizes="720px"
