@@ -28,6 +28,15 @@ export function Hero() {
           opacity: 1;
           transform: translate(-50%, -50%) scale(1);
         }
+        .awards-hover-video {
+          opacity: 0;
+          transform: translate(-50%, -50%) scale(0.9);
+          transition: opacity 0.35s ease, transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+        .awards-tag:hover .awards-hover-video {
+          opacity: 1;
+          transform: translate(-50%, -50%) scale(1);
+        }
       `}</style>
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col gap-8">
@@ -78,7 +87,45 @@ export function Hero() {
           </h1>
           <div className="w-full max-w-[360px] lg:max-w-[440px] lg:ml-auto mt-8">
             <p className="hero-reveal hero-reveal-2 font-sans text-[19px] leading-relaxed text-muted-foreground">
-              I design AI-powered products for complex, high-stakes workflows at scale. Shipped 0→1 products, won design awards, worked with venture studios and unicorns.
+              I design AI-powered products for complex, high-stakes workflows at scale. Shipped 0→1 products, won{" "}
+              <a
+                href="/images/Sq1.mp4"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="awards-tag relative inline-block align-baseline cursor-pointer translate-y-[-0.1em] text-foreground no-underline"
+              >
+                <span
+                  aria-hidden
+                  className="awards-hover-video absolute left-1/2 top-1/2 w-[clamp(280px,36vw,540px)] aspect-video rounded-md overflow-hidden shadow-2xl ring-1 ring-black/10 pointer-events-none bg-black"
+                >
+                  <video
+                    src="/images/Sq1.mp4"
+                    muted
+                    loop
+                    playsInline
+                    autoPlay
+                    className="w-full h-full object-cover"
+                  />
+                </span>
+                <span className="relative inline-flex items-center gap-[0.2em] border border-foreground rounded-[3px] px-[0.3em] py-0 leading-none bg-background -my-[0.08em] align-baseline">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    aria-hidden
+                    className="w-[0.55em] h-[0.55em] shrink-0"
+                  >
+                    <path
+                      d="M7 17L17 7M17 7H8M17 7V16"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                  <span className="inline-block">design awards</span>
+                </span>
+              </a>
+              , worked with venture studios and unicorns.
             </p>
             <div className="hero-reveal hero-reveal-3 flex justify-start mt-4 mb-2">
               <svg width="40" height="48" viewBox="0 0 24 28" fill="none" className="text-[#0F5CA2]" aria-hidden>
