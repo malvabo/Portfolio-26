@@ -35,7 +35,7 @@ export function Hero() {
             {(["Hi,","I","am","Mary,","Product","UX","Designer","currently","shaping","tech","at","Amazon."] as string[]).map((word, i) => (
               <span key={i}>
                 {i === 9 ? (
-                  <span className="tech-wrap relative inline-block align-baseline cursor-pointer">
+                  <span className="tech-wrap relative inline-block align-baseline cursor-pointer translate-y-[-0.12em]">
                     <span
                       aria-hidden
                       className="tech-hover-image absolute left-1/2 top-1/2 w-[clamp(360px,46vw,720px)] aspect-[16/9] rounded-md overflow-hidden shadow-2xl ring-1 ring-black/10 pointer-events-none"
