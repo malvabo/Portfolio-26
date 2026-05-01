@@ -96,7 +96,7 @@ export function Hero() {
           </h1>
           <div className="w-full max-w-[520px] mt-4 relative z-30">
             <p className="hero-reveal hero-reveal-2 font-serif text-[32px] font-normal leading-[40px] tracking-[-0.02em] text-foreground relative z-10">
-              I design AI-powered products for complex, high-stakes workflows at scale. Shipped 0→1 products, won{" "}
+              I design AI-powered products for complex workflows at scale. Shipped 0→1 products, won{" "}
               <a
                 href="/images/Sq1.mp4"
                 target="_blank"
