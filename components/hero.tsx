@@ -133,16 +133,30 @@ export function Hero() {
               >
                 <span
                   aria-hidden
-                  className="projects-hover-video absolute left-1/2 top-1/2 w-[clamp(280px,36vw,540px)] aspect-video rounded-md overflow-hidden shadow-2xl ring-1 ring-black/10 pointer-events-none bg-black"
+                  className="projects-hover-video absolute left-1/2 top-1/2 w-[clamp(280px,36vw,540px)] rounded-md overflow-hidden shadow-2xl ring-1 ring-black/10 pointer-events-none bg-background"
                 >
-                  <video
-                    src="/nodes4.mp4"
-                    muted
-                    loop
-                    playsInline
-                    autoPlay
-                    className="w-full h-full object-cover"
-                  />
+                  <div className="aspect-video relative bg-black">
+                    <video
+                      src="/nodes4.mp4"
+                      muted
+                      loop
+                      playsInline
+                      autoPlay
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="flex flex-col gap-1 p-3">
+                    {[
+                      { label: "Amazon: Redesigning a document system for 50,000+ sellers", href: "/projects/amazon" },
+                      { label: "PAA: Scaling Clinical Efficiency through AI-Driven Workflows", href: "/projects/paa" },
+                      { label: "Squirll: Defining the Design Language and Brand Expression", href: "/projects/squirll" },
+                      { label: "TempStars: Building marketplace liquidity for 25K+ dentists", href: "/projects/tempstars" },
+                    ].map(({ label, href }) => (
+                      <a key={label} href={href} className="text-[13px] font-sans text-muted-foreground hover:text-foreground transition-colors no-underline truncate">
+                        {label}
+                      </a>
+                    ))}
+                  </div>
                 </span>
                 <span className="relative rounded-[3px] px-[0.3em] bg-[#E8E3DD] text-[#6B5D4F] whitespace-nowrap">
                   <svg
@@ -168,9 +182,6 @@ export function Hero() {
 
           <div className="hero-reveal hero-reveal-3 w-full max-w-[700px] mt-[20px] relative z-30 flex flex-wrap gap-x-6 gap-y-1">
             {[
-              { label: "Amazon: Redesigning a document system for 50,000+ sellers", href: "/projects/amazon" },
-              { label: "PAA: Scaling Clinical Efficiency through AI-Driven Workflows", href: "/projects/paa" },
-              { label: "Squirll: Defining the Design Language and Brand Expression", href: "/projects/squirll" },
               { label: "Deep dives on AI, trust & product", href: "/side-projects" },
               { label: "AI & Behavioral Design Workshops", href: "/speaking" },
             ].map(({ label, href }) => (
