@@ -53,7 +53,7 @@ export function Hero() {
             {(["Hi,","I","am","Mary,","Product","UX","Designer","currently","shaping","tech","at","Amazon."] as string[]).map((word, i) => (
               <span key={i}>
                 {i === 9 ? (
-                  <span className="tech-wrap relative inline-block align-bottom pb-[0.12em] cursor-pointer z-50">
+                  <span className="tech-wrap relative inline-block align-bottom pb-[0.12em] cursor-pointer z-50 hover:z-[60]">
                     <span
                       aria-hidden
                       className="tech-hover-image absolute left-1/2 top-1/2 w-[clamp(360px,46vw,720px)] aspect-[16/9] rounded-md overflow-hidden shadow-2xl ring-1 ring-black/10 pointer-events-none"
@@ -101,7 +101,7 @@ export function Hero() {
                 href="/images/Sq1.mp4"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="awards-tag relative inline-block cursor-pointer text-muted-foreground no-underline z-50"
+                className="awards-tag relative inline-block cursor-pointer text-muted-foreground no-underline z-50 hover:z-[60]"
               >
                 <span
                   aria-hidden
@@ -138,7 +138,7 @@ export function Hero() {
                 href="/nodes4.mp4"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="graph-tag relative inline-block cursor-pointer text-muted-foreground no-underline z-50"
+                className="graph-tag relative inline-block cursor-pointer text-muted-foreground no-underline z-50 hover:z-[60]"
               >
                 <span
                   aria-hidden
