@@ -35,7 +35,7 @@ export function Hero() {
             {(["Hi,","I","am","Mary,","Product","UX","Designer","currently","shaping","tech","at","Amazon."] as string[]).map((word, i) => (
               <span key={i}>
                 {i === 9 ? (
-                  <span className="tech-wrap relative inline-block align-middle cursor-pointer">
+                  <span className="tech-wrap relative inline-block align-baseline cursor-pointer">
                     <span
                       aria-hidden
                       className="tech-hover-image absolute left-1/2 top-1/2 w-[clamp(220px,28vw,420px)] aspect-[4/3] rounded-md overflow-hidden shadow-2xl ring-1 ring-black/10 pointer-events-none"
@@ -48,7 +48,7 @@ export function Hero() {
                         className="object-cover"
                       />
                     </span>
-                    <span className="relative inline-flex items-center gap-[0.25em] border border-foreground rounded-[3px] px-[0.4em] py-[0.05em] leading-none bg-background">
+                    <span className="relative inline-flex items-center gap-[0.2em] border border-foreground rounded-[3px] px-[0.3em] py-0 leading-none bg-background -my-[0.08em] align-baseline">
                       <svg
                         viewBox="0 0 24 24"
                         fill="none"
