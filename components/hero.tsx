@@ -35,12 +35,12 @@ export function Hero() {
           opacity: 1;
           transform: translate(-50%, -50%) scale(1);
         }
-        .graph-hover-video {
+        .projects-hover-video {
           opacity: 0;
           transform: translate(-50%, -50%) scale(0.9);
           transition: opacity 0.35s ease, transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
         }
-        .graph-tag:hover .graph-hover-video {
+        .projects-tag:hover .projects-hover-video {
           opacity: 1;
           transform: translate(-50%, -50%) scale(1);
         }
@@ -127,11 +127,11 @@ export function Hero() {
                 href="/nodes4.mp4"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="graph-tag relative inline-block cursor-pointer no-underline z-50 hover:z-[60]"
+                className="projects-tag relative inline-block cursor-pointer no-underline z-50 hover:z-[60]"
               >
                 <span
                   aria-hidden
-                  className="graph-hover-video absolute left-1/2 top-1/2 w-[clamp(280px,36vw,540px)] aspect-video rounded-md overflow-hidden shadow-2xl ring-1 ring-black/10 pointer-events-none bg-black"
+                  className="projects-hover-video absolute left-1/2 top-1/2 w-[clamp(280px,36vw,540px)] aspect-video rounded-md overflow-hidden shadow-2xl ring-1 ring-black/10 pointer-events-none bg-black"
                 >
                   <video
                     src="/nodes4.mp4"
@@ -157,10 +157,10 @@ export function Hero() {
                       strokeLinejoin="round"
                     />
                   </svg>
-                  graph150
+                  side projects
                 </span>
               </a>
-              {" "}side projects and writing talks on the future of AI products.
+              {" "}and writing talks on the future of AI products.
             </p>
           </div>
 
