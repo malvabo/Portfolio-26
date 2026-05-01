@@ -166,6 +166,26 @@ export function Hero() {
             </p>
           </div>
 
+          <div className="hero-reveal hero-reveal-3 w-full max-w-[700px] mt-[20px] relative z-30 flex flex-wrap gap-x-6 gap-y-1">
+            {[
+              { label: "Amazon: Introducing AI insights for sellers", href: "/projects/amazon" },
+              { label: "Amazon: Redesigning a document system for 50,000+ sellers", href: "/projects/amazon" },
+              { label: "PAA: Scaling Clinical Efficiency through AI-Driven Workflows", href: "/projects/paa" },
+              { label: "Squirll: Defining the Design Language and Brand Expression", href: "/projects/squirll" },
+              { label: "TempStars: Building marketplace liquidity for 25K+ dentists", href: "/projects/tempstars" },
+              { label: "Deep dives on AI, trust & product", href: "/side-projects" },
+              { label: "AI & Behavioral Design Workshops", href: "/speaking" },
+            ].map(({ label, href }) => (
+              <a
+                key={label}
+                href={href}
+                className="font-sans text-lg font-normal text-muted-foreground hover:text-foreground transition-colors no-underline"
+              >
+                {label}
+              </a>
+            ))}
+          </div>
+
           <div className="hero-reveal hero-reveal-4 flex flex-col lg:flex-row lg:gap-6 lg:items-stretch w-full mt-12">
             <div className="lg:flex-1 min-w-0 relative aspect-[4/3] lg:aspect-[16/11] rounded-xl overflow-hidden bg-[#f1f1f1] border border-border/60 shadow-sm order-2 lg:order-1">
               <Image src="/images/speaking-event-stage.png" alt="Speaking event" fill className="object-cover" style={{ objectPosition: "center center" }} sizes="(max-width: 1024px) 100vw, 60vw" />
