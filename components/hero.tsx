@@ -49,7 +49,7 @@ export function Hero() {
       `}</style>
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col gap-8">
-          <h1 className="hero-headline hero-reveal hero-reveal-1 font-serif text-xl md:text-2xl lg:text-3xl xl:text-4xl font-normal leading-[1.15] tracking-[-0.02em] text-foreground w-full max-w-7xl relative z-30">
+          <h1 className="hero-headline hero-reveal hero-reveal-1 font-sans text-base md:text-lg font-normal leading-[1.4] tracking-normal text-muted-foreground w-full max-w-7xl relative z-30">
             {(["Hi,","I","am","Mary,","Product","UX","Designer","currently","shaping","tech","at","Amazon."] as string[]).map((word, i) => (
               <span key={i}>
                 {i === 9 ? (
@@ -94,14 +94,14 @@ export function Hero() {
               </span>
             ))}
           </h1>
-          <div className="w-full max-w-[360px] lg:max-w-[440px] lg:ml-auto mt-8 relative z-30">
-            <p className="hero-reveal hero-reveal-2 font-sans text-[19px] leading-relaxed text-muted-foreground relative z-10">
+          <div className="w-full max-w-7xl mt-4 relative z-30">
+            <p className="hero-reveal hero-reveal-2 font-serif text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-normal leading-[1.15] tracking-[-0.02em] text-foreground relative z-10">
               I design AI-powered products for complex, high-stakes workflows at scale. Shipped 0→1 products, won{" "}
               <a
                 href="/images/Sq1.mp4"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="awards-tag relative inline-block cursor-pointer text-muted-foreground no-underline z-50 hover:z-[60]"
+                className="awards-tag relative inline-block cursor-pointer no-underline z-50 hover:z-[60]"
               >
                 <span
                   aria-hidden
@@ -138,7 +138,7 @@ export function Hero() {
                 href="/nodes4.mp4"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="graph-tag relative inline-block cursor-pointer text-muted-foreground no-underline z-50 hover:z-[60]"
+                className="graph-tag relative inline-block cursor-pointer no-underline z-50 hover:z-[60]"
               >
                 <span
                   aria-hidden
