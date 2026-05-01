@@ -68,21 +68,7 @@ export function Hero() {
                   />
                 </span>
                 <span className="relative rounded-[3px] px-[0.3em] bg-[#E8E3DD] text-[#6B5D4F] whitespace-nowrap">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    aria-hidden
-                    className="inline-block w-[0.715em] h-[0.715em] mr-[0.15em] -translate-y-[0.05em]"
-                  >
-                    <path
-                      d="M7 17L17 7M17 7H8M17 7V16"
-                      stroke="currentColor"
-                      strokeWidth="1.92"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                  workflows
+workflows
                 </span>
               </span>
               . Shipped 0→1 products, won{" "}
@@ -105,21 +91,7 @@ export function Hero() {
                   />
                 </span>
                 <span className="relative rounded-[3px] px-[0.3em] bg-[#E8E3DD] text-[#6B5D4F] whitespace-nowrap">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    aria-hidden
-                    className="inline-block w-[0.715em] h-[0.715em] mr-[0.15em] -translate-y-[0.05em]"
-                  >
-                    <path
-                      d="M7 17L17 7M17 7H8M17 7V16"
-                      stroke="currentColor"
-                      strokeWidth="1.92"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                  awards
+awards
                 </span>
               </a>
               ,<br />
@@ -145,21 +117,7 @@ export function Hero() {
                   />
                 </span>
                 <span className="relative rounded-[3px] px-[0.3em] bg-[#E8E3DD] text-[#6B5D4F] whitespace-nowrap">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    aria-hidden
-                    className="inline-block w-[0.715em] h-[0.715em] mr-[0.15em] -translate-y-[0.05em]"
-                  >
-                    <path
-                      d="M7 17L17 7M17 7H8M17 7V16"
-                      stroke="currentColor"
-                      strokeWidth="1.92"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                  vibe-coding
+vibe-coding
                 </span>
               </a>
               {" "}side projects and writing talks on the future of AI products.
