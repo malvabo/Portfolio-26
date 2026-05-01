@@ -92,7 +92,7 @@ export function Hero() {
                 href="/images/Sq1.mp4"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="awards-tag relative inline-block cursor-pointer text-foreground no-underline z-50"
+                className="awards-tag relative inline-block cursor-pointer text-muted-foreground no-underline z-50"
               >
                 <span
                   aria-hidden
@@ -106,7 +106,7 @@ export function Hero() {
                     className="object-cover"
                   />
                 </span>
-                <span className="relative border border-foreground rounded-[3px] px-[0.3em] bg-background whitespace-nowrap">
+                <span className="relative border border-muted-foreground rounded-[3px] px-[0.3em] bg-background whitespace-nowrap">
                   <svg
                     viewBox="0 0 24 24"
                     fill="none"
