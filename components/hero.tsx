@@ -67,7 +67,7 @@ export function Hero() {
                     className="object-cover"
                   />
                 </span>
-                <span className="relative border border-current rounded-[3px] px-[0.3em] bg-background whitespace-nowrap">
+                <span className="relative rounded-[3px] px-[0.3em] bg-[#E8E3DD] text-[#6B5D4F] whitespace-nowrap">
                   <svg
                     viewBox="0 0 24 24"
                     fill="none"
@@ -104,7 +104,7 @@ export function Hero() {
                     className="object-cover object-[center_25%]"
                   />
                 </span>
-                <span className="relative border border-current rounded-[3px] px-[0.3em] bg-background whitespace-nowrap">
+                <span className="relative rounded-[3px] px-[0.3em] bg-[#E8E3DD] text-[#6B5D4F] whitespace-nowrap">
                   <svg
                     viewBox="0 0 24 24"
                     fill="none"
@@ -144,7 +144,7 @@ export function Hero() {
                     className="w-full h-full object-cover"
                   />
                 </span>
-                <span className="relative border border-current rounded-[3px] px-[0.3em] bg-background whitespace-nowrap">
+                <span className="relative rounded-[3px] px-[0.3em] bg-[#E8E3DD] text-[#6B5D4F] whitespace-nowrap">
                   <svg
                     viewBox="0 0 24 24"
                     fill="none"
