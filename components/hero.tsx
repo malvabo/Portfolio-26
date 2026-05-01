@@ -171,7 +171,7 @@ export function Hero() {
               { label: "Amazon: Redesigning a document system for 50,000+ sellers", href: "/projects/amazon" },
               { label: "PAA: Scaling Clinical Efficiency through AI-Driven Workflows", href: "/projects/paa" },
               { label: "Squirll: Defining the Design Language and Brand Expression", href: "/projects/squirll" },
-              { label: "TempStars: Building marketplace liquidity for 25K+ dentists", href: "/projects/tempstars" },
+
               { label: "Deep dives on AI, trust & product", href: "/side-projects" },
             ].map(({ label, href }) => (
               <a
