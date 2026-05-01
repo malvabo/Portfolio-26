@@ -162,11 +162,6 @@ export function Hero() {
               </a>
               .
             </p>
-            <div className="hero-reveal hero-reveal-3 flex justify-start mt-4 mb-2">
-              <svg width="26" height="62" viewBox="0 0 24 28" fill="none" className="text-[#0F5CA2]" aria-hidden>
-                <path d="M12 2v20M6 16l6 6 6-6" stroke="currentColor" strokeWidth="1.92" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </div>
           </div>
 
           <div className="hero-reveal hero-reveal-4 flex flex-col lg:flex-row lg:gap-6 lg:items-end w-full -mt-12">
