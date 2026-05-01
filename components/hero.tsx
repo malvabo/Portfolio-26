@@ -160,7 +160,7 @@ export function Hero() {
                   graph150
                 </span>
               </a>
-              .
+              {" "}side projects and writing talks on the future of AI products.
             </p>
           </div>
 
