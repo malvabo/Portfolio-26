@@ -119,7 +119,7 @@ export function Hero() {
                       strokeLinejoin="round"
                     />
                   </svg>
-                  design awards
+                  awards
                 </span>
               </a>
               , worked with venture studios and unicorns. By night: vibe-coding{" "}
