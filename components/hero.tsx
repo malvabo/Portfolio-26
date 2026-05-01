@@ -38,13 +38,13 @@ export function Hero() {
                   <span className="tech-wrap relative inline-block align-baseline cursor-pointer">
                     <span
                       aria-hidden
-                      className="tech-hover-image absolute left-1/2 top-1/2 w-[clamp(220px,28vw,420px)] aspect-[4/3] rounded-md overflow-hidden shadow-2xl ring-1 ring-black/10 pointer-events-none"
+                      className="tech-hover-image absolute left-1/2 top-1/2 w-[clamp(360px,46vw,720px)] aspect-[16/9] rounded-md overflow-hidden shadow-2xl ring-1 ring-black/10 pointer-events-none"
                     >
                       <Image
-                        src="/images/amazon-sales-dashboard.jpg"
+                        src="/images/amazon-prime-delivery.jpg"
                         alt=""
                         fill
-                        sizes="420px"
+                        sizes="720px"
                         className="object-cover"
                       />
                     </span>
