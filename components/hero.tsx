@@ -112,7 +112,7 @@ export function Hero() {
                     alt=""
                     fill
                     sizes="540px"
-                    className="object-cover"
+                    className="object-cover object-top"
                   />
                 </span>
                 <span className="relative border border-current rounded-[3px] px-[0.3em] bg-background whitespace-nowrap">
