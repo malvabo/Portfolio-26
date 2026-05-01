@@ -96,15 +96,14 @@ export function Hero() {
               >
                 <span
                   aria-hidden
-                  className="awards-hover-video absolute left-1/2 top-1/2 w-[clamp(280px,36vw,540px)] aspect-video rounded-md overflow-hidden shadow-2xl ring-1 ring-black/10 pointer-events-none bg-black"
+                  className="awards-hover-video absolute left-1/2 top-1/2 w-[clamp(280px,36vw,540px)] aspect-[4/3] rounded-md overflow-hidden shadow-2xl ring-1 ring-black/10 pointer-events-none"
                 >
-                  <video
-                    src="/images/Sq1.mp4"
-                    muted
-                    loop
-                    playsInline
-                    autoPlay
-                    className="w-full h-full object-cover"
+                  <Image
+                    src="/images/squirll-collage-2.jpg"
+                    alt=""
+                    fill
+                    sizes="540px"
+                    className="object-cover"
                   />
                 </span>
                 <span className="relative border border-foreground rounded-[3px] px-[0.3em] bg-background whitespace-nowrap">
