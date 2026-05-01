@@ -122,7 +122,7 @@ export function Hero() {
                   awards
                 </span>
               </a>
-              , worked with venture studios and unicorns. By night: vibe-coding{" "}
+              , worked with venture studios and unicorns. By night:{" "}
               <a
                 href="/nodes4.mp4"
                 target="_blank"
@@ -157,10 +157,10 @@ export function Hero() {
                       strokeLinejoin="round"
                     />
                   </svg>
-                  side projects
+                  vibe-coding
                 </span>
               </a>
-              {" "}and writing talks on the future of AI products.
+              {" "}side projects and writing talks on the future of AI products.
             </p>
           </div>
 
