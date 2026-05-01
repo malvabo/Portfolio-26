@@ -85,7 +85,7 @@ export function Hero() {
                   workflows
                 </span>
               </span>
-              {" "}at scale. Shipped 0→1 products, won{" "}
+              . Shipped 0→1 products, won{" "}
               <a
                 href="/images/Sq1.mp4"
                 target="_blank"
