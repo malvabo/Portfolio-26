@@ -122,7 +122,8 @@ export function Hero() {
                   awards
                 </span>
               </a>
-              , worked with venture studios and unicorns. By night:{" "}
+              ,<br />
+              worked with venture studios and unicorns. By night:{" "}
               <a
                 href="/nodes4.mp4"
                 target="_blank"
