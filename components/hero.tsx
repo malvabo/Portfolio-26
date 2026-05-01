@@ -168,18 +168,18 @@ export function Hero() {
 
           <div className="hero-reveal hero-reveal-3 w-full max-w-[700px] mt-[20px] relative z-30 flex flex-col gap-y-1">
             {[
-              { label: "Amazon: Redesigning a document system for 50,000+ sellers", href: "/projects/amazon" },
-              { label: "PAA: Scaling Clinical Efficiency through AI-Driven Workflows", href: "/projects/paa" },
-              { label: "Squirll: Defining the Design Language and Brand Expression", href: "/projects/squirll" },
-              { label: "TempStars: Building marketplace liquidity for 25K+ dentists", href: "/projects/tempstars" },
-              { label: "Deep dives on AI, trust & product", href: "/side-projects" },
+              { label: "Amazon: new document system", href: "#work" },
+              { label: "PAA: AI clinical workflows", href: "#paa" },
+              { label: "Squirll: 0→1 design", href: "#squirll" },
+              { label: "Tempstars: redesign of the marketplace", href: "#tempstars" },
+              { label: "Articles", href: "#articles" },
             ].map(({ label, href }) => (
               <a
                 key={label}
                 href={href}
                 className="font-sans text-lg font-normal text-muted-foreground hover:text-foreground transition-colors no-underline"
               >
-                {label}
+                {label} ↓
               </a>
             ))}
           </div>

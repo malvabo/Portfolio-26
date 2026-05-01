@@ -23,7 +23,7 @@ export function ArticlesSection() {
   ]
 
   return (
-    <section className="pt-10 md:pt-12 pb-16 md:pb-20 container mx-auto px-8 lg:px-12 bg-background">
+    <section id="articles" className="pt-10 md:pt-12 pb-16 md:pb-20 container mx-auto px-8 lg:px-12 bg-background scroll-mt-24">
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center gap-2 mb-2">
           <span className="uppercase text-[13px] text-muted-foreground/70 font-mono tracking-wide">{"{03}"} Know more</span>

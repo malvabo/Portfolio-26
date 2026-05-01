@@ -9,7 +9,7 @@ export function TempStarsSection() {
   ]
 
   return (
-    <section className="container mx-auto px-8 lg:px-12 pt-2 md:pt-3 pb-8 md:pb-12">
+    <section id="tempstars" className="container mx-auto px-8 lg:px-12 pt-2 md:pt-3 pb-8 md:pb-12 scroll-mt-24">
       <div className="max-w-7xl mx-auto">
       <h2 className="text-2xl md:text-3xl leading-[1.1] font-serif mb-10 tracking-tight">
         TempStars: Building marketplace liquidity for 25K+ dentists
