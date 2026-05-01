@@ -57,7 +57,7 @@ export function Hero() {
               <span className="workflows-wrap relative inline-block cursor-pointer z-50 hover:z-[60]">
                 <span
                   aria-hidden
-                  className="workflows-hover-image absolute left-1/2 top-1/2 w-[clamp(360px,46vw,720px)] aspect-[16/9] rounded-md overflow-hidden shadow-2xl ring-1 ring-black/10 pointer-events-none"
+                  className="workflows-hover-image absolute left-1/2 top-1/2 w-[clamp(288px,37vw,576px)] aspect-[16/9] rounded-md overflow-hidden shadow-2xl ring-1 ring-black/10 pointer-events-none"
                 >
                   <Image
                     src="/amz_image.jpeg"
