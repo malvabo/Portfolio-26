@@ -168,13 +168,11 @@ export function Hero() {
 
           <div className="hero-reveal hero-reveal-3 w-full max-w-[700px] mt-[20px] relative z-30 flex flex-wrap gap-x-6 gap-y-1">
             {[
-              { label: "Amazon: Introducing AI insights for sellers", href: "/projects/amazon" },
               { label: "Amazon: Redesigning a document system for 50,000+ sellers", href: "/projects/amazon" },
               { label: "PAA: Scaling Clinical Efficiency through AI-Driven Workflows", href: "/projects/paa" },
               { label: "Squirll: Defining the Design Language and Brand Expression", href: "/projects/squirll" },
               { label: "TempStars: Building marketplace liquidity for 25K+ dentists", href: "/projects/tempstars" },
               { label: "Deep dives on AI, trust & product", href: "/side-projects" },
-              { label: "AI & Behavioral Design Workshops", href: "/speaking" },
             ].map(({ label, href }) => (
               <a
                 key={label}
@@ -184,6 +182,13 @@ export function Hero() {
                 {label}
               </a>
             ))}
+            <div className="w-full" />
+            <a
+              href="/speaking"
+              className="font-sans text-lg font-normal text-muted-foreground hover:text-foreground transition-colors no-underline"
+            >
+              AI & Behavioral Design Workshops
+            </a>
           </div>
 
           <div className="hero-reveal hero-reveal-4 flex flex-col lg:flex-row lg:gap-6 lg:items-stretch w-full mt-12">
