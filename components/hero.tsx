@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export function Hero() {
   return (
-    <section className="pt-32 pb-5 lg:pt-40 lg:pb-5 container mx-auto px-8 lg:px-12 relative">
+    <section className="pt-32 pb-5 lg:pt-40 lg:pb-5 container mx-auto px-8 lg:px-12 max-w-7xl relative">
       <style>{`
         @keyframes fadeInUp {
           from { opacity: 0; transform: translateY(10px); }
@@ -45,8 +45,7 @@ export function Hero() {
           transform: translate(-50%, -50%) scale(1);
         }
       `}</style>
-      <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col">
+      <div className="flex flex-col">
           <h1 className="hero-reveal hero-reveal-1 font-sans text-lg md:text-xl font-normal leading-[1.4] tracking-normal text-muted-foreground w-full max-w-7xl relative z-30">
             Mary, Product Designer at Amazon
           </h1>
@@ -158,7 +157,6 @@ vibe-coding
             </div>
           </div>
         </div>
-      </div>
     </section>
   )
 }
