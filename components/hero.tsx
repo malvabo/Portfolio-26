@@ -46,10 +46,10 @@ export function Hero() {
         }
       `}</style>
       <div className="flex flex-col">
-          <h1 className="hero-reveal hero-reveal-1 font-sans text-lg md:text-xl font-normal leading-[1.4] tracking-normal text-muted-foreground w-full max-w-7xl relative z-30">
+          <h1 className="hero-reveal hero-reveal-1 font-sans text-lg md:text-xl font-normal leading-[1.4] tracking-normal text-muted-foreground w-full max-w-7xl relative z-30 mt-[32px] mb-[8px]">
             Mary, Product Designer at Amazon
           </h1>
-          <div className="w-full max-w-[700px] mt-[20px] relative z-40">
+          <div className="w-full max-w-[700px] relative z-40">
             <p className="hero-reveal hero-reveal-2 font-sans text-[30px] font-normal leading-[44px] tracking-[-0.02em] text-foreground relative z-10">
               Designing AI products for complex{" "}
               <span className="workflows-wrap relative inline-block cursor-pointer z-50 hover:z-[60]">
