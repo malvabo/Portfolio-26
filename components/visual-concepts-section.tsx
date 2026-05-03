@@ -20,7 +20,7 @@ export function VisualConceptsSection() {
           </span>
         </div>
 
-        <h2 className="font-serif text-2xl md:text-3xl leading-[1.1] tracking-tight text-foreground mb-10">
+        <h2 className="font-serif text-2xl md:text-3xl leading-[1.1] tracking-tight text-foreground mb-4 md:mb-10">
           Visual concepts
         </h2>
 
