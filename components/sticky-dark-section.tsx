@@ -15,7 +15,6 @@ interface StickyDarkSectionProps {
   /** Bridge height (before & after), as a multiplier of the viewport height. */
   bridgeVh?: number
   id?: string
-  className?: string
 }
 
 export function StickyDarkSection({
@@ -23,7 +22,6 @@ export function StickyDarkSection({
   spacerVh = 1.5,
   bridgeVh = 0.6,
   id,
-  className = "",
 }: StickyDarkSectionProps) {
   const beforeBridgeRef = useRef<HTMLDivElement>(null)
   const beforeStretchRef = useRef<HTMLDivElement>(null)
@@ -72,43 +70,60 @@ export function StickyDarkSection({
     }
   }, [])
 
-  const bridgeStyle = { height: `${bridgeVh * 100}vh` }
-  const stretchStyle = {
+  const bridgeStyle: React.CSSProperties = {
+    height: `${bridgeVh * 100}vh`,
+    position: "relative",
+    width: "100%",
+    overflow: "hidden",
+    pointerEvents: "none",
+  }
+  const stretchStyle: React.CSSProperties = {
+    position: "absolute",
+    left: 0,
+    right: 0,
+    top: 0,
+    height: "100%",
+    backgroundColor: "#000",
     transformOrigin: "50% 0% 0",
-    willChange: "transform" as const,
+    willChange: "transform",
   }
 
   return (
     <>
-      <div
-        ref={beforeBridgeRef}
-        className="relative w-full overflow-hidden pointer-events-none"
-        style={bridgeStyle}
-        aria-hidden
-      >
+      <div ref={beforeBridgeRef} style={bridgeStyle} aria-hidden>
         <div
           ref={beforeStretchRef}
-          className="absolute inset-x-0 top-0 h-full bg-black"
           style={{ ...stretchStyle, transform: "rotateX(89deg)" }}
         />
       </div>
 
-      <section id={id} className={`relative bg-black text-white ${className}`}>
-        <div className="sticky top-0 h-screen w-full overflow-hidden flex items-center">
-          <div className="w-full">{children}</div>
+      <section
+        id={id}
+        style={{
+          position: "relative",
+          backgroundColor: "#000",
+          color: "#fff",
+        }}
+      >
+        <div
+          style={{
+            position: "sticky",
+            top: 0,
+            height: "100vh",
+            width: "100%",
+            overflow: "hidden",
+            display: "flex",
+            alignItems: "center",
+          }}
+        >
+          <div style={{ width: "100%" }}>{children}</div>
         </div>
         <div style={{ height: `${spacerVh * 100}vh` }} aria-hidden />
       </section>
 
-      <div
-        ref={afterBridgeRef}
-        className="relative w-full overflow-hidden pointer-events-none"
-        style={bridgeStyle}
-        aria-hidden
-      >
+      <div ref={afterBridgeRef} style={bridgeStyle} aria-hidden>
         <div
           ref={afterStretchRef}
-          className="absolute inset-x-0 top-0 h-full bg-black"
           style={{ ...stretchStyle, transform: "rotateX(0deg)" }}
         />
       </div>
