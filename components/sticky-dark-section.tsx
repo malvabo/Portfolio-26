@@ -89,7 +89,7 @@ export function StickyDarkSection({
         <div
           ref={beforeStretchRef}
           className="absolute inset-x-0 top-0 h-full bg-black"
-          style={stretchStyle}
+          style={{ ...stretchStyle, transform: "rotateX(89deg)" }}
         />
       </div>
 
@@ -109,7 +109,7 @@ export function StickyDarkSection({
         <div
           ref={afterStretchRef}
           className="absolute inset-x-0 top-0 h-full bg-black"
-          style={stretchStyle}
+          style={{ ...stretchStyle, transform: "rotateX(0deg)" }}
         />
       </div>
     </>

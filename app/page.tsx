@@ -21,6 +21,9 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <AnimatedSection delayOnLoad={0}>
+          <TestimonialsSection />
+        </AnimatedSection>
         <StickyDarkSection id="about">
           <div className="container mx-auto px-8 lg:px-12 max-w-7xl">
             <div className="max-w-3xl">
@@ -36,9 +39,6 @@ export default function Home() {
             </div>
           </div>
         </StickyDarkSection>
-        <AnimatedSection delayOnLoad={0}>
-          <TestimonialsSection />
-        </AnimatedSection>
         <AnimatedSection>
           <WorkSection />
         </AnimatedSection>
