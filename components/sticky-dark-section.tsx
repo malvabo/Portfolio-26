@@ -9,7 +9,7 @@ if (typeof window !== "undefined") {
 }
 
 interface StickyDarkSectionProps {
-  children: ReactNode
+  children?: ReactNode
   /** Total scroll runway for the section, as a multiplier of viewport height. */
   totalVh?: number
   /** Vertical depth of the arch on entry/exit, in vh units. */
@@ -20,7 +20,7 @@ interface StickyDarkSectionProps {
 export function StickyDarkSection({
   children,
   totalVh = 3.5,
-  curveVh = 60,
+  curveVh = 80,
   id,
 }: StickyDarkSectionProps) {
   const sectionRef = useRef<HTMLElement>(null)
@@ -97,6 +97,8 @@ export function StickyDarkSection({
           borderTopRightRadius: initialTopRadius,
           borderBottomLeftRadius: "0",
           borderBottomRightRadius: "0",
+          boxShadow:
+            "0 -120px 180px 60px rgba(0,0,0,0.55), 0 120px 180px 60px rgba(0,0,0,0.55)",
           willChange: "border-radius",
         }}
       >
