@@ -20,7 +20,7 @@ interface StickyDarkSectionProps {
 export function StickyDarkSection({
   children,
   spacerVh = 1.5,
-  bridgeVh = 0.6,
+  bridgeVh = 1,
   id,
 }: StickyDarkSectionProps) {
   const beforeBridgeRef = useRef<HTMLDivElement>(null)
@@ -76,6 +76,8 @@ export function StickyDarkSection({
     width: "100%",
     overflow: "hidden",
     pointerEvents: "none",
+    perspective: "1200px",
+    perspectiveOrigin: "50% 50%",
   }
   const stretchStyle: React.CSSProperties = {
     position: "absolute",
@@ -85,7 +87,10 @@ export function StickyDarkSection({
     height: "100%",
     backgroundColor: "#000",
     transformOrigin: "50% 0% 0",
+    transformStyle: "preserve-3d",
+    backfaceVisibility: "hidden",
     willChange: "transform",
+    boxShadow: "0 -40px 80px -20px rgba(0,0,0,0.6)",
   }
 
   return (
