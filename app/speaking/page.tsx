@@ -5,6 +5,11 @@ import { Footer } from "@/components/footer"
 export default function SpeakingPage() {
   const talks = [
     {
+      title: "AI Signals x Women in Data",
+      subtitle: "Storytelling with AI",
+      link: "https://www.meetup.com/ai-signals-community/events/314453327/",
+    },
+    {
       title: "How to web conference",
       subtitle: "AI Design and Healthcare: Lessons in Changing Human Behavior",
       link: "https://www.howtoweb.co/",
