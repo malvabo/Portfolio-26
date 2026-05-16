@@ -1,6 +1,7 @@
 import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
 import { AnimatedSection } from "@/components/animated-section"
+import { StickyDarkSection } from "@/components/sticky-dark-section"
 import { WorkSection } from "@/components/work-section"
 import { SquirllSection } from "@/components/squirll-section"
 import { TempStarsSection } from "@/components/tempstars-section"
@@ -23,6 +24,7 @@ export default function Home() {
         <AnimatedSection delayOnLoad={0}>
           <TestimonialsSection />
         </AnimatedSection>
+        <StickyDarkSection id="about" />
         <AnimatedSection>
           <WorkSection />
         </AnimatedSection>
