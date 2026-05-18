@@ -7,14 +7,24 @@ import { ArrowLeft } from "lucide-react"
 interface PasswordGateProps {
   password: string
   children: React.ReactNode
+  showBackLink?: boolean
+  storageKey?: string
+  title?: string
 }
 
-export function PasswordGate({ password, children }: PasswordGateProps) {
+export function PasswordGate({ password, children, showBackLink = true, storageKey, title }: PasswordGateProps) {
   const [unlocked, setUnlocked] = useState(false)
   const [value, setValue] = useState("")
   const [error, setError] = useState(false)
   const [shake, setShake] = useState(false)
   const inputRef = useRef<HTMLInputElement>(null)
+
+  useEffect(() => {
+    if (storageKey) {
+      const stored = localStorage.getItem(storageKey)
+      if (stored === "1") setUnlocked(true)
+    }
+  }, [storageKey])
 
   useEffect(() => {
     if (!unlocked) {
@@ -25,6 +35,7 @@ export function PasswordGate({ password, children }: PasswordGateProps) {
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
     if (value === password) {
+      if (storageKey) localStorage.setItem(storageKey, "1")
       setUnlocked(true)
     } else {
       setError(true)
@@ -39,16 +50,18 @@ export function PasswordGate({ password, children }: PasswordGateProps) {
 
   return (
     <div className="min-h-screen bg-background flex flex-col px-8 lg:px-12">
-      <div className="pt-7">
-        <Link
-          href="/#work"
-          scroll={false}
-          className="inline-flex items-center gap-2 text-xs font-mono tracking-wider uppercase text-muted-foreground hover:text-foreground transition-colors"
-        >
-          <ArrowLeft className="w-3 h-3" />
-          All projects
-        </Link>
-      </div>
+      {showBackLink && (
+        <div className="pt-7">
+          <Link
+            href="/#work"
+            scroll={false}
+            className="inline-flex items-center gap-2 text-xs font-mono tracking-wider uppercase text-muted-foreground hover:text-foreground transition-colors"
+          >
+            <ArrowLeft className="w-3 h-3" />
+            All projects
+          </Link>
+        </div>
+      )}
 
       <div className="flex-1 flex items-center justify-center">
         <div className={`w-full max-w-[340px] ${shake ? "animate-shake" : ""}`}>
@@ -56,7 +69,7 @@ export function PasswordGate({ password, children }: PasswordGateProps) {
             Guest area
           </p>
           <h1 className="font-serif text-[1.6rem] leading-[1.2] tracking-[-0.02em] text-foreground mb-8">
-            This case study is password protected.
+            {title ?? "This case study is password protected."}
           </h1>
 
           <form onSubmit={handleSubmit}>

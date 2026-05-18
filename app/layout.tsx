@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Geist, Lora } from 'next/font/google'
 import localFont from 'next/font/local'
 import { Analytics } from '@vercel/analytics/next'
+import { RootPasswordGate } from '@/components/root-password-gate'
 import './globals.css'
 
 const _geist = Geist({ 
@@ -60,7 +61,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`font-sans antialiased ${_geist.variable} ${_lora.variable} ${_messier.variable}`}>
-        {children}
+        <RootPasswordGate>{children}</RootPasswordGate>
         <Analytics />
       </body>
     </html>
