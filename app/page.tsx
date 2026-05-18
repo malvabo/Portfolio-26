@@ -26,9 +26,9 @@ export default function Home() {
         <AnimatedSection>
           <WorkSection />
         </AnimatedSection>
-        <AnimatedSection>
+        {/* <AnimatedSection>
           <VeraSection />
-        </AnimatedSection>
+        </AnimatedSection> */}
         <AnimatedSection>
           <VeeqoSection />
         </AnimatedSection>
