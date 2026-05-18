@@ -4,8 +4,9 @@ import { useState } from "react"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { X } from "lucide-react"
+import { NodeCanvas } from "@/components/node-canvas"
 
-const projects = [
+const projects: { video: string; title: string; description: string; preview?: React.ReactNode }[] = [
   {
     video: "/images/poetry1.mp4",
     title: "Poetry & Media Generation",
@@ -15,6 +16,7 @@ const projects = [
     video: "/images/script2.mp4",
     title: "Talk Script Analysis Tool",
     description: "A solution that allows to analyze the content of the talk, spot the gaps, localize it for different cultures and find opportunities how to make the story more engaging.",
+    preview: <NodeCanvas />,
   },
 ]
 
@@ -40,7 +42,9 @@ export default function SideProjects() {
               className="text-left group rounded-2xl overflow-hidden border border-border/20 bg-background hover:border-border/40 shadow-[0_1px_4px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)] transition-all duration-300 cursor-pointer focus:outline-none"
             >
               <div className="aspect-video bg-[#F5F3F0] overflow-hidden">
-                {p.video ? (
+                {p.preview ? (
+                  p.preview
+                ) : p.video ? (
                   <video
                     src={p.video}
                     autoPlay
