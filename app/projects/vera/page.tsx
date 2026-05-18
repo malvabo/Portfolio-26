@@ -3,11 +3,8 @@ import Image from "next/image"
 import { BackLinkSidebar, BackLinkFooter } from "@/components/back-link"
 import { ScrollToTop } from "@/components/scroll-to-top"
 import { Header } from "@/components/header"
-import { PasswordGate } from "@/components/password-gate"
-
 export default function VeraCaseStudy() {
   return (
-    <PasswordGate password="Mary2026">
     <div className="min-h-screen bg-background">
       <ScrollToTop />
       <Header />
@@ -414,6 +411,5 @@ export default function VeraCaseStudy() {
         </div>
       </div>
     </div>
-    </PasswordGate>
   )
 }

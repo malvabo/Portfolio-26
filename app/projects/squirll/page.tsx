@@ -6,8 +6,6 @@ import { BackLinkSidebar, BackLinkFooter } from "@/components/back-link"
 import { ArrowLeft } from "lucide-react"
 import { ScrollToTop } from "@/components/scroll-to-top"
 import { Header } from "@/components/header"
-import { PasswordGate } from "@/components/password-gate"
-
 export default function SquirllCaseStudy() {
   return (
     <div className="min-h-screen bg-background">
