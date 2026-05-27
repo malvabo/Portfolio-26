@@ -39,7 +39,16 @@ export function VeeqoSection() {
             <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">
               Results
             </h3>
-            <p className="text-sm text-muted-foreground opacity-80">Guest area</p>
+            <div className="space-y-4">
+              <div>
+                <div className="text-xl font-medium text-foreground mb-0.5">0% churn</div>
+                <div className="text-sm text-muted-foreground opacity-80">among top-tier enterprise accounts during the transition</div>
+              </div>
+              <div>
+                <div className="text-xl font-medium text-foreground mb-0.5">30% fewer</div>
+                <div className="text-sm text-muted-foreground opacity-80">how-to support tickets vs. the legacy system</div>
+              </div>
+            </div>
           </div>
 
           <div>
@@ -63,15 +72,7 @@ export function VeeqoSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {VEEQO_IMAGES.map((image, idx) => (
             <div key={idx} className="relative aspect-[4/3] overflow-hidden rounded-lg bg-gray-50 border border-gray-200">
-              <Image src={image.src} alt={image.alt} fill className="object-cover blur-[5px]" />
-              {idx === 0 && (
-                <div className="absolute bottom-3 left-3 z-10 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/80 backdrop-blur-sm border border-gray-200/80 shadow-sm">
-                  <svg className="w-3 h-3 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                  </svg>
-                  <span className="text-[11px] font-mono text-gray-500 tracking-wide">Guest area</span>
-                </div>
-              )}
+              <Image src={image.src} alt={image.alt} fill className="object-cover" />
             </div>
           ))}
         </div>
