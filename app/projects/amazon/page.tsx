@@ -43,28 +43,7 @@ export default function AmazonCaseStudy() {
               </div>
             </div>
 
-            <section className="mb-16 p-8 bg-[#F5F3F0] rounded-xl max-w-[750px]">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Outcomes</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-6 text-balance">
-                The impact
-              </h2>
-              <div className="grid md:grid-cols-3 gap-4">
-                <div className="bg-background rounded-lg p-6">
-                  <div className="text-2xl font-serif mb-2 tracking-[-0.02em]">50K+</div>
-                  <p className="text-sm leading-relaxed text-muted-foreground">global sellers using the automated fulfilment tooling</p>
-                </div>
-                <div className="bg-background rounded-lg p-6">
-                  <div className="text-2xl font-serif mb-2 tracking-[-0.02em]">$M+ ARR</div>
-                  <p className="text-sm leading-relaxed text-muted-foreground">in annual recurring revenue driven through subscription product design</p>
-                </div>
-                <div className="bg-background rounded-lg p-6">
-                  <div className="text-2xl font-serif mb-2 tracking-[-0.02em]">0→1</div>
-                  <p className="text-sm leading-relaxed text-muted-foreground">first-ever paid subscription offering launched on the platform</p>
-                </div>
-              </div>
-            </section>
-
-            <div className="border-t border-border/50 pt-16">
+<div className="border-t border-border/50 pt-16">
               <BackLinkFooter />
             </div>
           </main>
