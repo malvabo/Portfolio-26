@@ -50,10 +50,10 @@ export function TestimonialsSection() {
   return (
     <section className="relative pt-10 pb-8 md:pb-10 container mx-auto px-8 lg:px-12 overflow-hidden">
       <div className="relative max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-[#f1f1f1] rounded-xl p-5 h-full flex flex-col">
-              <p className="text-sm md:text-base leading-relaxed text-foreground/90 mb-4 flex-grow font-serif">
+            <div key={index} className="bg-[#f1f1f1] rounded-xl p-6 md:p-7 h-full flex flex-col">
+              <p className="text-base md:text-[17px] leading-relaxed text-foreground/90 mb-4 flex-grow font-serif">
                 {highlightPhrase(testimonial.text, testimonial.keyPhrase)}
               </p>
 
