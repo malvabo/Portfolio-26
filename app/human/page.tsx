@@ -5,37 +5,37 @@ const facts = [
   {
     number: "01",
     title: "Solo traveler to ~100 countries",
-    body: "I've explored roughly 100 countries on my own — no tour groups, no travel companions. Just me, a backpack, and a stubborn curiosity about how the world works beyond the guidebook.",
+    body: "I traveled to 100 (or so) countries solo.",
   },
   {
     number: "02",
     title: "Marathon runner (soon ultra-marathon)",
-    body: "Running long distances is where I reset. I've completed marathons and I'm working my way toward ultra-marathon territory — the kind of race where the challenge stops being physical and becomes entirely mental.",
+    body: "I am a marathon (soon to be ultra-marathon) runner.",
   },
   {
     number: "03",
     title: "Zero fear of public speaking",
-    body: "Somehow the thing most people dread is the thing I genuinely enjoy. Give me a stage, a room full of people, and a topic I care about — I'm in my element.",
+    body: "I have no fear of public speaking.",
   },
   {
     number: "04",
     title: "Rock climber with a very specific fear",
-    body: "The first time I saw a high wall at my bouldering gym, I was hooked instantly. I hired an instructor, got certified, and started climbing. Here's the twist: I'm not afraid of heights at all — I'm afraid of letting go of the wall and hanging three or four floors down on a single rope. I keep climbing anyway.",
+    body: "First time I saw a high wall in my bouldering gym, I fell in love. Next time I hired an instructor to get training to get a permit to climb these. I am not afraid of heights, but I am very much afraid of letting go of the wall and going 3–4 floors down hanging on one rope.",
   },
   {
     number: "05",
     title: "Apricots over strawberries, always",
-    body: "I can eat a couple of kilos of good, sweet apricots in one sitting and feel completely content. Strawberries? Honestly not that impressed.",
+    body: "I can eat a couple of kgs of good, sweet apricots, and I am not much impressed by strawberries.",
   },
   {
     number: "06",
     title: "Moved countries 5 times, lived in 3",
-    body: "Three countries, five moves. London keeps pulling me back — I love it there so much I've returned more than once. Some cities just have that pull.",
+    body: "I lived in 3 countries but moved countries 5 times. London, I love you so much, I keep coming back!",
   },
   {
     number: "07",
     title: "Fell into design through healthcare",
-    body: "I switched to design because I fell in love with healthcare products and wanted to create things that help people live happier and healthier. I've worked on AI products for CVS, launched premium addiction treatment centers in the US, and built a healthcare startup that got acquired. Now I'm looking forward to innovating in new spaces.",
+    body: "I switched to design because I fell in love with healthcare products, and I wanted to create something to make people live \"happier and healthier\". I worked on all sorts of products in this space, from working on innovative AI products for CVS to launching premium addiction treatment centers in the US. My healthcare startup got acquired. Now I am looking forward to innovating in other spaces.",
   },
 ]
 
