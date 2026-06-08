@@ -46,7 +46,7 @@ export function AmazonSection() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {["/images/aivq1.png", "/images/aivq2.png", "/images/aivq3.png"].map((src, i) => (
             <div key={i} className="relative aspect-[4/3] rounded-lg overflow-hidden bg-gray-50 border border-gray-200">
               <div className="absolute inset-0 z-10 [filter:blur(3px)] scale-105">
