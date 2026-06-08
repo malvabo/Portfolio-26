@@ -23,7 +23,7 @@ export function AmazonSection() {
             <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">Results</h3>
             <div className="space-y-4">
               <div>
-                <div className="text-xl font-medium text-foreground">Available during the interview</div>
+                <div className="text-base leading-relaxed text-foreground">Available during the interview</div>
               </div>
             </div>
           </div>
