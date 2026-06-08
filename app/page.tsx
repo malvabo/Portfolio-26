@@ -10,6 +10,7 @@ import { VeeqoSection } from "@/components/veeqo-section"
 import { VeraSection } from "@/components/vera-section"
 import { ArticlesSection } from "@/components/articles-section"
 import { TestimonialsSection } from "@/components/testimonials-section"
+import { AmazonSection } from "@/components/amazon-section"
 import { VisualConceptsSection } from "@/components/visual-concepts-section"
 import { WorkshopsSection } from "@/components/workshops-section"
 import { Footer } from "@/components/footer"
@@ -22,6 +23,9 @@ export default function Home() {
         <Hero />
         <AnimatedSection delayOnLoad={0}>
           <TestimonialsSection />
+        </AnimatedSection>
+        <AnimatedSection>
+          <AmazonSection />
         </AnimatedSection>
         <AnimatedSection>
           <WorkSection />
