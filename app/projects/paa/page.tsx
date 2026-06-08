@@ -58,6 +58,7 @@ export default function PAACaseStudy() {
               <div>
                 <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Timeline</p>
                 <p className="text-[15px] leading-relaxed">6 months</p>
+                <p className="text-[15px] leading-relaxed text-muted-foreground">2020</p>
               </div>
             </div>
 
