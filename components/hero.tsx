@@ -66,7 +66,7 @@ export function Hero() {
                   />
                 </span>
                 <span className="relative rounded-[3px] px-[0.3em] bg-[#E8E3DD] text-[#6B5D4F] whitespace-nowrap">
-workflows <svg className="inline-block w-[0.55em] h-[0.55em] mb-[0.15em]" viewBox="0 0 10 10" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M2 8 L8 2 M4 2 L8 2 L8 6"/></svg>
+workflows <svg className="inline-block w-[0.55em] h-[0.55em] mb-[0.15em]" viewBox="0 0 10 10" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M2 8 L8 2 M4 2 L8 2 L8 6"/></svg>
                 </span>
               </span>
               . Shipped 0→1 products, won{" "}
@@ -89,7 +89,7 @@ workflows <svg className="inline-block w-[0.55em] h-[0.55em] mb-[0.15em]" viewBo
                   />
                 </span>
                 <span className="relative rounded-[3px] px-[0.3em] bg-[#E8E3DD] text-[#6B5D4F] whitespace-nowrap">
-awards <svg className="inline-block w-[0.55em] h-[0.55em] mb-[0.15em]" viewBox="0 0 10 10" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M2 8 L8 2 M4 2 L8 2 L8 6"/></svg>
+awards <svg className="inline-block w-[0.55em] h-[0.55em] mb-[0.15em]" viewBox="0 0 10 10" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M2 8 L8 2 M4 2 L8 2 L8 6"/></svg>
                 </span>
               </a>
               ,<br />
@@ -115,7 +115,7 @@ awards <svg className="inline-block w-[0.55em] h-[0.55em] mb-[0.15em]" viewBox="
                   />
                 </span>
                 <span className="relative rounded-[3px] px-[0.3em] bg-[#E8E3DD] text-[#6B5D4F] whitespace-nowrap">
-vibe-coding <svg className="inline-block w-[0.55em] h-[0.55em] mb-[0.15em]" viewBox="0 0 10 10" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M2 8 L8 2 M4 2 L8 2 L8 6"/></svg>
+vibe-coding <svg className="inline-block w-[0.55em] h-[0.55em] mb-[0.15em]" viewBox="0 0 10 10" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M2 8 L8 2 M4 2 L8 2 L8 6"/></svg>
                 </span>
               </a>
               {" "}side projects and writing talks on the future of AI products.
