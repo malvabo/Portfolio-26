@@ -23,7 +23,7 @@ export function AmazonSection() {
             <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">Results</h3>
             <div className="space-y-4">
               <div>
-                <div className="text-xl font-medium text-foreground mb-0.5">Available during the interview</div>
+                <div className="text-base leading-relaxed text-foreground">Available during the interview</div>
               </div>
             </div>
           </div>
@@ -49,7 +49,7 @@ export function AmazonSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {["/images/aivq1.png", "/images/aivq2.png", "/images/aivq3.png"].map((src, i) => (
             <div key={i} className="relative aspect-[4/3] rounded-lg overflow-hidden bg-gray-50 border border-gray-200">
-              <div className="absolute inset-0 z-10">
+              <div className="absolute inset-0 z-10 [filter:blur(3px)] scale-105">
                 <Image
                   src={src}
                   alt="Amazon project (NDA)"
