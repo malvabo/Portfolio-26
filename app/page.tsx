@@ -25,6 +25,9 @@ export default function Home() {
           <TestimonialsSection />
         </AnimatedSection>
         <AnimatedSection>
+          <AmazonSection />
+        </AnimatedSection>
+        <AnimatedSection>
           <WorkSection />
         </AnimatedSection>
         <AnimatedSection>
