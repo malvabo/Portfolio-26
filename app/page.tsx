@@ -25,10 +25,10 @@ export default function Home() {
           <TestimonialsSection />
         </AnimatedSection>
         <AnimatedSection>
-          <AmazonSection />
+          <WorkSection />
         </AnimatedSection>
         <AnimatedSection>
-          <WorkSection />
+          <AmazonSection />
         </AnimatedSection>
         <AnimatedSection>
           <AmazonSection />
