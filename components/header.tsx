@@ -66,6 +66,12 @@ export function Header() {
               </svg>
               AI experiments
             </Link>
+            <Link
+              href="/human"
+              className="text-[17px] font-sans text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Human
+            </Link>
             <a
               href="https://medium.com/@maria_borysova"
               target="_blank"
