@@ -24,7 +24,6 @@ export function AmazonSection() {
             <div className="space-y-4">
               <div>
                 <div className="text-xl font-medium text-foreground mb-0.5">Available during the interview</div>
-                <div className="text-sm text-muted-foreground opacity-80">NDA project</div>
               </div>
             </div>
           </div>
