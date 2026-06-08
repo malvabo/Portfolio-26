@@ -48,11 +48,11 @@ export function AmazonSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {[1, 2, 3].map((i) => (
+          {["/images/aivq1.png", "/images/aivq2.png", "/images/aivq3.png"].map((src, i) => (
             <div key={i} className="relative aspect-[4/3] rounded-lg overflow-hidden bg-gray-50 border border-gray-200">
               <div className="absolute inset-0 z-10 [filter:blur(8px)] scale-105">
                 <Image
-                  src="/images/amazon-sales-dashboard.jpg"
+                  src={src}
                   alt="Amazon project (NDA)"
                   fill
                   className="object-cover"
