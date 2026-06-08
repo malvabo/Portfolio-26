@@ -11,6 +11,41 @@ export function AmazonSection() {
           Amazon: AI automation for complex shipping workflows
         </h2>
 
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 mb-10">
+          <div>
+            <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">About</h3>
+            <p className="text-base leading-relaxed text-foreground">
+              Designing AI-powered automation for Amazon's internal shipping operations - reducing manual work for thousands of operators and accelerating decision-making across complex logistics workflows.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">Results</h3>
+            <div className="space-y-4">
+              <div>
+                <div className="text-base leading-relaxed text-foreground">Available during the interview</div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">Role</h3>
+            <div className="text-base leading-relaxed text-foreground space-y-0.5">
+              <p>Product Designer</p>
+              <div className="flex flex-wrap gap-1.5 mt-2">
+                {["Web", "AI"].map((tag) => (
+                  <span
+                    key={tag}
+                    className="inline-block px-2 py-0.5 text-[13px] tracking-tight rounded-md bg-[#E8E3DD] text-[#6B5D4F]"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
           {["/images/aivq1.png", "/images/aivq2.png", "/images/aivq3.png"].map((src, i) => (
             <div key={i} className="relative aspect-[4/3] rounded-lg overflow-hidden bg-gray-50 border border-gray-200">
