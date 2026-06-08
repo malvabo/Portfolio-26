@@ -40,8 +40,7 @@ export default function AmazonCaseStudy() {
               </div>
               <div>
                 <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Timeline</p>
-                <p className="text-[15px] leading-relaxed">4 weeks</p>
-                <p className="text-[15px] leading-relaxed text-muted-foreground">2026</p>
+                <p className="text-[15px] leading-relaxed">4 weeks, 2026</p>
               </div>
             </div>
 

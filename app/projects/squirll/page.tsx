@@ -53,7 +53,6 @@ export default function SquirllCaseStudy() {
               <div>
                 <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Timeline</p>
                 <p className="text-[15px] leading-relaxed">Sep 2024 – Apr 2025</p>
-                <p className="text-[15px] leading-relaxed text-muted-foreground">2025</p>
               </div>
               <div>
                 <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Team</p>
