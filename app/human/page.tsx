@@ -37,6 +37,16 @@ const facts = [
     title: "Fell into design through healthcare",
     body: "I switched to design because I fell in love with healthcare products, and I wanted to create something to make people live \"happier and healthier\". I worked on all sorts of products in this space, from working on innovative AI products for CVS to launching premium addiction treatment centers in the US. My healthcare startup got acquired. Now I am looking forward to innovating in other spaces.",
   },
+  {
+    number: "08",
+    title: "If not design, theology",
+    body: "If not design, I would study and research religions. I love theology and can spend days diving into the stories of the past.",
+  },
+  {
+    number: "09",
+    title: "History nerd, Ancient Egypt edition",
+    body: "I am a history nerd with special interest in Ancient Egypt.",
+  },
 ]
 
 export default function HumanPage() {
@@ -76,7 +86,7 @@ export default function HumanPage() {
           ))}
 
           {/* Placeholder slots for remaining facts */}
-          {Array.from({ length: 3 }).map((_, i) => (
+          {Array.from({ length: 1 }).map((_, i) => (
             <div
               key={`placeholder-${i}`}
               className="bg-background p-8 lg:p-10 flex items-center justify-center min-h-[180px]"
