@@ -47,6 +47,11 @@ const facts = [
     title: "History nerd, Ancient Egypt edition",
     body: "I am a history nerd with special interest in Ancient Egypt.",
   },
+  {
+    number: "10",
+    title: "Poet and writer since age 10",
+    body: "I have been writing poetry and prose since I was 10. The only talent that was with me since I remember myself.",
+  },
 ]
 
 export default function HumanPage() {
@@ -86,16 +91,6 @@ export default function HumanPage() {
           ))}
 
           {/* Placeholder slots for remaining facts */}
-          {Array.from({ length: 1 }).map((_, i) => (
-            <div
-              key={`placeholder-${i}`}
-              className="bg-background p-8 lg:p-10 flex items-center justify-center min-h-[180px]"
-            >
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground/30">
-                0{facts.length + i + 1} — coming soon
-              </p>
-            </div>
-          ))}
         </div>
 
       </main>
