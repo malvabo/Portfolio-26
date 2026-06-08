@@ -29,6 +29,22 @@ export default function AmazonCaseStudy() {
               </p>
             </div>
 
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-4 mb-6 pb-4 max-w-[750px]">
+              <div>
+                <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Role</p>
+                <p className="text-[15px] leading-relaxed">Product Designer</p>
+              </div>
+              <div>
+                <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Platform</p>
+                <p className="text-[15px] leading-relaxed">Web</p>
+              </div>
+              <div>
+                <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Timeline</p>
+                <p className="text-[15px] leading-relaxed">4 weeks</p>
+                <p className="text-[15px] leading-relaxed text-muted-foreground">2026</p>
+              </div>
+            </div>
+
             <div className="mb-16 grid gap-4 max-w-[750px]">
               <div className="relative rounded-xl overflow-hidden">
                 <div className="relative w-full aspect-video [filter:blur(8px)] scale-105">
