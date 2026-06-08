@@ -53,7 +53,7 @@ export default function HumanPage() {
             Who am I?
           </h1>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            10 fun facts about me — the kind that don&apos;t belong on a résumé but probably tell you more about how I think than anything on one.
+            10 fun facts about me.
           </p>
         </div>
 
