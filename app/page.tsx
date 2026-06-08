@@ -30,9 +30,6 @@ export default function Home() {
         <AnimatedSection>
           <AmazonSection />
         </AnimatedSection>
-        <AnimatedSection>
-          <AmazonSection />
-        </AnimatedSection>
         {/* <AnimatedSection>
           <VeraSection />
         </AnimatedSection> */}
