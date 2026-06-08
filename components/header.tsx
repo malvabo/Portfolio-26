@@ -1,5 +1,6 @@
 "use client"
 import Link from "next/link"
+import Image from "next/image"
 import { useState, useEffect } from "react"
 
 export function Header() {
@@ -31,8 +32,9 @@ export function Header() {
         <div className="flex items-center justify-between h-16">
           <Link
             href="/"
-            className="text-lg font-sans font-medium tracking-tight text-foreground hover:text-primary transition-colors"
+            className="flex items-center gap-2 text-lg font-sans font-medium tracking-tight text-foreground hover:text-primary transition-colors"
           >
+            <Image src="/favicon.png" alt="" width={20} height={20} className="rounded-sm" />
             Mary Borysova
           </Link>
 

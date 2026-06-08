@@ -15,7 +15,7 @@ export function AmazonSection() {
           <div>
             <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">About</h3>
             <p className="text-base leading-relaxed text-foreground">
-              Designing AI-powered automation for Amazon's internal shipping operations — reducing manual work for thousands of operators and accelerating decision-making across complex logistics workflows.
+              Designing AI-powered automation for Amazon's internal shipping operations - reducing manual work for thousands of operators and accelerating decision-making across complex logistics workflows.
             </p>
           </div>
 
