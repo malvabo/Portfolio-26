@@ -22,6 +22,21 @@ const facts = [
     title: "Rock climber with a very specific fear",
     body: "The first time I saw a high wall at my bouldering gym, I was hooked instantly. I hired an instructor, got certified, and started climbing. Here's the twist: I'm not afraid of heights at all — I'm afraid of letting go of the wall and hanging three or four floors down on a single rope. I keep climbing anyway.",
   },
+  {
+    number: "05",
+    title: "Apricots over strawberries, always",
+    body: "I can eat a couple of kilos of good, sweet apricots in one sitting and feel completely content. Strawberries? Honestly not that impressed.",
+  },
+  {
+    number: "06",
+    title: "Moved countries 5 times, lived in 3",
+    body: "Three countries, five moves. London keeps pulling me back — I love it there so much I've returned more than once. Some cities just have that pull.",
+  },
+  {
+    number: "07",
+    title: "Fell into design through healthcare",
+    body: "I switched to design because I fell in love with healthcare products and wanted to create things that help people live happier and healthier. I've worked on AI products for CVS, launched premium addiction treatment centers in the US, and built a healthcare startup that got acquired. Now I'm looking forward to innovating in new spaces.",
+  },
 ]
 
 export default function HumanPage() {
@@ -61,7 +76,7 @@ export default function HumanPage() {
           ))}
 
           {/* Placeholder slots for remaining facts */}
-          {Array.from({ length: 6 }).map((_, i) => (
+          {Array.from({ length: 3 }).map((_, i) => (
             <div
               key={`placeholder-${i}`}
               className="bg-background p-8 lg:p-10 flex items-center justify-center min-h-[180px]"
