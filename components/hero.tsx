@@ -66,7 +66,7 @@ export function Hero() {
                   />
                 </span>
                 <span className="relative rounded-[3px] px-[0.3em] bg-[#E8E3DD] text-[#6B5D4F] whitespace-nowrap">
-workflows
+workflows ↗
                 </span>
               </span>
               . Shipped 0→1 products, won{" "}
@@ -89,7 +89,7 @@ workflows
                   />
                 </span>
                 <span className="relative rounded-[3px] px-[0.3em] bg-[#E8E3DD] text-[#6B5D4F] whitespace-nowrap">
-awards
+awards ↗
                 </span>
               </a>
               ,<br />
@@ -115,7 +115,7 @@ awards
                   />
                 </span>
                 <span className="relative rounded-[3px] px-[0.3em] bg-[#E8E3DD] text-[#6B5D4F] whitespace-nowrap">
-vibe-coding
+vibe-coding ↗
                 </span>
               </a>
               {" "}side projects and writing talks on the future of AI products.
