@@ -66,16 +66,11 @@ export default function HumanPage() {
               </p>
             </div>
 
-            <figure className="my-10 max-w-[750px] rounded-xl bg-[#F5F3F0] p-8">
-              <figcaption className="mb-5 font-mono text-[11px] uppercase tracking-wider text-muted-foreground">
-                Bhagavad Gita, Verse 2.47
-              </figcaption>
-              <blockquote className="font-serif text-[1.55rem] leading-[1.35] tracking-[-0.02em] text-foreground">
-                <p>
-                  &ldquo;You have a right to perform your prescribed duty, but you are not entitled to the fruits of action. Never consider yourself the cause of the results of your activities, and never be attached to not doing your duty.&rdquo;
-                </p>
-              </blockquote>
-            </figure>
+            <QuoteBlock attribution="Bhagavad Gita, Verse 2.47">
+              <p>
+                &ldquo;You have a right to perform your prescribed duty, but you are not entitled to the fruits of action. Never consider yourself the cause of the results of your activities, and never be attached to not doing your duty.&rdquo;
+              </p>
+            </QuoteBlock>
 
             <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
               <p>

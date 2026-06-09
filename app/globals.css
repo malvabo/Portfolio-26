@@ -146,51 +146,42 @@
   width: 76px;
   height: 76px;
   border-radius: 9999px;
-  background:
-    radial-gradient(circle at 30% 24%, rgba(255, 255, 255, 0.96) 0 9%, rgba(255, 255, 255, 0.34) 10% 18%, transparent 28%),
-    radial-gradient(circle at 36% 34%, rgba(195, 236, 255, 0.95) 0 16%, transparent 39%),
-    radial-gradient(circle at 72% 28%, rgba(97, 214, 255, 0.9) 0 14%, transparent 34%),
-    radial-gradient(circle at 62% 74%, rgba(77, 108, 255, 0.88) 0 16%, transparent 43%),
-    radial-gradient(circle at 28% 78%, rgba(36, 190, 212, 0.78) 0 18%, transparent 45%),
-    linear-gradient(135deg, #d9f7ff 0%, #7ddcff 30%, #327cff 62%, #171f7a 100%);
-  box-shadow:
-    0 0 20px rgba(83, 201, 255, 0.44),
-    0 0 52px rgba(54, 117, 255, 0.28),
-    inset -14px -18px 28px rgba(12, 22, 74, 0.42),
-    inset 10px 9px 20px rgba(255, 255, 255, 0.46);
+  background: linear-gradient(125deg, #bdefff, #4ac8ff, #2d6cff, #1b2f8f, #62d9ff);
+  background-size: 260% 260%;
+  box-shadow: 0 0 34px rgba(64, 170, 255, 0.28);
   overflow: hidden;
   isolation: isolate;
-}
-
-.human-orb::before,
-.human-orb::after {
-  content: "";
-  position: absolute;
-  inset: -18%;
-  border-radius: inherit;
-  pointer-events: none;
+  animation: human-orb-shade 9s ease-in-out infinite;
 }
 
 .human-orb::before {
+  content: "";
+  position: absolute;
+  inset: -30%;
+  border-radius: inherit;
   background:
-    conic-gradient(from 42deg, transparent 0 12%, rgba(255, 255, 255, 0.34) 16%, transparent 24%, rgba(72, 219, 255, 0.42) 34%, transparent 46%, rgba(52, 88, 255, 0.42) 58%, transparent 72%, rgba(182, 245, 255, 0.35) 84%, transparent 100%),
-    repeating-radial-gradient(circle at 48% 48%, rgba(255, 255, 255, 0.18) 0 1px, transparent 1px 7px);
-  mix-blend-mode: screen;
-  opacity: 0.72;
-  animation: human-orb-drift 8s linear infinite;
+    linear-gradient(70deg, rgba(9, 28, 116, 0.64), transparent 28%, rgba(79, 215, 255, 0.52) 55%, rgba(25, 72, 213, 0.72)),
+    linear-gradient(150deg, rgba(147, 239, 255, 0.55), rgba(40, 101, 255, 0.22), rgba(10, 21, 88, 0.5));
+  filter: blur(12px);
+  opacity: 0.9;
+  transform: rotate(12deg);
+  animation: human-orb-flow 7s ease-in-out infinite alternate;
 }
 
-.human-orb::after {
-  inset: 10%;
-  background:
-    radial-gradient(circle at 28% 22%, rgba(255, 255, 255, 0.8) 0 9%, transparent 20%),
-    linear-gradient(135deg, rgba(255, 255, 255, 0.42), transparent 36% 100%);
-  filter: blur(0.5px);
-  opacity: 0.82;
+@keyframes human-orb-shade {
+  0% {
+    background-position: 0% 42%;
+  }
+  50% {
+    background-position: 100% 58%;
+  }
+  100% {
+    background-position: 0% 42%;
+  }
 }
 
-@keyframes human-orb-drift {
+@keyframes human-orb-flow {
   to {
-    transform: rotate(1turn);
+    transform: translate3d(12%, -8%, 0) rotate(34deg) scale(1.08);
   }
 }
