@@ -1,4 +1,5 @@
 import { Header } from "@/components/header"
+import { Footer } from "@/components/footer"
 import { HumanShaderOrb } from "@/components/human-shader-orb"
 import { ScrollToTop } from "@/components/scroll-to-top"
 
@@ -104,6 +105,7 @@ export default function HumanPage() {
           </article>
         </div>
       </main>
+      <Footer />
     </div>
   )
 }
