@@ -101,6 +101,12 @@ export default function HumanPage() {
               </p>
             </QuoteBlock>
 
+            <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+              <p>
+                I am a marathon runner, soon-to-be ultra-marathon runner. It taught me to stay resilient and patient, and hopeful, and most of all - to enjoy the struggle.
+              </p>
+            </div>
+
             <QuoteBlock attribution="1 Corinthians 13:4">
               <p>
                 &ldquo;Love is patient, love is kind. It does &#110;ot envy, it does &#110;ot boast, it is &#110;ot proud. It does &#110;ot dishonor others, it is &#110;ot self-seeking, it is &#110;ot easily angered, it keeps &#110;o record of wrongs.&rdquo;
