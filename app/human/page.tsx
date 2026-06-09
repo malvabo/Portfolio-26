@@ -33,7 +33,7 @@ export default function HumanPage() {
           </aside>
 
           <article className="flex-1 px-8 lg:px-12">
-            <header className="mb-12 max-w-[750px]">
+            <header className="mb-5 max-w-[750px]">
               <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl tracking-[-0.02em] leading-[1.2] mb-4">
                 Human
               </h1>
