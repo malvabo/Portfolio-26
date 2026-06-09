@@ -47,11 +47,11 @@ export default function HumanPage() {
               </p>
 
               <p>
-                The first time I left the country, I had a budget of one dollar a day, which was not sustainable in EU. I learned to be frugal and make friends everywhere.
+                The first time I left the country, I had a budget of one dollar a day, which was not sustainable in the EU. I learned to be frugal and make friends everywhere.
               </p>
 
               <p>
-                Fast forward, I traveled to around 100 countries solo and I learned a bit about myself and the world. Waking up in a small village in the mountains in Oman during Ramadan to witness the morning players and grow appreciation for devotion and persistence like nowhere in the world. Hiking alone in Canada and singing loud to scare off the bears and camping in Australia with snake anti-venom to face my fears of nature and grow self-reliance. I learned that control is an illusion; I ended up staying safe and sound in dangerous places in Africa and the opposite in some of the safest cities in EU.
+                Fast forward, I traveled to around 100 countries solo and I learned a bit about myself and the world. Waking up in a small village in the mountains in Oman during Ramadan to witness the morning players and grow appreciation for devotion and persistence like nowhere in the world. Hiking alone in Canada and singing loudly to scare off the bears and camping in Australia with snake anti-venom to face my fears of nature and grow self-reliance. I learned that control is an illusion; I ended up staying safe and sound in dangerous places in Africa and the opposite in some of the safest cities in EU.
               </p>
 
               <p>
@@ -81,7 +81,7 @@ export default function HumanPage() {
 
             <div className="mt-10 space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
               <p>
-                I sometimes sit in front of my favorite mummy in British museum and lose myself in materials on why it&rsquo;s decorated this way. Effort and care people used to pour into seemingly simple artifacts back then is endlessly inspiring.
+                I sometimes sit in front of my favorite mummy in the British Museum and lose myself in materials on why it&rsquo;s decorated this way. The effort and care people used to pour into seemingly simple artifacts back then is endlessly inspiring.
               </p>
 
               <p>
@@ -93,12 +93,12 @@ export default function HumanPage() {
               </p>
 
               <p>
-                I adore theology and finding the ways stories helped to shape the human behavior for thousands of years and continue doing so now. Most of the people I love now are of the different cultural backgrounds than me and I am mesmerized how it&rsquo;s shaping me and how much I am waiting for Diwali and Ramadan these days along with Easter.
+                I adore theology and finding the ways stories have helped to shape human behavior for thousands of years and continue doing so now. Most of the people I love now are of different cultural backgrounds than I am, and I am mesmerized by how it&rsquo;s shaping me and how much I am waiting for Diwali and Ramadan these days, along with Easter.
               </p>
             </div>
             <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
               <p>
-                I am a marathon runner, soon-to-be ultra-marathon runner. 10+ years of regular running and pushing myself to do better taught me to stay resilient and patient, and hopeful, and most of all - to enjoy the struggle. But if you enjoy it, maybe it&apos;s not a struggle really?
+                I am a marathon runner, soon-to-be ultra-marathon runner. 10+ years of regular running and pushing myself to do better taught me to stay resilient and patient, and hopeful, and most of all - to enjoy the struggle. But if you enjoy it, maybe it&apos;s not a struggle, really?
               </p>
             </div>
           </article>
