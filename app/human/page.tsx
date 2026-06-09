@@ -28,14 +28,14 @@ export default function HumanPage() {
             aria-label="Human page navigation"
           >
             <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground">
-              Human
+              Me as a human
             </p>
           </aside>
 
           <article className="flex-1 px-8 lg:px-12">
             <header className="mb-5 max-w-[750px]">
               <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl tracking-[-0.02em] leading-[1.2] mb-4">
-                Human
+                Who am I?
               </h1>
               <p className="text-[17px] leading-relaxed text-muted-foreground">
                 I love taking on risks.
