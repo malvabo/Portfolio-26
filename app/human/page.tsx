@@ -1,4 +1,5 @@
 import { Header } from "@/components/header"
+import { HumanShaderOrb } from "@/components/human-shader-orb"
 import { ScrollToTop } from "@/components/scroll-to-top"
 
 function QuoteBlock({ children, attribution }: { children: React.ReactNode; attribution: string }) {
@@ -27,7 +28,7 @@ export default function HumanPage() {
             className="hidden lg:block w-56 px-8 lg:px-12 fixed top-24 left-8 lg:left-[max(0px,calc((100vw-80rem)/2))]"
             aria-label="Human page navigation"
           >
-            <div className="human-orb" aria-label="Me as a human" role="img" />
+            <HumanShaderOrb />
           </aside>
 
           <article className="flex-1 px-8 lg:px-12">
