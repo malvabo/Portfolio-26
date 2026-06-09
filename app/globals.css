@@ -143,45 +143,37 @@
 
 .human-orb {
   position: relative;
-  width: 76px;
-  height: 76px;
+  width: 152px;
+  height: 152px;
   border-radius: 9999px;
-  background: linear-gradient(125deg, #bdefff, #4ac8ff, #2d6cff, #1b2f8f, #62d9ff);
-  background-size: 260% 260%;
-  box-shadow: 0 0 34px rgba(64, 170, 255, 0.28);
+  background: #18379d;
+  box-shadow: 0 0 58px rgba(64, 170, 255, 0.22);
   overflow: hidden;
   isolation: isolate;
-  animation: human-orb-shade 9s ease-in-out infinite;
 }
 
 .human-orb::before {
   content: "";
   position: absolute;
-  inset: -30%;
+  inset: -54%;
   border-radius: inherit;
   background:
-    linear-gradient(70deg, rgba(9, 28, 116, 0.64), transparent 28%, rgba(79, 215, 255, 0.52) 55%, rgba(25, 72, 213, 0.72)),
-    linear-gradient(150deg, rgba(147, 239, 255, 0.55), rgba(40, 101, 255, 0.22), rgba(10, 21, 88, 0.5));
-  filter: blur(12px);
-  opacity: 0.9;
-  transform: rotate(12deg);
-  animation: human-orb-flow 7s ease-in-out infinite alternate;
-}
-
-@keyframes human-orb-shade {
-  0% {
-    background-position: 0% 42%;
-  }
-  50% {
-    background-position: 100% 58%;
-  }
-  100% {
-    background-position: 0% 42%;
-  }
+    linear-gradient(112deg, #0d1a69 0%, #1f55ff 18%, #58d7ff 34%, #1235b7 52%, #7df2ff 68%, #2630a5 84%, #07134f 100%),
+    linear-gradient(38deg, rgba(178, 245, 255, 0.7), rgba(49, 124, 255, 0.18), rgba(8, 18, 80, 0.72));
+  background-size: 180% 180%, 220% 220%;
+  filter: blur(18px) saturate(1.28);
+  opacity: 0.98;
+  transform: translate3d(-10%, -8%, 0) rotate(0deg) scale(1.05);
+  animation: human-orb-flow 5.5s ease-in-out infinite alternate;
 }
 
 @keyframes human-orb-flow {
+  from {
+    background-position: 0% 45%, 100% 50%;
+    transform: translate3d(-16%, -10%, 0) rotate(-18deg) scale(1.08);
+  }
   to {
-    transform: translate3d(12%, -8%, 0) rotate(34deg) scale(1.08);
+    background-position: 100% 55%, 0% 50%;
+    transform: translate3d(12%, 10%, 0) rotate(24deg) scale(1.18);
   }
 }
