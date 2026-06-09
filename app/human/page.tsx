@@ -61,7 +61,7 @@ export default function HumanPage() {
               <p>
                 One thing I always want to know is:
                 <br />
-                What can I do better?
+                and what can I do better?
               </p>
             </div>
 
