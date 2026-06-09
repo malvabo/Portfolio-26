@@ -118,7 +118,7 @@ export function HumanShaderOrb({ size = 95 }: { size?: number }) {
     const startedAt = performance.now()
 
     function render(now: number) {
-      const t = ((now - startedAt) / 1000) * 0.35
+      const t = ((now - startedAt) / 1000) * 0.65
 
       gl.clearColor(0, 0, 0, 0)
       gl.clear(gl.COLOR_BUFFER_BIT)
