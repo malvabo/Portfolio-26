@@ -92,7 +92,7 @@ export default function HumanPage() {
                 I adore theology and finding the ways stories have helped to shape human behavior for thousands of years and continue doing so now. Most of the people I love now are of different cultural backgrounds than I am, and I am mesmerized by how it&rsquo;s shaping me and how much I am waiting for Diwali and Ramadan these days, along with Easter.
               </p>
             </div>
-            <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+            <div className="mt-5 space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
               <p>
                 I am a marathon runner, soon-to-be ultra-marathon runner. 10+ years of regular running and pushing myself to do better taught me to stay resilient and patient, and hopeful, and most of all - to enjoy the struggle. But if you enjoy it, maybe it&apos;s not a struggle, really?
               </p>
