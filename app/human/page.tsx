@@ -58,10 +58,6 @@ export default function HumanPage() {
               <p>
                 My close people told me that I have the highest bias for action among everybody they knew. Probably, they are right.
               </p>
-
-              <p>
-                I am motivated by personal challenges. I have high agency, and I enjoyed building my multiple ventures (my last startup was acquired). When leading people, I respect human potential and giving space to disrupt instead of spending energy on fitting the existing mold. I learned this on practice.
-              </p>
             </div>
 
             <QuoteBlock attribution="Verse 2.47">
@@ -69,6 +65,12 @@ export default function HumanPage() {
                 &ldquo;You have a right to perform your prescribed duty, but you are not entitled to the fruits of action. Never consider yourself the cause of the results of your activities, and never be attached to not doing your duty.&rdquo;
               </p>
             </QuoteBlock>
+
+            <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+              <p>
+                I am motivated by personal challenges. I have high agency, and I enjoyed building my multiple ventures (my last startup was acquired). When leading people, I respect human potential and giving space to disrupt instead of spending energy on fitting the existing mold. I learned this on practice.
+              </p>
+            </div>
 
             <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
               <p>
