@@ -37,9 +37,6 @@ export default function HumanPage() {
               <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl tracking-[-0.02em] leading-[1.2] mb-4">
                 Who am I?
               </h1>
-              <p className="text-[17px] leading-relaxed text-muted-foreground">
-                I love taking on risks.
-              </p>
             </header>
 
             <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
