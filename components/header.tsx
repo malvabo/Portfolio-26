@@ -74,6 +74,12 @@ export function Header() {
             >
               Writing
             </a>
+            <Link
+              href="/human"
+              className="text-[17px] font-sans text-muted-foreground hover:text-foreground transition-colors"
+            >
+              About me
+            </Link>
           </nav>
         </div>
       </div>
