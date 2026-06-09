@@ -1,0 +1,112 @@
+import { Header } from "@/components/header"
+import { ScrollToTop } from "@/components/scroll-to-top"
+
+function QuoteBlock({ children, attribution }: { children: React.ReactNode; attribution: string }) {
+  return (
+    <figure className="my-10 max-w-[750px] rounded-xl bg-[#F5F3F0] p-8">
+      <blockquote className="font-serif text-[1.55rem] leading-[1.35] tracking-[-0.02em] text-foreground">
+        {children}
+      </blockquote>
+      <figcaption className="mt-5 font-mono text-[11px] uppercase tracking-wider text-muted-foreground">
+        {attribution}
+      </figcaption>
+    </figure>
+  )
+}
+
+export default function HumanPage() {
+  return (
+    <div className="min-h-screen bg-background">
+      <ScrollToTop />
+      <Header />
+
+      <main className="max-w-7xl mx-auto pt-24 pb-20 lg:pb-24">
+        <div className="flex w-full items-start">
+          <div className="hidden lg:block w-56 shrink-0 px-8 lg:px-12" aria-hidden />
+          <aside
+            className="hidden lg:block w-56 px-8 lg:px-12 fixed top-24 left-8 lg:left-[max(0px,calc((100vw-80rem)/2))]"
+            aria-label="Human page navigation"
+          >
+            <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground">
+              Human
+            </p>
+          </aside>
+
+          <article className="flex-1 px-8 lg:px-12">
+            <header className="mb-12 max-w-[750px]">
+              <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl tracking-[-0.02em] leading-[1.2] mb-4">
+                Human
+              </h1>
+              <p className="text-[17px] leading-relaxed text-muted-foreground">
+                I love taking on risks.
+              </p>
+            </header>
+
+            <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+              <p>
+                When I was a kid, I asked my parents to print the Tour d&apos;Eiffel photo for me, and I pinned it on the wall, dreaming that I would get a chance to see it one day in my life.
+              </p>
+
+              <p>
+                The first time I left the country, I had a budget of one dollar a day, which was not sustainable. I learned to be frugal and make friends everywhere.
+              </p>
+
+              <p>
+                Fast forward, I traveled to around 100 countries solo and I learned a bit about myself and the world. Waking up in a small village in the mountains in Oman during Ramadan to witness the morning players and grow appreciation for devotion and persistence like nowhere in the world. Hiking alone in Canada and singing loud to scare off the bears and camping in Australia with snake anti-venom to face my fears of nature and grow self-reliance. I learned that control is an illusion; I ended up staying safe and sound in dangerous places in Africa compared to some of the safest cities in EU.
+              </p>
+
+              <p>
+                My close people told me that I have the highest bias for action among everybody they know. Probably, they are right.
+              </p>
+
+              <p>
+                I am motivated by personal challenges. I have high agency, and I enjoyed building my multiple ventures (my last startup was acquired). When leading people, I respect human potential and giving space to disrupt instead of spending energy on fitting the existing mold. I learned this on practice.
+              </p>
+            </div>
+
+            <QuoteBlock attribution="Verse 2.47">
+              <p>
+                &ldquo;You have a right to perform your prescribed duty, but you are not entitled to the fruits of action. Never consider yourself the cause of the results of your activities, and never be attached to not doing your duty.&rdquo;
+              </p>
+            </QuoteBlock>
+
+            <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+              <p>
+                One thing I always want to know is:
+                <br />
+                What can I do better?
+              </p>
+
+              <p>
+                I sometimes sit in front of my favorite mummy in British museum and lose myself in materials on why it&rsquo;s decorated this way. Effort and care people used to pour into seemingly simple artifacts back then is endlessly inspiring.
+              </p>
+
+              <p>
+                Egyptians believed the afterlife (the &quot;Field of Reeds&quot;) was a lush paradise with flowing rivers that mirrored the Nile. Tombs and coffins were decorated with maps, spells, and scenes to help the deceased navigate these waters.
+              </p>
+
+              <p>
+                Symbols and stories are fascinating.
+              </p>
+
+              <p>
+                I adore theology and finding the ways stories helped to shape the human behavior for thousands of years and continue doing so now. Most of the people I love now are of the different cultural backgrounds than me and I am mesmerized how it&rsquo;s shaping me and how much I am waiting for Diwali and Ramadan these days along with Easter.
+              </p>
+            </div>
+            <QuoteBlock attribution="Joshua 1:9">
+              <p>
+                &ldquo;Be strong and of good courage; do not be frightened, neither be dismayed, for the Lord your God is with you wherever you go.&rdquo;
+              </p>
+            </QuoteBlock>
+
+            <QuoteBlock attribution="1 Corinthians 13:4">
+              <p>
+                &ldquo;Love is patient, love is kind. It does &#110;ot envy, it does &#110;ot boast, it is &#110;ot proud. It does &#110;ot dishonor others, it is &#110;ot self-seeking, it is &#110;ot easily angered, it keeps &#110;o record of wrongs.&rdquo;
+              </p>
+            </QuoteBlock>
+          </article>
+        </div>
+      </main>
+    </div>
+  )
+}

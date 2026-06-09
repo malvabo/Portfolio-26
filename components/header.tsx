@@ -50,6 +50,12 @@ export function Header() {
               Speaking
             </Link>
             <Link
+              href="/human"
+              className="text-[15px] font-sans text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Human
+            </Link>
+            <Link
               href="/side-projects"
               className="inline-flex items-center gap-1.5 text-[15px] font-sans text-muted-foreground hover:text-foreground transition-colors"
             >
