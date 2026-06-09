@@ -79,7 +79,7 @@ export default function HumanPage() {
 
             <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
               <p>
-                I am motivated by personal challenges. I have high agency, and I enjoyed building my multiple ventures (my last startup was acquired). When leading people, I respect human potential and giving space to disrupt instead of spending energy on fitting the existing mold. I learned this on practice.
+                I am motivated by personal challenges. I have high agency, and I enjoyed building my ventures (my last project was acquired). When leading people, I respect human potential and giving space to disrupt instead of spending energy on fitting the existing mold. I learned this on practice.
               </p>
             </div>
 
