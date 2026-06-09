@@ -27,9 +27,7 @@ export default function HumanPage() {
             className="hidden lg:block w-56 px-8 lg:px-12 fixed top-24 left-8 lg:left-[max(0px,calc((100vw-80rem)/2))]"
             aria-label="Human page navigation"
           >
-            <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground">
-              Me as a human
-            </p>
+            <div className="human-orb" aria-label="Me as a human" role="img" />
           </aside>
 
           <article className="flex-1 px-8 lg:px-12">
