@@ -146,34 +146,59 @@
   width: 152px;
   height: 152px;
   border-radius: 9999px;
-  background: #18379d;
-  box-shadow: 0 0 58px rgba(64, 170, 255, 0.22);
+  background: #1e3a8a;
+  box-shadow: 0 0 58px rgba(109, 40, 217, 0.24);
   overflow: hidden;
   isolation: isolate;
 }
 
-.human-orb::before {
+.human-orb::before,
+.human-orb::after {
   content: "";
   position: absolute;
-  inset: -54%;
+  inset: -62%;
   border-radius: inherit;
+}
+
+.human-orb::before {
   background:
-    linear-gradient(112deg, #0d1a69 0%, #1f55ff 18%, #58d7ff 34%, #1235b7 52%, #7df2ff 68%, #2630a5 84%, #07134f 100%),
-    linear-gradient(38deg, rgba(178, 245, 255, 0.7), rgba(49, 124, 255, 0.18), rgba(8, 18, 80, 0.72));
-  background-size: 180% 180%, 220% 220%;
-  filter: blur(18px) saturate(1.28);
+    linear-gradient(115deg, #1e3a8a 0%, #3b1882 16%, #6d28d9 32%, #2548b0 49%, #7c3aed 66%, #1e3a8a 84%, #3b1882 100%),
+    linear-gradient(42deg, rgba(109, 40, 217, 0.82), rgba(37, 72, 176, 0.36), rgba(30, 58, 138, 0.88));
+  background-size: 132% 132%, 176% 176%;
+  filter: blur(13px) saturate(1.32);
   opacity: 0.98;
-  transform: translate3d(-10%, -8%, 0) rotate(0deg) scale(1.05);
-  animation: human-orb-flow 5.5s ease-in-out infinite alternate;
+  transform: translate3d(-26%, -18%, 0) rotate(-28deg) scale(1.08);
+  animation: human-orb-flow 2.4s ease-in-out infinite alternate;
+}
+
+.human-orb::after {
+  background: linear-gradient(73deg, rgba(30, 58, 138, 0.92) 0%, rgba(74, 34, 170, 0.86) 26%, rgba(109, 40, 217, 0.92) 48%, rgba(37, 72, 176, 0.82) 70%, rgba(59, 24, 130, 0.94) 100%);
+  background-size: 148% 148%;
+  filter: blur(20px) saturate(1.42);
+  opacity: 0.86;
+  mix-blend-mode: soft-light;
+  transform: translate3d(20%, 18%, 0) rotate(18deg) scale(1.16);
+  animation: human-orb-sweep 2s ease-in-out infinite alternate-reverse;
 }
 
 @keyframes human-orb-flow {
   from {
-    background-position: 0% 45%, 100% 50%;
-    transform: translate3d(-16%, -10%, 0) rotate(-18deg) scale(1.08);
+    background-position: 0% 24%, 100% 34%;
+    transform: translate3d(-36%, -24%, 0) rotate(-34deg) scale(1.1);
   }
   to {
-    background-position: 100% 55%, 0% 50%;
-    transform: translate3d(12%, 10%, 0) rotate(24deg) scale(1.18);
+    background-position: 100% 76%, 0% 68%;
+    transform: translate3d(28%, 24%, 0) rotate(40deg) scale(1.24);
+  }
+}
+
+@keyframes human-orb-sweep {
+  from {
+    background-position: 100% 22%;
+    transform: translate3d(32%, 24%, 0) rotate(22deg) scale(1.14);
+  }
+  to {
+    background-position: 0% 78%;
+    transform: translate3d(-30%, -26%, 0) rotate(-28deg) scale(1.28);
   }
 }
