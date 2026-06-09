@@ -70,7 +70,7 @@ function compileShader(gl: WebGLRenderingContext, type: number, source: string) 
   return shader
 }
 
-export function HumanShaderOrb({ size = 190 }: { size?: number }) {
+export function HumanShaderOrb({ size = 95 }: { size?: number }) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const rafRef = useRef<number>(0)
 
@@ -118,15 +118,15 @@ export function HumanShaderOrb({ size = 190 }: { size?: number }) {
     const startedAt = performance.now()
 
     function render(now: number) {
-      const t = (now - startedAt) / 1000
+      const t = ((now - startedAt) / 1000) * 0.35
 
       gl.clearColor(0, 0, 0, 0)
       gl.clear(gl.COLOR_BUFFER_BIT)
       gl.useProgram(program)
       gl.uniform1f(time, t)
       gl.uniform2f(resolution, canvasSize, canvasSize)
-      gl.uniform3fv(color1, new Float32Array([0.64, 0.22, 0.95]))
-      gl.uniform3fv(color2, new Float32Array([0.12, 0.05, 0.34]))
+      gl.uniform3fv(color1, new Float32Array([0.38, 0.14, 0.98]))
+      gl.uniform3fv(color2, new Float32Array([0.08, 0.04, 0.32]))
       gl.bindBuffer(gl.ARRAY_BUFFER, buffer)
       gl.enableVertexAttribArray(position)
       gl.vertexAttribPointer(position, 2, gl.FLOAT, false, 0, 0)
