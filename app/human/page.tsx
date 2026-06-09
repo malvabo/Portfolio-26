@@ -56,7 +56,7 @@ export default function HumanPage() {
               </p>
 
               <p>
-                My close people told me that I have the highest bias for action among everybody they know. Probably, they are right.
+                My close people told me that I have the highest bias for action among everybody they knew. Probably, they are right.
               </p>
 
               <p>
