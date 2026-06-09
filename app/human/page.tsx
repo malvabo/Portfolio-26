@@ -58,7 +58,7 @@ export default function HumanPage() {
               </p>
             </div>
 
-            <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+            <div className="mt-10 space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
               <p>
                 One thing I always want to know is:
                 <br />
