@@ -79,7 +79,7 @@ export default function HumanPage() {
               </p>
             </div>
 
-            <div className="mt-10 space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+            <div className="mt-5 space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
               <p>
                 I sometimes sit in front of my favorite mummy in the British Museum and lose myself in materials on why it&rsquo;s decorated this way. The effort and care people used to pour into seemingly simple artifacts back then is endlessly inspiring.
               </p>
