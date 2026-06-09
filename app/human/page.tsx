@@ -60,7 +60,15 @@ export default function HumanPage() {
               </p>
             </div>
 
-            <QuoteBlock attribution="Verse 2.47">
+            <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+              <p>
+                One thing I always want to know is:
+                <br />
+                What can I do better?
+              </p>
+            </div>
+
+            <QuoteBlock attribution="Bhagavad Gita, Verse 2.47">
               <p>
                 &ldquo;You have a right to perform your prescribed duty, but you are not entitled to the fruits of action. Never consider yourself the cause of the results of your activities, and never be attached to not doing your duty.&rdquo;
               </p>
@@ -73,12 +81,6 @@ export default function HumanPage() {
             </div>
 
             <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
-              <p>
-                One thing I always want to know is:
-                <br />
-                What can I do better?
-              </p>
-
               <p>
                 I sometimes sit in front of my favorite mummy in British museum and lose myself in materials on why it&rsquo;s decorated this way. Effort and care people used to pour into seemingly simple artifacts back then is endlessly inspiring.
               </p>
