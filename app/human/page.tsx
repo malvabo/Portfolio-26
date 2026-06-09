@@ -46,7 +46,7 @@ export default function HumanPage() {
               </p>
 
               <p>
-                The first time I left the country, I had a budget of one dollar a day, which was not sustainable. I learned to be frugal and make friends everywhere.
+                The first time I left the country, I had a budget of one dollar a day, which was not sustainable in EU. I learned to be frugal and make friends everywhere.
               </p>
 
               <p>
