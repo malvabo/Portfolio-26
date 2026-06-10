@@ -127,7 +127,7 @@ vibe-coding <svg className="inline-block w-[0.55em] h-[0.55em] mb-[0.15em]" view
               { label: "Amazon: new document system", href: "/projects/amazon" },
               { label: "PAA: AI clinical workflows", href: "#paa" },
               { label: "Squirll: 0 to 1 design", href: "#squirll" },
-              { label: "Tempstars: redesign of the marketplace", href: "#tempstars" },
+              // { label: "Tempstars: redesign of the marketplace", href: "#tempstars" },
               { label: "Articles", href: "#articles" },
             ].map(({ label, href }) => (
               <a
