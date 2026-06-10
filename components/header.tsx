@@ -32,28 +32,28 @@ export function Header() {
         <div className="flex items-center justify-between h-16">
           <Link
             href="/"
-            className="flex items-center gap-2 text-lg font-sans font-medium tracking-tight text-foreground hover:text-primary transition-colors"
+            className="flex items-center gap-2 text-base font-sans font-medium tracking-tight text-foreground hover:text-primary transition-colors"
           >
-            <Image src="/favicon.png" alt="" width={20} height={20} className="rounded-sm" />
+            <Image src="/favicon.png" alt="" width={18} height={18} className="rounded-sm" />
             Mary Borysova
           </Link>
 
           <nav className="hidden md:flex items-center gap-10">
             <Link
               href="/#work"
-              className="text-[17px] font-sans text-muted-foreground hover:text-foreground transition-colors"
+              className="text-[15px] font-sans text-muted-foreground hover:text-foreground transition-colors"
             >
               Work
             </Link>
             <Link
               href="/speaking"
-              className="text-[17px] font-sans text-muted-foreground hover:text-foreground transition-colors"
+              className="text-[15px] font-sans text-muted-foreground hover:text-foreground transition-colors"
             >
               Speaking
             </Link>
             <Link
               href="/side-projects"
-              className="inline-flex items-center gap-1.5 text-[17px] font-sans text-muted-foreground hover:text-foreground transition-colors"
+              className="inline-flex items-center gap-1.5 text-[15px] font-sans text-muted-foreground hover:text-foreground transition-colors"
             >
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <defs>
@@ -70,13 +70,13 @@ export function Header() {
               href="https://medium.com/@maria_borysova"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[17px] font-sans text-muted-foreground hover:text-foreground transition-colors"
+              className="text-[15px] font-sans text-muted-foreground hover:text-foreground transition-colors"
             >
               Writing
             </a>
             <Link
               href="/human"
-              className="text-[17px] font-sans text-muted-foreground hover:text-foreground transition-colors"
+              className="text-[15px] font-sans text-muted-foreground hover:text-foreground transition-colors"
             >
               About me
             </Link>
