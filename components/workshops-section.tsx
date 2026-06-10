@@ -125,8 +125,8 @@ export function WorkshopsSection() {
           </div>
         </div>
 
-        {/* Awards */}
-        <div className="mt-12">
+        {/* Awards — hidden for now; surfaced in the Squirll section results instead */}
+        <div className="mt-12 hidden">
           <h2 className="font-serif text-2xl md:text-3xl leading-[1.1] tracking-tight text-foreground mb-10">Awards</h2>
           <div className="flex items-stretch gap-6 max-w-[750px]">
             <div className="shrink-0 w-[72px] relative">
