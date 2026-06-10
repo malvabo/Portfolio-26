@@ -102,7 +102,7 @@ export default function SpeakingPage() {
             Speaking
           </h1>
           <p className="text-base leading-relaxed text-muted-foreground max-w-[640px]">
-            Conference talks, workshops, interviews and podcasts on AI products, healthcare and behavioral design.
+            Talks, interviews and podcasts on AI products and behavioral design.
           </p>
         </div>
 
