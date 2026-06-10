@@ -41,6 +41,12 @@ export function OrbitDots({ size = 16 }: { size?: number }) {
       const t = performance.now() / 1000
       ctx.clearRect(0, 0, size, size)
 
+      // Dark background circle
+      ctx.beginPath()
+      ctx.arc(cx, cy, size / 2, 0, Math.PI * 2)
+      ctx.fillStyle = "#1e3a5f"
+      ctx.fill()
+
       for (const cfg of DOT_CONFIGS) {
         const angle = t * cfg.speed + cfg.phase
         const x = cx + cfg.radius * Math.cos(angle)
@@ -51,7 +57,7 @@ export function OrbitDots({ size = 16 }: { size?: number }) {
 
         ctx.beginPath()
         ctx.arc(x, y, r, 0, Math.PI * 2)
-        ctx.fillStyle = `rgba(30, 58, 95, ${alpha})`
+        ctx.fillStyle = `rgba(255, 255, 255, ${alpha})`
         ctx.fill()
       }
 
