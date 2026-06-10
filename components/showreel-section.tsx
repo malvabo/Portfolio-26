@@ -78,7 +78,7 @@ export function ShowreelSection() {
           How I think about design
         </p>
 
-        <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-md border border-border/40 bg-[#f1f1f1]">
+        <div className="relative w-full aspect-video overflow-hidden bg-[#f1f1f1]">
           <video
             ref={videoRef}
             muted
