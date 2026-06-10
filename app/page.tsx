@@ -1,5 +1,6 @@
 import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
+import { ShowreelSection } from "@/components/showreel-section"
 import { AnimatedSection } from "@/components/animated-section"
 import { WorkSection } from "@/components/work-section"
 import { SquirllSection } from "@/components/squirll-section"
@@ -19,6 +20,7 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <ShowreelSection />
         <AnimatedSection delayOnLoad={0}>
           <TestimonialsSection />
         </AnimatedSection>
