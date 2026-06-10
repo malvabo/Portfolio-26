@@ -117,7 +117,7 @@ export default function SpeakingPage() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-4">
-              <p className="uppercase text-[11px] text-white/90 font-mono tracking-wider">How to web conference — Main stage</p>
+              <p className="uppercase text-[11px] text-white/90 font-mono tracking-wider">EU</p>
             </div>
           </div>
           <div className="relative aspect-[16/10] lg:aspect-[4/5] rounded-xl overflow-hidden bg-[#f1f1f1] border border-border/60 shadow-sm">
@@ -130,7 +130,7 @@ export default function SpeakingPage() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-4">
-              <p className="uppercase text-[11px] text-white/90 font-mono tracking-wider">Main stage</p>
+              <p className="uppercase text-[11px] text-white/90 font-mono tracking-wider">EU</p>
             </div>
           </div>
           <div className="relative aspect-[16/10] lg:aspect-[4/5] rounded-xl overflow-hidden bg-[#f1f1f1] border border-border/60 shadow-sm">
@@ -144,7 +144,7 @@ export default function SpeakingPage() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-4">
-              <p className="uppercase text-[11px] text-white/90 font-mono tracking-wider">DDX conference</p>
+              <p className="uppercase text-[11px] text-white/90 font-mono tracking-wider">UAE</p>
             </div>
           </div>
         </div>
