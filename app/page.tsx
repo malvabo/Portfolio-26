@@ -12,7 +12,6 @@ import { ArticlesSection } from "@/components/articles-section"
 import { TestimonialsSection } from "@/components/testimonials-section"
 import { AmazonSection } from "@/components/amazon-section"
 import { VisualConceptsSection } from "@/components/visual-concepts-section"
-import { WorkshopsSection } from "@/components/workshops-section"
 import { Footer } from "@/components/footer"
 
 export default function Home() {
@@ -53,9 +52,6 @@ export default function Home() {
         </AnimatedSection>
         <AnimatedSection>
           <VisualConceptsSection />
-        </AnimatedSection>
-        <AnimatedSection>
-          <WorkshopsSection />
         </AnimatedSection>
       </main>
       <Footer />
