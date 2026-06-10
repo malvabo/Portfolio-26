@@ -45,9 +45,9 @@ export default function Home() {
         <AnimatedSection>
           <SquirllSection />
         </AnimatedSection>
-        <AnimatedSection>
+        {/* <AnimatedSection>
           <TempStarsSection />
-        </AnimatedSection>
+        </AnimatedSection> */}
         <AnimatedSection>
           <ArticlesSection />
         </AnimatedSection>

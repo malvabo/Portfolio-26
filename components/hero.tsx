@@ -122,23 +122,7 @@ vibe-coding <svg className="inline-block w-[0.55em] h-[0.55em] mb-[0.15em]" view
             </p>
           </div>
 
-          <div className="hero-reveal hero-reveal-3 w-full max-w-[700px] mt-[20px] relative z-30 flex flex-col gap-y-1">
-            {[
-              { label: "Amazon: new document system", href: "/projects/amazon" },
-              { label: "PAA: AI clinical workflows", href: "#paa" },
-              { label: "Squirll: 0 to 1 design", href: "#squirll" },
-              { label: "Tempstars: redesign of the marketplace", href: "#tempstars" },
-              { label: "Articles", href: "#articles" },
-            ].map(({ label, href }) => (
-              <a
-                key={label}
-                href={href}
-                className="font-sans text-lg font-normal text-muted-foreground hover:text-foreground transition-colors no-underline"
-              >
-                {label} ↓
-              </a>
-            ))}
-          </div>
+          {/* nav links hidden */}
 
           <div className="hero-reveal hero-reveal-4 flex flex-col gap-3 lg:flex-row lg:gap-6 lg:items-stretch w-full mt-12">
             <div className="w-full lg:flex-1 min-w-0 relative aspect-[4/3] lg:aspect-[16/11] rounded-xl overflow-hidden bg-[#f1f1f1] border border-border/60 shadow-sm order-2 lg:order-1">
