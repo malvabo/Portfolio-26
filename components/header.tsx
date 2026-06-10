@@ -2,7 +2,6 @@
 import Link from "next/link"
 import Image from "next/image"
 import { useState, useEffect } from "react"
-import { OrbitDots } from "@/components/orbit-dots"
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -56,7 +55,6 @@ export function Header() {
               href="/side-projects"
               className="inline-flex items-center gap-1.5 text-[15px] font-sans text-muted-foreground hover:text-foreground transition-colors"
             >
-              <OrbitDots size={16} />
               AI experiments
             </Link>
             <a
