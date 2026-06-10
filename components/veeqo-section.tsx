@@ -3,8 +3,8 @@ import Link from "next/link"
 
 const VEEQO_IMAGES = [
   { src: "/images/vq1.png", alt: "Veeqo document library redesign" },
-  { src: "/images/vq2.png", alt: "HTML editor with AI assist and live preview" },
-  { src: "/images/vq3.png", alt: "Failure states across generation and batch errors" },
+  { src: "/images/vq11.png", alt: "HTML editor with AI assist and live preview" },
+  { src: "/images/vq_doc.png", alt: "Document preview" },
 ]
 
 export function VeeqoSection() {
