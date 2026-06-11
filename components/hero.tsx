@@ -46,7 +46,12 @@ export function Hero() {
         }
       `}</style>
       <div className="flex flex-col">
-          <h1 className="hero-reveal hero-reveal-1 font-sans text-lg md:text-xl font-normal leading-[1.4] tracking-normal text-muted-foreground w-full max-w-7xl relative z-30 mt-[32px] mb-[8px]">
+          <div className="hero-reveal hero-reveal-1 mt-[32px] mb-[12px]">
+            <div className="relative w-[72px] h-[72px] rounded-full overflow-hidden border border-border/40">
+              <Image src="/images/speaking-2.jpg" alt="Mary Borysova speaking on stage" fill className="object-cover object-[38%_12%] scale-150" sizes="72px" />
+            </div>
+          </div>
+          <h1 className="hero-reveal hero-reveal-1 font-sans text-lg md:text-xl font-normal leading-[1.4] tracking-normal text-muted-foreground w-full max-w-7xl relative z-30 mb-[8px]">
             Mary, Product Designer at Amazon
           </h1>
           <div className="w-full max-w-[700px] relative z-40">
