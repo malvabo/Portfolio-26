@@ -40,6 +40,17 @@ export function SquirllSection() {
               <div className="text-xl font-medium text-foreground mb-0.5">16 weeks</div>
               <div className="text-sm text-muted-foreground opacity-80">MVP launch timeline</div>
             </div>
+            <div>
+              <a
+                href="https://indigoaward.com/winners/12153"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xl font-medium text-foreground mb-0.5 hover:underline block"
+              >
+                3× Indigo Awards
+              </a>
+              <div className="text-sm text-muted-foreground opacity-80">1 Gold &amp; 2 Silver — Application, Branding, UX &amp; Navigation</div>
+            </div>
           </div>
         </div>
 

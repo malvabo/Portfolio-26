@@ -1,9 +1,10 @@
 import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
+import { HeroPhotos } from "@/components/hero-photos"
+import { ShowreelSection } from "@/components/showreel-section"
 import { AnimatedSection } from "@/components/animated-section"
 import { WorkSection } from "@/components/work-section"
 import { SquirllSection } from "@/components/squirll-section"
-import { TempStarsSection } from "@/components/tempstars-section"
 // import { PandaDocSection } from "@/components/pandadoc-section"
 import { PAASection } from "@/components/paa-section"
 import { VeeqoSection } from "@/components/veeqo-section"
@@ -12,7 +13,6 @@ import { ArticlesSection } from "@/components/articles-section"
 import { TestimonialsSection } from "@/components/testimonials-section"
 import { AmazonSection } from "@/components/amazon-section"
 import { VisualConceptsSection } from "@/components/visual-concepts-section"
-import { WorkshopsSection } from "@/components/workshops-section"
 import { Footer } from "@/components/footer"
 
 export default function Home() {
@@ -21,6 +21,8 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <HeroPhotos />
+        {/* <ShowreelSection /> */}
         <AnimatedSection delayOnLoad={0}>
           <TestimonialsSection />
         </AnimatedSection>
@@ -46,16 +48,10 @@ export default function Home() {
           <SquirllSection />
         </AnimatedSection>
         <AnimatedSection>
-          <TempStarsSection />
-        </AnimatedSection>
-        <AnimatedSection>
           <ArticlesSection />
         </AnimatedSection>
         <AnimatedSection>
           <VisualConceptsSection />
-        </AnimatedSection>
-        <AnimatedSection>
-          <WorkshopsSection />
         </AnimatedSection>
       </main>
       <Footer />

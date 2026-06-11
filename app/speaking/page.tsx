@@ -1,6 +1,7 @@
 import Image from "next/image"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { WorkshopsSection } from "@/components/workshops-section"
 
 export default function SpeakingPage() {
   const talks = [
@@ -95,15 +96,67 @@ export default function SpeakingPage() {
   return (
     <div className="min-h-screen">
       <Header />
-      <main className="max-w-7xl mx-auto px-8 lg:px-12 pt-24 pb-24">
-        <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-12 lg:items-start">
+      <main className="max-w-7xl mx-auto px-8 lg:px-12 pt-24 pb-4">
+        <div className="mb-10">
+          <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl tracking-[-0.02em] leading-[1.2] mb-3">
+            Speaking
+          </h1>
+          <p className="text-base leading-relaxed text-muted-foreground max-w-[640px]">
+            Talks, interviews and podcasts on AI products and behavioral design.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 mb-14">
+          <div className="col-span-2 lg:col-span-1 relative aspect-[16/10] lg:aspect-[4/5] rounded-xl overflow-hidden bg-[#f1f1f1] border border-border/60 shadow-sm">
+            <Image
+              src="/images/speaking-2.jpg"
+              alt="How to web conference"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 33vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 p-4">
+              <p className="uppercase text-[11px] text-white/90 font-mono tracking-wider">EU</p>
+            </div>
+          </div>
+          <div className="relative aspect-[16/10] lg:aspect-[4/5] rounded-xl overflow-hidden bg-[#f1f1f1] border border-border/60 shadow-sm">
+            <Image
+              src="/images/speaking-1.jpg"
+              alt="Main stage"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 50vw, 33vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 p-4">
+              <p className="uppercase text-[11px] text-white/90 font-mono tracking-wider">EU</p>
+            </div>
+          </div>
+          <div className="relative aspect-[16/10] lg:aspect-[4/5] rounded-xl overflow-hidden bg-[#f1f1f1] border border-border/60 shadow-sm">
+            <Image
+              src="/images/speaking-event-3.png"
+              alt="Speaking event"
+              fill
+              className="object-cover"
+              style={{ objectPosition: "center center" }}
+              sizes="(max-width: 1024px) 50vw, 33vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 p-4">
+              <p className="uppercase text-[11px] text-white/90 font-mono tracking-wider">UAE</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-16 lg:items-start">
           <div className="min-w-0">
             <div className="space-y-10">
               <section>
-                <div className="mb-8">
-                  <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl tracking-[-0.02em] leading-[1.2]">
-                    My speaking engagements
-                  </h1>
+                <div className="mb-6">
+                  <h2 className="font-serif text-2xl md:text-3xl leading-[1.1] tracking-tight text-foreground">
+                    Talks
+                  </h2>
                 </div>
                 <div className="space-y-3">
                 <div className="py-3">
@@ -157,8 +210,12 @@ export default function SpeakingPage() {
                 <p className="text-muted-foreground italic pt-2">… and more to be added soon!</p>
                 </div>
               </section>
+            </div>
+          </div>
 
-              <section className="mt-16">
+          <div className="mt-12 lg:mt-0 min-w-0">
+            <div className="space-y-10">
+              <section>
                 <div className="mb-6">
                 <h2 className="font-serif text-2xl md:text-3xl leading-[1.1] tracking-tight text-foreground">
                   Interviews
@@ -228,52 +285,9 @@ export default function SpeakingPage() {
               </section>
             </div>
           </div>
-
-          <div className="mt-12 lg:mt-0 grid grid-cols-2 grid-rows-[1fr_1fr] gap-3 min-h-[360px] lg:min-h-[420px]">
-            <div className="row-span-2 relative rounded-xl overflow-hidden bg-[#f1f1f1] border border-border/60 shadow-sm min-h-[280px] lg:min-h-0">
-              <Image
-                src="/images/speaking-2.jpg"
-                alt="How to web conference"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 50vw, 400px"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-4">
-                <p className="uppercase text-[11px] text-white/80 font-mono tracking-wider">How to web conference</p>
-                <p className="uppercase text-[11px] text-white/90 font-mono tracking-wider mt-0.5">Main stage</p>
-              </div>
-            </div>
-            <div className="relative rounded-xl overflow-hidden bg-[#f1f1f1] border border-border/60 shadow-sm min-h-[160px] lg:min-h-0">
-              <Image
-                src="/images/speaking-1.jpg"
-                alt="Main stage"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 50vw, 200px"
-              />
-              <div className="absolute inset-0 bg-black/20" />
-              <div className="absolute bottom-0 left-0 right-0 p-3">
-                <p className="uppercase text-[11px] text-white/90 font-mono tracking-wider">Main stage</p>
-              </div>
-            </div>
-            <div className="relative rounded-xl overflow-hidden bg-[#f1f1f1] border border-border/60 shadow-sm min-h-[160px] lg:min-h-0">
-              <Image
-                src="/images/speaking-event-3.png"
-                alt="Speaking event"
-                fill
-                className="object-cover"
-                style={{ objectPosition: "center center" }}
-                sizes="(max-width: 1024px) 50vw, 200px"
-              />
-              <div className="absolute inset-0 bg-black/20" />
-              <div className="absolute bottom-0 left-0 right-0 p-3">
-                <p className="uppercase text-[11px] text-white/90 font-mono tracking-wider">Speaking event</p>
-              </div>
-            </div>
-          </div>
         </div>
       </main>
+      <WorkshopsSection />
       <Footer />
     </div>
   )
