@@ -22,7 +22,7 @@ export default function Home() {
       <main>
         <Hero />
         <HeroPhotos />
-        <ShowreelSection />
+        {/* <ShowreelSection /> */}
         <AnimatedSection delayOnLoad={0}>
           <TestimonialsSection />
         </AnimatedSection>
