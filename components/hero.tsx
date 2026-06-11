@@ -48,7 +48,7 @@ export function Hero() {
       <div className="flex flex-col">
           <div className="hero-reveal hero-reveal-1 mt-[32px] mb-[12px]">
             <div className="relative w-[72px] h-[72px] rounded-full overflow-hidden border border-border/40">
-              <Image src="/images/speaking-1.jpg" alt="Mary Borysova speaking on stage" fill className="object-cover object-[center_15%] scale-125" sizes="72px" />
+              <Image src="/images/speaking-1.jpg" alt="Mary Borysova speaking on stage" fill className="object-cover object-[48%_8%] scale-[1.8]" sizes="72px" />
             </div>
           </div>
           <h1 className="hero-reveal hero-reveal-1 font-sans text-lg md:text-xl font-normal leading-[1.4] tracking-normal text-muted-foreground w-full max-w-7xl relative z-30 mb-[8px]">
