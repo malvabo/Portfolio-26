@@ -84,7 +84,7 @@ export default function SideProjects() {
 
         <div
           ref={reelSectionRef}
-          className="relative w-full aspect-video overflow-hidden rounded-2xl border border-border/20 bg-[#F5F3F0] shadow-[0_1px_4px_rgba(0,0,0,0.06)] max-w-[750px] mb-6"
+          className="relative w-full aspect-video overflow-hidden rounded-2xl border border-border/20 bg-[#F5F3F0] shadow-[0_1px_4px_rgba(0,0,0,0.06)] mb-10"
         >
           <video
             ref={reelVideoRef}
