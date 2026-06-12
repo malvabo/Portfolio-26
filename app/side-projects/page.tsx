@@ -143,7 +143,7 @@ export default function SideProjects() {
         </div>
 
         <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl tracking-[-0.02em] leading-[1.2] mb-8 max-w-[750px]">
-          Experiments
+          AI experiments
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-[750px]">
