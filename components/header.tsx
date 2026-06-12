@@ -55,7 +55,7 @@ export function Header() {
               href="/side-projects"
               className="inline-flex items-center gap-1.5 text-[15px] font-sans text-muted-foreground hover:text-foreground transition-colors"
             >
-              Design and AI
+              AI design
             </Link>
             <a
               href="https://medium.com/@maria_borysova"
