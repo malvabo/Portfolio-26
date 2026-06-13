@@ -46,7 +46,7 @@ export default function SideProjects() {
             <button
               key={i}
               onClick={() => setActive(i)}
-              className="text-left group rounded-2xl overflow-hidden border border-border/20 bg-background hover:border-border/40 shadow-[0_1px_4px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)] transition-all duration-300 cursor-pointer focus:outline-none"
+              className="flex flex-col text-left group rounded-2xl overflow-hidden border border-border/20 bg-background hover:border-border/40 shadow-[0_1px_4px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)] transition-all duration-300 cursor-pointer focus:outline-none"
             >
               <div className="relative aspect-video bg-[#F5F3F0] overflow-hidden">
                 {p.video ? (
