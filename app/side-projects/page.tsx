@@ -5,7 +5,18 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { X } from "lucide-react"
 
-const projects = [
+type Project = {
+  video: string
+  title: string
+  description: string
+}
+
+const projects: Project[] = [
+  {
+    video: "/reel.mp4",
+    title: "Showreel of my products",
+    description: "A showreel of my products, both coded using AI and not, brought to life using Hyper Frames.",
+  },
   {
     video: "/images/poetry1.mp4",
     title: "Poetry & Media Generation",
@@ -15,11 +26,6 @@ const projects = [
     video: "/images/script2.mp4",
     title: "Talk Script Analysis Tool",
     description: "A solution that allows to analyze the content of the talk, spot the gaps, localize it for different cultures and find opportunities how to make the story more engaging.",
-  },
-  {
-    video: "/reel.mp4",
-    title: "Vibe Coded Products",
-    description: "An AI-generated video showcasing some of my vibe coded products.",
   },
 ]
 
@@ -40,9 +46,9 @@ export default function SideProjects() {
             <button
               key={i}
               onClick={() => setActive(i)}
-              className="text-left group rounded-2xl overflow-hidden border border-border/20 bg-background hover:border-border/40 shadow-[0_1px_4px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)] transition-all duration-300 cursor-pointer focus:outline-none"
+              className="flex flex-col text-left group rounded-2xl overflow-hidden border border-border/20 bg-background hover:border-border/40 shadow-[0_1px_4px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)] transition-all duration-300 cursor-pointer focus:outline-none"
             >
-              <div className="aspect-video bg-[#F5F3F0] overflow-hidden">
+              <div className="relative aspect-video bg-[#F5F3F0] overflow-hidden">
                 {p.video ? (
                   <video
                     src={p.video}
@@ -50,10 +56,10 @@ export default function SideProjects() {
                     loop
                     muted
                     playsInline
-                    className="w-full h-full object-cover"
+                    className="absolute inset-0 w-full h-full object-cover"
                   />
                 ) : (
-                  <div className="w-full h-full" />
+                  <div className="absolute inset-0" />
                 )}
               </div>
               <div className="p-4">
@@ -87,7 +93,7 @@ export default function SideProjects() {
               </button>
             </div>
             <div className="px-6 pb-6 flex flex-col gap-4">
-              <div className="rounded-xl overflow-hidden bg-[#F5F3F0] aspect-video">
+              <div className="relative rounded-xl overflow-hidden bg-[#F5F3F0] aspect-video">
                 {project.video ? (
                   <video
                     key={project.video}
@@ -97,10 +103,10 @@ export default function SideProjects() {
                     muted
                     playsInline
                     controls
-                    className="w-full h-full object-cover"
+                    className="absolute inset-0 w-full h-full object-cover"
                   />
                 ) : (
-                  <div className="w-full h-full" />
+                  <div className="absolute inset-0" />
                 )}
               </div>
               <p className="text-[15px] text-muted-foreground leading-relaxed">{project.description}</p>
