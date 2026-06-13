@@ -5,11 +5,21 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { X } from "lucide-react"
 
-const projects = [
+type Project = {
+  video: string
+  title: string
+  description: string
+  cardBgClassName?: string
+  cardVideoClassName?: string
+}
+
+const projects: Project[] = [
   {
     video: "/reel.mp4",
     title: "Showreel of my products",
     description: "A showreel of my products, brought to life using Hyper Frames.",
+    cardBgClassName: "bg-black",
+    cardVideoClassName: "scale-[1.25]",
   },
   {
     video: "/images/poetry1.mp4",
@@ -42,7 +52,7 @@ export default function SideProjects() {
               onClick={() => setActive(i)}
               className="text-left group rounded-2xl overflow-hidden border border-border/20 bg-background hover:border-border/40 shadow-[0_1px_4px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)] transition-all duration-300 cursor-pointer focus:outline-none"
             >
-              <div className="aspect-video bg-[#F5F3F0] overflow-hidden">
+              <div className={`aspect-video overflow-hidden ${p.cardBgClassName ?? "bg-[#F5F3F0]"}`}>
                 {p.video ? (
                   <video
                     src={p.video}
@@ -50,7 +60,7 @@ export default function SideProjects() {
                     loop
                     muted
                     playsInline
-                    className="w-full h-full object-cover"
+                    className={`w-full h-full object-cover ${p.cardVideoClassName ?? ""}`}
                   />
                 ) : (
                   <div className="w-full h-full" />
