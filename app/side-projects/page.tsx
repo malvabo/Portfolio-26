@@ -31,17 +31,11 @@ export default function SideProjects() {
     <div className="min-h-screen bg-background">
       <Header />
       <main className="max-w-7xl mx-auto px-8 lg:px-12 pt-24 pb-24">
-        <div className="mb-8 max-w-[750px]">
-          <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl tracking-[-0.02em] leading-[1.2]">
-            My philosophy on design
-          </h1>
-        </div>
-
         <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl tracking-[-0.02em] leading-[1.2] mb-8 max-w-[750px]">
           AI experiments
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-[750px]">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {projects.map((p, i) => (
             <button
               key={i}
