@@ -8,8 +8,8 @@ import { X } from "lucide-react"
 const projects = [
   {
     video: "/reel.mp4",
-    title: "Showreel of my AI-coded products",
-    description: "A showreel of my AI-coded products, brought to life using Hyper Frames.",
+    title: "Showreel of my products",
+    description: "A showreel of my products, brought to life using Hyper Frames.",
   },
   {
     video: "/images/poetry1.mp4",
