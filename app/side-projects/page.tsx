@@ -7,6 +7,11 @@ import { X } from "lucide-react"
 
 const projects = [
   {
+    video: "/reel.mp4",
+    title: "Showreel of my AI-coded products",
+    description: "A showreel of my AI-coded products, brought to life using Hyper Frames.",
+  },
+  {
     video: "/images/poetry1.mp4",
     title: "Poetry & Media Generation",
     description: "A tool that makes production of visual social media content in poetry niche easily. Just choose the background, styling for the text, adjust the content on the page and download the asset.",
@@ -15,11 +20,6 @@ const projects = [
     video: "/images/script2.mp4",
     title: "Talk Script Analysis Tool",
     description: "A solution that allows to analyze the content of the talk, spot the gaps, localize it for different cultures and find opportunities how to make the story more engaging.",
-  },
-  {
-    video: "/reel.mp4",
-    title: "Vibe Coded Products",
-    description: "An AI-generated video showcasing some of my vibe coded products.",
   },
 ]
 
