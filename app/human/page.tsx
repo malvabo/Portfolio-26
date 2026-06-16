@@ -98,7 +98,7 @@ export default function HumanPage() {
             </div>
             <div className="mt-5 space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
               <p>
-                I am a marathon runner, soon-to-be ultra-marathon runner. 10+ years of regular running and pushing myself to do better taught me to stay resilient and patient, and hopeful, and most of all - to enjoy the struggle. But if you enjoy it, maybe it&apos;s not a struggle, really?
+                I am a marathon runner, soon-to-be ultra-marathon runner. 10+ years of regular running and pushing myself to do better taught me to adapt and stay patient, and hopeful, and most of all - to enjoy the struggle. But if you enjoy it, maybe it&apos;s not a struggle, really?
               </p>
             </div>
           </article>
