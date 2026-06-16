@@ -63,7 +63,7 @@ export default function HumanPage() {
 
             <div className="mt-5 space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
               <p>
-                One thing I always want to know is: What can I do better?
+                One thing I always want to know is: what can I do better?
               </p>
             </div>
 
