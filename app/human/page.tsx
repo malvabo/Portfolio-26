@@ -73,6 +73,10 @@ export default function HumanPage() {
               <p>
                 I am motivated by personal challenges. I enjoyed building my ventures since 17, my last project was acquired. When leading people, I respect human potential and giving space to disrupt instead of spending energy on fitting the existing mold. I learned this by working with tiny 0-&gt;1 companies, unicorns and huge corporations like Amazon.
               </p>
+
+              <p>
+                My ventures change to our ventures.
+              </p>
             </div>
 
             <div className="mt-5 space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
