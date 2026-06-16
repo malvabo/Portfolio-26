@@ -49,7 +49,11 @@ export default function HumanPage() {
               </p>
 
               <p>
-                Fast forward, I traveled to around 100 countries solo and I learned a bit about myself and the world. Waking up in a small village in the mountains in Oman during Ramadan to witness the morning prayers and grow appreciation for devotion and persistence. Hiking alone in Canada and singing loudly to scare off the bears and camping in Australia with snake anti-venom to face my fears of nature and build self-reliance. I learned that control is an illusion; I ended up staying safe and sound in dangerous places in Africa and the opposite in some of the safest cities in the EU.
+                Fast forward, I traveled to around 100 countries predominantly solo and I learned a bit about myself and the world. Waking up in a small village in the mountains in Oman during Ramadan to witness the morning prayers and grow appreciation for loyalty and persistence. Hiking alone in Canada and singing loudly to scare off the bears and camping in Australia with snake anti-venom to face my fears and build resilience. I learned that control is an illusion; I ended up staying safe and sound in dangerous places in Africa and the opposite in some of the safest cities in the EU.
+              </p>
+
+              <p>
+                And yet I was made more by the people I met along the way than by the journey itself. People I had the privilege to work with and lead, people who mentored and keep mentoring me, people who light a candle for me during tough work conversations.
               </p>
 
               <p>
@@ -63,7 +67,7 @@ export default function HumanPage() {
 
             <div className="mt-5 space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
               <p>
-                One thing I always want to know is: What can I do better?
+                One thing I always want to know is: what can I do better?
               </p>
             </div>
 
