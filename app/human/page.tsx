@@ -53,11 +53,7 @@ export default function HumanPage() {
               </p>
 
               <p>
-                And yet I was made more by the people I met along the way than by the journey itself. People I had the privilege to work with and lead, people who mentored and keep mentoring me, people who light a candle for me during tough work conversations.
-              </p>
-
-              <p>
-                And yet I was made more by the people I met along the way than by the journey itself. People I had the privilege to work with and lead, people who mentored and keep mentoring me, people who light a candle for me during tough work conversations.
+                And yet I was made more by the people I met along the way than by the journey itself. Friends who became the parts of my soul, people I had the privilege to work with and lead, people who mentored and keep mentoring me, people who light a candle for me during challenges of any kind.
               </p>
 
               <p>
@@ -79,7 +75,7 @@ export default function HumanPage() {
 
             <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
               <p>
-                I am motivated by personal challenges. I enjoyed building our ventures since 17, my last project was acquired. When leading people, I respect human potential and giving space to disrupt instead of spending energy on fitting the existing mold. I learned this by working with tiny 0-&gt;1 companies, unicorns and huge corporations like Amazon.
+                I am motivated by personal challenges. I enjoyed building my small ventures since 17, our last AI project was acquired. When leading people, I respect human potential and giving space to disrupt instead of spending energy on fitting the existing mold. I learned this by working with tiny 0-&gt;1 companies, unicorns and huge corporations like Amazon.
               </p>
             </div>
 
