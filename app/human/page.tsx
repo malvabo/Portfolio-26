@@ -49,7 +49,7 @@ export default function HumanPage() {
               </p>
 
               <p>
-                Fast forward, I traveled to around 100 countries predominantly solo and I learned a bit about myself and the world. Waking up in a small village in the mountains in Oman during Ramadan to witness the morning prayers and grow appreciation for devotion and persistence. Hiking alone in Canada and singing loudly to scare off the bears and camping in Australia with snake anti-venom to face my fears of nature and build self-reliance. I learned that control is an illusion; I ended up staying safe and sound in dangerous places in Africa and the opposite in some of the safest cities in the EU.
+                Fast forward, I traveled to around 100 countries predominantly solo and I learned a bit about myself and the world. Waking up in a small village in the mountains in Oman during Ramadan to witness the morning prayers and grow appreciation for loyalty and persistence. Hiking alone in Canada and singing loudly to scare off the bears and camping in Australia with snake anti-venom to face my fears and build self-reliance. I learned that control is an illusion; I ended up staying safe and sound in dangerous places in Africa and the opposite in some of the safest cities in the EU.
               </p>
 
               <p>
