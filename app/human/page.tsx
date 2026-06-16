@@ -53,6 +53,10 @@ export default function HumanPage() {
               </p>
 
               <p>
+                And yet I was made more by the people I met along the way than by the journey itself. People I had the privilege to work with and lead, people who mentored and keep mentoring me, people who light a candle for me during tough work conversations.
+              </p>
+
+              <p>
                 My close people told me that I have the highest bias for action among everybody they knew. Probably, they are right.
               </p>
             </div>
