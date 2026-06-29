@@ -1,10 +1,9 @@
-import Image from "next/image"
 import Link from "next/link"
 
 const VEEQO_IMAGES = [
-  { src: "/images/vq1.png", alt: "Veeqo document library redesign" },
-  { src: "/images/vq2.png", alt: "HTML editor with AI assist and live preview" },
-  { src: "/images/vq3.png", alt: "Failure states across generation and batch errors" },
+  { src: "/images/vq1.png", alt: "Veeqo document library redesign", width: 3792, height: 2272 },
+  { src: "/images/vq2.png", alt: "HTML editor with AI assist and live preview", width: 3792, height: 2096 },
+  { src: "/images/vq3.png", alt: "Failure states across generation and batch errors", width: 2844, height: 2010 },
 ]
 
 export function VeeqoSection() {
@@ -63,7 +62,14 @@ export function VeeqoSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {VEEQO_IMAGES.map((image, idx) => (
             <div key={idx} className="relative aspect-[4/3] overflow-hidden rounded-lg bg-gray-50 border border-gray-200">
-              <Image src={image.src} alt={image.alt} fill className="object-cover blur-[5px]" />
+              <img
+                src={image.src}
+                alt={image.alt}
+                width={image.width}
+                height={image.height}
+                className="absolute inset-0 h-full w-full object-cover blur-[5px]"
+                loading="lazy"
+              />
               {idx === 0 && (
                 <div className="absolute bottom-3 left-3 z-10 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/80 backdrop-blur-sm border border-gray-200/80 shadow-sm">
                   <svg className="w-3 h-3 text-gray-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
