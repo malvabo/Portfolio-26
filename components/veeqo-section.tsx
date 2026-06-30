@@ -1,10 +1,9 @@
-import Image from "next/image"
 import Link from "next/link"
 
 const VEEQO_IMAGES = [
-  { src: "/images/vq1.png", alt: "Veeqo document library redesign" },
-  { src: "/images/vq11.png", alt: "Document setup with branding controls and live invoice preview" },
-  { src: "/images/vq_doc.png", alt: "Invoice document templates" },
+  { src: "/images/vq1.png", alt: "Veeqo document library redesign", width: 3792, height: 2272 },
+  { src: "/images/vq11.png", alt: "Document setup with branding controls and live invoice preview", width: 2844, height: 2010 },
+  { src: "/images/vq_doc.png", alt: "Invoice document templates", width: 2844, height: 2010 },
 ]
 
 export function VeeqoSection() {
@@ -72,7 +71,14 @@ export function VeeqoSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {VEEQO_IMAGES.map((image, idx) => (
             <div key={idx} className="relative aspect-[4/3] overflow-hidden rounded-lg bg-gray-50 border border-gray-200">
-              <Image src={image.src} alt={image.alt} fill className="object-cover" />
+              <img
+                src={image.src}
+                alt={image.alt}
+                width={image.width}
+                height={image.height}
+                className="absolute inset-0 h-full w-full object-cover"
+                loading="lazy"
+              />
             </div>
           ))}
         </div>
