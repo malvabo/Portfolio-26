@@ -49,10 +49,10 @@ export default function Home() {
           <SquirllSection />
         </AnimatedSection>
         <AnimatedSection>
-          <BehaviorLibrarySection />
+          <ArticlesSection />
         </AnimatedSection>
         <AnimatedSection>
-          <ArticlesSection />
+          <BehaviorLibrarySection />
         </AnimatedSection>
         <AnimatedSection>
           <VisualConceptsSection />
