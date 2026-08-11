@@ -44,9 +44,9 @@ export function BehaviorLibrarySection() {
               <Image
                 src="/images/habitkit-preview.jpg"
                 alt="Behavior Design Library — Build AI products with human psychology in mind"
-                width={1440}
-                height={810}
-                className="w-full h-auto object-cover"
+                width={1600}
+                height={920}
+                className="w-full h-auto object-contain"
                 sizes="(min-width: 768px) 50vw, 100vw"
               />
             </div>
