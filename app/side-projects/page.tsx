@@ -1,17 +1,26 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { X } from "lucide-react"
+import { X, ArrowUpRight } from "lucide-react"
 
 type Project = {
-  video: string
+  video?: string
+  image?: string
+  href?: string
   title: string
   description: string
 }
 
 const projects: Project[] = [
+  {
+    href: "https://www.habitkit.club/",
+    image: "/images/habitkit-preview.jpg",
+    title: "Behavior Patterns",
+    description: "A library of behavior design patterns for building AI products with human psychology in mind. I'm currently developing it.",
+  },
   {
     video: "/reel.mp4",
     title: "Showreel of my products",
@@ -42,14 +51,21 @@ export default function SideProjects() {
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {projects.map((p, i) => (
-            <button
-              key={i}
-              onClick={() => setActive(i)}
-              className="flex flex-col text-left group rounded-2xl overflow-hidden border border-border/20 bg-background hover:border-border/40 shadow-[0_1px_4px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)] transition-all duration-300 cursor-pointer focus:outline-none"
-            >
+          {projects.map((p, i) => {
+            const cardClass =
+              "flex flex-col text-left group rounded-2xl overflow-hidden border border-border/20 bg-background hover:border-border/40 shadow-[0_1px_4px_rgba(0,0,0,0.06)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)] transition-all duration-300 cursor-pointer focus:outline-none"
+
+            const media = (
               <div className="relative aspect-video bg-[#F5F3F0] overflow-hidden">
-                {p.video ? (
+                {p.image ? (
+                  <Image
+                    src={p.image}
+                    alt={p.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                ) : p.video ? (
                   <video
                     src={p.video}
                     autoPlay
@@ -62,12 +78,36 @@ export default function SideProjects() {
                   <div className="absolute inset-0" />
                 )}
               </div>
+            )
+
+            const body = (
               <div className="p-4">
-                <p className="text-[15px] font-medium text-foreground mb-1">{p.title}</p>
+                <p className="flex items-center gap-1 text-[15px] font-medium text-foreground mb-1">
+                  {p.title}
+                  {p.href && (
+                    <ArrowUpRight className="w-3.5 h-3.5 text-muted-foreground transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  )}
+                </p>
                 <p className="text-[13px] text-muted-foreground leading-relaxed">{p.description}</p>
               </div>
-            </button>
-          ))}
+            )
+
+            if (p.href) {
+              return (
+                <a key={i} href={p.href} target="_blank" rel="noopener noreferrer" className={cardClass}>
+                  {media}
+                  {body}
+                </a>
+              )
+            }
+
+            return (
+              <button key={i} onClick={() => setActive(i)} className={cardClass}>
+                {media}
+                {body}
+              </button>
+            )
+          })}
         </div>
       </main>
       <Footer />
