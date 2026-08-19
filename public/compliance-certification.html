@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Certify — Compliance certification, made continuous</title>
+  <title>Compliance certification — trade documents, validated before submission</title>
   <meta name="robots" content="noindex" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -173,6 +173,21 @@
     }
     .metrics .cap { font-size: 14px; color: var(--muted-foreground); margin-top: 0.25rem; }
 
+    /* Tier legend */
+    .tiers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.25rem; }
+    .tier {
+      border: 1px solid var(--border);
+      border-radius: 0.625rem;
+      padding: 1rem;
+      background: var(--background);
+    }
+    .tier .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 0.5rem; vertical-align: middle; }
+    .tier .name { font-size: 14px; font-weight: 500; color: var(--foreground); }
+    .tier p { font-size: 13px; margin-top: 0.375rem; }
+    .dot-green { background: #10b981; }
+    .dot-amber { background: #f59e0b; }
+    .dot-rose { background: #f43f5e; }
+
     /* Image placeholders */
     .figure { margin-bottom: 2.5rem; max-width: 750px; }
     .ph {
@@ -207,6 +222,7 @@
       .meta { grid-template-columns: repeat(2, 1fr); }
       .metrics { grid-template-columns: 1fr; }
       .grid-3 { grid-template-columns: 1fr; }
+      .tiers { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -230,10 +246,10 @@
       <main>
         <!-- OVERVIEW / HERO -->
         <header class="col" style="margin-bottom: 3rem;">
-          <h1>Certify: turning compliance certification into a continuous flow</h1>
+          <h1>Compliance certification: extracting trust from trade documents</h1>
           <p class="lede">
-            Redesigning how B2B teams reach and hold security certifications &mdash; from a once-a-year
-            audit scramble into an always-on readiness workflow.
+            A validation flow inside the Compliance Agent that turns a dropped certificate into
+            structured, checked compliance data &mdash; so exporters catch a bad document before customs does.
           </p>
         </header>
 
@@ -245,15 +261,15 @@
           </div>
           <div>
             <p class="label">Timeline</p>
-            <p class="value">10 weeks</p>
+            <p class="value">6 weeks</p>
           </div>
           <div>
             <p class="label">Team</p>
-            <p class="value">PM, 3 engineers, compliance SME</p>
+            <p class="value">PM, 2 engineers, trade-compliance SME</p>
           </div>
           <div>
-            <p class="label">Platform</p>
-            <p class="value"><span class="tag">Web</span></p>
+            <p class="label">Product</p>
+            <p class="value"><span class="tag">Compliance Agent</span></p>
           </div>
         </div>
 
@@ -261,35 +277,37 @@
         <section id="tldr" class="panel">
           <p class="eyebrow">TLDR</p>
           <ul>
-            <li><span class="dot">&bull;</span><span><strong>Outcome:</strong> Cut time-to-certification by an estimated 35% by replacing a spreadsheet-driven audit with a live evidence workflow.</span></li>
-            <li><span class="dot">&bull;</span><span><strong>Insight:</strong> Teams didn't fail audits on effort &mdash; they failed on visibility. Nobody knew what was still missing.</span></li>
-            <li><span class="dot">&bull;</span><span><strong>Approach:</strong> Reframed certification as a continuous status, not a deadline, surfacing readiness in real time.</span></li>
-            <li><span class="dot">&bull;</span><span><strong>Result:</strong> A single readiness dashboard that maps every control to its owner, evidence, and state.</span></li>
+            <li><span class="dot">&bull;</span><span><strong>Problem:</strong> Export teams hand-check certificates against customs rules &mdash; slow, inconsistent, and the errors surface only after a declaration is rejected.</span></li>
+            <li><span class="dot">&bull;</span><span><strong>Move:</strong> Designed a drop &rarr; configure &rarr; extract flow that pulls structured fields from any certificate and grades each one by confidence.</span></li>
+            <li><span class="dot">&bull;</span><span><strong>Key idea:</strong> Sort every document into three tiers &mdash; Auto-Validated, Needs review, Flagged &mdash; so people spend attention only where the agent is unsure.</span></li>
+            <li><span class="dot">&bull;</span><span><strong>Result:</strong> Certification became a triage screen, not a manual read: expiry, issuer, and critical-field checks run before a human looks.</span></li>
           </ul>
         </section>
 
         <div class="figure">
-          <div class="ph tall">Hero — readiness dashboard, full view</div>
-          <p class="caption">The Certify readiness dashboard &mdash; every control, its owner, and its live state on one screen.</p>
+          <div class="ph tall">Hero — certification screen: document on the left, extracted fields + validation on the right</div>
+          <p class="caption">The compliance certification workspace &mdash; source document, extracted fields, and the validation verdict in one view.</p>
         </div>
 
         <!-- CHALLENGE -->
         <section id="challenge" class="col">
           <p class="eyebrow">Challenge</p>
-          <h2>Certification was a fire drill, not a system</h2>
+          <h2>Certificates fail quietly, then loudly</h2>
           <div class="stack">
             <p>
-              For growing SaaS companies, a SOC&nbsp;2 or ISO&nbsp;27001 badge unlocks enterprise deals &mdash; but earning
-              one meant weeks of chasing screenshots across Slack, email, and spreadsheets, days before the auditor arrived.
+              Cross-border shipments move on paper: certificates of origin, EUR.1 movement certificates,
+              phytosanitary certificates, ISO and Rainforest Alliance certs. Each has to be consistent and
+              current before it reaches an authority.
             </p>
             <p>
-              <strong>The business context:</strong> stalled enterprise deals, blocked on a certificate the team couldn't
-              produce fast enough. <strong>The user pain:</strong> compliance owners had no reliable picture of where they stood,
-              so &ldquo;are we ready?&rdquo; had no honest answer until it was too late.
+              <strong>The business context:</strong> a single rejected declaration stalls a shipment, ties up
+              working capital, and can mean an expired certificate no one caught in time.
+              <strong>The user pain:</strong> compliance officers re-typed the same fields into forms and
+              eyeballed dates and issuers by hand &mdash; accurate on a good day, unreliable at volume.
             </p>
             <p>
-              The constraint: this had to work for non-experts. Most of the people gathering evidence weren't compliance
-              professionals &mdash; they were engineers and ops managers doing it on top of their day jobs.
+              <strong>The constraint:</strong> certificates come in every layout imaginable. The system couldn't
+              assume a fixed template &mdash; it had to adapt to whatever document was dropped in.
             </p>
           </div>
         </section>
@@ -297,108 +315,123 @@
         <!-- PROCESS -->
         <section id="process" class="col">
           <p class="eyebrow">Process</p>
-          <h2>Following the evidence trail</h2>
+          <h2>Designing for the officer, not the happy path</h2>
           <div class="stack" style="margin-bottom: 2rem;">
             <p>
-              I ran <strong>7 interviews</strong> across founders, compliance leads, and the engineers who actually
-              upload evidence, then shadowed one live audit end to end. The pattern was consistent: work was happening,
-              but no one could see the whole.
+              I walked through real submissions with a trade-compliance SME and mapped where checks actually
+              broke down. The pattern: extraction was never the hard part &mdash; <em>trusting</em> the extraction was.
             </p>
           </div>
 
           <div class="stack-lg">
             <div>
-              <h3>Key finding: the gap was visibility</h3>
+              <h3>Finding: blind automation erodes trust fast</h3>
               <p>
-                Teams weren't lazy &mdash; they were blind. Controls lived in one tool, evidence in another, and status
-                in someone's head. The anxiety wasn't &ldquo;doing the work,&rdquo; it was &ldquo;knowing what's left.&rdquo;
+                An early concept just auto-filled the form. Officers didn't believe it &mdash; and one silent wrong
+                field was worse than no automation, because it hid the error instead of surfacing it.
               </p>
             </div>
             <div>
-              <h3>Exploration: deadline vs. continuous</h3>
+              <h3>Decision: show confidence, not just answers</h3>
               <p>
-                I explored two directions &mdash; a guided &ldquo;audit sprint&rdquo; checklist, and an always-on readiness model.
-                The sprint tested well for a first cert but collapsed on re-certification. Continuous won.
+                I reframed extraction around <em>confidence per field</em>. High-confidence values read as calm and
+                green; anything the agent is unsure of is highlighted amber and asks for a one-click confirm.
               </p>
             </div>
             <div>
-              <h3>Iteration: from list to map</h3>
+              <h3>Iteration: from a flat form to a triage verdict</h3>
               <p>
-                Early concepts were flat checklists. Testing showed people couldn't tell <em>who owned what</em>. I reworked
-                the model around ownership and state, so every control answered three questions at a glance: who, what, done?
+                Testing showed people needed a single answer to &ldquo;can I trust this?&rdquo; before the field
+                detail. That became the validation tier &mdash; driven by issuer recognition, days-to-expiry, and the
+                lowest critical-field confidence.
               </p>
             </div>
           </div>
 
           <div class="figure" style="margin-top: 2.5rem;">
             <div class="grid-2">
-              <div class="ph">Sketch — audit sprint concept</div>
-              <div class="ph">Sketch — continuous model</div>
+              <div class="ph">Sketch — auto-fill concept (rejected)</div>
+              <div class="ph">Sketch — confidence-first extraction</div>
             </div>
-            <p class="caption">Two early directions: the deadline-driven sprint vs. the continuous readiness model.</p>
+            <p class="caption">The pivot: from silently filling the form to surfacing what the agent isn't sure about.</p>
           </div>
         </section>
 
         <!-- SOLUTION -->
         <section id="solution" class="col">
           <p class="eyebrow">Solution</p>
-          <h2>One live view of readiness</h2>
+          <h2>Drop, configure, extract &mdash; then triage</h2>
           <div class="stack-lg">
             <div>
-              <h3>Control-to-evidence mapping</h3>
+              <h3>A configurable extraction schema</h3>
               <p>
-                Each requirement is a card linking its owner, the evidence that satisfies it, and a live state &mdash;
-                <em>met</em>, <em>at risk</em>, or <em>missing</em>. The audit is never a surprise because the picture is always current.
+                Instead of a fixed template, a Schema Builder lets a team define exactly which fields to pull
+                &mdash; name, type, and a plain-language description &mdash; so the same flow handles a certificate of
+                origin or a phytosanitary cert without rework.
               </p>
             </div>
             <div>
-              <h3>Readiness score</h3>
+              <h3>Confidence you can see</h3>
               <p>
-                A single percentage answers &ldquo;are we ready?&rdquo; honestly, in real time, and shows exactly which controls
-                are dragging it down.
+                Every extracted value carries a confidence score and links back to its exact span in the source
+                document. Click a field, see where it came from. Low-confidence fields are held for a quick human confirm.
               </p>
             </div>
             <div>
-              <h3>Owner-first design</h3>
+              <h3>One verdict, three tiers</h3>
               <p>
-                Built for non-experts: plain-language control descriptions, one-click evidence requests, and nudges routed
-                to the person who can actually close the gap &mdash; not a generic queue.
+                A validation panel resolves the whole document into a single tier, so the officer knows in a
+                glance whether to approve, review, or escalate:
               </p>
+              <div class="tiers">
+                <div class="tier">
+                  <p class="name"><span class="dot dot-green"></span>Auto-Validated</p>
+                  <p>Recognized issuer, in date, critical fields high-confidence. Approve and move on.</p>
+                </div>
+                <div class="tier">
+                  <p class="name"><span class="dot dot-amber"></span>Needs review</p>
+                  <p>Expiring soon or a low-confidence critical field. A person confirms before submission.</p>
+                </div>
+                <div class="tier">
+                  <p class="name"><span class="dot dot-rose"></span>Flagged · Non-Compliant</p>
+                  <p>Unrecognized issuer or a failed check. Routed to exception escalation.</p>
+                </div>
+              </div>
             </div>
           </div>
 
           <div class="figure" style="margin-top: 2.5rem;">
-            <div class="ph tall">Solution — control card detail with evidence + owner</div>
-            <p class="caption">A control card: requirement, owner, linked evidence, and live state in one place.</p>
+            <div class="ph tall">Solution — extracted fields with confidence highlighting + validation verdict</div>
+            <p class="caption">Extracted fields with source highlighting, and the validation verdict that turns them into a decision.</p>
           </div>
         </section>
 
         <!-- IMPACT -->
         <section id="impact" class="panel">
           <p class="eyebrow">Impact</p>
-          <h2>From scramble to steady state</h2>
+          <h2>From manual read to fast triage</h2>
           <div class="metrics" style="margin: 0.5rem 0 1.5rem;">
             <div>
-              <p class="num">~35%</p>
-              <p class="cap">Faster time-to-certification</p>
+              <p class="num">3 tiers</p>
+              <p class="cap">Replace a field-by-field manual read</p>
             </div>
             <div>
-              <p class="num">1</p>
-              <p class="cap">Source of truth, replacing 3+ tools</p>
+              <p class="num">Any layout</p>
+              <p class="cap">One schema, no fixed template</p>
             </div>
             <div>
-              <p class="num">100%</p>
-              <p class="cap">Control ownership assigned</p>
+              <p class="num">0 silent</p>
+              <p class="cap">Low-confidence fields never auto-pass</p>
             </div>
           </div>
           <div class="stack">
             <p>
-              <strong>Qualitative:</strong> compliance leads described the shift from &ldquo;hoping we're ready&rdquo; to
-              &ldquo;knowing where we stand.&rdquo; Engineers stopped getting last-minute evidence pings.
+              <strong>Qualitative:</strong> the confidence-first framing did the real work &mdash; officers trusted the
+              agent <em>because</em> it admitted uncertainty instead of hiding it.
             </p>
             <p>
-              <strong>Business:</strong> a defensible readiness score gave sales a credible answer for security-review
-              questionnaires, unblocking enterprise conversations earlier in the cycle.
+              <strong>Product:</strong> certification slotted in as one work item beside missing-document follow-up
+              and payment, giving the Compliance Agent a coherent triage model the whole dashboard could reuse.
             </p>
           </div>
         </section>
@@ -409,16 +442,16 @@
           <h2>What I'd carry forward</h2>
           <div class="stack">
             <p>
-              The pivotal moment was reframing the problem: certification isn't an event to survive, it's a state to
-              maintain. Designing for the second certification, not just the first, changed every decision that followed.
+              The lesson that stuck: in an expert workflow, <strong>surfacing doubt beats projecting certainty</strong>.
+              The design earned trust by being legibly unsure in the right places, not by pretending to be right everywhere.
             </p>
             <p>
-              <strong>What I'd do differently:</strong> I'd test the readiness score's <em>emotional</em> read sooner &mdash;
-              a dropping percentage can feel punishing, and framing it as progress rather than a grade matters more than I first assumed.
+              <strong>What I'd do next:</strong> close the loop &mdash; feed each human confirmation back so the confidence
+              model sharpens on the certificate types a given team actually handles.
             </p>
             <p>
-              The project sharpened how I design for non-expert users inside expert domains: lead with plain language,
-              route work to the right owner, and make the invisible state visible before anyone has to ask.
+              It also sharpened how I design AI into serious workflows: make the machine's reasoning inspectable
+              (source spans, explicit checks), and always give the human a clear place to decide.
             </p>
           </div>
         </section>
