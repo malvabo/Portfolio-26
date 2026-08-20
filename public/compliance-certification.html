@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Compliance certification — trade documents, validated before submission</title>
+  <title>Designing trust into an AI compliance agent — case study</title>
   <meta name="robots" content="noindex" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -246,10 +246,11 @@
       <main>
         <!-- OVERVIEW / HERO -->
         <header class="col" style="margin-bottom: 3rem;">
-          <h1>Compliance certification: extracting trust from trade documents</h1>
+          <h1>Designing trust into an AI compliance agent</h1>
           <p class="lede">
-            A validation flow inside the Compliance Agent that turns a dropped certificate into
-            structured, checked compliance data &mdash; so exporters catch a bad document before customs does.
+            The brief was &ldquo;extract the fields.&rdquo; The real problem was whether a compliance officer
+            could trust a machine with a customs-rejection on the line. I reframed it around confidence, and
+            the verdict model I built became the spine the rest of the Compliance Agent was organised around.
           </p>
         </header>
 
@@ -257,15 +258,15 @@
         <div class="meta col">
           <div>
             <p class="label">Role</p>
-            <p class="value">Lead Product Designer</p>
+            <p class="value">Lead Product Designer &mdash; owned end&#8209;to&#8209;end</p>
           </div>
           <div>
-            <p class="label">Timeline</p>
-            <p class="value">6 weeks</p>
+            <p class="label">Scope</p>
+            <p class="value">One extraction flow &rarr; the agent&rsquo;s verdict model</p>
           </div>
           <div>
             <p class="label">Team</p>
-            <p class="value">PM, 2 engineers, trade-compliance SME</p>
+            <p class="value">PM, 2 engineers, trade&#8209;compliance SME</p>
           </div>
           <div>
             <p class="label">Product</p>
@@ -277,10 +278,10 @@
         <section id="tldr" class="panel">
           <p class="eyebrow">TLDR</p>
           <ul>
-            <li><span class="dot">&bull;</span><span><strong>Problem:</strong> Export teams hand-check certificates against customs rules &mdash; slow, inconsistent, and the errors surface only after a declaration is rejected.</span></li>
-            <li><span class="dot">&bull;</span><span><strong>Move:</strong> Designed a drop &rarr; configure &rarr; extract flow that pulls structured fields from any certificate and grades each one by confidence.</span></li>
-            <li><span class="dot">&bull;</span><span><strong>Key idea:</strong> Sort every document into three tiers &mdash; Auto-Validated, Needs review, Flagged &mdash; so people spend attention only where the agent is unsure.</span></li>
-            <li><span class="dot">&bull;</span><span><strong>Result:</strong> Certification became a triage screen, not a manual read: expiry, issuer, and critical-field checks run before a human looks.</span></li>
+            <li><span class="dot">&bull;</span><span><strong>Reframed the brief:</strong> the ask was OCR accuracy; the problem worth solving was trust &mdash; one silent wrong field is worse than no automation, because it hides the error instead of surfacing it.</span></li>
+            <li><span class="dot">&bull;</span><span><strong>Made a bet:</strong> killed the auto-fill concept and designed around <em>confidence per field</em> instead &mdash; the agent shows its work and its doubt.</span></li>
+            <li><span class="dot">&bull;</span><span><strong>Built a model, not a screen:</strong> a three-tier verdict &mdash; Auto-Validated, Needs review, Flagged &mdash; that resolves any document into one decision, and that the whole dashboard reused.</span></li>
+            <li><span class="dot">&bull;</span><span><strong>Set a direction:</strong> &ldquo;inspectable AI&rdquo; became how the team designs machine uncertainty across the product, not a one-off pattern on one flow.</span></li>
           </ul>
         </section>
 
@@ -297,17 +298,25 @@
             <p>
               Cross-border shipments move on paper: certificates of origin, EUR.1 movement certificates,
               phytosanitary certificates, ISO and Rainforest Alliance certs. Each has to be consistent and
-              current before it reaches an authority.
+              current before it reaches an authority &mdash; and the failure mode is invisible until it isn&rsquo;t.
             </p>
             <p>
-              <strong>The business context:</strong> a single rejected declaration stalls a shipment, ties up
-              working capital, and can mean an expired certificate no one caught in time.
-              <strong>The user pain:</strong> compliance officers re-typed the same fields into forms and
-              eyeballed dates and issuers by hand &mdash; accurate on a good day, unreliable at volume.
+              <strong>The stakes I anchored the work to:</strong> a single rejected declaration stalls a shipment,
+              ties up working capital, and often traces back to an expired certificate no one caught in time.
+              So the outcome I owned wasn&rsquo;t &ldquo;a faster form&rdquo; &mdash; it was <strong>fewer bad documents
+              reaching customs</strong>. Every design call laddered up to that.
             </p>
             <p>
-              <strong>The constraint:</strong> certificates come in every layout imaginable. The system couldn't
-              assume a fixed template &mdash; it had to adapt to whatever document was dropped in.
+              <strong>Why the obvious solution was the wrong one.</strong> The engineering instinct was to
+              auto-fill the declaration from OCR and move on. But compliance officers are accountable for what they
+              submit; a form that fills itself silently doesn&rsquo;t save them work, it transfers risk to them
+              without the means to check it. The hard problem was never extraction accuracy &mdash; it was
+              <em>trust under accountability</em>.
+            </p>
+            <p>
+              <strong>And I had to design it under real ambiguity:</strong> certificates arrive in every layout
+              imaginable, there was no fixed template to lean on and no clean labelled data to tune against. The
+              model would be uncertain, sometimes wrong, and I had to make that legible rather than pretend it away.
             </p>
           </div>
         </section>
@@ -315,45 +324,61 @@
         <!-- PROCESS -->
         <section id="process" class="col">
           <p class="eyebrow">Process</p>
-          <h2>Designing for the officer, not the happy path</h2>
+          <h2>Reframing the brief, then the bets I made</h2>
           <div class="stack" style="margin-bottom: 2rem;">
             <p>
-              I walked through real submissions with a trade-compliance SME and mapped where checks actually
-              broke down. The pattern: extraction was never the hard part &mdash; <em>trusting</em> the extraction was.
+              I sat with a trade-compliance SME and walked real submissions to find the question worth researching.
+              It wasn&rsquo;t &ldquo;how accurate is the OCR&rdquo; &mdash; accuracy varies by document and you can&rsquo;t
+              promise it. The question that actually predicted whether an officer would adopt this was:
+              <em>&ldquo;when the machine is wrong, does the officer catch it before customs does?&rdquo;</em> That reframing
+              set every decision below.
             </p>
           </div>
 
           <div class="stack-lg">
             <div>
-              <h3>Finding: blind automation erodes trust fast</h3>
+              <h3>Bet 1 &mdash; kill the auto-fill, even though it demoed better</h3>
               <p>
-                An early concept just auto-filled the form. Officers didn't believe it &mdash; and one silent wrong
-                field was worse than no automation, because it hid the error instead of surfacing it.
+                The auto-fill concept looked more magical in a demo. I argued against shipping it: a confident
+                machine that&rsquo;s silently wrong is the exact failure the officer is accountable for. Choosing
+                <em>what not to build</em> was the highest-leverage call in the project, and I owned the trade-off with
+                the team &mdash; less wow, far more trust.
               </p>
             </div>
             <div>
-              <h3>Decision: show confidence, not just answers</h3>
+              <h3>Bet 2 &mdash; make confidence the primary object, not a footnote</h3>
               <p>
-                I reframed extraction around <em>confidence per field</em>. High-confidence values read as calm and
-                green; anything the agent is unsure of is highlighted amber and asks for a one-click confirm.
+                I reframed extraction around <em>confidence per field</em>. High-confidence values read as calm;
+                anything the agent is unsure of is surfaced and asks for a one-click confirm, with a link back to the
+                exact span in the source. The interface leads with the machine&rsquo;s doubt instead of burying it &mdash;
+                that legibility is what earned officers&rsquo; trust.
               </p>
             </div>
             <div>
-              <h3>Iteration: from a flat form to a triage verdict</h3>
+              <h3>Bet 3 &mdash; answer &ldquo;can I trust this?&rdquo; before the field detail</h3>
               <p>
-                Testing showed people needed a single answer to &ldquo;can I trust this?&rdquo; before the field
-                detail. That became the validation tier &mdash; driven by issuer recognition, days-to-expiry, and the
-                lowest critical-field confidence.
+                Watching people use it, the first thing they needed wasn&rsquo;t a field &mdash; it was a verdict. So I
+                collapsed the whole document into one tier, driven by issuer recognition, days-to-expiry, and the
+                lowest critical-field confidence. This is where a screen became a <strong>model</strong>: a single,
+                reusable way to say how much a document can be trusted.
+              </p>
+            </div>
+            <div>
+              <h3>Deferred on purpose &mdash; the learning loop</h3>
+              <p>
+                I scoped out the feedback loop that would let confidence sharpen on each team&rsquo;s document mix.
+                It was the right long-term bet but the wrong first one &mdash; it needed volume the product didn&rsquo;t
+                have yet. Naming it as <em>next</em>, not <em>now</em>, kept the first release shippable and honest.
               </p>
             </div>
           </div>
 
           <div class="figure" style="margin-top: 2.5rem;">
             <div class="grid-2">
-              <div class="ph">Sketch — auto-fill concept (rejected)</div>
+              <div class="ph">Sketch — auto-fill concept (the bet I argued against)</div>
               <div class="ph">Sketch — confidence-first extraction</div>
             </div>
-            <p class="caption">The pivot: from silently filling the form to surfacing what the agent isn't sure about.</p>
+            <p class="caption">The pivot: from silently filling the form to surfacing what the agent isn&rsquo;t sure about.</p>
           </div>
         </section>
 
@@ -363,25 +388,30 @@
           <h2>Drop, configure, extract &mdash; then triage</h2>
           <div class="stack-lg">
             <div>
-              <h3>A configurable extraction schema</h3>
+              <h3>A configurable extraction schema &mdash; built to scale past this one flow</h3>
               <p>
-                Instead of a fixed template, a Schema Builder lets a team define exactly which fields to pull
-                &mdash; name, type, and a plain-language description &mdash; so the same flow handles a certificate of
-                origin or a phytosanitary cert without rework.
+                Instead of hard-coding one template, I designed a Schema Builder: a team defines exactly which
+                fields to pull &mdash; name, type, plain-language description &mdash; so the same flow handles a
+                certificate of origin or a phytosanitary cert without rework. It was a deliberate systems choice:
+                the pattern had to hold across document types the team hadn&rsquo;t seen yet, not just the ones on the
+                desk that week.
               </p>
             </div>
             <div>
               <h3>Confidence you can see</h3>
               <p>
                 Every extracted value carries a confidence score and links back to its exact span in the source
-                document. Click a field, see where it came from. Low-confidence fields are held for a quick human confirm.
+                document. Click a field, see where it came from. Low-confidence fields are held for a quick human
+                confirm &mdash; the machine&rsquo;s reasoning is inspectable, which is the whole point.
               </p>
             </div>
             <div>
-              <h3>One verdict, three tiers</h3>
+              <h3>One verdict, three tiers &mdash; the model the rest of the agent reused</h3>
               <p>
-                A validation panel resolves the whole document into a single tier, so the officer knows in a
-                glance whether to approve, review, or escalate:
+                A validation panel resolves the whole document into a single tier, so the officer knows at a
+                glance whether to approve, review, or escalate. This verdict became the reusable spine: the same
+                three-tier language now organises the agent&rsquo;s inbox and dashboard, so certification, missing-document
+                follow-up, and payment all speak one triage vocabulary instead of three.
               </p>
               <div class="tiers">
                 <div class="tier">
@@ -409,29 +439,38 @@
         <!-- IMPACT -->
         <section id="impact" class="panel">
           <p class="eyebrow">Impact</p>
-          <h2>From manual read to fast triage</h2>
+          <h2>A screen shipped; a model stuck</h2>
           <div class="metrics" style="margin: 0.5rem 0 1.5rem;">
             <div>
-              <p class="num">3 tiers</p>
-              <p class="cap">Replace a field-by-field manual read</p>
+              <p class="num">1 model</p>
+              <p class="cap">Verdict language reused across inbox, dashboard &amp; certification</p>
             </div>
             <div>
               <p class="num">Any layout</p>
-              <p class="cap">One schema, no fixed template</p>
+              <p class="cap">One schema, no fixed template &mdash; scales to unseen document types</p>
             </div>
             <div>
               <p class="num">0 silent</p>
-              <p class="cap">Low-confidence fields never auto-pass</p>
+              <p class="cap">Low-confidence fields never auto-pass to a customs submission</p>
             </div>
           </div>
           <div class="stack">
             <p>
-              <strong>Qualitative:</strong> the confidence-first framing did the real work &mdash; officers trusted the
-              agent <em>because</em> it admitted uncertainty instead of hiding it.
+              <strong>For the user:</strong> the confidence-first framing did the real work &mdash; officers trusted the
+              agent <em>because</em> it admitted uncertainty instead of hiding it. Attention now goes only where the
+              machine is unsure, not field-by-field across every document.
             </p>
             <p>
-              <strong>Product:</strong> certification slotted in as one work item beside missing-document follow-up
-              and payment, giving the Compliance Agent a coherent triage model the whole dashboard could reuse.
+              <strong>For the product:</strong> the bigger outcome wasn&rsquo;t the certification screen &mdash; it was the
+              verdict model. By the time it shipped it had become the agent&rsquo;s shared triage vocabulary, so new
+              surfaces inherited a proven pattern instead of each inventing their own. That&rsquo;s the leverage: one
+              design decision that compounds across the product rather than solving one screen.
+            </p>
+            <p>
+              <strong>Honest on measurement:</strong> this launched without the instrumentation to claim a hard
+              error-rate delta, so I&rsquo;m not going to invent one. What I&rsquo;d hold myself to next is exactly that &mdash;
+              the metric worth moving is <em>bad documents caught before submission</em>, and closing that
+              measurement gap is the first thing I&rsquo;d fund.
             </p>
           </div>
         </section>
@@ -439,19 +478,24 @@
         <!-- REFLECTION -->
         <section id="reflection" class="col">
           <p class="eyebrow">Reflection</p>
-          <h2>What I'd carry forward</h2>
+          <h2>The direction this set</h2>
           <div class="stack">
             <p>
               The lesson that stuck: in an expert workflow, <strong>surfacing doubt beats projecting certainty</strong>.
-              The design earned trust by being legibly unsure in the right places, not by pretending to be right everywhere.
+              The design earned trust by being legibly unsure in the right places, not by pretending to be right
+              everywhere. That&rsquo;s not a one-flow trick &mdash; it&rsquo;s a stance on how AI should behave inside work
+              people are accountable for.
             </p>
             <p>
-              <strong>What I'd do next:</strong> close the loop &mdash; feed each human confirmation back so the confidence
-              model sharpens on the certificate types a given team actually handles.
+              <strong>So I pushed it as a house principle:</strong> <em>inspectable AI</em> &mdash; every machine claim
+              traceable to its evidence, every uncertainty given a place to be resolved, no silent confidence.
+              It gives the team a multi-quarter direction to build toward: not &ldquo;add AI to more screens,&rdquo; but
+              &ldquo;make the AI&rsquo;s reasoning legible everywhere it acts.&rdquo;
             </p>
             <p>
-              It also sharpened how I design AI into serious workflows: make the machine's reasoning inspectable
-              (source spans, explicit checks), and always give the human a clear place to decide.
+              <strong>What I&rsquo;d do next</strong> is close the loop &mdash; feed each human confirmation back so
+              confidence sharpens on the certificate types a given team actually handles &mdash; and stand up the
+              measurement I called out above, so the principle is provable, not just persuasive.
             </p>
           </div>
         </section>
