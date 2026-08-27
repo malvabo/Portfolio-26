@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Closing the compliance loop between co-ops and importers: a case study</title>
+  <title>Cross-border compliance documents for coffee and cocoa supply chains</title>
   <meta name="robots" content="noindex" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -233,10 +233,10 @@
       <a class="back" href="/">&larr; Back to work</a>
 
       <header class="col" style="margin-bottom: 2.5rem;">
-        <h1>Closing the compliance loop between co&#8209;ops and importers</h1>
+        <h1>Closing the document loop in cross&#8209;border supply chain compliance</h1>
         <p class="lede">
-          Reframed a parsing brief into a decision-and-follow-up product, and shipped it in eight weeks across
-          five importer teams and their African suppliers.
+          Every coffee and cocoa container that crosses a border carries a stack of compliance paperwork. Collecting
+          it, checking it and correcting it is manual work, and it falls on the importer.
         </p>
       </header>
 
@@ -259,91 +259,96 @@
         </div>
       </div>
 
-      <section class="panel">
-        <div class="metrics">
-          <div>
-            <p class="num">30+</p>
-            <p class="cap">Supplier interviews, run through in&#8209;country consultants</p>
-          </div>
-          <div>
-            <p class="num">8 weeks</p>
-            <p class="cap">Kickoff to a shipped product</p>
-          </div>
-          <div>
-            <p class="num">5 teams</p>
-            <p class="cap">Importers onboarded, with their suppliers</p>
-          </div>
-        </div>
-      </section>
-
       <div class="figure">
-        <div class="ph tall">Importer inbox: shipment folders, document statuses, validation result</div>
+        <div class="ph tall">Importer workspace: shipment folders, document statuses, validation result</div>
       </div>
 
       <section class="col">
         <p class="eyebrow">The problem</p>
-        <h2>Most documents that arrive are not usable</h2>
+        <h2>Most documents cannot be used as sent</h2>
         <div class="stack">
           <p>
-            A coffee and cocoa trader wanted to automate the compliance paperwork moving between African supplier
-            co&#8209;ops and European importers. Certificates arrived expired. Issuers were absent from the
-            registry. Photos were too dark to read, or several documents came bundled into one file. A rejected
+            Rural co&#8209;operatives in Africa send compliance documents to European importers over WhatsApp,
+            photographed on shared phones across patchy connections. At the other end a compliance officer opens
+            each attachment in turn, checks it against the requirements for that trade lane, and files it. Almost
+            none of the process is automated.
+          </p>
+          <p>
+            Most of what arrives is not usable. Certificates have expired. Issuers are absent from the registry.
+            Photos are too dark or too skewed to read. Unrelated documents arrive bundled into one file. A rejected
             declaration stalls a container and ties up working capital.
           </p>
-          <p>
-            The brief I inherited was to parse data out of those documents and show it to the importer. That was
-            technically reasonable and would not have solved anything. If the certificate underneath is expired, a
-            perfectly extracted expiry date only tells the officer faster that they now have to get a new one from
-            a co&#8209;op who does not use email.
-          </p>
         </div>
       </section>
 
       <section class="col">
-        <p class="eyebrow">Two ends, two worlds</p>
-        <h2>What each side needed</h2>
-        <div class="tiers two" style="margin-top: 0;">
-          <div class="tier">
-            <p class="name">The co&#8209;op, at origin</p>
-            <p>Shared phones, patchy signal, WhatsApp as the default channel. Nobody watching an inbox. Needs one instruction and one large target.</p>
-          </div>
-          <div class="tier">
-            <p class="name">The importer, in Europe</p>
-            <p>Hundreds of shipments audited one document at a time across email and ad hoc tools. Needs a verdict at a glance, not a filled form.</p>
-          </div>
-        </div>
-        <div class="stack" style="margin-top: 1.5rem;">
-          <p>
-            Nothing sat between them, so every correction was somebody manually chasing somebody else. I ran the
-            supplier research through the in&#8209;country consultants who meet these co&#8209;ops in person, keeping
-            the questions concrete: what device, what signal, who takes the photo, what happens the day after a
-            rejection.
-          </p>
-        </div>
-      </section>
-
-      <section class="col">
-        <p class="eyebrow">Approach</p>
-        <h2>What I changed</h2>
-        <div class="panel" style="margin-top: 0;">
-          <ul>
-            <li><span class="dot">1.</span><span><strong>Made the output a decision.</strong> Every document resolves to validated, needs review, or send back. Extraction became a step inside that rather than the product.</span></li>
-            <li><span class="dot">2.</span><span><strong>Closed the loop on WhatsApp.</strong> A failed document triggers an alert to the supplier with a link straight into a mobile re&#8209;upload, so the importer stops being the courier.</span></li>
-            <li><span class="dot">3.</span><span><strong>Handed the schema to the importer.</strong> Upload a sample, we propose the fields, they keep what matters.</span></li>
-            <li><span class="dot">4.</span><span><strong>Deferred the learning loop.</strong> The right long&#8209;term move, and it needed confirmed data the product did not have yet.</span></li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="col">
-        <p class="eyebrow">Strategic moment</p>
-        <h2>Giving away the definition of &ldquo;correct&rdquo;</h2>
+        <p class="eyebrow">The reframe</p>
+        <h2>Extraction was only half the solution</h2>
         <div class="stack">
           <p>
-            V1 defined the extraction schema for you, from document types we had already seen. Scale broke it,
-            since requirements shift by country and by importer&ndash;supplier pair. Rather than keep modelling every
-            variant, I moved the schema into the importer&rsquo;s hands. It made the product sellable past the first
-            few customers, and it put the definition of a valid document with the party accountable for it.
+            The original brief was to parse data out of the documents and present it to the importer. Extraction
+            was achievable, since the client had enough historical documents across enough suppliers to train
+            against.
+          </p>
+          <p>
+            It did not close the loop. When the underlying certificate has expired, a correctly extracted expiry
+            date only surfaces the failure faster. The importer still has to obtain a replacement from a supplier
+            who does not use email, which is where the time actually went.
+          </p>
+          <p>
+            Thirty&#8209;plus interviews on the supplier side, run through the in&#8209;country consultants who meet
+            these co&#8209;operatives in person, established the constraints the follow&#8209;up had to work within:
+            shared devices, intermittent signal, WhatsApp as the only reliable channel.
+          </p>
+        </div>
+      </section>
+
+      <section class="col">
+        <p class="eyebrow">Solution</p>
+        <h2>Validate, then follow up automatically</h2>
+        <div class="stack">
+          <p>
+            The system validates rather than only extracting. It checks whether the certificate is in date, whether
+            the issuer is recognised, and whether the file is legible enough to stand behind. Every value links back
+            to its place in the source image, so a doubtful field takes one click to confirm.
+          </p>
+          <div class="tiers">
+            <div class="tier">
+              <p class="name"><span class="dot dot-green"></span>Validated</p>
+              <p>In date, issuer recognised, read cleanly. The shipment moves.</p>
+            </div>
+            <div class="tier">
+              <p class="name"><span class="dot dot-amber"></span>Needs review</p>
+              <p>Expiring soon, or a field the system is unsure about.</p>
+            </div>
+            <div class="tier">
+              <p class="name"><span class="dot dot-rose"></span>Send back</p>
+              <p>Expired, unreadable, or failing a rule. Triggers the re&#8209;request.</p>
+            </div>
+          </div>
+          <p style="margin-top: 1.25rem;">
+            A send&#8209;back fires the follow&#8209;up on its own: a WhatsApp alert to the supplier and an email to
+            the primary compliance contact with compliance managers copied, carrying a link into a mobile page built
+            for one task, replacing that document. The importer sees the request and its state without leaving the
+            shipment.
+          </p>
+        </div>
+      </section>
+
+      <section class="col">
+        <p class="eyebrow">Scaling it</p>
+        <h2>A schema each importer defines</h2>
+        <div class="stack">
+          <p>
+            The first version set the extraction schema itself, from document types already seen. Scale broke that.
+            Requirements shift by country, and a given importer and supplier pair can need something different
+            again.
+          </p>
+          <p>
+            The schema moved into the importer&rsquo;s hands. They upload a sample document, the system proposes the
+            fields worth pulling from it, and they keep what matters to their lane. This removed the need to model
+            every new trade lane before selling into it, and it put the definition of a valid document with the
+            party accountable for it.
           </p>
         </div>
         <div class="figure" style="margin-top: 2rem;">
@@ -359,16 +364,15 @@
         <h2>A visual language built from scratch</h2>
         <div class="stack">
           <p>
-            No design system to inherit, so the interface language had to be defined before it could be applied.
-            Nearly every screen is a list of things in a state, so I built status as the load&#8209;bearing
-            primitive: it had to survive being the only signal on a row and extend to states we had not invented
-            yet.
+            There was no existing design system, so the interface language was defined before it was applied.
+            Nearly every screen is a list of things in a state, which made status the load&#8209;bearing primitive:
+            it had to survive being the only signal on a row and extend to states not yet invented.
           </p>
           <p>
-            Accessibility set the constraints rather than following them. The hardest user is on a shared low-end
+            Accessibility set those constraints rather than following them. The hardest user is on a shared low-end
             phone, on an intermittent connection, reading a second language. Status never depends on colour alone,
-            the supplier page carries its meaning in text before images load, and the officer side is reachable by
-            keyboard at volume.
+            the supplier page carries its meaning in text before images load, and the officer side stays reachable
+            by keyboard at volume.
           </p>
         </div>
         <div class="figure" style="margin-top: 2rem;">
@@ -380,32 +384,34 @@
         </div>
       </section>
 
-      <section class="col">
-        <p class="eyebrow">Impact</p>
-        <h2>What shipped</h2>
-        <div class="stack">
+      <section class="panel">
+        <p class="eyebrow">Outcome</p>
+        <h2>A complete workflow</h2>
+        <div class="stack" style="margin-bottom: 1.5rem;">
           <p>
-            Officers moved from opening every attachment to handling only what the system flags, and the chasing
-            they used to do by hand now goes out on its own. Five importer teams onboarded along with their
-            suppliers.
-          </p>
-          <p>
-            <strong>On measurement, I will be straight:</strong> this launched without the instrumentation to claim
-            a number on error rates, so I am not going to invent one. The metric worth moving is bad documents
-            caught before submission.
+            Upload the document, the system extracts and validates it against the importer&rsquo;s own schema, and
+            either clears the shipment or requests a corrected copy from the supplier on the channel they already
+            use. Officers work the exceptions their inbox flags instead of opening every attachment in order.
           </p>
         </div>
-      </section>
-
-      <section class="col">
-        <p class="eyebrow">Closing insight</p>
-        <h2>The most useful thing I did was refuse the scope</h2>
-        <div class="stack">
+        <div class="metrics">
+          <div>
+            <p class="num">30+</p>
+            <p class="cap">Supplier interviews via in&#8209;country consultants</p>
+          </div>
+          <div>
+            <p class="num">8 weeks</p>
+            <p class="cap">Kickoff to a shipped product</p>
+          </div>
+          <div>
+            <p class="num">5 teams</p>
+            <p class="cap">Importers onboarded, with their suppliers</p>
+          </div>
+        </div>
+        <div class="stack" style="margin-top: 1.5rem;">
           <p>
-            Parsing was a real request from a paying client, and it solved the visible half. Showing the field
-            evidence that the cost sat in the other half is what changed the outcome. I could not observe my
-            hardest users directly, so I designed around what I could establish with certainty about their
-            conditions rather than a persona I had imagined.
+            The product launched without the instrumentation to support an error&#8209;rate figure, so none is
+            claimed here. The metric worth tracking is bad documents caught before submission.
           </p>
         </div>
       </section>
