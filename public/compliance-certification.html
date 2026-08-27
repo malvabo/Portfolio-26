@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cross-border compliance documents for coffee and cocoa supply chains</title>
+  <title>Compliance questionnaires and evidence validation for supply chain operations</title>
   <meta name="robots" content="noindex" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -233,10 +233,10 @@
       <a class="back" href="/">&larr; Back to work</a>
 
       <header class="col" style="margin-bottom: 2.5rem;">
-        <h1>Closing the document loop in cross&#8209;border supply chain compliance</h1>
+        <h1>Automating compliance questionnaires for supply chain operations</h1>
         <p class="lede">
-          Every coffee and cocoa container that crosses a border carries a stack of compliance paperwork. Collecting
-          it, checking it and correcting it is manual work, and it falls on the importer.
+          A compliance platform for food supply chains. Two capabilities: answering counterparty questionnaires
+          from a company&rsquo;s own evidence, and validating that evidence before it leaves the building.
         </p>
       </header>
 
@@ -254,108 +254,79 @@
           <p class="value">~8 weeks, kickoff to launch</p>
         </div>
         <div>
-          <p class="label">Reach</p>
-          <p class="value">5 importer teams and their suppliers</p>
+          <p class="label">Domain</p>
+          <p class="value"><span class="tag">Food supply chain</span></p>
         </div>
       </div>
 
       <div class="figure">
-        <div class="ph tall">Importer workspace: shipment folders, document statuses, validation result</div>
+        <div class="ph tall">Questionnaire workspace: source questions, generated answers, supporting evidence</div>
       </div>
 
       <section class="col">
-        <p class="eyebrow">The problem</p>
-        <h2>Most documents cannot be used as sent</h2>
+        <p class="eyebrow">Use case one</p>
+        <h2>Compliance questionnaires</h2>
         <div class="stack">
           <p>
-            Rural co&#8209;operatives in Africa send compliance documents to European importers over WhatsApp,
-            photographed on shared phones across patchy connections. At the other end a compliance officer opens
-            each attachment in turn, checks it against the requirements for that trade lane, and files it. Almost
-            none of the process is automated.
+            Every company moving food across a supply chain faces the same request. When a counterparty evaluates a
+            shipment or a supplier, they send a spreadsheet or a PDF with dozens of questions about the produce and
+            the controls around it: origin and traceability, certification status, storage and handling, residue
+            testing, the paperwork behind each claim.
           </p>
           <p>
-            Most of what arrives is not usable. Certificates have expired. Issuers are absent from the registry.
-            Photos are too dark or too skewed to read. Unrelated documents arrive bundled into one file. A rejected
-            declaration stalls a container and ties up working capital.
+            Answering these manually is tedious. Teams dig through certification reports, internal policies and
+            previously answered questionnaires to find each answer, then copy and paste responses into whatever
+            format arrived this time.
+          </p>
+          <p>
+            The product automates it. A customer uploads the questionnaire alongside their supporting documents.
+            The system parses the contextual evidence, extracts every question that needs an answer, and generates a
+            response for each one grounded in the customer&rsquo;s own documentation.
           </p>
         </div>
       </section>
 
       <section class="col">
         <p class="eyebrow">The reframe</p>
-        <h2>Extraction was only half the solution</h2>
+        <h2>Generating answers was only half the solution</h2>
         <div class="stack">
           <p>
-            The original brief was to parse data out of the documents and present it to the importer. Extraction
-            was achievable, since the client had enough historical documents across enough suppliers to train
-            against.
+            Without a way to produce the final deliverable, customers still faced the copy and paste work the
+            product was supposed to remove. A list of correct answers is not what the counterparty asked for. They
+            asked for their document, completed.
           </p>
           <p>
-            It did not close the loop. When the underlying certificate has expired, a correctly extracted expiry
-            date only surfaces the failure faster. The importer still has to obtain a replacement from a supplier
-            who does not use email, which is where the time actually went.
-          </p>
-          <p>
-            Thirty&#8209;plus interviews on the supplier side, run through the in&#8209;country consultants who meet
-            these co&#8209;operatives in person, established the constraints the follow&#8209;up had to work within:
-            shared devices, intermittent signal, WhatsApp as the only reliable channel.
-          </p>
-        </div>
-      </section>
-
-      <section class="col">
-        <p class="eyebrow">Solution</p>
-        <h2>Validate, then follow up automatically</h2>
-        <div class="stack">
-          <p>
-            The system validates rather than only extracting. It checks whether the certificate is in date, whether
-            the issuer is recognised, and whether the file is legible enough to stand behind. Every value links back
-            to its place in the source image, so a doubtful field takes one click to confirm.
-          </p>
-          <div class="tiers">
-            <div class="tier">
-              <p class="name"><span class="dot dot-green"></span>Validated</p>
-              <p>In date, issuer recognised, read cleanly. The shipment moves.</p>
-            </div>
-            <div class="tier">
-              <p class="name"><span class="dot dot-amber"></span>Needs review</p>
-              <p>Expiring soon, or a field the system is unsure about.</p>
-            </div>
-            <div class="tier">
-              <p class="name"><span class="dot dot-rose"></span>Send back</p>
-              <p>Expired, unreadable, or failing a rule. Triggers the re&#8209;request.</p>
-            </div>
-          </div>
-          <p style="margin-top: 1.25rem;">
-            A send&#8209;back fires the follow&#8209;up on its own: a WhatsApp alert to the supplier and an email to
-            the primary compliance contact with compliance managers copied, carrying a link into a mobile page built
-            for one task, replacing that document. The importer sees the request and its state without leaving the
-            shipment.
-          </p>
-        </div>
-      </section>
-
-      <section class="col">
-        <p class="eyebrow">Scaling it</p>
-        <h2>A schema each importer defines</h2>
-        <div class="stack">
-          <p>
-            The first version set the extraction schema itself, from document types already seen. Scale broke that.
-            Requirements shift by country, and a given importer and supplier pair can need something different
-            again.
-          </p>
-          <p>
-            The schema moved into the importer&rsquo;s hands. They upload a sample document, the system proposes the
-            fields worth pulling from it, and they keep what matters to their lane. This removed the need to model
-            every new trade lane before selling into it, and it put the definition of a valid document with the
-            party accountable for it.
+            So the flow had to close: AI&#8209;generated answers written back into the original file with its exact
+            formatting preserved. Upload the questionnaire, review the generated answers, download a completed
+            document ready to send.
           </p>
         </div>
         <div class="figure" style="margin-top: 2rem;">
           <div class="grid-2">
-            <div class="ph">Schema builder: fields suggested from a sample</div>
-            <div class="ph">Supplier view: WhatsApp alert and mobile re&#8209;upload</div>
+            <div class="ph">Answer review: response, confidence, source document</div>
+            <div class="ph">Completed questionnaire in its original format</div>
           </div>
+        </div>
+      </section>
+
+      <section class="col">
+        <p class="eyebrow">Use case two</p>
+        <h2>Evidence evaluation, the layer behind the platform</h2>
+        <div class="stack">
+          <p>
+            The second capability validates every piece of compliance evidence uploaded. It checks captured
+            screenshots for completeness, verifies formatting, and confirms nothing is missing before the evidence
+            reaches a counterparty or an auditor.
+          </p>
+          <p>
+            It is not only a customer&#8209;facing feature. A web agent captures compliance evidence and sends it to
+            the evaluator, which identifies the gaps and feeds them back so the agent can iterate until the evidence
+            is complete. The same system checks policy drafts, confirming that required sections are present and
+            aligned to the relevant standard. It gives the other agents in the platform a feedback loop.
+          </p>
+        </div>
+        <div class="figure" style="margin-top: 2rem;">
+          <div class="ph">Evidence evaluation: captured evidence with gaps identified</div>
         </div>
       </section>
 
@@ -365,14 +336,14 @@
         <div class="stack">
           <p>
             There was no existing design system, so the interface language was defined before it was applied.
-            Nearly every screen is a list of things in a state, which made status the load&#8209;bearing primitive:
-            it had to survive being the only signal on a row and extend to states not yet invented.
+            Almost every screen is a list of things in a state: questions answered or unanswered, evidence complete
+            or incomplete. That made status the load&#8209;bearing primitive, and it had to survive being the only
+            signal on a row and extend to states not yet invented.
           </p>
           <p>
-            Accessibility set those constraints rather than following them. The hardest user is on a shared low-end
-            phone, on an intermittent connection, reading a second language. Status never depends on colour alone,
-            the supplier page carries its meaning in text before images load, and the officer side stays reachable
-            by keyboard at volume.
+            Accessibility set those constraints rather than following them. Status never depends on colour alone,
+            each screen carries its meaning in text before images load, and review work stays reachable by keyboard
+            at volume.
           </p>
         </div>
         <div class="figure" style="margin-top: 2rem;">
@@ -386,18 +357,18 @@
 
       <section class="panel">
         <p class="eyebrow">Outcome</p>
-        <h2>A complete workflow</h2>
+        <h2>A complete work artifact</h2>
         <div class="stack" style="margin-bottom: 1.5rem;">
           <p>
-            Upload the document, the system extracts and validates it against the importer&rsquo;s own schema, and
-            either clears the shipment or requests a corrected copy from the supplier on the channel they already
-            use. Officers work the exceptions their inbox flags instead of opening every attachment in order.
+            The customer uploads a questionnaire, the system answers it from their own evidence, and they download
+            the finished document in the format the counterparty expects. Behind that, every piece of evidence has
+            been checked for completeness before it is used.
           </p>
         </div>
         <div class="metrics">
           <div>
             <p class="num">30+</p>
-            <p class="cap">Supplier interviews via in&#8209;country consultants</p>
+            <p class="cap">Interviews across both sides of the chain</p>
           </div>
           <div>
             <p class="num">8 weeks</p>
@@ -405,13 +376,13 @@
           </div>
           <div>
             <p class="num">5 teams</p>
-            <p class="cap">Importers onboarded, with their suppliers</p>
+            <p class="cap">Customer teams onboarded</p>
           </div>
         </div>
         <div class="stack" style="margin-top: 1.5rem;">
           <p>
-            The product launched without the instrumentation to support an error&#8209;rate figure, so none is
-            claimed here. The metric worth tracking is bad documents caught before submission.
+            The product launched without the instrumentation to support an accuracy figure, so none is claimed here.
+            The metric worth tracking is questionnaires completed without manual rework.
           </p>
         </div>
       </section>
