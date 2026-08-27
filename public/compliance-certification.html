@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Compliance questionnaires and evidence validation for supply chain operations</title>
+  <title>Food supply chain compliance: automating questionnaires and evidence</title>
   <meta name="robots" content="noindex" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -213,6 +213,24 @@
     .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
     .caption { margin-top: 0.5rem; font-size: 14px; color: var(--muted-foreground); }
 
+    .sub {
+      font-family: var(--font-serif);
+      font-weight: 500;
+      font-size: 1.5rem;
+      letter-spacing: -0.02em;
+      line-height: 1.25;
+      margin-bottom: 0.75rem;
+      color: var(--foreground);
+    }
+    blockquote {
+      border-left: 2px solid var(--border);
+      padding-left: 1.5rem;
+      margin: 0 0 2.5rem;
+      max-width: 750px;
+    }
+    blockquote p { font-size: 19px; line-height: 1.55; color: var(--foreground); font-family: var(--font-serif); }
+    blockquote cite { display: block; margin-top: 0.75rem; font-size: 14px; font-style: normal; color: var(--muted-foreground); }
+
     hr { border: none; border-top: 1px solid var(--border); opacity: 0.5; margin: 4rem 0 2rem; }
 
     @media (max-width: 900px) {
@@ -233,10 +251,11 @@
       <a class="back" href="/">&larr; Back to work</a>
 
       <header class="col" style="margin-bottom: 2.5rem;">
-        <h1>Automating compliance questionnaires for supply chain operations</h1>
+        <h1>Food supply chain compliance</h1>
+        <p class="sub">Automating compliance questionnaires and the evidence behind them</p>
         <p class="lede">
-          A compliance platform for food supply chains. Two capabilities: answering counterparty questionnaires
-          from a company&rsquo;s own evidence, and validating that evidence before it leaves the building.
+          Turned a parsing brief into a complete work artifact, so a compliance team gets back the
+          counterparty&rsquo;s own document, answered and ready to send.
         </p>
       </header>
 
@@ -247,124 +266,151 @@
         </div>
         <div>
           <p class="label">Scope</p>
-          <p class="value">Research, product, design system</p>
+          <p class="value">Research, product direction, design system</p>
         </div>
         <div>
           <p class="label">Timeframe</p>
-          <p class="value">~8 weeks, kickoff to launch</p>
+          <p class="value">~8 weeks</p>
         </div>
         <div>
-          <p class="label">Domain</p>
-          <p class="value"><span class="tag">Food supply chain</span></p>
+          <p class="label">Reach</p>
+          <p class="value">5 customer teams and their suppliers</p>
         </div>
       </div>
 
-      <div class="figure">
-        <div class="ph tall">Questionnaire workspace: source questions, generated answers, supporting evidence</div>
-      </div>
+      <section class="panel">
+        <h3 style="margin-bottom: 1rem;">Impact summary</h3>
+        <ul>
+          <li><span class="dot">&bull;</span><span>Reframed a document-parsing brief into a finished deliverable</span></li>
+          <li><span class="dot">&bull;</span><span>Closed the loop from questionnaire to completed, correctly formatted document</span></li>
+          <li><span class="dot">&bull;</span><span>Built evidence evaluation as a shared service the platform&rsquo;s other agents call</span></li>
+          <li><span class="dot">&bull;</span><span>Defined the product&rsquo;s first design system and accessibility baseline</span></li>
+        </ul>
+      </section>
+
+      <!-- Quote slot. Drop a real line from a client or colleague here, then delete this comment.
+      <blockquote>
+        <p>&ldquo;&hellip;&rdquo;</p>
+        <cite>Name, Title</cite>
+      </blockquote>
+      -->
 
       <section class="col">
-        <p class="eyebrow">Use case one</p>
-        <h2>Compliance questionnaires</h2>
+        <h3>The problem &amp; context</h3>
+        <div class="stack" style="margin-bottom: 1.25rem;">
+          <p>
+            Companies moving food across a supply chain answer the same request constantly. A counterparty
+            evaluating a shipment or a supplier sends a spreadsheet or a PDF with dozens of questions about the
+            produce and the controls around it: origin and traceability, certification status, storage and handling,
+            residue testing, the paperwork behind each claim.
+          </p>
+        </div>
+        <div class="panel" style="margin-top: 0;">
+          <ul>
+            <li><span class="dot">1.</span><span>Answers were scattered across certification reports, internal policies and previously answered questionnaires</span></li>
+            <li><span class="dot">2.</span><span>Every counterparty sent a different format, so nothing could be reused as sent</span></li>
+            <li><span class="dot">3.</span><span>Supporting evidence arrived incomplete, and the gap was only found downstream</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="col">
+        <h3>User needs</h3>
         <div class="stack">
           <p>
-            Every company moving food across a supply chain faces the same request. When a counterparty evaluates a
-            shipment or a supplier, they send a spreadsheet or a PDF with dozens of questions about the produce and
-            the controls around it: origin and traceability, certification status, storage and handling, residue
-            testing, the paperwork behind each claim.
-          </p>
-          <p>
-            Answering these manually is tedious. Teams dig through certification reports, internal policies and
-            previously answered questionnaires to find each answer, then copy and paste responses into whatever
-            format arrived this time.
-          </p>
-          <p>
-            The product automates it. A customer uploads the questionnaire alongside their supporting documents.
-            The system parses the contextual evidence, extracts every question that needs an answer, and generates a
-            response for each one grounded in the customer&rsquo;s own documentation.
+            Research across both sides of the chain showed the time went into locating evidence rather than deciding
+            anything. Compliance teams did not need a faster way to look things up. They needed the counterparty&rsquo;s
+            document back, completed, in the format it arrived in.
           </p>
         </div>
       </section>
 
       <section class="col">
-        <p class="eyebrow">The reframe</p>
-        <h2>Generating answers was only half the solution</h2>
+        <h3>Business goal</h3>
         <div class="stack">
           <p>
-            Without a way to produce the final deliverable, customers still faced the copy and paste work the
-            product was supposed to remove. A list of correct answers is not what the counterparty asked for. They
-            asked for their document, completed.
-          </p>
-          <p>
-            So the flow had to close: AI&#8209;generated answers written back into the original file with its exact
-            formatting preserved. Upload the questionnaire, review the generated answers, download a completed
-            document ready to send.
+            Make the compliance workflow repeatable enough to scale across trade lanes without modelling each one
+            first, so the company could widen the services it sold without adding headcount to every new customer.
           </p>
         </div>
-        <div class="figure" style="margin-top: 2rem;">
+      </section>
+
+      <section class="col">
+        <h2>Questionnaire workspace</h2>
+        <div class="figure">
+          <div class="ph tall">Source questions, generated answers, and the evidence each answer came from</div>
+        </div>
+      </section>
+
+      <section class="col">
+        <h2>Approach</h2>
+        <div class="stack" style="margin-bottom: 1.25rem;">
+          <p>
+            The strategy was to move the finish line. Extraction was treated as a step rather than the product, and
+            everything downstream of it was designed so the customer ends up holding something they can send. To
+            accomplish this:
+          </p>
+        </div>
+        <div class="panel" style="margin-top: 0;">
+          <ul>
+            <li><span class="dot">1.</span><span>Mapped the document journey end to end, from evidence capture to the counterparty&rsquo;s inbox</span></li>
+            <li><span class="dot">2.</span><span>Interviewed both sides of the chain, reaching hard-to-access suppliers through in-country consultants</span></li>
+            <li><span class="dot">3.</span><span>Made the deliverable the completed document, not a list of generated answers</span></li>
+            <li><span class="dot">4.</span><span>Moved the extraction schema into the customer&rsquo;s hands, suggested from a sample</span></li>
+            <li><span class="dot">5.</span><span>Built evidence evaluation as a service the platform&rsquo;s other agents call</span></li>
+            <li><span class="dot">6.</span><span>Defined status as the design system&rsquo;s load-bearing primitive, with accessibility setting the constraints</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="col">
+        <h3>Strategic moment: making the deliverable the document</h3>
+        <div class="tiers">
+          <div class="tier">
+            <p class="name">The risk</p>
+            <p>Generated answers still left teams copying and pasting into whatever format had arrived that week.</p>
+          </div>
+          <div class="tier">
+            <p class="name">The controversy</p>
+            <p>The team wanted to ship extraction and move on. Writing answers back into the source file extended scope late.</p>
+          </div>
+          <div class="tier">
+            <p class="name">What changed after</p>
+            <p>Upload the questionnaire, review the answers, download a completed file with its original formatting intact.</p>
+          </div>
+        </div>
+        <div class="figure" style="margin-top: 1.5rem;">
           <div class="grid-2">
-            <div class="ph">Answer review: response, confidence, source document</div>
-            <div class="ph">Completed questionnaire in its original format</div>
+            <div class="ph">Before: answers as a list to transcribe</div>
+            <div class="ph">After: the counterparty&rsquo;s document, completed</div>
           </div>
         </div>
       </section>
 
       <section class="col">
-        <p class="eyebrow">Use case two</p>
-        <h2>Evidence evaluation, the layer behind the platform</h2>
+        <h3>Evidence evaluation infused into the platform</h3>
         <div class="stack">
           <p>
-            The second capability validates every piece of compliance evidence uploaded. It checks captured
-            screenshots for completeness, verifies formatting, and confirms nothing is missing before the evidence
+            The second capability validates every piece of compliance evidence uploaded, checking captured
+            screenshots for completeness, verifying formatting, and confirming nothing is missing before the evidence
             reaches a counterparty or an auditor.
           </p>
           <p>
-            It is not only a customer&#8209;facing feature. A web agent captures compliance evidence and sends it to
-            the evaluator, which identifies the gaps and feeds them back so the agent can iterate until the evidence
-            is complete. The same system checks policy drafts, confirming that required sections are present and
-            aligned to the relevant standard. It gives the other agents in the platform a feedback loop.
+            It is not only customer-facing. A web agent captures evidence and sends it to the evaluator, which
+            identifies the gaps and feeds them back so the agent can iterate until the evidence is complete. It gives
+            the platform&rsquo;s other agents a feedback loop to work against.
           </p>
         </div>
-        <div class="figure" style="margin-top: 2rem;">
-          <div class="ph">Evidence evaluation: captured evidence with gaps identified</div>
-        </div>
-      </section>
-
-      <section class="col">
-        <p class="eyebrow">Craft</p>
-        <h2>A visual language built from scratch</h2>
-        <div class="stack">
-          <p>
-            There was no existing design system, so the interface language was defined before it was applied.
-            Almost every screen is a list of things in a state: questions answered or unanswered, evidence complete
-            or incomplete. That made status the load&#8209;bearing primitive, and it had to survive being the only
-            signal on a row and extend to states not yet invented.
-          </p>
-          <p>
-            Accessibility set those constraints rather than following them. Status never depends on colour alone,
-            each screen carries its meaning in text before images load, and review work stays reachable by keyboard
-            at volume.
-          </p>
-        </div>
-        <div class="figure" style="margin-top: 2rem;">
-          <div class="grid-3">
-            <div class="ph short">Type and spacing</div>
-            <div class="ph short">Status language</div>
-            <div class="ph short">Core components</div>
+        <div class="figure" style="margin-top: 1.5rem;">
+          <div class="grid-2">
+            <div class="ph">Captured evidence with gaps identified</div>
+            <div class="ph">Agent iterating until the evidence is complete</div>
           </div>
         </div>
       </section>
 
       <section class="panel">
-        <p class="eyebrow">Outcome</p>
-        <h2>A complete work artifact</h2>
-        <div class="stack" style="margin-bottom: 1.5rem;">
-          <p>
-            The customer uploads a questionnaire, the system answers it from their own evidence, and they download
-            the finished document in the format the counterparty expects. Behind that, every piece of evidence has
-            been checked for completeness before it is used.
-          </p>
-        </div>
+        <h2 style="margin-bottom: 1.25rem;">Impact</h2>
         <div class="metrics">
           <div>
             <p class="num">30+</p>
@@ -383,6 +429,16 @@
           <p>
             The product launched without the instrumentation to support an accuracy figure, so none is claimed here.
             The metric worth tracking is questionnaires completed without manual rework.
+          </p>
+        </div>
+      </section>
+
+      <section class="col">
+        <h3>Closing insight</h3>
+        <div class="stack">
+          <p>
+            Automating expert work is not about extracting the data. It is about producing the artifact the other
+            side actually asked for, and being able to show the evidence standing behind every line of it.
           </p>
         </div>
       </section>
