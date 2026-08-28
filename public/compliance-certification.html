@@ -421,12 +421,11 @@
         </div>
         <div class="panel" style="margin-top: 0;">
           <ul>
-            <li><span class="dot">1.</span><span>Mapped the operation first and let the gaps decide the first release</span></li>
-            <li><span class="dot">2.</span><span>Made the pipeline the unit, defined by a recipe and a trigger</span></li>
-            <li><span class="dot">3.</span><span>Split the work into Extract and Inject, each able to stand alone</span></li>
-            <li><span class="dot">4.</span><span>Drafted schemas from a description, so setup was never a blank slate</span></li>
-            <li><span class="dot">5.</span><span>Made pipelines persist, so they could be duplicated and called over an API</span></li>
-            <li><span class="dot">6.</span><span>Removed validation and narrowed the surface to the two flows</span></li>
+            <li><span class="dot">1.</span><span>Mapped how importers actually work, and let the gaps set the first release.</span></li>
+            <li><span class="dot">2.</span><span>Made the pipeline the unit &mdash; one setup, built once and reused.</span></li>
+            <li><span class="dot">3.</span><span>Split it into two jobs that stand alone: Extract pulls data out, Inject fills forms in.</span></li>
+            <li><span class="dot">4.</span><span>Drafted the fields from a plain description, so setup was never a blank page.</span></li>
+            <li><span class="dot">5.</span><span>Saved every pipeline, so it could be duplicated or called from a customer&rsquo;s own systems.</span></li>
           </ul>
         </div>
         <div class="figure" style="margin-top: 2rem;">
@@ -443,19 +442,20 @@
 
       <section class="col" id="moment">
         <h3>Strategic moment: from our rules to theirs</h3>
-        <div class="tiers">
-          <div class="tier">
-            <p class="name">The risk</p>
-            <p>Compliance bends with the country and the product. One fixed ruleset could not cover a base this varied.</p>
-          </div>
-          <div class="tier">
-            <p class="name">The controversy</p>
-            <p>Dropping the rules engine meant giving up the opinionated positioning the MVP was built on.</p>
-          </div>
-          <div class="tier">
-            <p class="name">What changed after</p>
-            <p>Each importer configures the pipeline to their own rules, which is what made it sellable.</p>
-          </div>
+        <div class="stack-lg">
+          <p>
+            The MVP shipped with a built-in rules engine &mdash; our reading of what compliance required. Testing showed
+            the flaw: compliance bends with the country and the product, so one fixed ruleset never fit a customer base
+            this varied.
+          </p>
+          <p>
+            Dropping it was the hard call. The rules engine was the opinionated core the product had been sold on, and
+            letting it go meant trusting customers to set their own rules instead of us.
+          </p>
+          <p>
+            That trade is what made Conduit sellable. Each importer now configures the pipeline to the rules they
+            actually work under, rather than the ones we guessed at.
+          </p>
         </div>
       </section>
 
