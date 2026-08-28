@@ -1,41 +1,41 @@
 // Three distinct compositions of real product screens on a deep-blue tile:
-// the Extract builder floats whole, Runs is zoomed into its top-left, and the
-// API dialog is cut in close on its code. imgStyle positions each on its tile.
+// Runs floats as a clean record, the Extract fields table is framed on its
+// schema, and the API dialog is centered on its code. imgStyle places each.
 const CONDUIT_IMAGES: {
   src: string
   alt: string
   imgStyle: React.CSSProperties
 }[] = [
   {
-    src: "/conduit/home-config.png",
-    alt: "Extract builder: name the fields to pull from a supplier document",
-    imgStyle: {
-      width: "88%",
-      left: "9%",
-      top: "15%",
-      transform: "rotate(-2.5deg)",
-      boxShadow: "0 24px 50px -12px rgba(0,0,0,0.5)",
-    },
-  },
-  {
     src: "/conduit/home-runs.png",
     alt: "Runs: the documents the pipelines have processed",
     imgStyle: {
-      width: "190%",
+      width: "150%",
       maxWidth: "none",
-      left: "3%",
-      top: "6%",
+      left: "2%",
+      top: "9%",
       boxShadow: "0 24px 50px -12px rgba(0,0,0,0.45)",
+    },
+  },
+  {
+    src: "/conduit/home-schema.png",
+    alt: "Extract builder: the fields and types pulled from each document",
+    imgStyle: {
+      width: "132%",
+      maxWidth: "none",
+      left: "-1%",
+      top: "10%",
+      boxShadow: "0 24px 50px -12px rgba(0,0,0,0.5)",
     },
   },
   {
     src: "/conduit/home-api.png",
     alt: "Direct API call: run a saved pipeline from your own systems",
     imgStyle: {
-      width: "190%",
+      width: "136%",
       maxWidth: "none",
-      left: "-33%",
-      top: "-40%",
+      left: "-14%",
+      top: "-7%",
       boxShadow: "0 24px 50px -12px rgba(0,0,0,0.5)",
     },
   },
