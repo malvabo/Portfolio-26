@@ -19,7 +19,7 @@ export function ConduitSection() {
           <div>
             <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">About</h3>
             <p className="text-base leading-relaxed text-foreground">
-              A pipeline builder for compliance documents. Extract pulls structured data out of supplier documents; Inject detects a form's layout and fills it. Each pipeline is a saved recipe of fields plus a trigger, so it can be duplicated for the next supplier or called over an API from an importer's own systems.
+              A pipeline builder for compliance documents. Extract pulls data out of supplier documents, Inject fills forms. Each pipeline is saved once, then reused or called over an API.
             </p>
             <a
               href="/compliance-certification.html"
