@@ -2,25 +2,25 @@
 // UI stays legible at thumbnail size. w/left/top are percentages of the tile.
 const CONDUIT_IMAGES = [
   {
+    src: "/conduit/pipelines.png",
+    alt: "Conduit pipelines library with saved pipelines and their live status",
+    w: 150,
+    left: -26,
+    top: 4,
+  },
+  {
+    src: "/conduit/api.png",
+    alt: "View code dialog: run a saved pipeline from Python, TypeScript or REST",
+    w: 240,
+    left: -64,
+    top: -50,
+  },
+  {
     src: "/conduit/start.png",
-    alt: "Choosing between Extract, to pull data out of documents, and Inject, to fill a form",
+    alt: "Onboarding: choose Extract to pull data out, or Inject to fill a form",
     w: 153,
     left: -39,
     top: -9,
-  },
-  {
-    src: "/conduit/extract-results.png",
-    alt: "Extracted values returned structured, highlighted where they were found on the document",
-    w: 174,
-    left: -73,
-    top: -2,
-  },
-  {
-    src: "/conduit/inbox.png",
-    alt: "Runs: a plain record of the documents the pipelines have processed",
-    w: 175,
-    left: -32,
-    top: 2,
   },
 ]
 
