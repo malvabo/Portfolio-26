@@ -1,43 +1,17 @@
-// Three distinct compositions of real product screens on a deep-blue tile:
-// Runs floats as a clean record, the Extract fields table is framed on its
-// schema, and the API dialog is centered on its code. imgStyle places each.
-const CONDUIT_IMAGES: {
-  src: string
-  alt: string
-  imgStyle: React.CSSProperties
-}[] = [
+// Product compositions supplied as finished images, each already on its own
+// background, so the tile just holds them edge to edge.
+const CONDUIT_IMAGES = [
   {
-    src: "/conduit/home-runs.png",
-    alt: "Runs: the documents the pipelines have processed",
-    imgStyle: {
-      width: "150%",
-      maxWidth: "none",
-      left: "2%",
-      top: "9%",
-      boxShadow: "0 24px 50px -12px rgba(0,0,0,0.45)",
-    },
+    src: "/conduit/home-certificate.png",
+    alt: "A coffee Certificate of Origin open in Conduit with the fields to extract beside it",
   },
   {
-    src: "/conduit/home-schema.png",
-    alt: "Extract builder: the fields and types pulled from each document",
-    imgStyle: {
-      width: "132%",
-      maxWidth: "none",
-      left: "-1%",
-      top: "10%",
-      boxShadow: "0 24px 50px -12px rgba(0,0,0,0.5)",
-    },
+    src: "/conduit/home-fields.png",
+    alt: "The fields to extract from an invoice, each with a type and a description",
   },
   {
-    src: "/conduit/home-api.png",
-    alt: "Direct API call: run a saved pipeline from your own systems",
-    imgStyle: {
-      width: "136%",
-      maxWidth: "none",
-      left: "-14%",
-      top: "-7%",
-      boxShadow: "0 24px 50px -12px rgba(0,0,0,0.5)",
-    },
+    src: "/conduit/home-apicall.png",
+    alt: "Direct API call dialog: run a saved pipeline from Python, TypeScript or REST",
   },
 ]
 
@@ -103,16 +77,11 @@ export function ConduitSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {CONDUIT_IMAGES.map((image, idx) => (
-            <div
-              key={idx}
-              className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-gradient-to-br from-[#1e3a8a] via-[#2563eb] to-[#60a5fa]"
-            >
-              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(255,255,255,0.25),transparent_60%)] pointer-events-none" />
+            <div key={idx} className="relative aspect-[16/10] overflow-hidden rounded-2xl bg-[#f1f1f1]">
               <img
                 src={image.src}
                 alt={image.alt}
-                className="absolute z-10 rounded-md ring-1 ring-black/10"
-                style={image.imgStyle}
+                className="absolute inset-0 h-full w-full object-cover"
                 loading="lazy"
               />
             </div>
