@@ -1,26 +1,15 @@
-// Each preview is cropped into the part of the screen that carries the idea, so the
-// UI stays legible at thumbnail size. w/left/top are percentages of the tile.
 const CONDUIT_IMAGES = [
   {
-    src: "/conduit/pipelines.png",
-    alt: "Conduit pipelines library with saved pipelines and their live status",
-    w: 150,
-    left: -26,
-    top: 4,
+    src: "/conduit/home-extract.png",
+    alt: "Extract results: values pulled from a document, highlighted on the page",
   },
   {
-    src: "/conduit/api.png",
-    alt: "View code dialog: run a saved pipeline from Python, TypeScript or REST",
-    w: 240,
-    left: -64,
-    top: -50,
+    src: "/conduit/home-runs.png",
+    alt: "Runs: the documents the pipelines have processed",
   },
   {
-    src: "/conduit/start.png",
-    alt: "Onboarding: choose Extract to pull data out, or Inject to fill a form",
-    w: 153,
-    left: -39,
-    top: -9,
+    src: "/conduit/home-api.png",
+    alt: "Direct API call: run a saved pipeline from your own systems",
   },
 ]
 
@@ -88,14 +77,13 @@ export function ConduitSection() {
           {CONDUIT_IMAGES.map((image, idx) => (
             <div
               key={idx}
-              className="relative aspect-[4/3] overflow-hidden rounded-lg bg-gradient-to-br from-[#c2d1ea] via-[#d5e0f1] to-[#e7e1d8]"
+              className="relative aspect-[4/3] overflow-hidden rounded-lg bg-gradient-to-br from-[#c2d1ea] via-[#d5e0f1] to-[#e7e1d8] flex items-center justify-center p-4"
             >
               <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(255,255,255,0.35),transparent_65%)] pointer-events-none" />
               <img
                 src={image.src}
                 alt={image.alt}
-                className="absolute z-10 max-w-none"
-                style={{ width: `${image.w}%`, left: `${image.left}%`, top: `${image.top}%` }}
+                className="relative z-10 max-h-full max-w-full object-contain rounded-md shadow-xl ring-1 ring-black/[0.07]"
                 loading="lazy"
               />
             </div>

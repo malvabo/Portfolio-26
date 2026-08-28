@@ -25,7 +25,8 @@
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    html { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+    html { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; scroll-behavior: smooth; }
+    section[id] { scroll-margin-top: 2rem; }
 
     body {
       background: var(--background);
@@ -34,7 +35,7 @@
       line-height: 1.6;
     }
 
-    .page { max-width: 50rem; margin: 0 auto; padding: 6rem 2rem 5rem; }
+    .page { max-width: 66rem; margin: 0 auto; padding: 6rem 2rem 5rem; display: flex; gap: 3.5rem; align-items: flex-start; }
 
     
 
@@ -269,9 +270,22 @@
 </head>
 <body>
   <div class="page">
-    <main>
+    <aside>
       <a class="back" href="/">&larr; Back to work</a>
+      <nav>
+        <a href="#context">Context</a>
+        <a href="#first-bet">The first bet</a>
+        <a href="#testing">What testing revealed</a>
+        <a href="#pipeline">The pipeline</a>
+        <a href="#flows">Two flows</a>
+        <a href="#approach">Approach</a>
+        <a href="#subtractions">The subtractions</a>
+        <a href="#craft">The craft</a>
+        <a href="#impact">Impact</a>
+      </nav>
+    </aside>
 
+    <main>
       <header class="col" style="margin-bottom: 2.5rem;">
         <h1>Conduit</h1>
         <p class="sub">From a fixed compliance engine to pipelines importers build themselves</p>
@@ -316,7 +330,7 @@
       </blockquote>
       -->
 
-      <section class="col">
+      <section class="col" id="context">
         <h3>The problem &amp; context</h3>
         <div class="stack" style="margin-bottom: 1.25rem;">
           <p>
@@ -348,7 +362,7 @@
         </div>
       </section>
 
-      <section class="col">
+      <section class="col" id="first-bet">
         <h3>The first bet</h3>
         <div class="stack">
           <p>
@@ -359,7 +373,7 @@
         </div>
       </section>
 
-      <section class="col">
+      <section class="col" id="testing">
         <h3>What testing revealed</h3>
         <div class="stack">
           <p>
@@ -374,7 +388,7 @@
         </div>
       </section>
 
-      <section class="col">
+      <section class="col" id="pipeline">
         <h2>The pipeline</h2>
         <div class="stack" style="margin-bottom: 1.25rem;">
           <p>
@@ -394,7 +408,7 @@
         </div>
       </section>
 
-      <section class="col">
+      <section class="col" id="flows">
         <h2>Two flows, not one chain</h2>
         <div class="stack" style="margin-bottom: 1.25rem;">
           <p>
@@ -404,7 +418,7 @@
         </div>
       </section>
 
-      <section class="col">
+      <section class="col" id="approach">
         <h2>Approach</h2>
         <div class="stack" style="margin-bottom: 1.25rem;">
           <p>
@@ -428,7 +442,7 @@
         </div>
       </section>
 
-      <section class="col">
+      <section class="col" id="subtractions">
         <h3>The subtractions</h3>
         <div class="stack">
           <p>
@@ -448,7 +462,7 @@
         </div>
       </section>
 
-      <section class="col">
+      <section class="col" id="craft">
         <h3>The craft underneath</h3>
         <div class="stack" style="margin-bottom: 1.25rem;">
           <p>
@@ -470,7 +484,7 @@
         <p class="caption">Components, states and rules documented in the system itself, not just built in the app.</p>
       </section>
 
-      <section class="panel">
+      <section class="panel" id="impact">
         <h2 style="margin-bottom: 0.75rem;">Impact</h2>
         <p style="margin-bottom: 1.75rem;">
           The move that mattered was commercial. A fixed engine sells one reading of the rules; a pipeline importers
