@@ -64,17 +64,18 @@ export function ConduitSection() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {CONDUIT_IMAGES.map((image, idx) => (
-            <div key={idx} className="relative aspect-[16/10] overflow-hidden rounded-lg bg-gray-50 border border-gray-200">
-              <img
-                src={image.src}
-                alt={image.alt}
-                className="absolute inset-0 h-full w-full object-cover"
-                loading="lazy"
-              />
-            </div>
-          ))}
+        <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-[#eef2fb] via-[#f5f3f0] to-[#efe7dc] p-5 md:p-8">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-white/50 via-transparent to-transparent pointer-events-none" />
+          <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
+            {CONDUIT_IMAGES.map((image, idx) => (
+              <div
+                key={idx}
+                className="overflow-hidden rounded-lg bg-white shadow-lg ring-1 ring-black/[0.06]"
+              >
+                <img src={image.src} alt={image.alt} className="w-full h-auto object-contain" loading="lazy" />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
