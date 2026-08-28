@@ -1,8 +1,29 @@
+// Each preview is cropped into the part of the screen that carries the idea, so the
+// UI stays legible at thumbnail size. w/left/top are percentages of the tile.
 const CONDUIT_IMAGES = [
-  { src: "/conduit/extract-config.png", alt: "Extract Configure: the fields to pull from the document, with type and description" },
-  { src: "/conduit/extract-results.png", alt: "Extract Results: structured values pulled from the document, mapped to where they sit on the page" },
-  { src: "/conduit/inbox.png", alt: "Runs: a plain record of what the pipelines have processed" },
+  {
+    src: "/conduit/start.png",
+    alt: "Choosing between Extract, to pull data out of documents, and Inject, to fill a form",
+    w: 153,
+    left: -39,
+    top: -9,
+  },
+  {
+    src: "/conduit/extract-config.png",
+    alt: "Fields to extract: commodity, quality and grade, each with a type and a description",
+    w: 174,
+    left: -73,
+    top: -2,
+  },
+  {
+    src: "/conduit/extract-results.png",
+    alt: "Extracted values returned structured, highlighted where they were found on the document",
+    w: 174,
+    left: -73,
+    top: -2,
+  },
 ]
+
 export function ConduitSection() {
   return (
     <section className="container mx-auto px-8 lg:px-12 pt-8 pb-8 md:pb-12">
@@ -67,13 +88,14 @@ export function ConduitSection() {
           {CONDUIT_IMAGES.map((image, idx) => (
             <div
               key={idx}
-              className="relative aspect-[4/3] overflow-hidden rounded-lg bg-gradient-to-br from-[#c2d1ea] via-[#d5e0f1] to-[#e7e1d8] flex items-center justify-center p-4"
+              className="relative aspect-[4/3] overflow-hidden rounded-lg bg-gradient-to-br from-[#c2d1ea] via-[#d5e0f1] to-[#e7e1d8]"
             >
               <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(255,255,255,0.35),transparent_65%)] pointer-events-none" />
               <img
                 src={image.src}
                 alt={image.alt}
-                className="relative z-10 max-h-full max-w-full object-contain rounded-md"
+                className="absolute z-10 max-w-none"
+                style={{ width: `${image.w}%`, left: `${image.left}%`, top: `${image.top}%` }}
                 loading="lazy"
               />
             </div>
