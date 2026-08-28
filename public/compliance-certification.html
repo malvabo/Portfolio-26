@@ -282,7 +282,7 @@
         <ul>
           <li><span class="dot">&bull;</span><span>Moved the product from our compliance engine to their document infrastructure</span></li>
           <li><span class="dot">&bull;</span><span>Made the pipeline the unit: built once, saved, reused, callable over an API</span></li>
-          <li><span class="dot">&bull;</span><span>Split the work into two independent flows rather than one assumed chain</span></li>
+          <li><span class="dot">&bull;</span><span>Split the work into two independent flows instead of one assumed chain</span></li>
           <li><span class="dot">&bull;</span><span>Cut the validation layer to keep the second version shippable</span></li>
         </ul>
       </section>
@@ -299,7 +299,7 @@
         <div class="stack" style="margin-bottom: 1.25rem;">
           <p>
             The project began with the operation, not a feature. My first job was to map the real document flows,
-            where people got stuck and where errors piled up, so we could prioritise from evidence rather than from
+            where people got stuck and where errors piled up, so we could prioritise from evidence, not from
             the most obvious build.
           </p>
         </div>
@@ -327,9 +327,9 @@
         <h3>What testing revealed</h3>
         <div class="stack">
           <p>
-            Once the team started working through the live MVP, the scope quietly fell apart. There were far more
-            rules and edge cases than we had accounted for, and the pattern sharpened as we moved toward larger
-            importers. At that scale compliance is not one ruleset. It bends with the country and the product, and
+            Once the team started working through the live MVP, the scope did not hold. We found far more rules and
+            edge cases than we had accounted for, and it got clearer as we moved toward larger importers. At that
+            scale compliance is not one ruleset. It bends with the country and the product, and
             every serious importer already has its own interpretation of what a document must contain.
           </p>
           <p>
@@ -379,7 +379,7 @@
           </div>
           <div class="tier">
             <p class="name">What changed after</p>
-            <p>The product became neutral infrastructure, configured against each importer&rsquo;s own reality.</p>
+            <p>The product became configurable, set up against each importer&rsquo;s own rules.</p>
           </div>
         </div>
       </section>
@@ -393,7 +393,7 @@
           </div>
           <div class="tier">
             <p class="name">Inject</p>
-            <p>The mirror image. Detect a form&rsquo;s layout, place the fields, and fill them with the values you bring.</p>
+            <p>Inject runs the same pipeline backwards. Detect a form&rsquo;s layout, place the fields, and fill them with the values you bring.</p>
           </div>
         </div>
         <div class="stack" style="margin-top: 1.5rem;">
@@ -404,9 +404,9 @@
             only some importers have.
           </p>
           <p>
-            <strong>The change that mattered was reuse.</strong> A pipeline is a saved object. Duplicate it for
+            The change that mattered was reuse. A pipeline is a saved object. Duplicate it for
             another supplier, adjust it, or connect it over the API so an incoming document triggers it from the
-            importer&rsquo;s own systems. The work compounds instead of evaporating.
+            importer&rsquo;s own systems. Setup done once carries over to the next supplier.
           </p>
         </div>
       </section>
@@ -415,12 +415,12 @@
         <h3>The subtractions</h3>
         <div class="stack">
           <p>
-            <strong>We dropped validation.</strong> Mapping every rule across every country and product was
+            We dropped validation. Mapping every rule across every country and product was
             extremely hard, it was not what customers asked us to own, and the MVP did not need it to be valuable.
             Rather than let a half&#8209;built rules engine hold the release back, we parked it.
           </p>
           <p>
-            <strong>We narrowed the surface.</strong> Triggers collapsed to the two that are unambiguous, an API
+            We narrowed the surface. Triggers collapsed to the two that are unambiguous, an API
             request or on demand, after a watched&#8209;folder option raised the obvious question of which folder. The
             inbox stayed background context rather than a place to build pipelines. Even a vanity &ldquo;documents
             processed&rdquo; count gave way to a plain &ldquo;last updated.&rdquo;
