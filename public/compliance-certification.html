@@ -348,16 +348,16 @@
         <h3>The problem &amp; context</h3>
         <div class="stack" style="margin-bottom: 1.25rem;">
           <p>
-            Conduit automates the paperwork that clears food and produce shipments through customs. The documents are
-            high volume, repetitive, and sit on the critical path, so one wrong field holds a container at the port. I
-            mapped how the operation actually ran before we designed anything.
+            Conduit fills in the paperwork that gets food shipments through customs. Every shipment needs the same
+            documents, filled in by hand, and one wrong field can leave a container sitting at the port. Before
+            designing anything, I sat with the teams doing this work to see where it broke.
           </p>
         </div>
         <div class="panel" style="margin-top: 0;">
           <ul>
-            <li><span class="dot">1.</span><span>Compliance documents were high&#8209;volume, repetitive and error&#8209;prone</span></li>
-            <li><span class="dot">2.</span><span>They sat on the critical path for clearing shipments</span></li>
-            <li><span class="dot">3.</span><span>Nothing made the work reusable from one shipment to the next</span></li>
+            <li><span class="dot">1.</span><span>Teams filled in the same documents by hand for every shipment</span></li>
+            <li><span class="dot">2.</span><span>Mistakes were easy to make, and a rejected document held up the whole shipment</span></li>
+            <li><span class="dot">3.</span><span>The work they did on one shipment saved them nothing on the next</span></li>
           </ul>
         </div>
       </section>
@@ -366,9 +366,9 @@
         <h3>User needs</h3>
         <div class="stack">
           <p>
-            In interviews, importers described the job as <em>&ldquo;the same paperwork every shipment, filled a
-            little differently.&rdquo;</em> They needed the setup to carry over to the next shipment, and to follow
-            <strong>their own reading of the rules</strong>, not ours.
+            Importers told us it was <em>&ldquo;the same paperwork every shipment, filled a little
+            differently.&rdquo;</em> They wanted to set it up once and have it work the next time, following
+            <strong>the rules their own compliance team goes by</strong>, not ours.
           </p>
         </div>
       </section>
@@ -377,8 +377,8 @@
         <h3>Business goal</h3>
         <div class="stack">
           <p>
-            I was brought in to automate the documents on the critical path in a way a varied customer base could
-            actually run, so the product could sell beyond a single interpretation of compliance.
+            Automate this paperwork for customers who each read the rules differently, so we could sell to more than
+            one kind of importer.
           </p>
         </div>
       </section>
@@ -387,8 +387,8 @@
         <h3>The pipeline</h3>
         <div class="stack" style="margin-bottom: 1.25rem;">
           <p>
-            The pipeline became the unit of the product: a recipe of fields to pull or fill, saved once and reused on
-            every document you point it at.
+            A pipeline is a saved setup. You tell it which fields to read from a document, or which fields to fill in
+            on a form. Set it up for a supplier once and it handles the rest of their documents.
           </p>
         </div>
         <div class="figure">
