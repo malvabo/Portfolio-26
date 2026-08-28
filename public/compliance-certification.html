@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Food supply chain compliance: automating questionnaires and evidence</title>
+  <title>Conduit: from a fixed compliance engine to pipelines importers build themselves</title>
   <meta name="robots" content="noindex" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -251,11 +251,11 @@
       <a class="back" href="/">&larr; Back to work</a>
 
       <header class="col" style="margin-bottom: 2.5rem;">
-        <h1>Food supply chain compliance</h1>
-        <p class="sub">Automating compliance questionnaires and the evidence behind them</p>
+        <h1>Conduit</h1>
+        <p class="sub">From a fixed compliance engine to pipelines importers build themselves</p>
         <p class="lede">
-          Turned a parsing brief into a complete work artifact, so a compliance team gets back the
-          counterparty&rsquo;s own document, answered and ready to send.
+          Shipped an MVP with the compliance rules baked in on our side, then let testing reframe the product:
+          compliance can&rsquo;t be hard&#8209;coded for a customer base this varied.
         </p>
       </header>
 
@@ -266,25 +266,25 @@
         </div>
         <div>
           <p class="label">Scope</p>
-          <p class="value">Research, product direction, design system</p>
+          <p class="value">Operation mapping, product direction, design</p>
         </div>
         <div>
-          <p class="label">Timeframe</p>
-          <p class="value">~8 weeks</p>
+          <p class="label">Shape</p>
+          <p class="value">MVP, then a pivot after testing</p>
         </div>
         <div>
-          <p class="label">Reach</p>
-          <p class="value">5 customer teams and their suppliers</p>
+          <p class="label">Domain</p>
+          <p class="value"><span class="tag">Supply chain</span></p>
         </div>
       </div>
 
       <section class="panel">
         <h3 style="margin-bottom: 1rem;">Impact summary</h3>
         <ul>
-          <li><span class="dot">&bull;</span><span>Reframed a document-parsing brief into a finished deliverable</span></li>
-          <li><span class="dot">&bull;</span><span>Closed the loop from questionnaire to completed, correctly formatted document</span></li>
-          <li><span class="dot">&bull;</span><span>Built evidence evaluation as a shared service the platform&rsquo;s other agents call</span></li>
-          <li><span class="dot">&bull;</span><span>Defined the product&rsquo;s first design system and accessibility baseline</span></li>
+          <li><span class="dot">&bull;</span><span>Moved the product from &ldquo;our compliance engine&rdquo; to &ldquo;your document infrastructure&rdquo;</span></li>
+          <li><span class="dot">&bull;</span><span>Made the pipeline the unit of the product: built once, saved, reused, callable over an API</span></li>
+          <li><span class="dot">&bull;</span><span>Split the work into two independent flows, Extract and Inject, instead of one assumed chain</span></li>
+          <li><span class="dot">&bull;</span><span>Cut the validation layer and narrowed the surface to keep the second version shippable</span></li>
         </ul>
       </section>
 
@@ -299,46 +299,55 @@
         <h3>The problem &amp; context</h3>
         <div class="stack" style="margin-bottom: 1.25rem;">
           <p>
-            Companies moving food across a supply chain answer the same request constantly. A counterparty
-            evaluating a shipment or a supplier sends a spreadsheet or a PDF with dozens of questions about the
-            produce and the controls around it: origin and traceability, certification status, storage and handling,
-            residue testing, the paperwork behind each claim.
+            The project began with the operation, not a feature. My first job was to understand the real document
+            flows, how paperwork moved, where people got stuck, and where time and errors piled up, then surface the
+            gaps rather than assume them. That mapping is what let us prioritise honestly. Instead of building the
+            most obvious thing, we could point at the parts of the workflow that were most painful and most
+            automatable.
           </p>
         </div>
         <div class="panel" style="margin-top: 0;">
           <ul>
-            <li><span class="dot">1.</span><span>Answers were scattered across certification reports, internal policies and previously answered questionnaires</span></li>
-            <li><span class="dot">2.</span><span>Every counterparty sent a different format, so nothing could be reused as sent</span></li>
-            <li><span class="dot">3.</span><span>Supporting evidence arrived incomplete, and the gap was only found downstream</span></li>
+            <li><span class="dot">1.</span><span>Compliance documentation kept surfacing: high&#8209;volume, repetitive, error&#8209;prone</span></li>
+            <li><span class="dot">2.</span><span>It sat on the critical path for clearing shipments</span></li>
+            <li><span class="dot">3.</span><span>Nothing in the existing flow made the work reusable from one shipment to the next</span></li>
           </ul>
         </div>
       </section>
 
       <section class="col">
-        <h3>User needs</h3>
+        <h3>The first bet</h3>
         <div class="stack">
           <p>
-            Research across both sides of the chain showed the time went into locating evidence rather than deciding
-            anything. Compliance teams did not need a faster way to look things up. They needed the counterparty&rsquo;s
-            document back, completed, in the format it arrived in.
+            We built an MVP that automated compliance documentation the way we understood it then, with the rules and
+            checks defined on our side. We encoded what &ldquo;valid&rdquo; looked like, ran documents against it, and
+            flagged what did not pass. On paper it was the right scope: opinionated, guided, useful out of the box.
           </p>
         </div>
       </section>
 
       <section class="col">
-        <h3>Business goal</h3>
+        <h3>What testing revealed</h3>
         <div class="stack">
           <p>
-            Make the compliance workflow repeatable enough to scale across trade lanes without modelling each one
-            first, so the company could widen the services it sold without adding headcount to every new customer.
+            Once I started testing it, and the team started working through the live MVP, the scope quietly fell
+            apart. There were far more rules, validations and edge cases than we had accounted for, and most lived
+            outside what we had scoped.
+          </p>
+          <p>
+            The pattern sharpened as we moved toward larger importers. At that scale compliance is not one ruleset.
+            It bends with the country and the product, and every serious importer already has its own interpretation
+            of what a document must contain. The rules we had built were ours. What customers needed were theirs.
+            There was no realistic path to hand&#8209;mapping all of that into a first version without turning an MVP
+            into an open&#8209;ended rules&#8209;engineering project with no clean edge.
           </p>
         </div>
       </section>
 
       <section class="col">
-        <h2>Questionnaire workspace</h2>
+        <h2>The pipeline</h2>
         <div class="figure">
-          <div class="ph tall">Source questions, generated answers, and the evidence each answer came from</div>
+          <div class="ph tall">Pipeline builder: a recipe (the fields to pull or fill) and a trigger (when it runs)</div>
         </div>
       </section>
 
@@ -346,66 +355,95 @@
         <h2>Approach</h2>
         <div class="stack" style="margin-bottom: 1.25rem;">
           <p>
-            The strategy was to move the finish line. Extraction was treated as a step rather than the product, and
-            everything downstream of it was designed so the customer ends up holding something they can send. To
-            accomplish this:
+            We stopped being the authority on compliance and became the tool importers use to build their own.
+            Instead of forcing customers to accept, and review, logic we had pre&#8209;scoped, we gave them a generic,
+            flexible pipeline they configure against their own reality. To accomplish this:
           </p>
         </div>
         <div class="panel" style="margin-top: 0;">
           <ul>
-            <li><span class="dot">1.</span><span>Mapped the document journey end to end, from evidence capture to the counterparty&rsquo;s inbox</span></li>
-            <li><span class="dot">2.</span><span>Interviewed both sides of the chain, reaching hard-to-access suppliers through in-country consultants</span></li>
-            <li><span class="dot">3.</span><span>Made the deliverable the completed document, not a list of generated answers</span></li>
-            <li><span class="dot">4.</span><span>Moved the extraction schema into the customer&rsquo;s hands, suggested from a sample</span></li>
-            <li><span class="dot">5.</span><span>Built evidence evaluation as a service the platform&rsquo;s other agents call</span></li>
-            <li><span class="dot">6.</span><span>Defined status as the design system&rsquo;s load-bearing primitive, with accessibility setting the constraints</span></li>
+            <li><span class="dot">1.</span><span>Mapped the operation first, and let the gaps decide where the first release went</span></li>
+            <li><span class="dot">2.</span><span>Made the pipeline the unit of the product, defined by a recipe and a trigger</span></li>
+            <li><span class="dot">3.</span><span>Split the work into Extract and Inject, each able to stand alone</span></li>
+            <li><span class="dot">4.</span><span>Drafted schemas from a description of the document, so setup was not a blank slate</span></li>
+            <li><span class="dot">5.</span><span>Made pipelines persist, so they could be duplicated, adjusted and triggered over an API</span></li>
+            <li><span class="dot">6.</span><span>Removed the validation layer and narrowed the surface around the two flows</span></li>
           </ul>
         </div>
       </section>
 
       <section class="col">
-        <h3>Strategic moment: making the deliverable the document</h3>
+        <h3>Strategic moment: from our rules to their pipelines</h3>
         <div class="tiers">
           <div class="tier">
             <p class="name">The risk</p>
-            <p>Generated answers still left teams copying and pasting into whatever format had arrived that week.</p>
+            <p>Compliance logic we had pre&#8209;scoped could not cover a customer base this varied, and customers had to review it anyway.</p>
           </div>
           <div class="tier">
             <p class="name">The controversy</p>
-            <p>The team wanted to ship extraction and move on. Writing answers back into the source file extended scope late.</p>
+            <p>Abandoning the rules engine meant giving up the opinionated, useful&#8209;out&#8209;of&#8209;the&#8209;box positioning the MVP was built on.</p>
           </div>
           <div class="tier">
             <p class="name">What changed after</p>
-            <p>Upload the questionnaire, review the answers, download a completed file with its original formatting intact.</p>
-          </div>
-        </div>
-        <div class="figure" style="margin-top: 1.5rem;">
-          <div class="grid-2">
-            <div class="ph">Before: answers as a list to transcribe</div>
-            <div class="ph">After: the counterparty&rsquo;s document, completed</div>
+            <p>The product became neutral infrastructure. Importers configure pipelines against their own country and product reality.</p>
           </div>
         </div>
       </section>
 
       <section class="col">
-        <h3>Evidence evaluation infused into the platform</h3>
-        <div class="stack">
+        <h3>Two flows, deliberately independent</h3>
+        <div class="tiers two">
+          <div class="tier">
+            <p class="name">Extract</p>
+            <p>Point a pipeline at the documents a supplier sends and define the schema they need. Describe the document and what to pull, and the pipeline drafts the fields to edit.</p>
+          </div>
+          <div class="tier">
+            <p class="name">Inject</p>
+            <p>The mirror image. Detect a form&rsquo;s layout, place the fields, and fill them with the values you bring. Reformatting a supplier&rsquo;s paperwork into the importer&rsquo;s own is its own job.</p>
+          </div>
+        </div>
+        <div class="stack" style="margin-top: 1.5rem;">
           <p>
-            The second capability validates every piece of compliance evidence uploaded, checking captured
-            screenshots for completeness, verifying formatting, and confirming nothing is missing before the evidence
-            reaches a counterparty or an auditor.
+            It is tempting to treat these as two halves of one flow. Each has a standalone job. Extract often ends at
+            extraction, with the data going into an ERP and no new document to produce. Inject often starts without
+            an extraction, because the form already exists and the missing values arrived through some other channel.
+            Chaining them is possible, but making it the definition of the product would model a workflow only some
+            importers have.
           </p>
           <p>
-            It is not only customer-facing. A web agent captures evidence and sends it to the evaluator, which
-            identifies the gaps and feeds them back so the agent can iterate until the evidence is complete. It gives
-            the platform&rsquo;s other agents a feedback loop to work against.
+            <strong>The change that mattered was reuse.</strong> Before, this was a one&#8209;time effort: configure
+            it, run it once, done. A pipeline is now a saved object in a library. An importer can duplicate one for
+            another supplier and adjust it, or connect it over the API so an incoming document triggers it from their
+            own systems. The work compounds instead of evaporating.
           </p>
         </div>
         <div class="figure" style="margin-top: 1.5rem;">
           <div class="grid-2">
-            <div class="ph">Captured evidence with gaps identified</div>
-            <div class="ph">Agent iterating until the evidence is complete</div>
+            <div class="ph">Extract: schema drafted from a document description</div>
+            <div class="ph">Inject: form layout detected, fields placed</div>
           </div>
+        </div>
+      </section>
+
+      <section class="col">
+        <h3>The subtractions</h3>
+        <div class="stack">
+          <p>
+            Two of the strongest decisions were removals.
+          </p>
+          <p>
+            <strong>We dropped validation.</strong> The original MVP leaned on a validation layer, our rules deciding
+            what passed. Mapping every rule across every country and product was extremely hard, it was not what
+            customers were asking us to own, and the MVP did not need it to be valuable. Rather than let a half&#8209;built
+            rules engine hold the release back, we scoped it out and parked it for later iterations.
+          </p>
+          <p>
+            <strong>We narrowed the surface.</strong> Triggers collapsed to the two that are unambiguous and honest,
+            an incoming API request or on demand, after a watched&#8209;folder option raised the obvious question of
+            which folder. The inbox stayed background context, the place documents land, rather than a surface for
+            building pipelines. Even small signals got the same treatment: a vanity &ldquo;documents processed&rdquo;
+            count gave way to a plain &ldquo;last updated,&rdquo; because that is what a user actually needs to know.
+          </p>
         </div>
       </section>
 
@@ -413,23 +451,17 @@
         <h2 style="margin-bottom: 1.25rem;">Impact</h2>
         <div class="metrics">
           <div>
-            <p class="num">30+</p>
-            <p class="cap">Interviews across both sides of the chain</p>
+            <p class="num">2 flows</p>
+            <p class="cap">Extract and Inject, each useful on its own</p>
           </div>
           <div>
-            <p class="num">8 weeks</p>
-            <p class="cap">Kickoff to a shipped product</p>
+            <p class="num">1 unit</p>
+            <p class="cap">The reusable pipeline, duplicable and API&#8209;triggered</p>
           </div>
           <div>
-            <p class="num">5 teams</p>
-            <p class="cap">Customer teams onboarded</p>
+            <p class="num">&minus;1 layer</p>
+            <p class="cap">Validation scoped out to keep the release shippable</p>
           </div>
-        </div>
-        <div class="stack" style="margin-top: 1.5rem;">
-          <p>
-            The product launched without the instrumentation to support an accuracy figure, so none is claimed here.
-            The metric worth tracking is questionnaires completed without manual rework.
-          </p>
         </div>
       </section>
 
@@ -437,8 +469,11 @@
         <h3>Closing insight</h3>
         <div class="stack">
           <p>
-            Automating expert work is not about extracting the data. It is about producing the artifact the other
-            side actually asked for, and being able to show the evidence standing behind every line of it.
+            The MVP did its real job by being wrong in a useful way. Hard&#8209;coding compliance was the fastest way
+            to learn that compliance cannot be hard&#8209;coded for this customer base. The pivot to configurable,
+            reusable, API&#8209;connectable pipelines came directly from watching the first version meet reality, and
+            the discipline to remove the validation layer, and to keep narrowing the surface, is what kept the second
+            version shippable.
           </p>
         </div>
       </section>
