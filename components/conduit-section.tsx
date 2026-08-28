@@ -19,7 +19,7 @@ export function ConduitSection() {
           <div>
             <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">About</h3>
             <p className="text-base leading-relaxed text-foreground">
-              We shipped an MVP that automated compliance documentation with the rules defined on our side. Testing showed compliance is not one ruleset: it bends with the country and the product, and every serious importer already has its own reading of it. I reframed the product around a pipeline importers configure themselves.
+              A pipeline builder for compliance documents. Extract pulls structured data out of supplier documents; Inject detects a form's layout and fills it. Each pipeline is a saved recipe of fields plus a trigger, so it can be duplicated for the next supplier or called over an API from an importer's own systems.
             </p>
             <a
               href="/compliance-certification.html"
@@ -36,12 +36,12 @@ export function ConduitSection() {
             <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">Results</h3>
             <div className="space-y-4">
               <div>
-                <div className="text-xl font-medium text-foreground mb-0.5">2 flows</div>
-                <div className="text-sm text-muted-foreground opacity-80">Extract and Inject, each useful on its own</div>
+                <div className="text-xl font-medium text-foreground mb-0.5">5 teams</div>
+                <div className="text-sm text-muted-foreground opacity-80">onboarded onto the MVP, whose testing is what reframed the product</div>
               </div>
               <div>
-                <div className="text-xl font-medium text-foreground mb-0.5">1 unit</div>
-                <div className="text-sm text-muted-foreground opacity-80">the reusable pipeline, duplicable and API-triggered</div>
+                <div className="text-xl font-medium text-foreground mb-0.5">30+ interviews</div>
+                <div className="text-sm text-muted-foreground opacity-80">across importers and co-ops, mapping the document flow before any build</div>
               </div>
             </div>
           </div>
@@ -68,12 +68,13 @@ export function ConduitSection() {
           {CONDUIT_IMAGES.map((image, idx) => (
             <div
               key={idx}
-              className="relative aspect-[4/3] overflow-hidden rounded-lg bg-black flex items-center justify-center p-3"
+              className="relative aspect-[4/3] overflow-hidden rounded-lg bg-gradient-to-br from-[#4A4038] via-[#2E2822] to-[#1A1613] flex items-center justify-center p-4"
             >
+              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(232,227,221,0.16),transparent_60%)] pointer-events-none" />
               <img
                 src={image.src}
                 alt={image.alt}
-                className="max-h-full max-w-full object-contain rounded-sm"
+                className="relative z-10 max-h-full max-w-full object-contain rounded-md shadow-2xl ring-1 ring-white/10"
                 loading="lazy"
               />
             </div>
