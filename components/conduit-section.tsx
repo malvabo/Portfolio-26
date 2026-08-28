@@ -68,13 +68,13 @@ export function ConduitSection() {
           {CONDUIT_IMAGES.map((image, idx) => (
             <div
               key={idx}
-              className="relative aspect-[4/3] overflow-hidden rounded-lg bg-gradient-to-br from-[#4A4038] via-[#2E2822] to-[#1A1613] flex items-center justify-center p-4"
+              className="relative aspect-[4/3] overflow-hidden rounded-lg bg-gradient-to-br from-[#dbe4f5] via-[#e9eef8] to-[#f4f1ea] flex items-center justify-center p-4"
             >
-              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(232,227,221,0.16),transparent_60%)] pointer-events-none" />
+              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(255,255,255,0.7),transparent_65%)] pointer-events-none" />
               <img
                 src={image.src}
                 alt={image.alt}
-                className="relative z-10 max-h-full max-w-full object-contain rounded-md shadow-2xl ring-1 ring-white/10"
+                className="relative z-10 max-h-full max-w-full object-contain rounded-md shadow-xl ring-1 ring-black/[0.07]"
                 loading="lazy"
               />
             </div>
