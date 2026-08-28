@@ -209,32 +209,23 @@ export default function ConduitCaseStudy() {
               </div>
               <p className="text-sm text-muted-foreground max-w-[750px] mt-3 text-center mb-6">Describe the document and the schema drafts itself, ready to adjust.</p>
 
+              {/* Strategic moment */}
+              <div id="moment" className="max-w-[750px] mt-10 mb-6">
+                <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Strategic moment</p>
+                <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4">
+                  From our rules to theirs
+                </h2>
+                <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground">
+                  <p>The MVP shipped with a built-in rules engine, our reading of what compliance required. Testing showed the flaw: compliance bends with the country and the product, so one fixed ruleset never fit a customer base this varied.</p>
+                  <p>Dropping it was the hard call. The rules engine was the opinionated core the product had been sold on, and letting it go meant trusting customers to set their own rules instead of us.</p>
+                  <p>That trade is what made Conduit sellable. Each importer now configures the pipeline to the rules they actually work under, rather than the ones we guessed at.</p>
+                </div>
+              </div>
+
               <div className="rounded-xl overflow-hidden max-w-[750px] my-6">
                 <LightboxImage src="/conduit/home-api.png" alt="Direct API call dialog: run a saved pipeline from Python, TypeScript or REST" className="w-full h-auto object-cover" />
               </div>
               <p className="text-sm text-muted-foreground max-w-[750px] mt-3 text-center">Every saved pipeline gets an endpoint, so customers can run it from their own systems.</p>
-            </section>
-
-            {/* Strategic moment */}
-            <section id="moment" className="mb-14">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Strategic moment</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 max-w-[750px]">
-                From our rules to theirs
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-[750px]">
-                <div className="border border-[#EBEBEB] rounded-lg p-4 bg-[#F5F3F0]">
-                  <p className="text-sm font-medium text-foreground mb-1.5">The risk</p>
-                  <p className="text-sm leading-relaxed text-muted-foreground">Compliance bends with the country and the product. One fixed ruleset could not cover a base this varied.</p>
-                </div>
-                <div className="border border-[#EBEBEB] rounded-lg p-4 bg-[#F5F3F0]">
-                  <p className="text-sm font-medium text-foreground mb-1.5">The controversy</p>
-                  <p className="text-sm leading-relaxed text-muted-foreground">Dropping the rules engine meant giving up the opinionated positioning the MVP was built on.</p>
-                </div>
-                <div className="border border-[#EBEBEB] rounded-lg p-4 bg-[#F5F3F0]">
-                  <p className="text-sm font-medium text-foreground mb-1.5">What changed after</p>
-                  <p className="text-sm leading-relaxed text-muted-foreground">Each importer configures the pipeline to their own rules, which is what made it sellable.</p>
-                </div>
-              </div>
             </section>
 
             {/* Design system */}
