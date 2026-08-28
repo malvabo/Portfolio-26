@@ -1,9 +1,8 @@
 const CONDUIT_IMAGES = [
-  { src: "/conduit/pipelines.png", alt: "Conduit pipelines library with saved pipelines and their live status" },
-  { src: "/conduit/api.png", alt: "View code dialog: run a saved pipeline from Python, TypeScript or REST" },
-  { src: "/conduit/start.png", alt: "Onboarding: choose Extract to pull data out, or Inject to fill a form" },
+  { src: "/conduit/extract-config.png", alt: "Extract Configure: the fields to pull from the document, with type and description" },
+  { src: "/conduit/extract-results.png", alt: "Extract Results: structured values pulled from the document, mapped to where they sit on the page" },
+  { src: "/conduit/inbox.png", alt: "Runs: a plain record of what the pipelines have processed" },
 ]
-
 export function ConduitSection() {
   return (
     <section className="container mx-auto px-8 lg:px-12 pt-8 pb-8 md:pb-12">
