@@ -36,7 +36,7 @@ export default function ConduitCaseStudy() {
             <div className="mb-8 max-w-[750px]">
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-3">Conduit · Supply chain · Document Automation</p>
               <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl tracking-[-0.02em] leading-[1.15] mb-4">
-                Conduit: Turning a fixed compliance engine into pipelines importers build themselves
+                Conduit: Document pipelines importers build themselves
               </h1>
               <p className="text-[17px] leading-relaxed text-muted-foreground">
                 Shipped an MVP with our compliance rules baked in, then let testing reframe the product around rules each customer sets.
