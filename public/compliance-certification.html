@@ -343,10 +343,10 @@
       <section class="panel">
         <h3 style="margin-bottom: 1rem;">Impact summary</h3>
         <ul>
-          <li><span class="dot">&bull;</span><span>Changed the product from applying our compliance rules to letting each importer set their own</span></li>
-          <li><span class="dot">&bull;</span><span>Made the pipeline the thing you set up: build it once, then reuse it or run it from your own system</span></li>
-          <li><span class="dot">&bull;</span><span>Split the work into two jobs: Extract reads data out of documents, Inject writes it into forms</span></li>
-          <li><span class="dot">&bull;</span><span>Dropped the rule&#8209;checking layer so the second version could ship</span></li>
+          <li><span class="dot">&bull;</span><span>Handed the rules to importers: each one now defines what a valid document looks like, instead of us</span></li>
+          <li><span class="dot">&bull;</span><span>Set a supplier up once, and every document from them after that goes through the same setup</span></li>
+          <li><span class="dot">&bull;</span><span>Shipped two flows: Extract pulls data out of documents, Inject fills forms in</span></li>
+          <li><span class="dot">&bull;</span><span>Left automatic rule&#8209;checking out of scope, so the reworked version could ship</span></li>
         </ul>
       </section>
 
