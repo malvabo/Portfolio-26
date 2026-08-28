@@ -298,7 +298,7 @@
         <h3>The problem &amp; context</h3>
         <div class="stack" style="margin-bottom: 1.25rem;">
           <p>
-            The project began with the operation, not a feature. My first job was to map the real document flows,
+            The project started with how the operation actually ran. My first job was to map the real document flows,
             where people got stuck and where errors piled up, so we could prioritise from evidence, not from
             the most obvious build.
           </p>
@@ -327,7 +327,7 @@
         <h3>What testing revealed</h3>
         <div class="stack">
           <p>
-            Once the team started working through the live MVP, the scope did not hold. We found far more rules and
+            Once the team started working through the live MVP, the gaps showed up fast. We found far more rules and
             edge cases than we had accounted for, and it got clearer as we moved toward larger importers. At that
             scale compliance is not one ruleset. It bends with the country and the product, and
             every serious importer already has its own interpretation of what a document must contain.
@@ -385,33 +385,6 @@
       </section>
 
       <section class="col">
-        <h3>Two flows, deliberately independent</h3>
-        <div class="tiers two">
-          <div class="tier">
-            <p class="name">Extract</p>
-            <p>Point a pipeline at a supplier&rsquo;s documents and define the schema. Describe what to pull and the pipeline drafts the fields to edit.</p>
-          </div>
-          <div class="tier">
-            <p class="name">Inject</p>
-            <p>Inject runs the same pipeline backwards. Detect a form&rsquo;s layout, place the fields, and fill them with the values you bring.</p>
-          </div>
-        </div>
-        <div class="stack" style="margin-top: 1.5rem;">
-          <p>
-            Each has a standalone job. Extract often ends at extraction, with data going into an ERP and no document
-            to produce. Inject often starts without an extraction, because the form already exists and the values
-            arrived some other way. Chaining them is possible, but making it the definition would model a workflow
-            only some importers have.
-          </p>
-          <p>
-            The change that mattered was reuse. A pipeline is a saved object. Duplicate it for
-            another supplier, adjust it, or connect it over the API so an incoming document triggers it from the
-            importer&rsquo;s own systems. Setup done once carries over to the next supplier.
-          </p>
-        </div>
-      </section>
-
-      <section class="col">
         <h3>The subtractions</h3>
         <div class="stack">
           <p>
@@ -443,17 +416,6 @@
             <p class="num">&minus;1 layer</p>
             <p class="cap">Validation scoped out to keep the release shippable</p>
           </div>
-        </div>
-      </section>
-
-      <section class="col">
-        <h3>Closing insight</h3>
-        <div class="stack">
-          <p>
-            The MVP did its real job by being wrong in a useful way. Hard&#8209;coding compliance was the fastest way
-            to learn that compliance cannot be hard&#8209;coded for this customer base, and the discipline to remove
-            the validation layer is what kept the second version shippable.
-          </p>
         </div>
       </section>
 
