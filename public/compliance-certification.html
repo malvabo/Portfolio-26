@@ -320,9 +320,8 @@
         <h3>The problem &amp; context</h3>
         <div class="stack" style="margin-bottom: 1.25rem;">
           <p>
-            The project started with how the operation actually ran. My first job was to map the real document flows,
-            where people got stuck and where errors piled up, so we could prioritise from evidence, not from
-            the most obvious build.
+            I started with how the operation actually ran, mapping the real document flows, where people got stuck
+            and where errors piled up, so we prioritised from evidence rather than the obvious build.
           </p>
         </div>
         <div class="panel" style="margin-top: 0;">
@@ -338,9 +337,9 @@
         <h3>The first bet</h3>
         <div class="stack">
           <p>
-            We built an MVP that automated compliance documentation with the rules defined on our side. We encoded
-            what &ldquo;valid&rdquo; looked like, ran documents against it, and flagged what did not pass. On paper it
-            was the right scope: opinionated and useful out of the box.
+            We built an MVP that automated compliance docs with the rules defined on our side: encode what
+            &ldquo;valid&rdquo; looks like, run documents against it, flag what fails. On paper, the right scope,
+            opinionated and useful out of the box.
           </p>
         </div>
       </section>
@@ -349,14 +348,13 @@
         <h3>What testing revealed</h3>
         <div class="stack">
           <p>
-            Once the team started working through the live MVP, the gaps showed up fast. We found far more rules and
-            edge cases than we had accounted for, and it got clearer as we moved toward larger importers. At that
-            scale compliance is not one ruleset. It bends with the country and the product, and
-            every serious importer already has its own interpretation of what a document must contain.
+            Once the team worked through the live MVP, the gaps showed fast, more so with larger importers. At that
+            scale compliance is not one ruleset: it bends with the country and the product, and every serious
+            importer already has its own reading of what a document must contain.
           </p>
           <p>
-            The rules we had built were ours. What customers needed were theirs, and there was no path to hand&#8209;mapping
-            all of it without turning an MVP into an open&#8209;ended rules&#8209;engineering project.
+            The rules we had built were ours; what customers needed were theirs, with no path to hand&#8209;mapping all
+            of it without turning an MVP into an open&#8209;ended rules&#8209;engineering project.
           </p>
         </div>
       </section>
@@ -365,25 +363,24 @@
         <h2>The pipeline</h2>
         <div class="stack" style="margin-bottom: 1.25rem;">
           <p>
-            The pipeline became the unit of the product. Each one is a recipe, the fields to pull or fill, plus a
-            trigger that decides when it runs. Save it once and it keeps working on the
-            documents you point it at, with its own runs listed underneath.
+            The pipeline became the unit of the product: a recipe of fields to pull or fill. Save it once and it
+            keeps working on the documents you point it at.
           </p>
         </div>
         <div class="figure">
           <video class="clip" src="/conduit/parsing.mp4" autoplay muted loop playsinline controls preload="metadata"
                  aria-label="Building an Extract recipe on a real supplier document"></video>
-          <p class="caption">Building an Extract recipe on a real commercial document, naming the fields to pull straight off the page.</p>
+          <p class="caption">Building an Extract recipe on a real supplier document.</p>
         </div>
         <div class="figure" style="margin-top: 2rem;">
           <img class="shot" loading="lazy" src="/conduit/extract-config.png" width="1600" height="988"
                alt="Extract Configure: the fields to pull from the document, with type and description" />
-          <p class="caption">Configure: name the fields to pull, each with a type and a short description.</p>
+          <p class="caption">Configure the fields to pull, each with a type.</p>
         </div>
         <div class="figure" style="margin-top: 2rem;">
           <img class="shot" loading="lazy" src="/conduit/extract-results.png" width="1600" height="988"
                alt="Extract Results: structured values pulled from the document, highlighted where they were found on the page" />
-          <p class="caption">Results: the values come back structured and mapped to where they sit on the page.</p>
+          <p class="caption">Results come back structured, mapped to the page.</p>
         </div>
       </section>
 
@@ -392,7 +389,7 @@
         <div class="stack" style="margin-bottom: 1.25rem;">
           <p>
             Testing killed the assumption that extraction and form&#8209;filling were one pipeline. We split them into
-            Extract and Inject. Each is useful on its own, and each is the entry point to its own build.
+            Extract and Inject, each useful on its own.
           </p>
         </div>
       </section>
@@ -401,8 +398,7 @@
         <h2>Approach</h2>
         <div class="stack" style="margin-bottom: 1.25rem;">
           <p>
-            We stopped being the authority on compliance and became the tool importers use to build their own. To
-            accomplish this:
+            We stopped being the authority on compliance and became the tool importers use to build their own:
           </p>
         </div>
         <div class="panel" style="margin-top: 0;">
@@ -418,7 +414,7 @@
         <div class="figure" style="margin-top: 2rem;">
           <video class="clip" src="/conduit/prepop.mp4" autoplay muted loop playsinline controls preload="metadata"
                  aria-label="A schema drafted from a plain description of the document"></video>
-          <p class="caption">Setup starts from a draft, not a blank slate. Describe the document and the schema populates itself, ready to adjust.</p>
+          <p class="caption">Not a blank slate: describe the document and the schema drafts itself.</p>
         </div>
       </section>
 
@@ -426,21 +422,19 @@
         <h3>The subtractions</h3>
         <div class="stack">
           <p>
-            We dropped validation. Mapping every rule across every country and product was
-            extremely hard, it was not what customers asked us to own, and the MVP did not need it to be valuable.
-            Rather than let a half&#8209;built rules engine hold the release back, we parked it.
+            We dropped validation: mapping every rule across every country and product was hard, not what customers
+            asked us to own, and not needed for the MVP to be valuable, so we parked it.
           </p>
           <p>
-            We narrowed the surface. Triggers collapsed to the two that are unambiguous, an API
-            request or on demand, after a watched&#8209;folder option raised the obvious question of which folder. The
-            inbox stayed background context rather than a place to build pipelines. Even a vanity &ldquo;documents
-            processed&rdquo; count gave way to a plain &ldquo;last updated.&rdquo;
+            We narrowed the surface: triggers collapsed to the two that are unambiguous, an API request or on demand;
+            the inbox stayed background context, not a place to build; and a vanity &ldquo;documents processed&rdquo;
+            count gave way to a plain &ldquo;last updated.&rdquo;
           </p>
         </div>
         <div class="figure" style="margin-top: 1.5rem;">
           <img class="shot" loading="lazy" src="/conduit/inbox.png" width="1440" height="900"
                alt="Runs: a plain table of the documents pipelines have processed" />
-          <p class="caption">Runs, pared back to a plain record of what the pipelines have processed rather than a second place to build them.</p>
+          <p class="caption">Runs, pared back to a plain record of what pipelines have processed.</p>
         </div>
       </section>
 
@@ -448,25 +442,22 @@
         <h3>The craft underneath</h3>
         <div class="stack" style="margin-bottom: 1.25rem;">
           <p>
-            The surface sits on a small design system: tokens, components and motion kept in one place so the two
-            flows stay consistent. I animated the graphics for the parsing stage myself, so the moment a document is
-            being read has a state of its own rather than a dead spinner.
+            The surface sits on a small design system, tokens, components and motion in one place. I animated the
+            parsing&#8209;stage graphics myself, so a document being read has a state of its own, not a dead spinner.
           </p>
         </div>
         <div class="figure">
           <video class="clip" src="/conduit/ani.mp4" autoplay muted loop playsinline preload="metadata"
                  aria-label="The reading-the-document animation in the design system's motion section"></video>
-          <p class="caption">The reading&#8209;the&#8209;document animation, documented in the design system&rsquo;s Motion section.</p>
+          <p class="caption">The reading&#8209;the&#8209;document animation, from the design system&rsquo;s Motion section.</p>
         </div>
       </section>
 
       <section class="panel">
         <h2 style="margin-bottom: 0.75rem;">Impact</h2>
         <p style="margin-bottom: 1.75rem;">
-          The move that mattered was commercial, not cosmetic. A fixed compliance engine can only sell one reading
-          of the rules; a pipeline importers configure fits each customer&rsquo;s own, which is the difference between
-          a demo and something a varied base can actually run. The pivot was made on evidence from the operation,
-          before the UI.
+          The move that mattered was commercial. A fixed engine sells one reading of the rules; a pipeline importers
+          configure fits each customer&rsquo;s own, the difference between a demo and something a varied base can run.
         </p>
         <div class="metrics">
           <div>
