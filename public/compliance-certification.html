@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conduit: from a fixed compliance engine to pipelines importers build themselves</title>
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --background: #fafafa;
+      --foreground: #000000;
+      --muted: #f5f3f0;
+      --muted-foreground: #767065;
+      --border: #b3b3b3;
+      --tag-bg: #e8e3dd;
+      --tag-fg: #6b5d4f;
+      --panel: #f5f3f0;
+      --font-sans: "Geist", ui-sans-serif, system-ui, -apple-system, sans-serif;
+      --font-serif: "Lora", ui-serif, Georgia, serif;
+      --font-mono: ui-monospace, "SFMono-Regular", "Menlo", monospace;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; scroll-behavior: smooth; }
+    section[id] { scroll-margin-top: 2rem; }
+
+    body {
+      background: var(--background);
+      color: var(--foreground);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+    }
+
+    .page { max-width: 66rem; margin: 0 auto; padding: 6rem 2rem 5rem; display: flex; gap: 3.5rem; align-items: flex-start; }
+
+    
+
+    /* Sidebar nav */
+    aside {
+      position: sticky;
+      top: 6rem;
+      width: 12rem;
+      flex-shrink: 0;
+    }
+    .back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 14px;
+      color: var(--muted-foreground);
+      text-decoration: none;
+      margin-bottom: 2.5rem;
+    }
+    .back:hover { color: var(--foreground); }
+    aside nav a {
+      display: block;
+      font-size: 15px;
+      color: var(--muted-foreground);
+      text-decoration: none;
+      margin-bottom: 1rem;
+      transition: color 0.15s ease;
+    }
+    aside nav a:hover { color: var(--foreground); }
+
+    main { flex: 1; min-width: 0; }
+
+    .col { max-width: 750px; }
+
+    /* Type */
+    h1 {
+      font-family: var(--font-serif);
+      font-weight: 500;
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+    .lede { font-size: 17px; line-height: 1.6; color: var(--muted-foreground); }
+
+    h2 {
+      font-family: var(--font-serif);
+      font-weight: 500;
+      font-size: 1.75rem;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+    h3 {
+      font-family: var(--font-serif);
+      font-weight: 500;
+      font-size: 1.375rem;
+      letter-spacing: -0.02em;
+      line-height: 1.3;
+      margin-bottom: 0.75rem;
+    }
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted-foreground);
+      margin-bottom: 0.5rem;
+    }
+    p { font-size: 17px; line-height: 1.65; color: var(--muted-foreground); }
+    p strong { color: var(--foreground); font-weight: 500; }
+
+    section { margin-bottom: 2.5rem; }
+    .stack > * + * { margin-top: 0.75rem; }
+    .stack-lg > * + * { margin-top: 1.5rem; }
+
+    /* Meta grid */
+    .meta {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem 2rem;
+      padding-bottom: 2rem;
+      margin-bottom: 1rem;
+    }
+    .meta .label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted-foreground);
+      margin-bottom: 0.5rem;
+    }
+    .meta .value { font-size: 15px; color: var(--foreground); }
+    .tag {
+      display: inline-block;
+      padding: 0.125rem 0.5rem;
+      font-size: 13px;
+      border-radius: 6px;
+      background: var(--tag-bg);
+      color: var(--tag-fg);
+      margin-right: 0.25rem;
+    }
+
+    /* Panels */
+    .panel {
+      background: var(--panel);
+      border-radius: 0.75rem;
+      padding: 2rem;
+      margin-bottom: 2.5rem;
+      max-width: 750px;
+    }
+    .panel ul { list-style: none; }
+    .panel li {
+      display: flex;
+      gap: 0.75rem;
+      font-size: 17px;
+      line-height: 1.6;
+      color: var(--muted-foreground);
+    }
+    .panel li + li { margin-top: 0.5rem; }
+    .panel li .dot { color: var(--muted-foreground); }
+
+    /* Metric row */
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .metrics .num {
+      font-family: var(--font-serif);
+      font-weight: 500;
+      font-size: 2rem;
+      line-height: 1.1;
+      color: var(--foreground);
+      letter-spacing: -0.02em;
+    }
+    .metrics .cap { font-size: 14px; color: var(--muted-foreground); margin-top: 0.25rem; }
+
+    /* Tier legend / small cards */
+    .tiers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.25rem; }
+    .tiers.two { grid-template-columns: repeat(2, 1fr); }
+    .tier {
+      border: 1px solid var(--border);
+      border-radius: 0.625rem;
+      padding: 1rem;
+      background: var(--background);
+    }
+    .tier .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 0.5rem; vertical-align: middle; }
+    .tier .name { font-size: 14px; font-weight: 500; color: var(--foreground); }
+    .tier p { font-size: 13px; margin-top: 0.375rem; }
+    .dot-green { background: #10b981; }
+    .dot-amber { background: #f59e0b; }
+    .dot-rose { background: #f43f5e; }
+
+    /* Image placeholders */
+    .figure { margin-bottom: 2.5rem; max-width: 750px; }
+    .ph {
+      border-radius: 0.75rem;
+      background: repeating-linear-gradient(45deg, #f0ece6, #f0ece6 12px, #ebe6df 12px, #ebe6df 24px);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 260px;
+      color: var(--tag-fg);
+      font-family: var(--font-mono);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      text-align: center;
+      padding: 1rem;
+    }
+    .ph.tall { min-height: 320px; }
+    .ph.short { min-height: 180px; }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .caption { margin-top: 0.5rem; font-size: 14px; color: var(--muted-foreground); }
+
+    /* Product screenshots: rounded, hairline-framed, full-width in their column */
+    .shot {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 0.75rem;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      background: var(--muted);
+    }
+    .grid-2 .shot, .grid-3 .shot { border-radius: 0.625rem; }
+
+    /* Screen recordings — framed like the stills, playing inline */
+    .clip {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 0.75rem;
+      border: 1px solid var(--border);
+      background: var(--muted);
+    }
+
+    .sub {
+      font-family: var(--font-serif);
+      font-weight: 500;
+      font-size: 1.5rem;
+      letter-spacing: -0.02em;
+      line-height: 1.25;
+      margin-bottom: 0.75rem;
+      color: var(--foreground);
+    }
+    blockquote {
+      border-left: 2px solid var(--border);
+      padding-left: 1.5rem;
+      margin: 0 0 2.5rem;
+      max-width: 750px;
+    }
+    blockquote p { font-size: 19px; line-height: 1.55; color: var(--foreground); font-family: var(--font-serif); }
+    blockquote cite { display: block; margin-top: 0.75rem; font-size: 14px; font-style: normal; color: var(--muted-foreground); }
+
+    hr { border: none; border-top: 1px solid var(--border); opacity: 0.5; margin: 4rem 0 2rem; }
+
+    @media (max-width: 900px) {
+      aside { display: none; }
+      .page { padding: 4rem 1.5rem 3rem; }
+    }
+    @media (max-width: 640px) {
+      .meta { grid-template-columns: repeat(2, 1fr); }
+      .metrics { grid-template-columns: 1fr; }
+      .grid-3 { grid-template-columns: 1fr; }
+      .tiers, .tiers.two { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <aside>
+      <a class="back" href="/">&larr; Back to work</a>
+      <nav>
+        <a href="#context">Context</a>
+        <a href="#first-bet">The first bet</a>
+        <a href="#testing">What testing revealed</a>
+        <a href="#pipeline">The pipeline</a>
+        <a href="#flows">Two flows</a>
+        <a href="#approach">Approach</a>
+        <a href="#subtractions">The subtractions</a>
+        <a href="#craft">The craft</a>
+        <a href="#impact">Impact</a>
+      </nav>
+    </aside>
+
+    <main>
+      <header class="col" style="margin-bottom: 2.5rem;">
+        <h1>Conduit</h1>
+        <p class="sub">From a fixed compliance engine to pipelines importers build themselves</p>
+        <p class="lede">
+          Shipped an MVP with the compliance rules baked in on our side, then let testing reframe the product.
+        </p>
+      </header>
+
+      <div class="meta col">
+        <div>
+          <p class="label">Role</p>
+          <p class="value">Product and design lead</p>
+        </div>
+        <div>
+          <p class="label">Scope</p>
+          <p class="value">Operation mapping, product direction, design</p>
+        </div>
+        <div>
+          <p class="label">Shape</p>
+          <p class="value">MVP, then a pivot after testing</p>
+        </div>
+        <div>
+          <p class="label">Domain</p>
+          <p class="value"><span class="tag">Supply chain</span></p>
+        </div>
+      </div>
+
+      <section class="panel">
+        <h3 style="margin-bottom: 1rem;">Impact summary</h3>
+        <ul>
+          <li><span class="dot">&bull;</span><span>Moved the product from our compliance engine to their document infrastructure</span></li>
+          <li><span class="dot">&bull;</span><span>Made the pipeline the unit: built once, saved, reused, callable over an API</span></li>
+          <li><span class="dot">&bull;</span><span>Split the work into two independent flows instead of one assumed chain</span></li>
+          <li><span class="dot">&bull;</span><span>Cut the validation layer to keep the second version shippable</span></li>
+        </ul>
+      </section>
+
+      <!-- Quote slot. Drop a real line from a client or colleague here, then delete this comment.
+      <blockquote>
+        <p>&ldquo;&hellip;&rdquo;</p>
+        <cite>Name, Title</cite>
+      </blockquote>
+      -->
+
+      <section class="col" id="context">
+        <h3>The problem &amp; context</h3>
+        <div class="stack" style="margin-bottom: 1.25rem;">
+          <p>
+            I started with how the operation actually ran, mapping the real document flows, where people got stuck
+            and where errors piled up, so we prioritised from evidence rather than the obvious build.
+          </p>
+        </div>
+        <div class="panel" style="margin-top: 0;">
+          <ul>
+            <li><span class="dot">1.</span><span>Compliance documentation was high&#8209;volume, repetitive and error&#8209;prone</span></li>
+            <li><span class="dot">2.</span><span>It sat on the critical path for clearing shipments</span></li>
+            <li><span class="dot">3.</span><span>Nothing made the work reusable from one shipment to the next</span></li>
+          </ul>
+        </div>
+
+        <div style="margin-top: 1.75rem;">
+          <p class="eyebrow">User needs</p>
+          <p style="font-family: var(--font-serif); font-style: italic; color: var(--foreground);">
+            &ldquo;Every shipment is the same paperwork, filled a little differently, and one wrong field holds the
+            container at the port.&rdquo;
+          </p>
+        </div>
+        <div style="margin-top: 1.25rem;">
+          <p class="eyebrow">Business goal</p>
+          <p>
+            Automate the compliance paperwork on the critical path, in a way that fits each importer&rsquo;s own rules
+            rather than one fixed reading.
+          </p>
+        </div>
+      </section>
+
+      <section class="col" id="first-bet">
+        <h3>The first bet</h3>
+        <div class="stack">
+          <p>
+            We built an MVP that automated compliance docs with the rules defined on our side: encode what
+            &ldquo;valid&rdquo; looks like, run documents against it, flag what fails. On paper, the right scope,
+            opinionated and useful out of the box.
+          </p>
+        </div>
+      </section>
+
+      <section class="col" id="testing">
+        <h3>What testing revealed</h3>
+        <div class="stack">
+          <p>
+            Once the team worked through the live MVP, the gaps showed fast, more so with larger importers. At that
+            scale compliance is not one ruleset: it bends with the country and the product, and every serious
+            importer already has its own reading of what a document must contain.
+          </p>
+          <p>
+            The rules we had built were ours; what customers needed were theirs, with no path to hand&#8209;mapping all
+            of it without turning an MVP into an open&#8209;ended rules&#8209;engineering project.
+          </p>
+        </div>
+      </section>
+
+      <section class="col" id="pipeline">
+        <h2>The pipeline</h2>
+        <div class="stack" style="margin-bottom: 1.25rem;">
+          <p>
+            The pipeline became the unit of the product: a recipe of fields to pull or fill. Save it once and it
+            keeps working on the documents you point it at.
+          </p>
+        </div>
+        <div class="figure">
+          <img class="shot" loading="lazy" src="/conduit/extract-results.png" width="1600" height="988"
+               alt="Extract Results: structured values pulled from the document, highlighted where they were found on the page" />
+          <p class="caption">Results come back structured, mapped to the page.</p>
+        </div>
+        <div class="figure" style="margin-top: 2rem;">
+          <video class="clip" src="/conduit/parsing.mp4" autoplay muted loop playsinline controls preload="metadata"
+                 aria-label="Building an Extract recipe on a real supplier document"></video>
+          <p class="caption">Building an Extract recipe on a real supplier document.</p>
+        </div>
+      </section>
+
+      <section class="col" id="flows">
+        <h2>Two flows, not one chain</h2>
+        <div class="stack" style="margin-bottom: 1.25rem;">
+          <p>
+            Testing killed the assumption that extraction and form&#8209;filling were one pipeline. We split them into
+            Extract and Inject, each useful on its own.
+          </p>
+        </div>
+      </section>
+
+      <section class="col" id="approach">
+        <h2>Approach</h2>
+        <div class="stack" style="margin-bottom: 1.25rem;">
+          <p>
+            We stopped being the authority on compliance and became the tool importers use to build their own:
+          </p>
+        </div>
+        <div class="panel" style="margin-top: 0;">
+          <ul>
+            <li><span class="dot">1.</span><span>Mapped the operation first, and let the gaps decide where the first release went</span></li>
+            <li><span class="dot">2.</span><span>Made the pipeline the unit of the product, defined by a recipe and a trigger</span></li>
+            <li><span class="dot">3.</span><span>Split the work into Extract and Inject, each able to stand alone</span></li>
+            <li><span class="dot">4.</span><span>Drafted schemas from a description, so setup was not a blank slate</span></li>
+            <li><span class="dot">5.</span><span>Made pipelines persist, so they could be duplicated and triggered over an API</span></li>
+            <li><span class="dot">6.</span><span>Removed validation and narrowed the surface around the two flows</span></li>
+          </ul>
+        </div>
+        <div class="figure" style="margin-top: 2rem;">
+          <video class="clip" src="/conduit/prepop.mp4" autoplay muted loop playsinline controls preload="metadata"
+                 aria-label="A schema drafted from a plain description of the document"></video>
+          <p class="caption">Not a blank slate: describe the document and the schema drafts itself.</p>
+        </div>
+      </section>
+
+      <section class="col" id="subtractions">
+        <h3>The subtractions</h3>
+        <div class="stack">
+          <p>
+            We dropped validation: mapping every rule across every country and product was hard, not what customers
+            asked us to own, and not needed for the MVP to be valuable, so we parked it.
+          </p>
+          <p>
+            We narrowed the surface: triggers collapsed to the two that are unambiguous, an API request or on demand;
+            the inbox stayed background context, not a place to build; and a vanity &ldquo;documents processed&rdquo;
+            count gave way to a plain &ldquo;last updated.&rdquo;
+          </p>
+        </div>
+        <div class="figure" style="margin-top: 1.5rem;">
+          <img class="shot" loading="lazy" src="/conduit/runs.png" width="1440" height="900"
+               alt="Runs: a plain table of the documents pipelines have processed" />
+          <p class="caption">Runs, pared back to a plain record of what pipelines have processed.</p>
+        </div>
+      </section>
+
+      <section class="col" id="craft">
+        <h3>The craft underneath</h3>
+        <div class="stack" style="margin-bottom: 1.25rem;">
+          <p>
+            The surface sits on a small design system, tokens, components and motion in one place. I animated the
+            parsing&#8209;stage graphics myself, so a document being read has a state of its own, not a dead spinner.
+          </p>
+        </div>
+        <div class="figure">
+          <video class="clip" src="/conduit/ani.mp4" autoplay muted loop playsinline preload="metadata"
+                 aria-label="The reading-the-document animation in the design system's motion section"></video>
+          <p class="caption">The reading&#8209;the&#8209;document animation, from the design system&rsquo;s Motion section.</p>
+        </div>
+        <div class="grid-2" style="margin-bottom: 0.5rem;">
+          <img class="shot" loading="lazy" src="/conduit/ds-states.png" width="1600" height="1003"
+               alt="Design system: button states documented with treatment rules" />
+          <img class="shot" loading="lazy" src="/conduit/ds-size.png" width="1600" height="1003"
+               alt="Design system: empty-state illustration sizing documented with classes" />
+        </div>
+        <p class="caption">Components, states and rules documented in the system itself, not just built in the app.</p>
+      </section>
+
+      <section class="panel" id="impact">
+        <h2 style="margin-bottom: 0.75rem;">Impact</h2>
+        <p style="margin-bottom: 1.75rem;">
+          The move that mattered was commercial. A fixed engine sells one reading of the rules; a pipeline importers
+          configure fits each customer&rsquo;s own, the difference between a demo and something a varied base can run.
+        </p>
+        <div class="metrics">
+          <div>
+            <p class="num">5 teams</p>
+            <p class="cap">importers and co&#8209;ops running the MVP inside their own workflow</p>
+          </div>
+          <div>
+            <p class="num">30+</p>
+            <p class="cap">interviews that grounded the pivot before a line of UI was drawn</p>
+          </div>
+          <div>
+            <p class="num">Per importer</p>
+            <p class="cap">one fixed ruleset became a pipeline each customer configures to their own rules, the shift that made it sellable beyond a single interpretation</p>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+      <a class="back" href="/">&larr; Back to work</a>
+    </main>
+  </div>
+</body>
+</html>
