@@ -1,6 +1,6 @@
 const CONDUIT_IMAGES = [
   { src: "/conduit/pipelines.png", alt: "Conduit pipelines library with saved pipelines and their live status" },
-  { src: "/conduit/detail.png", alt: "A pipeline's detail view: its fields, where it runs, and its recent runs" },
+  { src: "/conduit/api.png", alt: "View code dialog: run a saved pipeline from Python, TypeScript or REST" },
   { src: "/conduit/start.png", alt: "Onboarding: choose Extract to pull data out, or Inject to fill a form" },
 ]
 
