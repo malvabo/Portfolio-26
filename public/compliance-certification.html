@@ -330,10 +330,10 @@
       <section class="panel">
         <h3 style="margin-bottom: 1rem;">Impact summary</h3>
         <ul>
-          <li><span class="dot">&bull;</span><span>Moved the product from our compliance rules to pipelines importers configure</span></li>
-          <li><span class="dot">&bull;</span><span>Made the pipeline the unit: built once, saved, reused, called over an API</span></li>
-          <li><span class="dot">&bull;</span><span>Split the work into Extract and Inject, each useful on its own</span></li>
-          <li><span class="dot">&bull;</span><span>Cut the validation layer to keep the second version shippable</span></li>
+          <li><span class="dot">&bull;</span><span>Changed the product from applying our compliance rules to letting each importer set their own</span></li>
+          <li><span class="dot">&bull;</span><span>Made the pipeline the thing you set up: build it once, then reuse it or run it from your own system</span></li>
+          <li><span class="dot">&bull;</span><span>Split the work into two jobs: Extract reads data out of documents, Inject writes it into forms</span></li>
+          <li><span class="dot">&bull;</span><span>Dropped the rule&#8209;checking layer so the second version could ship</span></li>
         </ul>
       </section>
 
