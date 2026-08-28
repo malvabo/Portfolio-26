@@ -37,11 +37,11 @@ export function ConduitSection() {
             <div className="space-y-4">
               <div>
                 <div className="text-xl font-medium text-foreground mb-0.5">5 teams</div>
-                <div className="text-sm text-muted-foreground opacity-80">onboarded onto the MVP, whose testing is what reframed the product</div>
+                <div className="text-sm text-muted-foreground opacity-80">onboarded onto the MVP</div>
               </div>
               <div>
                 <div className="text-xl font-medium text-foreground mb-0.5">30+ interviews</div>
-                <div className="text-sm text-muted-foreground opacity-80">across importers and co-ops, mapping the document flow before any build</div>
+                <div className="text-sm text-muted-foreground opacity-80">across importers and co-ops</div>
               </div>
             </div>
           </div>
@@ -74,7 +74,7 @@ export function ConduitSection() {
               <img
                 src={image.src}
                 alt={image.alt}
-                className="relative z-10 max-h-full max-w-full object-contain rounded-md shadow-xl ring-1 ring-black/[0.07]"
+                className="relative z-10 max-h-full max-w-full object-contain rounded-md"
                 loading="lazy"
               />
             </div>
