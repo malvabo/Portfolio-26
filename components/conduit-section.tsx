@@ -1,15 +1,43 @@
-const CONDUIT_IMAGES = [
+// Three distinct compositions of real product screens on a deep-blue tile:
+// the Extract builder floats whole, Runs is zoomed into its top-left, and the
+// API dialog is cut in close on its code. imgStyle positions each on its tile.
+const CONDUIT_IMAGES: {
+  src: string
+  alt: string
+  imgStyle: React.CSSProperties
+}[] = [
   {
-    src: "/conduit/home-extract.png",
-    alt: "Extract results: values pulled from a document, highlighted on the page",
+    src: "/conduit/home-config.png",
+    alt: "Extract builder: name the fields to pull from a supplier document",
+    imgStyle: {
+      width: "88%",
+      left: "9%",
+      top: "15%",
+      transform: "rotate(-2.5deg)",
+      boxShadow: "0 24px 50px -12px rgba(0,0,0,0.5)",
+    },
   },
   {
     src: "/conduit/home-runs.png",
     alt: "Runs: the documents the pipelines have processed",
+    imgStyle: {
+      width: "190%",
+      maxWidth: "none",
+      left: "3%",
+      top: "6%",
+      boxShadow: "0 24px 50px -12px rgba(0,0,0,0.45)",
+    },
   },
   {
     src: "/conduit/home-api.png",
     alt: "Direct API call: run a saved pipeline from your own systems",
+    imgStyle: {
+      width: "190%",
+      maxWidth: "none",
+      left: "-33%",
+      top: "-40%",
+      boxShadow: "0 24px 50px -12px rgba(0,0,0,0.5)",
+    },
   },
 ]
 
@@ -77,13 +105,14 @@ export function ConduitSection() {
           {CONDUIT_IMAGES.map((image, idx) => (
             <div
               key={idx}
-              className="relative aspect-[4/3] overflow-hidden rounded-lg bg-gradient-to-br from-[#c2d1ea] via-[#d5e0f1] to-[#e7e1d8] flex items-center justify-center p-4"
+              className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-gradient-to-br from-[#1e3a8a] via-[#2563eb] to-[#60a5fa]"
             >
-              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(255,255,255,0.35),transparent_65%)] pointer-events-none" />
+              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(255,255,255,0.25),transparent_60%)] pointer-events-none" />
               <img
                 src={image.src}
                 alt={image.alt}
-                className="relative z-10 max-h-full max-w-full object-contain rounded-md shadow-xl ring-1 ring-black/[0.07]"
+                className="absolute z-10 rounded-md ring-1 ring-black/10"
+                style={image.imgStyle}
                 loading="lazy"
               />
             </div>
