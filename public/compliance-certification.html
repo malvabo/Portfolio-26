@@ -43,19 +43,33 @@
     aside {
       position: sticky;
       top: 6rem;
-      width: 12rem;
+      width: 14rem;
       flex-shrink: 0;
     }
     .back {
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      font-size: 14px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
       color: var(--muted-foreground);
       text-decoration: none;
       margin-bottom: 2.5rem;
     }
     .back:hover { color: var(--foreground); }
+    /* Footer back link matches the other case studies: 17px, sentence case */
+    .back-footer {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 17px;
+      color: var(--foreground);
+      text-decoration: none;
+      transition: opacity 0.15s ease;
+    }
+    .back-footer:hover { opacity: 0.7; }
     aside nav a {
       display: block;
       font-size: 15px;
@@ -271,12 +285,12 @@
 <body>
   <div class="page">
     <aside>
-      <a class="back" href="/">&larr; Back to work</a>
+      <a class="back" href="/#work">&larr; All projects</a>
       <nav>
-        <a href="#context">Problem &amp; context</a>
+        <a href="#context">Context</a>
         <a href="#needs">User needs</a>
         <a href="#goal">Business goal</a>
-        <a href="#pipeline">The pipeline</a>
+        <a href="#pipeline">Pipeline</a>
         <a href="#approach">Approach</a>
         <a href="#moment">Strategic moment</a>
         <a href="#craft">Design system</a>
@@ -305,7 +319,7 @@
         </div>
         <div>
           <p class="label">Timeframe</p>
-          <p class="value">Eight weeks</p>
+          <p class="value">Four weeks</p>
         </div>
         <div>
           <p class="label">Domain</p>
@@ -514,7 +528,7 @@
       </section>
 
       <hr />
-      <a class="back" href="/">&larr; Back to work</a>
+      <a class="back-footer" href="/#work">&larr; Back to all projects</a>
     </main>
   </div>
 </body>
