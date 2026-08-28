@@ -18,6 +18,7 @@ export default function ConduitCaseStudy() {
           <aside className="hidden lg:block w-56 px-8 lg:px-12 fixed top-24 left-8 lg:left-[max(0px,calc((100vw-80rem)/2))]" aria-label="Case study navigation">
             <BackLinkSidebar />
             <nav className="space-y-4" aria-label="Case study sections">
+              <a href="#summary" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Impact summary</a>
               <a href="#context" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Context</a>
               <a href="#needs" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">User needs</a>
               <a href="#goal" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Business goal</a>
@@ -70,8 +71,11 @@ export default function ConduitCaseStudy() {
             </div>
 
             {/* Impact summary */}
-            <section className="mb-14">
+            <section id="summary" className="mb-14">
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Impact summary</p>
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 max-w-[750px]">
+                The compliance rules moved from us to the importers
+              </h2>
               <div className="p-8 bg-[#F5F3F0] rounded-xl max-w-[750px] mb-8">
                 <ul className="space-y-2 text-[17px] leading-relaxed">
                   <li className="flex gap-3">
