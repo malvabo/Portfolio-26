@@ -225,6 +225,16 @@
     }
     .grid-2 .shot, .grid-3 .shot { border-radius: 0.625rem; }
 
+    /* Screen recordings — framed like the stills, playing inline */
+    .clip {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 0.75rem;
+      border: 1px solid var(--border);
+      background: var(--muted);
+    }
+
     .sub {
       font-family: var(--font-serif);
       font-weight: 500;
@@ -371,6 +381,11 @@
                alt="A pipeline's detail view: its fields, where it runs, and its recent runs" />
           <p class="caption">One pipeline, end to end: the fields it extracts, where it runs, and the documents it has already processed.</p>
         </div>
+        <div class="figure" style="margin-top: 2rem;">
+          <video class="clip" src="/conduit/parsing.mp4" autoplay muted loop playsinline controls preload="metadata"
+                 aria-label="Building an Extract recipe on a real supplier document"></video>
+          <p class="caption">Building an Extract recipe on a real commercial document, naming the fields to pull straight off the page.</p>
+        </div>
       </section>
 
       <section class="col">
@@ -407,6 +422,11 @@
           </ul>
         </div>
         <div class="figure" style="margin-top: 2rem;">
+          <video class="clip" src="/conduit/prepop.mp4" autoplay muted loop playsinline controls preload="metadata"
+                 aria-label="A schema drafted from a plain description of the document"></video>
+          <p class="caption">Setup starts from a draft, not a blank slate. Describe the document and the schema populates itself, ready to adjust.</p>
+        </div>
+        <div class="figure" style="margin-top: 2rem;">
           <img class="shot" loading="lazy" src="/conduit/api.png" width="1440" height="900"
                alt="View code dialog: run a saved pipeline from Python, TypeScript or REST" />
           <p class="caption">Because a pipeline persists, it has an address. Any saved pipeline can be called straight from a customer&rsquo;s own systems.</p>
@@ -432,6 +452,22 @@
           <img class="shot" loading="lazy" src="/conduit/inbox.png" width="1440" height="900"
                alt="Runs: a plain table of the documents pipelines have processed" />
           <p class="caption">Runs, pared back to a plain record of what the pipelines have processed rather than a second place to build them.</p>
+        </div>
+      </section>
+
+      <section class="col">
+        <h3>The craft underneath</h3>
+        <div class="stack" style="margin-bottom: 1.25rem;">
+          <p>
+            The surface sits on a small design system: tokens, components and motion kept in one place so the two
+            flows stay consistent. I animated the graphics for the parsing stage myself, so the moment a document is
+            being read has a state of its own rather than a dead spinner.
+          </p>
+        </div>
+        <div class="figure">
+          <video class="clip" src="/conduit/ani.mp4" autoplay muted loop playsinline preload="metadata"
+                 aria-label="The reading-the-document animation in the design system's motion section"></video>
+          <p class="caption">The reading&#8209;the&#8209;document animation, documented in the design system&rsquo;s Motion section.</p>
         </div>
       </section>
 
