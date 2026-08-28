@@ -9,18 +9,18 @@ const CONDUIT_IMAGES = [
     top: -9,
   },
   {
-    src: "/conduit/extract-config.png",
-    alt: "Fields to extract: commodity, quality and grade, each with a type and a description",
-    w: 174,
-    left: -73,
-    top: -2,
-  },
-  {
     src: "/conduit/extract-results.png",
     alt: "Extracted values returned structured, highlighted where they were found on the document",
     w: 174,
     left: -73,
     top: -2,
+  },
+  {
+    src: "/conduit/inbox.png",
+    alt: "Runs: a plain record of the documents the pipelines have processed",
+    w: 175,
+    left: -32,
+    top: 2,
   },
 ]
 
