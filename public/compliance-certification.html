@@ -213,7 +213,7 @@
     .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
     .caption { margin-top: 0.5rem; font-size: 14px; color: var(--muted-foreground); }
 
-    /* Product screenshots — rounded, hairline-framed, full-width in their column */
+    /* Product screenshots: rounded, hairline-framed, full-width in their column */
     .shot {
       display: block;
       width: 100%;
@@ -291,8 +291,8 @@
 
       <div class="figure">
         <img class="shot" src="/conduit/pipelines.png" width="1440" height="900"
-             alt="Conduit pipelines library — two saved pipelines with type, created date and live status" />
-        <p class="caption">The library. A pipeline is a saved object — built once, it persists, runs on its source, and can be reused.</p>
+             alt="Conduit pipelines library with two saved pipelines, each showing type, created date and live status" />
+        <p class="caption">The library. A pipeline is a saved object. Built once, it persists, runs on its source, and can be reused.</p>
       </div>
 
       <section class="panel">
@@ -361,15 +361,15 @@
         <h2>The pipeline</h2>
         <div class="stack" style="margin-bottom: 1.25rem;">
           <p>
-            The pipeline became the unit of the product. Each one is a <strong>recipe</strong> — the fields to pull or
-            fill — plus a <strong>trigger</strong> that decides when it runs. Save it once and it keeps working on the
+            The pipeline became the unit of the product. Each one is a recipe, the fields to pull or fill, plus a
+            trigger that decides when it runs. Save it once and it keeps working on the
             documents you point it at, with its own runs listed underneath.
           </p>
         </div>
         <div class="figure">
           <img class="shot" loading="lazy" src="/conduit/detail.png" width="1440" height="900"
                alt="A pipeline's detail view: its fields, where it runs, and its recent runs" />
-          <p class="caption">One pipeline, end to end — the fields it extracts, where it runs, and the documents it has already processed.</p>
+          <p class="caption">One pipeline, end to end: the fields it extracts, where it runs, and the documents it has already processed.</p>
         </div>
       </section>
 
@@ -378,8 +378,7 @@
         <div class="stack" style="margin-bottom: 1.25rem;">
           <p>
             Testing killed the assumption that extraction and form&#8209;filling were one pipeline. We split them into
-            <strong>Extract</strong> and <strong>Inject</strong> — each useful on its own, each the entry point to its
-            own build.
+            Extract and Inject. Each is useful on its own, and each is the entry point to its own build.
           </p>
         </div>
         <div class="figure">
@@ -410,7 +409,7 @@
         <div class="figure" style="margin-top: 2rem;">
           <img class="shot" loading="lazy" src="/conduit/api.png" width="1440" height="900"
                alt="View code dialog: run a saved pipeline from Python, TypeScript or REST" />
-          <p class="caption">Because a pipeline persists, it has an address — any saved pipeline can be called straight from a customer&rsquo;s own systems.</p>
+          <p class="caption">Because a pipeline persists, it has an address. Any saved pipeline can be called straight from a customer&rsquo;s own systems.</p>
         </div>
       </section>
 
@@ -450,7 +449,7 @@
         <div class="figure" style="margin-top: 1.5rem;">
           <img class="shot" loading="lazy" src="/conduit/inbox.png" width="1440" height="900"
                alt="Runs: a plain table of the documents pipelines have processed" />
-          <p class="caption">Runs, pared back to a plain record of what the pipelines have processed — not a second place to build them.</p>
+          <p class="caption">Runs, pared back to a plain record of what the pipelines have processed rather than a second place to build them.</p>
         </div>
       </section>
 

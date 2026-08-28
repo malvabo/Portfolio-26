@@ -1,3 +1,9 @@
+const CONDUIT_IMAGES = [
+  { src: "/conduit/pipelines.png", alt: "Conduit pipelines library with saved pipelines and their live status" },
+  { src: "/conduit/detail.png", alt: "A pipeline's detail view: its fields, where it runs, and its recent runs" },
+  { src: "/conduit/start.png", alt: "Onboarding: choose Extract to pull data out, or Inject to fill a form" },
+]
+
 export function ConduitSection() {
   return (
     <section className="container mx-auto px-8 lg:px-12 pt-8 pb-8 md:pb-12">
@@ -56,6 +62,19 @@ export function ConduitSection() {
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {CONDUIT_IMAGES.map((image, idx) => (
+            <div key={idx} className="relative aspect-[16/10] overflow-hidden rounded-lg bg-gray-50 border border-gray-200">
+              <img
+                src={image.src}
+                alt={image.alt}
+                className="absolute inset-0 h-full w-full object-cover"
+                loading="lazy"
+              />
+            </div>
+          ))}
         </div>
       </div>
     </section>
