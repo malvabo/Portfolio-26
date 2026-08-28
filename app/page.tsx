@@ -5,6 +5,7 @@ import { ShowreelSection } from "@/components/showreel-section"
 import { AnimatedSection } from "@/components/animated-section"
 import { WorkSection } from "@/components/work-section"
 import { SquirllSection } from "@/components/squirll-section"
+import { ConduitSection } from "@/components/conduit-section"
 import { BehaviorLibrarySection } from "@/components/behavior-library-section"
 // import { PandaDocSection } from "@/components/pandadoc-section"
 import { PAASection } from "@/components/paa-section"
@@ -29,6 +30,9 @@ export default function Home() {
         </AnimatedSection>
         <AnimatedSection>
           <WorkSection />
+        </AnimatedSection>
+        <AnimatedSection>
+          <ConduitSection />
         </AnimatedSection>
         <AnimatedSection>
           <AmazonSection />

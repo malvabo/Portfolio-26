@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Conduit: from a fixed compliance engine to pipelines importers build themselves</title>
-  <meta name="robots" content="noindex" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
@@ -43,19 +42,33 @@
     aside {
       position: sticky;
       top: 6rem;
-      width: 12rem;
+      width: 14rem;
       flex-shrink: 0;
     }
     .back {
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      font-size: 14px;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
       color: var(--muted-foreground);
       text-decoration: none;
       margin-bottom: 2.5rem;
     }
     .back:hover { color: var(--foreground); }
+    /* Footer back link matches the other case studies: 17px, sentence case */
+    .back-footer {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 17px;
+      color: var(--foreground);
+      text-decoration: none;
+      transition: opacity 0.15s ease;
+    }
+    .back-footer:hover { opacity: 0.7; }
     aside nav a {
       display: block;
       font-size: 15px;
@@ -226,6 +239,16 @@
     }
     .grid-2 .shot, .grid-3 .shot { border-radius: 0.625rem; }
 
+    /* Cover image: rounded, unframed, like the other case studies */
+    .cover {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 0.75rem;
+      margin-bottom: 3rem;
+      max-width: 750px;
+    }
+
     /* Screen recordings — framed like the stills, playing inline */
     .clip {
       display: block;
@@ -271,16 +294,15 @@
 <body>
   <div class="page">
     <aside>
-      <a class="back" href="/">&larr; Back to work</a>
+      <a class="back" href="/#work">&larr; All projects</a>
       <nav>
         <a href="#context">Context</a>
-        <a href="#first-bet">The first bet</a>
-        <a href="#testing">What testing revealed</a>
-        <a href="#pipeline">The pipeline</a>
-        <a href="#flows">Two flows</a>
+        <a href="#needs">User needs</a>
+        <a href="#goal">Business goal</a>
+        <a href="#pipeline">Pipeline</a>
         <a href="#approach">Approach</a>
-        <a href="#subtractions">The subtractions</a>
-        <a href="#craft">The craft</a>
+        <a href="#moment">Strategic moment</a>
+        <a href="#craft">Design system</a>
         <a href="#impact">Impact</a>
       </nav>
     </aside>
@@ -288,9 +310,10 @@
     <main>
       <header class="col" style="margin-bottom: 2.5rem;">
         <h1>Conduit</h1>
-        <p class="sub">From a fixed compliance engine to pipelines importers build themselves</p>
+        <p class="sub">Turning a fixed compliance engine into pipelines importers build themselves</p>
         <p class="lede">
-          Shipped an MVP with the compliance rules baked in on our side, then let testing reframe the product.
+          Shipped an MVP with our compliance rules baked in, then let testing reframe the product around rules each
+          customer sets.
         </p>
       </header>
 
@@ -301,11 +324,11 @@
         </div>
         <div>
           <p class="label">Scope</p>
-          <p class="value">Operation mapping, product direction, design</p>
+          <p class="value">Product direction, design, design system</p>
         </div>
         <div>
-          <p class="label">Shape</p>
-          <p class="value">MVP, then a pivot after testing</p>
+          <p class="label">Timeframe</p>
+          <p class="value">Four weeks</p>
         </div>
         <div>
           <p class="label">Domain</p>
@@ -313,13 +336,16 @@
         </div>
       </div>
 
+      <img class="cover" src="/conduit/cover.png" width="1600" height="1023"
+           alt="A coffee Certificate of Origin open in Conduit, with the fields to extract listed beside it" />
+
       <section class="panel">
         <h3 style="margin-bottom: 1rem;">Impact summary</h3>
         <ul>
-          <li><span class="dot">&bull;</span><span>Moved the product from our compliance engine to their document infrastructure</span></li>
-          <li><span class="dot">&bull;</span><span>Made the pipeline the unit: built once, saved, reused, callable over an API</span></li>
-          <li><span class="dot">&bull;</span><span>Split the work into two independent flows instead of one assumed chain</span></li>
-          <li><span class="dot">&bull;</span><span>Cut the validation layer to keep the second version shippable</span></li>
+          <li><span class="dot">&bull;</span><span>Handed the rules to importers: each one now defines what a valid document looks like, instead of us</span></li>
+          <li><span class="dot">&bull;</span><span>Set a supplier up once, and every document from them after that goes through the same setup</span></li>
+          <li><span class="dot">&bull;</span><span>Shipped two flows: Extract pulls data out of documents, Inject fills forms in</span></li>
+          <li><span class="dot">&bull;</span><span>Left automatic rule&#8209;checking out of scope, so the reworked version could ship</span></li>
         </ul>
       </section>
 
@@ -334,146 +360,137 @@
         <h3>The problem &amp; context</h3>
         <div class="stack" style="margin-bottom: 1.25rem;">
           <p>
-            I started with how the operation actually ran, mapping the real document flows, where people got stuck
-            and where errors piled up, so we prioritised from evidence rather than the obvious build.
+            Conduit fills in the paperwork that gets food shipments through customs. Every shipment needs the same
+            documents, filled in by hand, and one wrong field can leave a container sitting at the port. Before
+            designing anything, I sat with the teams doing this work to see where it broke.
           </p>
         </div>
         <div class="panel" style="margin-top: 0;">
           <ul>
-            <li><span class="dot">1.</span><span>Compliance documentation was high&#8209;volume, repetitive and error&#8209;prone</span></li>
-            <li><span class="dot">2.</span><span>It sat on the critical path for clearing shipments</span></li>
-            <li><span class="dot">3.</span><span>Nothing made the work reusable from one shipment to the next</span></li>
+            <li><span class="dot">1.</span><span>Teams filled in the same documents by hand for every shipment</span></li>
+            <li><span class="dot">2.</span><span>Mistakes were easy to make, and a rejected document held up the whole shipment</span></li>
+            <li><span class="dot">3.</span><span>The work they did on one shipment saved them nothing on the next</span></li>
           </ul>
         </div>
+      </section>
 
-        <div style="margin-top: 1.75rem;">
-          <p class="eyebrow">User needs</p>
-          <p style="font-family: var(--font-serif); font-style: italic; color: var(--foreground);">
-            &ldquo;Every shipment is the same paperwork, filled a little differently, and one wrong field holds the
-            container at the port.&rdquo;
-          </p>
-        </div>
-        <div style="margin-top: 1.25rem;">
-          <p class="eyebrow">Business goal</p>
+      <section class="col" id="needs">
+        <h3>User needs</h3>
+        <div class="stack">
           <p>
-            Automate the compliance paperwork on the critical path, in a way that fits each importer&rsquo;s own rules
-            rather than one fixed reading.
+            Importers described the job as <em>&ldquo;the same paperwork every shipment, filled a little
+            differently.&rdquo;</em> What they wanted was straightforward: do the setup once, have it hold for every
+            shipment after, and have it follow <strong>their own compliance rules</strong> rather than ours.
           </p>
         </div>
       </section>
 
-      <section class="col" id="first-bet">
-        <h3>The first bet</h3>
+      <section class="col" id="goal">
+        <h3>Business goal</h3>
         <div class="stack">
           <p>
-            We built an MVP that automated compliance docs with the rules defined on our side: encode what
-            &ldquo;valid&rdquo; looks like, run documents against it, flag what fails. On paper, the right scope,
-            opinionated and useful out of the box.
-          </p>
-        </div>
-      </section>
-
-      <section class="col" id="testing">
-        <h3>What testing revealed</h3>
-        <div class="stack">
-          <p>
-            Once the team worked through the live MVP, the gaps showed fast, more so with larger importers. At that
-            scale compliance is not one ruleset: it bends with the country and the product, and every serious
-            importer already has its own reading of what a document must contain.
-          </p>
-          <p>
-            The rules we had built were ours; what customers needed were theirs, with no path to hand&#8209;mapping all
-            of it without turning an MVP into an open&#8209;ended rules&#8209;engineering project.
+            Automate the paperwork without deciding the rules on anyone&rsquo;s behalf. Every customer reads compliance
+            a little differently, and the product had to fit all of them to be worth selling.
           </p>
         </div>
       </section>
 
       <section class="col" id="pipeline">
-        <h2>The pipeline</h2>
+        <h3>The pipeline</h3>
         <div class="stack" style="margin-bottom: 1.25rem;">
           <p>
-            The pipeline became the unit of the product: a recipe of fields to pull or fill. Save it once and it
-            keeps working on the documents you point it at.
+            A pipeline is a saved setup. You tell it which fields to read from a document, or which fields to fill in
+            on a form. Set it up for a supplier once and it handles the rest of their documents.
           </p>
         </div>
         <div class="figure">
-          <img class="shot" loading="lazy" src="/conduit/extract-results.png" width="1600" height="988"
-               alt="Extract Results: structured values pulled from the document, highlighted where they were found on the page" />
-          <p class="caption">Results come back structured, mapped to the page.</p>
+          <div class="grid-2" style="margin-bottom: 0.5rem;">
+            <img class="shot" loading="lazy" src="/conduit/start.png" width="2880" height="1800"
+                 alt="Onboarding: choose Extract to pull data out of documents, or Inject to fill a form" />
+            <img class="shot" loading="lazy" src="/conduit/pipelines.png" width="2704" height="1700"
+                 alt="Pipelines library: saved Extract and Inject pipelines with type, dates and live status" />
+          </div>
+          <p class="caption">The fork the product opens on: pull data out, or fill data in. Everything you build is saved to the library.</p>
         </div>
         <div class="figure" style="margin-top: 2rem;">
           <video class="clip" src="/conduit/parsing.mp4" autoplay muted loop playsinline controls preload="metadata"
                  aria-label="Building an Extract recipe on a real supplier document"></video>
-          <p class="caption">Building an Extract recipe on a real supplier document.</p>
+          <p class="caption">Extract: name the fields to pull, on a real supplier document.</p>
         </div>
-      </section>
-
-      <section class="col" id="flows">
-        <h2>Two flows, not one chain</h2>
-        <div class="stack" style="margin-bottom: 1.25rem;">
-          <p>
-            Testing killed the assumption that extraction and form&#8209;filling were one pipeline. We split them into
-            Extract and Inject, each useful on its own.
-          </p>
+        <div class="figure" style="margin-top: 2rem;">
+          <video class="clip" src="/conduit/inject.mp4" autoplay muted loop playsinline controls preload="metadata"
+                 aria-label="Inject: detecting a form's layout and filling it with the values you bring"></video>
+          <p class="caption">Inject: detect a form&rsquo;s layout and fill it with the values you bring.</p>
+        </div>
+        <div class="figure" style="margin-top: 2rem;">
+          <div class="grid-2" style="margin-bottom: 0.5rem;">
+            <img class="shot" loading="lazy" src="/conduit/home-config.png"
+                 alt="Configure: the fields to pull from each document, each with a type and a description" />
+            <img class="shot" loading="lazy" src="/conduit/runs.png" width="1600" height="1004"
+                 alt="Runs: a plain table of the documents pipelines have processed" />
+          </div>
+          <p class="caption">Configure: name the fields to pull, each with a type and a description. Runs: a record of what the pipelines have processed.</p>
         </div>
       </section>
 
       <section class="col" id="approach">
-        <h2>Approach</h2>
+        <h3>Approach</h3>
         <div class="stack" style="margin-bottom: 1.25rem;">
           <p>
-            We stopped being the authority on compliance and became the tool importers use to build their own:
+            Instead of setting the compliance rules ourselves, we gave importers the tools to set their own. I&hellip;
           </p>
         </div>
         <div class="panel" style="margin-top: 0;">
           <ul>
-            <li><span class="dot">1.</span><span>Mapped the operation first, and let the gaps decide where the first release went</span></li>
-            <li><span class="dot">2.</span><span>Made the pipeline the unit of the product, defined by a recipe and a trigger</span></li>
-            <li><span class="dot">3.</span><span>Split the work into Extract and Inject, each able to stand alone</span></li>
-            <li><span class="dot">4.</span><span>Drafted schemas from a description, so setup was not a blank slate</span></li>
-            <li><span class="dot">5.</span><span>Made pipelines persist, so they could be duplicated and triggered over an API</span></li>
-            <li><span class="dot">6.</span><span>Removed validation and narrowed the surface around the two flows</span></li>
+            <li><span class="dot">1.</span><span>Watched how importers handle documents today, and built for the steps that kept breaking.</span></li>
+            <li><span class="dot">2.</span><span>Made the pipeline the one thing you set up. Set it up for a supplier once, and every document after that runs through it.</span></li>
+            <li><span class="dot">3.</span><span>Turned a plain description of a document into a draft schema, then let people map each field to what it should pull, instead of starting from an empty screen.</span></li>
           </ul>
         </div>
         <div class="figure" style="margin-top: 2rem;">
           <video class="clip" src="/conduit/prepop.mp4" autoplay muted loop playsinline controls preload="metadata"
                  aria-label="A schema drafted from a plain description of the document"></video>
-          <p class="caption">Not a blank slate: describe the document and the schema drafts itself.</p>
+          <p class="caption">Describe the document and the schema drafts itself, ready to adjust.</p>
+        </div>
+        <div class="figure" style="margin-top: 2rem;">
+          <img class="shot" loading="lazy" src="/conduit/home-api.png"
+               alt="Direct API call dialog: run a saved pipeline from Python, TypeScript or REST" />
+          <p class="caption">Every saved pipeline gets an endpoint, so customers can run it from their own systems.</p>
         </div>
       </section>
 
-      <section class="col" id="subtractions">
-        <h3>The subtractions</h3>
-        <div class="stack">
+      <section class="col" id="moment">
+        <h3>Strategic moment: from our rules to theirs</h3>
+        <div class="stack-lg">
           <p>
-            We dropped validation: mapping every rule across every country and product was hard, not what customers
-            asked us to own, and not needed for the MVP to be valuable, so we parked it.
+            The MVP shipped with a built-in rules engine, our reading of what compliance required. Testing showed
+            the flaw: compliance bends with the country and the product, so one fixed ruleset never fit a customer base
+            this varied.
           </p>
           <p>
-            We narrowed the surface: triggers collapsed to the two that are unambiguous, an API request or on demand;
-            the inbox stayed background context, not a place to build; and a vanity &ldquo;documents processed&rdquo;
-            count gave way to a plain &ldquo;last updated.&rdquo;
+            Dropping it was the hard call. The rules engine was the opinionated core the product had been sold on, and
+            letting it go meant trusting customers to set their own rules instead of us.
           </p>
-        </div>
-        <div class="figure" style="margin-top: 1.5rem;">
-          <img class="shot" loading="lazy" src="/conduit/runs.png" width="1440" height="900"
-               alt="Runs: a plain table of the documents pipelines have processed" />
-          <p class="caption">Runs, pared back to a plain record of what pipelines have processed.</p>
+          <p>
+            That trade is what made Conduit sellable. Each importer now configures the pipeline to the rules they
+            actually work under, rather than the ones we guessed at.
+          </p>
         </div>
       </section>
 
       <section class="col" id="craft">
-        <h3>The craft underneath</h3>
+        <h3>The design system underneath</h3>
         <div class="stack" style="margin-bottom: 1.25rem;">
           <p>
-            The surface sits on a small design system, tokens, components and motion in one place. I animated the
-            parsing&#8209;stage graphics myself, so a document being read has a state of its own, not a dead spinner.
+            There was no design system to inherit, so I built one: tokens, components, states and motion documented in
+            one place. I animated the parsing stage myself, so a document being read has a state of its own rather
+            than a dead spinner.
           </p>
         </div>
         <div class="figure">
           <video class="clip" src="/conduit/ani.mp4" autoplay muted loop playsinline preload="metadata"
                  aria-label="The reading-the-document animation in the design system's motion section"></video>
-          <p class="caption">The reading&#8209;the&#8209;document animation, from the design system&rsquo;s Motion section.</p>
+          <p class="caption">The reading&#8209;the&#8209;document animation, from the system&rsquo;s Motion section.</p>
         </div>
         <div class="grid-2" style="margin-bottom: 0.5rem;">
           <img class="shot" loading="lazy" src="/conduit/ds-states.png" width="1600" height="1003"
@@ -481,33 +498,34 @@
           <img class="shot" loading="lazy" src="/conduit/ds-size.png" width="1600" height="1003"
                alt="Design system: empty-state illustration sizing documented with classes" />
         </div>
-        <p class="caption">Components, states and rules documented in the system itself, not just built in the app.</p>
+        <p class="caption">States and rules documented in the system, not just built in the app.</p>
       </section>
 
       <section class="panel" id="impact">
-        <h2 style="margin-bottom: 0.75rem;">Impact</h2>
+        <h3 style="margin-bottom: 0.75rem;">Impact</h3>
         <p style="margin-bottom: 1.75rem;">
-          The move that mattered was commercial. A fixed engine sells one reading of the rules; a pipeline importers
-          configure fits each customer&rsquo;s own, the difference between a demo and something a varied base can run.
+          Five teams ran the MVP inside their own workflow, and their testing is what reframed the product. A fixed
+          engine sells one reading of the rules; a pipeline each customer configures fits their own, which is the
+          difference between a demo and something a varied base can run.
         </p>
         <div class="metrics">
           <div>
             <p class="num">5 teams</p>
-            <p class="cap">importers and co&#8209;ops running the MVP inside their own workflow</p>
+            <p class="cap">importers and co&#8209;ops running the MVP in their own workflow</p>
           </div>
           <div>
             <p class="num">30+</p>
             <p class="cap">interviews that grounded the pivot before a line of UI was drawn</p>
           </div>
           <div>
-            <p class="num">Per importer</p>
-            <p class="cap">one fixed ruleset became a pipeline each customer configures to their own rules, the shift that made it sellable beyond a single interpretation</p>
+            <p class="num">2 flows</p>
+            <p class="cap">Extract and Inject, on one reusable, API&#8209;triggered pipeline</p>
           </div>
         </div>
       </section>
 
       <hr />
-      <a class="back" href="/">&larr; Back to work</a>
+      <a class="back-footer" href="/#work">&larr; Back to all projects</a>
     </main>
   </div>
 </body>
