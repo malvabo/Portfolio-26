@@ -67,6 +67,10 @@ export default function ConduitCaseStudy() {
                 Conduit reads and fills them automatically — and lets each customer set it up for the rules they have to
                 meet.
               </p>
+              <p className="mt-3 text-[15px] leading-relaxed text-muted-foreground">
+                I contributed to Conduit&rsquo;s development as a product designer — from the field research through the
+                interface and the design system below.
+              </p>
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-4 mb-4 pb-8 max-w-[750px]">
@@ -106,8 +110,8 @@ export default function ConduitCaseStudy() {
                 {[
                   ["The problem", "Importers refill the same customs certificates and forms by hand for every shipment. It is slow, easy to get wrong, and one bad field can strand a container at the port."],
                   ["What shipped", "Two tools on one saved setup: Extract reads the key fields out of a document, Inject fills them into a form. Set it up once for a supplier, and every later document runs through it."],
-                  ["The pivot", "The first version judged each document against our idea of the rules. Those rules change by country and product, so I handed the judgment over — each customer now defines what a valid document is."],
-                  ["The trade-off", "I left automatic pass/fail checking of those rules for a later release, so the redesign could ship on time."],
+                  ["The pivot", "The first version judged each document against our idea of the rules. Those rules change by country and product, so the judgment moved to the customer — each one now defines what a valid document is."],
+                  ["The trade-off", "Automatic pass/fail checking of those rules was left for a later release, so the redesign could ship on time."],
                 ].map(([label, body]) => (
                   <li key={label} className="flex gap-3">
                     <span className="text-muted-foreground mt-0.5">•</span>
@@ -216,7 +220,7 @@ export default function ConduitCaseStudy() {
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Approach</p>
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Approach</h2>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-6">
-                <p>Instead of deciding whose rules were right, I gave customers the tools to set their own. I…</p>
+                <p>Instead of deciding whose rules were right, we gave customers the tools to set their own. My part of that work:</p>
               </div>
               <ul className="space-y-2 text-[17px] leading-relaxed max-w-[750px] mb-8">
                 {[
