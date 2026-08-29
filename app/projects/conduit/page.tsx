@@ -42,11 +42,8 @@ export default function ConduitCaseStudy() {
               {[
                 ["#tldr", "Summary"],
                 ["#context", "Context"],
-                ["#needs", "Needs"],
                 ["#goal", "Goal"],
-                ["#pipeline", "Pipeline"],
-                ["#approach", "Approach"],
-                ["#moment", "Strategy"],
+                ["#pipeline", "UX design"],
                 ["#craft", "Design system"],
                 ["#impact", "Impact"],
               ].map(([href, label]) => (
