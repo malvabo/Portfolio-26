@@ -294,13 +294,13 @@ export default function ConduitCaseStudy() {
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Outcomes</p>
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Impact</h2>
               <p className="text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
-                Five teams ran the early version inside their own workflow, and what they found reframed the product.
-                A tool that enforces one version of the rules sells to one kind of customer. A setup each customer
-                configures sells to a base as varied as this one.
+                Conduit rolled out to five teams, who run it on their own shipments. A tool that enforces one version
+                of the rules sells to one kind of customer. A setup each customer configures sells to a base as varied
+                as this one.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                 {[
-                  ["5 teams", "importers and co-ops running the early version in their own workflow"],
+                  ["5 teams", "importers and co-ops using Conduit in their own workflow"],
                   ["30+", "interviews with importers and co-ops that grounded the pivot"],
                   ["2 tools", "Extract and Inject, sharing one saved setup you can also call from your own systems"],
                 ].map(([num, cap]) => (
