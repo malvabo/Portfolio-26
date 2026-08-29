@@ -33,7 +33,7 @@ export function ConduitSection() {
               A pipeline builder for compliance documents. Extract pulls data out of supplier documents, Inject fills forms. Each pipeline is saved once, then reused or called over an API.
             </p>
             <a
-              href="/compliance-certification.html"
+              href="/projects/conduit"
               className="inline-flex items-center gap-2 mt-6 px-5 py-2.5 text-sm font-medium rounded-full bg-white/40 backdrop-blur-md border border-gray-300/50 hover:bg-white/60 hover:border-gray-400/60 transition-all duration-300 shadow-sm hover:shadow-md"
             >
               Read more
