@@ -22,7 +22,7 @@ function Clip({ src, label, caption }: { src: string; label: string; caption: st
           className="w-full h-auto block"
         />
       </div>
-      <p className="mt-2 text-sm text-muted-foreground">{caption}</p>
+      <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">{caption}</p>
     </div>
   )
 }
@@ -181,7 +181,7 @@ export default function ConduitCaseStudy() {
                 </p>
               </div>
 
-              <div className="mb-2 grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[750px]">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[750px]">
                 <div className="rounded-xl overflow-hidden">
                   <LightboxImage src="/conduit/start.png" alt="Onboarding: choose Extract to pull data out of documents, or Inject to fill a form" width={2880} height={1800} className="w-full h-auto object-cover" />
                 </div>
@@ -189,7 +189,7 @@ export default function ConduitCaseStudy() {
                   <LightboxImage src="/conduit/pipelines.png" alt="Pipelines library: saved Extract and Inject pipelines with type, dates and live status" width={2704} height={1700} className="w-full h-auto object-cover" />
                 </div>
               </div>
-              <p className="mb-10 text-sm text-muted-foreground max-w-[750px]">The fork the product opens on: pull data out, or fill data in. Everything you build lands in the library.</p>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-10">The fork the product opens on: pull data out, or fill data in. Everything you build lands in the library.</p>
 
               <Clip
                 src="/conduit/parsing.mp4"
@@ -203,7 +203,7 @@ export default function ConduitCaseStudy() {
                 caption="Inject: detect a form’s layout and fill it with the values you bring."
               />
 
-              <div className="mb-2 grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[750px]">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[750px]">
                 <div className="rounded-xl overflow-hidden">
                   <LightboxImage src="/conduit/home-config.png" alt="Configure: the fields to pull from each document, each with a type and a description" className="w-full h-auto object-cover" />
                 </div>
@@ -211,7 +211,7 @@ export default function ConduitCaseStudy() {
                   <LightboxImage src="/conduit/runs.png" alt="Runs: a plain table of the documents pipelines have processed" width={1600} height={1004} className="w-full h-auto object-cover" />
                 </div>
               </div>
-              <p className="text-sm text-muted-foreground max-w-[750px]">Configure: name the fields to pull, each with a type and a description. Runs: a record of what the pipelines have processed.</p>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Configure: name the fields to pull, each with a type and a description. Runs: a record of what the pipelines have processed.</p>
             </section>
 
             <section id="approach" className="mb-10">
@@ -239,10 +239,10 @@ export default function ConduitCaseStudy() {
                 caption="Describe the document and the schema drafts itself, ready to adjust."
               />
 
-              <div className="mb-2 rounded-xl overflow-hidden max-w-[750px]">
+              <div className="rounded-xl overflow-hidden max-w-[750px]">
                 <LightboxImage src="/conduit/home-api.png" alt="Direct API call dialog: run a saved pipeline from Python, TypeScript or REST" className="w-full h-auto object-cover" />
-                <p className="mt-2 text-sm text-muted-foreground">Every saved pipeline gets an endpoint, so customers can run it from their own systems.</p>
               </div>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Every saved pipeline gets an endpoint, so customers can run it from their own systems.</p>
             </section>
 
             <section id="moment" className="mb-10">
@@ -282,7 +282,7 @@ export default function ConduitCaseStudy() {
                 caption="The reading-the-document animation, from the system’s Motion section."
               />
 
-              <div className="mb-2 grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[750px]">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[750px]">
                 <div className="rounded-xl overflow-hidden">
                   <LightboxImage src="/conduit/ds-states.png" alt="Design system: button states documented with treatment rules" width={1600} height={1003} className="w-full h-auto object-cover" />
                 </div>
@@ -290,7 +290,7 @@ export default function ConduitCaseStudy() {
                   <LightboxImage src="/conduit/ds-size.png" alt="Design system: empty-state illustration sizing documented with classes" width={1600} height={1003} className="w-full h-auto object-cover" />
                 </div>
               </div>
-              <p className="text-sm text-muted-foreground max-w-[750px]">States and rules documented in the system, not only in the app.</p>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">States and rules documented in the system, not only in the app.</p>
             </section>
 
             <section id="impact" className="mb-16 p-8 bg-[#F5F3F0] rounded-xl max-w-[750px]">
