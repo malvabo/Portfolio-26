@@ -22,7 +22,7 @@ function Clip({ src, label, caption }: { src: string; label: string; caption: st
           className="w-full h-auto block"
         />
       </div>
-      <p className="mt-2 text-sm text-muted-foreground">{caption}</p>
+      <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">{caption}</p>
     </div>
   )
 }
@@ -40,13 +40,10 @@ export default function ConduitCaseStudy() {
             <BackLinkSidebar />
             <nav className="space-y-4" aria-label="Case study sections">
               {[
-                ["#tldr", "At a glance"],
+                ["#tldr", "Summary"],
                 ["#context", "Context"],
-                ["#needs", "User needs"],
-                ["#goal", "Business goal"],
-                ["#pipeline", "The pipeline"],
-                ["#approach", "Approach"],
-                ["#moment", "Strategic moment"],
+                ["#goal", "Goal"],
+                ["#pipeline", "UX design"],
                 ["#craft", "Design system"],
                 ["#impact", "Impact"],
               ].map(([href, label]) => (
@@ -64,12 +61,7 @@ export default function ConduitCaseStudy() {
               </h1>
               <p className="text-[17px] leading-relaxed text-muted-foreground">
                 Every food shipment crossing a border needs a stack of certificates and forms, redone by hand each time.
-                Conduit reads and fills them automatically — and lets each customer set it up for the rules they have to
-                meet.
-              </p>
-              <p className="mt-3 text-[15px] leading-relaxed text-muted-foreground">
-                I contributed to Conduit&rsquo;s development as a product designer — from the field research through the
-                interface and the design system below.
+                Conduit reads those documents and fills the forms, on the rules each customer sets.
               </p>
             </div>
 
@@ -108,10 +100,8 @@ export default function ConduitCaseStudy() {
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">At a glance</h2>
               <ul className="space-y-2 text-[17px] leading-relaxed max-w-[750px]">
                 {[
-                  ["The problem", "Importers refill the same customs certificates and forms by hand for every shipment. It is slow, easy to get wrong, and one bad field can strand a container at the port."],
+                  ["The problem", "Importers refill the same customs certificates and forms by hand for every shipment. It is slow work, and one wrong field can strand a container at the port."],
                   ["What shipped", "Two tools on one saved setup: Extract reads the key fields out of a document, Inject fills them into a form. Set it up once for a supplier, and every later document runs through it."],
-                  ["The pivot", "The first version judged each document against our idea of the rules. Those rules change by country and product, so the judgment moved to the customer — each one now defines what a valid document is."],
-                  ["The trade-off", "Automatic pass/fail checking of those rules was left for a later release, so the redesign could ship on time."],
                 ].map(([label, body]) => (
                   <li key={label} className="flex gap-3">
                     <span className="text-muted-foreground mt-0.5">•</span>
@@ -126,10 +116,10 @@ export default function ConduitCaseStudy() {
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">The problem &amp; context</h2>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>
-                  Conduit fills in the paperwork that gets food shipments through customs — certificates of origin,
-                  invoices, packing lists, one set per shipment. Today a person retypes them by hand every time, and a
-                  single wrong field can leave a container sitting at the port. Before designing anything, I sat with the
-                  teams doing this work to see where it broke.
+                  Conduit fills in the paperwork that gets food shipments through customs: certificates of origin,
+                  invoices, packing lists, one set per shipment. Today a person retypes them by hand every time, and one
+                  wrong field can leave a container sitting at the port. Before designing anything, I sat with the teams
+                  doing this work to see where it broke.
                 </p>
               </div>
               <ul className="mt-4 space-y-2 text-[17px] leading-relaxed max-w-[750px]">
@@ -144,6 +134,10 @@ export default function ConduitCaseStudy() {
                   </li>
                 ))}
               </ul>
+              <p className="mt-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+                I contributed to Conduit&rsquo;s development as a product designer, from the field research through
+                the interface and the design system below.
+              </p>
             </section>
 
             <section id="needs" className="mb-10">
@@ -152,11 +146,12 @@ export default function ConduitCaseStudy() {
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>
                   Importers described the job as <em>&ldquo;the same paperwork every shipment, filled a little
-                  differently.&rdquo;</em> What they wanted was straightforward: do the setup once, have it hold for every
-                  shipment after, and have it follow{" "}
-                  <strong className="font-medium text-foreground">their own rules for what a valid document is</strong> —
-                  which fields are required and what counts as acceptable — since those differ by country, product and
-                  buyer, and aren&rsquo;t ours to decide.
+                  differently.&rdquo;</em> Much of it was cleaning up after their suppliers: documents arrived with
+                  mistakes in them, and the importer caught them.
+                </p>
+                <p>
+                  The rest was transcription. They read values off scans that were hard to make out, typed them into
+                  their own systems, then typed them again into the extra forms every shipment needs.
                 </p>
               </div>
             </section>
@@ -166,8 +161,8 @@ export default function ConduitCaseStudy() {
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Business goal</h2>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>
-                  Automate the paperwork without hard-coding whose rules are right. Every customer works to a slightly
-                  different idea of a valid document, so the product had to bend to each of them to be worth selling.
+                  Automate the paperwork without hard-coding whose rules are right. Customers work to different ideas
+                  of a valid document, so the product had to bend to each of them to be worth selling.
                 </p>
               </div>
             </section>
@@ -177,13 +172,13 @@ export default function ConduitCaseStudy() {
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">The pipeline</h2>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
-                  The core idea is a pipeline: a saved setup you build once. You tell it which fields to read out of a
-                  document, or which fields to fill into a form. Point it at a supplier once, and it handles the rest of
-                  their documents the same way.
+                  A pipeline is a saved setup you build once. You tell it which fields to read out of a document, or
+                  which fields to fill into a form. Point it at a supplier, and it handles the rest of their documents
+                  the same way.
                 </p>
               </div>
 
-              <div className="mb-2 grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[750px]">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[750px]">
                 <div className="rounded-xl overflow-hidden">
                   <LightboxImage src="/conduit/start.png" alt="Onboarding: choose Extract to pull data out of documents, or Inject to fill a form" width={2880} height={1800} className="w-full h-auto object-cover" />
                 </div>
@@ -191,7 +186,7 @@ export default function ConduitCaseStudy() {
                   <LightboxImage src="/conduit/pipelines.png" alt="Pipelines library: saved Extract and Inject pipelines with type, dates and live status" width={2704} height={1700} className="w-full h-auto object-cover" />
                 </div>
               </div>
-              <p className="mb-10 text-sm text-muted-foreground max-w-[750px]">The fork the product opens on: pull data out, or fill data in. Everything you build is saved to the library.</p>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-10">The fork the product opens on: pull data out, or fill data in. Everything you build lands in the library.</p>
 
               <Clip
                 src="/conduit/parsing.mp4"
@@ -205,7 +200,7 @@ export default function ConduitCaseStudy() {
                 caption="Inject: detect a form’s layout and fill it with the values you bring."
               />
 
-              <div className="mb-2 grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[750px]">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[750px]">
                 <div className="rounded-xl overflow-hidden">
                   <LightboxImage src="/conduit/home-config.png" alt="Configure: the fields to pull from each document, each with a type and a description" className="w-full h-auto object-cover" />
                 </div>
@@ -213,7 +208,7 @@ export default function ConduitCaseStudy() {
                   <LightboxImage src="/conduit/runs.png" alt="Runs: a plain table of the documents pipelines have processed" width={1600} height={1004} className="w-full h-auto object-cover" />
                 </div>
               </div>
-              <p className="text-sm text-muted-foreground max-w-[750px]">Configure: name the fields to pull, each with a type and a description. Runs: a record of what the pipelines have processed.</p>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Configure: name the fields to pull, each with a type and a description. Runs: a record of what the pipelines have processed.</p>
             </section>
 
             <section id="approach" className="mb-10">
@@ -241,10 +236,10 @@ export default function ConduitCaseStudy() {
                 caption="Describe the document and the schema drafts itself, ready to adjust."
               />
 
-              <div className="mb-2 rounded-xl overflow-hidden max-w-[750px]">
+              <div className="rounded-xl overflow-hidden max-w-[750px]">
                 <LightboxImage src="/conduit/home-api.png" alt="Direct API call dialog: run a saved pipeline from Python, TypeScript or REST" className="w-full h-auto object-cover" />
-                <p className="mt-2 text-sm text-muted-foreground">Every saved pipeline gets an endpoint, so customers can run it from their own systems.</p>
               </div>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Every saved pipeline gets an endpoint, so customers can run it from their own systems.</p>
             </section>
 
             <section id="moment" className="mb-10">
@@ -252,8 +247,8 @@ export default function ConduitCaseStudy() {
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Strategic moment: from our rules to theirs</h2>
               <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>
-                  The first version shipped with the rules built in — Conduit itself decided whether a document passed,
-                  using our reading of what customs wanted. Testing showed the flaw: those requirements change with the
+                  The first version shipped with the rules built in. Conduit decided whether a document passed, using
+                  our reading of what customs wanted. In testing we saw the flaw: those requirements change with the
                   country and the product, so one fixed version never fit a customer base this varied.
                 </p>
                 <p>
@@ -261,8 +256,8 @@ export default function ConduitCaseStudy() {
                   on, and letting it go meant trusting each customer to define a valid document themselves.
                 </p>
                 <p>
-                  That trade is what made Conduit sellable. Each customer now sets the pipeline to the rules they actually
-                  work under, instead of the ones we guessed at.
+                  That trade made Conduit sellable. Each customer now sets the pipeline to the rules they work under,
+                  instead of the ones we guessed at.
                 </p>
               </div>
             </section>
@@ -273,8 +268,8 @@ export default function ConduitCaseStudy() {
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
                   There was no design system to inherit, so I built one: tokens, components, states and motion documented in
-                  one place. I animated the moment a document is being read, so it has a state of its own rather than a
-                  dead spinner.
+                  one place. I animated the moment a document is being read, so waiting has a state of its own instead
+                  of a spinner.
                 </p>
               </div>
 
@@ -284,7 +279,7 @@ export default function ConduitCaseStudy() {
                 caption="The reading-the-document animation, from the system’s Motion section."
               />
 
-              <div className="mb-2 grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[750px]">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[750px]">
                 <div className="rounded-xl overflow-hidden">
                   <LightboxImage src="/conduit/ds-states.png" alt="Design system: button states documented with treatment rules" width={1600} height={1003} className="w-full h-auto object-cover" />
                 </div>
@@ -292,21 +287,21 @@ export default function ConduitCaseStudy() {
                   <LightboxImage src="/conduit/ds-size.png" alt="Design system: empty-state illustration sizing documented with classes" width={1600} height={1003} className="w-full h-auto object-cover" />
                 </div>
               </div>
-              <p className="text-sm text-muted-foreground max-w-[750px]">States and rules documented in the system, not just built in the app.</p>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">States and rules documented in the system, not only in the app.</p>
             </section>
 
             <section id="impact" className="mb-16 p-8 bg-[#F5F3F0] rounded-xl max-w-[750px]">
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Outcomes</p>
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Impact</h2>
               <p className="text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
-                Five teams ran the early version inside their own workflow, and their testing is what reframed the product.
-                A tool that enforces one version of the rules sells to one kind of customer; a setup each customer
-                configures fits many — the difference between a demo and something a varied base can actually run.
+                Conduit rolled out to five teams, who run it on their own shipments. A tool that enforces one version
+                of the rules sells to one kind of customer. A setup each customer configures sells to a base as varied
+                as this one.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                 {[
-                  ["5 teams", "importers and co-ops running the early version in their own workflow"],
-                  ["30+", "interviews that grounded the pivot before a line of UI was drawn"],
+                  ["5 teams", "importers and co-ops using Conduit in their own workflow"],
+                  ["30+", "interviews with importers and co-ops that grounded the pivot"],
                   ["2 tools", "Extract and Inject, sharing one saved setup you can also call from your own systems"],
                 ].map(([num, cap]) => (
                   <div key={num}>
