@@ -60,11 +60,12 @@ export default function ConduitCaseStudy() {
           <main className="flex-1 px-8 lg:px-12 pb-20 lg:pb-24">
             <div className="mb-12 max-w-[750px]">
               <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl tracking-[-0.02em] leading-[1.2] mb-4">
-                Conduit: Pipelines importers build themselves
+                Conduit: Automating the customs paperwork behind every shipment
               </h1>
               <p className="text-[17px] leading-relaxed text-muted-foreground">
-                Shipped an MVP with our compliance rules baked in, then let testing reframe the product around rules each
-                customer sets.
+                Every food shipment crossing a border needs a stack of certificates and forms, redone by hand each time.
+                Conduit reads and fills them automatically — and lets each customer set it up for the rules they have to
+                meet.
               </p>
             </div>
 
@@ -103,10 +104,10 @@ export default function ConduitCaseStudy() {
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">At a glance</h2>
               <ul className="space-y-2 text-[17px] leading-relaxed max-w-[750px]">
                 {[
-                  ["Positioning", "Handed the rules to importers — each one now defines what a valid document looks like, instead of us."],
-                  ["Reuse", "Set a supplier up once, and every document from them after that goes through the same setup."],
-                  ["Scope", "Shipped two flows: Extract pulls data out of documents, Inject fills forms in."],
-                  ["Shipping", "Left automatic rule-checking out of scope, so the reworked version could ship."],
+                  ["The problem", "Importers refill the same customs certificates and forms by hand for every shipment. It is slow, easy to get wrong, and one bad field can strand a container at the port."],
+                  ["What shipped", "Two tools on one saved setup: Extract reads the key fields out of a document, Inject fills them into a form. Set it up once for a supplier, and every later document runs through it."],
+                  ["The pivot", "The first version judged each document against our idea of the rules. Those rules change by country and product, so I handed the judgment over — each customer now defines what a valid document is."],
+                  ["The trade-off", "I left automatic pass/fail checking of those rules for a later release, so the redesign could ship on time."],
                 ].map(([label, body]) => (
                   <li key={label} className="flex gap-3">
                     <span className="text-muted-foreground mt-0.5">•</span>
@@ -121,9 +122,10 @@ export default function ConduitCaseStudy() {
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">The problem &amp; context</h2>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>
-                  Conduit fills in the paperwork that gets food shipments through customs. Every shipment needs the same
-                  documents, filled in by hand, and one wrong field can leave a container sitting at the port. Before
-                  designing anything, I sat with the teams doing this work to see where it broke.
+                  Conduit fills in the paperwork that gets food shipments through customs — certificates of origin,
+                  invoices, packing lists, one set per shipment. Today a person retypes them by hand every time, and a
+                  single wrong field can leave a container sitting at the port. Before designing anything, I sat with the
+                  teams doing this work to see where it broke.
                 </p>
               </div>
               <ul className="mt-4 space-y-2 text-[17px] leading-relaxed max-w-[750px]">
@@ -148,7 +150,9 @@ export default function ConduitCaseStudy() {
                   Importers described the job as <em>&ldquo;the same paperwork every shipment, filled a little
                   differently.&rdquo;</em> What they wanted was straightforward: do the setup once, have it hold for every
                   shipment after, and have it follow{" "}
-                  <strong className="font-medium text-foreground">their own compliance rules</strong> rather than ours.
+                  <strong className="font-medium text-foreground">their own rules for what a valid document is</strong> —
+                  which fields are required and what counts as acceptable — since those differ by country, product and
+                  buyer, and aren&rsquo;t ours to decide.
                 </p>
               </div>
             </section>
@@ -158,8 +162,8 @@ export default function ConduitCaseStudy() {
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Business goal</h2>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>
-                  Automate the paperwork without deciding the rules on anyone&rsquo;s behalf. Every customer reads
-                  compliance a little differently, and the product had to fit all of them to be worth selling.
+                  Automate the paperwork without hard-coding whose rules are right. Every customer works to a slightly
+                  different idea of a valid document, so the product had to bend to each of them to be worth selling.
                 </p>
               </div>
             </section>
@@ -169,8 +173,9 @@ export default function ConduitCaseStudy() {
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">The pipeline</h2>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
-                  A pipeline is a saved setup. You tell it which fields to read from a document, or which fields to fill in
-                  on a form. Set it up for a supplier once and it handles the rest of their documents.
+                  The core idea is a pipeline: a saved setup you build once. You tell it which fields to read out of a
+                  document, or which fields to fill into a form. Point it at a supplier once, and it handles the rest of
+                  their documents the same way.
                 </p>
               </div>
 
@@ -211,13 +216,13 @@ export default function ConduitCaseStudy() {
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Approach</p>
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Approach</h2>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-6">
-                <p>Instead of setting the compliance rules ourselves, we gave importers the tools to set their own. I…</p>
+                <p>Instead of deciding whose rules were right, I gave customers the tools to set their own. I…</p>
               </div>
               <ul className="space-y-2 text-[17px] leading-relaxed max-w-[750px] mb-8">
                 {[
                   "Watched how importers handle documents today, and built for the steps that kept breaking.",
                   "Made the pipeline the one thing you set up. Set it up for a supplier once, and every document after that runs through it.",
-                  "Turned a plain description of a document into a draft schema, then let people map each field to what it should pull, instead of starting from an empty screen.",
+                  "Turned a plain description of a document into a ready-made list of fields to pull, so setup started from a draft instead of an empty screen.",
                 ].map((t, i) => (
                   <li key={i} className="flex gap-3">
                     <span className="text-muted-foreground mt-0.5">{i + 1}.</span>
@@ -243,17 +248,17 @@ export default function ConduitCaseStudy() {
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Strategic moment: from our rules to theirs</h2>
               <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>
-                  The MVP shipped with a built-in rules engine, our reading of what compliance required. Testing showed the
-                  flaw: compliance bends with the country and the product, so one fixed ruleset never fit a customer base
-                  this varied.
+                  The first version shipped with the rules built in — Conduit itself decided whether a document passed,
+                  using our reading of what customs wanted. Testing showed the flaw: those requirements change with the
+                  country and the product, so one fixed version never fit a customer base this varied.
                 </p>
                 <p>
-                  Dropping it was the hard call. The rules engine was the opinionated core the product had been sold on, and
-                  letting it go meant trusting customers to set their own rules instead of us.
+                  Dropping it was the hard call. That built-in judgment was the opinionated core the product had been sold
+                  on, and letting it go meant trusting each customer to define a valid document themselves.
                 </p>
                 <p>
-                  That trade is what made Conduit sellable. Each importer now configures the pipeline to the rules they
-                  actually work under, rather than the ones we guessed at.
+                  That trade is what made Conduit sellable. Each customer now sets the pipeline to the rules they actually
+                  work under, instead of the ones we guessed at.
                 </p>
               </div>
             </section>
@@ -264,8 +269,8 @@ export default function ConduitCaseStudy() {
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
                   There was no design system to inherit, so I built one: tokens, components, states and motion documented in
-                  one place. I animated the parsing stage myself, so a document being read has a state of its own rather
-                  than a dead spinner.
+                  one place. I animated the moment a document is being read, so it has a state of its own rather than a
+                  dead spinner.
                 </p>
               </div>
 
@@ -290,15 +295,15 @@ export default function ConduitCaseStudy() {
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Outcomes</p>
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Impact</h2>
               <p className="text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
-                Five teams ran the MVP inside their own workflow, and their testing is what reframed the product. A fixed
-                engine sells one reading of the rules; a pipeline each customer configures fits their own, which is the
-                difference between a demo and something a varied base can run.
+                Five teams ran the early version inside their own workflow, and their testing is what reframed the product.
+                A tool that enforces one version of the rules sells to one kind of customer; a setup each customer
+                configures fits many — the difference between a demo and something a varied base can actually run.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                 {[
-                  ["5 teams", "importers and co-ops running the MVP in their own workflow"],
+                  ["5 teams", "importers and co-ops running the early version in their own workflow"],
                   ["30+", "interviews that grounded the pivot before a line of UI was drawn"],
-                  ["2 flows", "Extract and Inject, on one reusable, API-triggered pipeline"],
+                  ["2 tools", "Extract and Inject, sharing one saved setup you can also call from your own systems"],
                 ].map(([num, cap]) => (
                   <div key={num}>
                     <p className="font-serif text-[2rem] leading-[1.1] tracking-[-0.02em] text-foreground">{num}</p>
