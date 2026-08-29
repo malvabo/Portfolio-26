@@ -40,13 +40,13 @@ export default function ConduitCaseStudy() {
             <BackLinkSidebar />
             <nav className="space-y-4" aria-label="Case study sections">
               {[
-                ["#tldr", "At a glance"],
+                ["#tldr", "Summary"],
                 ["#context", "Context"],
-                ["#needs", "User needs"],
-                ["#goal", "Business goal"],
-                ["#pipeline", "The pipeline"],
+                ["#needs", "Needs"],
+                ["#goal", "Goal"],
+                ["#pipeline", "Pipeline"],
                 ["#approach", "Approach"],
-                ["#moment", "Strategic moment"],
+                ["#moment", "Strategy"],
                 ["#craft", "Design system"],
                 ["#impact", "Impact"],
               ].map(([href, label]) => (
@@ -66,10 +66,6 @@ export default function ConduitCaseStudy() {
                 Every food shipment crossing a border needs a stack of certificates and forms, redone by hand each time.
                 Conduit reads and fills them automatically — and lets each customer set it up for the rules they have to
                 meet.
-              </p>
-              <p className="mt-3 text-[15px] leading-relaxed text-muted-foreground">
-                I contributed to Conduit&rsquo;s development as a product designer — from the field research through the
-                interface and the design system below.
               </p>
             </div>
 
@@ -110,8 +106,6 @@ export default function ConduitCaseStudy() {
                 {[
                   ["The problem", "Importers refill the same customs certificates and forms by hand for every shipment. It is slow, easy to get wrong, and one bad field can strand a container at the port."],
                   ["What shipped", "Two tools on one saved setup: Extract reads the key fields out of a document, Inject fills them into a form. Set it up once for a supplier, and every later document runs through it."],
-                  ["The pivot", "The first version judged each document against our idea of the rules. Those rules change by country and product, so the judgment moved to the customer — each one now defines what a valid document is."],
-                  ["The trade-off", "Automatic pass/fail checking of those rules was left for a later release, so the redesign could ship on time."],
                 ].map(([label, body]) => (
                   <li key={label} className="flex gap-3">
                     <span className="text-muted-foreground mt-0.5">•</span>
@@ -144,6 +138,10 @@ export default function ConduitCaseStudy() {
                   </li>
                 ))}
               </ul>
+              <p className="mt-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+                I contributed to Conduit&rsquo;s development as a product designer — from the field research through the
+                interface and the design system below.
+              </p>
             </section>
 
             <section id="needs" className="mb-10">
@@ -152,11 +150,12 @@ export default function ConduitCaseStudy() {
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>
                   Importers described the job as <em>&ldquo;the same paperwork every shipment, filled a little
-                  differently.&rdquo;</em> What they wanted was straightforward: do the setup once, have it hold for every
-                  shipment after, and have it follow{" "}
-                  <strong className="font-medium text-foreground">their own rules for what a valid document is</strong> —
-                  which fields are required and what counts as acceptable — since those differ by country, product and
-                  buyer, and aren&rsquo;t ours to decide.
+                  differently.&rdquo;</em> Much of it was cleaning up after their suppliers: documents arrived with
+                  mistakes in them, and the importer was the one who caught them.
+                </p>
+                <p>
+                  The rest was transcription. Values had to be read off scans that were hard to make out and typed into
+                  their own systems, then typed again into the extra forms every shipment needs.
                 </p>
               </div>
             </section>
