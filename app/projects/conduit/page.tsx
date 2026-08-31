@@ -273,9 +273,7 @@ export default function ConduitCaseStudy() {
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Outcomes</p>
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Impact</h2>
               <p className="text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
-                Conduit rolled out to five teams, who run it on their own shipments. A tool that enforces one version
-                of the rules sells to one kind of customer. A setup each customer configures sells to a base as varied
-                as this one.
+                Conduit rolled out to five teams, who run it on their own shipments.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                 {[
