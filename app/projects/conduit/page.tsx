@@ -40,7 +40,6 @@ export default function ConduitCaseStudy() {
             <BackLinkSidebar />
             <nav className="space-y-4" aria-label="Case study sections">
               {[
-                ["#tldr", "Summary"],
                 ["#context", "Context"],
                 ["#goal", "Goal"],
                 ["#pipeline", "UX design"],
@@ -95,21 +94,6 @@ export default function ConduitCaseStudy() {
                 className="w-full h-auto object-cover"
               />
             </div>
-
-            <section id="tldr" className="mb-10 p-8 bg-[#F5F3F0] rounded-xl max-w-[750px]">
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">At a glance</h2>
-              <ul className="space-y-2 text-[17px] leading-relaxed max-w-[750px]">
-                {[
-                  ["The problem", "Importers refill the same customs certificates and forms by hand for every shipment. It is slow work, and one wrong field can strand a container at the port."],
-                  ["What shipped", "Two tools on one saved setup: Extract reads the key fields out of a document, Inject fills them into a form. Set it up once for a supplier, and every later document runs through it."],
-                ].map(([label, body]) => (
-                  <li key={label} className="flex gap-3">
-                    <span className="text-muted-foreground mt-0.5">•</span>
-                    <span className="text-muted-foreground"><strong className="font-medium text-foreground">{label}:</strong> {body}</span>
-                  </li>
-                ))}
-              </ul>
-            </section>
 
             <section id="context" className="mb-10">
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Context</p>
@@ -178,15 +162,10 @@ export default function ConduitCaseStudy() {
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[750px]">
-                <div className="rounded-xl overflow-hidden">
-                  <LightboxImage src="/conduit/start.png" alt="Onboarding: choose Extract to pull data out of documents, or Inject to fill a form" width={2880} height={1800} className="w-full h-auto object-cover" />
-                </div>
-                <div className="rounded-xl overflow-hidden">
-                  <LightboxImage src="/conduit/pipelines.png" alt="Pipelines library: saved Extract and Inject pipelines with type, dates and live status" width={2704} height={1700} className="w-full h-auto object-cover" />
-                </div>
+              <div className="rounded-xl overflow-hidden max-w-[750px]">
+                <LightboxImage src="/conduit/pipelines.png" alt="Pipelines library: saved Extract and Inject pipelines with type, dates and live status" width={2704} height={1700} className="w-full h-auto object-cover" />
               </div>
-              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-10">The fork the product opens on: pull data out, or fill data in. Everything you build lands in the library.</p>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-10">Everything you build lands in the library.</p>
 
               <Clip
                 src="/conduit/parsing.mp4"
