@@ -42,14 +42,11 @@ export default function ConduitCaseStudy() {
               {[
                 ["#context", "Context"],
                 ["#research", "Research"],
-                ["#direction", "Product direction"],
-                ["#solution", "The pipeline"],
-                ["#extraction", "Extraction"],
-                ["#filling", "Form filling"],
-                ["#visibility", "Runs and API"],
-                ["#approach", "Design decisions"],
-                ["#craft", "Design system"],
-                ["#impact", "Impact"],
+                ["#direction", "Strategy"],
+                ["#solution", "The Solution"],
+                ["#approach", "Design Decisions"],
+                ["#craft", "Design System"],
+                ["#impact", "Outcomes"],
               ].map(([href, label]) => (
                 <a key={href} href={href} className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">
                   {label}
@@ -136,7 +133,7 @@ export default function ConduitCaseStudy() {
             </section>
 
             <section id="direction" className="mb-10">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Product direction</p>
+              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Strategy</p>
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Let customers define what matters</h2>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>
@@ -163,23 +160,19 @@ export default function ConduitCaseStudy() {
                   document into the importer&rsquo;s forms.
                 </p>
                 <p>
-                  Customers configure the workflow once and reuse it across shipments.
-                </p>
-              </div>
-
-              <div className="rounded-xl overflow-hidden max-w-[750px]">
-                <LightboxImage src="/conduit/pipelines.png" alt="Pipelines library: saved workflows with type and status, and the menu for starting a new one with Extract or Inject" width={1600} height={1002} className="w-full h-auto object-cover" />
-              </div>
-              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Every workflow a customer configures is saved here and reused.</p>
-            </section>
-
-            <section id="extraction" className="mb-10">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Extraction</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Pulling the data out of a supplier document</h2>
-              <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
-                <p>
                   If the data only exists in the supplier document, the pipeline extracts it. Customers describe the
                   document and Conduit drafts the fields for them to review and adjust.
+                </p>
+                <p>
+                  If the data is already available, the pipeline can go straight to filling the importer&rsquo;s form.
+                  Conduit detects the form structure and maps the data to the right fields.
+                </p>
+                <p>
+                  Customers configure the workflow once and reuse it across shipments.
+                </p>
+                <p>
+                  Runs records each execution and its status, giving compliance teams visibility into automated work.
+                  The API lets the same pipelines connect to their existing systems.
                 </p>
               </div>
 
@@ -188,22 +181,6 @@ export default function ConduitCaseStudy() {
                 label="Building an extraction workflow on a real supplier document"
                 caption="Naming the details to pull, on a real supplier document."
               />
-
-              <div className="rounded-xl overflow-hidden max-w-[750px]">
-                <LightboxImage src="/conduit/home-config.png" alt="Configuring the fields to pull from each document, each with a type and a description" className="w-full h-auto object-cover" />
-              </div>
-              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">The fields a customer defines, each with a type and a description.</p>
-            </section>
-
-            <section id="filling" className="mb-10">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Form filling</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Writing the data into the importer&rsquo;s form</h2>
-              <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
-                <p>
-                  If the data is already available, the pipeline can go straight to filling the importer&rsquo;s form.
-                  Conduit detects the form structure and maps the data to the right fields.
-                </p>
-              </div>
 
               <Clip
                 src="/conduit/inject.mp4"
@@ -216,17 +193,16 @@ export default function ConduitCaseStudy() {
                 label="Fields drafted from a plain description of the document"
                 caption="Describe the document and Conduit drafts the fields, ready to review."
               />
-            </section>
 
-            <section id="visibility" className="mb-10">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Visibility</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Runs and the API</h2>
-              <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
-                <p>
-                  Runs records each execution and its status, giving compliance teams visibility into automated work.
-                  The API lets the same pipelines connect to their existing systems.
-                </p>
+              <div className="rounded-xl overflow-hidden max-w-[750px]">
+                <LightboxImage src="/conduit/pipelines.png" alt="Pipelines library: saved workflows with type and status, and the menu for starting a new one with Extract or Inject" width={1600} height={1002} className="w-full h-auto object-cover" />
               </div>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-10">Every workflow a customer configures is saved here and reused.</p>
+
+              <div className="rounded-xl overflow-hidden max-w-[750px]">
+                <LightboxImage src="/conduit/home-config.png" alt="Configuring the fields to pull from each document, each with a type and a description" className="w-full h-auto object-cover" />
+              </div>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-10">The fields a customer defines, each with a type and a description.</p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[750px]">
                 <div className="rounded-xl overflow-hidden">
