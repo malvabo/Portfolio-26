@@ -274,19 +274,17 @@ export default function ConduitCaseStudy() {
 
             <section id="impact" className="mb-16 p-8 bg-[#F5F3F0] rounded-xl max-w-[750px]">
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Outcomes</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Impact</h2>
-              <p className="text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
-                Conduit rolled out to five teams, who run it on their own shipments.
-              </p>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-6 text-balance">Impact</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
-                  ["5 teams", "importers and co-ops using Conduit in their own workflow"],
-                  ["30+", "interviews with importers and co-ops that grounded the pivot"],
-                  ["2 tools", "Extract and Inject, sharing one saved setup you can also call from your own systems"],
-                ].map(([num, cap]) => (
-                  <div key={num}>
-                    <p className="font-serif text-[2rem] leading-[1.1] tracking-[-0.02em] text-foreground">{num}</p>
-                    <p className="mt-1 text-sm text-muted-foreground">{cap}</p>
+                  ["Importer workflows improved", "Compliance verification time per supplier or order dropped from 20 minutes to 3."],
+                  ["Delivered on time", "Eight weeks to design and build the first version, inside a short timeline."],
+                  ["Product rolled out", "Five teams onboarded onto the product."],
+                  ["Brand and design system", "Design foundations established that let the product scale efficiently."],
+                ].map(([label, body]) => (
+                  <div key={label} className="bg-white rounded-xl p-5">
+                    <p className="text-[15px] font-medium text-foreground mb-1.5">{label}</p>
+                    <p className="text-[15px] leading-relaxed text-muted-foreground">{body}</p>
                   </div>
                 ))}
               </div>
