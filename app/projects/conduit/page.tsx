@@ -44,7 +44,6 @@ export default function ConduitCaseStudy() {
                 ["#research", "Research"],
                 ["#direction", "Strategy"],
                 ["#solution", "The Solution"],
-                ["#approach", "Scalable solution"],
                 ["#craft", "Design System"],
                 ["#impact", "Outcomes"],
                 ["#future", "Conversational AI"],
