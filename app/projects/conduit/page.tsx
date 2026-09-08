@@ -306,7 +306,17 @@ export default function ConduitCaseStudy() {
                   <LightboxImage src="/conduit/ask-1.png" alt="The same conversation expanded, offering to run a pipeline on three unprocessed invoices and waiting for approval" width={1600} height={1004} className="w-full h-auto object-cover" />
                 </div>
               </div>
-              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">The answer arrives with the documents it came from, and the next step is offered rather than taken.</p>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-10">The answer arrives with the documents it came from, and the next step is offered rather than taken.</p>
+
+              <h3 className="font-serif text-[1.35rem] leading-[1.3] tracking-[-0.01em] mb-3 max-w-[750px]">From document processing to agentic workflows</h3>
+              <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+                <p>
+                  The longer-term vision is for Conduit to handle more of the process itself. An AI agent could notice
+                  that a shipment is missing a required document, find the relevant supplier file, extract the needed
+                  information, run the appropriate pipeline, and flag anything it can&rsquo;t resolve. People would stay
+                  in control of decisions and approvals, while Conduit handles the steps in between.
+                </p>
+              </div>
             </section>
 
             <div className="pt-16">
