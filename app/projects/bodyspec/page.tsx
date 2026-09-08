@@ -135,7 +135,7 @@ export default function BodySpecCaseStudy() {
             </h2>
             <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
               <p>
-                I knew I couldn’t be everywhere at once, so I turned our frontline staff into a research team. I developed a framework and trained our technicians across multiple states to conduct structured interviews during the scan process. This gave us hundreds of data points on real-world friction–insights we never would have caught in a lab.
+                I knew I couldn’t be everywhere at once, so I turned our frontline staff into a research team. I developed a framework and trained our technicians across multiple states to conduct structured interviews during the scan process. This gave us hundreds of data points on real-world friction, insights we never would have caught in a lab.
               </p>
               <p>
                 Through these technician-led interviews and my own usability testing, I identified a massive “post-scan drop-off.” Users were getting highly accurate data but had no mental model for how to use it. This realization shifted our entire strategy toward longitudinal tracking and health literacy.
@@ -305,7 +305,7 @@ export default function BodySpecCaseStudy() {
             </h2>
             <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
               <p>
-                Turning frontline staff into a research engine gave us scale and real-world friction we couldn’t get in a lab. The “post-scan drop-off” insight–that users had no mental model for their data–reframed the product from one-off scan to longitudinal habit, and that shift drove the entire design direction.
+                Turning frontline staff into a research engine gave us scale and real-world friction we couldn’t get in a lab. The “post-scan drop-off” insight, that users had no mental model for their data, reframed the product from one-off scan to longitudinal habit, and that shift drove the entire design direction.
               </p>
               <p>
                 Reducing interaction cost (location search, two-click checkout) and surfacing longitudinal trends in the dashboard turned BodySpec into a habit-forming platform. The work showed how research-led design can provide both immediate conversion gains and the strategic narrative that supports fundraising.

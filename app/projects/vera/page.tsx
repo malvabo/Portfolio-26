@@ -285,7 +285,7 @@ export default function VeraCaseStudy() {
 
                 <div className="my-4">
                   <div className="overflow-hidden rounded-xl border border-gray-100">
-                    <Image src="/images/vq_ai12.png" alt="Veeqo orders page — shipping rate selection before and after AI" width={1200} height={900} className="w-full h-auto" />
+                    <Image src="/images/vq_ai12.png" alt="Veeqo orders page: shipping rate selection before and after AI" width={1200} height={900} className="w-full h-auto" />
                   </div>
                   <p className="mt-3 text-[13px] text-muted-foreground leading-relaxed">Baseline manual selection → inline AI suggestion → expanded drawer with Recommended / Cheapest / Fastest tiers.</p>
                 </div>
@@ -301,7 +301,7 @@ export default function VeraCaseStudy() {
 
                 <div className="my-4">
                   <div className="overflow-hidden rounded-xl border border-gray-100">
-                    <Image src="/images/vq_ai15-2.png" alt="Final production design — AI suggestion in the Veeqo shipping drawer" width={1200} height={800} className="w-full h-auto" />
+                    <Image src="/images/vq_ai15-2.png" alt="Final production design: AI suggestion in the Veeqo shipping drawer" width={1200} height={800} className="w-full h-auto" />
                   </div>
                   <p className="mt-3 text-[13px] text-muted-foreground leading-relaxed">Final production: AI Suggestion at top with reasoning, Cheapest and Fastest alternatives below.</p>
                 </div>
@@ -334,7 +334,7 @@ export default function VeraCaseStudy() {
 
               <div className="mt-8 max-w-[750px]">
                 <div className="overflow-hidden rounded-xl border border-gray-100">
-                  <Image src="/images/vq_ai15.png" alt="AI feedback widget — thumbs up/down and detailed feedback popover" width={1200} height={675} className="w-full h-auto" />
+                  <Image src="/images/vq_ai15.png" alt="AI feedback widget: thumbs up/down and detailed feedback popover" width={1200} height={675} className="w-full h-auto" />
                 </div>
                 <p className="mt-3 text-[13px] text-muted-foreground leading-relaxed">Feedback widget: sellers flag incorrect or irrelevant suggestions, feeding signal back to the model.</p>
               </div>

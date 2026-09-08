@@ -135,7 +135,7 @@ export default function SquirllCaseStudy() {
               <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-6">Early direction drafts</p>
 
               <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
-                <p>Research on arousal and interface design informed this directly. Dark backgrounds lower arousal, reducing the alertness and vigilance that light backgrounds trigger. The implicit message across light-background finance apps is: pay attention to this. The implicit message we were designing toward was the opposite – this is already taken care of. That framing became the filter for every visual decision that followed.</p>
+                <p>Research on arousal and interface design informed this directly. Dark backgrounds lower arousal, reducing the alertness and vigilance that light backgrounds trigger. The implicit message across light-background finance apps is: pay attention to this. The implicit message we were designing toward was the opposite: this is already taken care of. That framing became the filter for every visual decision that followed.</p>
               </div>
             </section>
 
@@ -171,7 +171,7 @@ export default function SquirllCaseStudy() {
                       <span className="text-[11px] font-medium px-2.5 py-1 rounded-sm bg-blue-50 text-blue-700">Glowing ice-blue accents</span>
                       <span className="text-[11px] font-medium px-2.5 py-1 rounded-sm bg-blue-50 text-blue-700">Financial authority visual language</span>
                     </div>
-                    <p className="text-[15px] text-muted-foreground leading-relaxed">Category default – credibility borrowed from convention, solving the wrong problem.</p>
+                    <p className="text-[15px] text-muted-foreground leading-relaxed">Category default: credibility borrowed from convention, solving the wrong problem.</p>
                   </div>
                 </div>
               </div>
@@ -210,7 +210,7 @@ export default function SquirllCaseStudy() {
                 Choosing the right typefaces
               </h2>
               <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
-                <p>Sans-serif carried all functional UI – readable, neutral, nothing in the way. DM Serif Display came in for titles and insight headlines only: the moments where the product needed to feel like it was saying something that mattered, not just displaying data.</p>
+                <p>Sans-serif carried all functional UI: readable, neutral, nothing in the way. DM Serif Display came in for titles and insight headlines only: the moments where the product needed to feel like it was saying something that mattered, not just displaying data.</p>
               </div>
 
               <div className="rounded-xl overflow-hidden max-w-[750px] mt-8">
@@ -288,7 +288,7 @@ export default function SquirllCaseStudy() {
                 Designing the dashboard
               </h2>
               <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-10">
-                <p>The glowing circle at the centre of the dashboard is doing one thing: lowering the user&apos;s guard. Before any number is read, the composition signals that this is a calm environment – something is in control, and it isn&apos;t asking anything of you yet.</p>
+                <p>The glowing circle at the centre of the dashboard is doing one thing: lowering the user&apos;s guard. Before any number is read, the composition signals that this is a calm environment. Something is in control, and it isn&apos;t asking anything of you yet.</p>
               </div>
 
               <div className="rounded-xl overflow-hidden max-w-[750px] mt-8">
@@ -363,7 +363,7 @@ export default function SquirllCaseStudy() {
                 What I&apos;d Revisit
               </h2>
               <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
-                <p>I&apos;d explore a different serif pairing – one optimised for readability at smaller sizes, not just editorial impact at display scale. DM Serif Display earns its place in headlines, but there are moments in the product where something with better small-size legibility would have served the user better.</p>
+                <p>I&apos;d explore a different serif pairing, one optimised for readability at smaller sizes, not just editorial impact at display scale. DM Serif Display earns its place in headlines, but there are moments in the product where something with better small-size legibility would have served the user better.</p>
               </div>
             </section>
 

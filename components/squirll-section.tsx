@@ -49,7 +49,7 @@ export function SquirllSection() {
               >
                 3× Indigo Awards
               </a>
-              <div className="text-sm text-muted-foreground opacity-80">1 Gold &amp; 2 Silver — Application, Branding, UX &amp; Navigation</div>
+              <div className="text-sm text-muted-foreground opacity-80">1 Gold &amp; 2 Silver: Application, Branding, UX &amp; Navigation</div>
             </div>
           </div>
         </div>
