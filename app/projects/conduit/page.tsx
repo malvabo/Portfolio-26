@@ -263,21 +263,30 @@ export default function ConduitCaseStudy() {
               <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">States and rules documented in the system, not only in the app.</p>
             </section>
 
-            <section id="impact" className="mb-16 p-8 bg-[#F5F3F0] rounded-xl max-w-[750px]">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Outcomes</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-6 text-balance">Impact</h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {[
-                  ["Importer workflows improved", "Compliance verification time per supplier or order dropped from 20 minutes to 3."],
-                  ["Delivered on time", "Four weeks to design and build the first version, inside a short timeline."],
-                  ["Product rolled out", "Five teams onboarded onto the product."],
-                  ["Brand and design system", "Design foundations established that let the product scale efficiently."],
-                ].map(([label, body]) => (
-                  <div key={label} className="bg-white rounded-xl p-5">
-                    <p className="text-[15px] font-medium text-foreground mb-1.5">{label}</p>
-                    <p className="text-[15px] leading-relaxed text-muted-foreground">{body}</p>
-                  </div>
-                ))}
+            <section id="impact" className="mb-14">
+              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Impact</p>
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 max-w-[750px]">
+                Compliance checks that took twenty minutes now take three
+              </h2>
+              <div className="p-8 bg-[#F5F3F0] rounded-xl max-w-[750px] mb-8">
+                <ul className="space-y-2 text-[17px] leading-relaxed">
+                  <li className="flex gap-3">
+                    <span className="text-muted-foreground mt-0.5">&bull;</span>
+                    <span className="text-muted-foreground">Compliance verification time per supplier or order dropped from <span className="font-semibold text-foreground">20 minutes to 3</span></span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-muted-foreground mt-0.5">&bull;</span>
+                    <span className="text-muted-foreground"><span className="font-semibold text-foreground">Five teams</span> onboarded onto the product, running it on their own shipments</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-muted-foreground mt-0.5">&bull;</span>
+                    <span className="text-muted-foreground"><span className="font-semibold text-foreground">Four weeks</span> to design and build the first version, inside a short timeline</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-muted-foreground mt-0.5">&bull;</span>
+                    <span className="text-muted-foreground">A <span className="font-semibold text-foreground">brand and design system</span> built from scratch, so the product can scale efficiently</span>
+                  </li>
+                </ul>
               </div>
             </section>
 
