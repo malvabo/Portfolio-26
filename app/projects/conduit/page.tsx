@@ -47,7 +47,7 @@ export default function ConduitCaseStudy() {
                 ["#approach", "Design Decisions"],
                 ["#craft", "Design System"],
                 ["#impact", "Outcomes"],
-                ["#future", "Future Vision"],
+                ["#future", "Conversational AI"],
               ].map(([href, label]) => (
                 <a key={href} href={href} className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">
                   {label}
@@ -278,7 +278,7 @@ export default function ConduitCaseStudy() {
             </section>
 
             <section id="future" className="mb-16">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Future vision</p>
+              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Conversational AI</p>
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Ask the documents directly</h2>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
