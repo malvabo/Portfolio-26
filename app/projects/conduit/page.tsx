@@ -279,7 +279,7 @@ export default function ConduitCaseStudy() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
                   ["Importer workflows improved", "Compliance verification time per supplier or order dropped from 20 minutes to 3."],
-                  ["Delivered on time", "Eight weeks to design and build the first version, inside a short timeline."],
+                  ["Delivered on time", "Four weeks to design and build the first version, inside a short timeline."],
                   ["Product rolled out", "Five teams onboarded onto the product."],
                   ["Brand and design system", "Design foundations established that let the product scale efficiently."],
                 ].map(([label, body]) => (
