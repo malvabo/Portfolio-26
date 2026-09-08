@@ -146,9 +146,10 @@ export default function ConduitCaseStudy() {
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Business goal</h2>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>
-                  Automate the paperwork without deciding whose rules are right. Two importers in different countries,
-                  buying different products, are checked against different requirements. A product that only knows one
-                  version of those requirements can be sold to whoever happens to share it.
+                  Automate the paperwork without taking a position on whose rules are right. Requirements vary by country
+                  and by product, so any fixed interpretation limits the product to the customers who happen to share it.
+                  Making the rules configurable was the condition for selling past the first customer, not a refinement
+                  to come later.
                 </p>
               </div>
             </section>
@@ -278,7 +279,7 @@ export default function ConduitCaseStudy() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
                   ["Importer workflows improved", "Compliance verification time per supplier or order dropped from 20 minutes to 3."],
-                  ["Delivered on time", "Eight weeks to design and build the first version, inside a short timeline."],
+                  ["Delivered on time", "Four weeks to design and build the first version, inside a short timeline."],
                   ["Product rolled out", "Five teams onboarded onto the product."],
                   ["Brand and design system", "Design foundations established that let the product scale efficiently."],
                 ].map(([label, body]) => (
