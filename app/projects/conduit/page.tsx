@@ -160,6 +160,14 @@ export default function ConduitCaseStudy() {
                   I designed the product around a pipeline: a saved workflow that moves compliance data from a supplier
                   document into the importer&rsquo;s forms.
                 </p>
+              </div>
+
+              <div className="rounded-xl overflow-hidden max-w-[750px]">
+                <LightboxImage src="/conduit/pipelines.png" alt="Pipelines library: saved workflows with type and status, and the menu for starting a new one with Extract or Inject" width={1600} height={1002} className="w-full h-auto object-cover" />
+              </div>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-10">Every workflow a customer configures is saved here and reused.</p>
+
+              <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
                   If the data only exists in the supplier document, the pipeline extracts it. Customers describe the
                   document and Conduit drafts the fields for them to review and adjust.
@@ -190,24 +198,9 @@ export default function ConduitCaseStudy() {
               />
 
               <div className="rounded-xl overflow-hidden max-w-[750px]">
-                <LightboxImage src="/conduit/pipelines.png" alt="Pipelines library: saved workflows with type and status, and the menu for starting a new one with Extract or Inject" width={1600} height={1002} className="w-full h-auto object-cover" />
-              </div>
-              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-10">Every workflow a customer configures is saved here and reused.</p>
-
-              <div className="rounded-xl overflow-hidden max-w-[750px]">
                 <LightboxImage src="/conduit/home-config.png" alt="Configuring the fields to pull from each document, each with a type and a description" className="w-full h-auto object-cover" />
               </div>
-              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-10">The fields a customer defines, each with a type and a description.</p>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[750px]">
-                <div className="rounded-xl overflow-hidden">
-                  <LightboxImage src="/conduit/runs.png" alt="Runs: every document the workflows have processed, with its pipeline, status, run ID and time" width={1600} height={1000} className="w-full h-auto object-cover" />
-                </div>
-                <div className="rounded-xl overflow-hidden">
-                  <LightboxImage src="/conduit/home-api.png" alt="Direct API call dialog: run a saved pipeline from Python, TypeScript or REST" className="w-full h-auto object-cover" />
-                </div>
-              </div>
-              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Every execution and its status, recorded. And the API, so the same pipelines run from a customer&rsquo;s existing systems.</p>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">The fields a customer defines, each with a type and a description.</p>
             </section>
 
             <section id="approach" className="mb-10">
@@ -223,6 +216,16 @@ export default function ConduitCaseStudy() {
                   on each run.
                 </p>
               </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[750px]">
+                <div className="rounded-xl overflow-hidden">
+                  <LightboxImage src="/conduit/runs.png" alt="Runs: every document the workflows have processed, with its pipeline, status, run ID and time" width={1600} height={1000} className="w-full h-auto object-cover" />
+                </div>
+                <div className="rounded-xl overflow-hidden">
+                  <LightboxImage src="/conduit/home-api.png" alt="Direct API call dialog: run a saved pipeline from Python, TypeScript or REST" className="w-full h-auto object-cover" />
+                </div>
+              </div>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Every execution and its status, recorded. And the API, so the same pipelines run from a customer&rsquo;s existing systems.</p>
             </section>
 
             <section id="craft" className="mb-16">
