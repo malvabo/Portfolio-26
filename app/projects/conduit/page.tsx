@@ -199,15 +199,6 @@ export default function ConduitCaseStudy() {
               </div>
               <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-10">The fields a customer defines, each with a type and a description.</p>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[750px]">
-                <div className="rounded-xl overflow-hidden">
-                  <LightboxImage src="/conduit/runs.png" alt="Runs: every document the workflows have processed, with its pipeline, status, run ID and time" width={1600} height={1000} className="w-full h-auto object-cover" />
-                </div>
-                <div className="rounded-xl overflow-hidden">
-                  <LightboxImage src="/conduit/home-api.png" alt="Direct API call dialog: run a saved pipeline from Python, TypeScript or REST" className="w-full h-auto object-cover" />
-                </div>
-              </div>
-              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Every execution and its status, recorded. And the API, so the same pipelines run from a customer&rsquo;s existing systems.</p>
             </section>
 
             <section id="approach" className="mb-10">
@@ -223,6 +214,16 @@ export default function ConduitCaseStudy() {
                   on each run.
                 </p>
               </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[750px]">
+                <div className="rounded-xl overflow-hidden">
+                  <LightboxImage src="/conduit/runs.png" alt="Runs: every document the workflows have processed, with its pipeline, status, run ID and time" width={1600} height={1000} className="w-full h-auto object-cover" />
+                </div>
+                <div className="rounded-xl overflow-hidden">
+                  <LightboxImage src="/conduit/home-api.png" alt="Direct API call dialog: run a saved pipeline from Python, TypeScript or REST" className="w-full h-auto object-cover" />
+                </div>
+              </div>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Every execution and its status, recorded. And the API, so the same pipelines run from a customer&rsquo;s existing systems.</p>
             </section>
 
             <section id="craft" className="mb-16">
