@@ -183,6 +183,15 @@ export default function ConduitCaseStudy() {
                   If the data is already available, the pipeline can go straight to filling the importer&rsquo;s form.
                   Conduit detects the form structure and maps the data to the right fields.
                 </p>
+              </div>
+
+              <Clip
+                src="/conduit/parsing.mp4"
+                label="Building an extraction workflow on a real supplier document"
+                caption="Naming the details to pull, on a real supplier document."
+              />
+
+              <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mt-8 mb-8">
                 <p>
                   Customers configure the workflow once and reuse it across shipments.
                 </p>
@@ -191,12 +200,6 @@ export default function ConduitCaseStudy() {
                   The API lets the same pipelines connect to their existing systems.
                 </p>
               </div>
-
-              <Clip
-                src="/conduit/parsing.mp4"
-                label="Building an extraction workflow on a real supplier document"
-                caption="Naming the details to pull, on a real supplier document."
-              />
 
               <Clip
                 src="/conduit/prepop.mp4"
