@@ -168,7 +168,7 @@ export default function ConduitCaseStudy() {
               </div>
 
               <div className="rounded-xl overflow-hidden max-w-[750px]">
-                <LightboxImage src="/conduit/pipelines.png" alt="Pipelines library: saved workflows with type, dates and live status" width={1600} height={1004} className="w-full h-auto object-cover" />
+                <LightboxImage src="/conduit/pipelines.png" alt="Pipelines library: saved workflows with type and status, and the menu for starting a new one with Extract or Inject" width={1600} height={1002} className="w-full h-auto object-cover" />
               </div>
               <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Every workflow a customer configures is saved here and reused.</p>
             </section>
