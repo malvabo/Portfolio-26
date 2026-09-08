@@ -56,7 +56,7 @@ export default function ConduitCaseStudy() {
           <main className="flex-1 px-8 lg:px-12 pb-20 lg:pb-24">
             <div className="mb-12 max-w-[750px]">
               <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl tracking-[-0.02em] leading-[1.2] mb-4">
-                Conduit: Automating the customs paperwork behind every shipment
+                Conduit: Automating the customs paperwork for importers
               </h1>
               <p className="text-[17px] leading-relaxed text-muted-foreground">
                 Every food shipment crossing a border needs a stack of certificates and forms, redone by hand each time.

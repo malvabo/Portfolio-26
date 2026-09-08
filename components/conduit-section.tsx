@@ -20,10 +20,10 @@ export function ConduitSection() {
     <section className="container mx-auto px-8 lg:px-12 pt-8 pb-8 md:pb-12">
       <div className="max-w-7xl mx-auto">
         <div className="flex gap-2 mb-3">
-          <span className="inline-block px-2.5 py-0.5 text-[11px] font-mono uppercase tracking-normal rounded-md bg-[#E8E3DD] text-[#6B5D4F]">Supply chain</span>
+          <span className="inline-block px-2.5 py-0.5 text-[11px] font-mono uppercase tracking-normal rounded-md bg-[#E8E3DD] text-[#6B5D4F]">Startup</span>
         </div>
         <h2 className="text-2xl md:text-3xl leading-[1.1] font-serif mb-8 tracking-tight">
-          Conduit: Document pipelines importers build themselves
+          Conduit: Automating the customs paperwork for importers
         </h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 mb-10">
