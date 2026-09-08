@@ -146,8 +146,9 @@ export default function ConduitCaseStudy() {
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Business goal</h2>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>
-                  Automate the paperwork without hard-coding whose rules are right. Customers work to different ideas
-                  of a valid document, so the product had to bend to each of them to be worth selling.
+                  Automate the paperwork without deciding whose rules are right. Two importers in different countries,
+                  buying different products, are checked against different requirements. A product that only knows one
+                  version of those requirements can be sold to whoever happens to share it.
                 </p>
               </div>
             </section>
@@ -157,9 +158,9 @@ export default function ConduitCaseStudy() {
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">The pipeline</h2>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
-                  A pipeline is a saved setup you build once. You tell it which fields to read out of a document, or
-                  which fields to fill into a form. Point it at a supplier, and it handles the rest of their documents
-                  the same way.
+                  A pipeline is a setup you build once and reuse. You tell it which values to read out of a document,
+                  or which values to write into a form, then save it against a supplier. Every document that supplier
+                  sends after that runs through the same setup, with nobody configuring it again.
                 </p>
               </div>
 
@@ -195,13 +196,13 @@ export default function ConduitCaseStudy() {
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Approach</p>
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Approach</h2>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-6">
-                <p>Instead of deciding whose rules were right, we gave customers the tools to set their own. My part of that work:</p>
+                <p>Rather than decide whose rules were right, we gave customers the means to set their own. What I did:</p>
               </div>
               <ul className="space-y-2 text-[17px] leading-relaxed max-w-[750px] mb-8">
                 {[
-                  "Watched how importers handle documents today, and built for the steps that kept breaking.",
-                  "Made the pipeline the one thing you set up. Set it up for a supplier once, and every document after that runs through it.",
-                  "Turned a plain description of a document into a ready-made list of fields to pull, so setup started from a draft instead of an empty screen.",
+                  "Watched importers work through real shipments, and designed for the two places their time went: catching supplier errors, and retyping values.",
+                  "Made the saved setup the thing you configure, rather than the individual document. One setup per supplier, reused on everything they send after.",
+                  "Replaced the empty setup screen with a draft. Describe the document in a sentence and Conduit lists the values to pull, ready to correct.",
                 ].map((t, i) => (
                   <li key={i} className="flex gap-3">
                     <span className="text-muted-foreground mt-0.5">{i + 1}.</span>
@@ -228,16 +229,17 @@ export default function ConduitCaseStudy() {
               <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>
                   The first version shipped with the rules built in. Conduit decided whether a document passed, using
-                  our reading of what customs wanted. In testing we saw the flaw: those requirements change with the
-                  country and the product, so one fixed version never fit a customer base this varied.
+                  our reading of what customs wanted. Testing showed the flaw: those requirements change with the
+                  country and the product, so the version we had written fit almost none of the teams we sat with.
                 </p>
                 <p>
-                  Dropping it was the hard call. That built-in judgment was the opinionated core the product had been sold
-                  on, and letting it go meant trusting each customer to define a valid document themselves.
+                  Dropping it was the hard call. That built-in judgment was what the product had been pitched on, and
+                  letting it go meant each customer had to define a valid document themselves, which is more setup work
+                  for them, not less.
                 </p>
                 <p>
-                  That trade made Conduit sellable. Each customer now sets the pipeline to the rules they work under,
-                  instead of the ones we guessed at.
+                  We took the trade, and it is what made Conduit sellable. Each customer now sets the pipeline to the
+                  rules they are actually audited against, instead of the ones we guessed at.
                 </p>
               </div>
             </section>
@@ -247,9 +249,9 @@ export default function ConduitCaseStudy() {
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">The design system underneath</h2>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
-                  There was no design system to inherit, so I built one: tokens, components, states and motion documented in
-                  one place. I animated the moment a document is being read, so waiting has a state of its own instead
-                  of a spinner.
+                  There was no design system to inherit, so I built one and wrote it down: the colour and type scale,
+                  the components, every state each component can be in, and how things move. I animated the moment a
+                  document is being read, so the wait shows the document being worked on instead of a spinner.
                 </p>
               </div>
 
