@@ -7,7 +7,7 @@ export function SquirllSection() {
       <div className="max-w-7xl mx-auto">
       <span className="inline-block mb-3 px-2.5 py-0.5 text-[11px] font-mono uppercase tracking-widest rounded-md bg-[#E8E3DD] text-[#6B5D4F]">0→1 Early Stage</span>
       <h2 className="text-2xl md:text-3xl leading-[1.1] font-serif mb-8 tracking-tight">
-        Squirll: Defining the Design Language and Brand Expression
+        Squirll: Designing a budgeting app people do not quit
       </h2>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 mb-10">

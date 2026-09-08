@@ -37,7 +37,7 @@ export default function SquirllCaseStudy() {
             <div className="mb-8 max-w-[750px]">
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-3">0→1 · Personal Finance · AI</p>
               <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl tracking-[-0.02em] leading-[1.15] mb-4">
-                Squirll: Defining the Design Language and Brand Expression
+                Squirll: Designing a budgeting app people do not quit
               </h1>
               <p className="text-[17px] leading-relaxed text-muted-foreground">
                 A 0-to-1 AI finance platform. One designer, two founders, seven months.
