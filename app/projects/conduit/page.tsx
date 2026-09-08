@@ -189,12 +189,6 @@ export default function ConduitCaseStudy() {
                 caption="Naming the details to pull, on a real supplier document."
               />
 
-              <Clip
-                src="/conduit/prepop.mp4"
-                label="Fields drafted from a plain description of the document"
-                caption="Describe the document and Conduit drafts the fields, ready to review."
-              />
-
               <div className="rounded-xl overflow-hidden max-w-[750px]">
                 <LightboxImage src="/conduit/home-config.png" alt="Configuring the fields to pull from each document, each with a type and a description" className="w-full h-auto object-cover" />
               </div>
@@ -216,6 +210,12 @@ export default function ConduitCaseStudy() {
                 label="Detecting a form's structure and filling it with the data you bring"
                 caption="The form structure is detected, then filled with the data you bring."
               />
+
+              <Clip
+                src="/conduit/prepop.mp4"
+                label="Fields drafted from a plain description of the document"
+                caption="Describe the document and Conduit drafts the fields, ready to review."
+              />
             </section>
 
             <section id="visibility" className="mb-10">
@@ -228,15 +228,15 @@ export default function ConduitCaseStudy() {
                 </p>
               </div>
 
-              <div className="rounded-xl overflow-hidden max-w-[750px]">
-                <LightboxImage src="/conduit/runs.png" alt="Runs: a table of every document the workflows have processed, with status" width={1600} height={1000} className="w-full h-auto object-cover" />
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[750px]">
+                <div className="rounded-xl overflow-hidden">
+                  <LightboxImage src="/conduit/runs.png" alt="Runs: a table of every document the workflows have processed, with status" width={1600} height={1000} className="w-full h-auto object-cover" />
+                </div>
+                <div className="rounded-xl overflow-hidden">
+                  <LightboxImage src="/conduit/home-api.png" alt="Direct API call dialog: run a saved pipeline from Python, TypeScript or REST" className="w-full h-auto object-cover" />
+                </div>
               </div>
-              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-10">Every execution and its status, recorded.</p>
-
-              <div className="rounded-xl overflow-hidden max-w-[750px]">
-                <LightboxImage src="/conduit/home-api.png" alt="Direct API call dialog: run a saved pipeline from Python, TypeScript or REST" className="w-full h-auto object-cover" />
-              </div>
-              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">The API, so the same pipelines run from a customer&rsquo;s existing systems.</p>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Every execution and its status, recorded. And the API, so the same pipelines run from a customer&rsquo;s existing systems.</p>
             </section>
 
             <section id="approach" className="mb-10">
