@@ -44,7 +44,7 @@ export default function ConduitCaseStudy() {
                 ["#research", "Research"],
                 ["#direction", "Strategy"],
                 ["#solution", "The Solution"],
-                ["#approach", "Design Decisions"],
+                ["#approach", "Scalable solution"],
                 ["#craft", "Design System"],
                 ["#impact", "Outcomes"],
                 ["#future", "Conversational AI"],
@@ -94,7 +94,7 @@ export default function ConduitCaseStudy() {
                 alt="A coffee Certificate of Origin open in Conduit, with the fields to extract listed beside it"
                 width={1600}
                 height={1023}
-                className="w-full h-auto object-cover"
+                className="block w-full h-auto"
               />
             </div>
 
@@ -163,7 +163,7 @@ export default function ConduitCaseStudy() {
               </div>
 
               <div className="rounded-xl overflow-hidden max-w-[750px]">
-                <LightboxImage src="/conduit/pipelines.png" alt="Pipelines library: saved workflows with type and status, and the menu for starting a new one with Extract or Inject" width={1600} height={1002} className="w-full h-auto object-cover" />
+                <LightboxImage src="/conduit/pipelines.png" alt="Pipelines library: saved workflows with type and status, and the menu for starting a new one with Extract or Inject" width={1600} height={1002} className="block w-full h-auto" />
               </div>
               <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-10">Every workflow a customer configures is saved here and reused.</p>
 
@@ -175,7 +175,7 @@ export default function ConduitCaseStudy() {
               </div>
 
               <div className="rounded-xl overflow-hidden max-w-[750px]">
-                <LightboxImage src="/conduit/home-config.png" alt="Configuring the fields to pull from each document, each with a type and a description" className="w-full h-auto object-cover" />
+                <LightboxImage src="/conduit/home-config.png" alt="Configuring the fields to pull from each document, each with a type and a description" className="block w-full h-auto" />
               </div>
               <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-10">The fields a customer defines, each with a type and a description.</p>
 
@@ -208,9 +208,9 @@ export default function ConduitCaseStudy() {
             </section>
 
             <section id="approach" className="mb-10">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Design decisions</p>
+              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Scalable solution</p>
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Make automation reusable and visible</h2>
-              <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+              <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
                   I designed the supplier workflow to start from a real document, with Conduit creating a draft instead
                   of asking users to define every field from scratch.
@@ -221,12 +221,12 @@ export default function ConduitCaseStudy() {
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[750px]">
-                <div className="rounded-xl overflow-hidden">
-                  <LightboxImage src="/conduit/runs.png" alt="Runs: every document the workflows have processed, with its pipeline, status, run ID and time" width={1600} height={1000} className="w-full h-auto object-cover" />
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[750px] items-start">
+                <div className="rounded-xl overflow-hidden aspect-[16/10]">
+                  <LightboxImage src="/conduit/runs.png" alt="Runs: every document the workflows have processed, with its pipeline, status, run ID and time" width={1600} height={1000} className="block w-full h-full object-cover" />
                 </div>
-                <div className="rounded-xl overflow-hidden">
-                  <LightboxImage src="/conduit/home-api.png" alt="Direct API call dialog: run a saved pipeline from Python, TypeScript or REST" className="w-full h-auto object-cover" />
+                <div className="rounded-xl overflow-hidden aspect-[16/10]">
+                  <LightboxImage src="/conduit/home-api.png" alt="Direct API call dialog: run a saved pipeline from Python, TypeScript or REST" className="block w-full h-full object-cover" />
                 </div>
               </div>
               <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Every execution and its status, recorded. And the API, so the same pipelines run from a customer&rsquo;s existing systems.</p>
@@ -252,12 +252,12 @@ export default function ConduitCaseStudy() {
                 caption="The reading-the-document animation, from the system’s Motion section."
               />
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[750px]">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[750px] items-start">
                 <div className="rounded-xl overflow-hidden">
-                  <LightboxImage src="/conduit/ds-states.png" alt="Design system: button states documented with treatment rules" width={1600} height={1003} className="w-full h-auto object-cover" />
+                  <LightboxImage src="/conduit/ds-states.png" alt="Design system: button states documented with treatment rules" width={1600} height={1003} className="block w-full h-auto" />
                 </div>
                 <div className="rounded-xl overflow-hidden">
-                  <LightboxImage src="/conduit/ds-size.png" alt="Design system: empty-state illustration sizing documented with classes" width={1600} height={1003} className="w-full h-auto object-cover" />
+                  <LightboxImage src="/conduit/ds-size.png" alt="Design system: empty-state illustration sizing documented with classes" width={1600} height={1003} className="block w-full h-auto" />
                 </div>
               </div>
               <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">States and rules documented in the system, not only in the app.</p>
@@ -302,12 +302,12 @@ export default function ConduitCaseStudy() {
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[750px]">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[750px] items-start">
                 <div className="rounded-xl overflow-hidden">
-                  <LightboxImage src="/conduit/ask-0.png" alt="A question about a shipment answered in a side panel next to Runs, listing the blocked and expiring documents" width={1600} height={1002} className="w-full h-auto object-cover" />
+                  <LightboxImage src="/conduit/ask-0.png" alt="A question about a shipment answered in a side panel next to Runs, listing the blocked and expiring documents" width={1600} height={1002} className="block w-full h-auto" />
                 </div>
                 <div className="rounded-xl overflow-hidden">
-                  <LightboxImage src="/conduit/ask-1.png" alt="The same conversation expanded, offering to run a pipeline on three unprocessed invoices and waiting for approval" width={1600} height={1004} className="w-full h-auto object-cover" />
+                  <LightboxImage src="/conduit/ask-1.png" alt="The same conversation expanded, offering to run a pipeline on three unprocessed invoices and waiting for approval" width={1600} height={1004} className="block w-full h-auto" />
                 </div>
               </div>
               <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-10">The answer arrives with the documents it came from, and the next step is offered rather than taken.</p>
