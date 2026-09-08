@@ -184,12 +184,6 @@ export default function ConduitCaseStudy() {
               />
 
               <Clip
-                src="/conduit/inject.mp4"
-                label="Detecting a form's structure and filling it with the data you bring"
-                caption="The form structure is detected, then filled with the data you bring."
-              />
-
-              <Clip
                 src="/conduit/prepop.mp4"
                 label="Fields drafted from a plain description of the document"
                 caption="Describe the document and Conduit drafts the fields, ready to review."
