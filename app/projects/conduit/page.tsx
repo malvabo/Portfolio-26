@@ -156,7 +156,7 @@ export default function ConduitCaseStudy() {
 
             <section id="solution" className="mb-10">
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Solution</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">One reusable workflow</h2>
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Reusable workflows</h2>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
                   I designed the product around a pipeline: a saved workflow that moves compliance data from a supplier
@@ -168,7 +168,7 @@ export default function ConduitCaseStudy() {
               </div>
 
               <div className="rounded-xl overflow-hidden max-w-[750px]">
-                <LightboxImage src="/conduit/pipelines.png" alt="Pipelines library: saved workflows with type, dates and live status" width={1600} height={1004} className="w-full h-auto object-cover" />
+                <LightboxImage src="/conduit/pipelines.png" alt="Pipelines library: saved workflows with type and status, and the menu for starting a new one with Extract or Inject" width={1600} height={1002} className="w-full h-auto object-cover" />
               </div>
               <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Every workflow a customer configures is saved here and reused.</p>
             </section>
