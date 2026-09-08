@@ -3,9 +3,9 @@ import Link from "next/link"
 
 export function TempStarsSection() {
   const images = [
-    { src: "/images/tempstars-landing.png", alt: "TempStars app landing – Dental Temping the way it should be" },
+    { src: "/images/tempstars-landing.png", alt: "TempStars app landing: Dental Temping the way it should be" },
     { src: "/images/tempstars-clinic-profile.png", alt: "TempStars dental centre profile with neighborhood and shift details" },
-    { src: "/images/tempstars-good-company.png", alt: "TempStars onboarding – You are in a good company" },
+    { src: "/images/tempstars-good-company.png", alt: "TempStars onboarding: You are in a good company" },
   ]
 
   return (

@@ -4,7 +4,7 @@ import Image from "next/image"
 const library = {
   title: "Behavior Design Library",
   description:
-    "A library of behavior design patterns I'm building — the psychology behind trust, motivation, and repeat use, applied to AI products.",
+    "A library of behavior design patterns I'm building: the psychology behind trust, motivation, and repeat use, applied to AI products.",
   link: "https://www.habitkit.club/",
 }
 
@@ -43,7 +43,7 @@ export function BehaviorLibrarySection() {
             <div className="relative w-full rounded-lg overflow-hidden shadow-lg ring-1 ring-white/10 bg-white/5 backdrop-blur-sm">
               <Image
                 src="/images/habitkit-preview.jpg"
-                alt="Behavior Design Library — Build AI products with human psychology in mind"
+                alt="Behavior Design Library: Build AI products with human psychology in mind"
                 width={1600}
                 height={920}
                 className="w-full h-auto object-contain"

@@ -93,7 +93,7 @@ export default function VeeqoCaseStudy() {
                   </li>
                   <li className="flex gap-3">
                     <span className="text-muted-foreground mt-0.5">•</span>
-                    <span className="text-muted-foreground"><span className="font-semibold text-foreground">Days not months</span> — custom fields and new document types now ship on a timeline the team owns</span>
+                    <span className="text-muted-foreground"><span className="font-semibold text-foreground">Days not months</span>: custom fields and new document types now ship on a timeline the team owns</span>
                   </li>
                   <li className="flex gap-3">
                     <span className="text-muted-foreground mt-0.5">•</span>
@@ -116,7 +116,7 @@ export default function VeeqoCaseStudy() {
                 <div className="rounded-xl overflow-hidden">
                   <LightboxImage src="/images/vq-doc7-preview.webp" lightboxSrc="/images/vq-doc7.webp" alt="The system we replaced" className="w-full h-auto object-cover" loading="eager" />
                 </div>
-                <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Legacy third-party editor — no API access, no extensibility</p>
+                <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Legacy third-party editor: no API access, no extensibility</p>
                 <div>
                   <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2 mt-6">Business goals</p>
                   <p>Three things had to happen simultaneously: eliminate the third-party PDF dependency, protect retention among top-tier enterprise accounts from the UK, and reclaim technical ownership so the team could ship new document types without being blocked by an external vendor.</p>
@@ -171,8 +171,8 @@ export default function VeeqoCaseStudy() {
                   },
                   {
                     label: "Churn risk",
-                    enterprise: "High – documents are infrastructure, not a feature",
-                    smb: "Low – never invested in the old system",
+                    enterprise: "High: documents are infrastructure, not a feature",
+                    smb: "Low: never invested in the old system",
                   },
                 ].map((row, i, arr) => (
                   <div key={row.label} className={`grid grid-cols-[180px_1fr_1fr] ${i < arr.length - 1 ? "border-b border-[#EBEBEB]" : ""}`}>
@@ -392,13 +392,13 @@ export default function VeeqoCaseStudy() {
                   <div className="rounded-xl overflow-hidden">
                     <LightboxImage src="/images/vq11.png" alt="Research based additional settings" className="w-full h-auto object-cover" />
                   </div>
-                  <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Research-informed field set — most-requested variables surfaced first</p>
+                  <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Research-informed field set: most-requested variables surfaced first</p>
                   <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2 mt-6">Ready-to-go template</p>
-                  <p className="text-[17px] leading-relaxed text-muted-foreground mb-5">Field priorities were driven by data – frequency of mention across support tickets and seller interviews determined which variables made it into the first release. Most-used fields shipped first, edge cases queued behind them.</p>
+                  <p className="text-[17px] leading-relaxed text-muted-foreground mb-5">Field priorities were driven by data. Frequency of mention across support tickets and seller interviews determined which variables made it into the first release. Most-used fields shipped first, edge cases queued behind them.</p>
                   <div className="rounded-xl overflow-hidden mt-4">
                     <LightboxImage src="/images/vq-doc31.png" alt="Research based additional settings detail" className="w-full h-auto object-cover" />
                   </div>
-                  <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Additional settings panel — data-priority field ordering</p>
+                  <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Additional settings panel: data-priority field ordering</p>
                 </div>
                 <div>
                   <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">HTML Editor</p>
@@ -535,7 +535,7 @@ export default function VeeqoCaseStudy() {
                   </li>
                   <li className="flex gap-3">
                     <span className="text-muted-foreground mt-0.5">•</span>
-                    <span className="text-muted-foreground"><span className="font-semibold text-foreground">Days not months</span> — custom fields and new document types now ship on a timeline the team owns</span>
+                    <span className="text-muted-foreground"><span className="font-semibold text-foreground">Days not months</span>: custom fields and new document types now ship on a timeline the team owns</span>
                   </li>
                   <li className="flex gap-3">
                     <span className="text-muted-foreground mt-0.5">•</span>
@@ -552,7 +552,7 @@ export default function VeeqoCaseStudy() {
                 Leveraging AI for document creation
               </h2>
               <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
-                <p>The core problem was technical literacy. Enterprise documents require complex custom logic (HTML/CSS), but warehouse managers aren&apos;t developers — they can&apos;t code.</p>
+                <p>The core problem was technical literacy. Enterprise documents require complex custom logic (HTML/CSS), but warehouse managers aren&apos;t developers, so they can&apos;t code.</p>
                 <p>Instead of building a complex GUI we wouldn&apos;t be able to technically support in the first iteration of the product, I designed a workflow where the user provides natural language intent.</p>
                 <p>I worked closely with the backend engineers to define the technical specifications. I translated our internal Shopify Liquid logic into the system instructions. I ensured the prompt followed our specific ways of iterating through lists and data fetching.</p>
               </div>

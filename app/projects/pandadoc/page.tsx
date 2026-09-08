@@ -147,7 +147,7 @@ export default function PandaDocCaseStudy() {
 
             <div className="space-y-5 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
               <p>
-                The temptation was to build a &quot;lite&quot; version of the whole platform. I fought this by observing sales calls. I realized the user&apos;s primary anxiety wasn&apos;t &quot;editing&quot;–it was &quot;visibility and speed&quot;.
+                The temptation was to build a &quot;lite&quot; version of the whole platform. I fought this by observing sales calls. I realized the user&apos;s primary anxiety wasn&apos;t &quot;editing&quot;. It was &quot;visibility and speed&quot;.
               </p>
             </div>
 
@@ -318,7 +318,7 @@ export default function PandaDocCaseStudy() {
                 Fighting the &quot;lite version of everything&quot; temptation by observing real sales calls kept scope honest: the user&apos;s anxiety was visibility and speed, not editing. That led to the activity pulse and fixing the template bottleneck instead of rebuilding the full product in the extension.
               </p>
               <p>
-                Managing technical debt and scope with a team of four meant negotiating explicitly–Rich Notifications to V2, Starred &amp; Suggested first–and investing in a tokenized component library so design-to-dev stayed predictable. Context-aware UI (templates by contact industry) turned the extension into a layer that lives where the user works, which is what made it sticky and drove both retention and acquisition through the Chrome Web Store.
+                Managing technical debt and scope with a team of four meant negotiating explicitly: Rich Notifications to V2, Starred &amp; Suggested first, and investing in a tokenized component library so design-to-dev stayed predictable. Context-aware UI (templates by contact industry) turned the extension into a layer that lives where the user works, which is what made it sticky and drove both retention and acquisition through the Chrome Web Store.
               </p>
             </div>
           </section>

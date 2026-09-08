@@ -14,7 +14,7 @@ const TEMPSTARS_CASE_IMAGES = [
   { src: "/images/tempstars-clinic-profile.png", alt: "Dental centre profile with neighborhood map and office details", width: 800, height: 1200 },
   { src: "/images/tempstars-phones-office-onboarding.png", alt: "Clinic detail and onboarding screen on mobile", width: 1200, height: 800 },
   { src: "/images/tempstars-onboarding-skills-photo.png", alt: "Onboarding: extra skills selection and photo upload", width: 1200, height: 800 },
-  { src: "/images/tempstars-good-company.png", alt: "You are in a good company – TempStars social proof screen", width: 800, height: 1200 },
+  { src: "/images/tempstars-good-company.png", alt: "You are in a good company, the TempStars social proof screen", width: 800, height: 1200 },
 ]
 
 export default function TempStarsCaseStudy() {
@@ -72,7 +72,7 @@ export default function TempStarsCaseStudy() {
           <div className="mb-12 rounded-xl overflow-hidden max-w-[750px]">
             <LightboxImage
               src="/images/tempstars-phones-hero.png"
-              alt="Dental centre profile and onboarding – two phones showing clinic detail and You are in a good company"
+              alt="Dental centre profile and onboarding: two phones showing clinic detail and You are in a good company"
               width={1200}
               height={800}
               className="w-full h-auto object-contain"
