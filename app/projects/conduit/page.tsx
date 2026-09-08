@@ -120,7 +120,7 @@ export default function ConduitCaseStudy() {
               </ul>
               <p className="mt-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 I contributed to Conduit&rsquo;s development as a product designer, from the field research through
-                the interface and the design system below.
+                the interface and the design system.
               </p>
             </section>
 
@@ -130,12 +130,13 @@ export default function ConduitCaseStudy() {
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>
                   Importers described the job as <em>&ldquo;the same paperwork every shipment, filled a little
-                  differently.&rdquo;</em> Much of it was cleaning up after their suppliers: documents arrived with
-                  mistakes in them, and the importer caught them.
+                  differently.&rdquo;</em> Two things took the time. One was checking their suppliers&rsquo; work:
+                  documents turned up with the wrong weight, or a certificate number that did not match the shipment,
+                  and the importer had to catch it before customs did.
                 </p>
                 <p>
-                  The rest was transcription. They read values off scans that were hard to make out, typed them into
-                  their own systems, then typed them again into the extra forms every shipment needs.
+                  The other was retyping. Values had to be read off scans that were often hard to make out, entered
+                  into the importer&rsquo;s own system, then entered again on every extra form the shipment needed.
                 </p>
               </div>
             </section>
