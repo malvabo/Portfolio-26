@@ -187,7 +187,7 @@ export default function ConduitCaseStudy() {
               />
 
               <div className="rounded-xl overflow-hidden max-w-[750px]">
-                <LightboxImage src="/conduit/pipelines.png" alt="Pipelines library: saved workflows with type, dates and live status" width={2704} height={1700} className="w-full h-auto object-cover" />
+                <LightboxImage src="/conduit/pipelines.png" alt="Pipelines library: saved workflows with type, dates and live status" width={1600} height={1004} className="w-full h-auto object-cover" />
               </div>
               <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-10">Every workflow a customer configures is saved here and reused.</p>
 
@@ -196,7 +196,7 @@ export default function ConduitCaseStudy() {
                   <LightboxImage src="/conduit/home-config.png" alt="Configuring the fields to pull from each document, each with a type and a description" className="w-full h-auto object-cover" />
                 </div>
                 <div className="rounded-xl overflow-hidden">
-                  <LightboxImage src="/conduit/runs.png" alt="Runs: a table of every document the workflows have processed, with status" width={1600} height={1004} className="w-full h-auto object-cover" />
+                  <LightboxImage src="/conduit/runs.png" alt="Runs: a table of every document the workflows have processed, with status" width={1600} height={1000} className="w-full h-auto object-cover" />
                 </div>
               </div>
               <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-10">The fields a customer defines, and Runs, where each execution and its status is recorded.</p>
