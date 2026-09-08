@@ -115,6 +115,16 @@ export default function ConduitCaseStudy() {
                   compliance check.
                 </p>
               </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[750px] items-start mt-8">
+                <div className="rounded-xl overflow-hidden aspect-[4/3]">
+                  <LightboxImage src="/conduit/supply-drying.webp" alt="A worker turning cocoa beans by hand on a drying rack outside a farm building" width={1600} height={1598} className="block w-full h-full object-cover" />
+                </div>
+                <div className="rounded-xl overflow-hidden aspect-[4/3]">
+                  <LightboxImage src="/conduit/supply-warehouse.webp" alt="Warehouse workers cutting open sacks of cocoa beans before shipping" width={1600} height={1200} className="block w-full h-full object-cover" />
+                </div>
+              </div>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">The shipments the paperwork follows, from the farm to the warehouse.</p>
             </section>
 
             <section id="research" className="mb-10">
