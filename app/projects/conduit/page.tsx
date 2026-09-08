@@ -47,6 +47,7 @@ export default function ConduitCaseStudy() {
                 ["#approach", "Design Decisions"],
                 ["#craft", "Design System"],
                 ["#impact", "Outcomes"],
+                ["#future", "Future Vision"],
               ].map(([href, label]) => (
                 <a key={href} href={href} className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">
                   {label}
@@ -277,6 +278,38 @@ export default function ConduitCaseStudy() {
                   </div>
                 ))}
               </div>
+            </section>
+
+            <section id="future" className="mb-16">
+              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Future vision</p>
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Ask the documents directly</h2>
+              <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
+                <p>
+                  Pipelines automate the repetitive work, but a compliance officer still has to open documents and
+                  search for the information they need.
+                </p>
+                <p>
+                  I also built a conversational layer on top of the documents processed by Conduit. A user could ask
+                  what&rsquo;s missing before a shipment can clear, what expires this month, or which invoices are
+                  missing an HS code, and get the answer with the source documents attached.
+                </p>
+                <p>
+                  The conversation could also lead to action. If the relevant documents haven&rsquo;t been processed
+                  yet, Conduit could suggest running the appropriate pipeline and wait for approval before doing it. My
+                  goal is to allow users not just to read documents, but to let people work with the information inside
+                  them easily.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[750px]">
+                <div className="rounded-xl overflow-hidden">
+                  <LightboxImage src="/conduit/ask-0.png" alt="A question about a shipment answered in a side panel next to Runs, listing the blocked and expiring documents" width={1600} height={1002} className="w-full h-auto object-cover" />
+                </div>
+                <div className="rounded-xl overflow-hidden">
+                  <LightboxImage src="/conduit/ask-1.png" alt="The same conversation expanded, offering to run a pipeline on three unprocessed invoices and waiting for approval" width={1600} height={1004} className="w-full h-auto object-cover" />
+                </div>
+              </div>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">The answer arrives with the documents it came from, and the next step is offered rather than taken.</p>
             </section>
 
             <div className="pt-16">
