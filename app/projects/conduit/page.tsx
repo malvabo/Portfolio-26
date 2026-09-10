@@ -133,7 +133,8 @@ export default function ConduitCaseStudy() {
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>
                   I watched compliance teams work through real shipments to understand where Conduit could remove that
-                  manual work.
+                  manual work. Importers described it as <em>&ldquo;the same paperwork every shipment, filled a little
+                  differently.&rdquo;</em>
                 </p>
                 <p>
                   I contributed to Conduit&rsquo;s development as a product designer, from the field research through
@@ -147,16 +148,19 @@ export default function ConduitCaseStudy() {
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Let customers define what matters</h2>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>
-                  In the first version Conduit would decide whether a document contained everything needed for
-                  compliance.
+                  The first version made the compliance call for the customer. The founders&rsquo; bet was a fixed rules
+                  engine, which I had designed into the first version. It used our research to decide whether a document
+                  passed.
                 </p>
                 <p>
-                  That quickly proved too rigid. Different importers had different compliance requirements, even when
-                  they were processing the same type of supplier document.
+                  Testing showed that no two teams checked the same fields, even for the same document type. Rather than
+                  arguing from my own opinion, I took the sessions back to the founders. We cut the rules engine that
+                  week.
                 </p>
                 <p>
-                  We changed the model: customers define the fields and rules they need, and Conduit handles the
-                  extraction and transfer.
+                  The product became modular instead. Teams could use what fit their workflow: extracting information,
+                  injecting it into documents, or using their own validation rules. That made the product useful without
+                  forcing every customer into the same compliance model. Five teams ended up running it.
                 </p>
               </div>
             </section>
