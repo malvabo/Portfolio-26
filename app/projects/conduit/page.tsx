@@ -247,6 +247,14 @@ export default function ConduitCaseStudy() {
                   what&rsquo;s missing before a shipment can clear, what expires this month, or which invoices are
                   missing an HS code, and get the answer with the source documents attached.
                 </p>
+              </div>
+
+              <div className="rounded-xl overflow-hidden max-w-[750px]">
+                <LightboxImage src="/conduit/ask-0.png" alt="A question about a shipment answered in a side panel next to Runs, listing the blocked and expiring documents" width={1600} height={1002} className="block w-full h-auto" />
+              </div>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-10">The answer arrives with the documents it came from.</p>
+
+              <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
                   The conversation could also lead to action. If the relevant documents haven&rsquo;t been processed
                   yet, Conduit could suggest running the appropriate pipeline and wait for approval before doing it. My
@@ -255,15 +263,10 @@ export default function ConduitCaseStudy() {
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[750px] items-start">
-                <div className="rounded-xl overflow-hidden">
-                  <LightboxImage src="/conduit/ask-0.png" alt="A question about a shipment answered in a side panel next to Runs, listing the blocked and expiring documents" width={1600} height={1002} className="block w-full h-auto" />
-                </div>
-                <div className="rounded-xl overflow-hidden">
-                  <LightboxImage src="/conduit/ask-1.png" alt="The same conversation expanded, offering to run a pipeline on three unprocessed invoices and waiting for approval" width={1600} height={1004} className="block w-full h-auto" />
-                </div>
+              <div className="rounded-xl overflow-hidden max-w-[750px]">
+                <LightboxImage src="/conduit/ask-1.png" alt="The same conversation expanded, offering to run a pipeline on three unprocessed invoices and waiting for approval" width={1600} height={1004} className="block w-full h-auto" />
               </div>
-              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-10">The answer arrives with the documents it came from, and the next step is offered rather than taken.</p>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-10">The next step is offered rather than taken.</p>
 
               <h3 className="font-serif text-[1.35rem] leading-[1.3] tracking-[-0.01em] mb-3 max-w-[750px]">From document processing to agentic workflows</h3>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
