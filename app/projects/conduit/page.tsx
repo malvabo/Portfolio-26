@@ -41,7 +41,6 @@ export default function ConduitCaseStudy() {
             <nav className="space-y-4" aria-label="Case study sections">
               {[
                 ["#context", "Context"],
-                ["#research", "Research"],
                 ["#direction", "Strategy"],
                 ["#solution", "The Solution"],
                 ["#craft", "Design System"],
@@ -110,10 +109,6 @@ export default function ConduitCaseStudy() {
                   weight, and certificate number, then copy them into their internal forms. Sometimes they already have
                   the data; sometimes it only exists in a supplier document and needs to be extracted first.
                 </p>
-                <p>
-                  The same process repeats for every shipment, and a mistake can mean a product or shipment fails a
-                  compliance check.
-                </p>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[750px] items-start mt-8">
@@ -125,22 +120,6 @@ export default function ConduitCaseStudy() {
                 </div>
               </div>
               <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">The shipments the paperwork follows, from the farm to the warehouse.</p>
-            </section>
-
-            <section id="research" className="mb-10">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Research</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Watching the work as it happens</h2>
-              <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
-                <p>
-                  I watched compliance teams work through real shipments to understand where Conduit could remove that
-                  manual work. Importers described it as <em>&ldquo;the same paperwork every shipment, filled a little
-                  differently.&rdquo;</em>
-                </p>
-                <p>
-                  I contributed to Conduit&rsquo;s development as a product designer, from the field research through
-                  the interface and the design system.
-                </p>
-              </div>
             </section>
 
             <section id="direction" className="mb-10">
