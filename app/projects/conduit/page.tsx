@@ -41,7 +41,6 @@ export default function ConduitCaseStudy() {
             <nav className="space-y-4" aria-label="Case study sections">
               {[
                 ["#context", "Context"],
-                ["#direction", "Strategy"],
                 ["#solution", "The Solution"],
                 ["#craft", "Design System"],
                 ["#future", "Conversational AI"],
@@ -119,28 +118,6 @@ export default function ConduitCaseStudy() {
                 </div>
               </div>
               <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">The shipments the paperwork follows, from the farm to the warehouse.</p>
-            </section>
-
-            <section id="direction" className="mb-10">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Strategy</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Let customers define what matters</h2>
-              <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
-                <p>
-                  The first version made the compliance call for the customer. The founders&rsquo; bet was a fixed rules
-                  engine, which I had designed into the first version. It used our research to decide whether a document
-                  passed.
-                </p>
-                <p>
-                  Testing showed that no two teams checked the same fields, even for the same document type. Rather than
-                  arguing from my own opinion, I took the sessions back to the founders. We cut the rules engine that
-                  week.
-                </p>
-                <p>
-                  The product became modular instead. Teams could use what fit their workflow: extracting information,
-                  injecting it into documents, or using their own validation rules. That made the product useful without
-                  forcing every customer into the same compliance model. Five teams ended up running it.
-                </p>
-              </div>
             </section>
 
             <section id="solution" className="mb-10">
@@ -302,13 +279,13 @@ export default function ConduitCaseStudy() {
             <section id="impact" className="mb-14">
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Impact</p>
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 max-w-[750px]">
-                Compliance checks that took twenty minutes now take three
+                Document filing that took fifteen minutes now takes one
               </h2>
               <div className="p-8 bg-[#F5F3F0] rounded-xl max-w-[750px] mb-8">
                 <ul className="space-y-2 text-[17px] leading-relaxed">
                   <li className="flex gap-3">
                     <span className="text-muted-foreground mt-0.5">&bull;</span>
-                    <span className="text-muted-foreground">Compliance verification time per supplier or order dropped from <span className="font-semibold text-foreground">20 minutes to 3</span></span>
+                    <span className="text-muted-foreground">Document filing time per order dropped from <span className="font-semibold text-foreground">15 minutes to 1</span></span>
                   </li>
                   <li className="flex gap-3">
                     <span className="text-muted-foreground mt-0.5">&bull;</span>
@@ -316,11 +293,11 @@ export default function ConduitCaseStudy() {
                   </li>
                   <li className="flex gap-3">
                     <span className="text-muted-foreground mt-0.5">&bull;</span>
-                    <span className="text-muted-foreground"><span className="font-semibold text-foreground">Four weeks</span> to design and build the first version, inside a short timeline</span>
+                    <span className="text-muted-foreground"><span className="font-semibold text-foreground">Four weeks</span> to design and build the first version, delivered in time</span>
                   </li>
                   <li className="flex gap-3">
                     <span className="text-muted-foreground mt-0.5">&bull;</span>
-                    <span className="text-muted-foreground">A <span className="font-semibold text-foreground">brand and design system</span> built from scratch, so the product can scale efficiently</span>
+                    <span className="text-muted-foreground">A <span className="font-semibold text-foreground">brand and design system</span> built from scratch</span>
                   </li>
                 </ul>
               </div>
