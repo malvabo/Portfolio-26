@@ -264,9 +264,9 @@ export default function ConduitCaseStudy() {
               </div>
 
               <div className="rounded-xl overflow-hidden max-w-[750px]">
-                <LightboxImage src="/conduit/ask-1.png" alt="The chat expanded to full width, comparing every document in a table with status, issuer, expiry, HS code and value" width={1600} height={1001} className="block w-full h-auto" />
+                <LightboxImage src="/conduit/ask-1.png" alt="The chat comparing an invoice against a packing list, showing the value gap, incoterm and weight differences, then asking which value to declare" width={1600} height={1001} className="block w-full h-auto" />
               </div>
-              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-10">Expanded to compare every document side by side, with the blockers called out.</p>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-10">The next step is offered rather than taken.</p>
 
               <h3 className="font-serif text-[1.35rem] leading-[1.3] tracking-[-0.01em] mb-3 max-w-[750px]">From document processing to agentic workflows</h3>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
