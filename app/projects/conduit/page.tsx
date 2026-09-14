@@ -250,7 +250,7 @@ export default function ConduitCaseStudy() {
               </div>
 
               <div className="rounded-xl overflow-hidden max-w-[750px]">
-                <LightboxImage src="/conduit/ask-0.png" alt="A question about a shipment answered in a side panel next to Runs, listing the blocked and expiring documents" width={1600} height={1002} className="block w-full h-auto" />
+                <LightboxImage src="/conduit/ask-0.png" alt="An executive brief answered in a side panel next to Pipelines, naming the blocked and expiring documents and citing its sources" width={1600} height={1000} className="block w-full h-auto" />
               </div>
               <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-10">The answer arrives with the documents it came from.</p>
 
@@ -264,9 +264,9 @@ export default function ConduitCaseStudy() {
               </div>
 
               <div className="rounded-xl overflow-hidden max-w-[750px]">
-                <LightboxImage src="/conduit/ask-1.png" alt="The same conversation expanded, offering to run a pipeline on three unprocessed invoices and waiting for approval" width={1600} height={1004} className="block w-full h-auto" />
+                <LightboxImage src="/conduit/ask-1.png" alt="The chat expanded to full width, comparing every document in a table with status, issuer, expiry, HS code and value" width={1600} height={1001} className="block w-full h-auto" />
               </div>
-              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-10">The next step is offered rather than taken.</p>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-10">Expanded to compare every document side by side, with the blockers called out.</p>
 
               <h3 className="font-serif text-[1.35rem] leading-[1.3] tracking-[-0.01em] mb-3 max-w-[750px]">From document processing to agentic workflows</h3>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
