@@ -106,8 +106,7 @@ export default function ConduitCaseStudy() {
                 </p>
                 <p>
                   Today, compliance teams manually find and check details such as product name, country of origin,
-                  weight, and certificate number, then copy them into their internal forms. Sometimes they already have
-                  the data; sometimes it only exists in a supplier document and needs to be extracted first.
+                  weight, and certificate number, then copy them into their internal forms.
                 </p>
               </div>
 
