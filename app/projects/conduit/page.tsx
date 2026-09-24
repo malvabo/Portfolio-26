@@ -41,9 +41,9 @@ export default function ConduitCaseStudy() {
             <nav className="space-y-4" aria-label="Case study sections">
               {[
                 ["#context", "Context"],
-                ["#solution", "The Solution"],
-                ["#craft", "Design System"],
-                ["#future", "Conversational design"],
+                ["#solution", "Solution"],
+                ["#craft", "Design system"],
+                ["#future", "Conversational AI"],
                 ["#impact", "Outcomes"],
               ].map(([href, label]) => (
                 <a key={href} href={href} className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">
@@ -60,7 +60,7 @@ export default function ConduitCaseStudy() {
               </h1>
               <p className="text-[17px] leading-relaxed text-muted-foreground">
                 Every food shipment crossing a border needs a stack of certificates and forms, redone by hand each time.
-                Conduit reads those documents and fills the forms, on the rules each customer sets.
+                Conduit reads those documents and fills the forms, using the fields each customer sets up.
               </p>
             </div>
 
@@ -117,7 +117,7 @@ export default function ConduitCaseStudy() {
                   <LightboxImage src="/conduit/supply-warehouse.webp" alt="Warehouse workers cutting open sacks of cocoa beans before shipping" width={1600} height={1200} className="block w-full h-full object-cover" />
                 </div>
               </div>
-              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">The shipments the paperwork follows, from the farm to the warehouse.</p>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Cocoa drying at the farm and opened for inspection at the warehouse. Each shipment carries its own certificates.</p>
             </section>
 
             <section id="solution" className="mb-10">
@@ -133,7 +133,7 @@ export default function ConduitCaseStudy() {
               <div className="rounded-xl overflow-hidden max-w-[750px]">
                 <LightboxImage src="/conduit/pipelines.png" alt="Pipelines library: saved workflows with type and status, and the menu for starting a new one with Extract or Inject" width={1600} height={1002} className="block w-full h-auto" />
               </div>
-              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-10">Every workflow a customer configures is saved here and reused.</p>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-10">The Pipelines library: saved workflows with their type and status.</p>
 
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
@@ -182,12 +182,12 @@ export default function ConduitCaseStudy() {
             </section>
 
             <section id="craft" className="mb-16">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Craft</p>
+              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Design system</p>
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Building the design system alongside the product</h2>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
-                  There was no existing design system, so I built one alongside the product, covering the foundations,
-                  components, states, and motion.
+                  There was no existing design system, so I built one alongside the product, from foundations
+                  to motion.
                 </p>
                 <p>
                   While a document is being processed, an animation shows it being read, so users can see what Conduit
@@ -213,29 +213,29 @@ export default function ConduitCaseStudy() {
             </section>
 
             <section id="future" className="mb-16">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Conversational design</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Agentic AI</h2>
+              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Conversational AI</p>
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Asking questions of the documents</h2>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
                   Pipelines automate the repetitive work, but a compliance officer still has to open documents and
                   search for the information they need.
                 </p>
                 <p>
-                  I also built a conversational layer on top of the documents processed by Conduit. A user could ask
-                  what&rsquo;s missing before a shipment can clear, what expires this month, or which invoices are
-                  missing an HS code, and get the answer with the source documents attached.
+                  I designed a conversational layer on top of the documents Conduit has processed. A user can ask
+                  what&rsquo;s missing before a shipment can clear, or which invoices have no HS code, and gets the
+                  answer with the source documents attached.
                 </p>
               </div>
 
               <div className="rounded-xl overflow-hidden max-w-[750px]">
                 <LightboxImage src="/conduit/ask-0.png" alt="An executive brief answered in a side panel next to Pipelines, naming the blocked and expiring documents and citing its sources" width={1600} height={1001} className="block w-full h-auto" />
               </div>
-              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-10">The answer arrives with the documents it came from.</p>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-10">A brief in the side panel, citing the documents behind each point.</p>
 
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
-                  The conversation could also lead to action. If the relevant documents haven&rsquo;t been processed
-                  yet, Conduit could suggest running the appropriate pipeline and wait for approval before doing it. My
+                  The conversation can also lead to action. If the relevant documents haven&rsquo;t been processed
+                  yet, Conduit suggests the pipeline to run and waits for approval before running it. My
                   goal is to let people act on the information in their documents from the same conversation.
                 </p>
               </div>
@@ -248,16 +248,15 @@ export default function ConduitCaseStudy() {
               <h3 className="font-serif text-[1.35rem] leading-[1.3] tracking-[-0.01em] mb-3 max-w-[750px]">From document processing to agentic workflows</h3>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>
-                  The longer-term vision is for Conduit to handle more of the process itself. An AI agent could notice
-                  that a shipment is missing a required document, find the relevant supplier file, extract the needed
-                  information, run the appropriate pipeline, and flag anything it can&rsquo;t resolve. People would stay
-                  in control of decisions and approvals, while Conduit handles the steps in between.
+                  Next, Conduit could handle more of the process itself. An agent could notice that a shipment is
+                  missing a required document, find it among the supplier files and run the pipeline on it. Anything
+                  it can&rsquo;t resolve would go to the compliance officer.
                 </p>
               </div>
             </section>
 
             <section id="impact" className="mb-14">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Impact</p>
+              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Outcomes</p>
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 max-w-[750px]">
                 Document filing that took fifteen minutes now takes one
               </h2>
@@ -273,7 +272,7 @@ export default function ConduitCaseStudy() {
                   </li>
                   <li className="flex gap-3">
                     <span className="text-muted-foreground mt-0.5">&bull;</span>
-                    <span className="text-muted-foreground">A <span className="font-semibold text-foreground">brand and design system</span> built from scratch</span>
+                    <span className="text-muted-foreground">A <span className="font-semibold text-foreground">design system</span> built from scratch</span>
                   </li>
                 </ul>
               </div>
