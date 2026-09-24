@@ -137,8 +137,8 @@ export default function ConduitCaseStudy() {
 
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
-                  If the data only exists in the supplier document, the pipeline extracts it. Customers describe the
-                  document and Conduit drafts the fields for them to review and adjust.
+                  If the data only exists in the supplier document, the pipeline extracts it. Customers start from a
+                  real document and describe it, and Conduit drafts the fields for them to review and adjust.
                 </p>
               </div>
 
@@ -147,12 +147,11 @@ export default function ConduitCaseStudy() {
               </div>
               <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-10">The fields a customer defines, each with a type and a description.</p>
 
-              <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
-                <p>
-                  If the data is already available, the pipeline can go straight to filling the importer&rsquo;s form.
-                  Conduit detects the form structure and maps the data to the right fields.
-                </p>
-              </div>
+              <Clip
+                src="/conduit/prepop.mp4"
+                label="Fields drafted from a plain description of the document"
+                caption="Drafting fields from a plain description of the document."
+              />
 
               <Clip
                 src="/conduit/parsing.mp4"
@@ -162,33 +161,12 @@ export default function ConduitCaseStudy() {
 
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mt-8 mb-8">
                 <p>
-                  Customers configure the workflow once and reuse it across shipments.
+                  If the data is already available, the pipeline can go straight to filling the importer&rsquo;s form.
+                  Conduit detects the form structure and maps the data to the right fields.
                 </p>
                 <p>
-                  Runs records each execution and its status, giving compliance teams visibility into automated work.
-                  The API lets the same pipelines connect to their existing systems.
-                </p>
-              </div>
-
-              <Clip
-                src="/conduit/prepop.mp4"
-                label="Fields drafted from a plain description of the document"
-                caption="Describe the document and Conduit drafts the fields, ready to review."
-              />
-
-            </section>
-
-            <section id="approach" className="mb-10">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Scalable solution</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Make automation reusable and visible</h2>
-              <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
-                <p>
-                  I designed the supplier workflow to start from a real document, with Conduit creating a draft instead
-                  of asking users to define every field from scratch.
-                </p>
-                <p>
-                  I kept the process inspectable: users can see what was extracted, what was filled, and what happened
-                  on each run.
+                  Every run is recorded with its status, so compliance teams can check what was extracted and filled.
+                  The API lets the same pipelines run from their existing systems.
                 </p>
               </div>
 
@@ -200,7 +178,7 @@ export default function ConduitCaseStudy() {
                   <LightboxImage src="/conduit/home-api.png" alt="Direct API call dialog: run a saved pipeline from Python, TypeScript or REST" className="block w-full h-full object-cover" />
                 </div>
               </div>
-              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Every execution and its status, recorded. And the API, so the same pipelines run from a customer&rsquo;s existing systems.</p>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">The Runs page, and the dialog for calling a saved pipeline from Python, TypeScript or REST.</p>
             </section>
 
             <section id="craft" className="mb-16">
@@ -212,8 +190,8 @@ export default function ConduitCaseStudy() {
                   components, states, and motion.
                 </p>
                 <p>
-                  For document processing, I used motion to show the document being read instead of relying on a generic
-                  spinner, making the system state visible.
+                  While a document is being processed, an animation shows it being read, so users can see what Conduit
+                  is working on.
                 </p>
               </div>
 
@@ -231,7 +209,7 @@ export default function ConduitCaseStudy() {
                   <LightboxImage src="/conduit/ds-size.png" alt="Design system: empty-state illustration sizing documented with classes" width={1600} height={1003} className="block w-full h-auto" />
                 </div>
               </div>
-              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">States and rules documented in the system, not only in the app.</p>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Button states and empty-state sizing, documented with their rules.</p>
             </section>
 
             <section id="future" className="mb-16">
@@ -258,15 +236,14 @@ export default function ConduitCaseStudy() {
                 <p>
                   The conversation could also lead to action. If the relevant documents haven&rsquo;t been processed
                   yet, Conduit could suggest running the appropriate pipeline and wait for approval before doing it. My
-                  goal is to allow users not just to read documents, but to let people work with the information inside
-                  them easily.
+                  goal is to let people act on the information in their documents from the same conversation.
                 </p>
               </div>
 
               <div className="rounded-xl overflow-hidden max-w-[750px]">
                 <LightboxImage src="/conduit/ask-1.png" alt="A question about what blocks a shipment, answered with the three documents at fault and a Resolve or Review action beside each" width={1600} height={1002} className="block w-full h-auto" />
               </div>
-              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-10">The next step is offered rather than taken.</p>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-10">Each blocking document comes with a Resolve or Review action.</p>
 
               <h3 className="font-serif text-[1.35rem] leading-[1.3] tracking-[-0.01em] mb-3 max-w-[750px]">From document processing to agentic workflows</h3>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
@@ -288,15 +265,11 @@ export default function ConduitCaseStudy() {
                 <ul className="space-y-2 text-[17px] leading-relaxed">
                   <li className="flex gap-3">
                     <span className="text-muted-foreground mt-0.5">&bull;</span>
-                    <span className="text-muted-foreground">Document filing time per order dropped from <span className="font-semibold text-foreground">15 minutes to 1</span></span>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="text-muted-foreground mt-0.5">&bull;</span>
                     <span className="text-muted-foreground"><span className="font-semibold text-foreground">Five teams</span> onboarded onto the product, running it on their own shipments</span>
                   </li>
                   <li className="flex gap-3">
                     <span className="text-muted-foreground mt-0.5">&bull;</span>
-                    <span className="text-muted-foreground"><span className="font-semibold text-foreground">Four weeks</span> to design and build the first version, delivered in time</span>
+                    <span className="text-muted-foreground">First version <span className="font-semibold text-foreground">shipped on schedule</span></span>
                   </li>
                   <li className="flex gap-3">
                     <span className="text-muted-foreground mt-0.5">&bull;</span>
