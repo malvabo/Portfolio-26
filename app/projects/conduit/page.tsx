@@ -287,28 +287,51 @@ export default function ConduitCaseStudy() {
 
             <section id="impact" className="mb-14">
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Outcomes</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 max-w-[750px]">
-                Document filing that took 15 minutes now takes 1 minute
+              <h2 className="font-serif text-[2rem] md:text-[2.5rem] leading-[1.1] tracking-[-0.02em] mb-5 max-w-[750px]">
+                Less copying.<br />Faster filing.
               </h2>
-              <div className="p-8 bg-[#F5F3F0] rounded-xl max-w-[750px] mb-8">
-                <ul className="space-y-2 text-[17px] leading-relaxed">
-                  <li className="flex gap-3">
-                    <span className="text-muted-foreground mt-0.5">&bull;</span>
-                    <span className="text-muted-foreground">Document filing time per order dropped from <span className="font-semibold text-foreground">15 minutes to 1 minute</span></span>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="text-muted-foreground mt-0.5">&bull;</span>
-                    <span className="text-muted-foreground"><span className="font-semibold text-foreground">Five teams</span> onboarded onto the product, running it on their own shipments</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="text-muted-foreground mt-0.5">&bull;</span>
-                    <span className="text-muted-foreground">First version <span className="font-semibold text-foreground">shipped on schedule</span></span>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="text-muted-foreground mt-0.5">&bull;</span>
-                    <span className="text-muted-foreground">A <span className="font-semibold text-foreground">design system</span> built from scratch</span>
-                  </li>
-                </ul>
+              <div className="space-y-3 text-[17px] leading-relaxed max-w-[750px] mb-10">
+                <p className="text-muted-foreground">
+                  Conduit replaced manual copying with pipelines that pull data from exporters&rsquo; documents and
+                  fill in importers&rsquo; compliance documents. Compliance teams set a workflow up once and reuse it
+                  for every shipment.
+                </p>
+                <p className="text-foreground">
+                  As product and design lead, I shaped the product direction, the interaction design and the design
+                  system, from the first concept to a shipped first version.
+                </p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-[750px]">
+                <div className="p-6 bg-[#F5F3F0] rounded-xl flex flex-col">
+                  <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-4">Filing time</p>
+                  <p className="font-serif text-[2.25rem] leading-none tracking-[-0.02em] mb-5">
+                    <span className="inline-block px-2 py-1 rounded-md bg-[#E8E3DD]">15 → 1 min</span>
+                  </p>
+                  <p className="text-[15px] leading-relaxed text-muted-foreground mb-4">Filing the compliance documents for one order took 15 minutes by hand. With Conduit it takes 1 minute.</p>
+                  <p className="text-[13px] leading-relaxed text-muted-foreground mt-auto">
+                    <span className="font-semibold text-foreground">Problem solved:</span> Compliance teams were copying the same details from every exporter&rsquo;s documents into their own forms.
+                  </p>
+                </div>
+                <div className="p-6 bg-[#F5F3F0] rounded-xl flex flex-col">
+                  <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-4">Adoption</p>
+                  <p className="font-serif text-[2.25rem] leading-none tracking-[-0.02em] mb-5">
+                    <span className="inline-block px-2 py-1 rounded-md bg-[#E8E3DD]">5 teams</span>
+                  </p>
+                  <p className="text-[15px] leading-relaxed text-muted-foreground mb-4">Five teams onboarded onto the first version and ran it on their own shipments.</p>
+                  <p className="text-[13px] leading-relaxed text-muted-foreground mt-auto">
+                    <span className="font-semibold text-foreground">Problem solved:</span> Built-in workflows couldn&rsquo;t fit each importer&rsquo;s requirements. Configurable pipelines could.
+                  </p>
+                </div>
+                <div className="p-6 bg-[#F5F3F0] rounded-xl flex flex-col">
+                  <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-4">Time to ship</p>
+                  <p className="font-serif text-[2.25rem] leading-none tracking-[-0.02em] mb-5">
+                    <span className="inline-block px-2 py-1 rounded-md bg-[#E8E3DD]">4 weeks</span>
+                  </p>
+                  <p className="text-[15px] leading-relaxed text-muted-foreground mb-4">The first version, with its design system, was designed and built in four weeks and shipped on schedule.</p>
+                  <p className="text-[13px] leading-relaxed text-muted-foreground mt-auto">
+                    <span className="font-semibold text-foreground">Problem solved:</span> There was no design system to build on, so the product and the system were built together.
+                  </p>
+                </div>
               </div>
             </section>
 
