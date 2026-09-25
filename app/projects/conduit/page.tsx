@@ -186,8 +186,8 @@ export default function ConduitCaseStudy() {
                   to motion.
                 </p>
                 <p>
-                  While a document is being processed, an animation shows it being read, so users can see what Conduit
-                  is working on.
+                  I also worked on motion states, such as the animation of a document being read while Conduit
+                  processes it.
                 </p>
               </div>
 
