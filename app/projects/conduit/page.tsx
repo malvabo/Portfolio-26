@@ -145,15 +145,9 @@ export default function ConduitCaseStudy() {
               </div>
 
               <Clip
-                src="/conduit/prepop.mp4"
+                src="/conduit/parsing.mp4"
                 label="Conduit auto-mapping the fields to extract from a supplier document"
                 caption="Auto-mapping the fields to extract."
-              />
-
-              <Clip
-                src="/conduit/parsing.mp4"
-                label="Mapping the fields to extract manually on a real supplier document"
-                caption="Mapping the fields manually on a real supplier document."
               />
 
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mt-8 mb-8">
@@ -161,6 +155,15 @@ export default function ConduitCaseStudy() {
                   If the data is already available, the pipeline can go straight to filling the importer&rsquo;s form.
                   Conduit detects the form structure and maps the data to the right fields.
                 </p>
+              </div>
+
+              <Clip
+                src="/conduit/prepop.mp4"
+                label="Conduit mapping data into the fields of an importer's form"
+                caption="Mapping the data into the fields of the importer’s form."
+              />
+
+              <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mt-8 mb-8">
                 <p>
                   Every run is recorded with its status, so compliance teams can check what was extracted and filled.
                   The API lets the same pipelines run from their existing systems.
