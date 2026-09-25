@@ -30,7 +30,7 @@ export function ConduitSection() {
           <div>
             <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">About</h3>
             <p className="text-base leading-relaxed text-foreground">
-              A pipeline builder for compliance documents. Extract pulls data out of supplier documents, Inject fills forms. Each pipeline is saved once, then reused or called over an API.
+              Designing AI-powered document automation for food importers. Reusable pipelines pull data from supplier documents and fill in compliance forms, replacing manual paperwork. Filing time per order dropped from 15 minutes to 1.
             </p>
             <a
               href="/projects/conduit"
