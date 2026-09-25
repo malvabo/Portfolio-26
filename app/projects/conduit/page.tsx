@@ -214,16 +214,26 @@ export default function ConduitCaseStudy() {
 
             <section id="future" className="mb-16">
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Conversational AI</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Asking questions of the documents</h2>
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">An interaction layer between importers and their documents</h2>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
-                  Pipelines automate the repetitive work, but a compliance officer still has to open documents and
-                  search for the information they need.
+                  Pipelines turn documents into data, but importers think in shipments. The questions
+                  they ask are &ldquo;Can this container clear on Thursday?&rdquo; or &ldquo;Which of
+                  our suppliers are sending us expired certificates?&rdquo; The answer is spread across
+                  a certificate of origin, an invoice and a packing list, often from different suppliers
+                  and in different formats.
                 </p>
                 <p>
-                  I designed a conversational layer on top of the documents Conduit has processed. A user can ask
-                  what&rsquo;s missing before a shipment can clear, or which invoices have no HS code, and gets the
-                  answer with the source documents attached.
+                  Today someone opens each file, cross-checks the fields by hand and reports back to the
+                  people waiting on the shipment. The data Conduit extracts could answer these
+                  questions, but only if people can reach it in the terms they already use.
+                </p>
+                <p>
+                  I designed a conversational layer over everything Conduit has processed, organised
+                  around shipments, suppliers and deadlines. The shipment is the subject of each answer,
+                  and the documents are its evidence: every point cites the document and field it came
+                  from. In compliance, an answer without a source can&rsquo;t be acted on, so verifying
+                  it had to take one click.
                 </p>
               </div>
 
@@ -234,9 +244,16 @@ export default function ConduitCaseStudy() {
 
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
-                  The conversation can also lead to action. If the relevant documents haven&rsquo;t been processed
-                  yet, Conduit suggests the pipeline to run and waits for approval before running it. My
-                  goal is to let people act on the information in their documents from the same conversation.
+                  The same data serves people who need different depth. An operations lead wants a brief
+                  on what&rsquo;s blocked this week. A compliance officer needs to check one certificate
+                  field by field. The brief summarises, and each point opens the source for whoever
+                  needs to go further.
+                </p>
+                <p>
+                  Answers also lead to the next step. When a shipment is blocked by a document that
+                  hasn&rsquo;t been processed, Conduit proposes the pipeline to run. When a field
+                  conflicts between documents, it offers a review. Nothing runs without approval,
+                  because a wrong filing is the importer&rsquo;s legal liability.
                 </p>
               </div>
 
@@ -248,9 +265,12 @@ export default function ConduitCaseStudy() {
               <h3 className="font-serif text-[1.35rem] leading-[1.3] tracking-[-0.01em] mb-3 max-w-[750px]">From document processing to agentic workflows</h3>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>
-                  Next, Conduit could handle more of the process itself. An agent could notice that a shipment is
-                  missing a required document, find it among the supplier files and run the pipeline on it. Anything
-                  it can&rsquo;t resolve would go to the compliance officer.
+                  This layer is what makes a more autonomous Conduit possible. Once the system knows
+                  what each shipment needs and what it already has, it can watch for gaps: a certificate
+                  that expires before arrival, or a document still missing for next week&rsquo;s
+                  shipment. The next step is an agent that spots those gaps, requests or processes the
+                  documents, and brings the compliance officer only the decisions that need their
+                  judgement.
                 </p>
               </div>
             </section>
