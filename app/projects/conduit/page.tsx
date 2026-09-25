@@ -200,15 +200,10 @@ export default function ConduitCaseStudy() {
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Building the design system alongside the product</h2>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
-                  There was no existing design system, so I built one alongside the product, from foundations
-                  to motion.
-                </p>
-                <p>
-                  I also worked on motion states, such as the animation of a document being read while Conduit
-                  processes it.
-                </p>
-                <p>
-                  Having the system in place meant the first version could be designed and built within four weeks.
+                  There was no existing design system, so I built one alongside the product, from foundations to
+                  motion. I also worked on motion states, such as the animation of a document being read while
+                  Conduit processes it. Having the system in place meant the first version could be designed and
+                  built within four weeks.
                 </p>
               </div>
 
