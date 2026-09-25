@@ -270,7 +270,7 @@ export default function ConduitCaseStudy() {
             <section id="impact" className="mb-14">
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Outcomes</p>
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 max-w-[750px]">
-                Document filing that took fifteen minutes now takes one minute
+                Document filing that took 15 minutes now takes 1 minute
               </h2>
               <p className="text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-6">
                 The first version solved the problem it set out to: importers stopped copying details from
