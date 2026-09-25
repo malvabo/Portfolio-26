@@ -259,12 +259,7 @@ export default function ConduitCaseStudy() {
               </div>
               <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-10">The chat as a side panel and as a full-width view.</p>
 
-              <div className="rounded-xl overflow-hidden max-w-[750px]">
-                <LightboxImage src="/conduit/ask-2.png" alt="Conversation components: approving a pipeline run, connecting Google Drive, choosing how to handle an expiring certificate, and comparing an invoice with its packing list" width={3202} height={2152} className="block w-full h-auto" />
-              </div>
-              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Components designed for the conversation, from approving a pipeline run to comparing two documents.</p>
-
-              <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mt-8">
+              <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
                   Most of the design work here was deciding how much the AI should do on its own. I treated every
                   action as something the user grants. Conduit answers and summarises by itself, but anything that
@@ -272,6 +267,14 @@ export default function ConduitCaseStudy() {
                   drafting a request, arrives as a proposal with Approve and Not now. When there are several ways
                   forward, it lays them out and marks the one it recommends, and the decision stays with the user.
                 </p>
+              </div>
+
+              <div className="rounded-xl overflow-hidden max-w-[750px]">
+                <LightboxImage src="/conduit/ask-2.png" alt="Conversation components: approving a pipeline run, connecting Google Drive, choosing how to handle an expiring certificate, and comparing an invoice with its packing list" width={3202} height={2152} className="block w-full h-auto" />
+              </div>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Components designed for the conversation, from approving a pipeline run to comparing two documents.</p>
+
+              <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mt-8">
                 <p>
                   The guardrails are visible in the interface. Every answer names its sources, and when Conduit
                   isn&rsquo;t sure about a value, it leaves it for the user to check. Task statuses show what is
