@@ -132,6 +132,11 @@ export default function ConduitCaseStudy() {
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Reusable workflows</h2>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
+                  Initial testing showed that building compliance workflows and escalations into the product
+                  wouldn&rsquo;t scale. What each shipment needs depends on the exporter, the importer&rsquo;s own
+                  requirements and the legal rules that apply, so we built configurable pipelines instead.
+                </p>
+                <p>
                   I designed the product around a pipeline: a saved workflow that extracts compliance data from supplier
                   documents and moves it into the systems importers use for compliance, or fills in the compliance
                   documents they need internally.
