@@ -266,8 +266,18 @@ export default function ConduitCaseStudy() {
 
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mt-8">
                 <p>
-                  The approval steps and task statuses define how AI can work inside a regulated process, and Conduit
-                  needs that settled before it takes on more of the work itself.
+                  Most of the design work here was deciding how much the AI should do on its own. I treated every
+                  action as something the user grants. Conduit answers and summarises by itself, but anything that
+                  changes data or acts outside the product, such as running a pipeline, connecting a source or
+                  drafting a request, arrives as a proposal with Approve and Not now. When there are several ways
+                  forward, it lays them out and marks the one it recommends, and the decision stays with the user.
+                </p>
+                <p>
+                  The guardrails are visible in the interface. Every answer names its sources, and when Conduit
+                  isn&rsquo;t sure about a value, it leaves it for the user to check. Task statuses show what is
+                  waiting for approval, what was resolved and what has changed since, so people can see what the AI
+                  did on their behalf. These rules define how AI can work inside a regulated process, and Conduit
+                  needs them settled before it takes on more of the work itself.
                 </p>
               </div>
             </section>
