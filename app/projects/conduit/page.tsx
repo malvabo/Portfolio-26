@@ -60,8 +60,8 @@ export default function ConduitCaseStudy() {
               </h1>
               <p className="text-[17px] leading-relaxed text-muted-foreground">
                 Every food shipment crossing a border needs a stack of certificates and forms, redone by hand each time.
-                Conduit extracts the data from supplier documents, such as certificates of origin, and fills the
-                importer&rsquo;s forms, using the fields each customer sets up.
+                Conduit extracts the data from supplier documents, such as certificates of origin, and moves it into
+                importers&rsquo; compliance systems and internal documents, using the fields each customer sets up.
               </p>
             </div>
 
@@ -126,8 +126,9 @@ export default function ConduitCaseStudy() {
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Reusable workflows</h2>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
-                  I designed the product around a pipeline: a saved workflow that moves compliance data from a supplier
-                  document into the importer&rsquo;s forms.
+                  I designed the product around a pipeline: a saved workflow that extracts compliance data from supplier
+                  documents and moves it into the systems importers use for compliance, or fills in the compliance
+                  documents they need internally.
                 </p>
               </div>
 
