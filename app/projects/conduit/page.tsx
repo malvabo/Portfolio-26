@@ -279,10 +279,6 @@ export default function ConduitCaseStudy() {
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 max-w-[750px]">
                 Document filing that took 15 minutes now takes 1 minute
               </h2>
-              <p className="text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-6">
-                The first version solved the problem it set out to: importers stopped copying details from
-                exporters&rsquo; documents by hand.
-              </p>
               <div className="p-8 bg-[#F5F3F0] rounded-xl max-w-[750px] mb-8">
                 <ul className="space-y-2 text-[17px] leading-relaxed">
                   <li className="flex gap-3">
