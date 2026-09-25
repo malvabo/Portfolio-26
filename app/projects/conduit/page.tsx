@@ -231,8 +231,7 @@ export default function ConduitCaseStudy() {
                 <p>
                   I designed a conversational layer over everything Conduit has processed, organised
                   around shipments, suppliers and deadlines. The shipment is the subject of each answer,
-                  and the documents are its evidence: every point cites the document and field it came
-                  from. In compliance, an answer without a source can&rsquo;t be acted on, so verifying
+                  and the documents are its evidence: every point cites the document it came from. In compliance, an answer without a source can&rsquo;t be acted on, so verifying
                   it had to take one click.
                 </p>
               </div>
@@ -251,8 +250,8 @@ export default function ConduitCaseStudy() {
                 </p>
                 <p>
                   Answers also lead to the next step. When a shipment is blocked by a document that
-                  hasn&rsquo;t been processed, Conduit proposes the pipeline to run. When a field
-                  conflicts between documents, it offers a review. Nothing runs without approval,
+                  hasn&rsquo;t been processed, Conduit proposes the pipeline to run. Nothing runs
+                  without approval,
                   because a wrong filing is the importer&rsquo;s legal liability.
                 </p>
               </div>
