@@ -30,7 +30,7 @@ export function ConduitSection() {
           <div>
             <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">About</h3>
             <p className="text-base leading-relaxed text-foreground">
-              Designing AI-powered document automation for food importers - replacing manual compliance paperwork with reusable pipelines that extract supplier data and fill compliance forms, cutting filing time per order from 15 minutes to 1.
+              Designing AI-powered document automation for food importers. Reusable pipelines pull data from supplier documents and fill in compliance forms, replacing manual paperwork. Filing time per order dropped from 15 minutes to 1.
             </p>
             <a
               href="/projects/conduit"
