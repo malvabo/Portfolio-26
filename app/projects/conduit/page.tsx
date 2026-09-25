@@ -60,7 +60,8 @@ export default function ConduitCaseStudy() {
               </h1>
               <p className="text-[17px] leading-relaxed text-muted-foreground">
                 Every food shipment crossing a border needs a stack of certificates and forms, redone by hand each time.
-                Conduit reads those documents and fills the forms, using the fields each customer sets up.
+                Conduit extracts the data from supplier documents, such as certificates of origin, and fills the
+                importer&rsquo;s forms, using the fields each customer sets up.
               </p>
             </div>
 
@@ -253,10 +254,14 @@ export default function ConduitCaseStudy() {
             <section id="impact" className="mb-14">
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Outcomes</p>
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 max-w-[750px]">
-                Document filing that took fifteen minutes now takes one
+                Document filing that took fifteen minutes now takes one minute
               </h2>
               <div className="p-8 bg-[#F5F3F0] rounded-xl max-w-[750px] mb-8">
                 <ul className="space-y-2 text-[17px] leading-relaxed">
+                  <li className="flex gap-3">
+                    <span className="text-muted-foreground mt-0.5">&bull;</span>
+                    <span className="text-muted-foreground">Document filing time per order dropped from <span className="font-semibold text-foreground">15 minutes to 1 minute</span></span>
+                  </li>
                   <li className="flex gap-3">
                     <span className="text-muted-foreground mt-0.5">&bull;</span>
                     <span className="text-muted-foreground"><span className="font-semibold text-foreground">Five teams</span> onboarded onto the product, running it on their own shipments</span>
