@@ -30,7 +30,7 @@ export function ConduitSection() {
           <div>
             <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">About</h3>
             <p className="text-base leading-relaxed text-foreground">
-              Importers used to copy details from their suppliers’ documents by hand. Conduit pulls that data out of certificates and invoices, then fills in the importer’s compliance forms or sends it to their own systems. Each workflow is set up once and reused for every shipment.
+              Designing AI-powered document automation for food importers - replacing manual compliance paperwork with reusable pipelines that extract supplier data and fill compliance forms, cutting filing time per order from 15 minutes to 1.
             </p>
             <a
               href="/projects/conduit"
