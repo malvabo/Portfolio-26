@@ -225,17 +225,22 @@ export default function ConduitCaseStudy() {
                   and get the answer with the documents it came from. When the answer needs an action, such as
                   running a pipeline, Conduit asks for approval first.
                 </p>
+                <p>
+                  The chat opens as a side panel next to the rest of the product or as a full-width view. I also
+                  designed the tasks it creates, with statuses for when they need approval, when they&rsquo;re
+                  resolved and when there&rsquo;s an update.
+                </p>
               </div>
 
-              <div className="rounded-xl overflow-hidden max-w-[750px]">
-                <LightboxImage src="/conduit/ask-0.png" alt="An executive brief answered in a side panel next to Pipelines, naming the blocked and expiring documents and citing its sources" width={1600} height={1001} className="block w-full h-auto" />
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[750px] items-start">
+                <div className="rounded-xl overflow-hidden">
+                  <LightboxImage src="/conduit/ask-0.png" alt="An executive brief answered in a side panel next to Pipelines, naming the blocked and expiring documents and citing its sources" width={1600} height={1001} className="block w-full h-auto" />
+                </div>
+                <div className="rounded-xl overflow-hidden">
+                  <LightboxImage src="/conduit/ask-1.png" alt="The full-width chat view: a question about what blocks a shipment, answered with the documents at fault and their statuses" width={1600} height={1002} className="block w-full h-auto" />
+                </div>
               </div>
-              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-10">A brief in the side panel, citing the documents behind each point.</p>
-
-              <div className="rounded-xl overflow-hidden max-w-[750px]">
-                <LightboxImage src="/conduit/ask-1.png" alt="A question about what blocks a shipment, answered with the three documents at fault and a Resolve or Review action beside each" width={1600} height={1002} className="block w-full h-auto" />
-              </div>
-              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-10">Each blocking document comes with a Resolve or Review action.</p>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-10">The chat as a side panel and as a full-width view.</p>
 
               <div className="rounded-xl overflow-hidden max-w-[750px]">
                 <LightboxImage src="/conduit/ask-2.png" alt="Conversation components: approving a pipeline run, connecting Google Drive, choosing how to handle an expiring certificate, and comparing an invoice with its packing list" width={3202} height={2152} className="block w-full h-auto" />
