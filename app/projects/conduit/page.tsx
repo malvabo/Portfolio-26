@@ -138,21 +138,21 @@ export default function ConduitCaseStudy() {
 
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
-                  If the data only exists in the supplier document, the pipeline extracts it. Customers start from a
-                  real document and describe it, and Conduit drafts the fields for them to review and adjust.
+                  If the data only exists in the supplier document, the pipeline extracts it. Customers either let
+                  Conduit auto-map the fields to extract, or map them manually for higher accuracy.
                 </p>
               </div>
 
               <Clip
                 src="/conduit/prepop.mp4"
-                label="Fields drafted from a plain description of the document"
-                caption="Drafting fields from a plain description of the document."
+                label="Conduit auto-mapping the fields to extract from a supplier document"
+                caption="Auto-mapping the fields to extract."
               />
 
               <Clip
                 src="/conduit/parsing.mp4"
-                label="Building an extraction workflow on a real supplier document"
-                caption="Naming the details to pull, on a real supplier document."
+                label="Mapping the fields to extract manually on a real supplier document"
+                caption="Mapping the fields manually on a real supplier document."
               />
 
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mt-8 mb-8">
