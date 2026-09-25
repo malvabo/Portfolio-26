@@ -142,11 +142,6 @@ export default function ConduitCaseStudy() {
                 </p>
               </div>
 
-              <div className="rounded-xl overflow-hidden max-w-[750px]">
-                <LightboxImage src="/conduit/home-config.png" alt="Configuring the fields to pull from each document, each with a type and a description" className="block w-full h-auto" />
-              </div>
-              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-10">The fields a customer defines, each with a type and a description.</p>
-
               <Clip
                 src="/conduit/prepop.mp4"
                 label="Fields drafted from a plain description of the document"
