@@ -266,15 +266,8 @@ export default function ConduitCaseStudy() {
 
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mt-8">
                 <p>
-                  Pipelines solved data entry, but they only serve the people who configure them. Everyone else who
-                  depends on a shipment, such as operations leads, still had to ask the compliance team where things
-                  stood. This project was about opening Conduit&rsquo;s data up to them, and it raised the harder
-                  design question: when the system should act on its own, when it has to stop and ask, and how a
-                  person can trust an answer enough to act on it.
-                </p>
-                <p>
-                  The approval steps and task statuses are my answer to that. They define how AI can work inside a
-                  regulated process, and Conduit needs that settled before it takes on more of the work itself.
+                  The approval steps and task statuses define how AI can work inside a regulated process, and Conduit
+                  needs that settled before it takes on more of the work itself.
                 </p>
               </div>
             </section>
