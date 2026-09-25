@@ -101,12 +101,18 @@ export default function ConduitCaseStudy() {
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">The problem</h2>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>
-                  Large importers receive certificates of origin and other supplier documents with information they need
-                  for their own product compliance process.
+                  Food importers rely on details that arrive in their exporters&rsquo; documents: certificates of
+                  origin, invoices and packing lists. Product name, country of origin, weight and certificate number
+                  all have to be found, checked, and then used to fill in the importer&rsquo;s compliance documents or
+                  entered into their internal platforms.
                 </p>
                 <p>
-                  Today, compliance teams manually find and check details such as product name, country of origin,
-                  weight, and certificate number, then copy them into their internal forms.
+                  Compliance teams did all of this by hand, for every shipment. It was slow and repetitive, and every
+                  value copied by hand was a chance for an error.
+                </p>
+                <p>
+                  My goal was to help importers automate this work: get the details out of exporters&rsquo; documents,
+                  check them, and move them into the compliance documents and internal platforms that need them.
                 </p>
               </div>
 
@@ -153,14 +159,14 @@ export default function ConduitCaseStudy() {
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mt-8 mb-8">
                 <p>
                   If the data is already available, the pipeline can go straight to filling the importer&rsquo;s form.
-                  Conduit detects the form structure and maps the data to the right fields.
+                  Here too, the fields can be mapped automatically or by hand.
                 </p>
               </div>
 
               <Clip
                 src="/conduit/prepop.mp4"
-                label="Conduit mapping data into the fields of an importer's form"
-                caption="Mapping the data into the fields of the importer’s form."
+                label="Mapping data into the fields of an importer's form by hand"
+                caption="Mapping the data to the form’s fields by hand."
               />
 
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mt-8 mb-8">
@@ -179,6 +185,14 @@ export default function ConduitCaseStudy() {
                 </div>
               </div>
               <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">The Runs page, and the dialog for calling a saved pipeline from Python, TypeScript or REST.</p>
+
+              <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mt-8">
+                <p>
+                  This solved the core problem. Getting details from an exporter&rsquo;s documents into the
+                  importer&rsquo;s compliance documents and systems no longer means copying them field by field.
+                  Compliance teams set a pipeline up once and then only check its results.
+                </p>
+              </div>
             </section>
 
             <section id="craft" className="mb-16">
@@ -192,6 +206,9 @@ export default function ConduitCaseStudy() {
                 <p>
                   I also worked on motion states, such as the animation of a document being read while Conduit
                   processes it.
+                </p>
+                <p>
+                  Having the system in place meant the first version could be designed and built within four weeks.
                 </p>
               </div>
 
@@ -246,6 +263,13 @@ export default function ConduitCaseStudy() {
                 <LightboxImage src="/conduit/ask-2.png" alt="Conversation components: approving a pipeline run, connecting Google Drive, choosing how to handle an expiring certificate, and comparing an invoice with its packing list" width={3202} height={2152} className="block w-full h-auto" />
               </div>
               <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Components designed for the conversation, from approving a pipeline run to comparing two documents.</p>
+
+              <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mt-8">
+                <p>
+                  Pipelines solved the data entry. This project addresses what was left: understanding where a
+                  shipment stands without opening each of its documents.
+                </p>
+              </div>
             </section>
 
             <section id="impact" className="mb-14">
@@ -253,6 +277,10 @@ export default function ConduitCaseStudy() {
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 max-w-[750px]">
                 Document filing that took fifteen minutes now takes one minute
               </h2>
+              <p className="text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-6">
+                The first version solved the problem it set out to: importers stopped copying details from
+                exporters&rsquo; documents by hand.
+              </p>
               <div className="p-8 bg-[#F5F3F0] rounded-xl max-w-[750px] mb-8">
                 <ul className="space-y-2 text-[17px] leading-relaxed">
                   <li className="flex gap-3">
