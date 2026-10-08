@@ -8,7 +8,7 @@ import { Header } from "@/components/header"
 function Clip({ src, label, caption }: { src: string; label: string; caption: string }) {
   return (
     <div className="mb-10 max-w-[750px]">
-      <div className="rounded-xl overflow-hidden bg-muted/30">
+      <div className="rounded-xl overflow-hidden border border-[#DDE3EA] bg-muted/30">
         {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
         <video
           src={src}
@@ -85,7 +85,7 @@ export default function ConduitCaseStudy() {
               </div>
             </div>
 
-            <div className="mb-12 rounded-xl overflow-hidden max-w-[750px]">
+            <div className="mb-12 rounded-xl overflow-hidden border border-[#DDE3EA] max-w-[750px]">
               <LightboxImage
                 src="/conduit/cover.png"
                 alt="A coffee Certificate of Origin open in Conduit, with the fields to extract listed beside it"
@@ -97,8 +97,11 @@ export default function ConduitCaseStudy() {
 
             <section id="context" className="mb-10">
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Context</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">The problem</h2>
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Discovery</h2>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+                <p>
+                  I conducted structured interviews with suppliers and importers to understand existing workflows.
+                </p>
                 <p>
                   Large importers receive certificates of origin and other supplier documents with information they need
                   for their own product compliance process.
@@ -106,6 +109,11 @@ export default function ConduitCaseStudy() {
                 <p>
                   Today, compliance teams manually find and check details such as product name, country of origin,
                   weight, and certificate number, then copy them into their internal forms.
+                </p>
+                <p>
+                  This takes a lot of time and leads to errors due to manual tracking and duplication of the data. As a
+                  result, the shipment may be held at the border due to incomplete or incorrect data in compliance
+                  documents.
                 </p>
               </div>
 
@@ -117,7 +125,38 @@ export default function ConduitCaseStudy() {
                   <LightboxImage src="/conduit/supply-warehouse.webp" alt="Warehouse workers cutting open sacks of cocoa beans before shipping" width={1600} height={1200} className="block w-full h-full object-cover" />
                 </div>
               </div>
-              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">The shipments the paperwork follows, from the farm to the warehouse.</p>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">The shipments the paperwork follows, from the farm to the warehouse</p>
+
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mt-10 mb-4 text-balance">Problems to be solved</h2>
+              <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+                <p>
+                  My goal in this project was to create a product to automate the workflows of our partners-importers.
+                  Together with the founders and product partners, we prioritized solving the following needs of the importers:
+                </p>
+                <ul className="space-y-2">
+                  <li className="flex gap-3">
+                    <span className="mt-0.5">&bull;</span>
+                    <span>Quick extraction of data from exporters&rsquo; compliance documents</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="mt-0.5">&bull;</span>
+                    <span>Monitoring of low-quality documents, so importers can request new ones from exporters</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="mt-0.5">&bull;</span>
+                    <span>Early detection of shipments that might be blocked due to incomplete data</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="mt-0.5">&bull;</span>
+                    <span>Reduction of errors in manual document filing.</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="rounded-xl overflow-hidden border border-[#DDE3EA] max-w-[750px] mt-8">
+                <LightboxImage src="/conduit/workshop.webp" alt="A service blueprint mapping phases, user actions, surfaces, ownership and status, above a workshop board of sticky notes grouped by prompt" width={2000} height={1416} className="block w-full h-auto" />
+              </div>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">User journey mapping and artifacts from the workshops with stakeholders</p>
             </section>
 
             <section id="solution" className="mb-10">
@@ -125,82 +164,83 @@ export default function ConduitCaseStudy() {
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Reusable workflows</h2>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
-                  I designed the product around a pipeline: a saved workflow that moves compliance data from a supplier
-                  document into the importer&rsquo;s forms.
+                  Our clients were large importers dealing with hundreds of documents at the same time. I designed a
+                  pipeline system that would parse incoming documents automatically, flag the issues, and let operators
+                  resolve them.
                 </p>
               </div>
 
-              <div className="rounded-xl overflow-hidden max-w-[750px]">
+              <h3 className="font-serif text-[1.35rem] leading-[1.3] tracking-[-0.01em] mb-3 max-w-[750px]">Monitoring the shipments</h3>
+              <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
+                <p>
+                  I designed an experience that lets importers quickly scan the list of shipments and see which documents
+                  might lead to delays at the border. Documents are automatically grouped by shipment, and the ones that
+                  require human approval or escalation to the exporter are marked as such.
+                </p>
+              </div>
+
+              <div className="rounded-xl overflow-hidden border border-[#DDE3EA] max-w-[750px]">
+                <LightboxImage src="/conduit/dash.png" alt="Inbox grouped by shipment, with one fumigation certificate marked Needs review and one packing list marked File unreadable" width={1576} height={989} className="block w-full h-auto" />
+              </div>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-10">Inbox grouped by shipment, with the documents that need attention flagged</p>
+
+              <h3 className="font-serif text-[1.35rem] leading-[1.3] tracking-[-0.01em] mb-3 max-w-[750px]">Data extraction and injection</h3>
+              <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
+                <p>
+                  I designed the pipelines for importers to build repeatable data extraction and injection
+                  workflows depending on their needs.
+                </p>
+              </div>
+
+              <div className="rounded-xl overflow-hidden border border-[#DDE3EA] max-w-[750px]">
                 <LightboxImage src="/conduit/pipelines.png" alt="Pipelines library: saved workflows with type and status, and the menu for starting a new one with Extract or Inject" width={1600} height={1002} className="block w-full h-auto" />
               </div>
-              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-10">Every workflow a customer configures is saved here and reused.</p>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-10">Creating a data pipeline</p>
 
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
-                  If the data only exists in the supplier document, the pipeline extracts it. Customers describe the
-                  document and Conduit drafts the fields for them to review and adjust.
-                </p>
-              </div>
-
-              <div className="rounded-xl overflow-hidden max-w-[750px]">
-                <LightboxImage src="/conduit/home-config.png" alt="Configuring the fields to pull from each document, each with a type and a description" className="block w-full h-auto" />
-              </div>
-              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-10">The fields a customer defines, each with a type and a description.</p>
-
-              <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
-                <p>
-                  If the data is already available, the pipeline can go straight to filling the importer&rsquo;s form.
-                  Conduit detects the form structure and maps the data to the right fields.
+                  For data extraction, the importer can either define the fields to extract manually or use
+                  auto-suggested fields and then tweak them as necessary.
                 </p>
               </div>
 
               <Clip
                 src="/conduit/parsing.mp4"
                 label="Building an extraction workflow on a real supplier document"
-                caption="Naming the details to pull, on a real supplier document."
+                caption="Data extraction pipeline"
               />
 
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mt-8 mb-8">
                 <p>
-                  Customers configure the workflow once and reuse it across shipments.
-                </p>
-                <p>
-                  Runs records each execution and its status, giving compliance teams visibility into automated work.
-                  The API lets the same pipelines connect to their existing systems.
+                  For data injection, the importer maps the fields to fill directly on the document preview and provides
+                  extra details so the system can match the incoming data to the corresponding fields. The importer can
+                  do a sample run, preview the results, and adjust the fields if needed.
                 </p>
               </div>
 
               <Clip
                 src="/conduit/prepop.mp4"
                 label="Fields drafted from a plain description of the document"
-                caption="Describe the document and Conduit drafts the fields, ready to review."
+                caption="Data injection pipeline"
               />
 
-            </section>
-
-            <section id="approach" className="mb-10">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Scalable solution</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Make automation reusable and visible</h2>
-              <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
+              <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mt-8 mb-8">
                 <p>
-                  I designed the supplier workflow to start from a real document, with Conduit creating a draft instead
-                  of asking users to define every field from scratch.
-                </p>
-                <p>
-                  I kept the process inspectable: users can see what was extracted, what was filled, and what happened
-                  on each run.
+                  Customers configure the pipelines once and reuse them across shipments. We record each execution and
+                  its status, giving compliance teams visibility into the work on the Runs page. The API lets the
+                  pipelines connect to the importer&rsquo;s existing systems.
                 </p>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[750px] items-start">
-                <div className="rounded-xl overflow-hidden aspect-[16/10]">
+                <div className="rounded-xl overflow-hidden border border-[#DDE3EA] aspect-[16/10]">
                   <LightboxImage src="/conduit/runs.png" alt="Runs: every document the workflows have processed, with its pipeline, status, run ID and time" width={1600} height={1000} className="block w-full h-full object-cover" />
                 </div>
-                <div className="rounded-xl overflow-hidden aspect-[16/10]">
+                <div className="rounded-xl overflow-hidden border border-[#DDE3EA] aspect-[16/10]">
                   <LightboxImage src="/conduit/home-api.png" alt="Direct API call dialog: run a saved pipeline from Python, TypeScript or REST" className="block w-full h-full object-cover" />
                 </div>
               </div>
-              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Every execution and its status, recorded. And the API, so the same pipelines run from a customer&rsquo;s existing systems.</p>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Runs to audit the processes. API modal to connect to the importer&rsquo;s third-party software</p>
             </section>
 
             <section id="craft" className="mb-16">
@@ -220,18 +260,18 @@ export default function ConduitCaseStudy() {
               <Clip
                 src="/conduit/ani.mp4"
                 label="The reading-the-document animation in the design system's motion section"
-                caption="The reading-the-document animation, from the system’s Motion section."
+                caption="The reading-the-document animation, from the system’s Motion section"
               />
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[750px] items-start">
-                <div className="rounded-xl overflow-hidden">
+                <div className="rounded-xl overflow-hidden border border-[#DDE3EA]">
                   <LightboxImage src="/conduit/ds-states.png" alt="Design system: button states documented with treatment rules" width={1600} height={1003} className="block w-full h-auto" />
                 </div>
-                <div className="rounded-xl overflow-hidden">
+                <div className="rounded-xl overflow-hidden border border-[#DDE3EA]">
                   <LightboxImage src="/conduit/ds-size.png" alt="Design system: empty-state illustration sizing documented with classes" width={1600} height={1003} className="block w-full h-auto" />
                 </div>
               </div>
-              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">States and rules documented in the system, not only in the app.</p>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">States and rules documented in the system, not only in the app</p>
             </section>
 
             <section id="future" className="mb-16">
@@ -249,10 +289,10 @@ export default function ConduitCaseStudy() {
                 </p>
               </div>
 
-              <div className="rounded-xl overflow-hidden max-w-[750px]">
+              <div className="rounded-xl overflow-hidden border border-[#DDE3EA] max-w-[750px]">
                 <LightboxImage src="/conduit/ask-0.png" alt="An executive brief answered in a side panel next to Pipelines, naming the blocked and expiring documents and citing its sources" width={1600} height={1001} className="block w-full h-auto" />
               </div>
-              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-10">The answer arrives with the documents it came from.</p>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-10">The answer arrives with the documents it came from</p>
 
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
@@ -262,11 +302,6 @@ export default function ConduitCaseStudy() {
                   them easily.
                 </p>
               </div>
-
-              <div className="rounded-xl overflow-hidden max-w-[750px]">
-                <LightboxImage src="/conduit/ask-1.png" alt="A question about what blocks a shipment, answered with the three documents at fault and a Resolve or Review action beside each" width={1600} height={1002} className="block w-full h-auto" />
-              </div>
-              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-10">The next step is offered rather than taken.</p>
 
               <h3 className="font-serif text-[1.35rem] leading-[1.3] tracking-[-0.01em] mb-3 max-w-[750px]">From document processing to agentic workflows</h3>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
@@ -281,28 +316,46 @@ export default function ConduitCaseStudy() {
 
             <section id="impact" className="mb-14">
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Impact</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 max-w-[750px]">
-                Document filing that took fifteen minutes now takes one
-              </h2>
-              <div className="p-8 bg-[#F5F3F0] rounded-xl max-w-[750px] mb-8">
-                <ul className="space-y-2 text-[17px] leading-relaxed">
-                  <li className="flex gap-3">
-                    <span className="text-muted-foreground mt-0.5">&bull;</span>
-                    <span className="text-muted-foreground">Document filing time per order dropped from <span className="font-semibold text-foreground">15 minutes to 1</span></span>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="text-muted-foreground mt-0.5">&bull;</span>
-                    <span className="text-muted-foreground"><span className="font-semibold text-foreground">Five teams</span> onboarded onto the product, running it on their own shipments</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="text-muted-foreground mt-0.5">&bull;</span>
-                    <span className="text-muted-foreground"><span className="font-semibold text-foreground">Four weeks</span> to design and build the first version, delivered in time</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="text-muted-foreground mt-0.5">&bull;</span>
-                    <span className="text-muted-foreground">A <span className="font-semibold text-foreground">brand and design system</span> built from scratch</span>
-                  </li>
-                </ul>
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-6 max-w-[750px]">Outcomes</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[750px]">
+                <div className="rounded-xl bg-[#F5F3F0] p-6">
+                  <p className="font-semibold text-foreground text-[17px] mb-2">Importer workflows optimized</p>
+                  <ul className="space-y-1 text-[17px] leading-relaxed text-muted-foreground">
+                    <li className="flex gap-3">
+                      <span className="mt-0.5">&bull;</span>
+                      <span>Data verification time per shipment dropped from <span className="font-semibold text-foreground">20 min to 1&ndash;3 min</span></span>
+                    </li>
+                    <li className="flex gap-3">
+                      <span className="mt-0.5">&bull;</span>
+                      <span><span className="font-semibold text-foreground">Up to 2h</span> saved per shipment</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="rounded-xl bg-[#F5F3F0] p-6">
+                  <p className="font-semibold text-foreground text-[17px] mb-2">Delivered on time</p>
+                  <p className="text-[17px] leading-relaxed text-muted-foreground">
+                    <span className="font-semibold text-foreground">4 weeks</span> to design and build the MVP. Project
+                    delivered within short timelines. <span className="font-semibold text-foreground">5 teams</span> onboarded
+                    into the solution
+                  </p>
+                </div>
+                <div className="rounded-xl bg-[#F5F3F0] p-6">
+                  <p className="font-semibold text-foreground text-[17px] mb-2">Business benefits unlocked</p>
+                  <ul className="space-y-1 text-[17px] leading-relaxed text-muted-foreground">
+                    <li className="flex gap-3">
+                      <span className="mt-0.5">&bull;</span>
+                      <span><span className="font-semibold text-foreground">95% lower</span> cost per document processing</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="rounded-xl bg-[#F5F3F0] p-6">
+                  <p className="font-semibold text-foreground text-[17px] mb-2">Brand and design system</p>
+                  <p className="text-[17px] leading-relaxed text-muted-foreground">Established design foundations that will allow efficient scaling</p>
+                </div>
+                <div className="rounded-xl bg-[#F5F3F0] p-6 md:col-span-2">
+                  <p className="font-semibold text-foreground text-[17px] mb-2">Future goals</p>
+                  <p className="text-[17px] leading-relaxed text-muted-foreground">Accuracy of data extraction and data injection in complex documents</p>
+                </div>
               </div>
             </section>
 
