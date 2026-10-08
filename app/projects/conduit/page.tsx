@@ -157,13 +157,13 @@ export default function ConduitCaseStudy() {
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mt-10 mb-4 text-balance">Problems to be solved</h2>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>
-                  My goal in this project was to create a product to automate the workflows of our partners-importers.
-                  Together with the founders and product partners, we prioritized solving the following needs of the importers:
+                  My goal in this project was to improve the workflows of our partners-importers.
+                  Together with the founders and product partners, we prioritized building for the following jobs to be done of the importers:
                 </p>
                 <ul className="space-y-2">
                   <li className="flex gap-3">
                     <span className="mt-0.5">&bull;</span>
-                    <span>Quick extraction of data from exporters&rsquo; compliance documents</span>
+                    <span>Extraction of data from exporters&rsquo; compliance documents</span>
                   </li>
                   <li className="flex gap-3">
                     <span className="mt-0.5">&bull;</span>
