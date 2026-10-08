@@ -40,11 +40,11 @@ export default function ConduitCaseStudy() {
             <BackLinkSidebar />
             <nav className="space-y-4" aria-label="Case study sections">
               {[
+                ["#impact", "Outcomes"],
                 ["#context", "Context"],
                 ["#solution", "The Solution"],
                 ["#craft", "Design System"],
                 ["#future", "Conversational design"],
-                ["#impact", "Outcomes"],
               ].map(([href, label]) => (
                 <a key={href} href={href} className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">
                   {label}
@@ -94,6 +94,41 @@ export default function ConduitCaseStudy() {
                 className="block w-full h-auto"
               />
             </div>
+
+            <section id="impact" className="mb-14">
+              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Impact</p>
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 max-w-[750px]">
+                Data verification that took 20 minutes per shipment now takes 1&ndash;3
+              </h2>
+              <div className="p-8 bg-[#F5F3F0] rounded-xl max-w-[750px] mb-8">
+                <ul className="space-y-2 text-[17px] leading-relaxed">
+                  <li className="flex gap-3">
+                    <span className="text-muted-foreground mt-0.5">&bull;</span>
+                    <span className="text-muted-foreground">Data verification time per shipment dropped from <span className="font-semibold text-foreground">20 min to 1&ndash;3 min</span></span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-muted-foreground mt-0.5">&bull;</span>
+                    <span className="text-muted-foreground"><span className="font-semibold text-foreground">Up to 2h</span> saved per shipment</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-muted-foreground mt-0.5">&bull;</span>
+                    <span className="text-muted-foreground"><span className="font-semibold text-foreground">95% lower</span> cost per document processing</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-muted-foreground mt-0.5">&bull;</span>
+                    <span className="text-muted-foreground"><span className="font-semibold text-foreground">4 weeks</span> to design and build the MVP, delivered within short timelines</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-muted-foreground mt-0.5">&bull;</span>
+                    <span className="text-muted-foreground"><span className="font-semibold text-foreground">5 teams</span> onboarded into the solution</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-muted-foreground mt-0.5">&bull;</span>
+                    <span className="text-muted-foreground">A <span className="font-semibold text-foreground">brand and design system</span> with foundations that allow efficient scaling</span>
+                  </li>
+                </ul>
+              </div>
+            </section>
 
             <section id="context" className="mb-10">
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Context</p>
@@ -311,51 +346,6 @@ export default function ConduitCaseStudy() {
                   information, run the appropriate pipeline, and flag anything it can&rsquo;t resolve. People would stay
                   in control of decisions and approvals, while Conduit handles the steps in between.
                 </p>
-              </div>
-            </section>
-
-            <section id="impact" className="mb-14">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Impact</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-6 max-w-[750px]">Outcomes</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[750px]">
-                <div className="rounded-xl bg-[#F5F3F0] p-6">
-                  <p className="font-semibold text-foreground text-[17px] mb-2">Importer workflows optimized</p>
-                  <ul className="space-y-1 text-[17px] leading-relaxed text-muted-foreground">
-                    <li className="flex gap-3">
-                      <span className="mt-0.5">&bull;</span>
-                      <span>Data verification time per shipment dropped from <span className="font-semibold text-foreground">20 min to 1&ndash;3 min</span></span>
-                    </li>
-                    <li className="flex gap-3">
-                      <span className="mt-0.5">&bull;</span>
-                      <span><span className="font-semibold text-foreground">Up to 2h</span> saved per shipment</span>
-                    </li>
-                  </ul>
-                </div>
-                <div className="rounded-xl bg-[#F5F3F0] p-6">
-                  <p className="font-semibold text-foreground text-[17px] mb-2">Delivered on time</p>
-                  <p className="text-[17px] leading-relaxed text-muted-foreground">
-                    <span className="font-semibold text-foreground">4 weeks</span> to design and build the MVP. Project
-                    delivered within short timelines. <span className="font-semibold text-foreground">5 teams</span> onboarded
-                    into the solution
-                  </p>
-                </div>
-                <div className="rounded-xl bg-[#F5F3F0] p-6">
-                  <p className="font-semibold text-foreground text-[17px] mb-2">Business benefits unlocked</p>
-                  <ul className="space-y-1 text-[17px] leading-relaxed text-muted-foreground">
-                    <li className="flex gap-3">
-                      <span className="mt-0.5">&bull;</span>
-                      <span><span className="font-semibold text-foreground">95% lower</span> cost per document processing</span>
-                    </li>
-                  </ul>
-                </div>
-                <div className="rounded-xl bg-[#F5F3F0] p-6">
-                  <p className="font-semibold text-foreground text-[17px] mb-2">Brand and design system</p>
-                  <p className="text-[17px] leading-relaxed text-muted-foreground">Established design foundations that will allow efficient scaling</p>
-                </div>
-                <div className="rounded-xl bg-[#F5F3F0] p-6 md:col-span-2">
-                  <p className="font-semibold text-foreground text-[17px] mb-2">Future goals</p>
-                  <p className="text-[17px] leading-relaxed text-muted-foreground">Accuracy of data extraction and data injection in complex documents</p>
-                </div>
               </div>
             </section>
 
