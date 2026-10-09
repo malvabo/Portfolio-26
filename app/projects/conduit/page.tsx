@@ -156,7 +156,7 @@ export default function ConduitCaseStudy() {
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>
                   My goal in this project was to improve the workflows of our partners-importers.
-                  Together with the founders and product partners, we prioritized building for the following jobs to be done of the importers:
+                  Together with the founders and product partners, we prioritized building for the following jobs to be done of the importers based on frequency, severity and feasibility criteria:
                 </p>
                 <ul className="space-y-2">
                   <li className="flex gap-3">
@@ -179,7 +179,7 @@ export default function ConduitCaseStudy() {
               </div>
 
               <div className="rounded-xl overflow-hidden border border-[#DDE3EA] max-w-[750px] mt-8">
-                <LightboxImage src="/conduit/workshop.webp" alt="A service blueprint mapping phases, user actions, surfaces, ownership and status, above a workshop board of sticky notes grouped by prompt" width={2000} height={1416} className="block w-full h-auto" />
+                <img src="/conduit/workshop.webp" alt="A service blueprint mapping phases, user actions, surfaces, ownership and status, above a workshop board of sticky notes grouped by prompt" width={2000} height={1416} loading="lazy" className="block w-full h-auto" />
               </div>
               <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">User journey mapping and artifacts from the workshops with stakeholders</p>
             </section>
@@ -190,8 +190,8 @@ export default function ConduitCaseStudy() {
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
                   Our clients were large importers dealing with hundreds of documents at the same time. I designed a
-                  pipeline system that would parse incoming documents automatically, flag the issues, and let operators
-                  resolve them.
+                  pipeline system that would parse incoming documents automatically, flag the issues, and let users
+                  resolve them to scale the operations easily.
                 </p>
               </div>
 
@@ -336,6 +336,33 @@ export default function ConduitCaseStudy() {
                   information, run the appropriate pipeline, and flag anything it can&rsquo;t resolve. People would stay
                   in control of decisions and approvals, while Conduit handles the steps in between.
                 </p>
+              </div>
+            </section>
+
+            <section className="mb-14">
+              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Impact</p>
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 max-w-[750px]">
+                Data verification that took 20 minutes per shipment now takes 1&ndash;3
+              </h2>
+              <div className="p-8 bg-[#F5F3F0] rounded-xl max-w-[750px] mb-8">
+                <ul className="space-y-2 text-[17px] leading-relaxed">
+                  <li className="flex gap-3">
+                    <span className="text-muted-foreground mt-0.5">&bull;</span>
+                    <span className="text-muted-foreground">Data verification time per shipment dropped from <span className="font-semibold text-foreground">20 min to 1&ndash;3 min</span>, saving <span className="font-semibold text-foreground">up to 2h</span> per shipment at a <span className="font-semibold text-foreground">95% lower</span> cost per processed document</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-muted-foreground mt-0.5">&bull;</span>
+                    <span className="text-muted-foreground"><span className="font-semibold text-foreground">4 weeks</span> to design and build the MVP, delivered within short timelines</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-muted-foreground mt-0.5">&bull;</span>
+                    <span className="text-muted-foreground"><span className="font-semibold text-foreground">5 teams</span> onboarded into the solution</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-muted-foreground mt-0.5">&bull;</span>
+                    <span className="text-muted-foreground">A <span className="font-semibold text-foreground">brand and design system</span> with foundations that allow efficient scaling</span>
+                  </li>
+                </ul>
               </div>
             </section>
 
