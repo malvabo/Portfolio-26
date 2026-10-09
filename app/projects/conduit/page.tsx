@@ -131,11 +131,9 @@ export default function ConduitCaseStudy() {
                 </p>
                 <p>
                   Large importers receive certificates of origin and other supplier documents with information they need
-                  for their own product compliance process.
-                </p>
-                <p>
-                  Today, compliance teams manually find and check details such as product name, country of origin,
-                  weight, and certificate number, then copy them into their internal forms.
+                  for their own product compliance process. Today, compliance teams manually find and check details such
+                  as product name, country of origin, weight, and certificate number, then copy them into their internal
+                  forms.
                 </p>
                 <p>
                   This takes a lot of time and leads to errors due to manual tracking and duplication of the data. As a
