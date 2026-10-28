@@ -182,9 +182,7 @@ export default function ConduitCaseStudy() {
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
                   Importers handle hundreds of documents at once, and the same checks repeat on every shipment. I
-                  designed the product around pipelines rather than one fixed process: Conduit makes the mechanical
-                  pass, parsing each document and flagging what it cannot resolve, and the person keeps the judgement
-                  call. A pipeline is configured once and reused on every shipment after it.
+                  designed the product around pipelines rather than one fixed process.
                 </p>
               </div>
 
@@ -192,9 +190,8 @@ export default function ConduitCaseStudy() {
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
                   What gets held at the border is the shipment, not the document, so the inbox groups documents by
-                  shipment and leads with what is at risk. A compliance officer can tell in one pass which shipments
-                  are clear, and anything that needs a human decision or a request back to the exporter carries that
-                  state on the row.
+                  shipment. A compliance officer can tell in one pass which shipments are clear, and anything that
+                  needs a human decision or a request back to the exporter shows this state on the row.
                 </p>
               </div>
 
@@ -207,9 +204,8 @@ export default function ConduitCaseStudy() {
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
                   Every importer&rsquo;s workflow takes one of two shapes: pull values out of a supplier document, or
-                  push values into a form. I designed the pipelines so customers build their own in both shapes, which
-                  is how five teams with different compliance rules ran the same product without us rebuilding it for
-                  each.
+                  push values into a form. I designed the pipelines so importers can set up which data points they want
+                  to be extracted or imported from each type of the document.
                 </p>
               </div>
 
