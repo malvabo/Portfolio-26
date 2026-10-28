@@ -269,8 +269,7 @@ export default function ConduitCaseStudy() {
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
                   Compliance work is audited after the fact, so every execution is recorded with its pipeline,
-                  status and source document. The pipelines are also callable through an API, because these teams
-                  file from their own systems.
+                  status and source document.
                 </p>
               </div>
 
