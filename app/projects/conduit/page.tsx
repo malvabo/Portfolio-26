@@ -217,7 +217,7 @@ export default function ConduitCaseStudy() {
 
             <section id="solution" className="mb-10">
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Solution</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Two operations, reused on every shipment</h2>
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Reusable pipelines</h2>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
                   Every workflow these teams run is one of two operations: extracting a value from a document, or
