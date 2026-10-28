@@ -185,18 +185,17 @@ export default function ConduitCaseStudy() {
                 <p>
                   We started from a clear hypothesis: Conduit would read a document and decide whether it passed. A
                   rules engine would hold the compliance logic and the interface would report the result. I designed
-                  that version so we could put it in front of people early.
+                  that version and we took it into usability testing with compliance teams.
                 </p>
                 <p>
-                  The sessions were where it got interesting. Put the same certificate of origin in front of five
-                  compliance teams and you get five different answers about which fields matter, because each team
-                  files against a different internal policy. The verdict we had designed turned out to be one
-                  customer&rsquo;s policy, generalised.
+                  The testing reframed the problem. The same certificate of origin produced five different answers
+                  about which fields matter, because each team files against a different internal policy. The verdict
+                  we had designed turned out to be one customer&rsquo;s policy, generalised.
                 </p>
                 <p>
-                  I brought the sessions back to the founders and we worked through what they meant together. We moved
-                  the compliance judgement out of the product and into the customers&rsquo; hands, and put that week
-                  into the pipelines instead.
+                  I brought the findings back to the founders and we worked through the implications together. We moved
+                  the compliance judgement out of the product and into the customers&rsquo; hands, and redirected that
+                  week into the pipelines.
                 </p>
                 <p>
                   It changed what the product promises. A fixed process works on the day you buy it; a configurable
@@ -350,9 +349,9 @@ export default function ConduitCaseStudy() {
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">What I would do differently</h2>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>
-                  Testing the compliance model earlier would have been worth a lot. A handful of sessions told us what
-                  we needed, and in a four-week build, running them in week one rather than alongside the first version
-                  would have freed time for the part that replaced it.
+                  Usability testing on the compliance model would have been worth running earlier. A small number of
+                  sessions surfaced what we needed, and in a four-week build, scheduling them in week one rather than
+                  alongside the first version would have freed time for what replaced it.
                 </p>
                 <p>
                   Moving to configurable pipelines also moved effort rather than removing it: the customer now has a
