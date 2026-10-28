@@ -42,9 +42,12 @@ export default function ConduitCaseStudy() {
               {[
                 ["#impact", "Outcomes"],
                 ["#context", "Context"],
+                ["#direction", "Direction"],
                 ["#solution", "The Solution"],
-                ["#craft", "Design System"],
+                ["#craft", "Craft"],
+                ["#system", "Design system"],
                 ["#future", "Conversational design"],
+                ["#reflection", "Reflection"],
               ].map(([href, label]) => (
                 <a key={href} href={href} className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">
                   {label}
@@ -98,7 +101,7 @@ export default function ConduitCaseStudy() {
             <section id="impact" className="mb-14">
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Impact</p>
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 max-w-[750px]">
-                Data verification that took 20 minutes per shipment now takes 1&ndash;3
+                Data verification that took 20 minutes per shipment now takes 1&ndash;3 minutes
               </h2>
               <div className="p-8 bg-[#F5F3F0] rounded-xl max-w-[750px] mb-8">
                 <ul className="space-y-2 text-[17px] leading-relaxed">
@@ -124,16 +127,17 @@ export default function ConduitCaseStudy() {
 
             <section id="context" className="mb-10">
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Context</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Discovery</h2>
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">The paperwork decides whether the shipment moves</h2>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>
-                  My goal in this project was to improve the workflows of our partners-importers.
+                  Shipments clear customs on their paperwork, and the importer has to carry every fact from the
+                  supplier&rsquo;s certificates into their own filing: where the goods were grown, what they weigh,
+                  who inspected them.
                 </p>
                 <p>
-                  I interviewed suppliers and importers. Importers re-key every field they need from supplier
-                  documents by hand, from product name and country of origin through to weight and certificate number.
-                  The copying is slow, it is where errors enter, and a wrong or missing field can hold a shipment at
-                  the border.
+                  I spent the first week with the people who do that. A compliance officer opens each document, reads
+                  it, and retypes what they need. The work is exact and entirely manual, and one transposed weight or
+                  mismatched certificate number leaves the container waiting at the border.
                 </p>
               </div>
 
@@ -147,12 +151,11 @@ export default function ConduitCaseStudy() {
               </div>
               <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">The shipments the paperwork follows, from the farm to the warehouse</p>
 
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mt-10 mb-4 text-balance">Problems to be solved</h2>
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mt-10 mb-4 text-balance">Where we decided to start</h2>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>
-                  We could not build for every gap at once. With the founders and product partners I scored the
-                  importers&rsquo; jobs on how often each came up, what it cost when it went wrong, and what we could
-                  ship in four weeks. Four made the cut:
+                  I mapped the work with the founders and scored each job on how often it came up, what it cost when
+                  it went wrong, and whether we could ship it in four weeks. Three made the cut:
                 </p>
                 <ul className="space-y-2">
                   <li className="flex gap-3">
@@ -167,93 +170,115 @@ export default function ConduitCaseStudy() {
                     <span className="mt-0.5">&bull;</span>
                     <span>Identify shipments at risk of being held before they reach the border</span>
                   </li>
-                  <li className="flex gap-3">
-                    <span className="mt-0.5">&bull;</span>
-                    <span>Reduce the errors introduced by manual filing</span>
-                  </li>
                 </ul>
               </div>
 
               <div className="rounded-xl overflow-hidden border border-[#DDE3EA] max-w-[750px] mt-8">
                 <img src="/conduit/workshop.webp" alt="A service blueprint mapping phases, user actions, surfaces, ownership and status, above a workshop board of sticky notes grouped by prompt" width={2000} height={1416} loading="lazy" className="block w-full h-auto" />
               </div>
-              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">User journey mapping and artifacts from the workshops with stakeholders</p>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">The blueprint and the workshop board the three jobs came out of</p>
+            </section>
+
+            <section id="direction" className="mb-10">
+              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Direction</p>
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Testing the compliance model with real teams</h2>
+              <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+                <p>
+                  We started from a clear hypothesis: Conduit would read a document and decide whether it passed. A
+                  rules engine would hold the compliance logic and the interface would report the result. I designed
+                  that version and we took it into usability testing with compliance teams.
+                </p>
+              </div>
+
+              <div className="rounded-xl overflow-hidden border border-[#DDE3EA] max-w-[750px] mt-8">
+                <LightboxImage src="/conduit/ideation.png" alt="Six inbox directions explored side by side, each annotated with why it failed: operators manage shipments not documents, the preview does not help triage, cards do not scale, stages are hard to scan, shipment schemas differ" width={1600} height={877} className="block w-full h-auto" />
+              </div>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-8">Design ideation: inbox directions explored, with what each one failed at</p>
+
+              <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
+                <p>
+                  The results were consistent across sessions: each team validated a different set of fields on the
+                  same certificate of origin, because each files against its own internal policy. A single built-in
+                  verdict could not serve them. What we had encoded as compliance logic was one team&rsquo;s policy,
+                  not the industry&rsquo;s.
+                </p>
+                <p>
+                  I took the findings to the founders with a recommendation: stop encoding compliance in the product
+                  and let each customer configure it. The judgement stays with the team accountable for the filing,
+                  and Conduit guarantees the accuracy of extraction and placement instead. We agreed that week, and
+                  the engine&rsquo;s remaining build went into the pipelines.
+                </p>
+                <p>
+                  Configurability has a cost: a customer gets no value until they have built their first pipeline. I
+                  designed the builder to include auto-drafting the fields, so that the first setup is faster.
+                </p>
+              </div>
             </section>
 
             <section id="solution" className="mb-10">
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Solution</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Reusable workflows</h2>
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Two operations, reused on every shipment</h2>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
-                  Importers handle hundreds of documents at once, and the same checks repeat on every shipment. I
-                  designed the product around pipelines rather than one fixed process: Conduit makes the mechanical
-                  pass, parsing each document and flagging what it cannot resolve, and the person keeps the judgement
-                  call. A pipeline is configured once and reused on every shipment after it.
-                </p>
-              </div>
-
-              <h3 className="font-serif text-[1.35rem] leading-[1.3] tracking-[-0.01em] mb-3 max-w-[750px]">Monitoring the shipments</h3>
-              <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
-                <p>
-                  What gets held at the border is the shipment, not the document, so the inbox groups documents by
-                  shipment and leads with what is at risk. A compliance officer can tell in one pass which shipments
-                  are clear, and anything that needs a human decision or a request back to the exporter carries that
-                  state on the row.
-                </p>
-              </div>
-
-              <div className="rounded-xl overflow-hidden border border-[#DDE3EA] max-w-[750px]">
-                <LightboxImage src="/conduit/dash.png" alt="Inbox grouped by shipment, with one fumigation certificate marked Needs review and one packing list marked File unreadable" width={1576} height={989} className="block w-full h-auto" />
-              </div>
-              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-10">Inbox grouped by shipment, with the documents that need attention flagged</p>
-
-              <h3 className="font-serif text-[1.35rem] leading-[1.3] tracking-[-0.01em] mb-3 max-w-[750px]">Data extraction and injection</h3>
-              <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
-                <p>
-                  Every importer&rsquo;s workflow takes one of two shapes: pull values out of a supplier document, or
-                  push values into a form. I designed the pipelines so customers build their own in both shapes, which
-                  is how five teams with different compliance rules ran the same product without us rebuilding it for
-                  each.
+                  Every workflow these teams run is one of two operations: extracting a value from a document, or
+                  writing one into it. I built the product on those two primitives. A customer defines the fields they
+                  need once, and that definition becomes a pipeline they run on every shipment.
                 </p>
               </div>
 
               <div className="rounded-xl overflow-hidden border border-[#DDE3EA] max-w-[750px]">
                 <LightboxImage src="/conduit/pipelines.png" alt="Pipelines library: saved workflows with type and status, and the menu for starting a new one with Extract or Inject" width={1600} height={1002} className="block w-full h-auto" />
               </div>
-              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-10">Creating a data pipeline</p>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-10">Every pipeline a customer has defined, ready to run again</p>
 
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
-                  For data extraction, the importer can either define the fields to extract manually or use
-                  auto-suggested fields and then tweak them as necessary.
+                  For extraction, the importer defines which fields to pull from each document type. They can list
+                  them manually, or start from Conduit&rsquo;s suggestions and adjust.
                 </p>
               </div>
 
               <Clip
                 src="/conduit/parsing.mp4"
                 label="Building an extraction workflow on a real supplier document"
-                caption="Data extraction pipeline"
+                caption="Naming the fields to pull, on the document they come from"
               />
 
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mt-8 mb-8">
                 <p>
-                  For data injection, the importer maps the fields to fill directly on the document preview and provides
-                  extra details so the system can match the incoming data to the corresponding fields. The importer can
-                  do a sample run, preview the results, and adjust the fields if needed.
+                  For injection, the importer marks on the document preview which fields to fill, and describes each
+                  one so Conduit knows what data belongs there. A sample run shows the filled document before the
+                  pipeline is used.
                 </p>
               </div>
 
               <Clip
                 src="/conduit/prepop.mp4"
                 label="Fields drafted from a plain description of the document"
-                caption="Data injection pipeline"
+                caption="Mapping fields onto the form, then checking a sample run"
               />
 
-              <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mt-8 mb-8">
+              <h3 className="font-serif text-[1.35rem] leading-[1.3] tracking-[-0.01em] mb-3 mt-8 max-w-[750px]">Designing the home screen</h3>
+              <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
-                  Customers configure the pipelines once and reuse them across shipments. We record each execution and
-                  its status, giving compliance teams visibility into the work on the Runs page. The API lets the
-                  pipelines connect to the importer&rsquo;s existing systems.
+                  The home screen answers one question: what is stopping my shipments from clearing. Documents
+                  arrive one at a time, but nobody acts on a single document, so I grouped them under the shipment
+                  they belong to. Each row carries its own state, whether that is cleared, waiting on a review, or
+                  unreadable and needing a replacement from the exporter, so the whole list can be scanned without
+                  opening anything.
+                </p>
+              </div>
+
+              <div className="rounded-xl overflow-hidden border border-[#DDE3EA] max-w-[750px]">
+                <LightboxImage src="/conduit/dash.png" alt="Inbox grouped by shipment, with one fumigation certificate marked Needs review and one packing list marked File unreadable" width={1576} height={989} className="block w-full h-auto" />
+              </div>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-10">Documents grouped under their shipment, with what is blocking each one</p>
+
+              <h3 className="font-serif text-[1.35rem] leading-[1.3] tracking-[-0.01em] mb-3 max-w-[750px]">Built to be audited</h3>
+              <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
+                <p>
+                  Compliance work is audited after the fact, so every execution is recorded with its pipeline,
+                  status and source document.
                 </p>
               </div>
 
@@ -265,27 +290,43 @@ export default function ConduitCaseStudy() {
                   <LightboxImage src="/conduit/home-api.png" alt="Direct API call dialog: run a saved pipeline from Python, TypeScript or REST" className="block w-full h-full object-cover" />
                 </div>
               </div>
-              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Runs to audit the processes. API modal to connect to the importer&rsquo;s third-party software</p>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">The run history, and the API the pipelines are called through</p>
             </section>
 
             <section id="craft" className="mb-16">
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Craft</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Building the design system alongside the product</h2>
-              <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Designing a product that admits what it does not know</h2>
+              <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>
-                  There was no existing design system, so I built one alongside the product, covering the foundations,
-                  components, states, and motion.
+                  Reading a scanned certificate is never certain, and a compliance officer who trusts a wrong value
+                  signs their name to it. The interface could not show a guess and a confirmed value the same way.
                 </p>
                 <p>
-                  For document processing, I used motion to show the document being read instead of relying on a generic
-                  spinner, making the system state visible.
+                  So the states carry the difference. A field Conduit cannot read confidently arrives marked for
+                  review; a document it cannot process arrives marked unreadable.
+                </p>
+              </div>
+
+              <div className="rounded-xl overflow-hidden border border-[#DDE3EA] max-w-[750px] mt-8">
+                <LightboxImage src="/conduit/states.png" alt="Extracted fields in their states: confident, needs review with a confidence score, not found with a set-value action, and corrected" width={1600} height={759} className="block w-full h-auto" />
+              </div>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Every state an extracted field can arrive in, and what each one asks of the user</p>
+            </section>
+
+            <section id="system" className="mb-16">
+              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Design system</p>
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Building the system alongside the product</h2>
+              <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
+                <p>
+                  There was no design system to build this on, so I made one alongside the product: foundations,
+                  components, every state documented, and motion.
                 </p>
               </div>
 
               <Clip
                 src="/conduit/ani.mp4"
                 label="The reading-the-document animation in the design system's motion section"
-                caption="The reading-the-document animation, from the system’s Motion section"
+                caption="The document-reading animation, from the motion section"
               />
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[750px] items-start">
@@ -308,9 +349,9 @@ export default function ConduitCaseStudy() {
                   search for the information they need.
                 </p>
                 <p>
-                  I also built a conversational layer on top of the documents processed by Conduit. A user could ask
-                  what&rsquo;s missing before a shipment can clear, what expires this month, or which invoices are
-                  missing an HS code, and get the answer with the source documents attached.
+                  So I built a conversational layer over the documents Conduit has already processed. A user can ask
+                  what is missing before a shipment can clear, what expires this month, or which invoices have no HS
+                  code, and the answer arrives with the source documents attached.
                 </p>
               </div>
 
@@ -318,23 +359,20 @@ export default function ConduitCaseStudy() {
                 <LightboxImage src="/conduit/ask-0.png" alt="An executive brief answered in a side panel next to Pipelines, naming the blocked and expiring documents and citing its sources" width={1600} height={1001} className="block w-full h-auto" />
               </div>
               <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-10">The answer arrives with the documents it came from</p>
+            </section>
 
-              <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
-                <p>
-                  The conversation could also lead to action. If the relevant documents haven&rsquo;t been processed
-                  yet, Conduit could suggest running the appropriate pipeline and wait for approval before doing it. My
-                  goal is to allow users not just to read documents, but to let people work with the information inside
-                  them easily.
-                </p>
-              </div>
-
-              <h3 className="font-serif text-[1.35rem] leading-[1.3] tracking-[-0.01em] mb-3 max-w-[750px]">From document processing to agentic workflows</h3>
+            <section id="reflection" className="mb-16">
+              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Reflection</p>
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">What I would do differently</h2>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>
-                  The longer-term vision is for Conduit to handle more of the process itself. An AI agent could notice
-                  that a shipment is missing a required document, find the relevant supplier file, extract the needed
-                  information, run the appropriate pipeline, and flag anything it can&rsquo;t resolve. People would stay
-                  in control of decisions and approvals, while Conduit handles the steps in between.
+                  Usability testing on the compliance model would have been worth running earlier. A small number of
+                  sessions surfaced what we needed, and in a four-week build, scheduling them in week one rather than
+                  alongside the first version would have freed time for what replaced it.
+                </p>
+                <p>
+                  Configurability also shifted effort onto the customer&rsquo;s first hour. Drafting fields from a
+                  real document covers the worst of it, but onboarding is where I would spend the next stretch.
                 </p>
               </div>
             </section>
@@ -342,7 +380,7 @@ export default function ConduitCaseStudy() {
             <section className="mb-14">
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Impact</p>
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 max-w-[750px]">
-                Data verification that took 20 minutes per shipment now takes 1&ndash;3
+                Data verification that took 20 minutes per shipment now takes 1&ndash;3 minutes
               </h2>
               <div className="p-8 bg-[#F5F3F0] rounded-xl max-w-[750px] mb-8">
                 <ul className="space-y-2 text-[17px] leading-relaxed">
