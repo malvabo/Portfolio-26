@@ -201,21 +201,19 @@ export default function ConduitCaseStudy() {
                 </p>
                 <p>
                   Configurability has a cost: a customer gets no value until they have built their first pipeline. I
-                  designed the builder to start from a real document and draft the fields, so that first setup takes
-                  minutes instead of an afternoon.
+                  designed the builder to include auto-drafting the fields, so that the first setup is faster.
                 </p>
               </div>
             </section>
 
             <section id="solution" className="mb-10">
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Solution</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Two verbs, reused on every shipment</h2>
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Two operations, reused on every shipment</h2>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
-                  Underneath the policy, two actions cover all of this work: pull a value out of a document, or put
-                  one into it. I built the product from those two and nothing else. A customer defines the fields they
-                  care about, in their own terms, and that definition becomes a pipeline they reuse on every shipment
-                  after.
+                  Every workflow these teams run is one of two operations: extracting a value from a document, or
+                  writing one into it. I built the product on those two primitives. A customer defines the fields they
+                  need once, and that definition becomes a pipeline they run on every shipment.
                 </p>
               </div>
 
