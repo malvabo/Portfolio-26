@@ -130,10 +130,10 @@ export default function ConduitCaseStudy() {
                   My goal in this project was to improve the workflows of our partners-importers.
                 </p>
                 <p>
-                  I interviewed suppliers and importers. Importers re-key every field they need from supplier
-                  documents by hand, from product name and country of origin through to weight and certificate number.
-                  The copying is slow, it is where errors enter, and a wrong or missing field can hold a shipment at
-                  the border.
+                  I interviewed suppliers and importers. Documents arrive from the supplier, and the importer&rsquo;s
+                  compliance team reads each one and types the fields it needs into the forms their own shipment is
+                  cleared on: product name, country of origin, weight, certificate number, and many more. The copying
+                  is slow, it is where errors enter, and a wrong or missing field can hold a shipment at the border.
                 </p>
               </div>
 
