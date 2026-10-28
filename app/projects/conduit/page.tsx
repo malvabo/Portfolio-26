@@ -225,9 +225,9 @@ export default function ConduitCaseStudy() {
 
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
-                  Configuration had to run in the customer&rsquo;s vocabulary, not a schema. The builder opens their
-                  own document, takes a plain description of what they need, and drafts the fields for them to
-                  correct.
+                  For extraction, the importer defines the fields to pull from each document type. They can write
+                  those out themselves or start from Conduit&rsquo;s auto-suggested fields and adjust, which is where
+                  most of the setup time goes.
                 </p>
               </div>
 
