@@ -127,13 +127,15 @@ export default function ConduitCaseStudy() {
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Discovery</h2>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>
+                  My goal in this project was to improve the workflows of our partners-importers.
+                </p>
+                <p>
                   I conducted structured interviews with suppliers and importers to understand existing workflows.
                 </p>
                 <p>
-                  Large importers receive certificates of origin and other supplier documents with information they need
-                  for their own product compliance process. Today, compliance teams manually find and check details such
-                  as product name, country of origin, weight, and certificate number, then copy them into their internal
-                  forms.
+                  Large importers receive certificates of origin and other supplier documents, then manually find
+                  details such as product name, country of origin, weight, and certificate number and copy them into
+                  their own compliance forms.
                 </p>
                 <p>
                   This takes a lot of time and leads to errors due to manual tracking and duplication of the data. As a
@@ -155,7 +157,6 @@ export default function ConduitCaseStudy() {
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mt-10 mb-4 text-balance">Problems to be solved</h2>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>
-                  My goal in this project was to improve the workflows of our partners-importers.
                   Together with the founders and product partners, we prioritized building for the following jobs to be done of the importers based on frequency, severity and feasibility criteria:
                 </p>
                 <ul className="space-y-2">
