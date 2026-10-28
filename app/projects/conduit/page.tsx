@@ -152,7 +152,7 @@ export default function ConduitCaseStudy() {
                 <p>
                   We could not build for every gap at once. With the founders and product partners I scored the
                   importers&rsquo; jobs on how often each came up, what it cost when it went wrong, and what we could
-                  ship in four weeks. Four made the cut:
+                  ship in four weeks. Three made the cut:
                 </p>
                 <ul className="space-y-2">
                   <li className="flex gap-3">
@@ -166,10 +166,6 @@ export default function ConduitCaseStudy() {
                   <li className="flex gap-3">
                     <span className="mt-0.5">&bull;</span>
                     <span>Identify shipments at risk of being held before they reach the border</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="mt-0.5">&bull;</span>
-                    <span>Reduce the errors introduced by manual filing</span>
                   </li>
                 </ul>
               </div>
