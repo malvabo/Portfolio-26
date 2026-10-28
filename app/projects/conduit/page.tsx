@@ -45,6 +45,7 @@ export default function ConduitCaseStudy() {
                 ["#direction", "Direction"],
                 ["#solution", "The Solution"],
                 ["#craft", "Craft"],
+                ["#system", "Design system"],
                 ["#future", "Conversational design"],
                 ["#reflection", "Reflection"],
               ].map(([href, label]) => (
@@ -224,10 +225,9 @@ export default function ConduitCaseStudy() {
 
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
-                  Configuration had to run in the customer&rsquo;s vocabulary. Rather than ask a compliance officer
-                  to define a schema, the builder opens their own document and takes a plain description of what they
-                  need from it, then drafts the fields for them to correct. Correcting something concrete is faster
-                  and more accurate than specifying it from nothing.
+                  Configuration had to run in the customer&rsquo;s vocabulary, not a schema. The builder opens their
+                  own document, takes a plain description of what they need, and drafts the fields for them to
+                  correct.
                 </p>
               </div>
 
@@ -239,10 +239,9 @@ export default function ConduitCaseStudy() {
 
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mt-8 mb-8">
                 <p>
-                  Injection is the same loop pointed the other way, with fields mapped onto the form itself rather
-                  than through a list. A pipeline that writes into a customs filing has to be verified before anyone
-                  relies on it, so verification sits inside the build: the customer runs a sample against a real
-                  document and sees the filled result before the pipeline is used.
+                  Injection is the same loop reversed, with fields mapped onto the form itself. A pipeline that
+                  writes into a customs filing has to be verified first, so the customer runs a sample and sees the
+                  filled result before using it.
                 </p>
               </div>
 
@@ -255,11 +254,9 @@ export default function ConduitCaseStudy() {
               <h3 className="font-serif text-[1.35rem] leading-[1.3] tracking-[-0.01em] mb-3 mt-8 max-w-[750px]">Organised around what gets held</h3>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
-                  The obvious structure for a document tool is a list of documents. Compliance teams do not work that
-                  way. Customs holds shipments, and one missing certificate stops a container whose paperwork is
-                  otherwise complete, so documents group under the shipment they belong to and every row carries what
-                  is blocking it, whether that is a review or a replacement the exporter has to send. A compliance
-                  officer can tell in one pass which containers are clear.
+                  The obvious structure is a list of documents, but customs holds shipments, and one missing
+                  certificate stops a container whose paperwork is otherwise complete. Documents group under their
+                  shipment, and every row carries what is blocking it.
                 </p>
               </div>
 
@@ -271,11 +268,9 @@ export default function ConduitCaseStudy() {
               <h3 className="font-serif text-[1.35rem] leading-[1.3] tracking-[-0.01em] mb-3 max-w-[750px]">Built to be audited</h3>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
-                  Compliance work is audited after the fact. If a customs authority questions a declared weight
-                  months later, the importer has to produce the document it came from, so every execution is recorded
-                  with its pipeline, its status and its source. The same pipelines are callable through an API,
-                  because these teams already file from their own systems and a product that makes them work
-                  somewhere else does not get adopted.
+                  Compliance work is audited after the fact, so every execution is recorded with its pipeline,
+                  status and source document. The pipelines are also callable through an API, because these teams
+                  file from their own systems.
                 </p>
               </div>
 
@@ -293,28 +288,36 @@ export default function ConduitCaseStudy() {
             <section id="craft" className="mb-16">
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Craft</p>
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Designing a product that admits what it does not know</h2>
-              <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
+              <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>
                   Reading a scanned certificate is never certain, and a compliance officer who trusts a wrong value
                   signs their name to it. The interface could not present a machine guess the way it presents a fact.
                 </p>
                 <p>
                   So the states carry the difference. A field Conduit cannot read confidently arrives marked for
-                  review; a document it cannot process arrives marked unreadable rather than quietly skipped; a
-                  pipeline can be sampled before it is trusted. I also replaced the generic spinner with an
-                  animation of the document being read, so the wait shows what the system is doing.
+                  review; a document it cannot process arrives marked unreadable.
                 </p>
+              </div>
+            </section>
+
+            <section id="system" className="mb-16">
+              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Design system</p>
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Building the system alongside the product</h2>
+              <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
                   There was no design system to build this on, so I made one alongside the product: foundations,
-                  components, every state documented, and motion. It keeps the line between certain and uncertain
-                  consistent on screens I did not draw.
+                  components, every state documented, and motion.
+                </p>
+                <p>
+                  For document processing I replaced the generic spinner with an animation of the document being read,
+                  so the wait shows what the system is doing.
                 </p>
               </div>
 
               <Clip
                 src="/conduit/ani.mp4"
                 label="The reading-the-document animation in the design system's motion section"
-                caption="Showing the document being read, rather than a spinner"
+                caption="The reading animation, from the system&rsquo;s motion section"
               />
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[750px] items-start">
