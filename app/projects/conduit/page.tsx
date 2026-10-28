@@ -239,9 +239,9 @@ export default function ConduitCaseStudy() {
 
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mt-8 mb-8">
                 <p>
-                  Injection is the same loop reversed, with fields mapped onto the form itself. A pipeline that
-                  writes into a customs filing has to be verified first, so the customer runs a sample and sees the
-                  filled result before using it.
+                  For injection, the importer marks the fields to fill on the document preview and adds the detail
+                  Conduit needs to match incoming data to them. A sample run shows the filled result before the
+                  pipeline goes into use.
                 </p>
               </div>
 
