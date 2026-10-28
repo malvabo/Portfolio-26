@@ -157,19 +157,19 @@ export default function ConduitCaseStudy() {
                 <ul className="space-y-2">
                   <li className="flex gap-3">
                     <span className="mt-0.5">&bull;</span>
-                    <span>Get the data out of an exporter&rsquo;s compliance document without reading it line by line</span>
+                    <span>Extract the required fields from an exporter&rsquo;s compliance document without reading it line by line</span>
                   </li>
                   <li className="flex gap-3">
                     <span className="mt-0.5">&bull;</span>
-                    <span>See that a document is too poor to use while there is still time to ask the exporter for another</span>
+                    <span>Flag an unusable document early enough to request a replacement from the exporter</span>
                   </li>
                   <li className="flex gap-3">
                     <span className="mt-0.5">&bull;</span>
-                    <span>Catch a shipment heading for a block before it reaches the border</span>
+                    <span>Identify shipments at risk of being held before they reach the border</span>
                   </li>
                   <li className="flex gap-3">
                     <span className="mt-0.5">&bull;</span>
-                    <span>Stop the errors that manual filing introduces</span>
+                    <span>Reduce the errors introduced by manual filing</span>
                   </li>
                 </ul>
               </div>
