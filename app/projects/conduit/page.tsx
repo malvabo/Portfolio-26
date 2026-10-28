@@ -308,16 +308,12 @@ export default function ConduitCaseStudy() {
                   There was no design system to build this on, so I made one alongside the product: foundations,
                   components, every state documented, and motion.
                 </p>
-                <p>
-                  For document processing I replaced the generic spinner with an animation of the document being read,
-                  so the wait shows what the system is doing.
-                </p>
               </div>
 
               <Clip
                 src="/conduit/ani.mp4"
                 label="The reading-the-document animation in the design system's motion section"
-                caption="The reading animation, from the system&rsquo;s motion section"
+                caption="The document-reading animation, from the motion section"
               />
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[750px] items-start">
