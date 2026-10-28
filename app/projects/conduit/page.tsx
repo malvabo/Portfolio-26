@@ -200,11 +200,9 @@ export default function ConduitCaseStudy() {
                   the engine&rsquo;s remaining build went into the pipelines.
                 </p>
                 <p>
-                  That reset the product&rsquo;s promise and introduced a new risk. A fixed process works on the day
-                  you buy it; a configurable one does nothing until it is set up. I took setup on as a design problem
-                  rather than a support problem, which is why the builder drafts fields from a real document instead
-                  of starting from an empty form. Configurability was the only version that fit more than one team,
-                  and that is what made the trade worth taking.
+                  Configurability has a cost: a customer gets no value until they have built their first pipeline. I
+                  designed the builder to start from a real document and draft the fields, so that first setup takes
+                  minutes instead of an afternoon.
                 </p>
               </div>
             </section>
@@ -298,8 +296,8 @@ export default function ConduitCaseStudy() {
                 <p>
                   So the states carry the difference. A field Conduit cannot read confidently arrives marked for
                   review; a document it cannot process arrives marked unreadable rather than quietly skipped; a
-                  pipeline can be sampled before it is trusted. And instead of a generic spinner, I animated the
-                  document being read, so the wait shows what the system is doing rather than only that it is busy.
+                  pipeline can be sampled before it is trusted. I also replaced the generic spinner with an
+                  animation of the document being read, so the wait shows what the system is doing.
                 </p>
                 <p>
                   There was no design system to build this on, so I made one alongside the product: foundations,
@@ -335,10 +333,9 @@ export default function ConduitCaseStudy() {
                   of opening files. I built a conversational layer on top of that structure.
                 </p>
                 <p>
-                  It answers with the documents it read, never on its own authority, and where a document has not been
-                  processed yet it proposes the pipeline and waits to be told to run it. The same rule as the rest of
-                  the product: the system does the mechanical work and names what it is unsure of, and the person
-                  decides.
+                  It answers with the documents it read, and where a document has not been processed yet it proposes
+                  the pipeline and waits to be told to run it. The rule is the same as everywhere else in the product:
+                  Conduit does the mechanical work and names what it is unsure of, and the person decides.
                 </p>
               </div>
 
@@ -358,9 +355,8 @@ export default function ConduitCaseStudy() {
                   alongside the first version would have freed time for what replaced it.
                 </p>
                 <p>
-                  Moving to configurable pipelines also moved effort rather than removing it: the customer now has a
-                  first hour to get through. Drafting fields from a real document takes the edge off that, and
-                  onboarding is where I would spend the next stretch.
+                  Configurability also shifted effort onto the customer&rsquo;s first hour. Drafting fields from a
+                  real document covers the worst of it, but onboarding is where I would spend the next stretch.
                 </p>
               </div>
             </section>
