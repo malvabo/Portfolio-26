@@ -62,7 +62,7 @@ export default function ConduitCaseStudy() {
               </h1>
               <p className="text-[17px] leading-relaxed text-muted-foreground">
                 Every food shipment crossing a border needs a stack of certificates and forms, redone by hand each time.
-                Conduit reads those documents and fills the forms, on the rules each customer sets.
+                Conduit reads those documents and fills the forms, on the rules each importer sets.
               </p>
             </div>
 
@@ -202,7 +202,7 @@ export default function ConduitCaseStudy() {
                 </p>
                 <p>
                   I took the findings to the founders with a recommendation: stop encoding compliance in the product
-                  and let each importer configure it. The judgement stays with the team accountable for the filing,
+                  and let each importer configure it. The judgement stays with the compliance team accountable for the filing,
                   and Conduit guarantees the accuracy of extraction and placement instead. They agreed that week, and
                   I rescoped what was left of the build around configuration: the engine work became the pipeline
                   builder.
@@ -219,16 +219,16 @@ export default function ConduitCaseStudy() {
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Reusable pipelines</h2>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
-                  Every workflow these teams run is one of two operations: extracting a value from a document, or
-                  writing one into it. I built the product on those two primitives. A customer defines the fields they
-                  need once, and that definition becomes a pipeline they run on every shipment.
+                  Every workflow an importer runs is one of two operations: extracting a value from a document, or
+                  writing one into it. I built the product on those two primitives. An importer defines the fields
+                  they need once, and that definition becomes a pipeline they run on every shipment.
                 </p>
               </div>
 
               <div className="rounded-xl overflow-hidden border border-[#DDE3EA] max-w-[750px]">
                 <LightboxImage src="/conduit/pipelines.png" alt="Pipelines library: saved workflows with type and status, and the menu for starting a new one with Extract or Inject" width={1600} height={1002} className="block w-full h-auto" />
               </div>
-              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-10">Every pipeline a customer has defined, ready to run again</p>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-10">Every pipeline an importer has defined, ready to run again</p>
 
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
@@ -297,12 +297,16 @@ export default function ConduitCaseStudy() {
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Field states and confidence levels</h2>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>
-                  Reading a scanned certificate is never certain, and a compliance officer who trusts a wrong value
-                  signs their name to it. The interface could not show a guess and a confirmed value the same way.
+                  Extraction from a scanned certificate is never certain, and an officer who accepts a wrong value
+                  signs their name to it. The question was not whether to show confidence but how much: flag
+                  everything and people stop reading the flags, flag nothing and errors reach the filing.
                 </p>
                 <p>
-                  So the states carry the difference. A field Conduit cannot read confidently arrives marked for
-                  review; a document it cannot process arrives marked unreadable.
+                  I put the threshold on the field rather than the document. A value read confidently arrives as a
+                  value; one below the threshold arrives with its score and a review state; a field that cannot be
+                  found asks to be set rather than defaulting to empty; a document that cannot be processed is marked
+                  unreadable instead of returning a partial result. Corrections stay visible, so the next person can
+                  see what a human changed.
                 </p>
               </div>
 
