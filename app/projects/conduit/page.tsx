@@ -243,9 +243,9 @@ export default function ConduitCaseStudy() {
 
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mt-8 mb-8">
                 <p>
-                  Customers configure the pipelines once and reuse them across shipments. We record each execution and
-                  its status, giving compliance teams visibility into the work on the Runs page. The API lets the
-                  pipelines connect to the importer&rsquo;s existing systems.
+                  A pipeline is configured once and reused across shipments. Every run is recorded with its status,
+                  so a compliance team can show how a filed value was produced. The API connects the pipelines to the
+                  importer&rsquo;s existing systems.
                 </p>
               </div>
 
@@ -257,7 +257,7 @@ export default function ConduitCaseStudy() {
                   <LightboxImage src="/conduit/home-api.png" alt="Direct API call dialog: run a saved pipeline from Python, TypeScript or REST" className="block w-full h-full object-cover" />
                 </div>
               </div>
-              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Runs to audit the processes. API modal to connect to the importer&rsquo;s third-party software</p>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Runs for the audit trail, and the API for connecting to existing systems</p>
             </section>
 
             <section id="craft" className="mb-16">
@@ -269,8 +269,8 @@ export default function ConduitCaseStudy() {
                   components, states, and motion.
                 </p>
                 <p>
-                  For document processing, I used motion to show the document being read instead of relying on a generic
-                  spinner, making the system state visible.
+                  For document processing I animated the document being read rather than using a generic spinner, so
+                  the wait shows what the system is doing.
                 </p>
               </div>
 
@@ -300,9 +300,9 @@ export default function ConduitCaseStudy() {
                   search for the information they need.
                 </p>
                 <p>
-                  I also built a conversational layer on top of the documents processed by Conduit. A user could ask
-                  what&rsquo;s missing before a shipment can clear, what expires this month, or which invoices are
-                  missing an HS code, and get the answer with the source documents attached.
+                  So I built a conversational layer over the documents Conduit has already processed. A user can ask
+                  what is missing before a shipment can clear, what expires this month, or which invoices have no HS
+                  code, and the answer arrives with the source documents attached.
                 </p>
               </div>
 
@@ -313,20 +313,17 @@ export default function ConduitCaseStudy() {
 
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
-                  The conversation could also lead to action. If the relevant documents haven&rsquo;t been processed
-                  yet, Conduit could suggest running the appropriate pipeline and wait for approval before doing it. My
-                  goal is to allow users not just to read documents, but to let people work with the information inside
-                  them easily.
+                  The conversation can also lead to action. Where the documents have not been processed yet, Conduit
+                  proposes the pipeline to run and waits for approval before running it.
                 </p>
               </div>
 
               <h3 className="font-serif text-[1.35rem] leading-[1.3] tracking-[-0.01em] mb-3 max-w-[750px]">From document processing to agentic workflows</h3>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>
-                  The longer-term vision is for Conduit to handle more of the process itself. An AI agent could notice
-                  that a shipment is missing a required document, find the relevant supplier file, extract the needed
-                  information, run the appropriate pipeline, and flag anything it can&rsquo;t resolve. People would stay
-                  in control of decisions and approvals, while Conduit handles the steps in between.
+                  The longer-term vision is for an agent to carry the routine steps: notice a missing document, find
+                  the supplier file, extract what is needed, run the pipeline, and flag whatever it cannot resolve.
+                  Decisions and approvals stay with people.
                 </p>
               </div>
             </section>
