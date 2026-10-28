@@ -130,17 +130,9 @@ export default function ConduitCaseStudy() {
                   My goal in this project was to improve the workflows of our partners-importers.
                 </p>
                 <p>
-                  I conducted structured interviews with suppliers and importers to understand existing workflows.
-                </p>
-                <p>
-                  Large importers receive certificates of origin and other supplier documents, then manually find
-                  details such as product name, country of origin, weight, and certificate number and copy them into
-                  their own compliance forms.
-                </p>
-                <p>
-                  This takes a lot of time and leads to errors due to manual tracking and duplication of the data. As a
-                  result, the shipment may be held at the border due to incomplete or incorrect data in compliance
-                  documents.
+                  I interviewed suppliers and importers. Importers re-key details from supplier documents by hand:
+                  product name, country of origin, weight, certificate number. The copying is slow, it is where errors
+                  enter, and a wrong or missing field can hold a shipment at the border.
                 </p>
               </div>
 
