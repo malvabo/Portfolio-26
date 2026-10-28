@@ -299,13 +299,8 @@ export default function ConduitCaseStudy() {
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>
                   Extraction from a scanned certificate is never certain, and an officer who accepts a wrong value
-                  signs their name to it. Flag everything and people stop reading the flags; flag nothing and errors
-                  reach the filing.
-                </p>
-                <p>
-                  So the threshold sits on the field. A value read confidently arrives as a value, one below the
-                  threshold arrives with its score and a review state, and a document that cannot be read at all is
-                  marked unreadable rather than returned half-filled.
+                  signs their name to it. So each extracted field carries a confidence level, and anything below the
+                  threshold is flagged for review.
                 </p>
               </div>
 
