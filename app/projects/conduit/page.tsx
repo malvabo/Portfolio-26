@@ -129,18 +129,14 @@ export default function ConduitCaseStudy() {
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">The paperwork decides whether the shipment moves</h2>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>
-                  A container of coffee does not clear customs because it is coffee. It clears because a stack of
-                  certificates says where it was grown, what it weighs and who inspected it, and because every one of
-                  those facts has been carried correctly into the importer&rsquo;s own filing.
+                  Shipments clear customs on their paperwork, and the importer has to carry every fact from the
+                  supplier&rsquo;s certificates into their own filing: where the goods were grown, what they weigh,
+                  who inspected them.
                 </p>
                 <p>
-                  I spent the first week with the people who carry them. A compliance officer opens a supplier&rsquo;s
-                  certificate, reads it, and retypes what they need into their forms. None of the work is difficult.
-                  All of it is exact, and all of it is manual.
-                </p>
-                <p>
-                  The cost lands at the border. One transposed weight, one certificate number that does not match the
-                  invoice, and the container waits while someone finds the document it came from.
+                  I spent the first week with the people who do that. A compliance officer opens each document, reads
+                  it, and retypes what they need. The work is exact and entirely manual, and one transposed weight or
+                  mismatched certificate number leaves the container waiting at the border.
                 </p>
               </div>
 
@@ -157,8 +153,8 @@ export default function ConduitCaseStudy() {
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mt-10 mb-4 text-balance">Where we decided to start</h2>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>
-                  Four weeks buys one product, not four. I mapped the work with the founders and scored each job on how
-                  often it came up, what it cost when it went wrong, and whether we could ship it. Three survived:
+                  I mapped the work with the founders and scored each job on how often it came up, what it cost when
+                  it went wrong, and whether we could ship it in four weeks. Three made the cut:
                 </p>
                 <ul className="space-y-2">
                   <li className="flex gap-3">
@@ -214,10 +210,10 @@ export default function ConduitCaseStudy() {
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Two verbs, reused on every shipment</h2>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
-                  Strip the policy out of this work and two actions are left: pull a value out of a document, or put a
-                  value into one. I built the product from those two and nothing else. A customer defines which fields
-                  they care about, in their own terms, and that definition becomes a pipeline they reuse on every
-                  shipment after.
+                  Underneath the policy, two actions cover all of this work: pull a value out of a document, or put
+                  one into it. I built the product from those two and nothing else. A customer defines the fields they
+                  care about, in their own terms, and that definition becomes a pipeline they reuse on every shipment
+                  after.
                 </p>
               </div>
 
@@ -228,9 +224,8 @@ export default function ConduitCaseStudy() {
 
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
-                  Defining fields from scratch is the kind of setup that kills a configurable product before anyone
-                  reaches the value. So the builder starts from a real document: describe what you need and Conduit
-                  drafts the fields for you to correct, rather than handing you an empty form.
+                  An empty form is where a configurable product loses people, so the builder starts from a real
+                  document: describe what you need and Conduit drafts the fields for you to correct.
                 </p>
               </div>
 
@@ -256,10 +251,9 @@ export default function ConduitCaseStudy() {
               <h3 className="font-serif text-[1.35rem] leading-[1.3] tracking-[-0.01em] mb-3 mt-8 max-w-[750px]">The shipment is the unit, not the document</h3>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
-                  Customs holds shipments, not documents, so the inbox is organised the way the risk is. Documents
-                  group under the shipment they belong to, and anything waiting on a person, or on a replacement from
-                  the exporter, says so on the row. A compliance officer can tell in one pass which containers are
-                  clear.
+                  Customs holds shipments, not documents, so the inbox groups documents under the shipment they
+                  belong to. Anything waiting on a person, or on a replacement from the exporter, says so on the row,
+                  and a compliance officer can tell in one pass which containers are clear.
                 </p>
               </div>
 
@@ -305,8 +299,8 @@ export default function ConduitCaseStudy() {
                 </p>
                 <p>
                   There was no design system to build this on, so I made one alongside the product: foundations,
-                  components, every state documented, and motion. It exists to keep that distinction between certain
-                  and uncertain consistent on screens I would never draw myself.
+                  components, every state documented, and motion. It keeps the line between certain and uncertain
+                  consistent on screens I did not draw.
                 </p>
               </div>
 
@@ -355,9 +349,9 @@ export default function ConduitCaseStudy() {
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">What I would do differently</h2>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>
-                  I designed the rules engine before I had tested the assumption underneath it. Five sessions were
-                  enough to show that no two teams check the same fields, and those sessions could have happened in
-                  week one rather than after a version existed. The week we lost was a week we did not have.
+                  I designed the rules engine before testing the assumption underneath it. The sessions that showed
+                  no two teams check the same fields could have run in week one instead of after a version existed,
+                  and that cost us a week we did not have.
                 </p>
                 <p>
                   The pivot also moved a cost rather than removing it. Making the product configurable put the setup
