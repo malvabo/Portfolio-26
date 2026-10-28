@@ -253,10 +253,11 @@ export default function ConduitCaseStudy() {
               <h3 className="font-serif text-[1.35rem] leading-[1.3] tracking-[-0.01em] mb-3 mt-8 max-w-[750px]">The inbox is organised by shipment</h3>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
-                  Documents arrive in Conduit one at a time, so the simplest screen would be a list of them. But
-                  compliance officers work by shipment: customs holds a whole container when one certificate is
-                  missing. The inbox groups documents under the shipment they belong to, and each row shows what is
-                  blocking it.
+                  Documents arrive in Conduit one at a time, so the simplest screen would be a list of them. A list
+                  serves whoever is processing documents, though, and the person accountable is watching containers:
+                  customs holds a whole shipment when one certificate is missing. So the inbox groups documents under
+                  their shipment, and each row shows what is blocking it. Making the shipment the unit also set up
+                  what came later, including the questions the conversational layer can answer.
                 </p>
               </div>
 
