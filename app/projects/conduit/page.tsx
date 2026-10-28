@@ -180,27 +180,28 @@ export default function ConduitCaseStudy() {
 
             <section id="direction" className="mb-10">
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Direction</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">The first version was wrong, and it was mine</h2>
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Testing the compliance model with real teams</h2>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>
-                  The founders had a clear product in mind: Conduit would read a document and decide whether it passed.
-                  A rules engine would hold the compliance logic and the interface would report its verdict. I designed
-                  that version.
+                  We started from a clear hypothesis: Conduit would read a document and decide whether it passed. A
+                  rules engine would hold the compliance logic and the interface would report the result. I designed
+                  that version so we could put it in front of people early.
                 </p>
                 <p>
-                  Testing took it apart. Put the same certificate of origin in front of five compliance teams and you
-                  get five different answers about which fields matter, because each team files against a different
-                  internal policy. A product that ships one verdict is wrong for four customers in five.
+                  The sessions were where it got interesting. Put the same certificate of origin in front of five
+                  compliance teams and you get five different answers about which fields matter, because each team
+                  files against a different internal policy. The verdict we had designed turned out to be one
+                  customer&rsquo;s policy, generalised.
                 </p>
                 <p>
-                  I did not want this to be my opinion against the founders&rsquo;, so I took them the sessions instead
-                  of an argument. We cut the rules engine that week, along with the screens I had already built for it.
+                  I brought the sessions back to the founders and we worked through what they meant together. We moved
+                  the compliance judgement out of the product and into the customers&rsquo; hands, and put that week
+                  into the pipelines instead.
                 </p>
                 <p>
-                  What replaced it was smaller and harder to demo. Conduit would extract and place data accurately and
-                  leave the compliance judgement to the people accountable for it. The trade was real: a fixed product
-                  works the day you buy it, and a configurable one does nothing until someone sets it up. We took it
-                  because the fixed version only ever had one customer.
+                  It changed what the product promises. A fixed process works on the day you buy it; a configurable
+                  one has to be set up first. We took that trade because it was the only version that fit more than
+                  one team, and the setup became something to design for.
                 </p>
               </div>
             </section>
@@ -349,15 +350,14 @@ export default function ConduitCaseStudy() {
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">What I would do differently</h2>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>
-                  I designed the rules engine before testing the assumption underneath it. The sessions that showed
-                  no two teams check the same fields could have run in week one instead of after a version existed,
-                  and that cost us a week we did not have.
+                  Testing the compliance model earlier would have been worth a lot. A handful of sessions told us what
+                  we needed, and in a four-week build, running them in week one rather than alongside the first version
+                  would have freed time for the part that replaced it.
                 </p>
                 <p>
-                  The pivot also moved a cost rather than removing it. Making the product configurable put the setup
-                  work on the customer, and in four weeks we never designed for that first hour properly. Drafting
-                  fields from a real document took the edge off it, but onboarding was the part of this product I would
-                  give the next four weeks to.
+                  Moving to configurable pipelines also moved effort rather than removing it: the customer now has a
+                  first hour to get through. Drafting fields from a real document takes the edge off that, and
+                  onboarding is where I would spend the next stretch.
                 </p>
               </div>
             </section>
