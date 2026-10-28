@@ -250,12 +250,13 @@ export default function ConduitCaseStudy() {
                 caption="Mapping fields onto the form, then checking a sample run"
               />
 
-              <h3 className="font-serif text-[1.35rem] leading-[1.3] tracking-[-0.01em] mb-3 mt-8 max-w-[750px]">Organised around what gets held</h3>
+              <h3 className="font-serif text-[1.35rem] leading-[1.3] tracking-[-0.01em] mb-3 mt-8 max-w-[750px]">The inbox is organised by shipment</h3>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
-                  The obvious structure is a list of documents. But customs holds shipments: one missing certificate
-                  stops a container whose other paperwork is complete. So documents group under their shipment, and
-                  every row carries what is blocking it.
+                  Documents arrive in Conduit one at a time, so the simplest screen would be a list of them. But
+                  compliance officers work by shipment: customs holds a whole container when one certificate is
+                  missing. The inbox groups documents under the shipment they belong to, and each row shows what is
+                  blocking it.
                 </p>
               </div>
 
