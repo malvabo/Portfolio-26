@@ -44,7 +44,6 @@ export default function ConduitCaseStudy() {
                 ["#context", "Context"],
                 ["#direction", "Direction"],
                 ["#solution", "The Solution"],
-                ["#craft", "Craft"],
                 ["#system", "Design system"],
                 ["#future", "Conversational design"],
               ].map(([href, label]) => (
