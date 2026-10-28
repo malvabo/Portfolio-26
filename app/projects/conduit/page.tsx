@@ -198,17 +198,17 @@ export default function ConduitCaseStudy() {
                 <p>
                   The results were consistent across sessions: each team validated a different set of fields on the
                   same certificate of origin, because each files against its own internal policy. A single built-in
-                  verdict could not serve them. What we had encoded as compliance logic was one team&rsquo;s policy,
-                  not the industry&rsquo;s.
+                  verdict could not serve them.
                 </p>
                 <p>
                   I took the findings to the founders with a recommendation: stop encoding compliance in the product
-                  and let each customer configure it. The judgement stays with the team accountable for the filing,
-                  and Conduit guarantees the accuracy of extraction and placement instead. We agreed that week, and
-                  the engine&rsquo;s remaining build went into the pipelines.
+                  and let each importer configure it. The judgement stays with the team accountable for the filing,
+                  and Conduit guarantees the accuracy of extraction and placement instead. They agreed that week, and
+                  I rescoped what was left of the build around configuration: the engine work became the pipeline
+                  builder.
                 </p>
                 <p>
-                  Configurability has a cost: a customer gets no value until they have built their first pipeline. I
+                  Configurability has a cost: an importer gets no value until they have built their first pipeline. I
                   designed the builder to include auto-drafting the fields, so that the first setup is faster.
                 </p>
               </div>
