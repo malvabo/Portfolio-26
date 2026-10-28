@@ -224,8 +224,10 @@ export default function ConduitCaseStudy() {
 
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
-                  The builder starts from a real document: describe what you need and Conduit drafts the fields for
-                  you to correct.
+                  Configuration had to run in the customer&rsquo;s vocabulary. Rather than ask a compliance officer
+                  to define a schema, the builder opens their own document and takes a plain description of what they
+                  need from it, then drafts the fields for them to correct. Correcting something concrete is faster
+                  and more accurate than specifying it from nothing.
                 </p>
               </div>
 
@@ -237,8 +239,10 @@ export default function ConduitCaseStudy() {
 
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mt-8 mb-8">
                 <p>
-                  Injection works the same way in reverse. The customer maps fields onto the form itself, runs a sample
-                  against a real document, and sees the filled result before any of it is trusted.
+                  Injection is the same loop pointed the other way, with fields mapped onto the form itself rather
+                  than through a list. A pipeline that writes into a customs filing has to be verified before anyone
+                  relies on it, so verification sits inside the build: the customer runs a sample against a real
+                  document and sees the filled result before the pipeline is used.
                 </p>
               </div>
 
@@ -248,12 +252,14 @@ export default function ConduitCaseStudy() {
                 caption="Mapping fields onto the form, then checking a sample run"
               />
 
-              <h3 className="font-serif text-[1.35rem] leading-[1.3] tracking-[-0.01em] mb-3 mt-8 max-w-[750px]">The shipment is the unit, not the document</h3>
+              <h3 className="font-serif text-[1.35rem] leading-[1.3] tracking-[-0.01em] mb-3 mt-8 max-w-[750px]">Organised around what gets held</h3>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
-                  Customs holds shipments, not documents, so the inbox groups documents under the shipment they
-                  belong to. Anything waiting on a person, or on a replacement from the exporter, says so on the row,
-                  and a compliance officer can tell in one pass which containers are clear.
+                  The obvious structure for a document tool is a list of documents. Compliance teams do not work that
+                  way. Customs holds shipments, and one missing certificate stops a container whose paperwork is
+                  otherwise complete, so documents group under the shipment they belong to and every row carries what
+                  is blocking it, whether that is a review or a replacement the exporter has to send. A compliance
+                  officer can tell in one pass which containers are clear.
                 </p>
               </div>
 
@@ -262,13 +268,14 @@ export default function ConduitCaseStudy() {
               </div>
               <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-10">Documents grouped under their shipment, with what is blocking each one</p>
 
-              <h3 className="font-serif text-[1.35rem] leading-[1.3] tracking-[-0.01em] mb-3 max-w-[750px]">Every run has to be defensible</h3>
+              <h3 className="font-serif text-[1.35rem] leading-[1.3] tracking-[-0.01em] mb-3 max-w-[750px]">Built to be audited</h3>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
-                  Compliance work is audited. If a customs officer questions a declared weight six months later, the
-                  importer has to show where that number came from, so every execution is recorded with its pipeline,
-                  its status and its source document. The same pipelines run through an API, which is how they reach
-                  the systems these teams already file from.
+                  Compliance work is audited after the fact. If a customs authority questions a declared weight
+                  months later, the importer has to produce the document it came from, so every execution is recorded
+                  with its pipeline, its status and its source. The same pipelines are callable through an API,
+                  because these teams already file from their own systems and a product that makes them work
+                  somewhere else does not get adopted.
                 </p>
               </div>
 
