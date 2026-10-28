@@ -250,14 +250,14 @@ export default function ConduitCaseStudy() {
                 caption="Mapping fields onto the form, then checking a sample run"
               />
 
-              <h3 className="font-serif text-[1.35rem] leading-[1.3] tracking-[-0.01em] mb-3 mt-8 max-w-[750px]">The inbox is organised by shipment</h3>
+              <h3 className="font-serif text-[1.35rem] leading-[1.3] tracking-[-0.01em] mb-3 mt-8 max-w-[750px]">Designing the home screen</h3>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
-                  Documents arrive in Conduit one at a time, so the simplest screen would be a list of them. A list
-                  serves whoever is processing documents, though, and the person accountable is watching containers:
-                  customs holds a whole shipment when one certificate is missing. So the inbox groups documents under
-                  their shipment, and each row shows what is blocking it. Making the shipment the unit also set up
-                  what came later, including the questions the conversational layer can answer.
+                  The home screen answers one question: what is stopping my shipments from clearing. Documents
+                  arrive one at a time, but nobody acts on a single document, so I grouped them under the shipment
+                  they belong to. Each row carries its own state, whether that is cleared, waiting on a review, or
+                  unreadable and needing a replacement from the exporter, so the whole list can be scanned without
+                  opening anything.
                 </p>
               </div>
 
