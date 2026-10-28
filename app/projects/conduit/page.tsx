@@ -329,17 +329,16 @@ export default function ConduitCaseStudy() {
 
             <section id="future" className="mb-16">
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Conversational design</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">What the structure made possible next</h2>
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Agentic AI</h2>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
-                  Once every document has been through a pipeline, the data behind a shipment is structured, and a
-                  question like &ldquo;what is blocking this container&rdquo; becomes answerable rather than a morning
-                  of opening files. I built a conversational layer on top of that structure.
+                  Pipelines automate the repetitive work, but a compliance officer still has to open documents and
+                  search for the information they need.
                 </p>
                 <p>
-                  It answers with the documents it read, and where a document has not been processed yet it proposes
-                  the pipeline and waits to be told to run it. The rule is the same as everywhere else in the product:
-                  Conduit does the mechanical work and names what it is unsure of, and the person decides.
+                  So I built a conversational layer over the documents Conduit has already processed. A user can ask
+                  what is missing before a shipment can clear, what expires this month, or which invoices have no HS
+                  code, and the answer arrives with the source documents attached.
                 </p>
               </div>
 
