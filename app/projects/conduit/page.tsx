@@ -194,14 +194,17 @@ export default function ConduitCaseStudy() {
                   not the industry&rsquo;s.
                 </p>
                 <p>
-                  I brought the findings back to the founders and we worked through the implications together. We moved
-                  the compliance judgement out of the product and into the customers&rsquo; hands, and redirected that
-                  week into the pipelines.
+                  I took the findings to the founders with a recommendation: stop encoding compliance in the product
+                  and let each customer configure it. The judgement stays with the team accountable for the filing,
+                  and Conduit guarantees the accuracy of extraction and placement instead. We agreed that week, and
+                  the engine&rsquo;s remaining build went into the pipelines.
                 </p>
                 <p>
-                  It changed what the product promises. A fixed process works on the day you buy it; a configurable
-                  one has to be set up first. We took that trade because it was the only version that fit more than
-                  one team, and the setup became something to design for.
+                  That reset the product&rsquo;s promise and introduced a new risk. A fixed process works on the day
+                  you buy it; a configurable one does nothing until it is set up. I took setup on as a design problem
+                  rather than a support problem, which is why the builder drafts fields from a real document instead
+                  of starting from an empty form. Configurability was the only version that fit more than one team,
+                  and that is what made the trade worth taking.
                 </p>
               </div>
             </section>
@@ -225,8 +228,8 @@ export default function ConduitCaseStudy() {
 
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
-                  An empty form is where a configurable product loses people, so the builder starts from a real
-                  document: describe what you need and Conduit drafts the fields for you to correct.
+                  The builder starts from a real document: describe what you need and Conduit drafts the fields for
+                  you to correct.
                 </p>
               </div>
 
