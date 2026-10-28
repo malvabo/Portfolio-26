@@ -47,7 +47,6 @@ export default function ConduitCaseStudy() {
                 ["#craft", "Craft"],
                 ["#system", "Design system"],
                 ["#future", "Conversational design"],
-                ["#reflection", "Reflection"],
               ].map(([href, label]) => (
                 <a key={href} href={href} className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">
                   {label}
@@ -127,7 +126,7 @@ export default function ConduitCaseStudy() {
 
             <section id="context" className="mb-10">
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Context</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">The paperwork decides whether the shipment moves</h2>
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">How compliance teams work today</h2>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>
                   Shipments clear customs on their paperwork, and the importer has to carry every fact from the
@@ -193,7 +192,7 @@ export default function ConduitCaseStudy() {
               <div className="rounded-xl overflow-hidden border border-[#DDE3EA] max-w-[750px] mt-8">
                 <LightboxImage src="/conduit/ideation.png" alt="Six inbox directions explored side by side, each annotated with why it failed: operators manage shipments not documents, the preview does not help triage, cards do not scale, stages are hard to scan, shipment schemas differ" width={1600} height={877} className="block w-full h-auto" />
               </div>
-              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-8">Design ideation: inbox directions explored, with what each one failed at</p>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-8">Design ideation: inbox directions explored</p>
 
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>
@@ -217,7 +216,7 @@ export default function ConduitCaseStudy() {
 
             <section id="solution" className="mb-10">
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Solution</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Two operations, reused on every shipment</h2>
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Reusable pipelines</h2>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
                   Every workflow these teams run is one of two operations: extracting a value from a document, or
@@ -295,7 +294,7 @@ export default function ConduitCaseStudy() {
 
             <section id="craft" className="mb-16">
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Craft</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Designing a product that admits what it does not know</h2>
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Field states and confidence levels</h2>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>
                   Reading a scanned certificate is never certain, and a compliance officer who trusts a wrong value
@@ -315,7 +314,7 @@ export default function ConduitCaseStudy() {
 
             <section id="system" className="mb-16">
               <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Design system</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Building the system alongside the product</h2>
+              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Foundations, components and motion</h2>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
                   There was no design system to build this on, so I made one alongside the product: foundations,
@@ -329,13 +328,8 @@ export default function ConduitCaseStudy() {
                 caption="The document-reading animation, from the motion section"
               />
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[750px] items-start">
-                <div className="rounded-xl overflow-hidden border border-[#DDE3EA]">
-                  <LightboxImage src="/conduit/ds-states.png" alt="Design system: button states documented with treatment rules" width={1600} height={1003} className="block w-full h-auto" />
-                </div>
-                <div className="rounded-xl overflow-hidden border border-[#DDE3EA]">
-                  <LightboxImage src="/conduit/ds-size.png" alt="Design system: empty-state illustration sizing documented with classes" width={1600} height={1003} className="block w-full h-auto" />
-                </div>
+              <div className="rounded-xl overflow-hidden border border-[#DDE3EA] max-w-[750px]">
+                <LightboxImage src="/conduit/ds.webp" alt="The design system: foundations and components in the sidebar, the reading-state motion spec, colour tokens with their values and usage, and input and schema-row states from rest through focus, error and loading" width={2000} height={1177} className="block w-full h-auto" />
               </div>
               <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">States and rules documented in the system, not only in the app</p>
             </section>
@@ -355,26 +349,6 @@ export default function ConduitCaseStudy() {
                 </p>
               </div>
 
-              <div className="rounded-xl overflow-hidden border border-[#DDE3EA] max-w-[750px]">
-                <LightboxImage src="/conduit/ask-0.png" alt="An executive brief answered in a side panel next to Pipelines, naming the blocked and expiring documents and citing its sources" width={1600} height={1001} className="block w-full h-auto" />
-              </div>
-              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-10">The answer arrives with the documents it came from</p>
-            </section>
-
-            <section id="reflection" className="mb-16">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Reflection</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">What I would do differently</h2>
-              <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
-                <p>
-                  Usability testing on the compliance model would have been worth running earlier. A small number of
-                  sessions surfaced what we needed, and in a four-week build, scheduling them in week one rather than
-                  alongside the first version would have freed time for what replaced it.
-                </p>
-                <p>
-                  Configurability also shifted effort onto the customer&rsquo;s first hour. Drafting fields from a
-                  real document covers the worst of it, but onboarding is where I would spend the next stretch.
-                </p>
-              </div>
             </section>
 
             <section className="mb-14">
