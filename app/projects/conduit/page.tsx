@@ -129,14 +129,16 @@ export default function ConduitCaseStudy() {
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">How compliance teams work today</h2>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>
-                  Shipments clear customs on their paperwork, and the importer has to carry every fact from the
-                  supplier&rsquo;s certificates into their own filing: where the goods were grown, what they weigh,
-                  who inspected them.
+                  An importer cannot clear a shipment until its paperwork agrees. The exporter sends certificates of
+                  origin, phytosanitary certificates, invoices and packing lists. The importer&rsquo;s compliance team
+                  reads each one and copies the values it needs, product, origin, weight, certificate numbers, into
+                  the customs filing they are responsible for.
                 </p>
                 <p>
-                  I spent the first week with the people who do that. A compliance officer opens each document, reads
-                  it, and retypes what they need. The work is exact and entirely manual, and one transposed weight or
-                  mismatched certificate number leaves the container waiting at the border.
+                  I interviewed importers and their suppliers in the first week. The copying ran to about twenty
+                  minutes per shipment, and it was where errors entered: a weight that disagrees with the packing list,
+                  a certificate number that does not match the invoice. When the numbers disagree, customs holds the
+                  container until the importer produces the document the value came from.
                 </p>
               </div>
 
