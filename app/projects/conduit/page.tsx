@@ -225,9 +225,8 @@ export default function ConduitCaseStudy() {
 
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
-                  For extraction, the importer defines the fields to pull from each document type. They can write
-                  those out themselves or start from Conduit&rsquo;s auto-suggested fields and adjust, which is where
-                  most of the setup time goes.
+                  For extraction, the importer defines which fields to pull from each document type. They can list
+                  them manually, or start from Conduit&rsquo;s suggestions and adjust.
                 </p>
               </div>
 
@@ -239,9 +238,9 @@ export default function ConduitCaseStudy() {
 
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mt-8 mb-8">
                 <p>
-                  For injection, the importer marks the fields to fill on the document preview and adds the detail
-                  Conduit needs to match incoming data to them. A sample run shows the filled result before the
-                  pipeline goes into use.
+                  For injection, the importer marks on the document preview which fields to fill, and describes each
+                  one so Conduit knows what data belongs there. A sample run shows the filled document before the
+                  pipeline is used.
                 </p>
               </div>
 
@@ -254,9 +253,9 @@ export default function ConduitCaseStudy() {
               <h3 className="font-serif text-[1.35rem] leading-[1.3] tracking-[-0.01em] mb-3 mt-8 max-w-[750px]">Organised around what gets held</h3>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
-                  The obvious structure is a list of documents, but customs holds shipments, and one missing
-                  certificate stops a container whose paperwork is otherwise complete. Documents group under their
-                  shipment, and every row carries what is blocking it.
+                  The obvious structure is a list of documents. But customs holds shipments: one missing certificate
+                  stops a container whose other paperwork is complete. So documents group under their shipment, and
+                  every row carries what is blocking it.
                 </p>
               </div>
 
@@ -290,7 +289,7 @@ export default function ConduitCaseStudy() {
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>
                   Reading a scanned certificate is never certain, and a compliance officer who trusts a wrong value
-                  signs their name to it. The interface could not present a machine guess the way it presents a fact.
+                  signs their name to it. The interface could not show a guess and a confirmed value the same way.
                 </p>
                 <p>
                   So the states carry the difference. A field Conduit cannot read confidently arrives marked for
