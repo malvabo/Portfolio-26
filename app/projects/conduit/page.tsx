@@ -47,7 +47,6 @@ export default function ConduitCaseStudy() {
                 ["#craft", "Craft"],
                 ["#system", "Design system"],
                 ["#future", "Conversational design"],
-                ["#reflection", "Reflection"],
               ].map(([href, label]) => (
                 <a key={href} href={href} className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">
                   {label}
@@ -350,22 +349,6 @@ export default function ConduitCaseStudy() {
                 </p>
               </div>
 
-            </section>
-
-            <section id="reflection" className="mb-16">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Reflection</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">What I would do differently</h2>
-              <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
-                <p>
-                  Usability testing on the compliance model would have been worth running earlier. A small number of
-                  sessions surfaced what we needed, and in a four-week build, scheduling them in week one rather than
-                  alongside the first version would have freed time for what replaced it.
-                </p>
-                <p>
-                  Configurability also shifted effort onto the customer&rsquo;s first hour. Drafting fields from a
-                  real document covers the worst of it, but onboarding is where I would spend the next stretch.
-                </p>
-              </div>
             </section>
 
             <section className="mb-14">
