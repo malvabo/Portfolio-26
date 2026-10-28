@@ -326,12 +326,6 @@ export default function ConduitCaseStudy() {
                 </p>
               </div>
 
-              <Clip
-                src="/conduit/ani.mp4"
-                label="The reading-the-document animation in the design system's motion section"
-                caption="The document-reading animation"
-              />
-
               <div className="rounded-xl overflow-hidden border border-[#DDE3EA] max-w-[750px]">
                 <LightboxImage src="/conduit/ds.webp" alt="The design system: foundations and components in the sidebar, the reading-state motion spec, colour tokens with their values and usage, and input and schema-row states from rest through focus, error and loading" width={2000} height={1177} className="block w-full h-auto" />
               </div>
