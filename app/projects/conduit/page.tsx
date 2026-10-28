@@ -188,9 +188,10 @@ export default function ConduitCaseStudy() {
                   that version and we took it into usability testing with compliance teams.
                 </p>
                 <p>
-                  The testing reframed the problem. The same certificate of origin produced five different answers
-                  about which fields matter, because each team files against a different internal policy. The verdict
-                  we had designed turned out to be one customer&rsquo;s policy, generalised.
+                  The results were consistent across sessions: each team validated a different set of fields on the
+                  same certificate of origin, because each files against its own internal policy. A single built-in
+                  verdict could not serve them. What we had encoded as compliance logic was one team&rsquo;s policy,
+                  not the industry&rsquo;s.
                 </p>
                 <p>
                   I brought the findings back to the founders and we worked through the implications together. We moved
