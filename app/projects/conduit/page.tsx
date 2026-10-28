@@ -205,9 +205,8 @@ export default function ConduitCaseStudy() {
                 <p>
                   I took the findings to the founders with a recommendation: stop encoding compliance in the product
                   and let each importer configure it. The judgement stays with the compliance team accountable for the filing,
-                  and Conduit guarantees the accuracy of extraction and placement instead. They agreed that week, and
-                  I rescoped what was left of the build around configuration: the engine work became the pipeline
-                  builder.
+                  and Conduit guarantees the accuracy of extraction and placement instead. They agreed, and we
+                  stopped building the rules engine. The rest of the four weeks went into the pipeline builder.
                 </p>
                 <p>
                   Configurability has a cost: an importer gets no value until they have built their first pipeline. I
@@ -300,15 +299,13 @@ export default function ConduitCaseStudy() {
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>
                   Extraction from a scanned certificate is never certain, and an officer who accepts a wrong value
-                  signs their name to it. The question was not whether to show confidence but how much: flag
-                  everything and people stop reading the flags, flag nothing and errors reach the filing.
+                  signs their name to it. Flag everything and people stop reading the flags; flag nothing and errors
+                  reach the filing.
                 </p>
                 <p>
-                  I put the threshold on the field rather than the document. A value read confidently arrives as a
-                  value; one below the threshold arrives with its score and a review state; a field that cannot be
-                  found asks to be set rather than defaulting to empty; a document that cannot be processed is marked
-                  unreadable instead of returning a partial result. Corrections stay visible, so the next person can
-                  see what a human changed.
+                  So the threshold sits on the field. A value read confidently arrives as a value, one below the
+                  threshold arrives with its score and a review state, and a document that cannot be read at all is
+                  marked unreadable rather than returned half-filled.
                 </p>
               </div>
 
