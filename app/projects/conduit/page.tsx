@@ -62,7 +62,7 @@ export default function ConduitCaseStudy() {
               </h1>
               <p className="text-[17px] leading-relaxed text-muted-foreground">
                 Every food shipment crossing a border needs a stack of certificates and forms, redone by hand each time.
-                Conduit reads those documents and fills the forms, on the rules each customer sets.
+                Conduit reads those documents and fills the forms, on the rules each importer sets.
               </p>
             </div>
 
@@ -129,14 +129,16 @@ export default function ConduitCaseStudy() {
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">How compliance teams work today</h2>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>
-                  Shipments clear customs on their paperwork, and the importer has to carry every fact from the
-                  supplier&rsquo;s certificates into their own filing: where the goods were grown, what they weigh,
-                  who inspected them.
+                  An importer cannot clear a shipment until its paperwork agrees. The exporter sends certificates of
+                  origin, phytosanitary certificates, invoices and packing lists. The importer&rsquo;s compliance team
+                  reads each one and copies the values it needs, product, origin, weight, certificate numbers, into
+                  the customs filing they are responsible for.
                 </p>
                 <p>
-                  I spent the first week with the people who do that. A compliance officer opens each document, reads
-                  it, and retypes what they need. The work is exact and entirely manual, and one transposed weight or
-                  mismatched certificate number leaves the container waiting at the border.
+                  I interviewed importers and their suppliers in the first week. The copying ran to about twenty
+                  minutes per shipment, and it was where errors entered: a weight that disagrees with the packing list,
+                  a certificate number that does not match the invoice. When the numbers disagree, customs holds the
+                  container until the importer produces the document the value came from.
                 </p>
               </div>
 
@@ -148,7 +150,7 @@ export default function ConduitCaseStudy() {
                   <LightboxImage src="/conduit/supply-warehouse.webp" alt="Warehouse workers cutting open sacks of cocoa beans before shipping" width={1600} height={1200} className="block w-full h-full object-cover" />
                 </div>
               </div>
-              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">The shipments the paperwork follows, from the farm to the warehouse</p>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">From the farm to the warehouse</p>
 
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mt-10 mb-4 text-balance">Where we decided to start</h2>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
@@ -175,7 +177,7 @@ export default function ConduitCaseStudy() {
               <div className="rounded-xl overflow-hidden border border-[#DDE3EA] max-w-[750px] mt-8">
                 <img src="/conduit/workshop.webp" alt="A service blueprint mapping phases, user actions, surfaces, ownership and status, above a workshop board of sticky notes grouped by prompt" width={2000} height={1416} loading="lazy" className="block w-full h-auto" />
               </div>
-              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">The blueprint and the workshop board the three jobs came out of</p>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Service blueprint and workshop board</p>
             </section>
 
             <section id="direction" className="mb-10">
@@ -192,23 +194,22 @@ export default function ConduitCaseStudy() {
               <div className="rounded-xl overflow-hidden border border-[#DDE3EA] max-w-[750px] mt-8">
                 <LightboxImage src="/conduit/ideation.png" alt="Six inbox directions explored side by side, each annotated with why it failed: operators manage shipments not documents, the preview does not help triage, cards do not scale, stages are hard to scan, shipment schemas differ" width={1600} height={877} className="block w-full h-auto" />
               </div>
-              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-8">Design ideation: inbox directions explored</p>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-8">Design ideation: inbox directions</p>
 
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>
                   The results were consistent across sessions: each team validated a different set of fields on the
                   same certificate of origin, because each files against its own internal policy. A single built-in
-                  verdict could not serve them. What we had encoded as compliance logic was one team&rsquo;s policy,
-                  not the industry&rsquo;s.
+                  verdict could not serve them.
                 </p>
                 <p>
                   I took the findings to the founders with a recommendation: stop encoding compliance in the product
-                  and let each customer configure it. The judgement stays with the team accountable for the filing,
-                  and Conduit guarantees the accuracy of extraction and placement instead. We agreed that week, and
-                  the engine&rsquo;s remaining build went into the pipelines.
+                  and let each importer configure it. The judgement stays with the compliance team accountable for the filing,
+                  and Conduit guarantees the accuracy of extraction and placement instead. They agreed, and we
+                  stopped building the rules engine. The rest of the four weeks went into the pipeline builder.
                 </p>
                 <p>
-                  Configurability has a cost: a customer gets no value until they have built their first pipeline. I
+                  Configurability has a cost: an importer gets no value until they have built their first pipeline. I
                   designed the builder to include auto-drafting the fields, so that the first setup is faster.
                 </p>
               </div>
@@ -219,16 +220,16 @@ export default function ConduitCaseStudy() {
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Reusable pipelines</h2>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
-                  Every workflow these teams run is one of two operations: extracting a value from a document, or
-                  writing one into it. I built the product on those two primitives. A customer defines the fields they
-                  need once, and that definition becomes a pipeline they run on every shipment.
+                  Every workflow an importer runs is one of two operations: extracting a value from a document, or
+                  writing one into it. I built the product on those two primitives. An importer defines the fields
+                  they need once, and that definition becomes a pipeline they run on every shipment.
                 </p>
               </div>
 
               <div className="rounded-xl overflow-hidden border border-[#DDE3EA] max-w-[750px]">
                 <LightboxImage src="/conduit/pipelines.png" alt="Pipelines library: saved workflows with type and status, and the menu for starting a new one with Extract or Inject" width={1600} height={1002} className="block w-full h-auto" />
               </div>
-              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-10">Every pipeline a customer has defined, ready to run again</p>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-10">Saved pipelines, ready to run again</p>
 
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
@@ -240,7 +241,7 @@ export default function ConduitCaseStudy() {
               <Clip
                 src="/conduit/parsing.mp4"
                 label="Building an extraction workflow on a real supplier document"
-                caption="Naming the fields to pull, on the document they come from"
+                caption="Naming the fields to pull"
               />
 
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mt-8 mb-8">
@@ -254,7 +255,7 @@ export default function ConduitCaseStudy() {
               <Clip
                 src="/conduit/prepop.mp4"
                 label="Fields drafted from a plain description of the document"
-                caption="Mapping fields onto the form, then checking a sample run"
+                caption="Mapping fields and running a sample"
               />
 
               <h3 className="font-serif text-[1.35rem] leading-[1.3] tracking-[-0.01em] mb-3 mt-8 max-w-[750px]">Designing the home screen</h3>
@@ -271,7 +272,7 @@ export default function ConduitCaseStudy() {
               <div className="rounded-xl overflow-hidden border border-[#DDE3EA] max-w-[750px]">
                 <LightboxImage src="/conduit/dash.png" alt="Inbox grouped by shipment, with one fumigation certificate marked Needs review and one packing list marked File unreadable" width={1576} height={989} className="block w-full h-auto" />
               </div>
-              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-10">Documents grouped under their shipment, with what is blocking each one</p>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-10">Documents grouped by shipment</p>
 
               <h3 className="font-serif text-[1.35rem] leading-[1.3] tracking-[-0.01em] mb-3 max-w-[750px]">Built to be audited</h3>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
@@ -289,7 +290,7 @@ export default function ConduitCaseStudy() {
                   <LightboxImage src="/conduit/home-api.png" alt="Direct API call dialog: run a saved pipeline from Python, TypeScript or REST" className="block w-full h-full object-cover" />
                 </div>
               </div>
-              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">The run history, and the API the pipelines are called through</p>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Run history and the pipeline API</p>
             </section>
 
             <section id="craft" className="mb-16">
@@ -297,19 +298,16 @@ export default function ConduitCaseStudy() {
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Field states and confidence levels</h2>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>
-                  Reading a scanned certificate is never certain, and a compliance officer who trusts a wrong value
-                  signs their name to it. The interface could not show a guess and a confirmed value the same way.
-                </p>
-                <p>
-                  So the states carry the difference. A field Conduit cannot read confidently arrives marked for
-                  review; a document it cannot process arrives marked unreadable.
+                  Extraction from a scanned certificate is never certain, and an officer who accepts a wrong value
+                  signs their name to it. So each extracted field carries a confidence level, and anything below the
+                  threshold is flagged for review.
                 </p>
               </div>
 
               <div className="rounded-xl overflow-hidden border border-[#DDE3EA] max-w-[750px] mt-8">
                 <LightboxImage src="/conduit/states.png" alt="Extracted fields in their states: confident, needs review with a confidence score, not found with a set-value action, and corrected" width={1600} height={759} className="block w-full h-auto" />
               </div>
-              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Every state an extracted field can arrive in, and what each one asks of the user</p>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">The states a field can arrive in</p>
             </section>
 
             <section id="system" className="mb-16">
@@ -322,16 +320,10 @@ export default function ConduitCaseStudy() {
                 </p>
               </div>
 
-              <Clip
-                src="/conduit/ani.mp4"
-                label="The reading-the-document animation in the design system's motion section"
-                caption="The document-reading animation, from the motion section"
-              />
-
               <div className="rounded-xl overflow-hidden border border-[#DDE3EA] max-w-[750px]">
                 <LightboxImage src="/conduit/ds.webp" alt="The design system: foundations and components in the sidebar, the reading-state motion spec, colour tokens with their values and usage, and input and schema-row states from rest through focus, error and loading" width={2000} height={1177} className="block w-full h-auto" />
               </div>
-              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">States and rules documented in the system, not only in the app</p>
+              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">The design system</p>
             </section>
 
             <section id="future" className="mb-16">
