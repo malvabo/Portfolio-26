@@ -329,13 +329,8 @@ export default function ConduitCaseStudy() {
                 caption="The document-reading animation, from the motion section"
               />
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[750px] items-start">
-                <div className="rounded-xl overflow-hidden border border-[#DDE3EA]">
-                  <LightboxImage src="/conduit/ds-states.png" alt="Design system: button states documented with treatment rules" width={1600} height={1003} className="block w-full h-auto" />
-                </div>
-                <div className="rounded-xl overflow-hidden border border-[#DDE3EA]">
-                  <LightboxImage src="/conduit/ds-size.png" alt="Design system: empty-state illustration sizing documented with classes" width={1600} height={1003} className="block w-full h-auto" />
-                </div>
+              <div className="rounded-xl overflow-hidden border border-[#DDE3EA] max-w-[750px]">
+                <LightboxImage src="/conduit/ds.webp" alt="The design system: foundations and components in the sidebar, the reading-state motion spec, colour tokens with their values and usage, and input and schema-row states from rest through focus, error and loading" width={2000} height={1177} className="block w-full h-auto" />
               </div>
               <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">States and rules documented in the system, not only in the app</p>
             </section>
