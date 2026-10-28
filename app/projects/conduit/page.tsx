@@ -150,24 +150,26 @@ export default function ConduitCaseStudy() {
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mt-10 mb-4 text-balance">Problems to be solved</h2>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
                 <p>
-                  Together with the founders and product partners, we prioritized building for the following jobs to be done of the importers based on frequency, severity and feasibility criteria:
+                  We could not build for every gap at once. With the founders and product partners I scored the
+                  importers&rsquo; jobs on how often each came up, what it cost when it went wrong, and what we could
+                  ship in four weeks. Four made the cut:
                 </p>
                 <ul className="space-y-2">
                   <li className="flex gap-3">
                     <span className="mt-0.5">&bull;</span>
-                    <span>Extraction of data from exporters&rsquo; compliance documents</span>
+                    <span>Get the data out of an exporter&rsquo;s compliance document without reading it line by line</span>
                   </li>
                   <li className="flex gap-3">
                     <span className="mt-0.5">&bull;</span>
-                    <span>Monitoring of low-quality documents, so importers can request new ones from exporters</span>
+                    <span>See that a document is too poor to use while there is still time to ask the exporter for another</span>
                   </li>
                   <li className="flex gap-3">
                     <span className="mt-0.5">&bull;</span>
-                    <span>Early detection of shipments that might be blocked due to incomplete data</span>
+                    <span>Catch a shipment heading for a block before it reaches the border</span>
                   </li>
                   <li className="flex gap-3">
                     <span className="mt-0.5">&bull;</span>
-                    <span>Reduction of errors in manual document filing.</span>
+                    <span>Stop the errors that manual filing introduces</span>
                   </li>
                 </ul>
               </div>
