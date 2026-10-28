@@ -185,18 +185,20 @@ export default function ConduitCaseStudy() {
               <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 text-balance">Reusable workflows</h2>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
-                  Our clients were large importers dealing with hundreds of documents at the same time. I designed a
-                  pipeline system that would parse incoming documents automatically, flag the issues, and let users
-                  resolve them to scale the operations easily.
+                  Importers handle hundreds of documents at once, and the same checks repeat on every shipment. I
+                  designed the product around pipelines rather than one fixed process: Conduit makes the mechanical
+                  pass, parsing each document and flagging what it cannot resolve, and the person keeps the judgement
+                  call. A pipeline is configured once and reused on every shipment after it.
                 </p>
               </div>
 
               <h3 className="font-serif text-[1.35rem] leading-[1.3] tracking-[-0.01em] mb-3 max-w-[750px]">Monitoring the shipments</h3>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
-                  I designed an experience that lets importers quickly scan the list of shipments and see which documents
-                  might lead to delays at the border. Documents are automatically grouped by shipment, and the ones that
-                  require human approval or escalation to the exporter are marked as such.
+                  What gets held at the border is the shipment, not the document, so the inbox groups documents by
+                  shipment and leads with what is at risk. A compliance officer can tell in one pass which shipments
+                  are clear, and anything that needs a human decision or a request back to the exporter carries that
+                  state on the row.
                 </p>
               </div>
 
@@ -208,8 +210,10 @@ export default function ConduitCaseStudy() {
               <h3 className="font-serif text-[1.35rem] leading-[1.3] tracking-[-0.01em] mb-3 max-w-[750px]">Data extraction and injection</h3>
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
-                  I designed the pipelines for importers to build repeatable data extraction and injection
-                  workflows depending on their needs.
+                  Every importer&rsquo;s workflow takes one of two shapes: pull values out of a supplier document, or
+                  push values into a form. I designed the pipelines so customers build their own in both shapes, which
+                  is how five teams with different compliance rules ran the same product without us rebuilding it for
+                  each.
                 </p>
               </div>
 
