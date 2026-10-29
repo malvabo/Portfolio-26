@@ -44,9 +44,8 @@ export default function ConduitCaseStudy() {
                 ["#context", "Context"],
                 ["#direction", "Direction"],
                 ["#solution", "The Solution"],
-                ["#craft", "Craft"],
                 ["#system", "Design system"],
-                ["#future", "Conversational design"],
+                ["#future", "Agentic AI"],
               ].map(([href, label]) => (
                 <a key={href} href={href} className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">
                   {label}

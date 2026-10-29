@@ -32,10 +32,10 @@ export default function Home() {
           <WorkSection />
         </AnimatedSection>
         <AnimatedSection>
-          <ConduitSection />
+          <AmazonSection />
         </AnimatedSection>
         <AnimatedSection>
-          <AmazonSection />
+          <ConduitSection />
         </AnimatedSection>
         {/* <AnimatedSection>
           <VeraSection />
