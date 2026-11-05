@@ -279,7 +279,7 @@ export function FigurePair({ images, caption }: { images: { src: string; alt: st
       <div className="grid md:grid-cols-2 gap-4 md:gap-6">
         {images.map((img, i) => (
           <Reveal key={img.src} delay={i * 120} className="rounded-2xl overflow-hidden bg-[#EDE8E1]">
-            <LightboxImage src={img.src} alt={img.alt} className="w-full h-auto" />
+            <LightboxImage src={img.src} alt={img.alt} className="block w-full h-full object-cover" />
           </Reveal>
         ))}
       </div>
