@@ -21,6 +21,7 @@ import {
   Moment,
   Results,
   Closing,
+  UpNext,
   Reveal,
   Words,
 } from "@/components/story-case-study"
@@ -338,7 +339,18 @@ export default function ConduitStory() {
           People stay in charge of decisions and approvals, while Conduit handles the steps in between.
         </Closing>
 
-        <Narrow className="mt-24">
+        <div className="mt-28 md:mt-40">
+          <UpNext
+            href="/projects/amazon"
+            image="/images/aivq1.png"
+            imageAlt="Amazon shipping dashboard with an AI actions panel"
+            title="Amazon"
+            summary="AI automation for complex shipping workflows, reducing manual work for thousands of operators."
+            meta={["Big tech", "Product designer"]}
+          />
+        </div>
+
+        <Narrow className="mt-16">
           <BackLinkFooter />
         </Narrow>
       </StoryPage>

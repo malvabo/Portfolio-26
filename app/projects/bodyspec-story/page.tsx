@@ -20,6 +20,7 @@ import {
   Moment,
   Results,
   Closing,
+  UpNext,
   Words,
 } from "@/components/story-case-study"
 
@@ -261,7 +262,18 @@ export default function BodySpecStory() {
           The most useful research came from the people already in the room with our customers.
         </Closing>
 
-        <Narrow className="mt-24">
+        <div className="mt-28 md:mt-40">
+          <UpNext
+            href="/projects/conduit"
+            image="/conduit/cover.png"
+            imageAlt="A Certificate of Origin open in Conduit, with the fields to extract listed beside it"
+            title="Conduit"
+            summary="Automating the customs paperwork for food importers, from supplier certificates to filled forms."
+            meta={["Four weeks", "Product and design lead"]}
+          />
+        </div>
+
+        <Narrow className="mt-16">
           <BackLinkFooter />
         </Narrow>
       </StoryPage>

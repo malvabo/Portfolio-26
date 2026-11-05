@@ -457,3 +457,67 @@ export function Closing({ children, attribution }: { children: ReactNode; attrib
     </Narrow>
   )
 }
+
+/** "Up next" card linking to the following case study */
+export function UpNext({
+  href,
+  image,
+  imageAlt,
+  title,
+  summary,
+  meta,
+}: {
+  href: string
+  image: string
+  imageAlt: string
+  title: string
+  summary: string
+  meta: string[]
+}) {
+  return (
+    <Wide>
+      <Reveal as="h2" className="text-[1.5rem] md:text-[1.75rem] tracking-[-0.015em] mb-6">
+        Up next
+      </Reveal>
+      <Reveal delay={100}>
+        <a href={href} className="group block bg-white border border-black/15 overflow-hidden">
+          <div className="p-1">
+            <div className="relative aspect-[16/9] overflow-hidden bg-[#EDE8E1]">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={image}
+                alt={imageAlt}
+                loading="lazy"
+                className="absolute inset-0 w-full h-full object-cover object-left-top transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.03]"
+              />
+            </div>
+          </div>
+          <div className="px-6 py-6 md:px-9 md:py-8 border-t border-black/10">
+            <h3 className="text-[1.375rem] md:text-[1.5rem] font-medium tracking-[-0.01em] mb-2 flex items-center gap-2">
+              {title}
+              <span
+                aria-hidden
+                className="inline-block text-muted-foreground transition-transform duration-300 group-hover:translate-x-1"
+              >
+                →
+              </span>
+            </h3>
+            <p className="text-[17px] leading-relaxed text-muted-foreground max-w-[640px]">{summary}</p>
+            <p className="mt-6 font-mono text-[12px] uppercase tracking-wider text-foreground/70 flex flex-wrap items-center gap-2">
+              {meta.map((m, i) => (
+                <span key={m} className="inline-flex items-center gap-2">
+                  {i > 0 && (
+                    <svg viewBox="0 0 10 10" className="w-[9px] h-[9px] fill-[#B4532A]" aria-hidden>
+                      <path d="M5 0C5.55 3.4 6.6 4.45 10 5 6.6 5.55 5.55 6.6 5 10 4.45 6.6 3.4 5.55 0 5 3.4 4.45 4.45 3.4 5 0Z" />
+                    </svg>
+                  )}
+                  {m}
+                </span>
+              ))}
+            </p>
+          </div>
+        </a>
+      </Reveal>
+    </Wide>
+  )
+}
