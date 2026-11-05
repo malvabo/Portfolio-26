@@ -107,6 +107,11 @@
   body {
     @apply bg-background text-foreground;
   }
+  /* Clear the fixed 64px header when jumping to an in-page anchor,
+     so the section eyebrow and heading stay visible. */
+  html {
+    scroll-padding-top: 6rem;
+  }
 }
 
 @layer utilities {

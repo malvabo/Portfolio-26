@@ -30,7 +30,7 @@ export function ConduitSection() {
           <div>
             <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">About</h3>
             <p className="text-base leading-relaxed text-foreground">
-              A pipeline builder for compliance documents. Extract pulls data out of supplier documents, Inject fills forms. Each pipeline is saved once, then reused or called over an API.
+              Designing AI-powered document automation for customs compliance - removing manual data entry for importer compliance teams and preventing the filing errors that hold shipments at the border.
             </p>
             <a
               href="/projects/conduit"
@@ -51,8 +51,8 @@ export function ConduitSection() {
                 <div className="text-sm text-muted-foreground opacity-80">onboarded onto the MVP</div>
               </div>
               <div>
-                <div className="text-xl font-medium text-foreground mb-0.5">30+ interviews</div>
-                <div className="text-sm text-muted-foreground opacity-80">across importers and co-ops</div>
+                <div className="text-xl font-medium text-foreground mb-0.5">4 weeks</div>
+                <div className="text-sm text-muted-foreground opacity-80">product shipped within tight timelines</div>
               </div>
             </div>
           </div>
