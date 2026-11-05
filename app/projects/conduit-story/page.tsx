@@ -19,6 +19,8 @@ import {
   Moment,
   Results,
   Closing,
+  Reveal,
+  Words,
 } from "@/components/story-case-study"
 
 export default function ConduitStory() {
@@ -45,7 +47,7 @@ export default function ConduitStory() {
             </p>
           }
           stats={[
-            { value: "20 → 1-3", label: "minutes to verify a shipment" },
+            { value: "1–3 min", label: "to verify a shipment, down from 20" },
             { value: "95%", label: "lower cost per document" },
             { value: "5", label: "teams onboarded" },
           ]}
@@ -109,11 +111,11 @@ export default function ConduitStory() {
 
         <div className="mt-16 md:mt-24 space-y-10">
           <Narrow>
-            <p className="text-[17px] leading-relaxed text-muted-foreground">
+            <Reveal as="p" className="text-[17px] leading-relaxed text-muted-foreground">
               With the founders and product partners, I mapped the full journey and chose what to build first:
               extracting data, spotting bad documents early, flagging shipments at risk and cutting manual filing
               errors.
-            </p>
+            </Reveal>
           </Narrow>
           <Wide>
             <Figure
@@ -203,9 +205,9 @@ export default function ConduitStory() {
 
         {/* 5. Moments */}
         <Narrow>
-          <p className="text-[1.6rem] md:text-[2rem] leading-[1.3] tracking-[-0.015em] text-balance">
+          <Words className="text-[1.6rem] md:text-[2rem] leading-[1.3] tracking-[-0.015em] text-balance">
             A few moments from the process behind the final product.
-          </p>
+          </Words>
         </Narrow>
 
         <div className="mt-16 space-y-24 md:space-y-32">
@@ -278,9 +280,9 @@ export default function ConduitStory() {
             items={[
               {
                 emoji: "⏱️",
-                value: "20 → 1-3 min",
+                value: "1–3 min",
                 label: "to verify a shipment",
-                body: "Saving up to two hours per shipment once pipelines replaced manual checks.",
+                body: "Down from 20 minutes, saving up to two hours per shipment once pipelines replaced manual checks.",
               },
               {
                 emoji: "💸",
@@ -301,10 +303,10 @@ export default function ConduitStory() {
         <Divider />
 
         <Narrow className="mb-12">
-          <p className="text-[17px] leading-relaxed text-muted-foreground">
+          <Reveal as="p" className="text-[17px] leading-relaxed text-muted-foreground">
             Next, an agent could notice a missing document, find the supplier file, run the right pipeline and flag
             anything it can&apos;t resolve.
-          </p>
+          </Reveal>
         </Narrow>
         <Closing attribution="Where it goes next">
           People stay in charge of decisions and approvals, while Conduit handles the steps in between.

@@ -18,6 +18,7 @@ import {
   Moment,
   Results,
   Closing,
+  Words,
 } from "@/components/story-case-study"
 
 export default function BodySpecStory() {
@@ -171,9 +172,9 @@ export default function BodySpecStory() {
 
         {/* 5. Moments from the process */}
         <Narrow>
-          <p className="text-[1.6rem] md:text-[2rem] leading-[1.3] tracking-[-0.015em] text-balance">
+          <Words className="text-[1.6rem] md:text-[2rem] leading-[1.3] tracking-[-0.015em] text-balance">
             A few moments from the process behind the final product.
-          </p>
+          </Words>
         </Narrow>
 
         <div className="mt-16 space-y-24 md:space-y-32">

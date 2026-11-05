@@ -5,12 +5,109 @@
  * Layout follows a narrative arc: hero → setup → what I found → what we built
  * → moments from the process → what changed. Text columns stay narrow,
  * visuals break out wider, and each beat has room to breathe.
+ *
+ * Text and visuals fade up into place as they scroll into view
+ * (see .story-reveal in globals.css). Big statements reveal word by word.
  */
 
-import type { ReactNode } from "react"
+import { useEffect, useRef, useState, type ReactNode, type ElementType } from "react"
 import { LightboxImage } from "@/components/lightbox-image"
 
 const ACCENT = "text-[#B4532A]"
+
+/* ---------- Scroll reveal ---------- */
+
+/** Sets `shown` once the element is ~15% into the viewport. Plays once. */
+function useInView<T extends HTMLElement>() {
+  const ref = useRef<T>(null)
+  const [shown, setShown] = useState(false)
+
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+    if (typeof IntersectionObserver === "undefined") {
+      setShown(true)
+      return
+    }
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setShown(true)
+          io.disconnect()
+        }
+      },
+      { rootMargin: "0px 0px -12% 0px", threshold: 0.01 }
+    )
+    io.observe(el)
+    return () => io.disconnect()
+  }, [])
+
+  return { ref, shown }
+}
+
+/** Fades and lifts its content into place when scrolled into view */
+export function Reveal({
+  children,
+  delay = 0,
+  as: Tag = "div",
+  className = "",
+}: {
+  children: ReactNode
+  delay?: number
+  as?: ElementType
+  className?: string
+}) {
+  const { ref, shown } = useInView<HTMLElement>()
+  return (
+    <Tag
+      ref={ref}
+      data-shown={shown || undefined}
+      className={`story-reveal ${className}`}
+      style={{ "--d": `${delay}ms` } as React.CSSProperties}
+    >
+      {children}
+    </Tag>
+  )
+}
+
+/** Reveals a sentence word by word. Falls back to a block reveal for rich content. */
+export function Words({
+  children,
+  as: Tag = "p",
+  className = "",
+  delay = 0,
+  step = 28,
+}: {
+  children: ReactNode
+  as?: ElementType
+  className?: string
+  delay?: number
+  step?: number
+}) {
+  const { ref, shown } = useInView<HTMLElement>()
+
+  if (typeof children !== "string") {
+    return (
+      <Reveal as={Tag} className={className} delay={delay}>
+        {children}
+      </Reveal>
+    )
+  }
+
+  const words = children.split(" ")
+  return (
+    <Tag ref={ref} data-shown={shown || undefined} className={`story-words ${className}`} aria-label={children}>
+      {words.map((w, i) => (
+        <span key={i} aria-hidden>
+          <span className="story-word" style={{ "--d": `${delay + i * step}ms` } as React.CSSProperties}>
+            {w}
+          </span>
+          {i < words.length - 1 ? " " : null}
+        </span>
+      ))}
+    </Tag>
+  )
+}
 
 /* ---------- Layout ---------- */
 
@@ -29,11 +126,7 @@ export function Wide({ children, className = "" }: { children: ReactNode; classN
 }
 
 export function Divider() {
-  return (
-    <Wide>
-      <div className="h-28 md:h-40" aria-hidden />
-    </Wide>
-  )
+  return <div className="h-28 md:h-40" aria-hidden />
 }
 
 /* ---------- Hero ---------- */
@@ -55,39 +148,47 @@ export function StoryHero({
   intro: ReactNode
   stats: Stat[]
 }) {
+  // Title words take roughly words × step; the rest follows just after
+  const after = Math.min(title.split(" ").length * 45, 500)
   return (
     <header>
       <Wide>
-        <h1 className="font-serif text-[2.5rem] md:text-[3.5rem] lg:text-[4.25rem] leading-[1.05] tracking-[-0.03em] text-balance mb-10 md:mb-14 max-w-[900px]">
+        <Words
+          as="h1"
+          step={45}
+          className="font-serif text-[2.5rem] md:text-[3.5rem] lg:text-[4.25rem] leading-[1.05] tracking-[-0.03em] text-balance mb-10 md:mb-14 max-w-[900px]"
+        >
           {title}
-        </h1>
+        </Words>
 
         <div className="grid md:grid-cols-[200px_1fr] gap-10 md:gap-16">
-          <dl className="space-y-6">
+          <Reveal as="dl" delay={after} className="space-y-6">
             {meta.map((m) => (
               <div key={m.label}>
                 <dt className="text-[13px] text-muted-foreground mb-1">{m.label}</dt>
                 <dd className="font-mono text-[12px] uppercase tracking-wider">{m.value}</dd>
               </div>
             ))}
-          </dl>
+          </Reveal>
 
           <div>
-            <div className="text-[17px] leading-relaxed text-muted-foreground max-w-[560px]">{intro}</div>
+            <Reveal delay={after + 80} className="text-[17px] leading-relaxed text-muted-foreground max-w-[560px]">
+              {intro}
+            </Reveal>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 sm:gap-6 mt-10 max-w-[560px]">
-              {stats.map((s) => (
-                <div key={s.label}>
-                  <p className="font-serif text-[1.75rem] md:text-[2rem] tracking-[-0.02em] leading-none mb-2">{s.value}</p>
+              {stats.map((s, i) => (
+                <Reveal key={s.label} delay={after + 180 + i * 90}>
+                  <p className={`font-serif text-[1.75rem] md:text-[2rem] tracking-[-0.02em] leading-none mb-2 ${ACCENT}`}>{s.value}</p>
                   <p className="text-[13px] leading-snug text-muted-foreground">{s.label}</p>
-                </div>
+                </Reveal>
               ))}
             </div>
           </div>
         </div>
 
-        <div className="rounded-2xl overflow-hidden bg-[#EDE8E1] mt-14 md:mt-20">
+        <Reveal delay={after + 300} className="rounded-2xl overflow-hidden bg-[#EDE8E1] mt-14 md:mt-20">
           <LightboxImage src={image} alt={imageAlt} className="w-full h-auto" loading="eager" />
-        </div>
+        </Reveal>
       </Wide>
     </header>
   )
@@ -97,10 +198,15 @@ export function StoryHero({
 
 /** Big opening statement, then a quieter follow-up */
 export function Lede({ statement, children }: { statement: ReactNode; children?: ReactNode }) {
+  const after = typeof statement === "string" ? Math.min(statement.split(" ").length * 28, 600) : 150
   return (
     <Narrow>
-      <p className="text-[1.6rem] md:text-[2rem] leading-[1.3] tracking-[-0.015em] text-balance">{statement}</p>
-      {children && <div className="mt-6 space-y-4 text-[17px] leading-relaxed text-muted-foreground">{children}</div>}
+      <Words className="text-[1.6rem] md:text-[2rem] leading-[1.3] tracking-[-0.015em] text-balance">{statement}</Words>
+      {children && (
+        <Reveal delay={after} className="mt-6 space-y-4 text-[17px] leading-relaxed text-muted-foreground">
+          {children}
+        </Reveal>
+      )}
     </Narrow>
   )
 }
@@ -124,15 +230,26 @@ export function Beat({
   return (
     <Narrow className="scroll-mt-28">
       <div id={id}>
-        {kicker && <Kicker>{kicker}</Kicker>}
-        <h2 className="text-[1.5rem] md:text-[1.75rem] leading-[1.25] tracking-[-0.015em] text-balance">{title}</h2>
-        {children && <div className="mt-4 space-y-4 text-[17px] leading-relaxed text-muted-foreground">{children}</div>}
+        <Reveal>
+          {kicker && <Kicker>{kicker}</Kicker>}
+          <h2 className="text-[1.5rem] md:text-[1.75rem] leading-[1.25] tracking-[-0.015em] text-balance">{title}</h2>
+        </Reveal>
+        {children && (
+          <Reveal delay={120} className="mt-4 space-y-4 text-[17px] leading-relaxed text-muted-foreground">
+            {children}
+          </Reveal>
+        )}
       </div>
     </Narrow>
   )
 }
 
 /* ---------- Visuals ---------- */
+
+function Caption({ children }: { children?: string }) {
+  if (!children) return null
+  return <figcaption className="mt-3 text-[13px] text-muted-foreground text-center">{children}</figcaption>
+}
 
 export function Figure({
   src,
@@ -146,12 +263,12 @@ export function Figure({
   className?: string
 }) {
   return (
-    <figure className={className}>
+    <Reveal as="figure" className={className}>
       <div className="rounded-2xl overflow-hidden bg-[#EDE8E1]">
         <LightboxImage src={src} alt={alt} className="w-full h-auto" />
       </div>
-      {caption && <figcaption className="mt-3 text-[13px] text-muted-foreground text-center">{caption}</figcaption>}
-    </figure>
+      <Caption>{caption}</Caption>
+    </Reveal>
   )
 }
 
@@ -159,14 +276,29 @@ export function FigurePair({ images, caption }: { images: { src: string; alt: st
   return (
     <figure>
       <div className="grid md:grid-cols-2 gap-4 md:gap-6">
-        {images.map((img) => (
-          <div key={img.src} className="rounded-2xl overflow-hidden bg-[#EDE8E1]">
+        {images.map((img, i) => (
+          <Reveal key={img.src} delay={i * 120} className="rounded-2xl overflow-hidden bg-[#EDE8E1]">
             <LightboxImage src={img.src} alt={img.alt} className="w-full h-auto" />
-          </div>
+          </Reveal>
         ))}
       </div>
-      {caption && <figcaption className="mt-3 text-[13px] text-muted-foreground text-center">{caption}</figcaption>}
+      <Reveal delay={200}>
+        <Caption>{caption}</Caption>
+      </Reveal>
     </figure>
+  )
+}
+
+/** Looping silent product clip */
+export function Clip({ src, label, caption }: { src: string; label: string; caption?: string }) {
+  return (
+    <Reveal as="figure">
+      <div className="rounded-2xl overflow-hidden bg-[#EDE8E1]">
+        {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
+        <video src={src} autoPlay muted loop playsInline preload="metadata" aria-label={label} className="w-full h-auto block" />
+      </div>
+      <Caption>{caption}</Caption>
+    </Reveal>
   )
 }
 
@@ -178,10 +310,12 @@ export type StoryCard = { emoji: string; title: ReactNode; body: ReactNode }
 export function CardStack({ label, kicker, cards }: { label: string; kicker: string; cards: StoryCard[] }) {
   return (
     <Narrow>
-      <p className="text-[17px] mb-6">{label}</p>
+      <Reveal as="p" className="text-[17px] mb-6">
+        {label}
+      </Reveal>
       <div className="space-y-4">
         {cards.map((c, i) => (
-          <div key={i} className="flex gap-5 md:gap-7 rounded-2xl bg-[#F3EFEA] p-6 md:p-8">
+          <Reveal key={i} delay={80 + i * 100} className="flex gap-5 md:gap-7 rounded-2xl bg-[#F3EFEA] p-6 md:p-8">
             <span className="text-[2rem] leading-none pt-6 shrink-0" aria-hidden>
               {c.emoji}
             </span>
@@ -192,7 +326,7 @@ export function CardStack({ label, kicker, cards }: { label: string; kicker: str
               <h3 className="font-serif text-[1.6rem] md:text-[1.9rem] leading-[1.15] tracking-[-0.02em] mb-3">{c.title}</h3>
               <p className="text-[15px] leading-relaxed text-muted-foreground">{c.body}</p>
             </div>
-          </div>
+          </Reveal>
         ))}
       </div>
     </Narrow>
@@ -204,8 +338,12 @@ export function Stage({ title, children, visual }: { title: string; children: Re
   return (
     <div className="space-y-8 md:space-y-10">
       <Narrow>
-        <h3 className="text-[1.25rem] tracking-[-0.01em] mb-3">{title}</h3>
-        <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground">{children}</div>
+        <Reveal as="h3" className="text-[1.25rem] tracking-[-0.01em] mb-3">
+          {title}
+        </Reveal>
+        <Reveal delay={100} className="space-y-4 text-[17px] leading-relaxed text-muted-foreground">
+          {children}
+        </Reveal>
       </Narrow>
       <Wide>{visual}</Wide>
     </div>
@@ -227,9 +365,13 @@ export function Moment({
   return (
     <div className="space-y-8 md:space-y-10">
       <Narrow>
-        <p className={`font-mono text-[13px] mb-4 ${ACCENT}`}>{String(n).padStart(2, "0")}</p>
-        <h3 className="text-[1.25rem] tracking-[-0.01em] mb-3">{title}</h3>
-        <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground">{children}</div>
+        <Reveal>
+          <p className={`font-mono text-[13px] mb-4 ${ACCENT}`}>{String(n).padStart(2, "0")}</p>
+          <h3 className="text-[1.25rem] tracking-[-0.01em] mb-3">{title}</h3>
+        </Reveal>
+        <Reveal delay={100} className="space-y-4 text-[17px] leading-relaxed text-muted-foreground">
+          {children}
+        </Reveal>
       </Narrow>
       {visual && <Wide>{visual}</Wide>}
     </div>
@@ -241,8 +383,8 @@ export function Results({ items }: { items: { emoji: string; value: string; labe
   return (
     <Narrow>
       <div className="space-y-4">
-        {items.map((r) => (
-          <div key={r.label} className="flex gap-5 md:gap-7 rounded-2xl bg-[#F3EFEA] p-6 md:p-8">
+        {items.map((r, i) => (
+          <Reveal key={r.label} delay={i * 100} className="flex gap-5 md:gap-7 rounded-2xl bg-[#F3EFEA] p-6 md:p-8">
             <span className="text-[2rem] leading-none shrink-0" aria-hidden>
               {r.emoji}
             </span>
@@ -252,7 +394,7 @@ export function Results({ items }: { items: { emoji: string; value: string; labe
               </p>
               <p className="text-[15px] leading-relaxed text-muted-foreground mt-2">{r.body}</p>
             </div>
-          </div>
+          </Reveal>
         ))}
       </div>
     </Narrow>
@@ -263,23 +405,18 @@ export function Results({ items }: { items: { emoji: string; value: string; labe
 export function Closing({ children, attribution }: { children: ReactNode; attribution?: string }) {
   return (
     <Narrow>
-      <blockquote className="font-serif text-[1.75rem] md:text-[2.25rem] leading-[1.25] tracking-[-0.02em] text-balance">
+      <Words
+        as="blockquote"
+        step={40}
+        className="font-serif text-[1.75rem] md:text-[2.25rem] leading-[1.25] tracking-[-0.02em] text-balance"
+      >
         {children}
-      </blockquote>
-      {attribution && <p className="mt-6 font-mono text-[11px] uppercase tracking-wider text-muted-foreground">{attribution}</p>}
+      </Words>
+      {attribution && (
+        <Reveal delay={500} as="p" className="mt-6 font-mono text-[11px] uppercase tracking-wider text-muted-foreground">
+          {attribution}
+        </Reveal>
+      )}
     </Narrow>
-  )
-}
-
-/** Looping silent product clip */
-export function Clip({ src, label, caption }: { src: string; label: string; caption?: string }) {
-  return (
-    <figure>
-      <div className="rounded-2xl overflow-hidden bg-[#EDE8E1]">
-        {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
-        <video src={src} autoPlay muted loop playsInline preload="metadata" aria-label={label} className="w-full h-auto block" />
-      </div>
-      {caption && <figcaption className="mt-3 text-[13px] text-muted-foreground text-center">{caption}</figcaption>}
-    </figure>
   )
 }
