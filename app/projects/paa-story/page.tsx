@@ -107,19 +107,19 @@ export default function PAAStory() {
             cards={[
               {
                 icon: Rows3,
-                image: "/images/paa-pixel-triage.png",
+                image: "/images/paa-tile-triage.jpg",
                 title: "Prioritization paralysis",
                 body: "Clinicians re-triaged their whole list at every login. Nothing separated a regulatory risk from routine work.",
               },
               {
                 icon: MessagesSquare,
-                image: "/images/paa-pixel-silos.png",
+                image: "/images/paa-tile-silos.jpg",
                 title: "Information silos",
                 body: "Payers and physicians asked for notes and authorizations by message, in a tab nobody saw from the task view.",
               },
               {
                 icon: AlarmClock,
-                image: "/images/paa-pixel-overdue.png",
+                image: "/images/paa-tile-overdue.jpg",
                 title: "No escalation trigger",
                 body: "Without any sign of urgency, overdue tasks simply stayed overdue.",
               },
@@ -280,21 +280,21 @@ export default function PAAStory() {
             items={[
               {
                 icon: Timer,
-                image: "/images/paa-pixel-time.png",
+                image: "/images/paa-tile-time.jpg",
                 value: "40%",
                 label: "time saved",
                 body: "Measured after launch across care coordinator workflows.",
               },
               {
                 icon: Handshake,
-                image: "/images/paa-pixel-deals.png",
+                image: "/images/paa-tile-deals.jpg",
                 value: "Tier-1",
                 label: "deals unlocked",
                 body: "Multi-million deals with Kaiser, Humana and United Healthcare.",
               },
               {
                 icon: Lock,
-                image: "/images/paa-pixel-lock.png",
+                image: "/images/paa-tile-lock.jpg",
                 value: "Locked",
                 label: "data before drafts",
                 body: "The lock-before-generate sequence kept AI documentation true to the clinical record.",

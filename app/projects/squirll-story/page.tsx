@@ -96,19 +96,19 @@ export default function SquirllStory() {
             cards={[
               {
                 icon: Landmark,
-                image: "/images/squirll-pixel-bank.png",
+                image: "/images/squirll-tile-bank.jpg",
                 title: "Clinical white feels like a bank",
                 body: "Many apps defaulted to bright, sterile screens that read like a banking portal.",
               },
               {
                 icon: Smile,
-                image: "/images/squirll-pixel-playful.png",
+                image: "/images/squirll-tile-playful.jpg",
                 title: "Playful undersells the intelligence",
                 body: "Others leaned on cheerful illustration that made a capable product look like a toy.",
               },
               {
                 icon: Sparkles,
-                image: "/images/squirll-pixel-calm.png",
+                image: "/images/squirll-tile-calm.jpg",
                 title: "Premium and calm was empty",
                 body: "Almost nobody occupied the quiet, premium space in between. That gap shaped everything after.",
               },
@@ -281,21 +281,21 @@ export default function SquirllStory() {
             items={[
               {
                 icon: Rocket,
-                image: "/images/squirll-pixel-beta.png",
+                image: "/images/squirll-tile-beta.jpg",
                 value: "Beta",
                 label: "launched April 2025",
                 body: "Squirll opened to a closed beta with positive early feedback.",
               },
               {
                 icon: Contrast,
-                image: "/images/squirll-pixel-contrast.png",
+                image: "/images/squirll-tile-contrast.jpg",
                 value: "AA",
                 label: "contrast on every surface",
                 body: "Every text and data surface passed WCAG AA, with 44px minimum touch targets.",
               },
               {
                 icon: CalendarRange,
-                image: "/images/squirll-pixel-months.png",
+                image: "/images/squirll-tile-months.jpg",
                 value: "7 months",
                 label: "from blank page to beta",
                 body: "Brand, product and design system for web and iOS, built by one designer.",

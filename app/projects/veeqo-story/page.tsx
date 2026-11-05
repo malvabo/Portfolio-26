@@ -128,19 +128,19 @@ export default function VeeqoStory() {
             cards={[
               {
                 icon: Building2,
-                image: "/images/veeqo-pixel-segments.png",
+                image: "/images/veeqo-tile-segments.jpg",
                 title: "Enterprise documents are infrastructure",
                 body: "Years of custom layouts carried business logic. Losing a template meant breaking a fulfilment flow.",
               },
               {
                 icon: Swords,
-                image: "/images/veeqo-pixel-market.png",
+                image: "/images/veeqo-tile-market.jpg",
                 title: "Competitors sit at two extremes",
                 body: "ShipStation, Shopify and others offered rigid templates or full code editors, with nothing in between.",
               },
               {
                 icon: MessageCircleQuestion,
-                image: "/images/veeqo-pixel-voices.png",
+                image: "/images/veeqo-tile-voices.jpg",
                 title: "Each segment struggled differently",
                 body: "Enterprise tickets were about customisation limits and reliability. Small sellers got stuck on setup and failed generation.",
               },
@@ -357,28 +357,28 @@ export default function VeeqoStory() {
             items={[
               {
                 icon: Users,
-                image: "/images/veeqo-pixel-sellers.png",
+                image: "/images/veeqo-tile-sellers.jpg",
                 value: "50k+",
                 label: "sellers migrated",
                 body: "The core document infrastructure moved over, protecting $15B+ in annual GMV from interruptions.",
               },
               {
                 icon: ShieldCheck,
-                image: "/images/veeqo-pixel-churn.png",
+                image: "/images/veeqo-tile-churn.jpg",
                 value: "0%",
                 label: "enterprise churn",
                 body: "Hands-on porting kept every top-tier account's templates working through the move.",
               },
               {
                 icon: Gauge,
-                image: "/images/veeqo-pixel-speed.png",
+                image: "/images/veeqo-tile-speed.jpg",
                 value: "Days",
                 label: "to ship new documents",
                 body: "Custom fields and new document types now ship on a timeline the team owns, instead of months.",
               },
               {
                 icon: Layers,
-                image: "/images/veeqo-pixel-tickets.png",
+                image: "/images/veeqo-tile-tickets.jpg",
                 value: "30%",
                 label: "fewer how-to tickets",
                 body: "Compared with support volume on the legacy editor.",

@@ -112,19 +112,19 @@ export default function ConduitStory() {
             cards={[
               {
                 icon: Files,
-                image: "/conduit/pixel-documents.png",
+                image: "/conduit/tile-documents.jpg",
                 title: "Hundreds of documents at once",
                 body: "Large importers receive certificates of origin and supplier documents for every shipment, all arriving at the same time.",
               },
               {
                 icon: Keyboard,
-                image: "/conduit/pixel-hands.png",
+                image: "/conduit/tile-hands.jpg",
                 title: "Everything is retyped",
                 body: "Compliance teams find the product name, origin, weight and certificate number, then copy them into internal forms by hand.",
               },
               {
                 icon: OctagonAlert,
-                image: "/conduit/pixel-sacks.png",
+                image: "/conduit/tile-sacks.jpg",
                 title: "Mistakes show up at the border",
                 body: "Incomplete or incorrect data holds the shipment, and teams often find out only once it is already stuck.",
               },
@@ -329,21 +329,21 @@ export default function ConduitStory() {
             items={[
               {
                 icon: Timer,
-                image: "/conduit/pixel-time.png",
+                image: "/conduit/tile-time.jpg",
                 value: "1–3 min",
                 label: "to verify a shipment",
                 body: "Down from 20 minutes, saving up to two hours per shipment once pipelines replaced manual checks.",
               },
               {
                 icon: Coins,
-                image: "/conduit/pixel-beans.png",
+                image: "/conduit/tile-beans.jpg",
                 value: "95%",
                 label: "lower cost per document",
                 body: "Measured against the cost of processing each document by hand.",
               },
               {
                 icon: Users,
-                image: "/conduit/pixel-team.png",
+                image: "/conduit/tile-team.jpg",
                 value: "5 teams",
                 label: "onboarded",
                 body: "The MVP was designed and built in four weeks, with a design system ready to grow with it.",
