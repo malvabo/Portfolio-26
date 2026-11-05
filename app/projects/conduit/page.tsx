@@ -178,7 +178,7 @@ export default function ConduitCaseStudy() {
               </div>
 
               <div className="rounded-xl overflow-hidden border border-[#DDE3EA] max-w-[750px] mt-8">
-                <LightboxImage src="/conduit/ideation.png" alt="Six inbox directions explored side by side" width={1600} height={877} className="block w-full h-auto" />
+                <LightboxImage src="/conduit/ideation.webp" alt="Six inbox directions explored side by side: document queue, shipment master-detail, shipment table, shipment cards, stages, and by shipment" width={2000} height={1059} className="block w-full h-auto" />
               </div>
               <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-8">Alternatives explored during design ideation phase</p>
 
