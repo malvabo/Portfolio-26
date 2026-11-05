@@ -372,8 +372,8 @@ export function CardStack({ label, cards }: { label: string; cards: StoryCard[] 
                       loading="lazy"
                       className="absolute inset-0 w-full h-full object-cover [image-rendering:pixelated] transition-transform duration-700 ease-out group-hover:scale-110"
                     />
-                    <span className="relative flex items-center justify-center w-14 h-14 rounded-xl bg-white text-foreground ring-4 ring-white/50 shadow-[0_1px_2px_rgba(0,0,0,0.08)]">
-                      <Icon className="w-[22px] h-[22px]" strokeWidth={1.75} aria-hidden />
+                    <span className="absolute left-2 bottom-2 flex items-center justify-center w-9 h-9 rounded-lg bg-white text-foreground ring-2 ring-white/50 shadow-[0_1px_2px_rgba(0,0,0,0.12)]">
+                      <Icon className="w-[18px] h-[18px]" strokeWidth={1.75} aria-hidden />
                     </span>
                   </div>
                 </div>
