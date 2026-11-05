@@ -343,12 +343,12 @@ export default function ConduitStory() {
 
         <div className="mt-24 md:mt-32">
           <UpNext
-            href="/projects/bodyspec"
-            image="/images/bodyspec-mobile-location.png"
-            imageAlt="A hand holding a phone with the BodySpec booking map"
-            title="BodySpec"
-            summary="Turning a one-off body scan into a health habit."
-            meta={["Health tech", "Lead product designer"]}
+            href="/projects/paa"
+            image="/images/paa_11.png"
+            imageAlt="PAA clinical dashboard"
+            title="PAA"
+            summary="Designing clinical intelligence at the point of care."
+            meta={["Healthcare", "Lead product designer"]}
           />
         </div>
 
