@@ -343,12 +343,12 @@ export default function ConduitStory() {
 
         <div className="mt-24 md:mt-32">
           <UpNext
-            href="/projects/paa"
-            image="/images/paa_11.png"
-            imageAlt="PAA clinical dashboard"
-            title="PAA"
-            summary="Designing clinical intelligence at the point of care."
-            meta={["Healthcare", "Lead product designer"]}
+            href="/projects/veeqo"
+            image="/images/vq_cover.png"
+            imageAlt="Editing a packing slip in the Veeqo document system"
+            title="Veeqo"
+            summary="Rebuilding the document system behind 50,000+ sellers."
+            meta={["Shipping", "Product designer"]}
           />
         </div>
 
