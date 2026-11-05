@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export function Hero() {
   return (
-    <section className="pt-32 pb-5 lg:pt-40 lg:pb-5 container mx-auto px-8 lg:px-12 max-w-7xl relative">
+    <section className="pt-24 pb-5 lg:pt-28 lg:pb-5 container mx-auto px-8 lg:px-12 max-w-7xl relative">
       <style>{`
         @keyframes fadeInUp {
           from { opacity: 0; transform: translateY(10px); }
@@ -45,11 +45,12 @@ export function Hero() {
           transform: translate(-50%, -50%) scale(1);
         }
       `}</style>
-      <div className="flex flex-col">
+      <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_360px] gap-10 lg:gap-16 items-center">
+        <div className="flex flex-col">
           {/* Visually removed, kept for screen readers and search as the page heading. */}
           <h1 className="sr-only">Mary Borysova, Product Design Leader</h1>
-          <div className="w-full max-w-[700px] relative z-40 mt-[32px]">
-            <p className="hero-reveal hero-reveal-2 font-sans text-[30px] font-normal leading-[44px] tracking-[-0.02em] text-foreground relative z-10">
+          <div className="w-full max-w-[700px] relative z-40">
+            <p className="hero-reveal hero-reveal-2 font-sans text-[23px] leading-[34px] sm:text-[30px] sm:leading-[44px] font-normal tracking-[-0.02em] text-foreground relative z-10">
               Designing AI products for complex{" "}
               <span className="workflows-wrap relative inline-block cursor-pointer z-50 hover:z-[60]">
                 <span
@@ -121,7 +122,32 @@ vibe-coding <svg className="inline-block w-[0.55em] h-[0.55em] mb-[0.15em]" view
             </p>
           </div>
 
+          {/* Proof in plain view, no hover needed. */}
+          <ul className="hero-reveal hero-reveal-3 mt-8 flex flex-wrap items-center gap-x-5 sm:gap-x-3 gap-y-2 font-mono text-[12px] uppercase tracking-wider text-muted-foreground">
+            {["Amazon", "3× Indigo Awards", "50,000+ sellers served", "Conference speaker"].map((item, i) => (
+              <li key={item} className="flex items-center gap-3">
+                {i > 0 && <span aria-hidden className="hidden sm:inline text-muted-foreground/40">&middot;</span>}
+                {item}
+              </li>
+            ))}
+          </ul>
         </div>
+
+        <figure className="hero-reveal hero-reveal-4 hidden lg:block relative aspect-[4/5] rounded-xl overflow-hidden bg-[#f1f1f1] border border-border/60 shadow-sm">
+          <Image
+            src="/images/speaking-2.jpg"
+            alt="Mary on stage at How to Web, presenting as Product Designer at Amazon"
+            fill
+            priority
+            className="object-cover object-[center_35%]"
+            sizes="360px"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+          <figcaption className="absolute bottom-0 left-0 right-0 p-4 uppercase text-[11px] text-white/85 font-mono tracking-wider">
+            Speaking &middot; EU
+          </figcaption>
+        </figure>
+      </div>
     </section>
   )
 }
