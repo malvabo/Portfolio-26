@@ -480,7 +480,7 @@ export function UpNext({
         Up next
       </Reveal>
       <Reveal delay={100}>
-        <a href={href} className="group block bg-white border border-black/15 overflow-hidden">
+        <a href={href} data-cursor="View project" className="group block bg-white border border-black/15 overflow-hidden">
           <div className="p-1">
             <div className="relative aspect-[16/9] overflow-hidden bg-[#EDE8E1]">
               {/* eslint-disable-next-line @next/next/no-img-element */}

@@ -4,6 +4,7 @@ import { Header } from "@/components/header"
 import { ScrollToTop } from "@/components/scroll-to-top"
 import { BackLinkFooter } from "@/components/back-link"
 import { StoryContents } from "@/components/story-contents"
+import { StoryCursor } from "@/components/story-cursor"
 import { CalendarCheck, CircleHelp, Clock, Landmark, ShoppingCart, TrendingUp } from "lucide-react"
 import {
   StoryPage,
@@ -28,6 +29,7 @@ export default function BodySpecStory() {
   return (
     <div className="min-h-screen bg-background">
       <ScrollToTop />
+      <StoryCursor />
       <Header />
 
       <StoryContents

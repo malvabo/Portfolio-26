@@ -4,6 +4,7 @@ import { Header } from "@/components/header"
 import { ScrollToTop } from "@/components/scroll-to-top"
 import { BackLinkFooter } from "@/components/back-link"
 import { StoryContents } from "@/components/story-contents"
+import { StoryCursor } from "@/components/story-cursor"
 import { Coins, Files, Keyboard, OctagonAlert, Timer, Users } from "lucide-react"
 import {
   StoryPage,
@@ -30,6 +31,7 @@ export default function ConduitStory() {
   return (
     <div className="min-h-screen bg-background">
       <ScrollToTop />
+      <StoryCursor />
       <Header />
 
       <StoryContents

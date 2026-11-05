@@ -172,3 +172,9 @@
     transition: none;
   }
 }
+
+/* Story case study: custom cursor replaces the native one on mouse devices */
+html.story-cursor-on,
+html.story-cursor-on * {
+  cursor: none !important;
+}
