@@ -90,6 +90,7 @@ export default function ConduitStory() {
                 { src: "/conduit/supply-warehouse.webp", alt: "Warehouse workers cutting open sacks of cocoa beans" },
               ]}
               caption="The shipments the paperwork follows, from the farm to the warehouse"
+              aspect="3/2"
             />
           </Wide>
         </div>

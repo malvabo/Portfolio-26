@@ -52,11 +52,13 @@ export function Reveal({
   delay = 0,
   as: Tag = "div",
   className = "",
+  style,
 }: {
   children: ReactNode
   delay?: number
   as?: ElementType
   className?: string
+  style?: React.CSSProperties
 }) {
   const { ref, shown } = useInView<HTMLElement>()
   return (
@@ -64,7 +66,7 @@ export function Reveal({
       ref={ref}
       data-shown={shown || undefined}
       className={`story-reveal ${className}`}
-      style={{ "--d": `${delay}ms` } as React.CSSProperties}
+      style={{ ...style, "--d": `${delay}ms` } as React.CSSProperties}
     >
       {children}
     </Tag>
@@ -273,13 +275,31 @@ export function Figure({
   )
 }
 
-export function FigurePair({ images, caption }: { images: { src: string; alt: string }[]; caption?: string }) {
+export function FigurePair({
+  images,
+  caption,
+  aspect,
+}: {
+  images: { src: string; alt: string }[]
+  caption?: string
+  /** Fixed tile shape, e.g. "3/2". Leave out to keep the images' own height. */
+  aspect?: string
+}) {
   return (
     <figure>
       <div className="grid md:grid-cols-2 gap-4 md:gap-6">
         {images.map((img, i) => (
-          <Reveal key={img.src} delay={i * 120} className="rounded-2xl overflow-hidden bg-[#EDE8E1]">
-            <LightboxImage src={img.src} alt={img.alt} className="block w-full h-full object-cover" />
+          <Reveal
+            key={img.src}
+            delay={i * 120}
+            className="rounded-2xl overflow-hidden bg-[#EDE8E1]"
+            style={aspect ? { aspectRatio: aspect } : undefined}
+          >
+            <LightboxImage
+              src={img.src}
+              alt={img.alt}
+              className={`block w-full h-full object-cover ${aspect ? "object-[50%_15%]" : ""}`}
+            />
           </Reveal>
         ))}
       </div>
