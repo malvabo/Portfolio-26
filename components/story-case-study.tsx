@@ -11,6 +11,7 @@
  */
 
 import { useEffect, useRef, useState, type ReactNode, type ElementType } from "react"
+import type { LucideIcon } from "lucide-react"
 import { LightboxImage } from "@/components/lightbox-image"
 
 const ACCENT = "text-[#B4532A]"
@@ -304,32 +305,65 @@ export function Clip({ src, label, caption }: { src: string; label: string; capt
 
 /* ---------- Cards ---------- */
 
-export type StoryCard = { emoji: string; title: ReactNode; body: ReactNode }
+export type StoryCard = { icon: LucideIcon; image: string; title: ReactNode; body: ReactNode }
 
-/** Stacked cards for findings or principles */
-export function CardStack({ label, kicker, cards }: { label: string; kicker: string; cards: StoryCard[] }) {
+/** Small boxed mono label, e.g. "WHAT I LEARNED" */
+export function BoxLabel({ children }: { children: ReactNode }) {
   return (
-    <Narrow>
-      <Reveal as="p" className="text-[17px] mb-6">
-        {label}
+    <span className="inline-block border border-black/20 bg-white px-2 py-1 font-mono text-[11px] uppercase tracking-wider leading-none">
+      {children}
+    </span>
+  )
+}
+
+/**
+ * Findings as a connected chain: thin-bordered rows with a pixel-art tile
+ * and an icon chip on the left, joined by short vertical lines.
+ */
+export function CardStack({ label, cards }: { label: string; cards: StoryCard[] }) {
+  return (
+    <div className="max-w-[720px] mx-auto">
+      <Reveal className="mb-8">
+        <BoxLabel>{label}</BoxLabel>
       </Reveal>
-      <div className="space-y-4">
-        {cards.map((c, i) => (
-          <Reveal key={i} delay={80 + i * 100} className="flex gap-5 md:gap-7 rounded-2xl bg-[#F3EFEA] p-6 md:p-8">
-            <span className="text-[2rem] leading-none pt-6 shrink-0" aria-hidden>
-              {c.emoji}
-            </span>
-            <div>
-              <p className={`font-mono text-[11px] uppercase tracking-wider mb-2 ${ACCENT}`}>
-                {kicker} {i + 1}
-              </p>
-              <h3 className="font-serif text-[1.6rem] md:text-[1.9rem] leading-[1.15] tracking-[-0.02em] mb-3">{c.title}</h3>
-              <p className="text-[15px] leading-relaxed text-muted-foreground">{c.body}</p>
+      <div>
+        {cards.map((c, i) => {
+          const Icon = c.icon
+          return (
+            <div key={i}>
+              {i > 0 && (
+                <Reveal delay={i * 140} className="flex justify-center">
+                  <span className="block w-px h-10 md:h-14 bg-black/20" aria-hidden />
+                </Reveal>
+              )}
+              <Reveal
+                delay={80 + i * 140}
+                className="group bg-white border border-black/15 flex flex-col sm:flex-row overflow-hidden"
+              >
+                <div className="p-1 sm:self-stretch">
+                  <div className="relative w-full h-40 sm:w-32 sm:h-full sm:min-h-[128px] overflow-hidden flex items-center justify-center">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={c.image}
+                      alt=""
+                      loading="lazy"
+                      className="absolute inset-0 w-full h-full object-cover [image-rendering:pixelated] transition-transform duration-700 ease-out group-hover:scale-110"
+                    />
+                    <span className="relative flex items-center justify-center w-14 h-14 rounded-xl bg-white text-foreground ring-4 ring-white/50 shadow-[0_1px_2px_rgba(0,0,0,0.08)]">
+                      <Icon className="w-[22px] h-[22px]" strokeWidth={1.75} aria-hidden />
+                    </span>
+                  </div>
+                </div>
+                <div className="px-6 py-6 sm:px-8 sm:py-7 flex flex-col justify-center">
+                  <h3 className="text-[1.25rem] font-medium tracking-[-0.01em] mb-2">{c.title}</h3>
+                  <p className="text-[16px] leading-relaxed text-muted-foreground">{c.body}</p>
+                </div>
+              </Reveal>
             </div>
-          </Reveal>
-        ))}
+          )
+        })}
       </div>
-    </Narrow>
+    </div>
   )
 }
 

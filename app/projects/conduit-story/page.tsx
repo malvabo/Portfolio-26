@@ -3,6 +3,7 @@
 import { Header } from "@/components/header"
 import { ScrollToTop } from "@/components/scroll-to-top"
 import { BackLinkFooter } from "@/components/back-link"
+import { Files, Keyboard, OctagonAlert } from "lucide-react"
 import {
   StoryPage,
   StoryHero,
@@ -88,20 +89,22 @@ export default function ConduitStory() {
         <div className="mt-14">
           <CardStack
             label="What I learned"
-            kicker="Insight"
             cards={[
               {
-                emoji: "🗂️",
+                icon: Files,
+                image: "/conduit/pixel-documents.png",
                 title: "Hundreds of documents at once",
                 body: "Large importers receive certificates of origin and supplier documents for every shipment, all arriving at the same time.",
               },
               {
-                emoji: "✍️",
+                icon: Keyboard,
+                image: "/conduit/pixel-hands.png",
                 title: "Everything is retyped",
                 body: "Compliance teams find the product name, origin, weight and certificate number, then copy them into internal forms by hand.",
               },
               {
-                emoji: "🛃",
+                icon: OctagonAlert,
+                image: "/conduit/pixel-sacks.png",
                 title: "Mistakes show up at the border",
                 body: "Incomplete or incorrect data holds the shipment, and teams often find out only once it is already stuck.",
               },

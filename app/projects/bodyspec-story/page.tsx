@@ -3,6 +3,7 @@
 import { Header } from "@/components/header"
 import { ScrollToTop } from "@/components/scroll-to-top"
 import { BackLinkFooter } from "@/components/back-link"
+import { CircleHelp, Clock, TrendingUp } from "lucide-react"
 import {
   StoryPage,
   StoryHero,
@@ -85,20 +86,22 @@ export default function BodySpecStory() {
         <div className="mt-14">
           <CardStack
             label="What we heard"
-            kicker="Insight"
             cards={[
               {
-                emoji: "🌫️",
+                icon: CircleHelp,
+                image: "/images/bodyspec-pixel-data.png",
                 title: "The numbers meant nothing",
                 body: "People got highly accurate data and had no mental model for it. Lean mass, visceral fat and bone density all read like jargon.",
               },
               {
-                emoji: "⏳",
+                icon: Clock,
+                image: "/images/bodyspec-pixel-booking.png",
                 title: "Booking took five minutes",
                 body: "Finding a location and a free slot was the biggest bottleneck. Many people gave up before checkout.",
               },
               {
-                emoji: "📈",
+                icon: TrendingUp,
+                image: "/images/bodyspec-pixel-trend.png",
                 title: "One scan tells no story",
                 body: "The value of a scan shows up in the change between two of them. With only one, there was nothing to come back for.",
               },
