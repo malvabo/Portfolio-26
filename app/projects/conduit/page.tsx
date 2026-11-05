@@ -227,7 +227,7 @@ export default function ConduitCaseStudy() {
               <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
                 <p>
                   For extraction, the importer lists the fields to pull from each document type, or starts from
-                  Conduit&rsquo;s auto-drafted suggestions so the first setup takes minutes.
+                  Conduit&rsquo;s auto-drafted suggestions to make the first setup faster.
                 </p>
               </div>
 

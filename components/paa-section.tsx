@@ -40,11 +40,11 @@ export function PAASection() {
           <div className="space-y-4">
             <div>
               <div className="text-xl font-medium text-foreground mb-0.5">40%</div>
-              <div className="text-sm text-muted-foreground opacity-80">Time saved by simplifying navigation in clinical workflows</div>
+              <div className="text-sm text-muted-foreground opacity-80">time saved by simplifying navigation in clinical workflows</div>
             </div>
             <div>
               <div className="text-xl font-medium text-foreground mb-0.5">0→1</div>
-              <div className="text-sm text-muted-foreground opacity-80">Shifted the team from reactive fire-fighting to proactive care management</div>
+              <div className="text-sm text-muted-foreground opacity-80">shifted the team from reactive fire-fighting to proactive care management</div>
             </div>
           </div>
         </div>

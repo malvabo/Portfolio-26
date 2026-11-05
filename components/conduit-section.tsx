@@ -30,7 +30,7 @@ export function ConduitSection() {
           <div>
             <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">About</h3>
             <p className="text-base leading-relaxed text-foreground">
-              I led product and design from zero to launch in four weeks: an AI pipeline that cut per-shipment verification from 20 minutes to under 3, removed manual data entry for compliance teams and stopped the filing errors that hold shipments at the border.
+              I led product and design for an AI pipeline that cut customs data checks from 20 minutes to under 3 per shipment, removing manual entry for compliance teams and the filing errors that hold shipments at the border.
             </p>
             <a
               href="/projects/conduit"
@@ -61,7 +61,7 @@ export function ConduitSection() {
             <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">Role</h3>
             <div className="text-base leading-relaxed text-foreground space-y-0.5">
               <p>Product and Design Lead</p>
-              <p>Aug 2026 - Oct 2026</p>
+              <p>Aug &ndash; Oct 2026</p>
               <div className="flex flex-wrap gap-1.5 mt-2">
                 {["Web"].map((tag) => (
                   <span

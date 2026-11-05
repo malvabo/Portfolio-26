@@ -34,7 +34,7 @@ export function Header() {
             href="/"
             className="flex items-center gap-2 text-base font-sans font-medium tracking-tight text-foreground hover:text-primary transition-colors"
           >
-            <Image src="/images/header-avatar.jpg" alt="" width={28} height={28} className="rounded-md object-cover" />
+            <Image src="/images/header-avatar.jpg" alt="" width={28} height={28} priority unoptimized className="rounded-md object-cover" />
             Mary Borysova
           </Link>
 

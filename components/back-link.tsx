@@ -62,6 +62,13 @@ function useCaseStudyNav() {
       frame = requestAnimationFrame(update)
     }
 
+    // ScrollToTop resets every case study to the top on mount, which would
+    // strand a #section URL (from a shared link or a reload) at the top.
+    const fromHash = entries.find((e) => e.link.hash === window.location.hash)
+    if (fromHash) {
+      window.scrollTo({ top: fromHash.target.getBoundingClientRect().top + window.scrollY - SCROLL_OFFSET })
+    }
+
     for (const { link } of entries) link.addEventListener("click", onClick)
     window.addEventListener("scroll", onScroll, { passive: true })
     window.addEventListener("resize", onScroll)
