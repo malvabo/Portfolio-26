@@ -341,14 +341,14 @@ export default function ConduitStory() {
           People stay in charge of decisions and approvals, while Conduit handles the steps in between.
         </Closing>
 
-        <div className="mt-28 md:mt-40">
+        <div className="mt-24 md:mt-32">
           <UpNext
-            href="/projects/amazon"
-            image="/images/aivq1.png"
-            imageAlt="Amazon shipping dashboard with an AI actions panel"
-            title="Amazon"
-            summary="AI automation for complex shipping workflows, reducing manual work for thousands of operators."
-            meta={["Big tech", "Product designer"]}
+            href="/projects/bodyspec"
+            image="/images/bodyspec-mobile-location.png"
+            imageAlt="A hand holding a phone with the BodySpec booking map"
+            title="BodySpec"
+            summary="Turning a one-off body scan into a health habit."
+            meta={["Health tech", "Lead product designer"]}
           />
         </div>
 

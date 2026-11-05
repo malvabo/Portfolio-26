@@ -264,13 +264,13 @@ export default function BodySpecStory() {
           The most useful research came from the people already in the room with our customers.
         </Closing>
 
-        <div className="mt-28 md:mt-40">
+        <div className="mt-24 md:mt-32">
           <UpNext
             href="/projects/conduit"
             image="/conduit/cover.png"
             imageAlt="A Certificate of Origin open in Conduit, with the fields to extract listed beside it"
             title="Conduit"
-            summary="Automating the customs paperwork for food importers, from supplier certificates to filled forms."
+            summary="Automating the customs paperwork for food importers."
             meta={["Four weeks", "Product and design lead"]}
           />
         </div>
