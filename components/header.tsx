@@ -29,12 +29,27 @@ export function Header() {
       }`}
     >
       <div className="container mx-auto px-8 lg:px-12 max-w-7xl">
-        <div className="flex items-center justify-between h-16">
+        <div
+          className={`flex items-center justify-between transition-[height] duration-300 ${
+            mounted && isScrolled ? "h-16" : "h-24"
+          }`}
+        >
           <Link
             href="/"
-            className="flex items-center gap-2 text-base font-sans font-medium tracking-tight text-foreground hover:text-primary transition-colors"
+            className="flex items-center gap-3 text-base font-sans font-medium tracking-tight text-foreground hover:text-primary transition-colors"
           >
-            <Image src="/images/header-avatar.jpg" alt="" width={28} height={28} priority unoptimized className="rounded-md object-cover" />
+            {/* Full size at the top of the page, smaller once the bar sticks. */}
+            <Image
+              src="/images/header-avatar.jpg"
+              alt=""
+              width={72}
+              height={72}
+              priority
+              unoptimized
+              className={`rounded-xl object-cover transition-[width,height] duration-300 ${
+                mounted && isScrolled ? "w-10 h-10" : "w-[72px] h-[72px]"
+              }`}
+            />
             Mary Borysova
           </Link>
 

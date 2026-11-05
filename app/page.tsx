@@ -31,9 +31,10 @@ export default function Home() {
         <AnimatedSection>
           <WorkSection />
         </AnimatedSection>
-        <AnimatedSection>
+        {/* Hidden for now; kept to bring back later. */}
+        {/* <AnimatedSection>
           <AmazonSection />
-        </AnimatedSection>
+        </AnimatedSection> */}
         <AnimatedSection>
           <ConduitSection />
         </AnimatedSection>
