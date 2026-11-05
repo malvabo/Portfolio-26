@@ -143,6 +143,7 @@ export default function ConduitStory() {
           <Wide>
             <Figure
               src="/conduit/workshop.webp"
+                maxWidth={1000}
               alt="A service blueprint above a workshop board of sticky notes"
               caption="Journey mapping and artifacts from the stakeholder workshops"
             />
@@ -164,6 +165,7 @@ export default function ConduitStory() {
             visual={
               <Figure
                 src="/conduit/dash.png"
+                maxWidth={788}
                 alt="Inbox grouped by shipment, with documents that need review flagged"
                 caption="Inbox grouped by shipment, with the documents that need attention flagged"
               />
@@ -238,31 +240,55 @@ export default function ConduitStory() {
         <div className="mt-16 space-y-24 md:space-y-32">
           <Moment
             n={1}
-            title="Showing the document being read"
+            title="Dropping the rules engine"
             visual={
-              <Clip
-                src="/conduit/ani.mp4"
-                label="The reading-the-document animation"
-                caption="The reading animation, from the design system's Motion section"
+              <Figure
+                src="/conduit/ideation.png"
+                maxWidth={800}
+                alt="Six inbox directions explored side by side, each annotated with why it failed"
+                caption="Inbox directions, each annotated with why it failed"
               />
             }
           >
             <p>
-              Processing takes a few seconds. I replaced the generic spinner with motion that shows the document being
-              read, so people can see what the system is doing.
+              We started from a clear hypothesis: Conduit would read a document and decide whether it passed. I
+              designed that version and took it into testing with compliance teams.
+            </p>
+            <p>
+              Every team checked a different set of fields on the same certificate, because each files against its own
+              policy. I recommended letting importers configure compliance themselves. The founders agreed, we stopped
+              building the rules engine, and the rest of the four weeks went into the pipeline builder.
             </p>
           </Moment>
 
           <Moment
             n={2}
+            title="Showing how sure Conduit is"
+            visual={
+              <Figure
+                src="/conduit/states.png"
+                maxWidth={800}
+                alt="Extracted fields as confident, needs review, not found and corrected"
+                caption="The states a field can arrive in"
+              />
+            }
+          >
+            <p>
+              Reading a scanned certificate is never certain, and an officer who accepts a wrong value signs their name
+              to it. Each extracted field carries a confidence level, and anything below the threshold is flagged for
+              review.
+            </p>
+          </Moment>
+
+          <Moment
+            n={3}
             title="Building the design system alongside the product"
             visual={
-              <FigurePair
-                images={[
-                  { src: "/conduit/ds-states.png", alt: "Button states documented with treatment rules" },
-                  { src: "/conduit/ds-size.png", alt: "Empty-state illustration sizing documented with classes" },
-                ]}
-                caption="States and rules written down in the system, ready for the next screen"
+              <Figure
+                src="/conduit/ds.webp"
+                maxWidth={1000}
+                alt="The design system: foundations, motion spec, colour tokens and input states"
+                caption="Foundations, components, states and motion"
               />
             }
           >
@@ -273,12 +299,13 @@ export default function ConduitStory() {
           </Moment>
 
           <Moment
-            n={3}
+            n={4}
             title="Asking the documents questions"
             visual={
               <Figure
-                src="/conduit/ask-0.png"
-                alt="An answer in a side panel naming blocked and expiring documents, with sources"
+                src="/conduit/ask-1.png"
+                maxWidth={800}
+                alt="Asking Conduit a question about processed documents, with sources attached"
                 caption="Every answer arrives with the documents it came from"
               />
             }
@@ -287,10 +314,6 @@ export default function ConduitStory() {
               Pipelines handle the repetitive work, but officers still dig through files for answers. I added a
               conversational layer: ask what is missing before a shipment clears, or what expires this month, and get
               the answer with sources attached.
-            </p>
-            <p>
-              If the right documents haven&apos;t been processed yet, Conduit suggests the pipeline to run and waits for
-              approval.
             </p>
           </Moment>
         </div>

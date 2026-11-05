@@ -98,7 +98,7 @@ export default function VeeqoStory() {
         <div className="mt-10 md:mt-14">
           <Wide>
             <Figure
-              src="/images/vq-doc7-preview.webp"
+              src="/images/vq-doc7.webp"
               alt="The legacy third-party document editor"
               caption="The legacy third-party editor: no API access, no extensibility"
             />
@@ -331,6 +331,7 @@ export default function VeeqoStory() {
             visual={
               <Figure
                 src="/images/aidocs.jpeg"
+                maxWidth={640}
                 alt="AI documentation and system instructions"
                 caption="The rules sellers give their AI to write templates that render"
               />

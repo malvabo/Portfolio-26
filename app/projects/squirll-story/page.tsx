@@ -131,8 +131,8 @@ export default function SquirllStory() {
           <Wide>
             <FigurePair
               images={[
-                { src: "/images/sq-6.png", alt: "Early Squirll direction draft" },
-                { src: "/images/sq-7.png", alt: "Second early Squirll direction draft" },
+                { src: "/images/sq-6-2000.jpg", alt: "Early Squirll direction draft" },
+                { src: "/images/sq-7-2000.jpg", alt: "Second early Squirll direction draft" },
               ]}
               caption="Early direction drafts"
             />
@@ -152,7 +152,8 @@ export default function SquirllStory() {
           <Stage
             title="A dashboard that lowers your guard"
             visual={
-              <Figure src="/images/sq-3.jpg" alt="Squirll analytics dashboard" caption="Analytics line graph view" />
+              <Figure src="/images/sq-3.jpg"
+                maxWidth={900} alt="Squirll analytics dashboard" caption="Analytics line graph view" />
             }
           >
             <p>
@@ -240,7 +241,8 @@ export default function SquirllStory() {
             n={2}
             title="3D for the AI, flat for nothing"
             visual={
-              <Figure src="/images/sq-4.jpg" alt="3D AI insight illustration" caption="The 3D AI insight illustration" />
+              <Figure src="/images/sq-4.jpg"
+                maxWidth={900} alt="3D AI insight illustration" caption="The 3D AI insight illustration" />
             }
           >
             <p>

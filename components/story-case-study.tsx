@@ -259,14 +259,17 @@ export function Figure({
   alt,
   caption,
   className = "",
+  maxWidth,
 }: {
   src: string
   alt: string
   caption?: string
   className?: string
+  /** Cap the display width (px) for images too small to stay sharp at full width on Retina */
+  maxWidth?: number
 }) {
   return (
-    <Reveal as="figure" className={className}>
+    <Reveal as="figure" className={`mx-auto ${className}`} style={maxWidth ? { maxWidth } : undefined}>
       <div className="rounded-2xl overflow-hidden bg-[#EDE8E1]">
         <LightboxImage src={src} alt={alt} className="w-full h-auto" />
       </div>
