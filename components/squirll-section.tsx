@@ -14,7 +14,7 @@ export function SquirllSection() {
         <div>
           <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">About</h3>
           <p className="text-base leading-relaxed text-foreground">
-            Budgeting is a chore that most people quit. I led the design of an AI-driven platform that does the heavy lifting for you. By using Computer Vision to &quot;read&quot; receipts and automate 80% of data entry, we turned a tedious manual task into a seamless, autopilot experience.
+            I led the design of an AI-driven budgeting platform that does the heavy lifting for you. Computer vision reads receipts and fills in the data, turning a tedious manual task into a seamless, autopilot experience.
           </p>
           <Link
             href="/projects/squirll"
@@ -33,14 +33,6 @@ export function SquirllSection() {
           </h3>
           <div className="space-y-4">
             <div>
-              <div className="text-xl font-medium text-foreground mb-0.5">80%</div>
-              <div className="text-sm text-muted-foreground opacity-80">Data entry automated</div>
-            </div>
-            <div>
-              <div className="text-xl font-medium text-foreground mb-0.5">16 weeks</div>
-              <div className="text-sm text-muted-foreground opacity-80">MVP launch timeline</div>
-            </div>
-            <div>
               <a
                 href="https://indigoaward.com/winners/12153"
                 target="_blank"
@@ -50,6 +42,10 @@ export function SquirllSection() {
                 3× Indigo Awards
               </a>
               <div className="text-sm text-muted-foreground opacity-80">1 Gold &amp; 2 Silver: Application, Branding, UX &amp; Navigation</div>
+            </div>
+            <div>
+              <div className="text-xl font-medium text-foreground mb-0.5">12 weeks</div>
+              <div className="text-sm text-muted-foreground opacity-80">to launch the application</div>
             </div>
           </div>
         </div>

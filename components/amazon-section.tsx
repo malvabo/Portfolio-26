@@ -15,7 +15,7 @@ export function AmazonSection() {
           <div>
             <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">About</h3>
             <p className="text-base leading-relaxed text-foreground">
-              Designing AI-powered automation for Amazon's internal shipping operations - reducing manual work for thousands of operators and accelerating decision-making across complex logistics workflows.
+              I designed AI-powered automation for Amazon&apos;s internal shipping operations, cutting manual work for thousands of operators and speeding up decisions across complex logistics workflows.
             </p>
           </div>
 
@@ -32,8 +32,9 @@ export function AmazonSection() {
             <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">Role</h3>
             <div className="text-base leading-relaxed text-foreground space-y-0.5">
               <p>Product Designer</p>
+              <p>4 weeks, 2026</p>
               <div className="flex flex-wrap gap-1.5 mt-2">
-                {["Web", "AI"].map((tag) => (
+                {["Web"].map((tag) => (
                   <span
                     key={tag}
                     className="inline-block px-2 py-0.5 text-[13px] tracking-tight rounded-md bg-[#E8E3DD] text-[#6B5D4F]"
