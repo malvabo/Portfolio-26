@@ -80,7 +80,7 @@ export default function PAAStory() {
           </p>
         </Lede>
 
-        <div className="mt-16 md:mt-24">
+        <div className="mt-10 md:mt-14">
           <Wide>
             <Figure
               src="/images/paa-0.png"

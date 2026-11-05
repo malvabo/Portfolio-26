@@ -82,7 +82,7 @@ export default function ConduitStory() {
           </p>
         </Lede>
 
-        <div className="mt-16 md:mt-24">
+        <div className="mt-10 md:mt-14">
           <Wide>
             <FigurePair
               images={[
@@ -132,7 +132,7 @@ export default function ConduitStory() {
           />
         </div>
 
-        <div className="mt-16 md:mt-24 space-y-10">
+        <div className="mt-10 md:mt-14 space-y-10">
           <Narrow>
             <Reveal as="p" className="text-[17px] leading-relaxed text-muted-foreground">
               With the founders and product partners, I mapped the full journey and chose what to build first:

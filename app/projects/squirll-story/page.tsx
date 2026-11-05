@@ -116,7 +116,7 @@ export default function SquirllStory() {
           />
         </div>
 
-        <div className="mt-16 md:mt-24 space-y-10">
+        <div className="mt-10 md:mt-14 space-y-10">
           <Narrow>
             <Reveal>
               <p className="font-serif text-[1.6rem] md:text-[1.9rem] leading-[1.25] tracking-[-0.02em]">

@@ -95,7 +95,7 @@ export default function VeeqoStory() {
           </p>
         </Lede>
 
-        <div className="mt-16 md:mt-24">
+        <div className="mt-10 md:mt-14">
           <Wide>
             <Figure
               src="/images/vq-doc7-preview.webp"

@@ -129,7 +129,7 @@ export function Wide({ children, className = "" }: { children: ReactNode; classN
 }
 
 export function Divider() {
-  return <div className="h-28 md:h-40" aria-hidden />
+  return <div className="h-20 md:h-28" aria-hidden />
 }
 
 /* ---------- Hero ---------- */
