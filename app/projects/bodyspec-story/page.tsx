@@ -1,6 +1,6 @@
 "use client"
 
-import { Header } from "@/components/header"
+import { StoryTopBar } from "@/components/story-top-bar"
 import { ScrollToTop } from "@/components/scroll-to-top"
 import { BackLinkFooter } from "@/components/back-link"
 import { StoryContents } from "@/components/story-contents"
@@ -30,7 +30,7 @@ export default function BodySpecStory() {
     <div className="min-h-screen bg-background">
       <ScrollToTop />
       <StoryCursor />
-      <Header />
+      <StoryTopBar project="BodySpec" />
 
       <StoryContents
         items={[
