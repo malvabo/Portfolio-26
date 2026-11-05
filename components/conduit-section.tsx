@@ -78,7 +78,7 @@ export function ConduitSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {CONDUIT_IMAGES.map((image, idx) => (
-            <div key={idx} className="relative aspect-[16/10] overflow-hidden rounded-2xl bg-[#f1f1f1]">
+            <div key={idx} className="relative aspect-[16/10] overflow-hidden rounded-lg bg-gray-50 border border-gray-200">
               <img
                 src={image.src}
                 alt={image.alt}
