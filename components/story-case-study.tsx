@@ -412,26 +412,29 @@ export function Moment({
   )
 }
 
-/** Results: big number, one line of how it was measured */
-export function Results({ items }: { items: { emoji: string; value: string; label: string; body: string }[] }) {
+/** Results in the same chain style: accent number + label as the title */
+export function Results({
+  label = "Impact",
+  items,
+}: {
+  label?: string
+  items: { icon: LucideIcon; image: string; value: string; label: string; body: string }[]
+}) {
   return (
-    <Narrow>
-      <div className="space-y-4">
-        {items.map((r, i) => (
-          <Reveal key={r.label} delay={i * 100} className="flex gap-5 md:gap-7 rounded-2xl bg-[#F3EFEA] p-6 md:p-8">
-            <span className="text-[2rem] leading-none shrink-0" aria-hidden>
-              {r.emoji}
-            </span>
-            <div>
-              <p className="font-serif text-[1.6rem] md:text-[1.9rem] leading-[1.15] tracking-[-0.02em] mb-1">
-                <span className={ACCENT}>{r.value}</span> {r.label}
-              </p>
-              <p className="text-[15px] leading-relaxed text-muted-foreground mt-2">{r.body}</p>
-            </div>
-          </Reveal>
-        ))}
-      </div>
-    </Narrow>
+    <CardStack
+      label={label}
+      cards={items.map((r) => ({
+        icon: r.icon,
+        image: r.image,
+        title: (
+          <>
+            <span className={`font-serif text-[1.6rem] tracking-[-0.02em] ${ACCENT}`}>{r.value}</span>{" "}
+            <span>{r.label}</span>
+          </>
+        ),
+        body: r.body,
+      }))}
+    />
   )
 }
 

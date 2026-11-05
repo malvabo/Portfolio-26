@@ -3,7 +3,8 @@
 import { Header } from "@/components/header"
 import { ScrollToTop } from "@/components/scroll-to-top"
 import { BackLinkFooter } from "@/components/back-link"
-import { CircleHelp, Clock, TrendingUp } from "lucide-react"
+import { StoryContents } from "@/components/story-contents"
+import { CalendarCheck, CircleHelp, Clock, Landmark, ShoppingCart, TrendingUp } from "lucide-react"
 import {
   StoryPage,
   StoryHero,
@@ -28,8 +29,21 @@ export default function BodySpecStory() {
       <ScrollToTop />
       <Header />
 
+      <StoryContents
+        items={[
+          { id: "overview", label: "Overview" },
+          { id: "problem", label: "The problem" },
+          { id: "research", label: "Research" },
+          { id: "built", label: "What I built" },
+          { id: "process", label: "Process" },
+          { id: "impact", label: "Impact" },
+          { id: "takeaway", label: "Takeaway" },
+        ]}
+      />
+
       <StoryPage>
         {/* 1. Hero: what it is, who I was, what changed */}
+        <div id="overview" className="scroll-mt-28" aria-hidden />
         <StoryHero
           image="https://framerusercontent.com/images/vv2onQFZ97C3KH8T7xcOTJbKZs.png"
           imageAlt="BodySpec app interface showing health metrics"
@@ -55,6 +69,7 @@ export default function BodySpecStory() {
         <Divider />
 
         {/* 2. The setup */}
+        <div id="problem" className="scroll-mt-28" aria-hidden />
         <Lede statement="BodySpec gave people clinical-grade data about their bodies. Most of them got one scan and never came back.">
           <p>
             People left the clinic with a wall of numbers and no idea what to do with them. The business was stuck in a
@@ -75,6 +90,7 @@ export default function BodySpecStory() {
         <Divider />
 
         {/* 3. How I found out what was wrong */}
+        <div id="research" className="scroll-mt-28" aria-hidden />
         <Beat kicker="Research" title="Turning technicians into a research team">
           <p>
             I couldn&apos;t be in every clinic, so I trained the technicians who ran the scans to run short, structured
@@ -112,6 +128,7 @@ export default function BodySpecStory() {
         <Divider />
 
         {/* 4. What we built */}
+        <div id="built" className="scroll-mt-28" aria-hidden />
         <Beat
           kicker="New designs"
           title="The redesign moved BodySpec from a single report to a progress story, in three parts."
@@ -174,6 +191,7 @@ export default function BodySpecStory() {
         <Divider />
 
         {/* 5. Moments from the process */}
+        <div id="process" className="scroll-mt-28" aria-hidden />
         <Narrow>
           <Words className="text-[1.6rem] md:text-[2rem] leading-[1.3] tracking-[-0.015em] text-balance">
             A few moments from the process behind the final product.
@@ -205,25 +223,29 @@ export default function BodySpecStory() {
         <Divider />
 
         {/* 6. What changed */}
+        <div id="impact" className="scroll-mt-28" aria-hidden />
         <Lede statement="The redesign brought people back, and gave BodySpec a growth story investors could see." />
 
         <div className="mt-14">
           <Results
             items={[
               {
-                emoji: "📅",
+                icon: CalendarCheck,
+                image: "/images/bodyspec-pixel-map.png",
                 value: "20%",
                 label: "lift in bookings",
                 body: "Two-click checkout and location-aware search turned more visits into booked scans.",
               },
               {
-                emoji: "🛒",
+                icon: ShoppingCart,
+                image: "/images/bodyspec-pixel-checkout.png",
                 value: "30%",
                 label: "less checkout abandonment",
                 body: "Removing the five-minute booking ordeal kept people in the flow.",
               },
               {
-                emoji: "💰",
+                icon: Landmark,
+                image: "/images/bodyspec-pixel-chart.png",
                 value: "$17.2M",
                 label: "Series A",
                 body: "The live V1 and its engagement numbers formed part of the story behind the round.",
@@ -234,6 +256,7 @@ export default function BodySpecStory() {
 
         <Divider />
 
+        <div id="takeaway" className="scroll-mt-28" aria-hidden />
         <Closing attribution="What I took away">
           The most useful research came from the people already in the room with our customers.
         </Closing>

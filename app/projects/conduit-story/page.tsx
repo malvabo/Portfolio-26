@@ -3,7 +3,8 @@
 import { Header } from "@/components/header"
 import { ScrollToTop } from "@/components/scroll-to-top"
 import { BackLinkFooter } from "@/components/back-link"
-import { Files, Keyboard, OctagonAlert } from "lucide-react"
+import { StoryContents } from "@/components/story-contents"
+import { Coins, Files, Keyboard, OctagonAlert, Timer, Users } from "lucide-react"
 import {
   StoryPage,
   StoryHero,
@@ -30,8 +31,21 @@ export default function ConduitStory() {
       <ScrollToTop />
       <Header />
 
+      <StoryContents
+        items={[
+          { id: "overview", label: "Overview" },
+          { id: "problem", label: "The problem" },
+          { id: "discovery", label: "Discovery" },
+          { id: "built", label: "What I built" },
+          { id: "process", label: "Process" },
+          { id: "impact", label: "Impact" },
+          { id: "next", label: "What's next" },
+        ]}
+      />
+
       <StoryPage>
         {/* 1. Hero */}
+        <div id="overview" className="scroll-mt-28" aria-hidden />
         <StoryHero
           image="/conduit/cover.png"
           imageAlt="A coffee Certificate of Origin open in Conduit, with the fields to extract listed beside it"
@@ -57,6 +71,7 @@ export default function ConduitStory() {
         <Divider />
 
         {/* 2. The setup */}
+        <div id="problem" className="scroll-mt-28" aria-hidden />
         <Lede statement="Every food shipment crossing a border carries a stack of certificates. Someone copies the details out of them by hand, every single time.">
           <p>
             One wrong weight or a missing certificate number, and the shipment sits at the border while the team works
@@ -79,6 +94,7 @@ export default function ConduitStory() {
         <Divider />
 
         {/* 3. Discovery */}
+        <div id="discovery" className="scroll-mt-28" aria-hidden />
         <Beat kicker="Discovery" title="Sitting with the people who do the paperwork">
           <p>
             I interviewed suppliers and importers to see how documents moved between them, and where the work piled
@@ -132,6 +148,7 @@ export default function ConduitStory() {
         <Divider />
 
         {/* 4. What we built */}
+        <div id="built" className="scroll-mt-28" aria-hidden />
         <Beat
           kicker="New designs"
           title="I designed reusable pipelines that importers set up once and run on every shipment."
@@ -207,6 +224,7 @@ export default function ConduitStory() {
         <Divider />
 
         {/* 5. Moments */}
+        <div id="process" className="scroll-mt-28" aria-hidden />
         <Narrow>
           <Words className="text-[1.6rem] md:text-[2rem] leading-[1.3] tracking-[-0.015em] text-balance">
             A few moments from the process behind the final product.
@@ -276,25 +294,29 @@ export default function ConduitStory() {
         <Divider />
 
         {/* 6. Results */}
+        <div id="impact" className="scroll-mt-28" aria-hidden />
         <Lede statement="Importers stopped retyping certificates, and found problems before the border did." />
 
         <div className="mt-14">
           <Results
             items={[
               {
-                emoji: "⏱️",
+                icon: Timer,
+                image: "/conduit/pixel-time.png",
                 value: "1–3 min",
                 label: "to verify a shipment",
                 body: "Down from 20 minutes, saving up to two hours per shipment once pipelines replaced manual checks.",
               },
               {
-                emoji: "💸",
+                icon: Coins,
+                image: "/conduit/pixel-beans.png",
                 value: "95%",
                 label: "lower cost per document",
                 body: "Measured against the cost of processing each document by hand.",
               },
               {
-                emoji: "🤝",
+                icon: Users,
+                image: "/conduit/pixel-team.png",
                 value: "5 teams",
                 label: "onboarded",
                 body: "The MVP was designed and built in four weeks, with a design system ready to grow with it.",
@@ -305,6 +327,7 @@ export default function ConduitStory() {
 
         <Divider />
 
+        <div id="next" className="scroll-mt-28" aria-hidden />
         <Narrow className="mb-12">
           <Reveal as="p" className="text-[17px] leading-relaxed text-muted-foreground">
             Next, an agent could notice a missing document, find the supplier file, run the right pipeline and flag
