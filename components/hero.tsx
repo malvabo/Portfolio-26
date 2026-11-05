@@ -121,16 +121,6 @@ vibe-coding <svg className="inline-block w-[0.55em] h-[0.55em] mb-[0.15em]" view
               {" "}side projects and writing talks on the future of AI products.
             </p>
           </div>
-
-          {/* Proof in plain view, no hover needed. */}
-          <ul className="hero-reveal hero-reveal-3 mt-8 flex flex-wrap items-center gap-x-5 sm:gap-x-3 gap-y-2 font-mono text-[12px] uppercase tracking-wider text-muted-foreground">
-            {["Amazon", "3× Indigo Awards", "50,000+ sellers served", "Conference speaker"].map((item, i) => (
-              <li key={item} className="flex items-center gap-3">
-                {i > 0 && <span aria-hidden className="hidden sm:inline text-muted-foreground/40">&middot;</span>}
-                {item}
-              </li>
-            ))}
-          </ul>
         </div>
 
         <figure className="hero-reveal hero-reveal-4 hidden lg:block relative aspect-[4/5] rounded-xl overflow-hidden bg-[#f1f1f1] border border-border/60 shadow-sm">
