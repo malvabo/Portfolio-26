@@ -13,15 +13,6 @@ export function TestimonialsSection() {
         "https://framerusercontent.com/images/78dofovJbAtympTLqZLY1jA24.jpeg?scale-down-to=512&width=800&height=800",
     },
     {
-      title: "Thorough and analytical",
-      keyPhrase: "push the team to build with purpose",
-      text: "She questions the status quo and asks the tough questions that push the team to build with purpose.",
-      author: "Carla Ruiz Entrecanales",
-      role: "Venture Builder at ColdStart",
-      linkedin: "#",
-      avatar: "https://framerusercontent.com/images/Hd1E2e8ZG1g4zNUsGWNhHe5seg.jpeg?width=387&height=387",
-    },
-    {
       title: "Strong recommendation",
       keyPhrase: "communication skills, leadership qualities",
       text: "I've worked under the leadership of Maria. Her superb communication skills, leadership qualities, enthusiastic personality are the reasons why I recommend her strongly.",
@@ -29,6 +20,15 @@ export function TestimonialsSection() {
       role: "Founder at Quema (presently)",
       linkedin: "#",
       avatar: "/images/kateryna-lezhukh.png",
+    },
+    {
+      title: "Thorough and analytical",
+      keyPhrase: "push the team to build with purpose",
+      text: "She questions the status quo and asks the tough questions that push the team to build with purpose.",
+      author: "Carla Ruiz Entrecanales",
+      role: "Venture Builder at ColdStart",
+      linkedin: "#",
+      avatar: "https://framerusercontent.com/images/Hd1E2e8ZG1g4zNUsGWNhHe5seg.jpeg?width=387&height=387",
     },
   ]
 
