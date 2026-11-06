@@ -172,12 +172,8 @@ export default function SquirllStory() {
             }
           >
             <p>
-              Most finance apps open on a budget you&apos;re failing. Analytics shows what you spent and where it went,
-              with no targets or warnings, so checking in never feels like a test.
-            </p>
-            <p>
-              Merchant messages follow the same idea. Offers and account emails that get lost in a busy inbox are
-              grouped by merchant inside Squirll, so everything from one shop is in one place.
+              Analytics shows what you spent with no targets or warnings, so checking in never feels like a test.
+              Messages from each shop sit together, away from a busy inbox.
             </p>
           </Stage>
 
@@ -234,16 +230,14 @@ export default function SquirllStory() {
 
           <Moment
             n={2}
-            title="Saving 3D for the AI"
+            title="Motion and illustration"
             visual={
               <Figure src="/images/sq-4.jpg"
-                alt="3D AI insight illustration" caption="The 3D AI insight illustration" />
+                alt="AI insight illustration" caption="AI insight illustration" />
             }
           >
             <p>
-              Flat illustration is everywhere and has stopped meaning much. 3D suggests depth and intelligence under the
-              surface. Its cobalt blue is the only cool tone in the palette, which sets the AI&apos;s work apart from
-              what the user sees.
+              I also designed the motion and illustration across the app.
             </p>
           </Moment>
 

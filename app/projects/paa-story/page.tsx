@@ -49,7 +49,7 @@ export default function PAAStory() {
         <StoryHero
           image="/images/paa_11.png"
           imageAlt="PAA clinical dashboard with pending action tiles and a message drawer"
-          title="Helping clinicians triage in seconds"
+          title="Helping clinicians see what's urgent in seconds"
           meta={[
             { label: "Company", value: "PAA" },
             { label: "Timeline", value: "6 months, 2024" },
@@ -58,13 +58,13 @@ export default function PAAStory() {
           intro={
             <p>
               PAA is an AI platform for managing patient care after a hospital stay. I led design from a legacy
-              product with no design files to a dashboard clinicians can triage in seconds, and AI documentation
+              product with no design files to a dashboard that shows clinicians what&apos;s urgent in seconds, and AI documentation
               that keeps the clinical record accurate. I worked with the clinical director, operations director
               and CTO, and owned the interaction model end to end.
             </p>
           }
           stats={[
-            { value: "40%", label: "time saved on clinical workflows" },
+            { value: "40%", label: "time saved answering document requests" },
             { value: "1,000s", label: "clinicians and facility staff using it" },
             { value: "Tier-1", label: "deals with Kaiser, Humana and United" },
           ]}
@@ -74,7 +74,7 @@ export default function PAAStory() {
 
         {/* 2. The setup */}
         <div id="problem" className="scroll-mt-28" aria-hidden />
-        <Lede kicker="01 Who and why" statement="Patients in post-acute care have just left the hospital. Their care plans are complex, and every deadline has a regulator or a payer behind it.">
+        <Lede kicker="01 Who and why" statement="Patients who've just left hospital still need care. Their plans are complex, and every deadline has a regulator or insurer behind it.">
           <p>
             Yet in PAA&apos;s legacy dashboard, a task that could trigger a penalty looked exactly like one that could
             wait a week. Requests from physicians sat in a separate chat tab, cut off from the task list.
@@ -116,7 +116,7 @@ export default function PAAStory() {
                 icon: MessagesSquare,
                 image: "/images/paa-tile-silos.jpg",
                 title: "Information silos",
-                body: "Payers and physicians asked for notes and authorizations by message, in a tab nobody saw from the task view.",
+                body: "Insurers and doctors asked for notes and approvals by message, in a tab nobody saw from the task view.",
               },
               {
                 icon: AlarmClock,
@@ -158,15 +158,15 @@ export default function PAAStory() {
             title="Messages with the patient in view"
             visual={
               <Figure
-                src="/images/paa-messages.png"
-                alt="Message drawer beside the patient's clinical data"
-                caption="The thread and the patient's clinical data, side by side"
+                src="/images/paa-5.png"
+                alt="Tiles at the top of the dashboard with a document request open in a side drawer"
+                caption="A document request opens beside the patient's details"
               />
             }
           >
             <p>
-              Document requests became an urgency tile. Opening one slides out a drawer with the thread next to the
-              patient&apos;s clinical data, so the patient never leaves the screen.
+              Requests for documents now show up as a tile at the top. Click it, and the conversation opens beside the
+              patient&apos;s details, so clinicians never leave the page.
             </p>
           </Stage>
 
@@ -181,25 +181,24 @@ export default function PAAStory() {
             }
           >
             <p>
-              Below the tiles, a filterable table sorts by due date, task type, facility or patient. Clinicians can
-              review and approve documents without leaving the home page.
+              Everything else lives in one task table that clinicians can sort and filter, and approve documents from
+              without leaving the page.
             </p>
           </Stage>
 
           <Stage
-            title="AI drafts for SNF documentation"
+            title="Drafting reports from the assessment"
             visual={
               <Figure
                 src="/images/paa-doc2.png"
                 alt="AI-generated documentation draft"
-                caption="A draft narrative built from assessment data and CMS criteria, ready for review"
+                caption="A report drafted from the assessment, ready for review"
               />
             }
           >
             <p>
-              Clinicians used to fill in a structured assessment, then rewrite the same facts as a narrative for SNF
-              qualification and payer authorization. Now the assessment produces a structured summary that follows SNF
-              criteria, ready for the clinician to review and sign off.
+              Clinicians filled in a patient assessment, then wrote the same facts out again as a report for the insurer.
+              Now the AI turns the assessment into that report, and the clinician reviews and signs it.
             </p>
           </Stage>
         </div>
@@ -273,7 +272,7 @@ export default function PAAStory() {
                 image: "/images/paa-tile-time.jpg",
                 value: "40%",
                 label: "time saved",
-                body: "Measured after launch across care coordinator workflows.",
+                body: "Measured after launch on answering document requests.",
               },
               {
                 icon: Handshake,
@@ -302,7 +301,7 @@ export default function PAAStory() {
             <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground">
               <p>
                 Next time I would set up regular reviews with clinicians on real screens before the first wireframe,
-                and secure HIPAA-compliant test data in the first week.
+                and secure realistic test patient data in the first week.
               </p>
               <p>The clearest requirements came from watching where clinicians hesitated.</p>
             </div>
