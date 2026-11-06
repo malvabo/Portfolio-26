@@ -1,4 +1,5 @@
 import { Header } from "@/components/header"
+import { StoryCursor } from "@/components/story-cursor"
 import { Hero } from "@/components/hero"
 import { HeroPhotos } from "@/components/hero-photos"
 import { ShowreelSection } from "@/components/showreel-section"
@@ -19,6 +20,7 @@ import { Footer } from "@/components/footer"
 export default function Home() {
   return (
     <div className="min-h-screen">
+      <StoryCursor />
       <Header />
       <main>
         <Hero />

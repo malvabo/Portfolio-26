@@ -107,10 +107,6 @@ vibe-coding <svg className="inline-block w-[0.55em] h-[0.55em] mb-[0.15em]" view
             className="object-cover object-[center_35%]"
             sizes="360px"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
-          <figcaption className="absolute bottom-0 left-0 right-0 p-4 uppercase text-[11px] text-white/85 font-mono tracking-wider">
-            Speaking &middot; EU
-          </figcaption>
         </figure>
       </div>
     </section>
