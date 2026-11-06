@@ -40,7 +40,7 @@ export default function SquirllCaseStudy() {
                 Squirll: Designing a budgeting app people do not quit
               </h1>
               <p className="text-[17px] leading-relaxed text-muted-foreground">
-                A 0-to-1 AI finance platform. One designer, two founders, seven months.
+                A 0-to-1 AI finance platform. One designer, two founders, a mobile app in three months.
               </p>
             </div>
 
@@ -52,7 +52,7 @@ export default function SquirllCaseStudy() {
               </div>
               <div>
                 <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Timeline</p>
-                <p className="text-[15px] leading-relaxed">Sep 2024 – Apr 2025</p>
+                <p className="text-[15px] leading-relaxed">Feb - Apr 2025</p>
               </div>
               <div>
                 <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Team</p>

@@ -54,7 +54,7 @@ export function SquirllSection() {
           <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">Role</h3>
           <div className="text-base leading-relaxed text-foreground space-y-0.5">
             <p>Lead Product Designer</p>
-            <p>Sep 2024 &ndash; Apr 2025</p>
+            <p>Feb &ndash; Apr 2025</p>
             <div className="flex flex-wrap gap-1.5 mt-2">
               {["Web", "iOS"].map((platform) => (
                 <span
