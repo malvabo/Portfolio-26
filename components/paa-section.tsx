@@ -40,7 +40,7 @@ export function PAASection() {
           <div className="space-y-4">
             <div>
               <div className="text-xl font-medium text-foreground mb-0.5">40%</div>
-              <div className="text-sm text-muted-foreground opacity-80">less time care coordinators spend finding a patient&apos;s status, after simplifying navigation</div>
+              <div className="text-sm text-muted-foreground opacity-80">less time clinicians spend finding patient status</div>
             </div>
             <div>
               <div className="text-xl font-medium text-foreground mb-0.5">0→1</div>
