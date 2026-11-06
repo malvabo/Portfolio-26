@@ -66,7 +66,7 @@ export default function ConduitStory() {
             </p>
           }
           stats={[
-            { value: "1–3 min", label: "to verify a shipment, down from 20" },
+            { value: "1-3 min", label: "to verify a shipment, down from 20" },
             { value: "95%", label: "lower cost per document" },
             { value: "5", label: "teams onboarded" },
           ]}
@@ -322,7 +322,7 @@ export default function ConduitStory() {
               {
                 icon: Timer,
                 image: "/conduit/tile-time.jpg",
-                value: "1–3 min",
+                value: "1-3 min",
                 label: "to verify a shipment",
                 body: "Down from 20 minutes, saving up to two hours per shipment once pipelines replaced manual checks.",
               },
