@@ -442,12 +442,11 @@ export function Stage({ title, children, visual }: { title: string; children: Re
 
 /** A numbered moment from the process */
 export function Moment({
-  n,
   title,
   children,
   visual,
 }: {
-  n: number
+  n?: number
   title: string
   children: ReactNode
   visual?: ReactNode
@@ -456,7 +455,6 @@ export function Moment({
     <div className="space-y-8 md:space-y-10">
       <Narrow>
         <Reveal>
-          <p className={`font-mono text-[13px] mb-4 ${ACCENT}`}>{String(n).padStart(2, "0")}</p>
           <h3 className="text-[1.25rem] tracking-[-0.01em] mb-3">{title}</h3>
         </Reveal>
         <Reveal delay={100} className="space-y-4 text-[17px] leading-relaxed text-muted-foreground">

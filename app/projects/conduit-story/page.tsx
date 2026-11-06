@@ -25,7 +25,6 @@ import {
   UpNext,
   Reveal,
   Words,
-  KeyCall,
 } from "@/components/story-case-study"
 
 export default function ConduitStory() {
@@ -94,20 +93,6 @@ export default function ConduitStory() {
               aspect="3/2"
             />
           </Wide>
-        </div>
-
-        <div className="mt-12 md:mt-16">
-          <KeyCall
-            rows={[
-              { label: "The plan", text: "Conduit would decide whether each document passed customs checks." },
-              {
-                label: "The problem",
-                text: "Every importer checks different things, and their compliance team signs the filing and takes the risk.",
-              },
-              { label: "My call", text: "Let each importer choose what to check. Conduit reads the documents and fills in the data." },
-              { label: "Result", text: "The founders agreed. We shipped in four weeks and rolled out to 5 teams." },
-            ]}
-          />
         </div>
 
         <Divider />
@@ -257,13 +242,12 @@ export default function ConduitStory() {
             }
           >
             <p>
-              We started from a clear hypothesis: Conduit would read a document and decide whether it passed. I
-              designed that version and took it into testing with compliance teams.
+              The plan was for Conduit to pass or fail each document. Every importer checks different things
+              against its own policy, so one set of rules couldn&apos;t work for all of them.
             </p>
             <p>
-              Every team checked a different set of fields on the same certificate, because each files against its own
-              policy. I recommended letting importers configure compliance themselves. The founders agreed, we stopped
-              building the rules engine, and the rest of the four weeks went into the pipeline builder.
+              I recommended letting each importer choose what to check, with Conduit reading the documents and
+              filling in the data. The founders agreed, and we built that instead.
             </p>
           </Moment>
 
