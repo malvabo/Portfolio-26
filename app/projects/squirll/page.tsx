@@ -244,7 +244,7 @@ export default function SquirllStory() {
             n={3}
             title="Passing AA on a warm dark palette"
             visual={
-              <div className="grid md:grid-cols-2 gap-4 md:gap-6">
+              <div className="flex flex-col gap-4 md:gap-6">
                 <Figure src="/images/squirll-collage-8.jpg" alt="Squirll dark interface details" />
                 <Clip src="/images/anim_SQ.mp4" label="Squirll interface animation" />
               </div>

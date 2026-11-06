@@ -215,8 +215,8 @@ export default function PAAStory() {
             visual={
               <Figure
                 src="/images/paa-3.png"
-                alt="Wireframes moving from a unified feed to a two-tier structure"
-                caption="From a single prioritized feed (left) to tiles plus a table (right)"
+                alt="Dashboard iterations, each with status tiles above a patient table"
+                caption="Dashboard iterations: tiles for what's urgent, a table for what's next"
               />
             }
           >
@@ -229,17 +229,6 @@ export default function PAAStory() {
 
           <Moment
             n={2}
-            title="Moving messages next to the patient"
-          >
-            <p>
-              Requests from insurers and doctors lived in a separate tab, so clinicians switched screens to
-              understand a single patient. I moved the thread into a drawer that opens beside the patient&apos;s
-              clinical data.
-            </p>
-          </Moment>
-
-          <Moment
-            n={3}
             title="Locking the assessment before the AI writes"
             visual={
               <Figure
@@ -255,13 +244,31 @@ export default function PAAStory() {
               clinical data doesn&apos;t.
             </p>
           </Moment>
+
+          <Moment
+            n={3}
+            title="Moving messages next to the patient"
+            visual={
+              <Figure
+                src="/images/paa-messages.png"
+                alt="Messages inbox with a patient's case summary shown above the conversation thread"
+                caption="Messages beside the patient's case, with starring and key metadata"
+              />
+            }
+          >
+            <p>
+              Requests from insurers and doctors lived in a separate tab, so clinicians switched screens to
+              understand a single patient. I moved the thread into a drawer that opens beside the patient&apos;s
+              clinical data.
+            </p>
+          </Moment>
         </div>
 
         <Divider />
 
         {/* 6. Results */}
         <div id="impact" className="scroll-mt-28" aria-hidden />
-        <Lede kicker="05 Outcome" statement="Clinicians got their time back, and the platform became something major health plans would buy." />
+        <Lede kicker="05 Outcome" statement="Clinicians got their time back, and major health plans signed contracts for the platform." />
 
         <div className="mt-14">
           <Results
@@ -297,11 +304,11 @@ export default function PAAStory() {
         <Narrow>
           <Reveal>
             <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground">
+              <p>The clearest requirements came from watching where clinicians hesitated.</p>
               <p>
                 Next time I would set up regular reviews with clinicians on real screens before the first wireframe,
                 and secure realistic test patient data in the first week.
               </p>
-              <p>The clearest requirements came from watching where clinicians hesitated.</p>
             </div>
           </Reveal>
         </Narrow>
