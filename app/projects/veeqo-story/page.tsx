@@ -46,11 +46,11 @@ export default function VeeqoStory() {
       <StoryContents
         items={[
           { id: "overview", label: "Overview" },
-          { id: "problem", label: "The problem" },
-          { id: "discovery", label: "Discovery" },
-          { id: "built", label: "What I built" },
-          { id: "process", label: "Process" },
-          { id: "impact", label: "Impact" },
+          { id: "problem", label: "Who and why" },
+          { id: "discovery", label: "Research" },
+          { id: "built", label: "The solution" },
+          { id: "process", label: "Key decisions" },
+          { id: "impact", label: "Outcome" },
           { id: "next", label: "What's next" },
         ]}
       />
@@ -65,7 +65,8 @@ export default function VeeqoStory() {
           meta={[
             { label: "Company", value: "Veeqo · Amazon" },
             { label: "Timeline", value: "3 months" },
-            { label: "Role", value: "Product designer" },
+            { label: "Role", value: "Leading design, documents project" },
+            { label: "Team", value: "10 people" },
           ]}
           intro={
             <p>
@@ -86,7 +87,7 @@ export default function VeeqoStory() {
 
         {/* 2. The setup */}
         <div id="problem" className="scroll-mt-28" aria-hidden />
-        <Lede statement="Every order prints documents: packing slips, invoices, customs forms, return labels. For UK sellers, all of them ran through an editor nobody could extend.">
+        <Lede kicker="01 Who and why" statement="Every order prints documents: packing slips, invoices, customs forms, return labels. For UK sellers, all of them ran through an editor nobody could extend.">
           <p>
             Veeqo was moving UK sellers onto the US product. US sellers only had basic editing, so switching off the
             vendor without a real replacement put the biggest UK accounts at risk.
@@ -118,7 +119,7 @@ export default function VeeqoStory() {
 
         {/* 3. Discovery */}
         <div id="discovery" className="scroll-mt-28" aria-hidden />
-        <Beat kicker="Discovery" title="Two kinds of sellers, two very different relationships with their documents">
+        <Beat kicker="02 Research" title="Two kinds of sellers, two very different relationships with their documents">
           <p>
             I worked from our internal research, support tickets and seller interviews in Dovetail, and looked at how
             similar platforms handled templates.
@@ -162,7 +163,7 @@ export default function VeeqoStory() {
         {/* 4. What we built */}
         <div id="built" className="scroll-mt-28" aria-hidden />
         <Beat
-          kicker="New designs"
+          kicker="03 The solution"
           title="I split the product by need: simple templates for small sellers, HTML and AI for complex ones."
         />
 
@@ -273,11 +274,7 @@ export default function VeeqoStory() {
 
         {/* 5. Moments */}
         <div id="process" className="scroll-mt-28" aria-hidden />
-        <Narrow>
-          <Words className="text-[1.6rem] md:text-[2rem] leading-[1.3] tracking-[-0.015em] text-balance">
-            A few moments from the process behind the final product.
-          </Words>
-        </Narrow>
+        <Beat kicker="04" title="Key decisions" />
 
         <div className="mt-16 space-y-24 md:space-y-32">
           <Moment
@@ -358,7 +355,7 @@ export default function VeeqoStory() {
 
         {/* 6. Results */}
         <div id="impact" className="scroll-mt-28" aria-hidden />
-        <Lede statement="We switched off the vendor without losing a single top-tier account." />
+        <Lede kicker="05 Outcome" statement="We switched off the vendor without losing a single top-tier account." />
 
         <div className="mt-14">
           <Results

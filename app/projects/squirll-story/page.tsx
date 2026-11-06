@@ -37,10 +37,10 @@ export default function SquirllStory() {
       <StoryContents
         items={[
           { id: "overview", label: "Overview" },
-          { id: "problem", label: "The problem" },
-          { id: "discovery", label: "Discovery" },
-          { id: "built", label: "What I built" },
-          { id: "process", label: "Process" },
+          { id: "problem", label: "Who and why" },
+          { id: "discovery", label: "Research" },
+          { id: "built", label: "The solution" },
+          { id: "process", label: "Key decisions" },
           { id: "impact", label: "Outcome" },
           { id: "next", label: "Takeaway" },
         ]}
@@ -76,7 +76,7 @@ export default function SquirllStory() {
 
         {/* 2. The setup */}
         <div id="problem" className="scroll-mt-28" aria-hidden />
-        <Lede statement="Most people give up on budgeting apps. They feel like homework, and every screen asks you to pay attention.">
+        <Lede kicker="01 Who and why" statement="Most people give up on budgeting apps. They feel like homework, and every screen asks you to pay attention.">
           <p>
             Squirll&apos;s AI does the noticing for you, so the design had to make that obvious from the first screen.
           </p>
@@ -93,7 +93,7 @@ export default function SquirllStory() {
 
         {/* 3. Discovery */}
         <div id="discovery" className="scroll-mt-28" aria-hidden />
-        <Beat kicker="Discovery" title="Looking for the gap in personal finance">
+        <Beat kicker="02 Research" title="Looking for the gap in personal finance">
           <p>Before any visual direction, I audited Copilot, Monarch, YNAB and Cleo.</p>
         </Beat>
 
@@ -151,7 +151,7 @@ export default function SquirllStory() {
         {/* 4. What we built */}
         <div id="built" className="scroll-mt-28" aria-hidden />
         <Beat
-          kicker="New designs"
+          kicker="03 The solution"
           title="A warm, dark product that signals: this is already taken care of."
         />
 
@@ -214,11 +214,7 @@ export default function SquirllStory() {
 
         {/* 5. Moments */}
         <div id="process" className="scroll-mt-28" aria-hidden />
-        <Narrow>
-          <Words className="text-[1.6rem] md:text-[2rem] leading-[1.3] tracking-[-0.015em] text-balance">
-            A few moments from the process behind the final product.
-          </Words>
-        </Narrow>
+        <Beat kicker="04" title="Key decisions" />
 
         <div className="mt-16 space-y-24 md:space-y-32">
           <Moment
@@ -279,7 +275,7 @@ export default function SquirllStory() {
 
         {/* 6. Results */}
         <div id="impact" className="scroll-mt-28" aria-hidden />
-        <Lede statement="Early users said Squirll felt different from every finance app they had tried, which was exactly the point." />
+        <Lede kicker="05 Outcome" statement="Early users said Squirll felt different from every finance app they had tried, which was exactly the point." />
 
         <div className="mt-14">
           <Results

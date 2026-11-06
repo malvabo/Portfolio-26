@@ -200,10 +200,11 @@ export function StoryHero({
 /* ---------- Text beats ---------- */
 
 /** Big opening statement, then a quieter follow-up */
-export function Lede({ statement, children }: { statement: ReactNode; children?: ReactNode }) {
+export function Lede({ kicker, statement, children }: { kicker?: string; statement: ReactNode; children?: ReactNode }) {
   const after = typeof statement === "string" ? Math.min(statement.split(" ").length * 28, 600) : 150
   return (
     <Narrow>
+      {kicker && <Reveal><Kicker>{kicker}</Kicker></Reveal>}
       <Words className="text-[1.6rem] md:text-[2rem] leading-[1.3] tracking-[-0.015em] text-balance">{statement}</Words>
       {children && (
         <Reveal delay={after} className="mt-6 space-y-4 text-[17px] leading-relaxed text-muted-foreground">
@@ -215,12 +216,32 @@ export function Lede({ statement, children }: { statement: ReactNode; children?:
 }
 
 /** The one decision a skimming reader should not miss */
-export function KeyCall({ label = "The key call", children }: { label?: string; children: ReactNode }) {
+export function KeyCall({
+  label = "The key call",
+  rows,
+  children,
+}: {
+  label?: string
+  rows?: { label: string; text: ReactNode }[]
+  children?: ReactNode
+}) {
   return (
     <Narrow>
       <Reveal>
         <Kicker>{label}</Kicker>
-        <p className="text-[1.25rem] md:text-[1.375rem] leading-[1.45] tracking-[-0.01em] text-balance">{children}</p>
+        {children && (
+          <p className="text-[1.25rem] md:text-[1.375rem] leading-[1.45] tracking-[-0.01em] text-balance">{children}</p>
+        )}
+        {rows && (
+          <dl className="grid grid-cols-1 sm:grid-cols-[120px_1fr] gap-x-6 gap-y-2 sm:gap-y-4">
+            {rows.map((r) => (
+              <div key={r.label} className="contents">
+                <dt className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground pt-1.5 sm:pt-1.5">{r.label}</dt>
+                <dd className="text-[1.125rem] md:text-[1.25rem] leading-[1.45] tracking-[-0.01em] mb-3 sm:mb-0">{r.text}</dd>
+              </div>
+            ))}
+          </dl>
+        )}
       </Reveal>
     </Narrow>
   )

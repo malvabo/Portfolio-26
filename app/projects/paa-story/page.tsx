@@ -35,11 +35,11 @@ export default function PAAStory() {
       <StoryContents
         items={[
           { id: "overview", label: "Overview" },
-          { id: "problem", label: "The problem" },
-          { id: "discovery", label: "Discovery" },
-          { id: "built", label: "What I built" },
-          { id: "process", label: "Process" },
-          { id: "impact", label: "Impact" },
+          { id: "problem", label: "Who and why" },
+          { id: "discovery", label: "Research" },
+          { id: "built", label: "The solution" },
+          { id: "process", label: "Key decisions" },
+          { id: "impact", label: "Outcome" },
           { id: "next", label: "Takeaway" },
         ]}
       />
@@ -75,7 +75,7 @@ export default function PAAStory() {
 
         {/* 2. The setup */}
         <div id="problem" className="scroll-mt-28" aria-hidden />
-        <Lede statement="Patients in post-acute care have just left the hospital. Their care plans are complex, and every deadline has a regulator or a payer behind it.">
+        <Lede kicker="01 Who and why" statement="Patients in post-acute care have just left the hospital. Their care plans are complex, and every deadline has a regulator or a payer behind it.">
           <p>
             Yet in PAA&apos;s legacy dashboard, a task that could trigger a penalty looked exactly like one that could
             wait a week. Requests from physicians sat in a separate chat tab, cut off from the task list.
@@ -103,7 +103,7 @@ export default function PAAStory() {
 
         {/* 3. Discovery */}
         <div id="discovery" className="scroll-mt-28" aria-hidden />
-        <Beat kicker="Discovery" title="Asking clinicians what last made them feel behind">
+        <Beat kicker="02 Research" title="Asking clinicians what last made them feel behind">
           <p>
             I ran working sessions with clinical staff, case managers, care coordinators and admissions teams, all
             built around that one question.
@@ -141,7 +141,7 @@ export default function PAAStory() {
         {/* 4. What we built */}
         <div id="built" className="scroll-mt-28" aria-hidden />
         <Beat
-          kicker="New designs"
+          kicker="03 The solution"
           title="A dashboard that answers the most urgent question first, then lets clinicians dig in."
         />
 
@@ -216,11 +216,7 @@ export default function PAAStory() {
 
         {/* 5. Moments */}
         <div id="process" className="scroll-mt-28" aria-hidden />
-        <Narrow>
-          <Words className="text-[1.6rem] md:text-[2rem] leading-[1.3] tracking-[-0.015em] text-balance">
-            A few moments from the process behind the final product.
-          </Words>
-        </Narrow>
+        <Beat kicker="04" title="Key decisions" />
 
         <div className="mt-16 space-y-24 md:space-y-32">
           <Moment
@@ -282,7 +278,7 @@ export default function PAAStory() {
 
         {/* 6. Results */}
         <div id="impact" className="scroll-mt-28" aria-hidden />
-        <Lede statement="Clinicians got their time back, and the platform became something major health plans would buy." />
+        <Lede kicker="05 Outcome" statement="Clinicians got their time back, and the platform became something major health plans would buy." />
 
         <div className="mt-14">
           <Results

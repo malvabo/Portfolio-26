@@ -25,6 +25,7 @@ import {
   UpNext,
   Reveal,
   Words,
+  KeyCall,
 } from "@/components/story-case-study"
 
 export default function ConduitStory() {
@@ -37,11 +38,11 @@ export default function ConduitStory() {
       <StoryContents
         items={[
           { id: "overview", label: "Overview" },
-          { id: "problem", label: "The problem" },
-          { id: "discovery", label: "Discovery" },
-          { id: "built", label: "What I built" },
-          { id: "process", label: "Process" },
-          { id: "impact", label: "Impact" },
+          { id: "problem", label: "Who and why" },
+          { id: "discovery", label: "Research" },
+          { id: "built", label: "The solution" },
+          { id: "process", label: "Key decisions" },
+          { id: "impact", label: "Outcome" },
           { id: "next", label: "What's next" },
         ]}
       />
@@ -76,7 +77,7 @@ export default function ConduitStory() {
 
         {/* 2. The setup */}
         <div id="problem" className="scroll-mt-28" aria-hidden />
-        <Lede statement="Every food shipment that crosses a border travels with a stack of certificates, and compliance teams retype the details from each one.">
+        <Lede kicker="01 Who and why" statement="Every food shipment that crosses a border travels with a stack of certificates, and compliance teams retype the details from each one.">
           <p>
             A single wrong weight or missing certificate number is enough to hold the shipment at the border.
           </p>
@@ -95,11 +96,25 @@ export default function ConduitStory() {
           </Wide>
         </div>
 
+        <div className="mt-12 md:mt-16">
+          <KeyCall
+            rows={[
+              { label: "The plan", text: "Conduit would decide whether each document passed customs checks." },
+              {
+                label: "The problem",
+                text: "Every importer checks different things, and their compliance team signs the filing and takes the risk.",
+              },
+              { label: "My call", text: "Let each importer choose what to check. Conduit reads the documents and fills in the data." },
+              { label: "Result", text: "The founders agreed. We shipped in four weeks and rolled out to 5 teams." },
+            ]}
+          />
+        </div>
+
         <Divider />
 
         {/* 3. Discovery */}
         <div id="discovery" className="scroll-mt-28" aria-hidden />
-        <Beat kicker="Discovery" title="Sitting with the people who do the paperwork">
+        <Beat kicker="02 Research" title="Sitting with the people who do the paperwork">
           <p>
             I interviewed suppliers and importers to see how documents moved between them, and where the work piled
             up.
@@ -153,7 +168,7 @@ export default function ConduitStory() {
         {/* 4. What we built */}
         <div id="built" className="scroll-mt-28" aria-hidden />
         <Beat
-          kicker="New designs"
+          kicker="03 The solution"
           title="I designed reusable pipelines that importers set up once and run on every shipment."
         />
 
@@ -227,11 +242,7 @@ export default function ConduitStory() {
 
         {/* 5. Moments */}
         <div id="process" className="scroll-mt-28" aria-hidden />
-        <Narrow>
-          <Words className="text-[1.6rem] md:text-[2rem] leading-[1.3] tracking-[-0.015em] text-balance">
-            A few moments from the process behind the final product.
-          </Words>
-        </Narrow>
+        <Beat kicker="04" title="Key decisions" />
 
         <div className="mt-16 space-y-24 md:space-y-32">
           <Moment
@@ -314,7 +325,7 @@ export default function ConduitStory() {
 
         {/* 6. Results */}
         <div id="impact" className="scroll-mt-28" aria-hidden />
-        <Lede statement="Importers stopped retyping certificates, and found problems before the border did." />
+        <Lede kicker="05 Outcome" statement="Importers stopped retyping certificates, and found problems before the border did." />
 
         <div className="mt-14">
           <Results
