@@ -33,7 +33,6 @@ import {
   UpNext,
   Reveal,
   Words,
-  KeyCall,
 } from "@/components/story-case-study"
 import { Architecture, BrandScheme, DecisionTable, Roadmap, SegmentTable } from "./diagrams"
 
@@ -106,13 +105,6 @@ export default function VeeqoStory() {
               caption="The legacy third-party editor: no API access, no extensibility"
             />
           </Wide>
-        </div>
-
-        <div className="mt-12 md:mt-16">
-          <KeyCall>
-            I pushed to port enterprise templates by hand in 2 weeks instead of building a 4-month migration
-            tool. We hit the deadline and kept every top account.
-          </KeyCall>
         </div>
 
         <Divider />

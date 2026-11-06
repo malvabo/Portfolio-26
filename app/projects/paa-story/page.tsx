@@ -19,11 +19,10 @@ import {
   Stage,
   Moment,
   Results,
-  Closing,
   UpNext,
   Reveal,
   Words,
-  KeyCall,
+  Kicker,
 } from "@/components/story-case-study"
 
 export default function PAAStory() {
@@ -90,13 +89,6 @@ export default function PAAStory() {
               caption="Past due, due today, due next week: all with the same visual weight"
             />
           </Wide>
-        </div>
-
-        <div className="mt-12 md:mt-16">
-          <KeyCall>
-            If clinicians saw the AI draft first, they could change their assessment answers to get a better-
-            looking note. I made the AI write only after the assessment is locked.
-          </KeyCall>
         </div>
 
         <Divider />
@@ -240,13 +232,6 @@ export default function PAAStory() {
           <Moment
             n={2}
             title="Moving messages next to the patient"
-            visual={
-              <Figure
-                src="/images/paa-4.png"
-                alt="Old messages tab compared with the new contextual drawer"
-                caption="Before: messages in a separate tab. After: a drawer that keeps clinical data visible"
-              />
-            }
           >
             <p>
               Requests from payers and physicians lived in a separate tab, so clinicians switched screens to
@@ -311,16 +296,18 @@ export default function PAAStory() {
         <Divider />
 
         <div id="next" className="scroll-mt-28" aria-hidden />
-        <Narrow className="mb-12">
-          <Reveal as="p" className="text-[17px] leading-relaxed text-muted-foreground">
-            Next time I would set up regular reviews with clinicians on real screens before the first wireframe, and
-            secure HIPAA-compliant test data in the first week. Both came late here, and both caught problems we only
-            found in QA.
+        <Narrow>
+          <Reveal>
+            <Kicker>What I took away</Kicker>
+            <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground">
+              <p>
+                Next time I would set up regular reviews with clinicians on real screens before the first wireframe,
+                and secure HIPAA-compliant test data in the first week.
+              </p>
+              <p>The clearest requirements came from watching where clinicians hesitated.</p>
+            </div>
           </Reveal>
         </Narrow>
-        <Closing attribution="What I took away">
-          The clearest requirements came from watching where clinicians hesitated.
-        </Closing>
 
         <div className="mt-24 md:mt-32">
           <UpNext
