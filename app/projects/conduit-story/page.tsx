@@ -60,15 +60,15 @@ export default function ConduitStory() {
           ]}
           intro={
             <p>
-              Conduit reads supplier documents and fills in the compliance forms food importers file, following
-              the rules each customer sets. I led product and design for the first version, built in four weeks, and its design system from
-              scratch.
+              Conduit reads supplier documents and fills in the compliance forms food importers file. I led product and design for the first version, built in four weeks,
+              and its design system from scratch. I worked directly with the founders and changed what the
+              product does: importers set their own compliance rules, and Conduit gets the data right.
             </p>
           }
           stats={[
             { value: "1-3 min", label: "to verify a shipment, down from 20" },
             { value: "95%", label: "lower cost per document" },
-            { value: "5", label: "teams onboarded" },
+            { value: "5", label: "teams rolled out to" },
           ]}
         />
 
@@ -337,7 +337,7 @@ export default function ConduitStory() {
                 icon: Users,
                 image: "/conduit/tile-team.jpg",
                 value: "5 teams",
-                label: "onboarded",
+                label: "rolled out to",
                 body: "Designed and built in four weeks, with a design system ready to grow with it.",
               },
             ]}

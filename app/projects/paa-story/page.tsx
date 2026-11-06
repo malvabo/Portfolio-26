@@ -58,13 +58,15 @@ export default function PAAStory() {
           ]}
           intro={
             <p>
-              PAA is an AI platform for managing patient care after a hospital stay. I led design from a legacy product with no design files to a dashboard clinicians can triage in
-              seconds, and AI documentation that keeps the clinical record accurate.
+              PAA is an AI platform for managing patient care after a hospital stay. I led design from a legacy
+              product with no design files to a dashboard clinicians can triage in seconds, and AI documentation
+              that keeps the clinical record accurate. I worked with the clinical director, operations director
+              and CTO, and owned the interaction model end to end.
             </p>
           }
           stats={[
             { value: "40%", label: "time saved on clinical workflows" },
-            { value: "30+", label: "screen iterations" },
+            { value: "1,000s", label: "clinicians and facility staff using it" },
             { value: "Tier-1", label: "deals with Kaiser, Humana and United" },
           ]}
         />

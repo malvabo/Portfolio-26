@@ -60,9 +60,9 @@ export default function SquirllStory() {
           ]}
           intro={
             <p>
-              Squirll is an AI finance platform that connects to your accounts, reads your patterns and surfaces what
-              matters. I was its only designer, working with two founders, a PM and three engineers, from a blank page
-              to a closed beta.
+              Squirll is an AI finance platform that connects to your accounts, reads your patterns and surfaces
+              what matters. As the only designer, I set the brand and product principles with two founders, a PM
+              and three engineers, from a blank page to a closed beta.
             </p>
           }
           stats={[

@@ -69,9 +69,10 @@ export default function VeeqoStory() {
           ]}
           intro={
             <p>
-              Veeqo is a multi-channel shipping platform owned by Amazon. Its UK sellers printed every document through
-              a third-party editor. I designed the in-house replacement, working across two very different seller segments, an
-              unstable API and a growing scope.
+              Veeqo is a multi-channel shipping platform owned by Amazon. Its UK sellers printed every document
+              through a third-party editor. I designed the in-house replacement, working across two very
+              different seller segments, an unstable API and a growing scope. When our main stakeholder left
+              mid-project, I took over the PRD and brought engineering into every design review.
             </p>
           }
           stats={[
