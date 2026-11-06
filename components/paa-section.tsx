@@ -43,8 +43,8 @@ export function PAASection() {
               <div className="text-sm text-muted-foreground opacity-80">less time clinicians spend finding patient status</div>
             </div>
             <div>
-              <div className="text-xl font-medium text-foreground mb-0.5">0→1</div>
-              <div className="text-sm text-muted-foreground opacity-80">shifted the team from reactive fire-fighting to proactive care management</div>
+              <div className="text-xl font-medium text-foreground mb-0.5">Tier 1 contracts</div>
+              <div className="text-sm text-muted-foreground opacity-80">signed after launch, as care teams moved from fire-fighting to proactive care</div>
             </div>
           </div>
         </div>

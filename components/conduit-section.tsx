@@ -47,8 +47,8 @@ export function ConduitSection() {
             <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">Results</h3>
             <div className="space-y-4">
               <div>
-                <div className="text-xl font-medium text-foreground mb-0.5">5 teams</div>
-                <div className="text-sm text-muted-foreground opacity-80">onboarded onto the product</div>
+                <div className="text-xl font-medium text-foreground mb-0.5">$1.3M a year</div>
+                <div className="text-sm text-muted-foreground opacity-80">saved in compliance work across 5 importer teams</div>
               </div>
               <div>
                 <div className="text-xl font-medium text-foreground mb-0.5">4 weeks</div>
