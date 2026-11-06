@@ -50,12 +50,13 @@ export function StoryContents({ items }: { items: ContentsItem[] }) {
 
   return (
     <div className="fixed left-6 2xl:left-10 top-1/2 -translate-y-1/2 z-40 hidden xl:block">
-      <div className="relative flex">
+      {/* Soft card so the list sits on the page rather than floating */}
+      <div className="relative flex rounded-xl border border-foreground/[0.08] bg-white/70 backdrop-blur-sm pl-3 pr-2 py-3">
         {/* Rail + marker */}
         <div className="relative w-[9px] shrink-0">
           {/* Rail fades in and out at both ends instead of stopping hard */}
           <div
-            className="absolute -inset-y-6 left-1/2 -translate-x-1/2 w-px"
+            className="absolute inset-y-0 left-1/2 -translate-x-1/2 w-px"
             style={{
               background:
                 "linear-gradient(to bottom, transparent, color-mix(in srgb, var(--foreground) 15%, transparent) 22%, color-mix(in srgb, var(--foreground) 15%, transparent) 78%, transparent)",
@@ -75,7 +76,7 @@ export function StoryContents({ items }: { items: ContentsItem[] }) {
           )}
         </div>
 
-        <nav aria-label="Case study sections" className="flex flex-col">
+        <nav aria-label="Case study sections" className="relative flex flex-col">
           {items.map((it) => {
             const isActive = it.id === active
             return (
