@@ -21,7 +21,6 @@ import {
   Stage,
   Moment,
   Results,
-  Closing,
   UpNext,
   Reveal,
   Words,
@@ -302,9 +301,6 @@ export default function SquirllStory() {
             that reads better at small sizes.
           </Reveal>
         </Narrow>
-        <Closing attribution="What I took away">
-          In a finance app, how calm it feels is part of what it does.
-        </Closing>
 
         <div className="mt-24 md:mt-32">
           <UpNext

@@ -29,7 +29,6 @@ import {
   Stage,
   Moment,
   Results,
-  Closing,
   UpNext,
   Reveal,
   Words,
@@ -393,11 +392,7 @@ export default function VeeqoStory() {
           </Reveal>
         </div>
 
-        <div className="h-24 md:h-32" aria-hidden />
 
-        <Closing attribution="What I took away">
-          Moving off the vendor gave the team full ownership of its documents for the first time.
-        </Closing>
 
         <div className="mt-24 md:mt-32">
           <UpNext

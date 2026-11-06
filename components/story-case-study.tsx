@@ -189,7 +189,7 @@ export function StoryHero({
           </div>
         </div>
 
-        <Reveal delay={after + 300} className="rounded-2xl overflow-hidden bg-[#EDE8E1] mt-14 md:mt-20">
+        <Reveal delay={after + 300} className="rounded-2xl overflow-hidden bg-[#EDE8E1] border border-foreground/[0.08] mt-14 md:mt-20">
           <LightboxImage src={image} alt={imageAlt} className="w-full h-auto" loading="eager" />
         </Reveal>
       </Wide>
@@ -303,7 +303,7 @@ export function Figure({
 }) {
   return (
     <Reveal as="figure" className={`mx-auto ${className}`} style={maxWidth ? { maxWidth } : undefined}>
-      <div className="rounded-2xl overflow-hidden bg-[#EDE8E1]">
+      <div className="rounded-2xl overflow-hidden bg-[#EDE8E1] border border-foreground/[0.08]">
         <LightboxImage src={src} alt={alt} className="w-full h-auto" />
       </div>
       <Caption>{caption}</Caption>
@@ -328,7 +328,7 @@ export function FigurePair({
           <Reveal
             key={img.src}
             delay={i * 120}
-            className="rounded-2xl overflow-hidden bg-[#EDE8E1]"
+            className="rounded-2xl overflow-hidden bg-[#EDE8E1] border border-foreground/[0.08]"
             style={aspect ? { aspectRatio: aspect } : undefined}
           >
             <LightboxImage
@@ -350,7 +350,7 @@ export function FigurePair({
 export function Clip({ src, label, caption }: { src: string; label: string; caption?: string }) {
   return (
     <Reveal as="figure">
-      <div className="rounded-2xl overflow-hidden bg-[#EDE8E1]">
+      <div className="rounded-2xl overflow-hidden bg-[#EDE8E1] border border-foreground/[0.08]">
         {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
         <video src={src} autoPlay muted loop playsInline preload="metadata" aria-label={label} className="w-full h-auto block" />
       </div>

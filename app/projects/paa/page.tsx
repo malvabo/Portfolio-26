@@ -22,7 +22,6 @@ import {
   UpNext,
   Reveal,
   Words,
-  Kicker,
 } from "@/components/story-case-study"
 
 export default function PAAStory() {
@@ -297,7 +296,6 @@ export default function PAAStory() {
         <div id="next" className="scroll-mt-28" aria-hidden />
         <Narrow>
           <Reveal>
-            <Kicker>What I took away</Kicker>
             <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground">
               <p>
                 Next time I would set up regular reviews with clinicians on real screens before the first wireframe,

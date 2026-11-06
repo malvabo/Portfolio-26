@@ -21,7 +21,6 @@ import {
   Stage,
   Moment,
   Results,
-  Closing,
   UpNext,
   Reveal,
   Words,
@@ -348,9 +347,6 @@ export default function ConduitStory() {
             anything it can&apos;t resolve.
           </Reveal>
         </Narrow>
-        <Closing attribution="Where it goes next">
-          People stay in charge of decisions and approvals, while Conduit handles the steps in between.
-        </Closing>
 
         <div className="mt-24 md:mt-32">
           <UpNext
