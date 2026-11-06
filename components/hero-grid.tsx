@@ -7,8 +7,8 @@ import { useEffect, useRef } from "react"
 // rests and fade back once it moves away or leaves the hero.
 // Static on touch devices and for reduced-motion users.
 
-const SPACING = 30
-const RADIUS = 160 // how far the cursor reaches, px
+const SPACING = 24
+const RADIUS = 140 // how far the cursor reaches, px
 const EASE_IN = 0.18 // how quickly squares light up (per frame)
 const EASE_OUT = 0.06 // how quickly they fade back (per frame)
 const REST = [176, 172, 166] as const // resting grey
@@ -20,12 +20,12 @@ type Cell = { x: number; y: number; energy: number; target: number; dim: boolean
 function drawCell(ctx: CanvasRenderingContext2D, c: Cell) {
   const e = Math.min(1, c.energy) * (c.dim ? TEXT_DIM : 1)
   const mix = (a: number, z: number) => Math.round(a + (z - a) * e)
-  ctx.fillStyle = `rgba(${mix(REST[0], INK[0])},${mix(REST[1], INK[1])},${mix(REST[2], INK[2])},${0.5 + 0.45 * e})`
-  // 2px at rest, up to ~11px fully lit; jitter keeps the edge of the patch organic.
-  const size = 2 + e * (7 + c.jitter * 2)
+  ctx.fillStyle = `rgba(${mix(REST[0], INK[0])},${mix(REST[1], INK[1])},${mix(REST[2], INK[2])},${0.4 + 0.4 * e})`
+  // 1.5px at rest, up to ~5px fully lit; jitter keeps the edge of the patch organic.
+  const size = 1.5 + e * (3 + c.jitter * 0.8)
   const half = size / 2
   ctx.beginPath()
-  ctx.roundRect(c.x - half, c.y - half, size, size, Math.min(2, size / 4))
+  ctx.roundRect(c.x - half, c.y - half, size, size, Math.min(1, size / 5))
   ctx.fill()
 }
 
