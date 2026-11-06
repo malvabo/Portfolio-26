@@ -241,18 +241,18 @@ export default function VeeqoStory() {
                 <Figure
                   src="/images/vq-doc2.jpg"
                   alt="Document library with template versions mapped to brands"
-                  caption="Every variant shows which brands use it"
+                  caption="Every brand shows which document versions apply to it by default"
                 />
               </div>
             }
           >
             <p>
-              Enterprise sellers often run 5 to 10 brands in one account. Each document type became a folder of
-              variants, and each variant maps to one or more brands.
+              Enterprise sellers often run 5 to 10 brands from one account, and each brand needs its own packing slips
+              and invoices.
             </p>
             <p>
-              To avoid a pile of near-identical templates, every variant shows which brands inherit it, so an edit that
-              touches Dior, Chanel and ten other brands is visible before it happens.
+              Each brand now has a default version of every document, and shows which versions apply to it. Sellers can
+              see which brands an edit will change before they make it.
             </p>
           </Stage>
 
@@ -326,7 +326,7 @@ export default function VeeqoStory() {
             }
           >
             <p>
-              The document API could lag, so I added Rive skeleton states that keep the screen feeling responsive while
+              The document API could be slow, so I added loading states that keep the screen feeling responsive while
               documents load.
             </p>
           </Moment>
@@ -377,9 +377,9 @@ export default function VeeqoStory() {
               {
                 icon: Gauge,
                 image: "/images/veeqo-tile-speed.jpg",
-                value: "Days",
+                value: "Minutes",
                 label: "to ship new documents",
-                body: "Custom fields and new document types now ship on a timeline the team owns, instead of months.",
+                body: "New documents, including complex ones, now take minutes to set up instead of months.",
               },
               {
                 icon: Layers,
@@ -400,23 +400,10 @@ export default function VeeqoStory() {
           <Reveal className="max-w-[720px] mx-auto">
             <Roadmap />
           </Reveal>
-          <Wide>
-            <Figure
-              src="/images/vq_doc.png"
-              alt="Future vision for document intelligence"
-              caption="Document intelligence built on infrastructure the team owns"
-            />
-          </Wide>
         </div>
 
         <div className="h-24 md:h-32" aria-hidden />
 
-        <Narrow className="mb-12">
-          <Reveal as="p" className="text-[17px] leading-relaxed text-muted-foreground">
-            When our main stakeholder left mid-project, I picked up the PRD and kept the requirements anchored. Having
-            engineering in every design session caught two dead ends early, and that became how the team runs reviews.
-          </Reveal>
-        </Narrow>
         <Closing attribution="What I took away">
           Moving off the vendor gave the team full ownership of its documents for the first time.
         </Closing>
