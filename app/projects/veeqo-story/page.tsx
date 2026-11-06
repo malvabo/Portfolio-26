@@ -378,7 +378,7 @@ export default function VeeqoStory() {
                 icon: Gauge,
                 image: "/images/veeqo-tile-speed.jpg",
                 value: "Minutes",
-                label: "to ship new documents",
+                label: "to set up a new document",
                 body: "New documents, including complex ones, now take minutes to set up instead of months.",
               },
               {
