@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react"
 
 // A field of small grey squares behind the hero. The squares around the
-// cursor grow and take on the cursor's navy; they stay lit while the cursor
+// cursor grow and take on the cursor's accent colour; they stay lit while the cursor
 // rests and fade back once it moves away or leaves the hero.
 // Static on touch devices and for reduced-motion users.
 
@@ -12,7 +12,7 @@ const RADIUS = 140 // how far the cursor reaches, px
 const EASE_IN = 0.18 // how quickly squares light up (per frame)
 const EASE_OUT = 0.06 // how quickly they fade back (per frame)
 const REST = [176, 172, 166] as const // resting grey
-const INK = [30, 58, 95] as const // the custom cursor's navy, #1e3a5f
+const INK = [180, 83, 42] as const // the story cursor's accent square, #B4532A
 const TEXT_DIM = 0.75 // behind the statement squares light up at reduced strength
 
 type Cell = { x: number; y: number; energy: number; target: number; dim: boolean; jitter: number }
@@ -20,13 +20,12 @@ type Cell = { x: number; y: number; energy: number; target: number; dim: boolean
 function drawCell(ctx: CanvasRenderingContext2D, c: Cell) {
   const e = Math.min(1, c.energy) * (c.dim ? TEXT_DIM : 1)
   const mix = (a: number, z: number) => Math.round(a + (z - a) * e)
-  ctx.fillStyle = `rgba(${mix(REST[0], INK[0])},${mix(REST[1], INK[1])},${mix(REST[2], INK[2])},${0.4 + 0.4 * e})`
-  // 1.5px at rest, up to ~5px fully lit; jitter keeps the edge of the patch organic.
-  const size = 1.5 + e * (3 + c.jitter * 0.8)
+  ctx.fillStyle = `rgba(${mix(REST[0], INK[0])},${mix(REST[1], INK[1])},${mix(REST[2], INK[2])},${0.4 + 0.5 * e})`
+  // 1.5px at rest, up to ~3.5px fully lit; jitter keeps the edge of the patch organic.
+  const size = 1.5 + e * (1.6 + c.jitter * 0.6)
   const half = size / 2
-  ctx.beginPath()
-  ctx.roundRect(c.x - half, c.y - half, size, size, Math.min(1, size / 5))
-  ctx.fill()
+  // Sharp squares, like the cursor.
+  ctx.fillRect(c.x - half, c.y - half, size, size)
 }
 
 export function HeroGrid() {
