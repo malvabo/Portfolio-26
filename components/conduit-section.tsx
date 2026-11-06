@@ -52,7 +52,7 @@ export function ConduitSection() {
               </div>
               <div>
                 <div className="text-xl font-medium text-foreground mb-0.5">4 weeks</div>
-                <div className="text-sm text-muted-foreground opacity-80">product shipped within tight timelines</div>
+                <div className="text-sm text-muted-foreground opacity-80">from kickoff to a live product</div>
               </div>
             </div>
           </div>

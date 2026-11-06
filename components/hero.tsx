@@ -46,7 +46,7 @@ export function Hero() {
               I&apos;m Mary, a product designer who makes complex AI workflows feel simple.
             </h1>
             <p className="hero-reveal hero-reveal-3 mt-6 max-w-[540px] text-pretty font-sans text-[18px] leading-[30px] sm:text-[20px] sm:leading-[32px] font-normal tracking-[-0.01em] text-muted-foreground relative z-10">
-              I&apos;ve shipped 0→1 products, won design{" "}
+              I lead products from first sketch to launch for Amazon, venture studios and unicorns, with work recognised by international{" "}
               <a
                 href="/images/Sq1.mp4"
                 target="_blank"
@@ -66,10 +66,10 @@ export function Hero() {
                   />
                 </span>
                 <span className="relative rounded-[3px] px-[0.3em] bg-[#E8E3DD] text-[#6B5D4F] whitespace-nowrap">
-awards <svg className="inline-block w-[0.55em] h-[0.55em] mb-[0.15em]" viewBox="0 0 10 10" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M2 8 L8 2 M4 2 L8 2 L8 6"/></svg>
+design awards <svg className="inline-block w-[0.55em] h-[0.55em] mb-[0.15em]" viewBox="0 0 10 10" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M2 8 L8 2 M4 2 L8 2 L8 6"/></svg>
                 </span>
               </a>
-              , and worked with Amazon, venture studios and unicorns. After hours I&apos;m{" "}
+              . After hours I&apos;m{" "}
               <a
                 href="/nodes4.mp4"
                 target="_blank"
