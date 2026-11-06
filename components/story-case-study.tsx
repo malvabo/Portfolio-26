@@ -482,8 +482,9 @@ export function Results({
         image: r.image,
         title: (
           <>
+            {/* One typeface per line: the label stays in the serif of the value. */}
             <span className={`font-serif text-[1.6rem] tracking-[-0.02em] ${ACCENT}`}>{r.value}</span>{" "}
-            <span>{r.label}</span>
+            <span className="font-serif text-[1.6rem] tracking-[-0.02em]">{r.label}</span>
           </>
         ),
         body: r.body,

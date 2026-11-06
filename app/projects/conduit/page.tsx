@@ -235,9 +235,9 @@ export default function ConduitStory() {
             title="Dropping the rules engine"
             visual={
               <Figure
-                src="/conduit/ideation.png"
-                alt="Six inbox directions explored side by side, each annotated with why it failed"
-                caption="Inbox directions, each annotated with why it failed"
+                src="/conduit/ideation.webp"
+                alt="Six inbox directions explored side by side: document queue, shipment master-detail, shipment table, shipment cards, stages, and by shipment"
+                caption="Alternatives explored during design ideation phase"
               />
             }
           >
