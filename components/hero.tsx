@@ -45,7 +45,7 @@ export function Hero() {
             <h1 className="hero-reveal hero-reveal-2 font-sans text-[30px] leading-[38px] sm:text-[44px] sm:leading-[52px] font-normal tracking-[-0.025em] text-foreground text-balance relative z-10">
               I&apos;m Mary, a product designer who makes complex AI workflows feel simple.
             </h1>
-            <p className="hero-reveal hero-reveal-3 mt-6 font-sans text-[18px] leading-[30px] sm:text-[20px] sm:leading-[32px] font-normal tracking-[-0.01em] text-muted-foreground relative z-10">
+            <p className="hero-reveal hero-reveal-3 mt-6 max-w-[540px] text-pretty font-sans text-[18px] leading-[30px] sm:text-[20px] sm:leading-[32px] font-normal tracking-[-0.01em] text-muted-foreground relative z-10">
               I&apos;ve shipped 0→1 products, won design{" "}
               <a
                 href="/images/Sq1.mp4"
