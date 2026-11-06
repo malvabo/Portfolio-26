@@ -22,7 +22,7 @@ export function ConduitSection() {
         <div className="flex gap-2 mb-3">
           <span className="inline-block px-2.5 py-0.5 text-[11px] font-mono uppercase tracking-normal rounded-md bg-[#E8E3DD] text-[#6B5D4F]">Startup</span>
         </div>
-        <h2 className="text-2xl md:text-3xl leading-[1.1] font-serif mb-8 tracking-tight">
+        <h2 className="text-[22px] md:text-[26px] leading-[1.15] font-serif mb-8 tracking-tight">
           Conduit: Automating the customs paperwork for importers
         </h2>
 
@@ -30,7 +30,7 @@ export function ConduitSection() {
           <div>
             <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">About</h3>
             <p className="text-base leading-relaxed text-foreground">
-              Designing AI-powered document automation for customs compliance - removing manual data entry for importer compliance teams and preventing the filing errors that hold shipments at the border.
+              I led product and design for an AI pipeline that cut customs data checks from 20 minutes to under 3 per shipment, removing manual entry for compliance teams and the filing errors that hold shipments at the border.
             </p>
             <a
               href="/projects/conduit"
@@ -47,12 +47,12 @@ export function ConduitSection() {
             <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">Results</h3>
             <div className="space-y-4">
               <div>
-                <div className="text-xl font-medium text-foreground mb-0.5">5 teams</div>
-                <div className="text-sm text-muted-foreground opacity-80">onboarded onto the MVP</div>
+                <div className="text-xl font-medium text-foreground mb-0.5">$1.3M a year</div>
+                <div className="text-sm text-muted-foreground opacity-80">saved in compliance work across 5 importer teams</div>
               </div>
               <div>
                 <div className="text-xl font-medium text-foreground mb-0.5">4 weeks</div>
-                <div className="text-sm text-muted-foreground opacity-80">product shipped within tight timelines</div>
+                <div className="text-sm text-muted-foreground opacity-80">from kickoff to a live product</div>
               </div>
             </div>
           </div>
@@ -61,8 +61,9 @@ export function ConduitSection() {
             <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">Role</h3>
             <div className="text-base leading-relaxed text-foreground space-y-0.5">
               <p>Product and Design Lead</p>
+              <p>Aug &ndash; Oct 2026</p>
               <div className="flex flex-wrap gap-1.5 mt-2">
-                {["Web", "Document Automation"].map((tag) => (
+                {["Web"].map((tag) => (
                   <span
                     key={tag}
                     className="inline-block px-2 py-0.5 text-[13px] tracking-tight rounded-md bg-[#E8E3DD] text-[#6B5D4F]"
@@ -77,7 +78,7 @@ export function ConduitSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {CONDUIT_IMAGES.map((image, idx) => (
-            <div key={idx} className="relative aspect-[16/10] overflow-hidden rounded-2xl bg-[#f1f1f1]">
+            <div key={idx} className="relative aspect-[16/10] overflow-hidden rounded-lg bg-gray-50 border border-gray-200">
               <img
                 src={image.src}
                 alt={image.alt}

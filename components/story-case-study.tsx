@@ -159,7 +159,7 @@ export function StoryHero({
         <Words
           as="h1"
           step={45}
-          className="font-serif text-[2rem] md:text-[2.625rem] lg:text-[3rem] leading-[1.1] tracking-[-0.025em] text-balance mb-10 md:mb-12 max-w-[760px]"
+          className="font-serif text-[1.75rem] md:text-[2.25rem] lg:text-[2.625rem] leading-[1.12] tracking-[-0.025em] text-balance mb-10 md:mb-12 max-w-[760px]"
         >
           {title}
         </Words>
@@ -189,7 +189,7 @@ export function StoryHero({
           </div>
         </div>
 
-        <Reveal delay={after + 300} className="rounded-2xl overflow-hidden bg-[#EDE8E1] mt-14 md:mt-20">
+        <Reveal delay={after + 300} className="rounded-xl overflow-hidden bg-[#EDE8E1] border border-foreground/[0.08] mt-14 md:mt-20">
           <LightboxImage src={image} alt={imageAlt} className="w-full h-auto" loading="eager" />
         </Reveal>
       </Wide>
@@ -303,7 +303,7 @@ export function Figure({
 }) {
   return (
     <Reveal as="figure" className={`mx-auto ${className}`} style={maxWidth ? { maxWidth } : undefined}>
-      <div className="rounded-2xl overflow-hidden bg-[#EDE8E1]">
+      <div className="rounded-xl overflow-hidden bg-[#EDE8E1] border border-foreground/[0.08]">
         <LightboxImage src={src} alt={alt} className="w-full h-auto" />
       </div>
       <Caption>{caption}</Caption>
@@ -328,7 +328,7 @@ export function FigurePair({
           <Reveal
             key={img.src}
             delay={i * 120}
-            className="rounded-2xl overflow-hidden bg-[#EDE8E1]"
+            className="rounded-xl overflow-hidden bg-[#EDE8E1] border border-foreground/[0.08]"
             style={aspect ? { aspectRatio: aspect } : undefined}
           >
             <LightboxImage
@@ -350,7 +350,7 @@ export function FigurePair({
 export function Clip({ src, label, caption }: { src: string; label: string; caption?: string }) {
   return (
     <Reveal as="figure">
-      <div className="rounded-2xl overflow-hidden bg-[#EDE8E1]">
+      <div className="rounded-xl overflow-hidden bg-[#EDE8E1] border border-foreground/[0.08]">
         {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
         <video src={src} autoPlay muted loop playsInline preload="metadata" aria-label={label} className="w-full h-auto block" />
       </div>
@@ -366,7 +366,7 @@ export type StoryCard = { icon: LucideIcon; image: string; title: ReactNode; bod
 /** Small boxed mono label, e.g. "WHAT I LEARNED" */
 export function BoxLabel({ children }: { children: ReactNode }) {
   return (
-    <span className="inline-block border border-black/20 bg-white px-2 py-1 font-mono text-[11px] uppercase tracking-wider leading-none">
+    <span className="inline-block rounded-md border border-black/20 bg-white px-2 py-1 font-mono text-[11px] uppercase tracking-wider leading-none">
       {children}
     </span>
   )
@@ -394,10 +394,10 @@ export function CardStack({ label, cards }: { label: string; cards: StoryCard[] 
               )}
               <Reveal
                 delay={80 + i * 140}
-                className="group bg-white border border-black/15 flex flex-col sm:flex-row overflow-hidden"
+                className="group rounded-xl bg-white border border-black/15 flex flex-col sm:flex-row overflow-hidden"
               >
                 <div className="p-1 sm:self-stretch">
-                  <div className="relative w-full h-40 sm:w-32 sm:h-full sm:min-h-[128px] overflow-hidden flex items-center justify-center">
+                  <div className="relative w-full h-40 sm:w-32 sm:h-full sm:min-h-[128px] rounded-lg overflow-hidden flex items-center justify-center">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={c.image}
@@ -482,8 +482,9 @@ export function Results({
         image: r.image,
         title: (
           <>
+            {/* One typeface per line: the label stays in the serif of the value. */}
             <span className={`font-serif text-[1.6rem] tracking-[-0.02em] ${ACCENT}`}>{r.value}</span>{" "}
-            <span>{r.label}</span>
+            <span className="font-serif text-[1.6rem] tracking-[-0.02em]">{r.label}</span>
           </>
         ),
         body: r.body,
@@ -537,10 +538,10 @@ export function UpNext({
         <a
           href={href}
           data-cursor="View project"
-          className="group flex items-stretch bg-white border border-black/15 hover:border-black/35 transition-colors"
+          className="group flex items-stretch rounded-xl overflow-hidden bg-white border border-black/15 hover:border-black/35 transition-colors"
         >
           <div className="p-1 shrink-0">
-            <div className="relative w-24 h-full min-h-[84px] sm:w-36 overflow-hidden bg-[#EDE8E1]">
+            <div className="relative w-24 h-full min-h-[84px] sm:w-36 rounded-lg overflow-hidden bg-[#EDE8E1]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={image}

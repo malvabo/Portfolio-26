@@ -12,7 +12,7 @@ export function PAASection() {
     <section id="paa" className="container mx-auto px-8 lg:px-12 pt-2 md:pt-3 pb-8 md:pb-12 scroll-mt-24">
       <div className="max-w-7xl mx-auto">
       <span className="inline-block mb-3 px-2.5 py-0.5 text-[11px] font-mono uppercase tracking-widest rounded-md bg-[#E8E3DD] text-[#6B5D4F]">Series C</span>
-      <h2 className="text-2xl md:text-3xl leading-[1.1] font-serif mb-8 tracking-tight">
+      <h2 className="text-[22px] md:text-[26px] leading-[1.15] font-serif mb-8 tracking-tight">
         PAA: Scaling Clinical Efficiency through AI-Driven Workflows
       </h2>
 
@@ -20,7 +20,7 @@ export function PAASection() {
         <div>
           <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">About</h3>
           <p className="text-base leading-relaxed text-foreground">
-            PAA is an AI-based platform providing real-time predictive analytics to manage patient care in post-acute settings. As the lead designer, I spearheaded the dashboard redesign to solve critical bottlenecks in clinician task management - transforming a high-density data environment into a prioritized, actionable interface that reduces patient service delays.
+            As the lead designer, I spearheaded the dashboard redesign to solve critical bottlenecks in clinician task management - transforming a high-density data environment into a prioritized, actionable interface that reduces patient service delays.
           </p>
           <Link
             href="/projects/paa"
@@ -39,12 +39,12 @@ export function PAASection() {
           </h3>
           <div className="space-y-4">
             <div>
-              <div className="text-xl font-medium text-foreground mb-0.5">Live</div>
-              <div className="text-sm text-muted-foreground opacity-80">Dashboard deployed, shifting the team from reactive fire-fighting to proactive care management</div>
+              <div className="text-xl font-medium text-foreground mb-0.5">40%</div>
+              <div className="text-sm text-muted-foreground opacity-80">less time clinicians spend finding patient status</div>
             </div>
             <div>
-              <div className="text-xl font-medium text-foreground mb-0.5">40%</div>
-              <div className="text-sm text-muted-foreground opacity-80">Time saved by eliminating &quot;hunting&quot; for patient status</div>
+              <div className="text-xl font-medium text-foreground mb-0.5">Tier 1 contracts</div>
+              <div className="text-sm text-muted-foreground opacity-80">signed with health systems on the back of the new offering</div>
             </div>
           </div>
         </div>
@@ -53,6 +53,7 @@ export function PAASection() {
           <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">Role</h3>
           <div className="text-base leading-relaxed text-foreground space-y-0.5">
             <p>Lead Designer</p>
+            <p>Mar &ndash; Aug 2020</p>
             <div className="flex flex-wrap gap-1.5 mt-2">
               {["Web", "Dashboard"].map((platform) => (
                 <span

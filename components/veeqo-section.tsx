@@ -13,7 +13,7 @@ export function VeeqoSection() {
         <div className="flex gap-2 mb-3">
           <span className="inline-block px-2.5 py-0.5 text-[11px] font-mono uppercase tracking-normal rounded-md bg-[#E8E3DD] text-[#6B5D4F]">Big tech</span>
         </div>
-        <h2 className="text-2xl md:text-3xl leading-[1.1] font-serif mb-8 tracking-tight">
+        <h2 className="text-[22px] md:text-[26px] leading-[1.15] font-serif mb-8 tracking-tight">
           Amazon: Redesigning a document system for 50,000+ sellers
         </h2>
 
@@ -21,7 +21,7 @@ export function VeeqoSection() {
           <div>
             <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">About</h3>
             <p className="text-base leading-relaxed text-foreground">
-              The entire document infrastructure - invoices, customs forms, packing slips - ran on a third-party PDF tool we had no control over. I led the design of a full replacement: an HTML-based engine with AI-assisted editing, a rebuilt document library, and a migration path for the enterprise accounts.
+              I led the design that replaced the third-party PDF tool behind every invoice, customs form and packing slip: an HTML-based engine with AI-assisted editing, a rebuilt document library, and a migration path for the enterprise accounts.
             </p>
             <Link
               href="/projects/veeqo"
@@ -41,11 +41,11 @@ export function VeeqoSection() {
             <div className="space-y-4">
               <div>
                 <div className="text-xl font-medium text-foreground mb-0.5">0% churn</div>
-                <div className="text-sm text-muted-foreground opacity-80">among top-tier enterprise accounts during the transition</div>
+                <div className="text-sm text-muted-foreground opacity-80">among top-tier enterprise accounts</div>
               </div>
               <div>
-                <div className="text-xl font-medium text-foreground mb-0.5">30% fewer</div>
-                <div className="text-sm text-muted-foreground opacity-80">how-to support tickets vs. the legacy system</div>
+                <div className="text-xl font-medium text-foreground mb-0.5">$2.3M a year</div>
+                <div className="text-sm text-muted-foreground opacity-80">saved in third-party platform costs</div>
               </div>
             </div>
           </div>
@@ -54,8 +54,9 @@ export function VeeqoSection() {
             <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">Role</h3>
             <div className="text-base leading-relaxed text-foreground space-y-0.5">
               <p>Product Designer</p>
+              <p>Mar &ndash; May 2026</p>
               <div className="flex flex-wrap gap-1.5 mt-2">
-                {["Web", "Document Automation"].map((platform) => (
+                {["Web"].map((platform) => (
                   <span
                     key={platform}
                     className="inline-block px-2 py-0.5 text-[13px] tracking-tight rounded-md bg-[#E8E3DD] text-[#6B5D4F]"

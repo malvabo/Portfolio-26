@@ -3,13 +3,14 @@ import Image from "next/image"
 export function TestimonialsSection() {
   const testimonials = [
     {
-      title: "Thorough and analytical",
-      keyPhrase: "push the team to build with purpose",
-      text: "She questions the status quo and asks the tough questions that push the team to build with purpose.",
-      author: "Carla Ruiz Entrecanales",
-      role: "Venture Builder at ColdStart",
+      title: "Drives projects to completion",
+      keyPhrase: "reduce uncertainty for everyone",
+      text: "Immerses themselves entirely in the project to drive it to completion. Works to reduce uncertainty for everyone else to understand user needs.",
+      author: "Konstantin Valiotti",
+      role: "Director of Product at PandaDoc",
       linkedin: "#",
-      avatar: "https://framerusercontent.com/images/Hd1E2e8ZG1g4zNUsGWNhHe5seg.jpeg?width=387&height=387",
+      avatar:
+        "https://framerusercontent.com/images/78dofovJbAtympTLqZLY1jA24.jpeg?scale-down-to=512&width=800&height=800",
     },
     {
       title: "Strong recommendation",
@@ -21,14 +22,13 @@ export function TestimonialsSection() {
       avatar: "/images/kateryna-lezhukh.png",
     },
     {
-      title: "Drives projects to completion",
-      keyPhrase: "reduce uncertainty for everyone",
-      text: "Immerses themselves entirely in the project to drive it to completion. Works to reduce uncertainty for everyone else to understand user needs.",
-      author: "Konstantin Valiotti",
-      role: "Director of Product at PandaDoc",
+      title: "Thorough and analytical",
+      keyPhrase: "push the team to build with purpose",
+      text: "She questions the status quo and asks the tough questions that push the team to build with purpose.",
+      author: "Carla Ruiz Entrecanales",
+      role: "Venture Builder at ColdStart",
       linkedin: "#",
-      avatar:
-        "https://framerusercontent.com/images/78dofovJbAtympTLqZLY1jA24.jpeg?scale-down-to=512&width=800&height=800",
+      avatar: "https://framerusercontent.com/images/Hd1E2e8ZG1g4zNUsGWNhHe5seg.jpeg?width=387&height=387",
     },
   ]
 

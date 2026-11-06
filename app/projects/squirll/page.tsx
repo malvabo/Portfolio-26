@@ -1,378 +1,322 @@
 "use client"
-import { LightboxImage } from "@/components/lightbox-image"
 
-import Link from "next/link"
-import { BackLinkSidebar, BackLinkFooter } from "@/components/back-link"
-import { ArrowLeft } from "lucide-react"
+import { StoryTopBar } from "@/components/story-top-bar"
+import { StoryContents } from "@/components/story-contents"
+import { StoryCursor } from "@/components/story-cursor"
 import { ScrollToTop } from "@/components/scroll-to-top"
-import { Header } from "@/components/header"
-export default function SquirllCaseStudy() {
+import { BackLinkFooter } from "@/components/back-link"
+import { Award, CalendarRange, Landmark, Rocket, Smile, Sparkles } from "lucide-react"
+import {
+  StoryPage,
+  StoryHero,
+  Divider,
+  Lede,
+  Beat,
+  Wide,
+  Narrow,
+  Figure,
+  FigurePair,
+  Clip,
+  CardStack,
+  Stage,
+  Moment,
+  Results,
+  UpNext,
+  Reveal,
+  Words,
+} from "@/components/story-case-study"
+
+export default function SquirllStory() {
   return (
     <div className="min-h-screen bg-background">
       <ScrollToTop />
-      <Header />
+      <StoryCursor />
+      <StoryTopBar project="Squirll" />
+      <StoryContents
+        items={[
+          { id: "overview", label: "Overview" },
+          { id: "problem", label: "Who and why" },
+          { id: "discovery", label: "Research" },
+          { id: "built", label: "The solution" },
+          { id: "process", label: "Key decisions" },
+          { id: "impact", label: "Outcome" },
+          { id: "next", label: "Takeaway" },
+        ]}
+      />
 
-      <div className="max-w-7xl mx-auto pt-24 flex flex-col">
-        <div className="flex w-full items-start">
-          <div className="hidden lg:block w-56 shrink-0 px-8 lg:px-12" aria-hidden />
+      <StoryPage>
+        {/* 1. Hero */}
+        <div id="overview" className="scroll-mt-28" aria-hidden />
+        <StoryHero
+          image="/images/squirll-collage-1.jpg"
+          imageAlt="Squirll spending analytics on a dark, warm interface"
+          title="Designing an AI finance app from zero"
+          meta={[
+            { label: "Company", value: "Squirll" },
+            { label: "Timeline", value: "Feb - Apr 2025" },
+            { label: "Role", value: "Lead product designer" },
+          ]}
+          intro={
+            <p>
+              Squirll is an AI finance platform that connects to your accounts, reads your patterns and surfaces
+              what matters. As the only designer, I set the brand and product principles with two founders, a PM
+              and three engineers, from a blank page to a closed beta.
+            </p>
+          }
+          stats={[
+            { value: "0 → 1", label: "web and iOS" },
+            { value: "3", label: "months to build the mobile app" },
+            { value: "1", label: "designer" },
+          ]}
+        />
 
-          <aside className="hidden lg:block w-56 px-8 lg:px-12 fixed top-24 left-8 lg:left-[max(0px,calc((100vw-80rem)/2))]" aria-label="Case study navigation">
-            <BackLinkSidebar />
-            <nav className="space-y-4" aria-label="Case study sections">
-              <a href="#context" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Context</a>
-              <a href="#approach" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Approach</a>
-              <a href="#color" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Color</a>
-              <a href="#typography" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Typography</a>
-              <a href="#illustration" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Illustration</a>
-              <a href="#dashboard" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Dashboard</a>
-              <a href="#accessibility" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Accessibility</a>
-              <a href="#outcome" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Outcome</a>
-              <a href="#reflections" className="block text-[15px] text-muted-foreground hover:text-foreground transition-colors">Reflections</a>
-            </nav>
-          </aside>
+        <Divider />
 
-          <main className="flex-1 px-8 lg:px-12 pb-20 lg:pb-24">
+        {/* 2. The setup */}
+        <div id="problem" className="scroll-mt-28" aria-hidden />
+        <Lede kicker="01 Who and why" statement="Most people give up on budgeting apps. They feel like homework, and every screen asks you to pay attention.">
+          <p>
+            Squirll&apos;s AI does the noticing for you, so the design had to make that obvious from the first screen.
+          </p>
+        </Lede>
 
-            {/* Header */}
-            <div className="mb-8 max-w-[750px]">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-3">0→1 · Personal Finance · AI</p>
-              <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl tracking-[-0.02em] leading-[1.15] mb-4">
-                Squirll: Designing a budgeting app people do not quit
-              </h1>
-              <p className="text-[17px] leading-relaxed text-muted-foreground">
-                A 0-to-1 AI finance platform. One designer, two founders, a mobile app in three months.
-              </p>
-            </div>
+        <Divider />
 
-            {/* Meta grid */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-4 mb-6 pb-4 max-w-[750px]">
-              <div>
-                <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Role</p>
-                <p className="text-[15px] leading-relaxed">Lead Product Designer</p>
-              </div>
-              <div>
-                <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Timeline</p>
-                <p className="text-[15px] leading-relaxed">Feb - Apr 2025</p>
-              </div>
-              <div>
-                <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Team</p>
-                <p className="text-[15px] leading-relaxed">2 founders, PM, 3 engineers</p>
-              </div>
-              <div>
-                <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Platform</p>
-                <div className="flex flex-wrap gap-1.5">
-                  {["Web", "iOS"].map((platform) => (
-                    <span
-                      key={platform}
-                      className="inline-block px-2 py-0.5 text-[13px] rounded-md bg-[#E8E3DD] text-[#6B5D4F]"
-                    >
-                      {platform}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
+        {/* 3. Discovery */}
+        <div id="discovery" className="scroll-mt-28" aria-hidden />
+        <Beat kicker="02 Research" title="Looking for the gap in personal finance">
+          <p>Before any visual direction, I ran competitor research across personal finance apps.</p>
+        </Beat>
 
-            {/* Cover image */}
-            <div className="mb-12 max-w-[750px]">
-              <div className="rounded-xl overflow-hidden aspect-[16/9]">
-                <LightboxImage
-                  src="/images/squirll-collage-1.jpg"
-                  alt="Squirll spending analytics"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
-
-            {/* Context */}
-            <section id="context" className="mb-14">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Context</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 max-w-[750px]">
-                Building a finance app from scratch
-              </h2>
-              <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
-                <p>Squirll is an AI-driven personal finance platform that connects to your accounts, reads your patterns, and surfaces what matters automatically. I joined as the sole designer on a contract basis, working directly with two founders, a PM, and a team of three engineers.</p>
-              </div>
-            </section>
-
-            {/* Approach */}
-            <section id="approach" className="mb-14">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Approach</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 max-w-[750px]">
-                Finding our position in the market
-              </h2>
-              <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
-                <p>Before any visual direction, I ran a competitor audit across the personal finance category - Copilot, Monarch, YNAB, Cleo. The pattern was consistent: products defaulted to either clinical white interfaces that felt like banking portals, or playful illustration systems that undersold the intelligence of the product. Few were occupying the premium, low-arousal space in between.</p>
-                <p>That gap shaped everything that followed.</p>
-              </div>
-
-              <div className="p-8 bg-[#F5F3F0] rounded-xl max-w-[750px] my-8">
-                <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-3">Design principle</p>
-                <p className="font-serif text-[1.375rem] leading-[1.4] tracking-[-0.02em] text-foreground mb-3">
-                  &ldquo;The product should feel like a premium spa.&rdquo;
-                </p>
-                <p className="text-[17px] leading-relaxed text-muted-foreground">
-                  Not a dashboard, not a financial tool but an environment where the user arrives and immediately feels that something capable is handling things, without being asked to do anything themselves. Defined before any visual work began, I presented to founders and PM as a filter for every decision that followed.
-                </p>
-              </div>
-
-              <div className="grid grid-cols-2 gap-4 max-w-[750px] mt-8">
-                <div className="rounded-xl overflow-hidden">
-                  <LightboxImage
-                    src="/images/sq-6.png"
-                    alt="Squirll design exploration"
-                    className="w-full h-auto object-cover"
-                  />
-                </div>
-                <div className="rounded-xl overflow-hidden">
-                  <LightboxImage
-                    src="/images/sq-7.png"
-                    alt="Squirll design exploration"
-                    className="w-full h-auto object-cover"
-                  />
-                </div>
-              </div>
-              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-6">Early direction drafts</p>
-
-              <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
-                <p>Research on arousal and interface design informed this directly. Dark backgrounds lower arousal, reducing the alertness and vigilance that light backgrounds trigger. The implicit message across light-background finance apps is: pay attention to this. The implicit message we were designing toward was the opposite: this is already taken care of. That framing became the filter for every visual decision that followed.</p>
-              </div>
-            </section>
-
-            {/* Color */}
-            <section id="color" className="mb-14">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Color</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 max-w-[750px]">
-                Exploring two color directions
-              </h2>
-              <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-8">
-                <p>I explored two palette directions and brought both to the team. We iterated on both across several sessions with the founders and PM.</p>
-              </div>
-
-              <div className="flex flex-col max-w-[750px] mb-8 divide-y divide-[#EBEBEB] border border-[#EBEBEB] bg-white">
-                <div className="flex items-start gap-6 p-6">
-                  <span className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground pt-0.5 shrink-0 w-[140px]">Direction 1</span>
-                  <div>
-                    <p className="text-[14px] font-medium text-foreground mb-2">Warm dark</p>
-                    <div className="flex flex-wrap gap-2 mb-3">
-                      <span className="text-[11px] font-medium px-2.5 py-1 rounded-sm bg-[#EBEBEB] text-muted-foreground">Near-black with brown tint</span>
-                      <span className="text-[11px] font-medium px-2.5 py-1 rounded-sm bg-[#EBEBEB] text-muted-foreground">Amber primary accent</span>
-                      <span className="text-[11px] font-medium px-2.5 py-1 rounded-sm bg-[#EBEBEB] text-muted-foreground">Radial glow on entry</span>
-                    </div>
-                    <p className="text-[15px] text-muted-foreground leading-relaxed">Feels like the product is on your side. Amber signals trust, not assessment.</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-6 p-6">
-                  <span className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground pt-0.5 shrink-0 w-[140px]">Direction 2</span>
-                  <div>
-                    <p className="text-[14px] font-medium text-foreground mb-2">Deep blue</p>
-                    <div className="flex flex-wrap gap-2 mb-3">
-                      <span className="text-[11px] font-medium px-2.5 py-1 rounded-sm bg-blue-50 text-blue-700">Cold navy base</span>
-                      <span className="text-[11px] font-medium px-2.5 py-1 rounded-sm bg-blue-50 text-blue-700">Glowing ice-blue accents</span>
-                      <span className="text-[11px] font-medium px-2.5 py-1 rounded-sm bg-blue-50 text-blue-700">Financial authority visual language</span>
-                    </div>
-                    <p className="text-[15px] text-muted-foreground leading-relaxed">Category default: credibility borrowed from convention, solving the wrong problem.</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="rounded-xl overflow-hidden max-w-[750px] mt-8">
-                <LightboxImage
-                  src="/images/sq-bl.png"
-                  alt="Squirll color direction exploration"
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-6">Color direction exploration</p>
-
-              <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
-                <p>The blue had an argument behind it: credibility borrowed from category convention, a trust signal. But the more we worked through it, the clearer it became that it was solving the wrong problem. Squirll wasn&apos;t competing with banks - it was competing with the anxious, approximate version of money management people do in their heads.</p>
-              </div>
-
-              <div className="rounded-xl overflow-hidden max-w-[750px] mt-8">
-                <LightboxImage
-                  src="/images/sq-bl2.png"
-                  alt="Squirll warm dark palette in context"
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-6">Warm dark palette applied</p>
-
-              <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
-                <p>The near-black base removes the aesthetic memory of bank statements and spreadsheets, the associations people carry from every finance tool they&apos;ve already abandoned.</p>
-              </div>
-            </section>
-
-            {/* Typography */}
-            <section id="typography" className="mb-14">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Typography</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 max-w-[750px]">
-                Choosing the right typefaces
-              </h2>
-              <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
-                <p>Sans-serif carried all functional UI: readable, neutral, nothing in the way. DM Serif Display came in for titles and insight headlines only: the moments where the product needed to feel like it was saying something that mattered, not just displaying data.</p>
-              </div>
-
-              <div className="rounded-xl overflow-hidden max-w-[750px] mt-8">
-                <LightboxImage
-                  src="/images/sq-4.jpg"
-                  alt="Squirll 3D illustration"
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">3D AI insight illustration</p>
-
-            </section>
-
-            {/* Illustration */}
-            <section id="illustration" className="mb-14">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Illustration</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 max-w-[750px]">
-                Building trust through illustration
-              </h2>
-              <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
-                <p>For the insights screen I chose 3D over flat, because flat illustration has become so widespread in consumer software that it&apos;s stopped carrying meaning. Three-dimensional form creates associations that flat can&apos;t manufacture - depth, layers, intelligence operating beneath the surface. The cobalt blue of that illustration is the only cool tone in an otherwise warm palette, deliberately separating what the AI is doing from what the user sees as a result.</p>
-              </div>
-
-              <div className="grid grid-cols-2 gap-4 max-w-[750px] mt-8">
-                {["Sq1", "Sq2"].map((name) => (
-                  <div key={name} className="rounded-xl overflow-hidden bg-black aspect-square">
-                    <video
-                      src={`/images/${name}.mp4`}
-                      autoPlay
-                      loop
-                      muted
-                      playsInline
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                ))}
-              </div>
-              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-8">Animated onboarding illustrations - orbital radial glow and account-linking motion</p>
-
-              <div className="rounded-xl overflow-hidden max-w-[750px] mt-8">
-                <LightboxImage
-                  src="/images/squirll-collage-2.jpg"
-                  alt="Squirll financial dashboard"
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-8">Onboarding orbital illustration</p>
-
-              <div className="flex gap-4 mt-8 max-w-[750px]">
-                <div className="flex-1 rounded-xl overflow-hidden bg-black aspect-square">
-                  <video
-                    src="/images/Sq-full.mp4"
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="flex-1 rounded-xl overflow-hidden aspect-square">
-                  <LightboxImage
-                    src="/images/squirll-collage-7.jpg"
-                    alt="Squirll app experience"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Uploading a receipt flow</p>
-            </section>
-
-            {/* Dashboard */}
-            <section id="dashboard" className="mb-14">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Dashboard</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 max-w-[750px]">
-                Designing the dashboard
-              </h2>
-              <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px] mb-10">
-                <p>The glowing circle at the centre of the dashboard is doing one thing: lowering the user&apos;s guard. Before any number is read, the composition signals that this is a calm environment. Something is in control, and it isn&apos;t asking anything of you yet.</p>
-              </div>
-
-              <div className="rounded-xl overflow-hidden max-w-[750px] mt-8">
-                <LightboxImage
-                  src="/images/sq-3.jpg"
-                  alt="Squirll analytics dashboard"
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center mb-6">Analytics line graph view</p>
-
-              <div className="rounded-xl overflow-hidden max-w-[750px] mt-8">
-                <LightboxImage
-                  src="/images/SQ-44.jpg"
-                  alt="Squirll analytics and messages screens"
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Analytics and merchant messages</p>
-            </section>
-
-            {/* Accessibility */}
-            <section id="accessibility" className="mb-14">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Accessibility</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 max-w-[750px]">
-                Accessibility
-              </h2>
-              <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
-                <p>Dark backgrounds with warm accents create specific contrast challenges. I ran WCAG AA checks across every text and data surface - the amber on near-black pairing required the most iteration, particularly at small sizes. Touch targets were held to 44x44px minimum.</p>
-              </div>
-            </section>
-
-            {/* Craft */}
-            <section id="craft" className="mb-14">
-              <div className="flex gap-4 max-w-[750px]">
-                <div className="flex-1 rounded-xl overflow-hidden aspect-square">
-                  <LightboxImage
-                    src="/images/squirll-collage-8.jpg"
-                    alt="Squirll interface design"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="flex-1 rounded-xl overflow-hidden bg-black aspect-square">
-                  <video
-                    src="/images/anim_SQ.mp4"
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-              <p className="mt-3 text-sm text-muted-foreground max-w-[750px] text-center">Dark mode interface details</p>
-            </section>
-
-            {/* Outcome */}
-            <section id="outcome" className="mb-14">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Outcome</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 max-w-[750px]">
-                Outcome
-              </h2>
-              <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
-                <p>The product launched to a closed beta in April 2025. Early user feedback was positive - the experience was described as feeling distinctly different from other finance apps they had tried, which was exactly the signal we had been designing toward.</p>
-              </div>
-            </section>
-
-            {/* Reflections */}
-            <section id="reflections" className="mb-12">
-              <p className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-2">Reflections</p>
-              <h2 className="font-serif text-[1.75rem] leading-[1.2] tracking-[-0.02em] mb-4 max-w-[750px]">
-                What I&apos;d Revisit
-              </h2>
-              <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
-                <p>I&apos;d explore a different serif pairing, one optimised for readability at smaller sizes, not just editorial impact at display scale. DM Serif Display earns its place in headlines, but there are moments in the product where something with better small-size legibility would have served the user better.</p>
-              </div>
-            </section>
-
-            <div className="pt-8">
-              <BackLinkFooter />
-            </div>
-          </main>
+        <div className="mt-14">
+          <CardStack
+            label="What research showed"
+            cards={[
+              {
+                icon: Landmark,
+                image: "/images/squirll-tile-bank.jpg",
+                title: "Clinical white feels like a bank",
+                body: "Many apps defaulted to bright, sterile screens that read like a banking portal.",
+              },
+              {
+                icon: Smile,
+                image: "/images/squirll-tile-playful.jpg",
+                title: "Playful undersells the intelligence",
+                body: "Others used cheerful illustration, which made the product feel lighter than it was.",
+              },
+              {
+                icon: Sparkles,
+                image: "/images/squirll-tile-calm.jpg",
+                title: "Premium and calm was empty",
+                body: "Almost nobody occupied the quiet, premium space in between. That gap shaped everything after.",
+              },
+            ]}
+          />
         </div>
-      </div>
+
+        <div className="mt-10 md:mt-14 space-y-10">
+          <Narrow>
+            <Reveal>
+              <p className="font-serif text-[1.6rem] md:text-[1.9rem] leading-[1.25] tracking-[-0.02em]">
+                &ldquo;The product should feel like a premium spa.&rdquo;
+              </p>
+              <p className="mt-4 text-[17px] leading-relaxed text-muted-foreground">
+                I set this principle with the founders and PM before any visual work: arrive, and feel that something
+                capable is already handling things. It became the filter for every decision.
+              </p>
+            </Reveal>
+          </Narrow>
+          <Wide>
+            <FigurePair
+              images={[
+                { src: "/images/sq-6-2000.jpg", alt: "Early Squirll direction draft" },
+                { src: "/images/sq-7-2000.jpg", alt: "Second early Squirll direction draft" },
+              ]}
+              caption="Early direction drafts"
+            />
+          </Wide>
+        </div>
+
+        <Divider />
+
+        {/* 4. What we built */}
+        <div id="built" className="scroll-mt-28" aria-hidden />
+        <Beat
+          kicker="03 The solution"
+          title="A warm, dark product that signals: this is already taken care of."
+        />
+
+        <div className="mt-16 space-y-24 md:space-y-32">
+          <Stage
+            title="A dashboard that lowers your guard"
+            visual={
+              <Figure src="/images/sq-3.jpg"
+                alt="Squirll analytics dashboard" caption="Analytics line graph view" />
+            }
+          >
+            <p>
+              The glowing circle at the centre does one job: before a single number is read, it tells you this is a
+              calm place and nothing is being asked of you yet.
+            </p>
+          </Stage>
+
+          <Stage
+            title="Analytics and merchant messages"
+            visual={
+              <Figure
+                src="/images/SQ-44.jpg"
+                alt="Squirll analytics and messages screens"
+                caption="Analytics and merchant messages"
+              />
+            }
+          >
+            <p>
+              Analytics shows what you spent with no targets or warnings, so checking in never feels like a test.
+              Messages from each shop sit together, away from a busy inbox.
+            </p>
+          </Stage>
+
+          <Stage
+            title="Onboarding that moves"
+            visual={
+              <div className="space-y-6">
+                <Clip src="/images/Sq1.mp4" label="Onboarding orbital glow animation" />
+                <Clip src="/images/Sq2.mp4" label="Account linking animation" />
+              </div>
+            }
+          >
+            <p>Animated illustrations guide people through linking their accounts, with an orbital glow on entry.</p>
+          </Stage>
+
+          <Stage
+            title="Uploading a receipt"
+            visual={
+              <Figure src="/images/squirll-collage-7.jpg" alt="Receipt upload flow" caption="Uploading a receipt" />
+            }
+          >
+            <p>Snap a receipt and Squirll files it, so the app keeps doing the work in the background.</p>
+          </Stage>
+        </div>
+
+        <Divider />
+
+        {/* 5. Moments */}
+        <div id="process" className="scroll-mt-28" aria-hidden />
+        <Beat kicker="04" title="Key decisions" />
+
+        <div className="mt-16 space-y-24 md:space-y-32">
+          <Moment
+            n={1}
+            title="A palette that lowers money anxiety"
+            visual={
+              <FigurePair
+                images={[
+                  { src: "/images/sq-bl.png", alt: "Deep blue colour direction" },
+                  { src: "/images/sq-bl2.png", alt: "Warm dark palette applied" },
+                ]}
+                caption="The deep blue direction, and the warm dark palette we chose"
+              />
+            }
+          >
+            <p>
+              I brought two palettes to the team. Deep blue borrowed credibility from banks. Warm dark, near-black with
+              amber, felt like the product was on your side.
+            </p>
+            <p>
+              Research on arousal settled it: dark backgrounds lower alertness. Squirll&apos;s real competitor was the anxious mental maths people do about money, so we went warm and dark.
+            </p>
+          </Moment>
+
+          <Moment
+            n={2}
+            title="Motion and illustration"
+            visual={
+              <Figure src="/images/sq-4.jpg"
+                alt="AI insight illustration" caption="AI insight illustration" />
+            }
+          >
+            <p>
+              I also designed the motion and illustration across the app.
+            </p>
+          </Moment>
+
+          <Moment
+            n={3}
+            title="Passing AA on a warm dark palette"
+            visual={
+              <div className="flex flex-col gap-4 md:gap-6">
+                <Figure src="/images/squirll-collage-8.jpg" alt="Squirll dark interface details" />
+                <Clip src="/images/anim_SQ.mp4" label="Squirll interface animation" />
+              </div>
+            }
+          >
+            <p>
+              Warm accents on dark backgrounds are hard to get right. I ran WCAG AA checks on every text and data
+              surface, iterated most on amber at small sizes, and kept touch targets at 44px or larger.
+            </p>
+          </Moment>
+        </div>
+
+        <Divider />
+
+        {/* 6. Results */}
+        <div id="impact" className="scroll-mt-28" aria-hidden />
+        <Lede kicker="05 Outcome" statement="Early users said Squirll felt different from every finance app they had tried, which was exactly the point." />
+
+        <div className="mt-14">
+          <Results
+            label="Outcome"
+            items={[
+              {
+                icon: Rocket,
+                image: "/images/squirll-tile-beta.jpg",
+                value: "Beta",
+                label: "launched April 2025",
+                body: "Squirll opened to a closed beta with positive early feedback.",
+              },
+              {
+                icon: Award,
+                image: "/images/squirll-tile-award.jpg",
+                value: "3",
+                label: "Indigo Design Awards",
+                body: "Gold for Application, and Silver for Branding in Banking & Finance and for UX, Interface & Navigation.",
+              },
+              {
+                icon: CalendarRange,
+                image: "/images/squirll-tile-months.jpg",
+                value: "3 months",
+                label: "to build the mobile app",
+                body: "Brand, product and design system for the iOS app, designed by one designer.",
+              },
+            ]}
+          />
+        </div>
+
+        <Divider />
+
+        <div id="next" className="scroll-mt-28" aria-hidden />
+        <Narrow className="mb-12">
+          <Reveal as="p" className="text-[17px] leading-relaxed text-muted-foreground">
+            I would revisit the serif. DM Serif Display earns its place in headlines, but some moments needed a serif
+            that reads better at small sizes.
+          </Reveal>
+        </Narrow>
+
+        <div className="mt-24 md:mt-32">
+          <UpNext
+            href="/projects/conduit"
+            image="/conduit/cover.png"
+            imageAlt="A Certificate of Origin open in Conduit"
+            title="Conduit"
+            summary="Automating the customs paperwork for food importers."
+            meta={["Supply chain", "Product and design lead"]}
+          />
+        </div>
+
+        <Narrow className="mt-16">
+          <BackLinkFooter />
+        </Narrow>
+      </StoryPage>
     </div>
   )
 }
