@@ -4,7 +4,7 @@
 
 export function SegmentTable() {
   return (
-              <div className="border border-[#EBEBEB] overflow-hidden bg-white">
+              <div className="rounded-xl border border-[#EBEBEB] overflow-hidden bg-white">
                 {/* Header */}
                 <div className="grid grid-cols-[180px_1fr_1fr] border-b border-[#EBEBEB] bg-[#F5F3F0]">
                   <div className="p-4 border-r border-[#EBEBEB]" />
@@ -138,7 +138,7 @@ export function Architecture() {
 
 export function DecisionTable() {
   return (
-              <div className="border border-[#EBEBEB] overflow-hidden bg-white">
+              <div className="rounded-xl border border-[#EBEBEB] overflow-hidden bg-white">
                 <div className="grid grid-cols-[200px_1fr_1fr_1fr] border-b border-[#EBEBEB] bg-[#F5F3F0]">
                   <div className="p-4 border-r border-[#EBEBEB]" />
                   <div className="p-4 border-r border-[#EBEBEB] font-mono text-[10px] uppercase tracking-wider text-muted-foreground">Lead time</div>
