@@ -5,7 +5,7 @@ import { StoryContents } from "@/components/story-contents"
 import { StoryCursor } from "@/components/story-cursor"
 import { ScrollToTop } from "@/components/scroll-to-top"
 import { BackLinkFooter } from "@/components/back-link"
-import { CalendarRange, Contrast, Landmark, Rocket, Smile, Sparkles } from "lucide-react"
+import { Award, CalendarRange, Landmark, Rocket, Smile, Sparkles } from "lucide-react"
 import {
   StoryPage,
   StoryHero,
@@ -25,7 +25,6 @@ import {
   UpNext,
   Reveal,
   Words,
-  KeyCall,
 } from "@/components/story-case-study"
 
 export default function SquirllStory() {
@@ -67,7 +66,7 @@ export default function SquirllStory() {
           }
           stats={[
             { value: "0 → 1", label: "web and iOS" },
-            { value: "7", label: "months to beta" },
+            { value: "3", label: "months to build the mobile app" },
             { value: "1", label: "designer" },
           ]}
         />
@@ -82,19 +81,12 @@ export default function SquirllStory() {
           </p>
         </Lede>
 
-        <div className="mt-12 md:mt-16">
-          <KeyCall>
-            I set one principle with the founders, that Squirll should feel like a premium spa, and used it to
-            settle every visual debate, including warm dark over deep blue.
-          </KeyCall>
-        </div>
-
         <Divider />
 
         {/* 3. Discovery */}
         <div id="discovery" className="scroll-mt-28" aria-hidden />
         <Beat kicker="02 Research" title="Looking for the gap in personal finance">
-          <p>Before any visual direction, I audited Copilot, Monarch, YNAB and Cleo.</p>
+          <p>Before any visual direction, I ran competitor research across personal finance apps.</p>
         </Beat>
 
         <div className="mt-14">
@@ -111,7 +103,7 @@ export default function SquirllStory() {
                 icon: Smile,
                 image: "/images/squirll-tile-playful.jpg",
                 title: "Playful undersells the intelligence",
-                body: "Others leaned on cheerful illustration that made a capable product look like a toy.",
+                body: "Others used cheerful illustration, which made the product feel lighter than it was.",
               },
               {
                 icon: Sparkles,
@@ -180,15 +172,15 @@ export default function SquirllStory() {
             }
           >
             <p>
-              A sans-serif carries all functional UI. DM Serif Display appears only in titles and insight headlines, the
-              moments where the product has something to say.
+              Analytics shows total spending for any date range and splits it by category. Messages and promotions from
+              each merchant sit in one inbox, away from your email.
             </p>
           </Stage>
 
           <Stage
             title="Onboarding that moves"
             visual={
-              <div className="grid md:grid-cols-2 gap-4 md:gap-6">
+              <div className="space-y-6">
                 <Clip src="/images/Sq1.mp4" label="Onboarding orbital glow animation" />
                 <Clip src="/images/Sq2.mp4" label="Account linking animation" />
               </div>
@@ -200,10 +192,7 @@ export default function SquirllStory() {
           <Stage
             title="Uploading a receipt"
             visual={
-              <div className="space-y-6">
-                <Clip src="/images/Sq-full.mp4" label="Squirll app walkthrough" />
-                <Figure src="/images/squirll-collage-7.jpg" alt="Receipt upload flow" caption="Uploading a receipt" />
-              </div>
+              <Figure src="/images/squirll-collage-7.jpg" alt="Receipt upload flow" caption="Uploading a receipt" />
             }
           >
             <p>Snap a receipt and Squirll files it, so the app keeps doing the work in the background.</p>
@@ -289,18 +278,18 @@ export default function SquirllStory() {
                 body: "Squirll opened to a closed beta with positive early feedback.",
               },
               {
-                icon: Contrast,
-                image: "/images/squirll-tile-contrast.jpg",
-                value: "AA",
-                label: "contrast on every surface",
-                body: "Every text and data surface passed WCAG AA, with 44px minimum touch targets.",
+                icon: Award,
+                image: "/images/squirll-tile-award.jpg",
+                value: "3",
+                label: "Indigo Design Awards",
+                body: "Gold for Application, and Silver for Branding in Banking & Finance and for UX, Interface & Navigation.",
               },
               {
                 icon: CalendarRange,
                 image: "/images/squirll-tile-months.jpg",
-                value: "7 months",
-                label: "from blank page to beta",
-                body: "Brand, product and design system for web and iOS, built by one designer.",
+                value: "3 months",
+                label: "to build the mobile app",
+                body: "Brand, product and design system for the iOS app, designed by one designer.",
               },
             ]}
           />

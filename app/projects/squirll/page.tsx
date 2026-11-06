@@ -40,7 +40,7 @@ export default function SquirllCaseStudy() {
                 Squirll: Designing a budgeting app people do not quit
               </h1>
               <p className="text-[17px] leading-relaxed text-muted-foreground">
-                A 0-to-1 AI finance platform. One designer, two founders, seven months.
+                A 0-to-1 AI finance platform. One designer, two founders, a mobile app in three months.
               </p>
             </div>
 
