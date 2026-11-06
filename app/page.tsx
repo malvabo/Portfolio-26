@@ -37,14 +37,14 @@ export default function Home() {
           <AmazonSection />
         </AnimatedSection> */}
         <AnimatedSection>
+          <VeeqoSection />
+        </AnimatedSection>
+        <AnimatedSection>
           <ConduitSection />
         </AnimatedSection>
         {/* <AnimatedSection>
           <VeraSection />
         </AnimatedSection> */}
-        <AnimatedSection>
-          <VeeqoSection />
-        </AnimatedSection>
         <AnimatedSection>
           <PAASection />
         </AnimatedSection>
