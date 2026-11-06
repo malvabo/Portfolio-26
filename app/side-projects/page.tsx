@@ -4,6 +4,7 @@ import { useState } from "react"
 import Image from "next/image"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { BehaviorLibrarySection } from "@/components/behavior-library-section"
 import { X, ArrowUpRight } from "lucide-react"
 
 type Project = {
@@ -15,12 +16,6 @@ type Project = {
 }
 
 const projects: Project[] = [
-  {
-    href: "https://www.habitkit.club/",
-    image: "/images/habitkit-preview.jpg",
-    title: "Behavior Patterns",
-    description: "A library of behavior design patterns for building AI products with human psychology in mind. I'm currently developing it.",
-  },
   {
     video: "/reel.mp4",
     title: "Showreel of my products",
@@ -49,6 +44,8 @@ export default function SideProjects() {
         <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl tracking-[-0.02em] leading-[1.2] mb-8 max-w-[750px]">
           AI experiments
         </h1>
+
+        <BehaviorLibrarySection embedded />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {projects.map((p, i) => {

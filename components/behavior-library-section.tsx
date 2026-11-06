@@ -8,9 +8,11 @@ const library = {
   link: "https://www.habitkit.club/",
 }
 
-export function BehaviorLibrarySection() {
+// `embedded` drops the page-level container padding for use inside a page
+// that already provides it.
+export function BehaviorLibrarySection({ embedded = false }: { embedded?: boolean }) {
   return (
-    <section className="container mx-auto px-8 lg:px-12 pt-2 pb-12 md:pb-16">
+    <section className={embedded ? "mb-10" : "container mx-auto px-8 lg:px-12 pt-2 pb-12 md:pb-16"}>
       <div className="max-w-7xl mx-auto">
         <div
           className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-[#1e1b4b] via-[#312e81] to-[#475569] p-5 md:p-6"
