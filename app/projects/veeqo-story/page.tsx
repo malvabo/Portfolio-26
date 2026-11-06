@@ -33,6 +33,7 @@ import {
   UpNext,
   Reveal,
   Words,
+  KeyCall,
 } from "@/components/story-case-study"
 import { Architecture, BrandScheme, DecisionTable, Roadmap, SegmentTable } from "./diagrams"
 
@@ -60,7 +61,7 @@ export default function VeeqoStory() {
         <StoryHero
           image="/images/vq_cover.png"
           imageAlt="Editing an integrated packing slip in the new Veeqo document system"
-          title="Rebuilding the document system behind 50,000+ sellers"
+          title="Moving 50,000 sellers off a third-party editor"
           meta={[
             { label: "Company", value: "Veeqo · Amazon" },
             { label: "Timeline", value: "3 months" },
@@ -105,6 +106,13 @@ export default function VeeqoStory() {
           </Wide>
         </div>
 
+        <div className="mt-12 md:mt-16">
+          <KeyCall>
+            I pushed to port enterprise templates by hand in 2 weeks instead of building a 4-month migration
+            tool. We hit the deadline and kept every top account.
+          </KeyCall>
+        </div>
+
         <Divider />
 
         {/* 3. Discovery */}
@@ -124,7 +132,7 @@ export default function VeeqoStory() {
 
         <div className="mt-16">
           <CardStack
-            label="What I learned"
+            label="What research showed"
             cards={[
               {
                 icon: Building2,
@@ -273,7 +281,7 @@ export default function VeeqoStory() {
         <div className="mt-16 space-y-24 md:space-y-32">
           <Moment
             n={1}
-            title="Ruling out drag and drop"
+            title="Cutting drag and drop"
             visual={
               <FigurePair
                 images={[
@@ -296,7 +304,7 @@ export default function VeeqoStory() {
 
           <Moment
             n={2}
-            title="Choosing white-glove over automation"
+            title="Hand porting over a 4-month tool"
             visual={
               <Reveal className="max-w-[720px] mx-auto">
                 <DecisionTable />
@@ -311,7 +319,7 @@ export default function VeeqoStory() {
 
           <Moment
             n={3}
-            title="Keeping the app calm on a slow API"
+            title="Designing around a slow API"
             visual={
               <div className="grid md:grid-cols-2 gap-4 md:gap-6">
                 <Clip src="/images/skeleton.mov" label="Skeleton loading state" />
@@ -327,11 +335,10 @@ export default function VeeqoStory() {
 
           <Moment
             n={4}
-            title="Teaching an LLM our template rules"
+            title="Custom logic for non-coders"
             visual={
               <Figure
                 src="/images/aidocs.jpeg"
-                maxWidth={640}
                 alt="AI documentation and system instructions"
                 caption="The rules sellers give their AI to write templates that render"
               />

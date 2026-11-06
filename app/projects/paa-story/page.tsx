@@ -23,6 +23,7 @@ import {
   UpNext,
   Reveal,
   Words,
+  KeyCall,
 } from "@/components/story-case-study"
 
 export default function PAAStory() {
@@ -49,10 +50,10 @@ export default function PAAStory() {
         <StoryHero
           image="/images/paa_11.png"
           imageAlt="PAA clinical dashboard with pending action tiles and a message drawer"
-          title="Designing clinical intelligence at the point of care"
+          title="Helping clinicians triage in seconds"
           meta={[
             { label: "Company", value: "PAA" },
-            { label: "Timeline", value: "6 months, 2020" },
+            { label: "Timeline", value: "6 months, 2024" },
             { label: "Role", value: "Lead product designer" },
           ]}
           intro={
@@ -64,7 +65,7 @@ export default function PAAStory() {
           stats={[
             { value: "40%", label: "time saved on clinical workflows" },
             { value: "30+", label: "screen iterations" },
-            { value: "Tier-1", label: "health plan deals unlocked" },
+            { value: "Tier-1", label: "deals with Kaiser, Humana and United" },
           ]}
         />
 
@@ -89,6 +90,13 @@ export default function PAAStory() {
           </Wide>
         </div>
 
+        <div className="mt-12 md:mt-16">
+          <KeyCall>
+            If clinicians saw the AI draft first, they could change their assessment answers to get a better-
+            looking note. I made the AI write only after the assessment is locked.
+          </KeyCall>
+        </div>
+
         <Divider />
 
         {/* 3. Discovery */}
@@ -102,7 +110,7 @@ export default function PAAStory() {
 
         <div className="mt-14">
           <CardStack
-            label="What I learned"
+            label="What research showed"
             cards={[
               {
                 icon: Rows3,
@@ -215,7 +223,7 @@ export default function PAAStory() {
         <div className="mt-16 space-y-24 md:space-y-32">
           <Moment
             n={1}
-            title="From one feed to two tiers"
+            title="Splitting &ldquo;am I on fire?&rdquo; from &ldquo;what&apos;s next?&rdquo;"
             visual={
               <Figure
                 src="/images/paa-3.png"
@@ -233,7 +241,7 @@ export default function PAAStory() {
 
           <Moment
             n={2}
-            title="Letting card sorting shape the tiles"
+            title="Moving messages next to the patient"
             visual={
               <Figure
                 src="/images/paa-4.png"
@@ -243,9 +251,9 @@ export default function PAAStory() {
             }
           >
             <p>
-              The first version landed well, but the tasks weren&apos;t grouped by what mattered to clinicians. Card
-              sorting with clinical staff showed how to group them by acuity, with clear past-due markers pointing to
-              where effort should go first.
+              Requests from payers and physicians lived in a separate tab, so clinicians switched screens to
+              understand a single patient. I moved the thread into a drawer that opens beside the patient&apos;s
+              clinical data.
             </p>
           </Moment>
 
@@ -322,7 +330,7 @@ export default function PAAStory() {
             image="/images/squirll-collage-1.jpg"
             imageAlt="Squirll budgeting app screens"
             title="Squirll"
-            summary="Designing a budgeting app people do not quit."
+            summary="Designing an AI finance app from zero."
             meta={["Fintech", "Lead product designer"]}
           />
         </div>

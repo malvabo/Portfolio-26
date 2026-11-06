@@ -125,7 +125,7 @@ export function Narrow({ children, className = "" }: { children: ReactNode; clas
 
 /** Wide column for visuals */
 export function Wide({ children, className = "" }: { children: ReactNode; className?: string }) {
-  return <div className={`max-w-[1080px] mx-auto ${className}`}>{children}</div>
+  return <div className={`max-w-[788px] mx-auto ${className}`}>{children}</div>
 }
 
 export function Divider() {
@@ -210,6 +210,18 @@ export function Lede({ statement, children }: { statement: ReactNode; children?:
           {children}
         </Reveal>
       )}
+    </Narrow>
+  )
+}
+
+/** The one decision a skimming reader should not miss */
+export function KeyCall({ label = "The key call", children }: { label?: string; children: ReactNode }) {
+  return (
+    <Narrow>
+      <Reveal>
+        <Kicker>{label}</Kicker>
+        <p className="text-[1.25rem] md:text-[1.375rem] leading-[1.45] tracking-[-0.01em] text-balance">{children}</p>
+      </Reveal>
     </Narrow>
   )
 }

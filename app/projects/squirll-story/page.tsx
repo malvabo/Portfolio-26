@@ -25,6 +25,7 @@ import {
   UpNext,
   Reveal,
   Words,
+  KeyCall,
 } from "@/components/story-case-study"
 
 export default function SquirllStory() {
@@ -51,7 +52,7 @@ export default function SquirllStory() {
         <StoryHero
           image="/images/squirll-collage-1.jpg"
           imageAlt="Squirll spending analytics on a dark, warm interface"
-          title="Designing a budgeting app people don't quit"
+          title="Designing an AI finance app from zero"
           meta={[
             { label: "Company", value: "Squirll" },
             { label: "Timeline", value: "Sep 2024 - Apr 2025" },
@@ -81,6 +82,13 @@ export default function SquirllStory() {
           </p>
         </Lede>
 
+        <div className="mt-12 md:mt-16">
+          <KeyCall>
+            I set one principle with the founders, that Squirll should feel like a premium spa, and used it to
+            settle every visual debate, including warm dark over deep blue.
+          </KeyCall>
+        </div>
+
         <Divider />
 
         {/* 3. Discovery */}
@@ -91,7 +99,7 @@ export default function SquirllStory() {
 
         <div className="mt-14">
           <CardStack
-            label="What I learned"
+            label="What research showed"
             cards={[
               {
                 icon: Landmark,
@@ -152,7 +160,7 @@ export default function SquirllStory() {
             title="A dashboard that lowers your guard"
             visual={
               <Figure src="/images/sq-3.jpg"
-                maxWidth={900} alt="Squirll analytics dashboard" caption="Analytics line graph view" />
+                alt="Squirll analytics dashboard" caption="Analytics line graph view" />
             }
           >
             <p>
@@ -215,7 +223,7 @@ export default function SquirllStory() {
         <div className="mt-16 space-y-24 md:space-y-32">
           <Moment
             n={1}
-            title="Choosing warm dark over deep blue"
+            title="A palette that lowers money anxiety"
             visual={
               <FigurePair
                 images={[
@@ -240,7 +248,7 @@ export default function SquirllStory() {
             title="Saving 3D for the AI"
             visual={
               <Figure src="/images/sq-4.jpg"
-                maxWidth={900} alt="3D AI insight illustration" caption="The 3D AI insight illustration" />
+                alt="3D AI insight illustration" caption="The 3D AI insight illustration" />
             }
           >
             <p>
@@ -252,7 +260,7 @@ export default function SquirllStory() {
 
           <Moment
             n={3}
-            title="Making amber on black readable"
+            title="Passing AA on a warm dark palette"
             visual={
               <div className="grid md:grid-cols-2 gap-4 md:gap-6">
                 <Figure src="/images/squirll-collage-8.jpg" alt="Squirll dark interface details" />

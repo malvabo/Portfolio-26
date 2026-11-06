@@ -52,7 +52,7 @@ export default function ConduitStory() {
         <StoryHero
           image="/conduit/cover.png"
           imageAlt="A coffee Certificate of Origin open in Conduit, with the fields to extract listed beside it"
-          title="Automating the customs paperwork for food importers"
+          title="Automating customs paperwork for food importers"
           meta={[
             { label: "Company", value: "Conduit" },
             { label: "Timeline", value: "Four weeks" },
@@ -61,8 +61,8 @@ export default function ConduitStory() {
           intro={
             <p>
               Conduit reads supplier documents and fills in the compliance forms food importers file, following
-              the rules each customer sets. I led product and design for the four-week MVP and built its design
-              system from scratch.
+              the rules each customer sets. I led product and design for the first version, built in four weeks, and its design system from
+              scratch.
             </p>
           }
           stats={[
@@ -108,7 +108,7 @@ export default function ConduitStory() {
 
         <div className="mt-14">
           <CardStack
-            label="What I learned"
+            label="What research showed"
             cards={[
               {
                 icon: Files,
@@ -135,15 +135,14 @@ export default function ConduitStory() {
         <div className="mt-10 md:mt-14 space-y-10">
           <Narrow>
             <Reveal as="p" className="text-[17px] leading-relaxed text-muted-foreground">
-              With the founders and product partners, I mapped the journey end to end and narrowed the MVP to four jobs: extract the data, catch bad
-              documents early, flag shipments at risk and cut manual filing errors.
+              With the founders and product partners, I mapped the journey end to end and narrowed the first release
+              to four jobs: extract the data, catch bad documents early, flag shipments at risk and cut manual filing errors.
             </Reveal>
           </Narrow>
           <Wide>
             <Figure
               src="/conduit/workshop.webp"
-                maxWidth={1000}
-              alt="A service blueprint above a workshop board of sticky notes"
+                alt="A service blueprint above a workshop board of sticky notes"
               caption="Journey mapping and artifacts from the stakeholder workshops"
             />
           </Wide>
@@ -164,7 +163,6 @@ export default function ConduitStory() {
             visual={
               <Figure
                 src="/conduit/dash.png"
-                maxWidth={788}
                 alt="Inbox grouped by shipment, with documents that need review flagged"
                 caption="Inbox grouped by shipment, with the documents that need attention flagged"
               />
@@ -242,7 +240,6 @@ export default function ConduitStory() {
             visual={
               <Figure
                 src="/conduit/ideation.png"
-                maxWidth={800}
                 alt="Six inbox directions explored side by side, each annotated with why it failed"
                 caption="Inbox directions, each annotated with why it failed"
               />
@@ -261,11 +258,10 @@ export default function ConduitStory() {
 
           <Moment
             n={2}
-            title="Showing how sure Conduit is"
+            title="Confidence on every field"
             visual={
               <Figure
                 src="/conduit/states.png"
-                maxWidth={800}
                 alt="Extracted fields as confident, needs review, not found and corrected"
                 caption="The states a field can arrive in"
               />
@@ -280,11 +276,10 @@ export default function ConduitStory() {
 
           <Moment
             n={3}
-            title="Building the design system alongside the product"
+            title="A design system from day one"
             visual={
               <Figure
                 src="/conduit/ds.webp"
-                maxWidth={1000}
                 alt="The design system: foundations, motion spec, colour tokens and input states"
                 caption="Foundations, components, states and motion"
               />
@@ -292,17 +287,16 @@ export default function ConduitStory() {
           >
             <p>
               There was no design system to start from. I built the foundations, components, states and motion in
-              parallel with the product, so a four-week MVP could still scale afterwards.
+              parallel with the product, so a product built in four weeks could still scale afterwards.
             </p>
           </Moment>
 
           <Moment
             n={4}
-            title="Asking the documents questions"
+            title="Answers with their sources"
             visual={
               <Figure
                 src="/conduit/ask-1.png"
-                maxWidth={800}
                 alt="Asking Conduit a question about processed documents, with sources attached"
                 caption="Every answer arrives with the documents it came from"
               />
@@ -344,7 +338,7 @@ export default function ConduitStory() {
                 image: "/conduit/tile-team.jpg",
                 value: "5 teams",
                 label: "onboarded",
-                body: "The MVP was designed and built in four weeks, with a design system ready to grow with it.",
+                body: "Designed and built in four weeks, with a design system ready to grow with it.",
               },
             ]}
           />
