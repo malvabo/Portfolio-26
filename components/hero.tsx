@@ -42,11 +42,11 @@ export function Hero() {
       <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_360px] gap-10 lg:gap-16 items-center">
         <div className="flex flex-col">
           <div data-grid-quiet className="w-full max-w-[720px] relative z-40">
-            <h1 className="hero-reveal hero-reveal-2 font-sans text-[30px] leading-[38px] sm:text-[44px] sm:leading-[52px] font-normal tracking-[-0.025em] text-foreground relative z-10">
-              Hi, I am Mary. I enjoy designing products for complex workflows.
+            <h1 className="hero-reveal hero-reveal-2 font-sans text-[30px] leading-[38px] sm:text-[44px] sm:leading-[52px] font-normal tracking-[-0.025em] text-foreground text-balance relative z-10">
+              I&apos;m Mary, a product designer who makes complex AI workflows feel simple.
             </h1>
             <p className="hero-reveal hero-reveal-3 mt-6 font-sans text-[18px] leading-[30px] sm:text-[20px] sm:leading-[32px] font-normal tracking-[-0.01em] text-muted-foreground relative z-10">
-              Shipped 0→1 products, won{" "}
+              I&apos;ve shipped 0→1 products, won design{" "}
               <a
                 href="/images/Sq1.mp4"
                 target="_blank"
@@ -69,7 +69,7 @@ export function Hero() {
 awards <svg className="inline-block w-[0.55em] h-[0.55em] mb-[0.15em]" viewBox="0 0 10 10" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M2 8 L8 2 M4 2 L8 2 L8 6"/></svg>
                 </span>
               </a>
-              , worked with Amazon, venture studios and unicorns. By night{" "}
+              , and worked with Amazon, venture studios and unicorns. After hours I&apos;m{" "}
               <a
                 href="/nodes4.mp4"
                 target="_blank"
@@ -93,7 +93,7 @@ awards <svg className="inline-block w-[0.55em] h-[0.55em] mb-[0.15em]" viewBox="
 vibe-coding <svg className="inline-block w-[0.55em] h-[0.55em] mb-[0.15em]" viewBox="0 0 10 10" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M2 8 L8 2 M4 2 L8 2 L8 6"/></svg>
                 </span>
               </a>
-              {" "}side projects and writing talks on the future of AI products.
+              {" "}side projects and speaking about where AI products are heading.
             </p>
           </div>
         </div>
