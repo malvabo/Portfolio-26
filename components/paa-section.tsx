@@ -44,7 +44,7 @@ export function PAASection() {
             </div>
             <div>
               <div className="text-xl font-medium text-foreground mb-0.5">Tier 1 contracts</div>
-              <div className="text-sm text-muted-foreground opacity-80">signed after launch, as care teams moved from fire-fighting to proactive care</div>
+              <div className="text-sm text-muted-foreground opacity-80">signed with health systems on the back of the new offering</div>
             </div>
           </div>
         </div>

@@ -53,7 +53,14 @@ export function StoryContents({ items }: { items: ContentsItem[] }) {
       <div className="relative flex">
         {/* Rail + marker */}
         <div className="relative w-[9px] shrink-0">
-          <div className="absolute inset-y-1 left-1/2 -translate-x-1/2 w-px bg-foreground/15" />
+          {/* Rail fades in and out at both ends instead of stopping hard */}
+          <div
+            className="absolute -inset-y-6 left-1/2 -translate-x-1/2 w-px"
+            style={{
+              background:
+                "linear-gradient(to bottom, transparent, color-mix(in srgb, var(--foreground) 15%, transparent) 22%, color-mix(in srgb, var(--foreground) 15%, transparent) 78%, transparent)",
+            }}
+          />
           {marker !== null && (
             <span
               aria-hidden
