@@ -57,9 +57,8 @@ export default function PAAStory() {
           ]}
           intro={
             <p>
-              PAA is an AI platform for managing patient care after a hospital stay. I led design from a legacy product
-              with no editable designs to a dashboard clinicians could triage in seconds, plus AI documentation that
-              kept clinical data honest.
+              PAA is an AI platform for managing patient care after a hospital stay. I led design from a legacy product with no design files to a dashboard clinicians can triage in
+              seconds, and AI documentation that keeps the clinical record accurate.
             </p>
           }
           stats={[
@@ -198,7 +197,7 @@ export default function PAAStory() {
             <p>
               Clinicians used to fill in a structured assessment, then rewrite the same facts as a narrative for SNF
               qualification and payer authorization. Now the assessment produces a structured summary that follows SNF
-              criteria, ready for the clinician&apos;s judgement.
+              criteria, ready for the clinician to review and sign off.
             </p>
           </Stage>
         </div>
@@ -314,7 +313,7 @@ export default function PAAStory() {
           </Reveal>
         </Narrow>
         <Closing attribution="What I took away">
-          Clinicians don&apos;t tell you what they want. They show you where they hesitate.
+          The clearest requirements came from watching where clinicians hesitated.
         </Closing>
 
         <div className="mt-24 md:mt-32">

@@ -77,8 +77,7 @@ export default function SquirllStory() {
         <div id="problem" className="scroll-mt-28" aria-hidden />
         <Lede statement="Most people give up on budgeting apps. They feel like homework, and every screen asks you to pay attention.">
           <p>
-            Squirll&apos;s AI could do the noticing for people. The design had to make that feel true the moment the app
-            opened.
+            Squirll&apos;s AI does the noticing for you, so the design had to make that obvious from the first screen.
           </p>
         </Lede>
 
@@ -232,14 +231,13 @@ export default function SquirllStory() {
               amber, felt like the product was on your side.
             </p>
             <p>
-              Research on arousal settled it: dark backgrounds lower alertness. Squirll wasn&apos;t competing with banks.
-              It was competing with the anxious mental maths people do about money, so we went warm and dark.
+              Research on arousal settled it: dark backgrounds lower alertness. Squirll&apos;s real competitor was the anxious mental maths people do about money, so we went warm and dark.
             </p>
           </Moment>
 
           <Moment
             n={2}
-            title="3D for the AI, flat for nothing"
+            title="Saving 3D for the AI"
             visual={
               <Figure src="/images/sq-4.jpg"
                 maxWidth={900} alt="3D AI insight illustration" caption="The 3D AI insight illustration" />

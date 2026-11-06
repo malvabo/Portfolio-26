@@ -60,8 +60,9 @@ export default function ConduitStory() {
           ]}
           intro={
             <p>
-              I led product and design for Conduit, a tool that reads supplier documents and fills the compliance forms
-              importers need, on the rules each customer sets. I also built its design system from scratch.
+              Conduit reads supplier documents and fills in the compliance forms food importers file, following
+              the rules each customer sets. I led product and design for the four-week MVP and built its design
+              system from scratch.
             </p>
           }
           stats={[
@@ -75,10 +76,9 @@ export default function ConduitStory() {
 
         {/* 2. The setup */}
         <div id="problem" className="scroll-mt-28" aria-hidden />
-        <Lede statement="Every food shipment crossing a border carries a stack of certificates. Someone copies the details out of them by hand, every single time.">
+        <Lede statement="Every food shipment that crosses a border travels with a stack of certificates, and compliance teams retype the details from each one.">
           <p>
-            One wrong weight or a missing certificate number, and the shipment sits at the border while the team works
-            out what went wrong.
+            A single wrong weight or missing certificate number is enough to hold the shipment at the border.
           </p>
         </Lede>
 
@@ -114,7 +114,7 @@ export default function ConduitStory() {
                 icon: Files,
                 image: "/conduit/tile-documents.jpg",
                 title: "Hundreds of documents at once",
-                body: "Large importers receive certificates of origin and supplier documents for every shipment, all arriving at the same time.",
+                body: "Large importers receive a certificate of origin and supplier documents for every shipment, and they arrive in batches.",
               },
               {
                 icon: Keyboard,
@@ -135,9 +135,8 @@ export default function ConduitStory() {
         <div className="mt-10 md:mt-14 space-y-10">
           <Narrow>
             <Reveal as="p" className="text-[17px] leading-relaxed text-muted-foreground">
-              With the founders and product partners, I mapped the full journey and chose what to build first:
-              extracting data, spotting bad documents early, flagging shipments at risk and cutting manual filing
-              errors.
+              With the founders and product partners, I mapped the journey end to end and narrowed the MVP to four jobs: extract the data, catch bad
+              documents early, flag shipments at risk and cut manual filing errors.
             </Reveal>
           </Narrow>
           <Wide>
@@ -172,8 +171,8 @@ export default function ConduitStory() {
             }
           >
             <p>
-              Documents arrive grouped by shipment. Anything that needs a human decision, or a new file from the
-              exporter, is marked, so importers see the risky shipments at a glance.
+              Documents arrive grouped by shipment, and anything that needs a person's decision or a new file
+              from the exporter is flagged. Importers can see which shipments are at risk without opening them.
             </p>
           </Stage>
 
@@ -188,7 +187,7 @@ export default function ConduitStory() {
             }
           >
             <p>
-              Importers pick the fields to pull from each document, or start from suggested fields and adjust them.
+              Importers choose which fields to pull from each document type, or start from Conduit's suggestions and adjust them.
             </p>
           </Stage>
 
@@ -203,8 +202,7 @@ export default function ConduitStory() {
             }
           >
             <p>
-              Importers map fields directly on the form preview, do a sample run, check the result and tweak it before
-              it goes live.
+              Importers map fields directly on the form preview, test it on a sample document and adjust it before it goes live.
             </p>
           </Stage>
 

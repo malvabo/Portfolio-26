@@ -69,8 +69,8 @@ export default function VeeqoStory() {
           intro={
             <p>
               Veeqo is a multi-channel shipping platform owned by Amazon. Its UK sellers printed every document through
-              a third-party editor. I designed the replacement so the team could own it, across two very different
-              seller segments, an unstable API and a scope that kept growing.
+              a third-party editor. I designed the in-house replacement, working across two very different seller segments, an
+              unstable API and a growing scope.
             </p>
           }
           stats={[
@@ -90,8 +90,8 @@ export default function VeeqoStory() {
             vendor without a real replacement put the biggest UK accounts at risk.
           </p>
           <p>
-            We had to remove the vendor, keep those accounts, and take back control so new document types could ship
-            without waiting on anyone.
+            The goal was to switch off the vendor, keep every one of those accounts, and give the team control
+            so new document types could ship on its own timeline.
           </p>
         </Lede>
 
@@ -200,8 +200,8 @@ export default function VeeqoStory() {
             }
           >
             <p>
-              How often a field came up in tickets and interviews decided whether it made the first release. The
-              most-used fields shipped first.
+              I ranked every field by how often it came up in tickets and interviews. The most requested made
+              the first release, and edge cases followed.
             </p>
           </Stage>
 
@@ -285,7 +285,7 @@ export default function VeeqoStory() {
             }
           >
             <p>
-              Drag and drop was the obvious start. In critique it proved too costly for our engineering bandwidth, and a
+              Drag and drop was the obvious start. In critique it proved too expensive to build with the engineers we had, and a
               simple version couldn&apos;t handle enterprise complexity.
             </p>
             <p>
