@@ -58,9 +58,9 @@ export default function PAAStory() {
           intro={
             <p>
               PAA is an AI platform for managing patient care after a hospital stay. I led design from a legacy
-              product with no design files to a dashboard that shows clinicians what&apos;s urgent in seconds, and AI documentation
-              that keeps the clinical record accurate. I worked with the clinical director, operations director
-              and CTO, and owned the interaction model end to end.
+              product with no design files to a dashboard that shows clinicians what&apos;s urgent in seconds,
+              and cuts paperwork with AI that drafts reports for clinicians to check. I worked with the clinical
+              director, operations director and CTO, and owned the interaction model end to end.
             </p>
           }
           stats={[
@@ -187,7 +187,7 @@ export default function PAAStory() {
           </Stage>
 
           <Stage
-            title="Drafting reports from the assessment"
+            title="Faster reports with AI drafts"
             visual={
               <Figure
                 src="/images/paa-doc2.png"
