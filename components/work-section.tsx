@@ -7,7 +7,7 @@ export function WorkSection() {
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center gap-2 mb-2">
             <span className="uppercase text-[13px] text-muted-foreground/70 font-mono tracking-wide">
-              {"{01}"} FEATURED PROJECTS
+              FEATURED PROJECTS
             </span>
           </div>
           <div className="border-t border-gray-300" />
