@@ -54,7 +54,7 @@ export default function SquirllStory() {
           title="Designing an AI finance app from zero"
           meta={[
             { label: "Company", value: "Squirll" },
-            { label: "Timeline", value: "Sep 2024 - Apr 2025" },
+            { label: "Timeline", value: "Feb - Apr 2025" },
             { label: "Role", value: "Lead product designer" },
           ]}
           intro={
@@ -172,8 +172,12 @@ export default function SquirllStory() {
             }
           >
             <p>
-              Analytics shows total spending for any date range and splits it by category. Messages and promotions from
-              each merchant sit in one inbox, away from your email.
+              Most finance apps open on a budget you&apos;re failing. Analytics shows what you spent and where it went,
+              with no targets or warnings, so checking in never feels like a test.
+            </p>
+            <p>
+              Merchant messages follow the same idea. Offers and account emails that get lost in a busy inbox are
+              grouped by merchant inside Squirll, so everything from one shop is in one place.
             </p>
           </Stage>
 
