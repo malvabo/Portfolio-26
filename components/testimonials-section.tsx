@@ -3,6 +3,16 @@ import Image from "next/image"
 export function TestimonialsSection() {
   const testimonials = [
     {
+      title: "Drives projects to completion",
+      keyPhrase: "reduce uncertainty for everyone",
+      text: "Immerses themselves entirely in the project to drive it to completion. Works to reduce uncertainty for everyone else to understand user needs.",
+      author: "Konstantin Valiotti",
+      role: "Director of Product at PandaDoc",
+      linkedin: "#",
+      avatar:
+        "https://framerusercontent.com/images/78dofovJbAtympTLqZLY1jA24.jpeg?scale-down-to=512&width=800&height=800",
+    },
+    {
       title: "Thorough and analytical",
       keyPhrase: "push the team to build with purpose",
       text: "She questions the status quo and asks the tough questions that push the team to build with purpose.",
@@ -19,16 +29,6 @@ export function TestimonialsSection() {
       role: "Founder at Quema (presently)",
       linkedin: "#",
       avatar: "/images/kateryna-lezhukh.png",
-    },
-    {
-      title: "Drives projects to completion",
-      keyPhrase: "reduce uncertainty for everyone",
-      text: "Immerses themselves entirely in the project to drive it to completion. Works to reduce uncertainty for everyone else to understand user needs.",
-      author: "Konstantin Valiotti",
-      role: "Director of Product at PandaDoc",
-      linkedin: "#",
-      avatar:
-        "https://framerusercontent.com/images/78dofovJbAtympTLqZLY1jA24.jpeg?scale-down-to=512&width=800&height=800",
     },
   ]
 
