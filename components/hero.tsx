@@ -20,15 +20,6 @@ export function Hero() {
         .hero-reveal-2 { animation-delay: 0.15s; }
         .hero-reveal-3 { animation-delay: 0.22s; }
         .hero-reveal-4 { animation-delay: 0.3s; }
-        .workflows-hover-image {
-          opacity: 0;
-          transform: translate(-50%, -50%) scale(0.9);
-          transition: opacity 0.35s ease, transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
-        }
-        .workflows-wrap:hover .workflows-hover-image {
-          opacity: 1;
-          transform: translate(-50%, -50%) scale(1);
-        }
         .awards-hover-video {
           opacity: 0;
           transform: translate(-50%, -50%) scale(0.9);
@@ -50,29 +41,12 @@ export function Hero() {
       `}</style>
       <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_360px] gap-10 lg:gap-16 items-center">
         <div className="flex flex-col">
-          {/* Visually removed, kept for screen readers and search as the page heading. */}
-          <h1 className="sr-only">Mary Borysova, Product Design Leader</h1>
-          <div data-grid-quiet className="w-full max-w-[700px] relative z-40">
-            <p className="hero-reveal hero-reveal-2 font-sans text-[23px] leading-[34px] sm:text-[30px] sm:leading-[44px] font-normal tracking-[-0.02em] text-foreground relative z-10">
-              Designing AI products for complex{" "}
-              <span className="workflows-wrap relative inline-block cursor-pointer z-50 hover:z-[60]">
-                <span
-                  aria-hidden
-                  className="workflows-hover-image absolute left-1/2 top-1/2 w-[clamp(288px,37vw,576px)] aspect-[16/9] rounded-md overflow-hidden shadow-2xl ring-1 ring-black/10 pointer-events-none"
-                >
-                  <Image
-                    src="/amz_image.jpeg"
-                    alt=""
-                    fill
-                    sizes="720px"
-                    className="object-cover"
-                  />
-                </span>
-                <span className="relative rounded-[3px] px-[0.3em] bg-[#E8E3DD] text-[#6B5D4F] whitespace-nowrap">
-workflows <svg className="inline-block w-[0.55em] h-[0.55em] mb-[0.15em]" viewBox="0 0 10 10" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M2 8 L8 2 M4 2 L8 2 L8 6"/></svg>
-                </span>
-              </span>
-              . Shipped 0→1 products, won{" "}
+          <div data-grid-quiet className="w-full max-w-[720px] relative z-40">
+            <h1 className="hero-reveal hero-reveal-2 font-sans text-[30px] leading-[38px] sm:text-[44px] sm:leading-[52px] font-normal tracking-[-0.025em] text-foreground relative z-10">
+              Hi, I am Mary. I enjoy designing products for complex workflows.
+            </h1>
+            <p className="hero-reveal hero-reveal-3 mt-6 font-sans text-[18px] leading-[30px] sm:text-[20px] sm:leading-[32px] font-normal tracking-[-0.01em] text-muted-foreground relative z-10">
+              Shipped 0→1 products, won{" "}
               <a
                 href="/images/Sq1.mp4"
                 target="_blank"
@@ -95,9 +69,7 @@ workflows <svg className="inline-block w-[0.55em] h-[0.55em] mb-[0.15em]" viewBo
 awards <svg className="inline-block w-[0.55em] h-[0.55em] mb-[0.15em]" viewBox="0 0 10 10" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M2 8 L8 2 M4 2 L8 2 L8 6"/></svg>
                 </span>
               </a>
-              ,<br />
-              worked with Amazon, venture studios and unicorns.<br />
-              By night{" "}
+              , worked with Amazon, venture studios and unicorns. By night{" "}
               <a
                 href="/nodes4.mp4"
                 target="_blank"
