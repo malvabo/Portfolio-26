@@ -243,8 +243,8 @@ export default function VeeqoStory() {
               and invoices.
             </p>
             <p>
-              Each brand now has a default version of every document, and shows which versions apply to it. Sellers can
-              see which brands an edit will change before they make it.
+              Each brand has a default version of every document, and sellers can change which version applies to which
+              brand.
             </p>
           </Stage>
 
@@ -335,9 +335,8 @@ export default function VeeqoStory() {
             }
           >
             <p>
-              Warehouse managers aren&apos;t developers, but enterprise documents need custom logic. With the backend
-              engineers, I turned our Liquid rules and markup structure into instructions sellers can give the AI of
-              their choice, then paste the result back in.
+              Most sellers can&apos;t code, so we gave them a shortcut: a ready-made prompt for any AI tool that writes a
+              working template for them.
             </p>
             <p>That let sellers migrate on their own and cut the hands-on support we had to give.</p>
           </Moment>

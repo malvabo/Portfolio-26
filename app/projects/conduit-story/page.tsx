@@ -242,12 +242,12 @@ export default function ConduitStory() {
             }
           >
             <p>
-              The plan was for Conduit to pass or fail each document. Every importer checks different things
-              against its own policy, so one set of rules couldn&apos;t work for all of them.
+              The plan was for Conduit to pass or fail each document. Research showed that every importer
+              checks documents against its own policy. A single pass or fail rule couldn&apos;t serve them all.
             </p>
             <p>
-              I recommended letting each importer choose what to check, with Conduit reading the documents and
-              filling in the data. The founders agreed, and we built that instead.
+              I recommended letting each importer choose what to check. Conduit only extracts the data from their
+              documents and fills in the importer&apos;s forms. The founders agreed, and we built that instead.
             </p>
           </Moment>
 
