@@ -110,7 +110,7 @@ export default function PAAStory() {
                 icon: Rows3,
                 image: "/images/paa-tile-triage.jpg",
                 title: "Prioritization paralysis",
-                body: "Clinicians re-triaged their whole list at every login. Nothing separated a regulatory risk from routine work.",
+                body: "Clinicians re-sorted their whole list at every login. Nothing separated a regulatory risk from routine work.",
               },
               {
                 icon: MessagesSquare,
@@ -233,7 +233,7 @@ export default function PAAStory() {
             title="Moving messages next to the patient"
           >
             <p>
-              Requests from payers and physicians lived in a separate tab, so clinicians switched screens to
+              Requests from insurers and doctors lived in a separate tab, so clinicians switched screens to
               understand a single patient. I moved the thread into a drawer that opens beside the patient&apos;s
               clinical data.
             </p>
