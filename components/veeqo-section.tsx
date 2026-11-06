@@ -13,7 +13,7 @@ export function VeeqoSection() {
         <div className="flex gap-2 mb-3">
           <span className="inline-block px-2.5 py-0.5 text-[11px] font-mono uppercase tracking-normal rounded-md bg-[#E8E3DD] text-[#6B5D4F]">Big tech</span>
         </div>
-        <h2 className="text-2xl md:text-3xl leading-[1.1] font-serif mb-8 tracking-tight">
+        <h2 className="text-[22px] md:text-[26px] leading-[1.15] font-serif mb-8 tracking-tight">
           Amazon: Redesigning a document system for 50,000+ sellers
         </h2>
 

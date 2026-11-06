@@ -159,7 +159,7 @@ export function StoryHero({
         <Words
           as="h1"
           step={45}
-          className="font-serif text-[2rem] md:text-[2.625rem] lg:text-[3rem] leading-[1.1] tracking-[-0.025em] text-balance mb-10 md:mb-12 max-w-[760px]"
+          className="font-serif text-[1.75rem] md:text-[2.25rem] lg:text-[2.625rem] leading-[1.12] tracking-[-0.025em] text-balance mb-10 md:mb-12 max-w-[760px]"
         >
           {title}
         </Words>
