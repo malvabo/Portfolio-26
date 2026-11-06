@@ -39,7 +39,7 @@ export function SquirllSection() {
                 rel="noopener noreferrer"
                 className="text-xl font-medium text-foreground mb-0.5 hover:underline block"
               >
-                3× Indigo Awards
+                3× Design Awards
               </a>
               <div className="text-sm text-muted-foreground opacity-80">1 Gold &amp; 2 Silver: Application, Branding, UX &amp; Navigation</div>
             </div>
