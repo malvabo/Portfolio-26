@@ -1,8 +1,11 @@
 import Image from "next/image"
+import { HeroGrid } from "@/components/hero-grid"
 
 export function Hero() {
   return (
-    <section className="pt-24 pb-5 lg:pt-28 lg:pb-5 container mx-auto px-8 lg:px-12 max-w-7xl relative">
+    <div className="relative">
+    <HeroGrid />
+    <section className="pt-24 pb-5 lg:pt-28 lg:pb-5 container mx-auto px-8 lg:px-12 max-w-7xl relative z-10">
       <style>{`
         @keyframes fadeInUp {
           from { opacity: 0; transform: translateY(10px); }
@@ -49,7 +52,7 @@ export function Hero() {
         <div className="flex flex-col">
           {/* Visually removed, kept for screen readers and search as the page heading. */}
           <h1 className="sr-only">Mary Borysova, Product Design Leader</h1>
-          <div className="w-full max-w-[700px] relative z-40">
+          <div data-grid-quiet className="w-full max-w-[700px] relative z-40">
             <p className="hero-reveal hero-reveal-2 font-sans text-[23px] leading-[34px] sm:text-[30px] sm:leading-[44px] font-normal tracking-[-0.02em] text-foreground relative z-10">
               Designing AI products for complex{" "}
               <span className="workflows-wrap relative inline-block cursor-pointer z-50 hover:z-[60]">
@@ -139,5 +142,6 @@ vibe-coding <svg className="inline-block w-[0.55em] h-[0.55em] mb-[0.15em]" view
         </figure>
       </div>
     </section>
+    </div>
   )
 }
