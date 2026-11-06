@@ -145,3 +145,37 @@
   animation: hero-reveal 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.35s forwards;
   opacity: 0;
 }
+
+/* ---------- Story case study: scroll reveal ---------- */
+.story-reveal,
+.story-word {
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--d, 0ms);
+}
+.story-word {
+  display: inline-block;
+  transform: translateY(0.35em);
+}
+.story-reveal[data-shown],
+.story-words[data-shown] .story-word {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .story-reveal,
+  .story-word {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Story case study: custom cursor replaces the native one on mouse devices */
+html.story-cursor-on,
+html.story-cursor-on * {
+  cursor: none !important;
+}

@@ -51,7 +51,7 @@ export function LightboxImage({ src, alt, className, lightboxSrc, loading = "laz
           {...rest}
         />
         <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
-          <div className="flex items-center gap-1.5 bg-black/50 backdrop-blur-sm text-white/90 rounded-full px-2.5 py-1.5 text-[11px] font-medium tracking-wide">
+          <div className="flex items-center gap-1.5 bg-[#1a1a1a] text-white px-2.5 py-1.5 text-[11px] font-medium tracking-wide">
             <Maximize2 className="w-3 h-3" />
             Expand
           </div>

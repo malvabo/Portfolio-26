@@ -1,4 +1,5 @@
 import { Header } from "@/components/header"
+import { StoryCursor } from "@/components/story-cursor"
 import { Hero } from "@/components/hero"
 import { HeroPhotos } from "@/components/hero-photos"
 import { ShowreelSection } from "@/components/showreel-section"
@@ -6,7 +7,6 @@ import { AnimatedSection } from "@/components/animated-section"
 import { WorkSection } from "@/components/work-section"
 import { SquirllSection } from "@/components/squirll-section"
 import { ConduitSection } from "@/components/conduit-section"
-import { BehaviorLibrarySection } from "@/components/behavior-library-section"
 // import { PandaDocSection } from "@/components/pandadoc-section"
 import { PAASection } from "@/components/paa-section"
 import { VeeqoSection } from "@/components/veeqo-section"
@@ -20,6 +20,7 @@ import { Footer } from "@/components/footer"
 export default function Home() {
   return (
     <div className="min-h-screen">
+      <StoryCursor />
       <Header />
       <main>
         <Hero />
@@ -31,8 +32,12 @@ export default function Home() {
         <AnimatedSection>
           <WorkSection />
         </AnimatedSection>
-        <AnimatedSection>
+        {/* Hidden for now; kept to bring back later. */}
+        {/* <AnimatedSection>
           <AmazonSection />
+        </AnimatedSection> */}
+        <AnimatedSection>
+          <VeeqoSection />
         </AnimatedSection>
         <AnimatedSection>
           <ConduitSection />
@@ -40,9 +45,6 @@ export default function Home() {
         {/* <AnimatedSection>
           <VeraSection />
         </AnimatedSection> */}
-        <AnimatedSection>
-          <VeeqoSection />
-        </AnimatedSection>
         <AnimatedSection>
           <PAASection />
         </AnimatedSection>
@@ -54,9 +56,6 @@ export default function Home() {
         </AnimatedSection>
         <AnimatedSection>
           <ArticlesSection />
-        </AnimatedSection>
-        <AnimatedSection>
-          <BehaviorLibrarySection />
         </AnimatedSection>
         <AnimatedSection>
           <VisualConceptsSection />
