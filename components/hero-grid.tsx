@@ -2,18 +2,19 @@
 
 import { useEffect, useRef } from "react"
 
-// "Order from chaos": a field of tiny dashes behind the hero, each at a
-// random angle like scattered paperwork. Near the cursor they turn to point
-// at it and take a hint of the accent, then drift back to their own angle
-// once the cursor moves on. Static on touch devices and for reduced motion.
+// "Order from chaos", comet trail: a field of small dashes behind the hero,
+// each at a random angle like scattered paperwork. Near the cursor they turn
+// to point at it and warm to a light terracotta; dashes keep that colour and
+// direction for a couple of seconds after the cursor passes, leaving a trail
+// that dissolves back into chaos. Static on touch devices and reduced motion.
 
 const SPACING = 20
 const RADIUS = 170 // how far the cursor reaches, px
-const REST = [160, 155, 148] as const // resting grey
-const ACCENT = [180, 83, 42] as const // same accent as the cursor, #B4532A
+const REST = [190, 185, 178] as const // light resting grey
+const ACCENT = [214, 142, 106] as const // light terracotta, a softer tint of the cursor accent
 const TEXT_DIM = 0.75 // dashes behind the statement react a little more softly
 
-type Dash = { x: number; y: number; a0: number; a: number; e: number; dim: boolean }
+type Dash = { x: number; y: number; a0: number; a: number; e: number; m: number; dim: boolean }
 
 // Shortest turn between two line angles (a dash has no head, so π-periodic)
 function turn(a: number, b: number) {
@@ -24,10 +25,11 @@ function turn(a: number, b: number) {
 }
 
 function drawDash(ctx: CanvasRenderingContext2D, d: Dash) {
-  const e = d.e * (d.dim ? TEXT_DIM : 1)
-  const mix = (a: number, b: number) => Math.round(a + (b - a) * e)
-  ctx.strokeStyle = `rgba(${mix(REST[0], ACCENT[0])},${mix(REST[1], ACCENT[1])},${mix(REST[2], ACCENT[2])},${0.55 + e * 0.45})`
-  const half = (4 + e * 3.5) / 2
+  const m = d.m * (d.dim ? TEXT_DIM : 1)
+  const mix = (a: number, b: number) => Math.round(a + (b - a) * m)
+  ctx.strokeStyle = `rgba(${mix(REST[0], ACCENT[0])},${mix(REST[1], ACCENT[1])},${mix(REST[2], ACCENT[2])},${0.6 + m * 0.35})`
+  ctx.lineWidth = 1.3 + m * 0.5
+  const half = (4.5 + m * 4) / 2
   const ca = Math.cos(d.a) * half
   const sa = Math.sin(d.a) * half
   ctx.beginPath()
@@ -59,7 +61,6 @@ export function HeroGrid() {
 
     const draw = () => {
       ctx.clearRect(0, 0, width, height)
-      ctx.lineWidth = 1.25
       ctx.lineCap = "butt"
       for (const d of dashes) drawDash(ctx, d)
     }
@@ -89,7 +90,7 @@ export function HeroGrid() {
         for (let x = offX; x < width; x += SPACING) {
           const old = prev.get(`${x},${y}`)
           const a0 = old?.a0 ?? Math.random() * Math.PI
-          dashes.push({ x, y, a0, a: old?.a ?? a0, e: old?.e ?? 0, dim: isDim(x, y) })
+          dashes.push({ x, y, a0, a: old?.a ?? a0, e: old?.e ?? 0, m: old?.m ?? 0, dim: isDim(x, y) })
         }
       }
       draw()
@@ -109,11 +110,15 @@ export function HeroGrid() {
             target = Math.atan2(dy, dx)
           }
         }
-        d.e += (pull - d.e) * 0.1
-        const goal = d.e > 0.02 ? target : d.a0
-        const step = turn(d.a, goal) * (0.06 + d.e * 0.18)
+        d.e += (pull - d.e) * 0.18
+        // Trail memory: rises with the cursor, then fades over ~2s
+        d.m = Math.max(d.m * 0.985, d.e)
+        if (d.m < 0.004) d.m = 0
+        // Hold the cursor-facing angle while the trail lingers, then relax home
+        const goal = d.e > 0.02 ? target : d.m > 0.05 ? d.a : d.a0
+        const step = turn(d.a, goal) * (0.07 + d.e * 0.22)
         d.a += step
-        if (Math.abs(step) > 0.0005 || Math.abs(pull - d.e) > 0.003) active = true
+        if (Math.abs(step) > 0.0005 || d.m > 0 || Math.abs(pull - d.e) > 0.003) active = true
       }
       draw()
       if (active) frame = requestAnimationFrame(tick)
