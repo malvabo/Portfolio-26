@@ -118,19 +118,17 @@ export function StoryPage({ children }: { children: ReactNode }) {
   return <main className="pt-28 md:pt-32 pb-24 px-5 md:px-8">{children}</main>
 }
 
-/** Reading column: sits on the same left edge as the wide column, so the
- *  whole page reads from one line, and stops short for a comfortable measure */
+/** Reading column. Text, cards and figures all share this one column, so
+ *  the page reads from a single left edge, like a document. */
+const COLUMN = "max-w-[680px] mx-auto"
+
 export function Narrow({ children, className = "" }: { children: ReactNode; className?: string }) {
-  return (
-    <div className={`max-w-[788px] mx-auto ${className}`}>
-      <div className="max-w-[620px]">{children}</div>
-    </div>
-  )
+  return <div className={`${COLUMN} ${className}`}>{children}</div>
 }
 
-/** Wide column for visuals */
+/** Visuals use the same column */
 export function Wide({ children, className = "" }: { children: ReactNode; className?: string }) {
-  return <div className={`max-w-[788px] mx-auto ${className}`}>{children}</div>
+  return <div className={`${COLUMN} ${className}`}>{children}</div>
 }
 
 export function Divider() {
@@ -203,11 +201,11 @@ export function StoryHero({
         </div>
 
         <div className="mt-12 md:mt-16">
-          <Reveal delay={after + 80} className="text-[17px] leading-relaxed text-muted-foreground max-w-[620px]">
+          <Reveal delay={after + 80} className="text-[17px] leading-relaxed text-muted-foreground">
             {intro}
           </Reveal>
           {/* Key numbers sit in a row under the intro */}
-          <div className="grid grid-cols-3 gap-5 sm:gap-8 mt-10 max-w-[620px]">
+          <div className="grid grid-cols-3 gap-5 sm:gap-8 mt-10">
             {stats.map((s, i) => (
               <Reveal key={s.label} delay={after + 180 + i * 90}>
                 <p className={`font-serif text-[1.375rem] md:text-[1.5rem] tracking-[-0.02em] leading-none mb-1.5 ${ACCENT}`}>{s.value}</p>
@@ -402,7 +400,7 @@ export function BoxLabel({ children }: { children: ReactNode }) {
  */
 export function CardStack({ label, cards }: { label: string; cards: StoryCard[] }) {
   return (
-    <div className="max-w-[788px] mx-auto">
+    <div className={COLUMN}>
       <Reveal className="mb-8">
         <BoxLabel>{label}</BoxLabel>
       </Reveal>
@@ -554,7 +552,7 @@ export function UpNext({
   meta: string[]
 }) {
   return (
-    <div className="max-w-[788px] mx-auto">
+    <div className={COLUMN}>
       <Reveal className="mb-4">
         <BoxLabel>Up next</BoxLabel>
       </Reveal>
