@@ -118,7 +118,7 @@ export default function VeeqoStory() {
         </Beat>
 
         <div className="mt-12">
-          <Reveal className="max-w-[720px] mx-auto">
+          <Reveal>
             <SegmentTable />
           </Reveal>
         </div>
@@ -162,7 +162,7 @@ export default function VeeqoStory() {
           <Stage
             title="Two paths in one library"
             visual={
-              <Reveal className="max-w-[720px] mx-auto">
+              <Reveal>
                 <Architecture />
               </Reveal>
             }
@@ -226,7 +226,7 @@ export default function VeeqoStory() {
             title="Brands and the documents they use"
             visual={
               <div className="space-y-10">
-                <Reveal className="max-w-[720px] mx-auto">
+                <Reveal>
                   <BrandScheme />
                 </Reveal>
                 <Figure
@@ -295,7 +295,7 @@ export default function VeeqoStory() {
             n={2}
             title="Hand porting over a 4-month tool"
             visual={
-              <Reveal className="max-w-[720px] mx-auto">
+              <Reveal>
                 <DecisionTable />
               </Reveal>
             }
@@ -387,7 +387,7 @@ export default function VeeqoStory() {
         <div id="next" className="scroll-mt-28" aria-hidden />
         <Beat kicker="What's next" title="Owning the infrastructure opens the door to document intelligence." />
         <div className="mt-12 space-y-10">
-          <Reveal className="max-w-[720px] mx-auto">
+          <Reveal>
             <Roadmap />
           </Reveal>
         </div>

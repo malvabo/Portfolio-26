@@ -118,9 +118,14 @@ export function StoryPage({ children }: { children: ReactNode }) {
   return <main className="pt-28 md:pt-32 pb-24 px-5 md:px-8">{children}</main>
 }
 
-/** Narrow reading column */
+/** Reading column: sits on the same left edge as the wide column, so the
+ *  whole page reads from one line, and stops short for a comfortable measure */
 export function Narrow({ children, className = "" }: { children: ReactNode; className?: string }) {
-  return <div className={`max-w-[620px] mx-auto ${className}`}>{children}</div>
+  return (
+    <div className={`max-w-[788px] mx-auto ${className}`}>
+      <div className="max-w-[620px]">{children}</div>
+    </div>
+  )
 }
 
 /** Wide column for visuals */
@@ -303,7 +308,7 @@ export function Beat({
 
 function Caption({ children }: { children?: string }) {
   if (!children) return null
-  return <figcaption className="mt-3 text-[13px] text-muted-foreground text-center">{children}</figcaption>
+  return <figcaption className="mt-3 text-[13px] text-muted-foreground">{children}</figcaption>
 }
 
 export function Figure({
@@ -321,7 +326,7 @@ export function Figure({
   maxWidth?: number
 }) {
   return (
-    <Reveal as="figure" className={`mx-auto ${className}`} style={maxWidth ? { maxWidth } : undefined}>
+    <Reveal as="figure" className={className} style={maxWidth ? { maxWidth } : undefined}>
       <div className="rounded-xl overflow-hidden bg-[#EDE8E1] border border-foreground/[0.08]">
         <LightboxImage src={src} alt={alt} className="w-full h-auto" />
       </div>
@@ -397,7 +402,7 @@ export function BoxLabel({ children }: { children: ReactNode }) {
  */
 export function CardStack({ label, cards }: { label: string; cards: StoryCard[] }) {
   return (
-    <div className="max-w-[720px] mx-auto">
+    <div className="max-w-[788px] mx-auto">
       <Reveal className="mb-8">
         <BoxLabel>{label}</BoxLabel>
       </Reveal>
@@ -549,7 +554,7 @@ export function UpNext({
   meta: string[]
 }) {
   return (
-    <div className="max-w-[720px] mx-auto">
+    <div className="max-w-[788px] mx-auto">
       <Reveal className="mb-4">
         <BoxLabel>Up next</BoxLabel>
       </Reveal>
