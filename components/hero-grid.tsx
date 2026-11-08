@@ -2,8 +2,9 @@
 
 import { useEffect, useRef } from "react"
 
-// A field of small grey marks behind the hero. Moving the cursor wakes the
-// marks around it: they grow and take on colour, then settle back to grey.
+// A field of small grey dots behind the hero. Moving the cursor wakes the
+// dots around it: they unfold into fine coloured marks (plus signs, crosses,
+// rings, frames, ticks, corners), then settle back to grey dots.
 // Static on touch devices and for reduced-motion users.
 
 const SPACING = 34
@@ -20,28 +21,19 @@ const PALETTE: [number, number, number][] = [
   [111, 175, 123], // green
 ]
 
-type Shape = "dot" | "star4" | "star6" | "pill" | "circle"
-const SHAPES: Shape[] = ["dot", "dot", "star4", "star6", "pill", "circle"]
+// A precise, design-tool vocabulary: registration marks, rings, frames and
+// ticks, all drawn as fine strokes and kept square to the grid.
+type Shape = "dot" | "plus" | "cross" | "ring" | "square" | "tick" | "corner"
+const SHAPES: Shape[] = ["dot", "dot", "plus", "plus", "cross", "ring", "square", "tick", "corner"]
 
 type Cell = {
   x: number
   y: number
   shape: Shape
   color: [number, number, number]
-  angle: number
+  angle: number // quarter turns only, so everything stays aligned
   energy: number
   quiet: boolean // behind text: stays a faint dot so the copy stays readable
-}
-
-function star(ctx: CanvasRenderingContext2D, points: number, outer: number, inner: number) {
-  ctx.beginPath()
-  for (let i = 0; i < points * 2; i++) {
-    const r = i % 2 === 0 ? outer : inner
-    const a = (Math.PI * i) / points
-    ctx.lineTo(Math.cos(a) * r, Math.sin(a) * r)
-  }
-  ctx.closePath()
-  ctx.fill()
 }
 
 function drawCell(ctx: CanvasRenderingContext2D, c: Cell) {
@@ -50,32 +42,64 @@ function drawCell(ctx: CanvasRenderingContext2D, c: Cell) {
   const [r, g, b] = c.color
   const mix = (a: number, z: number) => Math.round(a + (z - a) * e)
   const alpha = c.quiet ? 0.25 : 0.55 + 0.4 * e
-  ctx.fillStyle = `rgba(${mix(gr, r)},${mix(gg, g)},${mix(gb, b)},${alpha})`
+  const colour = `rgba(${mix(gr, r)},${mix(gg, g)},${mix(gb, b)},${alpha})`
+  ctx.fillStyle = colour
+  ctx.strokeStyle = colour
 
   ctx.save()
   ctx.translate(c.x, c.y)
-  ctx.rotate(c.angle)
-  const s = 1.3 + e * 9 // resting size → woken size
 
+  // At rest every mark is a small dot; it unfolds into its symbol as it wakes.
   if (e < 0.05 || c.shape === "dot") {
     ctx.beginPath()
-    ctx.arc(0, 0, c.shape === "dot" ? s * 0.75 : 1.2, 0, Math.PI * 2)
+    ctx.arc(0, 0, c.shape === "dot" ? 1.1 + e * 1.6 : 1.1, 0, Math.PI * 2)
     ctx.fill()
-  } else if (c.shape === "circle") {
-    ctx.beginPath()
-    ctx.arc(0, 0, s * 0.8, 0, Math.PI * 2)
-    ctx.fill()
-  } else if (c.shape === "star4") {
-    star(ctx, 4, s * 1.2, s * 0.32)
-  } else if (c.shape === "star6") {
-    star(ctx, 6, s * 1.1, s * 0.4)
-  } else {
-    const w = s * 1.9
-    const h = s * 0.75
-    ctx.beginPath()
-    ctx.roundRect(-w / 2, -h / 2, w, h, h / 2)
-    ctx.fill()
+    ctx.restore()
+    return
   }
+
+  ctx.rotate(c.angle)
+  const s = 2 + e * 6 // half-size of the symbol
+  ctx.lineWidth = 1.4
+  ctx.lineCap = "square"
+  ctx.lineJoin = "miter"
+  ctx.beginPath()
+  switch (c.shape) {
+    case "plus":
+      ctx.moveTo(-s, 0)
+      ctx.lineTo(s, 0)
+      ctx.moveTo(0, -s)
+      ctx.lineTo(0, s)
+      break
+    case "cross": {
+      const k = s * 0.75
+      ctx.moveTo(-k, -k)
+      ctx.lineTo(k, k)
+      ctx.moveTo(k, -k)
+      ctx.lineTo(-k, k)
+      break
+    }
+    case "ring":
+      ctx.arc(0, 0, s * 0.8, 0, Math.PI * 2)
+      break
+    case "square": {
+      const k = s * 0.7
+      ctx.rect(-k, -k, k * 2, k * 2)
+      break
+    }
+    case "tick":
+      ctx.moveTo(-s, 0)
+      ctx.lineTo(s, 0)
+      break
+    case "corner": {
+      const k = s * 0.8
+      ctx.moveTo(-k, k)
+      ctx.lineTo(-k, -k)
+      ctx.lineTo(k, -k)
+      break
+    }
+  }
+  ctx.stroke()
   ctx.restore()
 }
 
@@ -131,7 +155,7 @@ export function HeroGrid() {
             y,
             shape: SHAPES[Math.floor(Math.random() * SHAPES.length)],
             color: PALETTE[Math.floor(Math.random() * PALETTE.length)],
-            angle: Math.random() * Math.PI,
+            angle: (Math.floor(Math.random() * 4) * Math.PI) / 2,
             energy: 0,
             quiet: isQuiet(x, y),
           })
