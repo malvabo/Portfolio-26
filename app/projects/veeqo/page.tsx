@@ -63,7 +63,7 @@ export default function VeeqoStory() {
           meta={[
             { label: "Company", value: "Veeqo · Amazon" },
             { label: "Timeline", value: "3 months" },
-            { label: "Role", value: "Leading design, documents project" },
+            { label: "Role", value: "Design lead" },
             { label: "Team", value: "10 people" },
           ]}
           intro={
