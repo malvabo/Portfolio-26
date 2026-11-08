@@ -8,8 +8,8 @@ import { useEffect, useRef } from "react"
 // once the cursor moves on. Static on touch devices and for reduced motion.
 
 const SPACING = 20
-const RADIUS = 150 // how far the cursor reaches, px
-const REST = [176, 172, 166] as const // resting grey
+const RADIUS = 170 // how far the cursor reaches, px
+const REST = [160, 155, 148] as const // resting grey
 const ACCENT = [180, 83, 42] as const // same accent as the cursor, #B4532A
 const TEXT_DIM = 0.75 // dashes behind the statement react a little more softly
 
@@ -25,9 +25,9 @@ function turn(a: number, b: number) {
 
 function drawDash(ctx: CanvasRenderingContext2D, d: Dash) {
   const e = d.e * (d.dim ? TEXT_DIM : 1)
-  const mix = (a: number, b: number) => Math.round(a + (b - a) * e * 0.85)
-  ctx.strokeStyle = `rgba(${mix(REST[0], ACCENT[0])},${mix(REST[1], ACCENT[1])},${mix(REST[2], ACCENT[2])},${0.4 + e * 0.45})`
-  const half = (3 + e * 2.5) / 2
+  const mix = (a: number, b: number) => Math.round(a + (b - a) * e)
+  ctx.strokeStyle = `rgba(${mix(REST[0], ACCENT[0])},${mix(REST[1], ACCENT[1])},${mix(REST[2], ACCENT[2])},${0.55 + e * 0.45})`
+  const half = (4 + e * 3.5) / 2
   const ca = Math.cos(d.a) * half
   const sa = Math.sin(d.a) * half
   ctx.beginPath()
@@ -59,7 +59,7 @@ export function HeroGrid() {
 
     const draw = () => {
       ctx.clearRect(0, 0, width, height)
-      ctx.lineWidth = 1
+      ctx.lineWidth = 1.25
       ctx.lineCap = "butt"
       for (const d of dashes) drawDash(ctx, d)
     }
