@@ -2,40 +2,30 @@
 
 import { useEffect, useRef } from "react"
 
-// "Order from chaos", comet trail: a field of small dashes behind the hero,
-// each at a random angle like scattered paperwork. Near the cursor they turn
-// to point at it and warm to a light terracotta; dashes keep that colour and
-// direction for a couple of seconds after the cursor passes, leaving a trail
-// that dissolves back into chaos. Static on touch devices and reduced motion.
+// A field of small grey squares behind the hero. The squares around the
+// cursor grow and take on the cursor's accent colour; they stay lit while the cursor
+// rests and fade back once it moves away or leaves the hero.
+// Static on touch devices and for reduced-motion users.
 
-const SPACING = 20
-const RADIUS = 170 // how far the cursor reaches, px
-const REST = [190, 185, 178] as const // light resting grey
-const ACCENT = [214, 142, 106] as const // light terracotta, a softer tint of the cursor accent
-const TEXT_DIM = 0.75 // dashes behind the statement react a little more softly
+const SPACING = 24
+const RADIUS = 140 // how far the cursor reaches, px
+const EASE_IN = 0.18 // how quickly squares light up (per frame)
+const EASE_OUT = 0.06 // how quickly they fade back (per frame)
+const REST = [176, 172, 166] as const // resting grey
+const INK = [180, 83, 42] as const // the story cursor's accent square, #B4532A
+const TEXT_DIM = 0.75 // behind the statement squares light up at reduced strength
 
-type Dash = { x: number; y: number; a0: number; a: number; e: number; m: number; dim: boolean }
+type Cell = { x: number; y: number; energy: number; target: number; dim: boolean; jitter: number }
 
-// Shortest turn between two line angles (a dash has no head, so π-periodic)
-function turn(a: number, b: number) {
-  let d = (b - a) % Math.PI
-  if (d > Math.PI / 2) d -= Math.PI
-  if (d < -Math.PI / 2) d += Math.PI
-  return d
-}
-
-function drawDash(ctx: CanvasRenderingContext2D, d: Dash) {
-  const m = d.m * (d.dim ? TEXT_DIM : 1)
-  const mix = (a: number, b: number) => Math.round(a + (b - a) * m)
-  ctx.strokeStyle = `rgba(${mix(REST[0], ACCENT[0])},${mix(REST[1], ACCENT[1])},${mix(REST[2], ACCENT[2])},${0.6 + m * 0.35})`
-  ctx.lineWidth = 1.3 + m * 0.5
-  const half = (4.5 + m * 4) / 2
-  const ca = Math.cos(d.a) * half
-  const sa = Math.sin(d.a) * half
-  ctx.beginPath()
-  ctx.moveTo(d.x - ca, d.y - sa)
-  ctx.lineTo(d.x + ca, d.y + sa)
-  ctx.stroke()
+function drawCell(ctx: CanvasRenderingContext2D, c: Cell) {
+  const e = Math.min(1, c.energy) * (c.dim ? TEXT_DIM : 1)
+  const mix = (a: number, z: number) => Math.round(a + (z - a) * e)
+  ctx.fillStyle = `rgba(${mix(REST[0], INK[0])},${mix(REST[1], INK[1])},${mix(REST[2], INK[2])},${0.4 + 0.5 * e})`
+  // 1.5px at rest, up to ~3.5px fully lit; jitter keeps the edge of the patch organic.
+  const size = 1.5 + e * (1.6 + c.jitter * 0.6)
+  const half = size / 2
+  // Sharp squares, like the cursor.
+  ctx.fillRect(c.x - half, c.y - half, size, size)
 }
 
 export function HeroGrid() {
@@ -51,19 +41,12 @@ export function HeroGrid() {
     const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches
     const interactive = finePointer && !reduceMotion
 
-    let dashes: Dash[] = []
+    let cells: Cell[] = []
     let width = 0
     let height = 0
     let frame = 0
     let running = false
     let pointer: { x: number; y: number } | null = null
-    let lastClient: { x: number; y: number } | null = null
-
-    const draw = () => {
-      ctx.clearRect(0, 0, width, height)
-      ctx.lineCap = "butt"
-      for (const d of dashes) drawDash(ctx, d)
-    }
 
     const build = () => {
       const rect = canvas.getBoundingClientRect()
@@ -74,6 +57,7 @@ export function HeroGrid() {
       canvas.height = Math.round(height * dpr)
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
 
+      // Squares behind the statement (data-grid-quiet) light up more softly.
       const pad = 10
       const dimRects = Array.from(document.querySelectorAll<HTMLElement>("[data-grid-quiet]")).map((el) => {
         const r = el.getBoundingClientRect()
@@ -81,44 +65,34 @@ export function HeroGrid() {
       })
       const isDim = (x: number, y: number) => dimRects.some((q) => x > q.l && x < q.r && y > q.t && y < q.b)
 
-      // Keep each dash's resting angle across resizes so the field doesn't reshuffle
-      const prev = new Map(dashes.map((d) => [`${d.x},${d.y}`, d]))
-      dashes = []
+      const prev = new Map(cells.map((c) => [`${c.x},${c.y}`, c.energy]))
+      cells = []
       const offX = (width % SPACING) / 2 + SPACING / 2
       const offY = (height % SPACING) / 2 + SPACING / 2
       for (let y = offY; y < height; y += SPACING) {
         for (let x = offX; x < width; x += SPACING) {
-          const old = prev.get(`${x},${y}`)
-          const a0 = old?.a0 ?? Math.random() * Math.PI
-          dashes.push({ x, y, a0, a: old?.a ?? a0, e: old?.e ?? 0, m: old?.m ?? 0, dim: isDim(x, y) })
+          cells.push({ x, y, energy: prev.get(`${x},${y}`) ?? 0, target: 0, dim: isDim(x, y), jitter: Math.random() })
         }
       }
       draw()
     }
 
+    const draw = () => {
+      ctx.clearRect(0, 0, width, height)
+      for (const c of cells) drawCell(ctx, c)
+    }
+
     const tick = () => {
       let active = false
-      for (const d of dashes) {
-        let target = d.a0
-        let pull = 0
+      for (const c of cells) {
         if (pointer) {
-          const dx = pointer.x - d.x
-          const dy = pointer.y - d.y
-          const dist = Math.hypot(dx, dy)
-          if (dist < RADIUS) {
-            pull = 1 - dist / RADIUS
-            target = Math.atan2(dy, dx)
-          }
-        }
-        d.e += (pull - d.e) * 0.18
-        // Trail memory: rises with the cursor, then fades over ~2s
-        d.m = Math.max(d.m * 0.985, d.e)
-        if (d.m < 0.004) d.m = 0
-        // Hold the cursor-facing angle while the trail lingers, then relax home
-        const goal = d.e > 0.02 ? target : d.m > 0.05 ? d.a : d.a0
-        const step = turn(d.a, goal) * (0.07 + d.e * 0.22)
-        d.a += step
-        if (Math.abs(step) > 0.0005 || d.m > 0 || Math.abs(pull - d.e) > 0.003) active = true
+          const d = Math.hypot(c.x - pointer.x, c.y - pointer.y)
+          c.target = d < RADIUS ? (1 - d / RADIUS) ** 1.6 : 0
+        } else c.target = 0
+        const rate = c.target > c.energy ? EASE_IN : EASE_OUT
+        c.energy += (c.target - c.energy) * rate
+        if (Math.abs(c.target - c.energy) > 0.003) active = true
+        else c.energy = c.target
       }
       draw()
       if (active) frame = requestAnimationFrame(tick)
@@ -132,6 +106,7 @@ export function HeroGrid() {
       }
     }
 
+    let lastClient: { x: number; y: number } | null = null
     const locate = (clientX: number, clientY: number) => {
       const rect = canvas.getBoundingClientRect()
       const x = clientX - rect.left
@@ -145,6 +120,7 @@ export function HeroGrid() {
       lastClient = { x: e.clientX, y: e.clientY }
       locate(e.clientX, e.clientY)
     }
+    // Scrolling moves the hero under a still cursor, so re-aim the patch.
     const onScroll = () => {
       if (lastClient) locate(lastClient.x, lastClient.y)
     }
