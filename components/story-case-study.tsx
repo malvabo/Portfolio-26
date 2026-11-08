@@ -197,11 +197,12 @@ export function StoryHero({
           </Reveal>
         </div>
 
-        <div className="mt-12 md:mt-16 grid md:grid-cols-[1fr_200px] gap-10 md:gap-16">
-          <Reveal delay={after + 80} className="text-[17px] leading-relaxed text-muted-foreground">
+        <div className="mt-12 md:mt-16">
+          <Reveal delay={after + 80} className="text-[17px] leading-relaxed text-muted-foreground max-w-[620px]">
             {intro}
           </Reveal>
-          <div className="grid grid-cols-3 md:grid-cols-1 gap-5 md:gap-6">
+          {/* Key numbers sit in a row under the intro */}
+          <div className="grid grid-cols-3 gap-5 sm:gap-8 mt-10 max-w-[620px]">
             {stats.map((s, i) => (
               <Reveal key={s.label} delay={after + 180 + i * 90}>
                 <p className={`font-serif text-[1.375rem] md:text-[1.5rem] tracking-[-0.02em] leading-none mb-1.5 ${ACCENT}`}>{s.value}</p>
