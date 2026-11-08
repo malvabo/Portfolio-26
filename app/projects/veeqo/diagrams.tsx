@@ -162,74 +162,105 @@ export function DecisionTable() {
 }
 
 export function BrandScheme() {
+  // Before: two disconnected tools, with brand documents scattered like loose notes.
+  // After: one library where each document carries the brands tied to it.
+  const notes = [
+    { text: "Invoice · Dior Spring", bg: "#F6B98F", rot: "-4deg" },
+    { text: "Return label · Chanel Spring", bg: "#A9C8F5", rot: "3deg" },
+    { text: "Shipping label · Perfumes Summer", bg: "#CDB6F2", rot: "-2deg" },
+    { text: "Invoice · Dior Winter?", bg: "#F5B3CF", rot: "4deg" },
+  ]
+  const library = [
+    { label: "Invoice", brands: ["Dior Spring", "Dior Summer", "Dior Winter"] },
+    { label: "Shipping label", brands: ["Dior Spring", "Chanel"] },
+    { label: "Return label", brands: ["Dior Spring"] },
+  ]
+  const DocIcon = () => (
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden>
+      <path d="M3 1.5h5l3 3v8H3z" stroke="currentColor" strokeWidth="1.2" strokeLinejoin="round" />
+      <path d="M8 1.5v3h3M5 7.5h4M5 9.5h4" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
+    </svg>
+  )
+
   return (
-                  <div className="rounded-xl bg-[#F5F3F0] p-5">
-                    <div className="grid grid-cols-1 md:grid-cols-[1fr_40px_1fr] gap-3 items-stretch">
+    <div className="relative rounded-lg overflow-hidden">
+      {/* Cardboard stage */}
+      <img src="/images/veeqo-tile-sellers.jpg" alt="" aria-hidden className="absolute inset-0 w-full h-full object-cover" />
+      <div className="absolute inset-0 bg-black/25" aria-hidden />
 
-                      {/* Before */}
-                      <div className="flex flex-col">
-                        <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-2">Before</p>
-                        {/* Amazon simple settings */}
-                        <div className="border border-[#EBEBEB] rounded-xl p-4 bg-white mb-2">
-                          <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-2">Amazon</p>
-                          <div className="border border-[#EBEBEB] rounded-lg p-3 bg-[#F5F3F0] space-y-1.5">
-                            {["Invoice", "Shipping label", "Return label"].map((doc) => (
-                              <div key={doc} className="text-[13px] text-muted-foreground">{doc}</div>
-                            ))}
-                          </div>
-                        </div>
-                        {/* Plus connector */}
-                        <div className="flex justify-center my-2 text-muted-foreground/40">
-                          <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
-                            <path d="M5 1v8M1 5h8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-                          </svg>
-                        </div>
-                        {/* 3rd party tool */}
-                        <div className="border border-dashed border-red-200 rounded-xl p-4 bg-white flex-1">
-                          <p className="font-mono text-[10px] uppercase tracking-wider text-red-400 mb-2">3rd party tool · External</p>
-                          <div className="border border-red-100 rounded-lg p-3 bg-red-50/20 space-y-1.5">
-                            {["Invoice Dior Spring", "Return label Chanel Spring", "Shipping label Perfumes Summer"].map((doc) => (
-                              <div key={doc} className="text-[13px] text-muted-foreground">{doc}</div>
-                            ))}
-                            <div className="text-[13px] text-muted-foreground/40">···</div>
-                          </div>
-                        </div>
-                      </div>
+      <div className="relative grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-4 md:gap-3 items-center p-4 sm:p-6 md:p-8">
+        {/* Before */}
+        <div className="bg-white rounded-md border border-black/10 shadow-[0_8px_24px_rgba(0,0,0,0.18)] p-4 self-stretch">
+          <div className="flex items-center gap-2 mb-1">
+            <span className="bg-black text-white font-mono text-[10px] uppercase tracking-wider px-1.5 py-0.5 leading-none">Before</span>
+          </div>
+          <p className="font-serif text-[1.125rem] tracking-[-0.01em] mb-4">Two tools, nothing linked</p>
 
-                      {/* Arrow */}
-                      <div className="hidden md:flex items-center justify-center pt-10">
-                        <svg width="32" height="16" viewBox="0 0 32 16" fill="none">
-                          <path d="M0 8h26M20 2l6 6-6 6" stroke="#D1D5DB" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                        </svg>
-                      </div>
+          <div className="rounded border border-black/10 bg-[#F5F3F0] p-3 mb-3">
+            <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-2">Amazon settings</p>
+            {["Invoice", "Shipping label", "Return label"].map((d) => (
+              <div key={d} className="flex items-center gap-2 text-[13px] text-muted-foreground py-0.5">
+                <DocIcon />
+                {d}
+              </div>
+            ))}
+          </div>
 
-                      {/* After */}
-                      <div className="flex flex-col">
-                        <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-2">After</p>
-                        <div className="border border-emerald-200 rounded-xl p-4 bg-emerald-50/30 flex-1">
-                          <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-3">Document library</p>
-                          <div className="border border-emerald-100 rounded-lg p-3 bg-emerald-50/30 space-y-2">
-                            {[
-                              { label: "Invoice", brands: ["Dior Spring", "Dior Summer", "Dior Winter"] },
-                              { label: "Shipping label", brands: ["Dior Spring", "Chanel"] },
-                              { label: "Return label", brands: ["Dior Spring"] },
-                            ].map(({ label, brands }) => (
-                              <div key={label} className="rounded-lg bg-white border border-emerald-100 p-2.5">
-                                <p className="text-[13px] font-medium text-foreground mb-1">{label}</p>
-                                <p className="text-[11px] text-muted-foreground mb-1.5">Brands tied to it</p>
-                                <div className="flex flex-wrap gap-1">
-                                  {brands.map((b) => (
-                                    <span key={b} className="text-[11px] px-1.5 py-0.5 rounded-md bg-emerald-50 border border-emerald-100 text-muted-foreground">{b}</span>
-                                  ))}
-                                </div>
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                      </div>
+          <div className="rounded border border-dashed border-[#B4532A]/50 p-3 pb-4">
+            <p className="font-mono text-[10px] uppercase tracking-wider text-[#B4532A] mb-3">3rd party tool · external</p>
+            <div className="flex flex-col items-start gap-1.5">
+              {notes.map((n, i) => (
+                <span
+                  key={n.text}
+                  className="text-[12px] font-medium text-black/80 px-2.5 py-1.5 shadow-[0_2px_6px_rgba(0,0,0,0.12)]"
+                  style={{ background: n.bg, transform: `rotate(${n.rot})`, marginLeft: `${(i % 2) * 18}px` }}
+                >
+                  {n.text}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
 
-                    </div>
-                  </div>
+        {/* Arrow badge */}
+        <div className="flex justify-center">
+          <span className="grid place-items-center w-10 h-10 rounded-full bg-white shadow-[0_4px_14px_rgba(0,0,0,0.2)] rotate-90 md:rotate-0">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden>
+              <path d="M3 9h12M10 4l5 5-5 5" stroke="#B4532A" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </span>
+        </div>
+
+        {/* After */}
+        <div className="bg-white rounded-md border border-black/10 shadow-[0_8px_24px_rgba(0,0,0,0.18)] p-4 self-stretch">
+          <div className="flex items-center gap-2 mb-1">
+            <span className="bg-[#B4532A] text-white font-mono text-[10px] uppercase tracking-wider px-1.5 py-0.5 leading-none">After</span>
+          </div>
+          <p className="font-serif text-[1.125rem] tracking-[-0.01em] mb-4">One document library</p>
+
+          <div className="space-y-3">
+            {library.map(({ label, brands }) => (
+              <div key={label}>
+                <div className="flex items-center gap-2 text-[13px] font-medium">
+                  <span className="grid place-items-center w-6 h-6 rounded bg-[#B4532A]/10 text-[#B4532A]">
+                    <DocIcon />
+                  </span>
+                  {label}
+                </div>
+                {/* Brands hang off the document they belong to */}
+                <div className="ml-3 pl-4 border-l border-black/15 pt-1.5 flex flex-wrap gap-1">
+                  {brands.map((b) => (
+                    <span key={b} className="text-[11px] px-1.5 py-0.5 rounded border border-black/10 bg-[#F5F3F0] text-foreground/80">
+                      {b}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
   )
 }
 
