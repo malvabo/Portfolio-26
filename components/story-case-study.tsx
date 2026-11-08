@@ -152,46 +152,64 @@ export function StoryHero({
   stats: Stat[]
 }) {
   // Title words take roughly words × step; the rest follows just after
-  const after = Math.min(title.split(" ").length * 45, 500)
+  const after = 200 + Math.min(title.split(" ").length * 45, 500)
   return (
     <header>
-      <Wide>
-        <Words
-          as="h1"
-          step={45}
-          className="font-serif text-[1.75rem] md:text-[2.25rem] lg:text-[2.625rem] leading-[1.12] tracking-[-0.025em] text-balance mb-10 md:mb-12 max-w-[760px]"
-        >
-          {title}
-        </Words>
+      {/* Cover first, wider than the reading column (but clear of the contents list on
+          wide screens); the title card overlaps its lower edge */}
+      <Reveal className="max-w-[1100px] xl:max-w-[min(1100px,calc(100vw-400px))] mx-auto rounded-lg overflow-hidden bg-[#EDE8E1] border border-foreground/[0.08]">
+        <LightboxImage src={image} alt={imageAlt} className="w-full h-auto" loading="eager" />
+      </Reveal>
 
-        <div className="grid md:grid-cols-[200px_1fr] gap-10 md:gap-16">
-          <Reveal as="dl" delay={after} className="space-y-6">
+      <Wide className="relative z-10 -mt-16 sm:-mt-24 md:-mt-32">
+        <div className="rounded-lg bg-white border border-foreground/[0.1] p-6 md:p-8 mx-3 sm:mx-0">
+          <Words
+            as="h1"
+            step={45}
+            delay={200}
+            className="font-serif text-[1.625rem] md:text-[2.125rem] leading-[1.2] tracking-[-0.02em] text-balance"
+          >
+            {title}
+          </Words>
+
+          {/* Hand-drawn wavy rule between the title and the facts */}
+          <div
+            aria-hidden
+            className="h-[6px] my-6 md:my-7 opacity-30"
+            style={{
+              backgroundImage:
+                "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='6' viewBox='0 0 12 6'%3E%3Cpath d='M0 3 Q3 0 6 3 T12 3' fill='none' stroke='%23000' stroke-width='1'/%3E%3C/svg%3E\")",
+              backgroundRepeat: "repeat-x",
+            }}
+          />
+
+          <Reveal
+            as="dl"
+            delay={after}
+            className={`grid grid-cols-2 ${meta.length === 3 ? "md:grid-cols-3" : "md:grid-cols-4"} gap-x-6 gap-y-5`}
+          >
             {meta.map((m) => (
               <div key={m.label}>
-                <dt className="text-[13px] text-muted-foreground mb-1">{m.label}</dt>
-                <dd className="font-mono text-[12px] uppercase tracking-wider">{m.value}</dd>
+                <dt className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-1.5">{m.label}</dt>
+                <dd className="text-[15px] leading-snug">{m.value}</dd>
               </div>
             ))}
           </Reveal>
-
-          <div>
-            <Reveal delay={after + 80} className="text-[17px] leading-relaxed text-muted-foreground max-w-[560px]">
-              {intro}
-            </Reveal>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 sm:gap-6 mt-10 max-w-[560px]">
-              {stats.map((s, i) => (
-                <Reveal key={s.label} delay={after + 180 + i * 90}>
-                  <p className={`font-serif text-[1.75rem] md:text-[2rem] tracking-[-0.02em] leading-none mb-2 ${ACCENT}`}>{s.value}</p>
-                  <p className="text-[13px] leading-snug text-muted-foreground">{s.label}</p>
-                </Reveal>
-              ))}
-            </div>
-          </div>
         </div>
 
-        <Reveal delay={after + 300} className="rounded-xl overflow-hidden bg-[#EDE8E1] border border-foreground/[0.08] mt-14 md:mt-20">
-          <LightboxImage src={image} alt={imageAlt} className="w-full h-auto" loading="eager" />
-        </Reveal>
+        <div className="mt-12 md:mt-16 grid md:grid-cols-[1fr_200px] gap-10 md:gap-16">
+          <Reveal delay={after + 80} className="text-[17px] leading-relaxed text-muted-foreground">
+            {intro}
+          </Reveal>
+          <div className="grid grid-cols-3 md:grid-cols-1 gap-5 md:gap-6">
+            {stats.map((s, i) => (
+              <Reveal key={s.label} delay={after + 180 + i * 90}>
+                <p className={`font-serif text-[1.375rem] md:text-[1.5rem] tracking-[-0.02em] leading-none mb-1.5 ${ACCENT}`}>{s.value}</p>
+                <p className="text-[13px] leading-snug text-muted-foreground">{s.label}</p>
+              </Reveal>
+            ))}
+          </div>
+        </div>
       </Wide>
     </header>
   )
@@ -483,8 +501,8 @@ export function Results({
         title: (
           <>
             {/* One typeface per line: the label stays in the serif of the value. */}
-            <span className={`font-serif text-[1.6rem] tracking-[-0.02em] ${ACCENT}`}>{r.value}</span>{" "}
-            <span className="font-serif text-[1.6rem] tracking-[-0.02em]">{r.label}</span>
+            <span className={`font-serif text-[1.25rem] md:text-[1.375rem] tracking-[-0.015em] ${ACCENT}`}>{r.value}</span>{" "}
+            <span className="font-serif text-[1.25rem] md:text-[1.375rem] tracking-[-0.015em]">{r.label}</span>
           </>
         ),
         body: r.body,
