@@ -223,7 +223,7 @@ export function Lede({ kicker, statement, children }: { kicker?: string; stateme
   return (
     <Narrow>
       {kicker && <Reveal><Kicker>{kicker}</Kicker></Reveal>}
-      <Words className="text-[1.6rem] md:text-[2rem] leading-[1.3] tracking-[-0.015em] text-balance">{statement}</Words>
+      <Words className="font-serif text-[1.6rem] md:text-[2rem] leading-[1.25] tracking-[-0.02em] text-balance">{statement}</Words>
       {children && (
         <Reveal delay={after} className="mt-6 space-y-4 text-[17px] leading-relaxed text-muted-foreground">
           {children}
@@ -286,7 +286,7 @@ export function Beat({
       <div id={id}>
         <Reveal>
           {kicker && <Kicker>{kicker}</Kicker>}
-          <h2 className="text-[1.5rem] md:text-[1.75rem] leading-[1.25] tracking-[-0.015em] text-balance">{title}</h2>
+          <h2 className="font-serif text-[1.5rem] md:text-[1.75rem] leading-[1.2] tracking-[-0.02em] text-balance">{title}</h2>
         </Reveal>
         {children && (
           <Reveal delay={120} className="mt-4 space-y-4 text-[17px] leading-relaxed text-muted-foreground">
@@ -429,7 +429,7 @@ export function CardStack({ label, cards }: { label: string; cards: StoryCard[] 
                   </div>
                 </div>
                 <div className="px-6 py-6 sm:px-8 sm:py-7 flex flex-col justify-center">
-                  <h3 className="text-[1.25rem] font-medium tracking-[-0.01em] mb-2">{c.title}</h3>
+                  <h3 className="font-serif text-[1.25rem] tracking-[-0.015em] mb-2">{c.title}</h3>
                   <p className="text-[16px] leading-relaxed text-muted-foreground">{c.body}</p>
                 </div>
               </Reveal>
@@ -446,7 +446,7 @@ export function Stage({ title, children, visual }: { title: string; children: Re
   return (
     <div className="space-y-8 md:space-y-10">
       <Narrow>
-        <Reveal as="h3" className="text-[1.25rem] tracking-[-0.01em] mb-3">
+        <Reveal as="h3" className="font-serif text-[1.25rem] md:text-[1.375rem] tracking-[-0.015em] mb-3">
           {title}
         </Reveal>
         <Reveal delay={100} className="space-y-4 text-[17px] leading-relaxed text-muted-foreground">
@@ -473,7 +473,7 @@ export function Moment({
     <div className="space-y-8 md:space-y-10">
       <Narrow>
         <Reveal>
-          <h3 className="text-[1.25rem] tracking-[-0.01em] mb-3">{title}</h3>
+          <h3 className="font-serif text-[1.25rem] md:text-[1.375rem] tracking-[-0.015em] mb-3">{title}</h3>
         </Reveal>
         <Reveal delay={100} className="space-y-4 text-[17px] leading-relaxed text-muted-foreground">
           {children}
