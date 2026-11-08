@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { LightboxImage } from "@/components/lightbox-image"
 
 const VEEQO_IMAGES = [
   { src: "/images/vq1.png", alt: "Veeqo document library redesign", width: 3792, height: 2272 },
@@ -72,13 +73,10 @@ export function VeeqoSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {VEEQO_IMAGES.map((image, idx) => (
             <div key={idx} className="relative aspect-[4/3] overflow-hidden rounded-lg bg-gray-50 border border-gray-200">
-              <img
+              <LightboxImage
                 src={image.src}
                 alt={image.alt}
-                width={image.width}
-                height={image.height}
                 className="absolute inset-0 h-full w-full object-cover"
-                loading="lazy"
               />
             </div>
           ))}

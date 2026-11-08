@@ -1,3 +1,5 @@
+import { LightboxImage } from "@/components/lightbox-image"
+
 // Product compositions supplied as finished images, each already on its own
 // background, so the tile just holds them edge to edge.
 const CONDUIT_IMAGES = [
@@ -79,11 +81,10 @@ export function ConduitSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {CONDUIT_IMAGES.map((image, idx) => (
             <div key={idx} className="relative aspect-[16/10] overflow-hidden rounded-lg bg-gray-50 border border-gray-200">
-              <img
+              <LightboxImage
                 src={image.src}
                 alt={image.alt}
                 className="absolute inset-0 h-full w-full object-cover"
-                loading="lazy"
               />
             </div>
           ))}
