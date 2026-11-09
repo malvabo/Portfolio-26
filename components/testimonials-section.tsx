@@ -48,7 +48,7 @@ export function TestimonialsSection() {
   }
 
   return (
-    <section className="relative pt-8 md:pt-0 pb-8 md:pb-10 container mx-auto px-8 lg:px-12 overflow-hidden">
+    <section className="relative pt-10 md:pt-7 pb-8 md:pb-10 container mx-auto px-8 lg:px-12 overflow-hidden">
       <div className="relative max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {testimonials.map((testimonial, index) => (
