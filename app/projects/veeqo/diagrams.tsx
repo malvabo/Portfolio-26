@@ -111,14 +111,14 @@ export function Architecture() {
         <Tag>Before</Tag>
         <CardTitle>Settings here, editing elsewhere</CardTitle>
         <div className="rounded border border-black/10 bg-[#F5F3F0] p-3 mb-3">
-          <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-2">Amazon settings</p>
+          <p className="text-[13px] font-medium text-foreground/70 mb-2">Amazon settings</p>
           <div className="flex items-center gap-2 text-[13px] text-muted-foreground">
             <Toggle />
             Documents on / off
           </div>
         </div>
         <div className="rounded border border-dashed border-[#B4532A]/50 p-3 pb-4">
-          <p className="font-mono text-[10px] uppercase tracking-wider text-[#B4532A] mb-3">3rd party tool · external</p>
+          <p className="text-[13px] font-medium text-[#B4532A] mb-3">Third-party tool, outside Amazon</p>
           <span
             className="inline-block text-[12px] font-medium text-black/80 px-2.5 py-1.5 shadow-[0_2px_6px_rgba(0,0,0,0.12)]"
             style={{ background: "#F6B98F", transform: "rotate(-3deg)" }}
@@ -248,7 +248,7 @@ export function BrandScheme() {
           <p className="font-serif text-[1.125rem] tracking-[-0.01em] mb-4">Two tools, nothing linked</p>
 
           <div className="rounded border border-black/10 bg-[#F5F3F0] p-3 mb-3">
-            <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-2">Amazon settings</p>
+            <p className="text-[13px] font-medium text-foreground/70 mb-2">Amazon settings</p>
             {["Invoice", "Shipping label", "Return label"].map((d) => (
               <div key={d} className="flex items-center gap-2 text-[13px] text-muted-foreground py-0.5">
                 <DocIcon />
@@ -258,7 +258,7 @@ export function BrandScheme() {
           </div>
 
           <div className="rounded border border-dashed border-[#B4532A]/50 p-3 pb-4">
-            <p className="font-mono text-[10px] uppercase tracking-wider text-[#B4532A] mb-3">3rd party tool · external</p>
+            <p className="text-[13px] font-medium text-[#B4532A] mb-3">Third-party tool, outside Amazon</p>
             <div className="flex flex-col items-start gap-1.5">
               {notes.map((n, i) => (
                 <span
