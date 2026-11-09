@@ -12,7 +12,21 @@ const EASE = "cubic-bezier(0.22, 1, 0.36, 1)"
  * hover or keyboard focus, and a dot marks the section in view.
  */
 export function StoryContents({ items }: { items: ContentsItem[] }) {
-  const [open, setOpen] = useState(false)
+  const [hovered, setOpen] = useState(false)
+  // On arrival the panel opens for about a second, then folds away, so it's
+  // clear the line on the left can be expanded. Skipped for reduced motion.
+  const [peek, setPeek] = useState(false)
+  const open = hovered || peek
+
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return
+    const show = window.setTimeout(() => setPeek(true), 700)
+    const hide = window.setTimeout(() => setPeek(false), 2000)
+    return () => {
+      window.clearTimeout(show)
+      window.clearTimeout(hide)
+    }
+  }, [])
   const [active, setActive] = useState(items[0]?.id)
   const [size, setSize] = useState({ w: 0, h: 0 })
   const [marker, setMarker] = useState(0)
