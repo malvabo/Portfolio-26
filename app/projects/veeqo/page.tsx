@@ -380,7 +380,7 @@ export default function VeeqoStory() {
                 icon: Layers,
                 image: "/images/veeqo-tile-tickets.jpg",
                 value: "30%",
-                label: "fewer how-to tickets",
+                label: "fewer support tickets",
                 body: "Compared with support volume on the legacy editor.",
               },
             ]}
