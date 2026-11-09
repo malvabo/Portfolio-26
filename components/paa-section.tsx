@@ -39,12 +39,12 @@ export function PAASection() {
           </h3>
           <div className="space-y-4">
             <div>
-              <div className="text-xl font-medium text-foreground mb-0.5">40%</div>
-              <div className="text-sm text-muted-foreground opacity-80">less time clinicians spend finding patient status</div>
+              <div className="text-xl font-medium text-foreground mb-0.5">~$14M a year</div>
+              <div className="text-sm text-muted-foreground opacity-80">in clinician time, from 40% less time answering document requests</div>
             </div>
             <div>
-              <div className="text-xl font-medium text-foreground mb-0.5">Tier 1 contracts</div>
-              <div className="text-sm text-muted-foreground opacity-80">signed with health systems on the back of the new offering</div>
+              <div className="text-xl font-medium text-foreground mb-0.5">Tier-1 deals</div>
+              <div className="text-sm text-muted-foreground opacity-80">with insurers Kaiser, Humana and United Healthcare</div>
             </div>
           </div>
         </div>
@@ -52,7 +52,7 @@ export function PAASection() {
         <div>
           <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">Role</h3>
           <div className="text-base leading-relaxed text-foreground space-y-0.5">
-            <p>Lead Designer</p>
+            <p>Lead product designer</p>
             <p>6 months, 2024</p>
             <div className="flex flex-wrap gap-1.5 mt-2">
               {["Web", "Dashboard"].map((platform) => (

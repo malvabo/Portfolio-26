@@ -34,8 +34,8 @@ export function SquirllSection() {
               <div className="text-sm text-muted-foreground opacity-80">1 Gold &amp; 2 Silver: Application, Branding, UX &amp; Navigation</div>
             </div>
             <div>
-              <div className="text-xl font-medium text-foreground mb-0.5">12 weeks</div>
-              <div className="text-sm text-muted-foreground opacity-80">to launch the application</div>
+              <div className="text-xl font-medium text-foreground mb-0.5">3 months</div>
+              <div className="text-sm text-muted-foreground opacity-80">to build the mobile app</div>
             </div>
           </div>
         </div>
@@ -43,7 +43,7 @@ export function SquirllSection() {
         <div>
           <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">Role</h3>
           <div className="text-base leading-relaxed text-foreground space-y-0.5">
-            <p>Lead Product Designer</p>
+            <p>Lead product designer</p>
             <p>3 months, 2025</p>
             <div className="flex flex-wrap gap-1.5 mt-2">
               {["Web", "iOS"].map((platform) => (

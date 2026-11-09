@@ -50,7 +50,7 @@ export default function SquirllStory() {
         <StoryHero
           image="/images/squirll-collage-1.jpg"
           imageAlt="Squirll spending analytics on a dark, warm interface"
-          title="Designing an AI finance app from zero"
+          title="Squirll: Turning receipts into insights with AI"
           meta={[
             { label: "Company", value: "Squirll" },
             { label: "Timeline", value: "3 months, 2025" },

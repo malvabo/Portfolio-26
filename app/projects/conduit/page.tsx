@@ -5,7 +5,7 @@ import { ScrollToTop } from "@/components/scroll-to-top"
 import { BackLinkFooter } from "@/components/back-link"
 import { StoryContents } from "@/components/story-contents"
 import { StoryCursor } from "@/components/story-cursor"
-import { Coins, Files, Keyboard, OctagonAlert, Timer, Users } from "lucide-react"
+import { Banknote, Coins, Files, Keyboard, OctagonAlert, Timer, Users } from "lucide-react"
 import {
   StoryPage,
   StoryHero,
@@ -326,6 +326,13 @@ export default function ConduitStory() {
                 value: "1-3 min",
                 label: "to verify a shipment",
                 body: "Down from 20 minutes, saving up to two hours per shipment once pipelines replaced manual checks.",
+              },
+              {
+                icon: Banknote,
+                image: "/conduit/tile-sacks.jpg",
+                value: "$1.3M",
+                label: "a year saved in compliance work",
+                body: "Across the 5 importer organisations using it, from fewer manual checks and filing errors.",
               },
               {
                 icon: Coins,

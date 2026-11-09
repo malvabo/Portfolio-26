@@ -47,7 +47,7 @@ export default function PAAStory() {
         <StoryHero
           image="/images/paa_11.png"
           imageAlt="PAA clinical dashboard with pending action tiles and a message drawer"
-          title="Helping clinicians see what's urgent in seconds"
+          title="PAA: Scaling clinical efficiency through AI-driven workflows"
           meta={[
             { label: "Company", value: "PAA" },
             { label: "Timeline", value: "6 months, 2024" },
@@ -281,9 +281,9 @@ export default function PAAStory() {
               {
                 icon: Timer,
                 image: "/images/paa-tile-time.jpg",
-                value: "40%",
-                label: "time saved",
-                body: "Measured after launch on answering document requests.",
+                value: "~$14M",
+                label: "a year in clinician time",
+                body: "40% less time answering document requests. Across 1,000+ staff who spent about 30% of their week on them, at $60 an hour, that adds up to roughly $14M a year.",
               },
               {
                 icon: Handshake,
