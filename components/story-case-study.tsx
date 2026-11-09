@@ -380,15 +380,18 @@ export function FigurePair({
   images,
   caption,
   aspect,
+  stacked = false,
 }: {
   images: { src: string; alt: string }[]
   caption?: string
   /** Fixed tile shape, e.g. "3/2". Leave out to keep the images' own height. */
   aspect?: string
+  /** One above the other instead of side by side */
+  stacked?: boolean
 }) {
   return (
     <figure>
-      <div className="grid md:grid-cols-2 gap-4 md:gap-6">
+      <div className={`grid gap-4 md:gap-6 ${stacked ? "" : "md:grid-cols-2"}`}>
         {images.map((img, i) => (
           <Reveal
             key={img.src}
@@ -473,7 +476,7 @@ export function CardStack({ label, cards }: { label: string; cards: StoryCard[] 
                   </div>
                 </div>
                 <div className="px-6 py-6 sm:px-8 sm:py-7 flex flex-col justify-center">
-                  <h3 className="font-serif text-[1.25rem] tracking-[-0.015em] mb-2">{c.title}</h3>
+                  <h3 className="font-serif text-[1.125rem] tracking-[-0.01em] leading-snug mb-2">{c.title}</h3>
                   <p className="text-[16px] leading-relaxed text-muted-foreground">{c.body}</p>
                 </div>
               </Reveal>
@@ -547,8 +550,8 @@ export function Results({
         title: (
           <>
             {/* One typeface per line: the label stays in the serif of the value. */}
-            <span className={`font-serif text-[1.25rem] md:text-[1.375rem] tracking-[-0.015em] ${ACCENT}`}>{r.value}</span>{" "}
-            <span className="font-serif text-[1.25rem] md:text-[1.375rem] tracking-[-0.015em]">{r.label}</span>
+            <span className="font-serif text-[1.125rem] tracking-[-0.01em]">{r.value}</span>{" "}
+            <span className="font-serif text-[1.125rem] tracking-[-0.01em]">{r.label}</span>
           </>
         ),
         body: r.body,

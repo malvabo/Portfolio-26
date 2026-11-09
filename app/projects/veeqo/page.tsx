@@ -270,6 +270,7 @@ export default function VeeqoStory() {
             title="Cutting drag and drop"
             visual={
               <FigurePair
+                stacked
                 images={[
                   { src: "/images/vq-doc12.png", alt: "Drag-and-drop editor exploration" },
                   { src: "/images/vq-doc8.png", alt: "Early ideation drafts" },
