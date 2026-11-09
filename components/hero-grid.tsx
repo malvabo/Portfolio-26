@@ -2,105 +2,38 @@
 
 import { useEffect, useRef } from "react"
 
-// A field of small grey dots behind the hero. Moving the cursor wakes the
-// dots around it: they unfold into fine coloured marks (plus signs, crosses,
-// rings, frames, ticks, corners), then settle back to grey dots.
-// Static on touch devices and for reduced-motion users.
+// "Order from chaos": a field of tiny dashes behind the hero, each at a
+// random angle like scattered paperwork. Near the cursor they turn to point
+// at it and take a hint of the accent, then drift back to their own angle
+// once the cursor moves on. Static on touch devices and for reduced motion.
 
-const SPACING = 34
-const RADIUS = 170 // how far the cursor reaches, px
-const DECAY = 0.94 // per frame; lower settles faster
-const BASE_GREY = [168, 162, 155] as const
-const PALETTE: [number, number, number][] = [
-  [139, 127, 214], // lavender
-  [95, 168, 160], // teal
-  [214, 138, 107], // terracotta
-  [199, 162, 74], // ochre
-  [107, 143, 194], // blue
-  [197, 122, 154], // rose
-  [111, 175, 123], // green
-]
+const SPACING = 20
+const RADIUS = 150 // how far the cursor reaches, px
+const REST = [176, 172, 166] as const // resting grey
+const ACCENT = [180, 83, 42] as const // same accent as the cursor, #B4532A
+const TEXT_DIM = 0.75 // dashes behind the statement react a little more softly
 
-// A precise, design-tool vocabulary: registration marks, rings, frames and
-// ticks, all drawn as fine strokes and kept square to the grid.
-type Shape = "dot" | "plus" | "cross" | "ring" | "square" | "tick" | "corner"
-const SHAPES: Shape[] = ["dot", "dot", "plus", "plus", "cross", "ring", "square", "tick", "corner"]
+type Dash = { x: number; y: number; a0: number; a: number; e: number; dim: boolean }
 
-type Cell = {
-  x: number
-  y: number
-  shape: Shape
-  color: [number, number, number]
-  angle: number // quarter turns only, so everything stays aligned
-  energy: number
-  quiet: boolean // behind text: stays a faint dot so the copy stays readable
+// Shortest turn between two line angles (a dash has no head, so π-periodic)
+function turn(a: number, b: number) {
+  let d = (b - a) % Math.PI
+  if (d > Math.PI / 2) d -= Math.PI
+  if (d < -Math.PI / 2) d += Math.PI
+  return d
 }
 
-function drawCell(ctx: CanvasRenderingContext2D, c: Cell) {
-  const e = Math.min(1, c.energy)
-  const [gr, gg, gb] = BASE_GREY
-  const [r, g, b] = c.color
-  const mix = (a: number, z: number) => Math.round(a + (z - a) * e)
-  const alpha = c.quiet ? 0.25 : 0.55 + 0.4 * e
-  const colour = `rgba(${mix(gr, r)},${mix(gg, g)},${mix(gb, b)},${alpha})`
-  ctx.fillStyle = colour
-  ctx.strokeStyle = colour
-
-  ctx.save()
-  ctx.translate(c.x, c.y)
-
-  // At rest every mark is a small dot; it unfolds into its symbol as it wakes.
-  if (e < 0.05 || c.shape === "dot") {
-    ctx.beginPath()
-    ctx.arc(0, 0, c.shape === "dot" ? 1.1 + e * 1.6 : 1.1, 0, Math.PI * 2)
-    ctx.fill()
-    ctx.restore()
-    return
-  }
-
-  ctx.rotate(c.angle)
-  const s = 2 + e * 6 // half-size of the symbol
-  ctx.lineWidth = 1.4
-  ctx.lineCap = "square"
-  ctx.lineJoin = "miter"
+function drawDash(ctx: CanvasRenderingContext2D, d: Dash) {
+  const e = d.e * (d.dim ? TEXT_DIM : 1)
+  const mix = (a: number, b: number) => Math.round(a + (b - a) * e * 0.85)
+  ctx.strokeStyle = `rgba(${mix(REST[0], ACCENT[0])},${mix(REST[1], ACCENT[1])},${mix(REST[2], ACCENT[2])},${0.4 + e * 0.45})`
+  const half = (3 + e * 2.5) / 2
+  const ca = Math.cos(d.a) * half
+  const sa = Math.sin(d.a) * half
   ctx.beginPath()
-  switch (c.shape) {
-    case "plus":
-      ctx.moveTo(-s, 0)
-      ctx.lineTo(s, 0)
-      ctx.moveTo(0, -s)
-      ctx.lineTo(0, s)
-      break
-    case "cross": {
-      const k = s * 0.75
-      ctx.moveTo(-k, -k)
-      ctx.lineTo(k, k)
-      ctx.moveTo(k, -k)
-      ctx.lineTo(-k, k)
-      break
-    }
-    case "ring":
-      ctx.arc(0, 0, s * 0.8, 0, Math.PI * 2)
-      break
-    case "square": {
-      const k = s * 0.7
-      ctx.rect(-k, -k, k * 2, k * 2)
-      break
-    }
-    case "tick":
-      ctx.moveTo(-s, 0)
-      ctx.lineTo(s, 0)
-      break
-    case "corner": {
-      const k = s * 0.8
-      ctx.moveTo(-k, k)
-      ctx.lineTo(-k, -k)
-      ctx.lineTo(k, -k)
-      break
-    }
-  }
+  ctx.moveTo(d.x - ca, d.y - sa)
+  ctx.lineTo(d.x + ca, d.y + sa)
   ctx.stroke()
-  ctx.restore()
 }
 
 export function HeroGrid() {
@@ -116,12 +49,20 @@ export function HeroGrid() {
     const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches
     const interactive = finePointer && !reduceMotion
 
-    let cells: Cell[] = []
+    let dashes: Dash[] = []
     let width = 0
     let height = 0
     let frame = 0
     let running = false
-    let pointer: { x: number; y: number; px: number; py: number } | null = null
+    let pointer: { x: number; y: number } | null = null
+    let lastClient: { x: number; y: number } | null = null
+
+    const draw = () => {
+      ctx.clearRect(0, 0, width, height)
+      ctx.lineWidth = 1
+      ctx.lineCap = "butt"
+      for (const d of dashes) drawDash(ctx, d)
+    }
 
     const build = () => {
       const rect = canvas.getBoundingClientRect()
@@ -132,81 +73,61 @@ export function HeroGrid() {
       canvas.height = Math.round(height * dpr)
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
 
-      // Marks behind the statement stay still so the copy reads cleanly. Measure each
-      // rendered line of text, not the whole wrapper: the wrapper is wider than the
-      // lines, and using it left a dead strip to the right of the text.
       const pad = 10
-      const quietRects: { l: number; t: number; r: number; b: number }[] = []
+      // Soften only the dashes directly behind each line of text, not the whole
+      // (wider) text block, so the space right of the copy reacts fully
+      const dimRects: { l: number; t: number; r: number; b: number }[] = []
       for (const el of Array.from(document.querySelectorAll<HTMLElement>("[data-grid-quiet]"))) {
         const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT)
-        const lines: DOMRect[] = []
         for (let n = walker.nextNode(); n; n = walker.nextNode()) {
           if (!n.textContent?.trim()) continue
           const range = document.createRange()
           range.selectNodeContents(n)
-          lines.push(...Array.from(range.getClientRects()))
-        }
-        for (const r of lines) {
-          if (r.width < 1 || r.height < 1) continue
-          quietRects.push({
-            l: r.left - rect.left - pad,
-            t: r.top - rect.top - pad,
-            r: r.right - rect.left + pad,
-            b: r.bottom - rect.top + pad,
-          })
+          for (const r of Array.from(range.getClientRects())) {
+            if (r.width < 1 || r.height < 1) continue
+            dimRects.push({ l: r.left - rect.left - pad, t: r.top - rect.top - pad, r: r.right - rect.left + pad, b: r.bottom - rect.top + pad })
+          }
         }
       }
-      const isQuiet = (x: number, y: number) => quietRects.some((q) => x > q.l && x < q.r && y > q.t && y < q.b)
+      const isDim = (x: number, y: number) => dimRects.some((q) => x > q.l && x < q.r && y > q.t && y < q.b)
 
-      cells = []
+      // Keep each dash's resting angle across resizes so the field doesn't reshuffle
+      const prev = new Map(dashes.map((d) => [`${d.x},${d.y}`, d]))
+      dashes = []
       const offX = (width % SPACING) / 2 + SPACING / 2
       const offY = (height % SPACING) / 2 + SPACING / 2
       for (let y = offY; y < height; y += SPACING) {
         for (let x = offX; x < width; x += SPACING) {
-          cells.push({
-            x,
-            y,
-            shape: SHAPES[Math.floor(Math.random() * SHAPES.length)],
-            color: PALETTE[Math.floor(Math.random() * PALETTE.length)],
-            angle: (Math.floor(Math.random() * 4) * Math.PI) / 2,
-            energy: 0,
-            quiet: isQuiet(x, y),
-          })
+          const old = prev.get(`${x},${y}`)
+          const a0 = old?.a0 ?? Math.random() * Math.PI
+          dashes.push({ x, y, a0, a: old?.a ?? a0, e: old?.e ?? 0, dim: isDim(x, y) })
         }
       }
       draw()
-    }
-
-    const draw = () => {
-      ctx.clearRect(0, 0, width, height)
-      for (const c of cells) drawCell(ctx, c)
     }
 
     const tick = () => {
-      let awake = false
-      if (pointer) {
-        // Faster movement wakes the field more, like stirring water.
-        const speed = Math.min(1, Math.hypot(pointer.x - pointer.px, pointer.y - pointer.py) / 25)
-        pointer.px = pointer.x
-        pointer.py = pointer.y
-        if (speed > 0.01) {
-          for (const c of cells) {
-            const d = Math.hypot(c.x - pointer.x, c.y - pointer.y)
-            if (d < RADIUS && !c.quiet) {
-              const push = (1 - d / RADIUS) ** 2 * speed * 0.8
-              c.energy = Math.min(1.2, c.energy + push)
-            }
+      let active = false
+      for (const d of dashes) {
+        let target = d.a0
+        let pull = 0
+        if (pointer) {
+          const dx = pointer.x - d.x
+          const dy = pointer.y - d.y
+          const dist = Math.hypot(dx, dy)
+          if (dist < RADIUS) {
+            pull = 1 - dist / RADIUS
+            target = Math.atan2(dy, dx)
           }
         }
-      }
-      for (const c of cells) {
-        if (c.energy > 0.002) {
-          c.energy *= DECAY
-          awake = true
-        } else c.energy = 0
+        d.e += (pull - d.e) * 0.1
+        const goal = d.e > 0.02 ? target : d.a0
+        const step = turn(d.a, goal) * (0.06 + d.e * 0.18)
+        d.a += step
+        if (Math.abs(step) > 0.0005 || Math.abs(pull - d.e) > 0.003) active = true
       }
       draw()
-      if (awake) frame = requestAnimationFrame(tick)
+      if (active) frame = requestAnimationFrame(tick)
       else running = false
     }
 
@@ -217,31 +138,47 @@ export function HeroGrid() {
       }
     }
 
-    const onMove = (e: PointerEvent) => {
+    const locate = (clientX: number, clientY: number) => {
       const rect = canvas.getBoundingClientRect()
-      const x = e.clientX - rect.left
-      const y = e.clientY - rect.top
-      if (x < 0 || y < 0 || x > rect.width || y > rect.height) {
-        pointer = null
-        return
-      }
-      pointer = pointer ? { ...pointer, x, y } : { x, y, px: x, py: y }
+      const x = clientX - rect.left
+      const y = clientY - rect.top
+      const inside = x >= 0 && y >= 0 && x <= rect.width && y <= rect.height
+      if (!inside && !pointer) return
+      pointer = inside ? { x, y } : null
+      start()
+    }
+    const onMove = (e: PointerEvent) => {
+      lastClient = { x: e.clientX, y: e.clientY }
+      locate(e.clientX, e.clientY)
+    }
+    const onScroll = () => {
+      if (lastClient) locate(lastClient.x, lastClient.y)
+    }
+    const onLeave = () => {
+      lastClient = null
+      pointer = null
       start()
     }
 
     build()
     const ro = new ResizeObserver(build)
     ro.observe(canvas)
-    // Line breaks settle once the fonts and the text's fade-in have finished; measure again then
+    // Line breaks settle once fonts load and the text fades in; measure again then
     document.fonts?.ready.then(build)
     const settle = window.setTimeout(build, 900)
-    if (interactive) window.addEventListener("pointermove", onMove, { passive: true })
+    if (interactive) {
+      window.addEventListener("pointermove", onMove, { passive: true })
+      window.addEventListener("scroll", onScroll, { passive: true })
+      document.documentElement.addEventListener("pointerleave", onLeave)
+    }
 
     return () => {
       cancelAnimationFrame(frame)
       window.clearTimeout(settle)
       ro.disconnect()
       window.removeEventListener("pointermove", onMove)
+      window.removeEventListener("scroll", onScroll)
+      document.documentElement.removeEventListener("pointerleave", onLeave)
     }
   }, [])
 
@@ -251,11 +188,8 @@ export function HeroGrid() {
       aria-hidden
       className="absolute inset-0 w-full h-full pointer-events-none"
       style={{
-        // Calmer behind the statement, fading out at the top and bottom edges.
-        maskImage:
-          "linear-gradient(to bottom, transparent 0, #000 12%, #000 85%, transparent 100%)",
-        WebkitMaskImage:
-          "linear-gradient(to bottom, transparent 0, #000 12%, #000 85%, transparent 100%)",
+        maskImage: "linear-gradient(to bottom, transparent 0, #000 12%, #000 85%, transparent 100%)",
+        WebkitMaskImage: "linear-gradient(to bottom, transparent 0, #000 12%, #000 85%, transparent 100%)",
       }}
     />
   )
