@@ -118,7 +118,7 @@ export default function VeeqoStory() {
         </Beat>
 
         <div className="mt-12">
-          <Reveal className="max-w-[680px] mx-auto">
+          <Reveal className="max-w-[920px] mx-auto">
             <SegmentTable />
           </Reveal>
         </div>
@@ -386,7 +386,7 @@ export default function VeeqoStory() {
         <div id="next" className="scroll-mt-28" aria-hidden />
         <Beat kicker="What's next" title="Owning the infrastructure opens the door to document intelligence." />
         <div className="mt-12 space-y-10">
-          <Reveal className="max-w-[680px] mx-auto">
+          <Reveal className="max-w-[920px] mx-auto">
             <Roadmap />
           </Reveal>
         </div>

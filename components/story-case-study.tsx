@@ -145,9 +145,12 @@ export function Narrow({ children, className = "" }: { children: ReactNode; clas
   return <div className={`${COLUMN} ${className}`}>{children}</div>
 }
 
-/** Visuals use the same column */
+/** Visuals: images, tables and diagrams break out wider than the text,
+ *  centred on the same axis, so they have room to read at a glance */
+const WIDE = "max-w-[920px] mx-auto"
+
 export function Wide({ children, className = "" }: { children: ReactNode; className?: string }) {
-  return <div className={`${COLUMN} ${className}`}>{children}</div>
+  return <div className={`${WIDE} ${className}`}>{children}</div>
 }
 
 export function Divider() {
@@ -197,7 +200,7 @@ export function StoryHero({
         />
       </Reveal>
 
-      <Wide className="relative z-10 -mt-16 sm:-mt-24 md:-mt-40">
+      <div className={`${COLUMN} relative z-10 -mt-16 sm:-mt-24 md:-mt-40`}>
         <div className="rounded-lg bg-white border border-foreground/[0.1] p-6 md:p-8 mx-3 sm:mx-0">
           <Words
             as="h1"
@@ -253,7 +256,7 @@ export function StoryHero({
             ))}
           </div>
         </div>
-      </Wide>
+      </div>
     </header>
     </InHero.Provider>
   )
@@ -364,7 +367,7 @@ export function Figure({
   maxWidth?: number
 }) {
   return (
-    <Reveal as="figure" className={className} style={maxWidth ? { maxWidth } : undefined}>
+    <Reveal as="figure" className={`mx-auto ${className}`} style={maxWidth ? { maxWidth } : undefined}>
       <div className="rounded-xl overflow-hidden bg-[#EDE8E1] border border-foreground/[0.08]">
         <LightboxImage src={src} alt={alt} className="w-full h-auto" />
       </div>
