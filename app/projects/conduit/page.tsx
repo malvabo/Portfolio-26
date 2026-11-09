@@ -161,9 +161,9 @@ export default function ConduitStory() {
             title="Monitoring"
             visual={
               <Figure
-                src="/conduit/dash.png"
-                alt="Inbox grouped by shipment, with documents that need review flagged"
-                caption="Inbox grouped by shipment, with the documents that need attention flagged"
+                src="/conduit/dash.png" maxWidth={788}
+                alt="Inbox listing each shipment's documents with their status, type and source"
+                caption="Every document's status, type and source at a glance"
               />
             }
           >
@@ -236,7 +236,7 @@ export default function ConduitStory() {
               title="Dropping the rules engine"
               visual={
                 <Figure
-                  src="/conduit/inbox-by-shipment.png"
+                  src="/conduit/inbox-by-shipment.png" maxWidth={729}
                   alt="Inbox with one row per shipment and a column per document type, each marked clear or needs review"
                   caption="Inbox grouped by shipment, with the documents that need attention flagged"
                 />
@@ -263,7 +263,7 @@ export default function ConduitStory() {
             title="Confidence on every field"
             visual={
               <Figure
-                src="/conduit/states.png"
+                src="/conduit/states.png" maxWidth={800}
                 alt="Extracted fields as confident, needs review, not found and corrected"
                 caption="The states a field can arrive in"
               />
@@ -298,7 +298,7 @@ export default function ConduitStory() {
             title="Answers with their sources"
             visual={
               <Figure
-                src="/conduit/ask-1.png"
+                src="/conduit/ask-1.png" maxWidth={800}
                 alt="Asking Conduit a question about processed documents, with sources attached"
                 caption="Every answer arrives with the documents it came from"
               />

@@ -149,7 +149,7 @@ export default function SquirllStory() {
           <Stage
             title="A dashboard that lowers your guard"
             visual={
-              <Figure src="/images/sq-3.jpg"
+              <Figure src="/images/sq-3.jpg" maxWidth={900}
                 alt="Squirll analytics dashboard" caption="Analytics line graph view" />
             }
           >
@@ -225,7 +225,7 @@ export default function SquirllStory() {
             n={2}
             title="Motion and illustration"
             visual={
-              <Figure src="/images/sq-4.jpg"
+              <Figure src="/images/sq-4.jpg" maxWidth={900}
                 alt="AI insight illustration" caption="AI insight illustration" />
             }
           >
