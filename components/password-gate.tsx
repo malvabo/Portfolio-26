@@ -12,22 +12,36 @@ interface PasswordGateProps {
   title?: string
 }
 
+// Remember the unlock in both localStorage and a year-long cookie, so the gate shows once per
+// visitor, not on every page (and still works where localStorage is blocked).
+function isRemembered(key: string) {
+  try {
+    if (localStorage.getItem(key) === "1") return true
+  } catch {}
+  return document.cookie.split("; ").some((c) => c === `${key}=1`)
+}
+
+function remember(key: string) {
+  try {
+    localStorage.setItem(key, "1")
+  } catch {}
+  document.cookie = `${key}=1; path=/; max-age=31536000; SameSite=Lax`
+}
+
 export function PasswordGate({ password, children, showBackLink = true, storageKey, title }: PasswordGateProps) {
-  const [unlocked, setUnlocked] = useState(false)
+  // null = not checked yet: render nothing rather than flashing the gate on every page load
+  const [unlocked, setUnlocked] = useState<boolean | null>(storageKey ? null : false)
   const [value, setValue] = useState("")
   const [error, setError] = useState(false)
   const [shake, setShake] = useState(false)
   const inputRef = useRef<HTMLInputElement>(null)
 
   useEffect(() => {
-    if (storageKey) {
-      const stored = localStorage.getItem(storageKey)
-      if (stored === "1") setUnlocked(true)
-    }
+    if (storageKey) setUnlocked(isRemembered(storageKey))
   }, [storageKey])
 
   useEffect(() => {
-    if (!unlocked) {
+    if (unlocked === false) {
       setTimeout(() => inputRef.current?.focus(), 150)
     }
   }, [unlocked])
@@ -35,7 +49,7 @@ export function PasswordGate({ password, children, showBackLink = true, storageK
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
     if (value === password) {
-      if (storageKey) localStorage.setItem(storageKey, "1")
+      if (storageKey) remember(storageKey)
       setUnlocked(true)
     } else {
       setError(true)
@@ -47,6 +61,7 @@ export function PasswordGate({ password, children, showBackLink = true, storageK
   }
 
   if (unlocked) return <>{children}</>
+  if (unlocked === null) return <div className="min-h-screen bg-background" aria-hidden />
 
   return (
     <div className="min-h-screen bg-background flex flex-col px-8 lg:px-12">

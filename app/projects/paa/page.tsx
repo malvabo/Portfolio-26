@@ -38,7 +38,6 @@ export default function PAAStory() {
           { id: "built", label: "The solution" },
           { id: "process", label: "Key decisions" },
           { id: "impact", label: "Outcome" },
-          { id: "next", label: "Takeaway" },
         ]}
       />
 
@@ -48,7 +47,7 @@ export default function PAAStory() {
         <StoryHero
           image="/images/paa_11.png"
           imageAlt="PAA clinical dashboard with pending action tiles and a message drawer"
-          title="Helping clinicians see what's urgent in seconds"
+          title="PAA: Scaling clinical efficiency through AI-driven workflows"
           meta={[
             { label: "Company", value: "PAA" },
             { label: "Timeline", value: "6 months, 2024" },
@@ -63,9 +62,9 @@ export default function PAAStory() {
             </p>
           }
           stats={[
-            { value: "40%", label: "time saved answering document requests" },
+            { value: "~$14M", label: "a year saved, from 40% less time managing document workflows" },
             { value: "1,000s", label: "clinicians and facility staff using it" },
-            { value: "Tier-1", label: "deals with Kaiser, Humana and United" },
+            { value: "Tier-1", label: "deals with Kaiser, Humana and United Healthcare" },
           ]}
         />
 
@@ -94,10 +93,10 @@ export default function PAAStory() {
 
         {/* 3. Discovery */}
         <div id="discovery" className="scroll-mt-28" aria-hidden />
-        <Beat kicker="02 Research" title="Asking clinicians what last made them feel behind">
+        <Beat kicker="02 Research" title="Mapping clinical workflows, from admission to discharge">
           <p>
-            I ran working sessions with clinical staff, case managers, care coordinators and admissions teams, all
-            built around that one question.
+            I ran working sessions with clinical staff, case managers, care coordinators and admissions teams to map
+            each of their workflows step by step, and where they handed work to each other.
           </p>
         </Beat>
 
@@ -136,7 +135,7 @@ export default function PAAStory() {
           title="A dashboard that answers the most urgent question first, then lets clinicians dig in."
         />
 
-        <div className="mt-16 space-y-24 md:space-y-32">
+        <div className="mt-5 space-y-24 md:space-y-32">
           <Stage
             title="Pending action tiles"
             visual={
@@ -154,18 +153,19 @@ export default function PAAStory() {
           </Stage>
 
           <Stage
-            title="Messages with the patient in view"
+            title="A message drawer that carries the patient’s condition and hospital status"
             visual={
               <Figure
-                src="/images/paa-5.png"
-                alt="Tiles at the top of the dashboard with a document request open in a side drawer"
-                caption="A document request opens beside the patient's details"
+                src="/images/paa-messages.png"
+                alt="Messages inbox with a patient's case summary shown above the conversation thread"
+                caption="Messages beside the patient's case, with starring and key metadata"
               />
             }
           >
             <p>
-              Requests for documents now show up as a tile at the top. Click it, and the conversation opens beside the
-              patient&apos;s details, so clinicians never leave the page.
+              Requests from insurers and doctors lived in a separate tab, so clinicians switched screens to
+              understand a single patient. Messages now open in a drawer that shows the patient&apos;s key data
+              above the thread: their condition and their current status in hospital.
             </p>
           </Stage>
 
@@ -208,7 +208,7 @@ export default function PAAStory() {
         <div id="process" className="scroll-mt-28" aria-hidden />
         <Beat kicker="04" title="Key decisions" />
 
-        <div className="mt-16 space-y-24 md:space-y-32">
+        <div className="mt-5 space-y-24 md:space-y-32">
           <Moment
             n={1}
             title="Splitting &ldquo;am I on fire?&rdquo; from &ldquo;what&apos;s next?&rdquo;"
@@ -229,37 +229,25 @@ export default function PAAStory() {
 
           <Moment
             n={2}
-            title="Locking the assessment before the AI writes"
+            title="One locked record, one source of truth"
             visual={
               <Figure
                 src="/images/paa-discharge.png"
+                blur
                 alt="Discharge documentation flow"
-                caption="Documentation is generated only after the assessment is locked"
+                caption="The AI drafts only from the locked assessment"
               />
             }
           >
             <p>
-              If clinicians could see the AI draft before submitting, they could go back and tweak answers to get a
-              better result. So generation only starts once the assessment is locked. The narrative stays editable, the
-              clinical data doesn&apos;t.
+              Clinicians enter the core patient assessment first: the objective, unambiguous data the rest of the care
+              plan depends on. When they submit it, it locks. Only then does the AI generate the recommendation and the
+              report for the insurer, built from nothing but that record.
             </p>
-          </Moment>
-
-          <Moment
-            n={3}
-            title="Moving messages next to the patient"
-            visual={
-              <Figure
-                src="/images/paa-messages.png"
-                alt="Messages inbox with a patient's case summary shown above the conversation thread"
-                caption="Messages beside the patient's case, with starring and key metadata"
-              />
-            }
-          >
             <p>
-              Requests from insurers and doctors lived in a separate tab, so clinicians switched screens to
-              understand a single patient. I moved the thread into a drawer that opens beside the patient&apos;s
-              clinical data.
+              Nobody can go back and adjust the assessment to steer the AI towards the outcome they want. The locked
+              record becomes the single source of truth for every recommendation and report, and it can&apos;t be changed
+              after the fact.
             </p>
           </Moment>
         </div>
@@ -276,9 +264,9 @@ export default function PAAStory() {
               {
                 icon: Timer,
                 image: "/images/paa-tile-time.jpg",
-                value: "40%",
-                label: "time saved",
-                body: "Measured after launch on answering document requests.",
+                value: "~$14M",
+                label: "a year in clinician time",
+                body: "From 40% less time managing document workflows.",
               },
               {
                 icon: Handshake,
@@ -290,28 +278,13 @@ export default function PAAStory() {
               {
                 icon: Lock,
                 image: "/images/paa-tile-lock.jpg",
-                value: "Locked",
-                label: "data before drafts",
-                body: "The lock-before-generate sequence kept AI documentation true to the clinical record.",
+                value: "AI",
+                label: "recommendations that can’t be gamed",
+                body: "AI-powered recommendations now draw on a locked clinical assessment, so they stay accurate and clinicians can’t steer the outcome.",
               },
             ]}
           />
         </div>
-
-        <Divider />
-
-        <div id="next" className="scroll-mt-28" aria-hidden />
-        <Narrow>
-          <Reveal>
-            <div className="space-y-4 text-[17px] leading-relaxed text-muted-foreground">
-              <p>The clearest requirements came from watching where clinicians hesitated.</p>
-              <p>
-                Next time I would set up regular reviews with clinicians on real screens before the first wireframe,
-                and secure realistic test patient data in the first week.
-              </p>
-            </div>
-          </Reveal>
-        </Narrow>
 
         <div className="mt-24 md:mt-32">
           <UpNext

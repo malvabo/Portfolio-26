@@ -35,7 +35,7 @@ export default function VeraCaseStudy() {
                 Amazon: Introducing AI insights for sellers
               </h1>
               <p className="text-[17px] leading-relaxed text-muted-foreground">
-                Starting from a blank slate - no problem statement, no defined scope - and exploring how AI could surface actionable intelligence inside the platform 50,000+ sellers already lived in.
+                Starting from a blank slate - no problem statement, no defined scope - and exploring how AI could surface actionable intelligence inside the platform 50k+ sellers already lived in.
               </p>
             </div>
 
@@ -73,7 +73,7 @@ export default function VeraCaseStudy() {
                 </li>
                 <li className="flex gap-3">
                   <span className="text-muted-foreground mt-0.5">•</span>
-                  <span className="text-muted-foreground">Built a 0-to-1 AI initiative across a platform of <span className="font-semibold text-foreground">50,000+</span> sellers, securing long-term mandate</span>
+                  <span className="text-muted-foreground">Built a 0-to-1 AI initiative across a platform of <span className="font-semibold text-foreground">50k+</span> sellers, securing long-term mandate</span>
                 </li>
               </ul>
             </section>

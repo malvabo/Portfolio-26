@@ -1,5 +1,4 @@
 import { LightboxImage } from "@/components/lightbox-image"
-import Link from "next/link"
 
 export function SquirllSection() {
   return (
@@ -7,7 +6,7 @@ export function SquirllSection() {
       <div className="max-w-7xl mx-auto">
       <span className="inline-block mb-3 px-2.5 py-0.5 text-[11px] font-mono uppercase tracking-widest rounded-md bg-[#E8E3DD] text-[#6B5D4F]">0→1 Early Stage</span>
       <h2 className="text-[22px] md:text-[26px] leading-[1.15] font-serif mb-8 tracking-tight">
-        Squirll: Designing a budgeting app people do not quit
+        Squirll: Turning receipts into insights with AI
       </h2>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 mb-10">
@@ -16,15 +15,6 @@ export function SquirllSection() {
           <p className="text-base leading-relaxed text-foreground">
             I led the design of an AI-driven budgeting platform that does the heavy lifting for you. Computer vision reads receipts and fills in the data, turning a tedious manual task into a seamless, autopilot experience.
           </p>
-          <Link
-            href="/projects/squirll"
-            className="inline-flex items-center gap-2 mt-6 px-5 py-2.5 text-sm font-medium rounded-full bg-white/40 backdrop-blur-md border border-gray-300/50 hover:bg-white/60 hover:border-gray-400/60 transition-all duration-300 shadow-sm hover:shadow-md"
-          >
-            Read more
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </Link>
         </div>
 
         <div>
@@ -44,8 +34,8 @@ export function SquirllSection() {
               <div className="text-sm text-muted-foreground opacity-80">1 Gold &amp; 2 Silver: Application, Branding, UX &amp; Navigation</div>
             </div>
             <div>
-              <div className="text-xl font-medium text-foreground mb-0.5">12 weeks</div>
-              <div className="text-sm text-muted-foreground opacity-80">to launch the application</div>
+              <div className="text-xl font-medium text-foreground mb-0.5">3 months</div>
+              <div className="text-sm text-muted-foreground opacity-80">to build the mobile app</div>
             </div>
           </div>
         </div>
@@ -53,8 +43,8 @@ export function SquirllSection() {
         <div>
           <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">Role</h3>
           <div className="text-base leading-relaxed text-foreground space-y-0.5">
-            <p>Lead Product Designer</p>
-            <p>Feb &ndash; Apr 2025</p>
+            <p>Lead product designer</p>
+            <p>3 months, 2025</p>
             <div className="flex flex-wrap gap-1.5 mt-2">
               {["Web", "iOS"].map((platform) => (
                 <span

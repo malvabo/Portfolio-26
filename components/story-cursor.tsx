@@ -118,7 +118,7 @@ export function StoryCursor() {
   if (!enabled) return null
 
   const size =
-    mode.kind === "text" ? { w: 3, h: mode.h } : mode.kind === "label" ? { w: 8, h: 8 } : { w: 12, h: 12 }
+    mode.kind === "text" ? { w: 3, h: mode.h } : mode.kind === "label" ? { w: 7, h: 7 } : { w: 9, h: 9 }
 
   return (
     <div

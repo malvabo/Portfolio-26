@@ -5,7 +5,7 @@ import { ScrollToTop } from "@/components/scroll-to-top"
 import { BackLinkFooter } from "@/components/back-link"
 import { StoryContents } from "@/components/story-contents"
 import { StoryCursor } from "@/components/story-cursor"
-import { Coins, Files, Keyboard, OctagonAlert, Timer, Users } from "lucide-react"
+import { Banknote, Coins, Files, Keyboard, OctagonAlert, Timer, Users } from "lucide-react"
 import {
   StoryPage,
   StoryHero,
@@ -54,7 +54,7 @@ export default function ConduitStory() {
           title="Conduit: Automating the customs paperwork for importers"
           meta={[
             { label: "Company", value: "Conduit" },
-            { label: "Timeline", value: "Four weeks" },
+            { label: "Timeline", value: "4 weeks, 2026" },
             { label: "Role", value: "Product and design lead" },
           ]}
           intro={
@@ -65,9 +65,9 @@ export default function ConduitStory() {
             </p>
           }
           stats={[
+            { value: "$1.3M", label: "a year saved in compliance work" },
             { value: "1-3 min", label: "to verify a shipment, down from 20" },
-            { value: "95%", label: "lower cost per document" },
-            { value: "5", label: "teams rolled out to" },
+            { value: "5", label: "organisations rolled out to" },
           ]}
         />
 
@@ -156,14 +156,14 @@ export default function ConduitStory() {
           title="I designed reusable pipelines that importers set up once and run on every shipment."
         />
 
-        <div className="mt-16 space-y-24 md:space-y-32">
+        <div className="mt-5 space-y-24 md:space-y-32">
           <Stage
             title="Monitoring"
             visual={
               <Figure
-                src="/conduit/dash.png"
-                alt="Inbox grouped by shipment, with documents that need review flagged"
-                caption="Inbox grouped by shipment, with the documents that need attention flagged"
+                src="/conduit/dash.webp"
+                alt="Inbox listing each shipment's documents with their status, type and source"
+                caption="Every document's status, type and source at a glance"
               />
             }
           >
@@ -228,34 +228,42 @@ export default function ConduitStory() {
         <div id="process" className="scroll-mt-28" aria-hidden />
         <Beat kicker="04" title="Key decisions" />
 
-        <div className="mt-16 space-y-24 md:space-y-32">
-          <Moment
-            n={1}
-            title="Dropping the rules engine"
-            visual={
-              <Figure
-                src="/conduit/ideation.webp"
-                alt="Six inbox directions explored side by side: document queue, shipment master-detail, shipment table, shipment cards, stages, and by shipment"
-                caption="Alternatives explored during design ideation phase"
-              />
-            }
-          >
-            <p>
-              The plan was for Conduit to pass or fail each document. Research showed that every importer
-              checks documents against its own policy. A single pass or fail rule couldn&apos;t serve them all.
-            </p>
-            <p>
-              I recommended letting each importer choose what to check. Conduit only extracts the data from their
-              documents and fills in the importer&apos;s forms. The founders agreed, and we built that instead.
-            </p>
-          </Moment>
+        <div className="mt-5 space-y-24 md:space-y-32">
+          {/* Problem, the direction we chose, then why */}
+          <div className="space-y-8 md:space-y-10">
+            <Moment
+              n={1}
+              title="Dropping the rules engine"
+              visual={
+                <Figure
+                  src="/conduit/inbox-by-shipment.webp"
+                  alt="Inbox with one row per shipment and a column per document type, each marked clear or needs review"
+                  caption="Inbox grouped by shipment, with the documents that need attention flagged"
+                />
+              }
+            >
+              <p>
+                The plan was for Conduit to pass or fail each document. Research showed that every importer checks
+                documents against its own policy. A single pass or fail rule couldn&apos;t serve them all.
+              </p>
+            </Moment>
+            <Narrow>
+              <Reveal className="text-[17px] leading-relaxed text-muted-foreground">
+                <p>
+                  I recommended letting each importer choose what to check. Conduit only extracts the data from the
+                  importer&apos;s documents and fills in the compliance forms, based on the pipelines the importer sets
+                  up. The founders agreed, and we built the pipelines instead.
+                </p>
+              </Reveal>
+            </Narrow>
+          </div>
 
           <Moment
             n={2}
             title="Confidence on every field"
             visual={
               <Figure
-                src="/conduit/states.png"
+                src="/conduit/states.webp"
                 alt="Extracted fields as confident, needs review, not found and corrected"
                 caption="The states a field can arrive in"
               />
@@ -290,7 +298,7 @@ export default function ConduitStory() {
             title="Answers with their sources"
             visual={
               <Figure
-                src="/conduit/ask-1.png"
+                src="/conduit/ask-1.webp"
                 alt="Asking Conduit a question about processed documents, with sources attached"
                 caption="Every answer arrives with the documents it came from"
               />
@@ -314,6 +322,13 @@ export default function ConduitStory() {
           <Results
             items={[
               {
+                icon: Banknote,
+                image: "/conduit/tile-sacks.jpg",
+                value: "$1.3M",
+                label: "a year saved in compliance work",
+                body: "Across the 5 importer organisations using it, from fewer manual checks and filing errors.",
+              },
+              {
                 icon: Timer,
                 image: "/conduit/tile-time.jpg",
                 value: "1-3 min",
@@ -330,7 +345,7 @@ export default function ConduitStory() {
               {
                 icon: Users,
                 image: "/conduit/tile-team.jpg",
-                value: "5 teams",
+                value: "5 organisations",
                 label: "rolled out to",
                 body: "Designed and built in four weeks, with a design system ready to grow with it.",
               },
@@ -354,7 +369,7 @@ export default function ConduitStory() {
             image="/images/vq_cover.png"
             imageAlt="Editing a packing slip in the Veeqo document system"
             title="Veeqo"
-            summary="Rebuilding the document system behind 50,000+ sellers."
+            summary="Rebuilding the document system behind 50k+ sellers."
             meta={["Shipping", "Product designer"]}
           />
         </div>

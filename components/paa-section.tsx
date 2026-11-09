@@ -13,7 +13,7 @@ export function PAASection() {
       <div className="max-w-7xl mx-auto">
       <span className="inline-block mb-3 px-2.5 py-0.5 text-[11px] font-mono uppercase tracking-widest rounded-md bg-[#E8E3DD] text-[#6B5D4F]">Series C</span>
       <h2 className="text-[22px] md:text-[26px] leading-[1.15] font-serif mb-8 tracking-tight">
-        PAA: Scaling Clinical Efficiency through AI-Driven Workflows
+        PAA: Scaling clinical efficiency through AI-driven workflows
       </h2>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 mb-10">
@@ -39,12 +39,12 @@ export function PAASection() {
           </h3>
           <div className="space-y-4">
             <div>
-              <div className="text-xl font-medium text-foreground mb-0.5">40%</div>
-              <div className="text-sm text-muted-foreground opacity-80">less time clinicians spend finding patient status</div>
+              <div className="text-xl font-medium text-foreground mb-0.5">~$14M a year</div>
+              <div className="text-sm text-muted-foreground opacity-80">in clinician time, from 40% less time managing document workflows</div>
             </div>
             <div>
-              <div className="text-xl font-medium text-foreground mb-0.5">Tier 1 contracts</div>
-              <div className="text-sm text-muted-foreground opacity-80">signed with health systems on the back of the new offering</div>
+              <div className="text-xl font-medium text-foreground mb-0.5">Tier-1 deals</div>
+              <div className="text-sm text-muted-foreground opacity-80">with insurers Kaiser, Humana and United Healthcare</div>
             </div>
           </div>
         </div>
@@ -52,8 +52,8 @@ export function PAASection() {
         <div>
           <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">Role</h3>
           <div className="text-base leading-relaxed text-foreground space-y-0.5">
-            <p>Lead Designer</p>
-            <p>Mar &ndash; Aug 2020</p>
+            <p>Lead product designer</p>
+            <p>6 months, 2024</p>
             <div className="flex flex-wrap gap-1.5 mt-2">
               {["Web", "Dashboard"].map((platform) => (
                 <span

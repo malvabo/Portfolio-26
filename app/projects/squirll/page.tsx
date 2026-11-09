@@ -50,10 +50,10 @@ export default function SquirllStory() {
         <StoryHero
           image="/images/squirll-collage-1.jpg"
           imageAlt="Squirll spending analytics on a dark, warm interface"
-          title="Designing an AI finance app from zero"
+          title="Squirll: Turning receipts into insights with AI"
           meta={[
             { label: "Company", value: "Squirll" },
-            { label: "Timeline", value: "Feb - Apr 2025" },
+            { label: "Timeline", value: "3 months, 2025" },
             { label: "Role", value: "Lead product designer" },
           ]}
           intro={
@@ -64,9 +64,8 @@ export default function SquirllStory() {
             </p>
           }
           stats={[
-            { value: "0 → 1", label: "web and iOS" },
-            { value: "3", label: "months to build the mobile app" },
-            { value: "1", label: "designer" },
+            { value: "3×", label: "Design Awards: 1 Gold & 2 Silver" },
+            { value: "3 months", label: "to build the mobile app" },
           ]}
         />
 
@@ -146,7 +145,7 @@ export default function SquirllStory() {
           title="A warm, dark product that signals: this is already taken care of."
         />
 
-        <div className="mt-16 space-y-24 md:space-y-32">
+        <div className="mt-5 space-y-24 md:space-y-32">
           <Stage
             title="A dashboard that lowers your guard"
             visual={
@@ -188,14 +187,9 @@ export default function SquirllStory() {
             <p>Animated illustrations guide people through linking their accounts, with an orbital glow on entry.</p>
           </Stage>
 
-          <Stage
-            title="Uploading a receipt"
-            visual={
-              <Figure src="/images/squirll-collage-7.jpg" alt="Receipt upload flow" caption="Uploading a receipt" />
-            }
-          >
-            <p>Snap a receipt and Squirll files it, so the app keeps doing the work in the background.</p>
-          </Stage>
+          <Wide>
+            <Figure src="/images/squirll-collage-7.jpg" alt="Receipt upload flow" caption="Uploading a receipt" />
+          </Wide>
         </div>
 
         <Divider />
@@ -204,7 +198,7 @@ export default function SquirllStory() {
         <div id="process" className="scroll-mt-28" aria-hidden />
         <Beat kicker="04" title="Key decisions" />
 
-        <div className="mt-16 space-y-24 md:space-y-32">
+        <div className="mt-5 space-y-24 md:space-y-32">
           <Moment
             n={1}
             title="A palette that lowers money anxiety"
@@ -240,21 +234,12 @@ export default function SquirllStory() {
             </p>
           </Moment>
 
-          <Moment
-            n={3}
-            title="Passing AA on a warm dark palette"
-            visual={
-              <div className="flex flex-col gap-4 md:gap-6">
-                <Figure src="/images/squirll-collage-8.jpg" alt="Squirll dark interface details" />
-                <Clip src="/images/anim_SQ.mp4" label="Squirll interface animation" />
-              </div>
-            }
-          >
-            <p>
-              Warm accents on dark backgrounds are hard to get right. I ran WCAG AA checks on every text and data
-              surface, iterated most on amber at small sizes, and kept touch targets at 44px or larger.
-            </p>
-          </Moment>
+          <Wide>
+            <div className="flex flex-col gap-4 md:gap-6">
+              <Figure src="/images/squirll-collage-8.jpg" alt="Squirll dark interface details" />
+              <Clip src="/images/anim_SQ.mp4" label="Squirll interface animation" />
+            </div>
+          </Wide>
         </div>
 
         <Divider />

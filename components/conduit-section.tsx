@@ -1,3 +1,5 @@
+import { LightboxImage } from "@/components/lightbox-image"
+
 // Product compositions supplied as finished images, each already on its own
 // background, so the tile just holds them edge to edge.
 const CONDUIT_IMAGES = [
@@ -48,7 +50,7 @@ export function ConduitSection() {
             <div className="space-y-4">
               <div>
                 <div className="text-xl font-medium text-foreground mb-0.5">$1.3M a year</div>
-                <div className="text-sm text-muted-foreground opacity-80">saved in compliance work across 5 importer teams</div>
+                <div className="text-sm text-muted-foreground opacity-80">saved in compliance work across 5 importer organisations</div>
               </div>
               <div>
                 <div className="text-xl font-medium text-foreground mb-0.5">4 weeks</div>
@@ -60,8 +62,8 @@ export function ConduitSection() {
           <div>
             <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">Role</h3>
             <div className="text-base leading-relaxed text-foreground space-y-0.5">
-              <p>Product and Design Lead</p>
-              <p>Aug &ndash; Oct 2026</p>
+              <p>Product and design lead</p>
+              <p>4 weeks, 2026</p>
               <div className="flex flex-wrap gap-1.5 mt-2">
                 {["Web"].map((tag) => (
                   <span
@@ -79,11 +81,10 @@ export function ConduitSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {CONDUIT_IMAGES.map((image, idx) => (
             <div key={idx} className="relative aspect-[16/10] overflow-hidden rounded-lg bg-gray-50 border border-gray-200">
-              <img
+              <LightboxImage
                 src={image.src}
                 alt={image.alt}
                 className="absolute inset-0 h-full w-full object-cover"
-                loading="lazy"
               />
             </div>
           ))}

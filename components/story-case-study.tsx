@@ -10,7 +10,7 @@
  * (see .story-reveal in globals.css). Big statements reveal word by word.
  */
 
-import { useEffect, useRef, useState, type ReactNode, type ElementType } from "react"
+import { createContext, useContext, useEffect, useRef, useState, type ReactNode, type ElementType } from "react"
 import type { LucideIcon } from "lucide-react"
 import { LightboxImage } from "@/components/lightbox-image"
 
@@ -18,22 +18,38 @@ const ACCENT = "text-[#B4532A]"
 
 /* ---------- Scroll reveal ---------- */
 
-/** Sets `shown` once the element is ~15% into the viewport. Plays once. */
-function useInView<T extends HTMLElement>() {
+/*
+ * Keeps the opening sequence in reading order. The hero plays its own timed
+ * sequence (cover, title, facts, intro, key numbers). Anything further down that
+ * happens to be on screen when the page opens waits until that sequence has
+ * finished, so nothing lower on the page appears before something above it.
+ */
+let heroDoneAt = 0
+const InHero = createContext(false)
+
+
+/** Sets `shown` once the element is ~15% into the viewport. Plays once.
+ *  Outside the hero, `wait` holds back anything revealed while the opening
+ *  sequence is still playing; it is set in the same update as `shown`. */
+function useInView<T extends HTMLElement>(onLoad = false) {
   const ref = useRef<T>(null)
-  const [shown, setShown] = useState(false)
+  const inHero = useContext(InHero)
+  const [state, setState] = useState({ shown: false, wait: 0 })
 
   useEffect(() => {
     const el = ref.current
     if (!el) return
-    if (typeof IntersectionObserver === "undefined") {
-      setShown(true)
+    const show = () =>
+      setState({ shown: true, wait: inHero ? 0 : Math.max(0, Math.round(heroDoneAt - performance.now())) })
+    // Opening-screen content plays straight away, wherever it sits on the screen
+    if (onLoad || typeof IntersectionObserver === "undefined") {
+      show()
       return
     }
     const io = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setShown(true)
+          show()
           io.disconnect()
         }
       },
@@ -41,9 +57,9 @@ function useInView<T extends HTMLElement>() {
     )
     io.observe(el)
     return () => io.disconnect()
-  }, [])
+  }, [onLoad, inHero])
 
-  return { ref, shown }
+  return { ref, shown: state.shown, wait: state.wait }
 }
 
 /** Fades and lifts its content into place when scrolled into view */
@@ -53,20 +69,23 @@ export function Reveal({
   as: Tag = "div",
   className = "",
   style,
+  onLoad = false,
 }: {
   children: ReactNode
   delay?: number
   as?: ElementType
   className?: string
   style?: React.CSSProperties
+  /** Play on page load instead of on scroll (for the opening screen) */
+  onLoad?: boolean
 }) {
-  const { ref, shown } = useInView<HTMLElement>()
+  const { ref, shown, wait } = useInView<HTMLElement>(onLoad)
   return (
     <Tag
       ref={ref}
       data-shown={shown || undefined}
       className={`story-reveal ${className}`}
-      style={{ ...style, "--d": `${delay}ms` } as React.CSSProperties}
+      style={{ ...style, "--d": `${delay + wait}ms` } as React.CSSProperties}
     >
       {children}
     </Tag>
@@ -87,7 +106,7 @@ export function Words({
   delay?: number
   step?: number
 }) {
-  const { ref, shown } = useInView<HTMLElement>()
+  const { ref, shown, wait } = useInView<HTMLElement>()
 
   if (typeof children !== "string") {
     return (
@@ -102,7 +121,7 @@ export function Words({
     <Tag ref={ref} data-shown={shown || undefined} className={`story-words ${className}`} aria-label={children}>
       {words.map((w, i) => (
         <span key={i} aria-hidden>
-          <span className="story-word" style={{ "--d": `${delay + i * step}ms` } as React.CSSProperties}>
+          <span className="story-word" style={{ "--d": `${delay + wait + i * step}ms` } as React.CSSProperties}>
             {w}
           </span>
           {i < words.length - 1 ? " " : null}
@@ -115,17 +134,23 @@ export function Words({
 /* ---------- Layout ---------- */
 
 export function StoryPage({ children }: { children: ReactNode }) {
-  return <main className="pt-28 md:pt-32 pb-24 px-5 md:px-8">{children}</main>
+  return <main className="pt-14 md:pt-16 pb-24 px-5 md:px-8">{children}</main>
 }
 
-/** Narrow reading column */
+/** Reading column. Text, cards and figures all share this one column, so
+ *  the page reads from a single left edge, like a document. */
+const COLUMN = "max-w-[680px] mx-auto"
+
 export function Narrow({ children, className = "" }: { children: ReactNode; className?: string }) {
-  return <div className={`max-w-[620px] mx-auto ${className}`}>{children}</div>
+  return <div className={`${COLUMN} ${className}`}>{children}</div>
 }
 
-/** Wide column for visuals */
+/** Visuals: images, tables and diagrams break out wider than the text,
+ *  centred on the same axis, so they have room to read at a glance */
+const WIDE = "max-w-[920px] mx-auto"
+
 export function Wide({ children, className = "" }: { children: ReactNode; className?: string }) {
-  return <div className={`max-w-[788px] mx-auto ${className}`}>{children}</div>
+  return <div className={`${WIDE} ${className}`}>{children}</div>
 }
 
 export function Divider() {
@@ -152,48 +177,88 @@ export function StoryHero({
   stats: Stat[]
 }) {
   // Title words take roughly words × step; the rest follows just after
-  const after = Math.min(title.split(" ").length * 45, 500)
+  const after = 200 + Math.min(title.split(" ").length * 45, 500)
+  // When the last key number has finished fading in (delay + ~0.7s transition)
+  const span = after + 180 + stats.length * 90 + 700
+  const started = useRef(false)
+  if (typeof window !== "undefined" && !started.current) {
+    started.current = true
+    heroDoneAt = performance.now() + span
+  }
   return (
+    <InHero.Provider value={true}>
     <header>
-      <Wide>
-        <Words
-          as="h1"
-          step={45}
-          className="font-serif text-[1.75rem] md:text-[2.25rem] lg:text-[2.625rem] leading-[1.12] tracking-[-0.025em] text-balance mb-10 md:mb-12 max-w-[760px]"
-        >
-          {title}
-        </Words>
+      {/* Cover first, wider than the reading column (but clear of the contents list on
+          wide screens). On desktop its height follows the viewport so the cover, the
+          title card and the first line of the intro all fit on the opening screen. */}
+      <Reveal onLoad className="max-w-[1100px] xl:max-w-[min(1100px,calc(100vw-400px))] mx-auto rounded-lg overflow-hidden bg-[#EDE8E1] border border-foreground/[0.08]">
+        <img
+          src={image}
+          alt={imageAlt}
+          loading="eager"
+          className="w-full aspect-[4/3] md:aspect-auto md:h-[clamp(260px,calc(100svh-280px),640px)] object-cover object-top"
+        />
+      </Reveal>
 
-        <div className="grid md:grid-cols-[200px_1fr] gap-10 md:gap-16">
-          <Reveal as="dl" delay={after} className="space-y-6">
+      <div className={`${COLUMN} relative z-10 -mt-16 sm:-mt-24 md:-mt-40`}>
+        <div className="rounded-lg bg-white border border-foreground/[0.1] p-6 md:p-8 mx-3 sm:mx-0">
+          <Words
+            as="h1"
+            step={45}
+            delay={200}
+            className="font-serif text-[1.625rem] md:text-[2.125rem] leading-[1.2] tracking-[-0.02em] text-balance"
+          >
+            {title}
+          </Words>
+
+          {/* Hand-drawn wavy rule between the title and the facts */}
+          <div
+            aria-hidden
+            className="h-[6px] my-6 md:my-7 opacity-30"
+            style={{
+              backgroundImage:
+                "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='6' viewBox='0 0 12 6'%3E%3Cpath d='M0 3 Q3 0 6 3 T12 3' fill='none' stroke='%23000' stroke-width='1'/%3E%3C/svg%3E\")",
+              backgroundRepeat: "repeat-x",
+            }}
+          />
+
+          <Reveal
+            as="dl"
+            onLoad
+            delay={after}
+            className={`grid grid-cols-2 ${meta.length === 3 ? "md:grid-cols-3" : "md:grid-cols-4"} gap-x-6 gap-y-5`}
+          >
             {meta.map((m) => (
               <div key={m.label}>
-                <dt className="text-[13px] text-muted-foreground mb-1">{m.label}</dt>
-                <dd className="font-mono text-[12px] uppercase tracking-wider">{m.value}</dd>
+                <dt className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground mb-1.5">{m.label}</dt>
+                <dd className="text-[15px] leading-snug">{m.value}</dd>
               </div>
             ))}
           </Reveal>
-
-          <div>
-            <Reveal delay={after + 80} className="text-[17px] leading-relaxed text-muted-foreground max-w-[560px]">
-              {intro}
-            </Reveal>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 sm:gap-6 mt-10 max-w-[560px]">
-              {stats.map((s, i) => (
-                <Reveal key={s.label} delay={after + 180 + i * 90}>
-                  <p className={`font-serif text-[1.75rem] md:text-[2rem] tracking-[-0.02em] leading-none mb-2 ${ACCENT}`}>{s.value}</p>
-                  <p className="text-[13px] leading-snug text-muted-foreground">{s.label}</p>
-                </Reveal>
-              ))}
-            </div>
-          </div>
         </div>
 
-        <Reveal delay={after + 300} className="rounded-xl overflow-hidden bg-[#EDE8E1] border border-foreground/[0.08] mt-14 md:mt-20">
-          <LightboxImage src={image} alt={imageAlt} className="w-full h-auto" loading="eager" />
-        </Reveal>
-      </Wide>
+        <div className="mt-8 md:mt-10">
+          <Reveal onLoad delay={after + 80} className="text-[17px] leading-relaxed text-muted-foreground">
+            {intro}
+          </Reveal>
+          {/* Key numbers as a row of white cards under the intro, same family as the diagram cards */}
+          <div className={`grid grid-cols-1 ${stats.length === 2 ? "sm:grid-cols-2" : "sm:grid-cols-3"} gap-3 mt-8`}>
+            {stats.map((s, i) => (
+              <Reveal
+                key={s.label}
+                onLoad
+                delay={after + 180 + i * 90}
+                className="rounded-md bg-white border border-black/[0.06] p-5 flex sm:flex-col items-baseline sm:items-start gap-3 sm:gap-0"
+              >
+                <p className={`font-serif text-[1.75rem] md:text-[2rem] tracking-[-0.02em] leading-none sm:mb-2 text-[#3D3D3D]`}>{s.value}</p>
+                <p className="text-[13px] leading-snug text-muted-foreground">{s.label}</p>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </div>
     </header>
+    </InHero.Provider>
   )
 }
 
@@ -205,7 +270,7 @@ export function Lede({ kicker, statement, children }: { kicker?: string; stateme
   return (
     <Narrow>
       {kicker && <Reveal><Kicker>{kicker}</Kicker></Reveal>}
-      <Words className="text-[1.6rem] md:text-[2rem] leading-[1.3] tracking-[-0.015em] text-balance">{statement}</Words>
+      <Words className="font-serif text-[1.6rem] md:text-[2rem] leading-[1.25] tracking-[-0.02em] text-balance">{statement}</Words>
       {children && (
         <Reveal delay={after} className="mt-6 space-y-4 text-[17px] leading-relaxed text-muted-foreground">
           {children}
@@ -268,7 +333,7 @@ export function Beat({
       <div id={id}>
         <Reveal>
           {kicker && <Kicker>{kicker}</Kicker>}
-          <h2 className="text-[1.5rem] md:text-[1.75rem] leading-[1.25] tracking-[-0.015em] text-balance">{title}</h2>
+          <h2 className="font-serif text-[1.5rem] md:text-[1.75rem] leading-[1.2] tracking-[-0.02em] text-balance">{title}</h2>
         </Reveal>
         {children && (
           <Reveal delay={120} className="mt-4 space-y-4 text-[17px] leading-relaxed text-muted-foreground">
@@ -293,6 +358,7 @@ export function Figure({
   caption,
   className = "",
   maxWidth,
+  blur = false,
 }: {
   src: string
   alt: string
@@ -300,11 +366,18 @@ export function Figure({
   className?: string
   /** Cap the display width (px) for images too small to stay sharp at full width on Retina */
   maxWidth?: number
+  /** Soften a screen so its shape reads but its contents don't (e.g. sensitive data) */
+  blur?: boolean
 }) {
   return (
     <Reveal as="figure" className={`mx-auto ${className}`} style={maxWidth ? { maxWidth } : undefined}>
       <div className="rounded-xl overflow-hidden bg-[#EDE8E1] border border-foreground/[0.08]">
-        <LightboxImage src={src} alt={alt} className="w-full h-auto" />
+        {blur ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img src={src} alt={alt} className="w-full h-auto blur-[1px]" />
+        ) : (
+          <LightboxImage src={src} alt={alt} className="w-full h-auto" />
+        )}
       </div>
       <Caption>{caption}</Caption>
     </Reveal>
@@ -315,15 +388,18 @@ export function FigurePair({
   images,
   caption,
   aspect,
+  stacked = false,
 }: {
   images: { src: string; alt: string }[]
   caption?: string
   /** Fixed tile shape, e.g. "3/2". Leave out to keep the images' own height. */
   aspect?: string
+  /** One above the other instead of side by side */
+  stacked?: boolean
 }) {
   return (
     <figure>
-      <div className="grid md:grid-cols-2 gap-4 md:gap-6">
+      <div className={`grid gap-4 md:gap-6 ${stacked ? "" : "md:grid-cols-2"}`}>
         {images.map((img, i) => (
           <Reveal
             key={img.src}
@@ -363,13 +439,10 @@ export function Clip({ src, label, caption }: { src: string; label: string; capt
 
 export type StoryCard = { icon: LucideIcon; image: string; title: ReactNode; body: ReactNode }
 
-/** Small boxed mono label, e.g. "WHAT I LEARNED" */
+/** Section title above a card list, e.g. "What research showed", "Impact", "Up next".
+ *  Same serif title style as the step titles, not a tag. */
 export function BoxLabel({ children }: { children: ReactNode }) {
-  return (
-    <span className="inline-block rounded-md border border-black/20 bg-white px-2 py-1 font-mono text-[11px] uppercase tracking-wider leading-none">
-      {children}
-    </span>
-  )
+  return <h3 className="font-serif text-[1.25rem] md:text-[1.375rem] tracking-[-0.015em]">{children}</h3>
 }
 
 /**
@@ -378,8 +451,8 @@ export function BoxLabel({ children }: { children: ReactNode }) {
  */
 export function CardStack({ label, cards }: { label: string; cards: StoryCard[] }) {
   return (
-    <div className="max-w-[720px] mx-auto">
-      <Reveal className="mb-8">
+    <div className={COLUMN}>
+      <Reveal className="mb-6">
         <BoxLabel>{label}</BoxLabel>
       </Reveal>
       <div>
@@ -389,15 +462,15 @@ export function CardStack({ label, cards }: { label: string; cards: StoryCard[] 
             <div key={i}>
               {i > 0 && (
                 <Reveal delay={i * 140} className="flex justify-center">
-                  <span className="block w-px h-10 md:h-14 bg-black/20" aria-hidden />
+                  <span className="block w-px h-10 md:h-14 bg-[#B4532A]/50" aria-hidden />
                 </Reveal>
               )}
               <Reveal
                 delay={80 + i * 140}
-                className="group rounded-xl bg-white border border-black/15 flex flex-col sm:flex-row overflow-hidden"
+                className="group rounded-md bg-white border border-black/10 flex flex-col sm:flex-row overflow-hidden"
               >
-                <div className="p-1 sm:self-stretch">
-                  <div className="relative w-full h-40 sm:w-32 sm:h-full sm:min-h-[128px] rounded-lg overflow-hidden flex items-center justify-center">
+                <div className="sm:self-stretch">
+                  <div className="relative w-full h-40 sm:w-32 sm:h-full sm:min-h-[128px] overflow-hidden flex items-center justify-center">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={c.image}
@@ -405,13 +478,13 @@ export function CardStack({ label, cards }: { label: string; cards: StoryCard[] 
                       loading="lazy"
                       className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                     />
-                    <span className="relative flex items-center justify-center w-14 h-14 rounded-xl bg-white text-foreground ring-4 ring-white/50 shadow-[0_1px_2px_rgba(0,0,0,0.08)]">
+                    <span className="relative flex items-center justify-center w-14 h-14 rounded-md bg-white text-foreground ring-4 ring-white/50 shadow-[0_1px_2px_rgba(0,0,0,0.08)]">
                       <Icon className="w-[22px] h-[22px]" strokeWidth={1.75} aria-hidden />
                     </span>
                   </div>
                 </div>
                 <div className="px-6 py-6 sm:px-8 sm:py-7 flex flex-col justify-center">
-                  <h3 className="text-[1.25rem] font-medium tracking-[-0.01em] mb-2">{c.title}</h3>
+                  <h3 className="font-serif text-[1.125rem] tracking-[-0.01em] leading-snug mb-2">{c.title}</h3>
                   <p className="text-[16px] leading-relaxed text-muted-foreground">{c.body}</p>
                 </div>
               </Reveal>
@@ -424,14 +497,16 @@ export function CardStack({ label, cards }: { label: string; cards: StoryCard[] 
 }
 
 /** One stage of the final design: short text, then a wide visual */
-export function Stage({ title, children, visual }: { title: string; children: ReactNode; visual: ReactNode }) {
+export function Stage({ title, children, visual }: { title?: string; children: ReactNode; visual: ReactNode }) {
   return (
     <div className="space-y-8 md:space-y-10">
       <Narrow>
-        <Reveal as="h3" className="text-[1.25rem] tracking-[-0.01em] mb-3">
-          {title}
-        </Reveal>
-        <Reveal delay={100} className="space-y-4 text-[17px] leading-relaxed text-muted-foreground">
+        {title && (
+          <Reveal as="h3" className="font-serif text-[1.25rem] md:text-[1.375rem] tracking-[-0.015em] mb-3">
+            {title}
+          </Reveal>
+        )}
+        <Reveal delay={title ? 100 : 0} className="space-y-4 text-[17px] leading-relaxed text-muted-foreground">
           {children}
         </Reveal>
       </Narrow>
@@ -455,7 +530,7 @@ export function Moment({
     <div className="space-y-8 md:space-y-10">
       <Narrow>
         <Reveal>
-          <h3 className="text-[1.25rem] tracking-[-0.01em] mb-3">{title}</h3>
+          <h3 className="font-serif text-[1.25rem] md:text-[1.375rem] tracking-[-0.015em] mb-3">{title}</h3>
         </Reveal>
         <Reveal delay={100} className="space-y-4 text-[17px] leading-relaxed text-muted-foreground">
           {children}
@@ -483,8 +558,8 @@ export function Results({
         title: (
           <>
             {/* One typeface per line: the label stays in the serif of the value. */}
-            <span className={`font-serif text-[1.6rem] tracking-[-0.02em] ${ACCENT}`}>{r.value}</span>{" "}
-            <span className="font-serif text-[1.6rem] tracking-[-0.02em]">{r.label}</span>
+            <span className="font-serif text-[1.125rem] tracking-[-0.01em]">{r.value}</span>{" "}
+            <span className="font-serif text-[1.125rem] tracking-[-0.01em]">{r.label}</span>
           </>
         ),
         body: r.body,
@@ -530,7 +605,7 @@ export function UpNext({
   meta: string[]
 }) {
   return (
-    <div className="max-w-[720px] mx-auto">
+    <div className={COLUMN}>
       <Reveal className="mb-4">
         <BoxLabel>Up next</BoxLabel>
       </Reveal>

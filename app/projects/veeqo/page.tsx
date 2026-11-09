@@ -8,6 +8,7 @@ import { BackLinkFooter } from "@/components/back-link"
 import {
   Building2,
   Gauge,
+  Banknote,
   Layers,
   MessageCircleQuestion,
   ShieldCheck,
@@ -23,7 +24,6 @@ import {
   Wide,
   Narrow,
   Figure,
-  FigurePair,
   Clip,
   CardStack,
   Stage,
@@ -59,25 +59,24 @@ export default function VeeqoStory() {
         <StoryHero
           image="/images/vq_cover.png"
           imageAlt="Editing an integrated packing slip in the new Veeqo document system"
-          title="Moving 50,000 sellers off a third-party editor"
+          title="Amazon: Redesigning a document system for 50k+ sellers"
           meta={[
             { label: "Company", value: "Veeqo · Amazon" },
-            { label: "Timeline", value: "3 months" },
-            { label: "Role", value: "Leading design, documents project" },
+            { label: "Timeline", value: "3 months, 2026" },
+            { label: "Role", value: "Design lead" },
             { label: "Team", value: "10 people" },
           ]}
           intro={
             <p>
               Veeqo is a multi-channel shipping platform owned by Amazon. Its UK sellers printed every document
               through a third-party editor. I designed the in-house replacement, working across two very
-              different seller segments, an unstable API and a growing scope. When our main stakeholder left
-              mid-project, I took over the PRD and brought engineering into every design review.
+              different seller segments, an unstable API and a growing scope.
             </p>
           }
           stats={[
+            { value: "$2.3M", label: "a year saved in third-party platform costs" },
             { value: "50k+", label: "sellers migrated" },
             { value: "0%", label: "enterprise churn" },
-            { value: "30%", label: "fewer how-to tickets" },
           ]}
         />
 
@@ -85,7 +84,7 @@ export default function VeeqoStory() {
 
         {/* 2. The setup */}
         <div id="problem" className="scroll-mt-28" aria-hidden />
-        <Lede kicker="01 Who and why" statement="Every order prints documents: packing slips, invoices, customs forms, return labels. For UK sellers, all of them ran through an editor nobody could extend.">
+        <Lede kicker="01 Who and why" statement="Every order prints documents: packing slips, invoices, customs forms, return labels. For UK sellers, all of them ran through an editor that couldn’t be extended.">
           <p>
             Veeqo was moving UK sellers onto the US product. US sellers only had basic editing, so switching off the
             vendor without a real replacement put the biggest UK accounts at risk.
@@ -112,13 +111,13 @@ export default function VeeqoStory() {
         <div id="discovery" className="scroll-mt-28" aria-hidden />
         <Beat kicker="02 Research" title="Two kinds of sellers, two very different relationships with their documents">
           <p>
-            I worked from our internal research, support tickets and seller interviews in Dovetail, and looked at how
-            similar platforms handled templates.
+            I synthesised support tickets, seller interviews and existing research, and benchmarked how other
+            shipping platforms handled templates.
           </p>
         </Beat>
 
         <div className="mt-12">
-          <Reveal className="max-w-[720px] mx-auto">
+          <Reveal className="max-w-[920px] mx-auto">
             <SegmentTable />
           </Reveal>
         </div>
@@ -156,23 +155,20 @@ export default function VeeqoStory() {
         <Beat
           kicker="03 The solution"
           title="I split the product by need: simple templates for small sellers, HTML and AI for complex ones."
-        />
+        >
+          <p>
+            Small sellers get category-aware templates with simple toggles, which cover most of what they need.
+            Enterprise and complex sellers get an HTML editor with AI and a library of pre-coded base templates, so
+            most of them only change a few lines of CSS.
+          </p>
+        </Beat>
 
-        <div className="mt-16 space-y-24 md:space-y-32">
-          <Stage
-            title="Two paths in one library"
-            visual={
-              <Reveal className="max-w-[720px] mx-auto">
-                <Architecture />
-              </Reveal>
-            }
-          >
-            <p>
-              Small sellers get category-aware templates with simple toggles, which cover most of what they need.
-              Enterprise and complex sellers get an HTML editor with AI and a library of pre-coded base templates, so
-              most of them only change a few lines of CSS.
-            </p>
-          </Stage>
+        <div className="mt-8 md:mt-10 space-y-24 md:space-y-32">
+          <Wide>
+            <Reveal>
+              <Architecture />
+            </Reveal>
+          </Wide>
 
           <Stage
             title="Templates that know their document type"
@@ -226,9 +222,18 @@ export default function VeeqoStory() {
             title="Brands and the documents they use"
             visual={
               <div className="space-y-10">
-                <Reveal className="max-w-[720px] mx-auto">
+                <Reveal>
                   <BrandScheme />
                 </Reveal>
+                <Narrow>
+                  <Reveal className="text-[17px] leading-relaxed text-muted-foreground">
+                    <p>
+                      Enterprise sellers often run 5 to 10 brands from one account, and each brand needs its own packing
+                      slips and invoices. Each brand has a default version of every document, and sellers can change which
+                      version applies to which brand.
+                    </p>
+                  </Reveal>
+                </Narrow>
                 <Figure
                   src="/images/vq-doc2.jpg"
                   alt="Document library with template versions mapped to brands"
@@ -238,12 +243,8 @@ export default function VeeqoStory() {
             }
           >
             <p>
-              Enterprise sellers often run 5 to 10 brands from one account, and each brand needs its own packing slips
-              and invoices.
-            </p>
-            <p>
-              Each brand has a default version of every document, and sellers can change which version applies to which
-              brand.
+              I redesigned how brands connect to documents. Instead of a separate copy of every document per brand in an
+              outside tool, each document in the new library carries the brands it applies to.
             </p>
           </Stage>
 
@@ -267,35 +268,51 @@ export default function VeeqoStory() {
         <div id="process" className="scroll-mt-28" aria-hidden />
         <Beat kicker="04" title="Key decisions" />
 
-        <div className="mt-16 space-y-24 md:space-y-32">
-          <Moment
-            n={1}
-            title="Cutting drag and drop"
-            visual={
-              <FigurePair
-                images={[
-                  { src: "/images/vq-doc12.png", alt: "Drag-and-drop editor exploration" },
-                  { src: "/images/vq-doc8.png", alt: "Early ideation drafts" },
-                ]}
-                caption="Drag and drop, and a plain document table, both explored and dropped"
-              />
-            }
-          >
-            <p>
-              Drag and drop was the obvious start. In critique it proved too expensive to build with the engineers we had, and a
-              simple version couldn&apos;t handle enterprise complexity.
-            </p>
-            <p>
-              A plain document table failed too: sellers name documents inconsistently, and without previews the list
-              turned into noise.
-            </p>
-          </Moment>
+        <div className="mt-5 space-y-24 md:space-y-32">
+          {/* Each rejected direction sits right under the text about it, then what we chose */}
+          <div className="space-y-8 md:space-y-10">
+            <Moment
+              n={1}
+              title="Cutting drag and drop"
+              visual={
+                <Figure
+                  src="/images/vq-doc12.png"
+                  alt="Drag-and-drop editor exploration"
+                  caption="Drag and drop, explored and dropped"
+                />
+              }
+            >
+              <p>
+                Drag and drop was the obvious start. In critique it proved too expensive to build with the engineers we
+                had, and a simple version couldn&apos;t handle enterprise complexity.
+              </p>
+            </Moment>
+            <Narrow>
+              <Reveal className="text-[17px] leading-relaxed text-muted-foreground">
+                <p>
+                  A plain document table failed too: sellers name documents inconsistently, and without previews the
+                  list turned into noise.
+                </p>
+              </Reveal>
+            </Narrow>
+            <Narrow>
+              <Reveal className="text-[17px] leading-relaxed text-muted-foreground">
+                <p>
+                  We chose a document library with a live preview of every template: ready-made defaults for small
+                  sellers, and an HTML editor with AI for complex ones.
+                </p>
+              </Reveal>
+            </Narrow>
+            <Wide>
+              <Figure src="/images/vq-doc8.png" alt="Plain document table exploration" caption="A plain document table, explored and dropped" />
+            </Wide>
+          </div>
 
           <Moment
             n={2}
             title="Hand porting over a 4-month tool"
             visual={
-              <Reveal className="max-w-[720px] mx-auto">
+              <Reveal>
                 <DecisionTable />
               </Reveal>
             }
@@ -351,6 +368,13 @@ export default function VeeqoStory() {
           <Results
             items={[
               {
+                icon: Banknote,
+                image: "/images/veeqo-tile-market.jpg",
+                value: "$2.3M",
+                label: "a year saved",
+                body: "Switching off the third-party editor removed its platform costs.",
+              },
+              {
                 icon: Users,
                 image: "/images/veeqo-tile-sellers.jpg",
                 value: "50k+",
@@ -375,7 +399,7 @@ export default function VeeqoStory() {
                 icon: Layers,
                 image: "/images/veeqo-tile-tickets.jpg",
                 value: "30%",
-                label: "fewer how-to tickets",
+                label: "fewer support tickets",
                 body: "Compared with support volume on the legacy editor.",
               },
             ]}
@@ -386,8 +410,8 @@ export default function VeeqoStory() {
 
         <div id="next" className="scroll-mt-28" aria-hidden />
         <Beat kicker="What's next" title="Owning the infrastructure opens the door to document intelligence." />
-        <div className="mt-12 space-y-10">
-          <Reveal className="max-w-[720px] mx-auto">
+        <div className="mt-5 space-y-10">
+          <Reveal className="max-w-[920px] mx-auto">
             <Roadmap />
           </Reveal>
         </div>
