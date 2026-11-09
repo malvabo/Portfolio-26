@@ -229,19 +229,24 @@ export default function PAAStory() {
 
           <Moment
             n={2}
-            title="Locking the assessment before the AI writes"
+            title="One locked record, one source of truth"
             visual={
               <Figure
                 src="/images/paa-discharge.png"
                 alt="Discharge documentation flow"
-                caption="Documentation is generated only after the assessment is locked"
+                caption="The AI drafts only from the locked assessment"
               />
             }
           >
             <p>
-              If clinicians could see the AI draft before submitting, they could go back and tweak answers to get a
-              better result. So generation only starts once the assessment is locked. The narrative stays editable, the
-              clinical data doesn&apos;t.
+              Clinicians enter the core patient assessment first: the objective, unambiguous data the rest of the care
+              plan depends on. When they submit it, it locks. Only then does the AI generate the recommendation and the
+              report for the insurer, built from nothing but that record.
+            </p>
+            <p>
+              Nobody can go back and adjust the assessment to steer the AI towards the outcome they want. The locked
+              record becomes the single source of truth for every recommendation and report, and it can&apos;t be changed
+              after the fact.
             </p>
           </Moment>
 
