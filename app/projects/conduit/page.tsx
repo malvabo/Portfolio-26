@@ -295,7 +295,7 @@ export default function ConduitStory() {
 
           <Moment
             n={4}
-            title="Answers with their sources"
+            title="Reducing manual work across complex operations"
             visual={
               <Figure
                 src="/conduit/ask-1.webp"
@@ -305,9 +305,10 @@ export default function ConduitStory() {
             }
           >
             <p>
-              Pipelines handle the repetitive work, but officers still dig through files for answers. I added a
-              conversational layer: ask what is missing before a shipment clears, or what expires this month, and get
-              the answer with sources attached.
+              I designed an agentic AI system that helps officers identify missing or expiring documents, verify
+              requirements, and file paperwork. It retrieves information across documents, executes operational tasks,
+              and provides source-backed answers so officers can verify results without manually searching multiple
+              systems.
             </p>
           </Moment>
         </div>
