@@ -153,18 +153,19 @@ export default function PAAStory() {
           </Stage>
 
           <Stage
-            title="Messages with the patient in view"
+            title="A message drawer that carries the patient’s condition and hospital status"
             visual={
               <Figure
-                src="/images/paa-5.png"
-                alt="Tiles at the top of the dashboard with a document request open in a side drawer"
-                caption="A document request opens beside the patient's details"
+                src="/images/paa-messages.png"
+                alt="Messages inbox with a patient's case summary shown above the conversation thread"
+                caption="Messages beside the patient's case, with starring and key metadata"
               />
             }
           >
             <p>
-              Requests for documents now show up as a tile at the top. Click it, and the conversation opens beside the
-              patient&apos;s details, so clinicians never leave the page.
+              Requests from insurers and doctors lived in a separate tab, so clinicians switched screens to
+              understand a single patient. Messages now open in a drawer that shows the patient&apos;s key data
+              above the thread: their condition and their current status in hospital.
             </p>
           </Stage>
 
@@ -247,24 +248,6 @@ export default function PAAStory() {
               Nobody can go back and adjust the assessment to steer the AI towards the outcome they want. The locked
               record becomes the single source of truth for every recommendation and report, and it can&apos;t be changed
               after the fact.
-            </p>
-          </Moment>
-
-          <Moment
-            n={3}
-            title="A message drawer that carries the patient’s condition and hospital status"
-            visual={
-              <Figure
-                src="/images/paa-messages.png"
-                alt="Messages inbox with a patient's case summary shown above the conversation thread"
-                caption="Messages beside the patient's case, with starring and key metadata"
-              />
-            }
-          >
-            <p>
-              Requests from insurers and doctors lived in a separate tab, so clinicians switched screens to
-              understand a single patient. Messages now open in a drawer that shows the patient&apos;s key data
-              above the thread: their condition and their current status in hospital.
             </p>
           </Moment>
         </div>
