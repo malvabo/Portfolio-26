@@ -30,6 +30,23 @@ export function Hero() {
             <p className="hero-reveal hero-reveal-3 mt-6 max-w-[540px] text-pretty font-sans text-[17px] leading-relaxed font-normal text-muted-foreground relative z-10">
               I lead products from first sketch to launch for Amazon, venture studios and unicorns, with work recognised by international design awards. I also write and speak about how AI is changing the way products get designed.
             </p>
+
+            {/* Key numbers from the case studies, in a row under the intro */}
+            <dl className="hero-reveal hero-reveal-4 mt-10 grid grid-cols-2 sm:grid-cols-4 gap-x-6 gap-y-6 relative z-10">
+              {[
+                { value: "$2.3M", label: "a year saved for Amazon in platform costs" },
+                { value: "~$14M", label: "a year in clinician time saved at PAA" },
+                { value: "50k+", label: "sellers moved to a system I designed" },
+                { value: "3", label: "Indigo Design Awards, 1 Gold and 2 Silver" },
+              ].map((s) => (
+                <div key={s.value}>
+                  <dt className="font-serif text-[1.75rem] md:text-[2rem] tracking-[-0.02em] leading-none text-[#3D3D3D] mb-2">
+                    {s.value}
+                  </dt>
+                  <dd className="text-[13px] leading-snug text-muted-foreground">{s.label}</dd>
+                </div>
+              ))}
+            </dl>
           </div>
         </div>
 
