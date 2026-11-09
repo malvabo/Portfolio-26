@@ -196,7 +196,7 @@ export function StoryHero({
           src={image}
           alt={imageAlt}
           loading="eager"
-          className="w-full aspect-[4/3] md:aspect-auto md:h-[clamp(260px,calc(100svh-280px),640px)] object-cover"
+          className="w-full aspect-[4/3] md:aspect-auto md:h-[clamp(260px,calc(100svh-280px),640px)] object-cover object-top"
         />
       </Reveal>
 

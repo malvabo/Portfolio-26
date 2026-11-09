@@ -135,7 +135,7 @@ export default function PAAStory() {
           title="A dashboard that answers the most urgent question first, then lets clinicians dig in."
         />
 
-        <div className="mt-16 space-y-24 md:space-y-32">
+        <div className="mt-5 space-y-24 md:space-y-32">
           <Stage
             title="Pending action tiles"
             visual={
@@ -207,7 +207,7 @@ export default function PAAStory() {
         <div id="process" className="scroll-mt-28" aria-hidden />
         <Beat kicker="04" title="Key decisions" />
 
-        <div className="mt-8 md:mt-10 space-y-24 md:space-y-32">
+        <div className="mt-5 space-y-24 md:space-y-32">
           <Moment
             n={1}
             title="Splitting &ldquo;am I on fire?&rdquo; from &ldquo;what&apos;s next?&rdquo;"

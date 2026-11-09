@@ -268,7 +268,7 @@ export default function VeeqoStory() {
         <div id="process" className="scroll-mt-28" aria-hidden />
         <Beat kicker="04" title="Key decisions" />
 
-        <div className="mt-8 md:mt-10 space-y-24 md:space-y-32">
+        <div className="mt-5 space-y-24 md:space-y-32">
           {/* Each rejected direction sits right under the text about it, then what we chose */}
           <div className="space-y-8 md:space-y-10">
             <Moment
@@ -410,7 +410,7 @@ export default function VeeqoStory() {
 
         <div id="next" className="scroll-mt-28" aria-hidden />
         <Beat kicker="What's next" title="Owning the infrastructure opens the door to document intelligence." />
-        <div className="mt-8 md:mt-10 space-y-10">
+        <div className="mt-5 space-y-10">
           <Reveal className="max-w-[920px] mx-auto">
             <Roadmap />
           </Reveal>

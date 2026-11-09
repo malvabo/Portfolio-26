@@ -156,7 +156,7 @@ export default function ConduitStory() {
           title="I designed reusable pipelines that importers set up once and run on every shipment."
         />
 
-        <div className="mt-16 space-y-24 md:space-y-32">
+        <div className="mt-5 space-y-24 md:space-y-32">
           <Stage
             title="Monitoring"
             visual={
@@ -228,34 +228,35 @@ export default function ConduitStory() {
         <div id="process" className="scroll-mt-28" aria-hidden />
         <Beat kicker="04" title="Key decisions" />
 
-        <div className="mt-8 md:mt-10 space-y-24 md:space-y-32">
-          <Moment
-            n={1}
-            title="Dropping the rules engine"
-            visual={
-              <div className="space-y-10">
-                <Figure
-                  src="/conduit/ideation.webp"
-                  alt="Six inbox directions explored side by side: document queue, shipment master-detail, shipment table, shipment cards, stages, and by shipment"
-                  caption="Alternatives explored during ideation"
-                />
+        <div className="mt-5 space-y-24 md:space-y-32">
+          {/* Problem, the direction we chose, then why */}
+          <div className="space-y-8 md:space-y-10">
+            <Moment
+              n={1}
+              title="Dropping the rules engine"
+              visual={
                 <Figure
                   src="/conduit/inbox-by-shipment.png"
                   alt="Inbox with one row per shipment and a column per document type, each marked clear or needs review"
                   caption="Inbox grouped by shipment, with the documents that need attention flagged"
                 />
-              </div>
-            }
-          >
-            <p>
-              The plan was for Conduit to pass or fail each document. Research showed that every importer
-              checks documents against its own policy. A single pass or fail rule couldn&apos;t serve them all.
-            </p>
-            <p>
-              I recommended letting each importer choose what to check. Conduit only extracts the data from their
-              documents and fills in the importer&apos;s forms. The founders agreed, and we built that instead.
-            </p>
-          </Moment>
+              }
+            >
+              <p>
+                The plan was for Conduit to pass or fail each document. Research showed that every importer checks
+                documents against its own policy. A single pass or fail rule couldn&apos;t serve them all.
+              </p>
+            </Moment>
+            <Narrow>
+              <Reveal className="text-[17px] leading-relaxed text-muted-foreground">
+                <p>
+                  I recommended letting each importer choose what to check. Conduit only extracts the data from the
+                  importer&apos;s documents and fills in the compliance forms, based on the pipelines the importer sets
+                  up. The founders agreed, and we built the pipelines instead.
+                </p>
+              </Reveal>
+            </Narrow>
+          </div>
 
           <Moment
             n={2}

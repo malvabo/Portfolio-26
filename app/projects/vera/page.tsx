@@ -73,7 +73,7 @@ export default function VeraCaseStudy() {
                 </li>
                 <li className="flex gap-3">
                   <span className="text-muted-foreground mt-0.5">•</span>
-                  <span className="text-muted-foreground">Built a 0-to-1 AI initiative across a platform of <span className="font-semibold text-foreground">50,000+</span> sellers, securing long-term mandate</span>
+                  <span className="text-muted-foreground">Built a 0-to-1 AI initiative across a platform of <span className="font-semibold text-foreground">50k+</span> sellers, securing long-term mandate</span>
                 </li>
               </ul>
             </section>

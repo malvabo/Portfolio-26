@@ -145,7 +145,7 @@ export default function SquirllStory() {
           title="A warm, dark product that signals: this is already taken care of."
         />
 
-        <div className="mt-16 space-y-24 md:space-y-32">
+        <div className="mt-5 space-y-24 md:space-y-32">
           <Stage
             title="A dashboard that lowers your guard"
             visual={
@@ -203,7 +203,7 @@ export default function SquirllStory() {
         <div id="process" className="scroll-mt-28" aria-hidden />
         <Beat kicker="04" title="Key decisions" />
 
-        <div className="mt-8 md:mt-10 space-y-24 md:space-y-32">
+        <div className="mt-5 space-y-24 md:space-y-32">
           <Moment
             n={1}
             title="A palette that lowers money anxiety"
