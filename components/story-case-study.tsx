@@ -374,7 +374,7 @@ export function Figure({
       <div className="rounded-xl overflow-hidden bg-[#EDE8E1] border border-foreground/[0.08]">
         {blur ? (
           // eslint-disable-next-line @next/next/no-img-element
-          <img src={src} alt={alt} className="w-full h-auto blur-[1.5px] scale-[1.01]" />
+          <img src={src} alt={alt} className="w-full h-auto blur-[1px]" />
         ) : (
           <LightboxImage src={src} alt={alt} className="w-full h-auto" />
         )}
