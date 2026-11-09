@@ -428,13 +428,10 @@ export function Clip({ src, label, caption }: { src: string; label: string; capt
 
 export type StoryCard = { icon: LucideIcon; image: string; title: ReactNode; body: ReactNode }
 
-/** Small boxed mono label, e.g. "WHAT I LEARNED" */
+/** Section title above a card list, e.g. "What research showed", "Impact", "Up next".
+ *  Same serif title style as the step titles, not a tag. */
 export function BoxLabel({ children }: { children: ReactNode }) {
-  return (
-    <span className="inline-block rounded-md border border-black/20 bg-white px-2 py-1 font-mono text-[11px] uppercase tracking-wider leading-none">
-      {children}
-    </span>
-  )
+  return <h3 className="font-serif text-[1.25rem] md:text-[1.375rem] tracking-[-0.015em]">{children}</h3>
 }
 
 /**
@@ -444,7 +441,7 @@ export function BoxLabel({ children }: { children: ReactNode }) {
 export function CardStack({ label, cards }: { label: string; cards: StoryCard[] }) {
   return (
     <div className={COLUMN}>
-      <Reveal className="mb-8">
+      <Reveal className="mb-6">
         <BoxLabel>{label}</BoxLabel>
       </Reveal>
       <div>
