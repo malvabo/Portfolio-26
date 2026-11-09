@@ -1,4 +1,4 @@
-import { LightboxImage } from "@/components/lightbox-image"
+import { LightboxImage, LightboxVideo } from "@/components/lightbox-image"
 
 export function SquirllSection() {
   return (
@@ -61,10 +61,10 @@ export function SquirllSection() {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-black">
-            <video src="/images/Sq1.mp4" autoPlay loop muted playsInline className="w-full h-full object-cover" />
+            <LightboxVideo src="/images/Sq1.mp4" label="Squirll app demo" className="w-full h-full object-cover" />
           </div>
           <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-black">
-            <video src="/images/Sq2.mp4" autoPlay loop muted playsInline className="w-full h-full object-cover" />
+            <LightboxVideo src="/images/Sq2.mp4" label="Squirll app demo" className="w-full h-full object-cover" />
           </div>
           <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-gray-50 border border-gray-200">
             <LightboxImage src="/images/squirll-collage-2.jpg" alt="Squirll onboarding orbital illustration" className="w-full h-full object-cover" />
