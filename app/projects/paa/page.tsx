@@ -94,10 +94,10 @@ export default function PAAStory() {
 
         {/* 3. Discovery */}
         <div id="discovery" className="scroll-mt-28" aria-hidden />
-        <Beat kicker="02 Research" title="Finding where clinicians lose time between admission, assessment and discharge">
+        <Beat kicker="02 Research" title="Mapping how each clinical role moves a patient from admission to discharge">
           <p>
-            I ran working sessions with clinical staff, case managers, care coordinators and admissions teams to see
-            which tasks slipped, and why.
+            I ran working sessions with clinical staff, case managers, care coordinators and admissions teams to map
+            each of their workflows step by step, and where they handed work to each other.
           </p>
         </Beat>
 
