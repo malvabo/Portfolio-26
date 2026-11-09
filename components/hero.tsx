@@ -5,7 +5,7 @@ export function Hero() {
   return (
     <div className="relative">
     <HeroGrid />
-    <section className="pt-24 pb-5 lg:pt-28 lg:pb-5 container mx-auto px-8 lg:px-12 max-w-7xl relative z-10">
+    <section className="pt-28 pb-5 lg:pt-36 lg:pb-5 container mx-auto px-8 lg:px-12 max-w-7xl relative z-10">
       <style>{`
         @keyframes fadeInUp {
           from { opacity: 0; transform: translateY(10px); }
