@@ -112,8 +112,8 @@ export default function VeeqoStory() {
         <div id="discovery" className="scroll-mt-28" aria-hidden />
         <Beat kicker="02 Research" title="Two kinds of sellers, two very different relationships with their documents">
           <p>
-            I worked from our internal research, support tickets and seller interviews in Dovetail, and looked at how
-            similar platforms handled templates.
+            I synthesised support tickets, seller interviews and existing research, and benchmarked how other
+            shipping platforms handled templates.
           </p>
         </Beat>
 
