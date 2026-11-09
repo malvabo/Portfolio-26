@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react"
 
-// Small inline circle after the word "AI" in the homepage hero: a slow, grainy
+// Small inline circle after the word "AI" in the homepage hero: a dark, moving
 // shader gradient ("Nighty night": #606080, #8d7dca, #212121, water-like flow).
 
 const vertexShader = `
@@ -32,19 +32,19 @@ float fbm(vec2 p) {
 }
 
 void main() {
-  vec2 uv = gl_FragCoord.xy / u_res;
-  // rotate the flow like the reference's tilted plane
-  float r = -1.05;
-  uv = mat2(cos(r), -sin(r), sin(r), cos(r)) * (uv - 0.5);
-  float t = u_time * 0.3;
-  vec2 q = vec2(fbm(uv * 1.5 + vec2(0.0, t)), fbm(uv * 1.5 + vec2(5.2, -t * 0.7)));
-  float n = fbm(uv * 1.5 + 1.5 * q + vec2(t * 0.4, 0.0));
-  // water-like bands
-  float w = 0.5 + 0.5 * sin(n * 6.0 + uv.y * 3.0 - t * 1.2);
-  vec3 col = mix(C3, C1, smoothstep(0.25, 0.75, n));
-  col = mix(col, C2, smoothstep(0.55, 1.0, w * n * 1.6));
-  // grain
-  col += (hash(gl_FragCoord.xy + fract(u_time) * 100.0) - 0.5) * 0.12;
+  vec2 uv = gl_FragCoord.xy / u_res - 0.5;
+  float t = u_time;
+  // slowly warped field so the light flows like liquid
+  vec2 w = vec2(fbm(uv * 2.2 + vec2(t * 0.35, 0.0)), fbm(uv * 2.2 + vec2(3.1, -t * 0.3)));
+  vec2 p = uv + (w - 0.5) * 0.45;
+  // a violet glow that drifts round the circle, and a fainter grey one opposite
+  vec2 g1 = 0.24 * vec2(cos(t * 0.9), sin(t * 0.7));
+  vec2 g2 = 0.26 * vec2(cos(t * 0.6 + 3.1), sin(t * 0.8 + 2.0));
+  float l1 = smoothstep(0.42, 0.0, length(p - g1));
+  float l2 = smoothstep(0.38, 0.0, length(p - g2));
+  vec3 col = C3;
+  col = mix(col, C1, l2 * 0.75);
+  col = mix(col, C2, l1 * 0.9);
   gl_FragColor = vec4(col, 1.0);
 }
 `
