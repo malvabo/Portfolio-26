@@ -19,14 +19,15 @@ const ACCENT = "text-[#B4532A]"
 /* ---------- Scroll reveal ---------- */
 
 /** Sets `shown` once the element is ~15% into the viewport. Plays once. */
-function useInView<T extends HTMLElement>() {
+function useInView<T extends HTMLElement>(onLoad = false) {
   const ref = useRef<T>(null)
   const [shown, setShown] = useState(false)
 
   useEffect(() => {
     const el = ref.current
     if (!el) return
-    if (typeof IntersectionObserver === "undefined") {
+    // Opening-screen content plays straight away, wherever it sits on the screen
+    if (onLoad || typeof IntersectionObserver === "undefined") {
       setShown(true)
       return
     }
@@ -41,7 +42,7 @@ function useInView<T extends HTMLElement>() {
     )
     io.observe(el)
     return () => io.disconnect()
-  }, [])
+  }, [onLoad])
 
   return { ref, shown }
 }
@@ -53,14 +54,17 @@ export function Reveal({
   as: Tag = "div",
   className = "",
   style,
+  onLoad = false,
 }: {
   children: ReactNode
   delay?: number
   as?: ElementType
   className?: string
   style?: React.CSSProperties
+  /** Play on page load instead of on scroll (for the opening screen) */
+  onLoad?: boolean
 }) {
-  const { ref, shown } = useInView<HTMLElement>()
+  const { ref, shown } = useInView<HTMLElement>(onLoad)
   return (
     <Tag
       ref={ref}
@@ -115,7 +119,7 @@ export function Words({
 /* ---------- Layout ---------- */
 
 export function StoryPage({ children }: { children: ReactNode }) {
-  return <main className="pt-28 md:pt-32 pb-24 px-5 md:px-8">{children}</main>
+  return <main className="pt-14 md:pt-16 pb-24 px-5 md:px-8">{children}</main>
 }
 
 /** Reading column. Text, cards and figures all share this one column, so
@@ -159,9 +163,15 @@ export function StoryHero({
   return (
     <header>
       {/* Cover first, wider than the reading column (but clear of the contents list on
-          wide screens); the title card overlaps its lower edge */}
+          wide screens). On desktop its height follows the viewport so the cover, the
+          title card and the first line of the intro all fit on the opening screen. */}
       <Reveal className="max-w-[1100px] xl:max-w-[min(1100px,calc(100vw-400px))] mx-auto rounded-lg overflow-hidden bg-[#EDE8E1] border border-foreground/[0.08]">
-        <LightboxImage src={image} alt={imageAlt} className="w-full h-auto" loading="eager" />
+        <img
+          src={image}
+          alt={imageAlt}
+          loading="eager"
+          className="w-full aspect-[4/3] md:aspect-auto md:h-[clamp(240px,calc(100svh-320px),580px)] object-cover"
+        />
       </Reveal>
 
       <Wide className="relative z-10 -mt-16 sm:-mt-24 md:-mt-32">
@@ -200,8 +210,8 @@ export function StoryHero({
           </Reveal>
         </div>
 
-        <div className="mt-12 md:mt-16">
-          <Reveal delay={after + 80} className="text-[17px] leading-relaxed text-muted-foreground">
+        <div className="mt-8 md:mt-10">
+          <Reveal onLoad delay={after + 80} className="text-[17px] leading-relaxed text-muted-foreground">
             {intro}
           </Reveal>
           {/* Key numbers sit in a row under the intro */}

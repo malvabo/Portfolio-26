@@ -21,8 +21,8 @@ export function StoryTopBar({ project }: { project: string }) {
         scrolled ? "bg-background/80 backdrop-blur-md" : "bg-transparent"
       }`}
     >
-      <nav aria-label="Breadcrumb" className="px-5 md:px-8 h-16 md:h-[72px] flex items-center">
-        <ol className="flex items-center gap-2 text-[17px] leading-none">
+      <nav aria-label="Breadcrumb" className="px-5 md:px-8 h-12 md:h-14 flex items-center">
+        <ol className="flex items-center gap-2 text-[15px] leading-none">
           <li>
             <Link
               href="/#work"
