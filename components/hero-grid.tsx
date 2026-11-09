@@ -26,9 +26,9 @@ function turn(a: number, b: number) {
 
 function drawDash(ctx: CanvasRenderingContext2D, d: Dash) {
   const e = d.e * (d.dim ? TEXT_DIM : 1)
-  const mix = (a: number, b: number) => Math.round(a + (b - a) * e * 0.85)
-  ctx.strokeStyle = `rgba(${mix(REST[0], ACCENT[0])},${mix(REST[1], ACCENT[1])},${mix(REST[2], ACCENT[2])},${(0.4 + e * 0.42) * (d.dim ? TEXT_ALPHA : 1)})`
-  ctx.lineWidth = 1 + e * 0.6
+  const mix = (a: number, b: number) => Math.round(a + (b - a) * e * 0.6)
+  ctx.strokeStyle = `rgba(${mix(REST[0], ACCENT[0])},${mix(REST[1], ACCENT[1])},${mix(REST[2], ACCENT[2])},${(0.4 + e * 0.2) * (d.dim ? TEXT_ALPHA : 1)})`
+  ctx.lineWidth = 1 + e * 0.3
   const half = (3 + e * 5) / 2
   const ca = Math.cos(d.a) * half
   const sa = Math.sin(d.a) * half
