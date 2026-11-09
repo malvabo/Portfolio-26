@@ -68,27 +68,37 @@ export function SegmentTable() {
     { label: "Branding model", enterprise: "Multi-brand, co-brand, per-template assignment", smb: "Single brand, simple toggle on/off" },
     { label: "Churn risk", enterprise: "High: documents are infrastructure, not a feature", smb: "Low: never invested in the old system" },
   ]
-  const side = (key: "enterprise" | "smb") => (
-    <dl className="space-y-3">
-      {rows.map((r) => (
-        <div key={r.label}>
-          <dt className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-0.5">{r.label}</dt>
-          <dd className="text-[13px] leading-snug text-foreground/85">{r[key]}</dd>
-        </div>
-      ))}
-    </dl>
-  )
+  const cols = "grid grid-cols-[84px_minmax(0,1fr)_minmax(0,1fr)] sm:grid-cols-[150px_minmax(0,1fr)_minmax(0,1fr)]"
   return (
-    <Stage bg="/images/veeqo-tile-segments.jpg" className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-      <Card>
-        <Tag>Enterprise</Tag>
-        <CardTitle>Documents are infrastructure</CardTitle>
-        {side("enterprise")}
-      </Card>
-      <Card>
-        <Tag accent>Small sellers</Tag>
-        <CardTitle>Documents just need to work</CardTitle>
-        {side("smb")}
+    <Stage bg="/images/veeqo-tile-segments.jpg">
+      {/* A real table, set in a white card on the stage */}
+      <Card className="!p-0 overflow-hidden" >
+        <div role="table" aria-label="Enterprise and small sellers compared">
+          <div role="row" className={`${cols} border-b border-black/10`}>
+            <div role="columnheader" className="p-3 sm:p-4" />
+            <div role="columnheader" className="p-3 sm:p-4 border-l border-black/10">
+              <Tag>Enterprise</Tag>
+              <p className="font-serif text-[0.9375rem] sm:text-[1.125rem] tracking-[-0.01em] mt-2 leading-snug hyphens-auto">Documents are infrastructure</p>
+            </div>
+            <div role="columnheader" className="p-3 sm:p-4 border-l border-black/10">
+              <Tag accent>Small sellers</Tag>
+              <p className="font-serif text-[0.9375rem] sm:text-[1.125rem] tracking-[-0.01em] mt-2 leading-snug hyphens-auto">Documents just need to work</p>
+            </div>
+          </div>
+          {rows.map((r, k) => (
+            <div role="row" key={r.label} className={`${cols} ${k < rows.length - 1 ? "border-b border-black/10" : ""}`}>
+              <div role="rowheader" className="p-3 sm:p-4 font-mono text-[10px] uppercase tracking-wider text-muted-foreground">
+                {r.label}
+              </div>
+              <div role="cell" className="p-3 sm:p-4 border-l border-black/10 text-[12px] sm:text-[13px] leading-snug text-foreground/85">
+                {r.enterprise}
+              </div>
+              <div role="cell" className="p-3 sm:p-4 border-l border-black/10 text-[12px] sm:text-[13px] leading-snug text-foreground/85">
+                {r.smb}
+              </div>
+            </div>
+          ))}
+        </div>
       </Card>
     </Stage>
   )
@@ -153,49 +163,51 @@ export function Architecture() {
 }
 
 export function DecisionTable() {
+  const heads = ["Lead time", "Enterprise risk", "Vendor savings"]
   const options = [
-    {
-      tag: "Dropped",
-      title: "Automated migration tool",
-      lead: "4 months",
-      risk: "Accounts exposed for longer",
-      savings: "Vendor stays on 3 months longer",
-      chosen: false,
-    },
-    {
-      tag: "Chosen",
-      title: "White-glove manual porting",
-      lead: "2 weeks",
-      risk: "0% churn, hands-on porting",
-      savings: "$X00k saved, vendor sunset 3 months early",
-      chosen: true,
-    },
+    { tag: "Dropped", title: "Automated migration tool", cells: ["4 months", "Accounts exposed for longer", "Vendor stays on 3 months longer"], chosen: false },
+    { tag: "Chosen", title: "White-glove manual porting", cells: ["2 weeks", "0% churn, hands-on porting", "$X00k saved, vendor sunset 3 months early"], chosen: true },
   ]
+  const cols = "grid grid-cols-[170px_130px_minmax(0,1fr)_minmax(0,1fr)]"
   return (
-    <Stage bg="/images/veeqo-tile-voices.jpg" className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-      {options.map((o) => (
-        <Card key={o.title} className={o.chosen ? "" : "opacity-90"}>
-          <Tag accent={o.chosen}>{o.tag}</Tag>
-          <CardTitle>{o.title}</CardTitle>
-          <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-0.5">Lead time</p>
-          <p
-            className={`font-serif text-[2rem] leading-none tracking-[-0.02em] mb-4 ${o.chosen ? "" : "line-through decoration-1 text-foreground/40"}`}
-            style={o.chosen ? { color: ACCENT } : undefined}
-          >
-            {o.lead}
-          </p>
-          <dl className="space-y-3">
-            <div>
-              <dt className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-0.5">Enterprise risk</dt>
-              <dd className="text-[13px] leading-snug text-foreground/85">{o.risk}</dd>
+    <Stage bg="/images/veeqo-tile-voices.jpg">
+      <Card className="!p-0 overflow-hidden">
+        {/* Scrolls sideways on narrow phones rather than squeezing four columns */}
+        <div className="overflow-x-auto">
+          <div role="table" aria-label="Migration options compared" className="min-w-[560px]">
+            <div role="row" className={`${cols} border-b border-black/10 bg-[#F5F3F0]`}>
+              <div role="columnheader" className="p-3 sm:p-4" />
+              {heads.map((h) => (
+                <div key={h} role="columnheader" className="p-3 sm:p-4 border-l border-black/10 font-mono text-[10px] uppercase tracking-wider text-muted-foreground">
+                  {h}
+                </div>
+              ))}
             </div>
-            <div>
-              <dt className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-0.5">Vendor savings</dt>
-              <dd className="text-[13px] leading-snug text-foreground/85">{o.savings}</dd>
-            </div>
-          </dl>
-        </Card>
-      ))}
+            {options.map((o, k) => (
+              <div role="row" key={o.title} className={`${cols} ${k === 0 ? "border-b border-black/10" : ""}`}>
+                <div role="rowheader" className="p-3 sm:p-4">
+                  <Tag accent={o.chosen}>{o.tag}</Tag>
+                  <p className="font-serif text-[1rem] tracking-[-0.01em] mt-2 leading-snug">{o.title}</p>
+                </div>
+                {o.cells.map((c, n) => (
+                  <div
+                    key={n}
+                    role="cell"
+                    className={`p-3 sm:p-4 border-l border-black/10 ${
+                      n === 0
+                        ? `font-serif text-[1.5rem] leading-none tracking-[-0.02em] whitespace-nowrap ${o.chosen ? "" : "line-through decoration-1 text-foreground/40"}`
+                        : "text-[13px] leading-snug text-foreground/85"
+                    }`}
+                    style={n === 0 && o.chosen ? { color: ACCENT } : undefined}
+                  >
+                    {c}
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
+      </Card>
     </Stage>
   )
 }
