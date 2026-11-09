@@ -36,13 +36,13 @@ export function Hero() {
               {[
                 { value: "$14M/year", label: "Operational costs saved through workflow redesign" },
                 { value: "100K+", label: "Business users across enterprise products I’ve designed" },
-                { value: "3", label: "International Design Awards, 1 Gold and 2 Silver" },
+                { value: "3", label: "International Design Awards\n1 Gold and 2 Silver" },
               ].map((s) => (
                 <div key={s.value}>
                   <dt className="font-serif text-[1.75rem] md:text-[2rem] tracking-[-0.02em] leading-none text-[#3D3D3D] mb-2">
                     {s.value}
                   </dt>
-                  <dd className="text-sm text-muted-foreground opacity-80">{s.label}</dd>
+                  <dd className="text-sm text-muted-foreground opacity-80 whitespace-pre-line">{s.label}</dd>
                 </div>
               ))}
             </dl>
