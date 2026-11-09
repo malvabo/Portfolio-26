@@ -358,6 +358,7 @@ export function Figure({
   caption,
   className = "",
   maxWidth,
+  blur = false,
 }: {
   src: string
   alt: string
@@ -365,11 +366,18 @@ export function Figure({
   className?: string
   /** Cap the display width (px) for images too small to stay sharp at full width on Retina */
   maxWidth?: number
+  /** Soften a screen so its shape reads but its contents don't (e.g. sensitive data) */
+  blur?: boolean
 }) {
   return (
     <Reveal as="figure" className={`mx-auto ${className}`} style={maxWidth ? { maxWidth } : undefined}>
       <div className="rounded-xl overflow-hidden bg-[#EDE8E1] border border-foreground/[0.08]">
-        <LightboxImage src={src} alt={alt} className="w-full h-auto" />
+        {blur ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img src={src} alt={alt} className="w-full h-auto blur-[3px] scale-[1.02]" />
+        ) : (
+          <LightboxImage src={src} alt={alt} className="w-full h-auto" />
+        )}
       </div>
       <Caption>{caption}</Caption>
     </Reveal>
