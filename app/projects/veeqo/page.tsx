@@ -85,7 +85,7 @@ export default function VeeqoStory() {
 
         {/* 2. The setup */}
         <div id="problem" className="scroll-mt-28" aria-hidden />
-        <Lede kicker="01 Who and why" statement="Every order prints documents: packing slips, invoices, customs forms, return labels. For UK sellers, all of them ran through an editor nobody could extend.">
+        <Lede kicker="01 Who and why" statement="Every order prints documents: packing slips, invoices, customs forms, return labels. For UK sellers, all of them ran through an editor that couldn’t be extended.">
           <p>
             Veeqo was moving UK sellers onto the US product. US sellers only had basic editing, so switching off the
             vendor without a real replacement put the biggest UK accounts at risk.
@@ -226,6 +226,15 @@ export default function VeeqoStory() {
                 <Reveal>
                   <BrandScheme />
                 </Reveal>
+                <Narrow>
+                  <Reveal className="text-[17px] leading-relaxed text-muted-foreground">
+                    <p>
+                      Enterprise sellers often run 5 to 10 brands from one account, and each brand needs its own packing
+                      slips and invoices. Each brand has a default version of every document, and sellers can change which
+                      version applies to which brand.
+                    </p>
+                  </Reveal>
+                </Narrow>
                 <Figure
                   src="/images/vq-doc2.jpg"
                   alt="Document library with template versions mapped to brands"
@@ -235,12 +244,8 @@ export default function VeeqoStory() {
             }
           >
             <p>
-              Enterprise sellers often run 5 to 10 brands from one account, and each brand needs its own packing slips
-              and invoices.
-            </p>
-            <p>
-              Each brand has a default version of every document, and sellers can change which version applies to which
-              brand.
+              I redesigned how brands connect to documents. Instead of a separate copy of every document per brand in an
+              outside tool, each document in the new library carries the brands it applies to.
             </p>
           </Stage>
 
