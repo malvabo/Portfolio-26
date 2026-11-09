@@ -94,10 +94,10 @@ export default function PAAStory() {
 
         {/* 3. Discovery */}
         <div id="discovery" className="scroll-mt-28" aria-hidden />
-        <Beat kicker="02 Research" title="Asking clinicians what last made them feel behind">
+        <Beat kicker="02 Research" title="Finding where clinicians lose time">
           <p>
-            I ran working sessions with clinical staff, case managers, care coordinators and admissions teams, all
-            built around that one question.
+            I ran working sessions with clinical staff, case managers, care coordinators and admissions teams to see
+            which tasks slipped, and why.
           </p>
         </Beat>
 
