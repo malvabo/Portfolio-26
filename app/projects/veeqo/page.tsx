@@ -156,22 +156,20 @@ export default function VeeqoStory() {
         <Beat
           kicker="03 The solution"
           title="I split the product by need: simple templates for small sellers, HTML and AI for complex ones."
-        />
+        >
+          <p>
+            Small sellers get category-aware templates with simple toggles, which cover most of what they need.
+            Enterprise and complex sellers get an HTML editor with AI and a library of pre-coded base templates, so
+            most of them only change a few lines of CSS.
+          </p>
+        </Beat>
 
-        <div className="mt-16 space-y-24 md:space-y-32">
-          <Stage
-            visual={
-              <Reveal>
-                <Architecture />
-              </Reveal>
-            }
-          >
-            <p>
-              Small sellers get category-aware templates with simple toggles, which cover most of what they need.
-              Enterprise and complex sellers get an HTML editor with AI and a library of pre-coded base templates, so
-              most of them only change a few lines of CSS.
-            </p>
-          </Stage>
+        <div className="mt-8 md:mt-10 space-y-24 md:space-y-32">
+          <Wide>
+            <Reveal>
+              <Architecture />
+            </Reveal>
+          </Wide>
 
           <Stage
             title="Templates that know their document type"
