@@ -245,7 +245,7 @@ export function StoryHero({
                 key={s.label}
                 onLoad
                 delay={after + 180 + i * 90}
-                className="rounded-md bg-white border border-black/10 p-5 flex sm:flex-col items-baseline sm:items-start gap-3 sm:gap-0"
+                className="rounded-md bg-white border border-black/[0.06] p-5 flex sm:flex-col items-baseline sm:items-start gap-3 sm:gap-0"
               >
                 <p className={`font-serif text-[1.75rem] md:text-[2rem] tracking-[-0.02em] leading-none sm:mb-2 text-[#3D3D3D]`}>{s.value}</p>
                 <p className="text-[13px] leading-snug text-muted-foreground">{s.label}</p>
@@ -346,7 +346,7 @@ export function Beat({
 
 function Caption({ children }: { children?: string }) {
   if (!children) return null
-  return <figcaption className="mt-3 text-[13px] text-muted-foreground">{children}</figcaption>
+  return <figcaption className="mt-3 text-[13px] text-muted-foreground text-center">{children}</figcaption>
 }
 
 export function Figure({
@@ -428,7 +428,7 @@ export type StoryCard = { icon: LucideIcon; image: string; title: ReactNode; bod
 /** Small boxed mono label, e.g. "WHAT I LEARNED" */
 export function BoxLabel({ children }: { children: ReactNode }) {
   return (
-    <span className="inline-block bg-[#3D3D3D] text-white px-1.5 py-1 font-mono text-[11px] uppercase tracking-wider leading-none">
+    <span className="inline-block rounded-md border border-black/20 bg-white px-2 py-1 font-mono text-[11px] uppercase tracking-wider leading-none">
       {children}
     </span>
   )
@@ -486,14 +486,16 @@ export function CardStack({ label, cards }: { label: string; cards: StoryCard[] 
 }
 
 /** One stage of the final design: short text, then a wide visual */
-export function Stage({ title, children, visual }: { title: string; children: ReactNode; visual: ReactNode }) {
+export function Stage({ title, children, visual }: { title?: string; children: ReactNode; visual: ReactNode }) {
   return (
     <div className="space-y-8 md:space-y-10">
       <Narrow>
-        <Reveal as="h3" className="font-serif text-[1.25rem] md:text-[1.375rem] tracking-[-0.015em] mb-3">
-          {title}
-        </Reveal>
-        <Reveal delay={100} className="space-y-4 text-[17px] leading-relaxed text-muted-foreground">
+        {title && (
+          <Reveal as="h3" className="font-serif text-[1.25rem] md:text-[1.375rem] tracking-[-0.015em] mb-3">
+            {title}
+          </Reveal>
+        )}
+        <Reveal delay={title ? 100 : 0} className="space-y-4 text-[17px] leading-relaxed text-muted-foreground">
           {children}
         </Reveal>
       </Narrow>

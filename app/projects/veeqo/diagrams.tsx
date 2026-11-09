@@ -87,7 +87,7 @@ export function SegmentTable() {
           </div>
           {rows.map((r, k) => (
             <div role="row" key={r.label} className={`${cols} ${k < rows.length - 1 ? "border-b border-black/10" : ""}`}>
-              <div role="rowheader" className="p-3 sm:p-4 font-mono text-[10px] uppercase tracking-wider text-muted-foreground">
+              <div role="rowheader" className="p-3 sm:p-4 text-[12px] sm:text-[13px] leading-snug text-muted-foreground">
                 {r.label}
               </div>
               <div role="cell" className="p-3 sm:p-4 border-l border-black/10 text-[12px] sm:text-[13px] leading-snug text-foreground/85">
@@ -178,7 +178,7 @@ export function DecisionTable() {
             <div role="row" className={`${cols} border-b border-black/10 bg-[#F5F3F0]`}>
               <div role="columnheader" className="p-3 sm:p-4" />
               {heads.map((h) => (
-                <div key={h} role="columnheader" className="p-3 sm:p-4 border-l border-black/10 font-mono text-[10px] uppercase tracking-wider text-muted-foreground">
+                <div key={h} role="columnheader" className="p-3 sm:p-4 border-l border-black/10 text-[13px] leading-snug text-muted-foreground">
                   {h}
                 </div>
               ))}
@@ -193,12 +193,7 @@ export function DecisionTable() {
                   <div
                     key={n}
                     role="cell"
-                    className={`p-3 sm:p-4 border-l border-black/10 ${
-                      n === 0
-                        ? `font-serif text-[1.5rem] leading-none tracking-[-0.02em] whitespace-nowrap ${o.chosen ? "" : "line-through decoration-1 text-foreground/40"}`
-                        : "text-[13px] leading-snug text-foreground/85"
-                    }`}
-                    style={n === 0 && o.chosen ? { color: ACCENT } : undefined}
+                    className="p-3 sm:p-4 border-l border-black/10 text-[13px] leading-snug text-foreground/85"
                   >
                     {c}
                   </div>
@@ -298,8 +293,8 @@ export function BrandScheme() {
                   </span>
                   {label}
                 </div>
-                {/* Brands hang off the document they belong to */}
-                <div className="ml-3 pl-4 border-l border-black/15 pt-1.5 flex flex-wrap gap-1">
+                {/* Brands sit under the document they belong to */}
+                <div className="pl-8 pt-1.5 flex flex-wrap gap-1">
                   {brands.map((b) => (
                     <span key={b} className="text-[11px] px-1.5 py-0.5 rounded border border-black/10 bg-[#F5F3F0] text-foreground/80">
                       {b}

@@ -160,7 +160,6 @@ export default function VeeqoStory() {
 
         <div className="mt-16 space-y-24 md:space-y-32">
           <Stage
-            title="Two paths in one library"
             visual={
               <Reveal>
                 <Architecture />
