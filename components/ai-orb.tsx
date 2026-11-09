@@ -2,8 +2,9 @@
 
 import { useEffect, useRef } from "react"
 
-// Small inline circle after the word "AI" in the homepage hero: a dark, moving
-// shader gradient ("Nighty night": #606080, #8d7dca, #212121, water-like flow).
+// Small inline circle after the word "AI" in the homepage hero: the swirling
+// glow shader from the /human page, in the "Nighty night" colours
+// (#8d7dca, #606080 on #212121).
 
 const vertexShader = `
 attribute vec2 a_pos;
@@ -13,39 +14,49 @@ void main() { gl_Position = vec4(a_pos, 0.0, 1.0); }
 const fragmentShader = `
 precision highp float;
 uniform float u_time;
-uniform vec2 u_res;
-const vec3 C1 = vec3(0.376, 0.376, 0.502); // #606080
-const vec3 C2 = vec3(0.553, 0.490, 0.792); // #8d7dca
-const vec3 C3 = vec3(0.129, 0.129, 0.129); // #212121
+uniform vec2  u_resolution;
+uniform vec3  u_color1;
+uniform vec3  u_color2;
 
-float hash(vec2 p) { return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453); }
-float noise(vec2 p) {
-  vec2 i = floor(p), f = fract(p);
-  vec2 u = f * f * (3.0 - 2.0 * f);
-  return mix(mix(hash(i), hash(i + vec2(1.0, 0.0)), u.x),
-             mix(hash(i + vec2(0.0, 1.0)), hash(i + vec2(1.0, 1.0)), u.x), u.y);
+mat2 rot2(float a) {
+  float c = cos(a), s = sin(a);
+  return mat2(c, -s, s, c);
 }
-float fbm(vec2 p) {
-  float v = 0.0, a = 0.5;
-  for (int i = 0; i < 4; i++) { v += a * noise(p); p = p * 2.03 + 11.7; a *= 0.5; }
-  return v;
+
+float map(vec3 p) {
+  float t = u_time;
+  p.xz = rot2(t * 0.4) * p.xz;
+  p.xy = rot2(t * 0.3) * p.xy;
+  vec3 q = p * 2.0 + t;
+  return length(p + sin(t * 0.7)) * log(length(p) + 1.0)
+         + sin(q.x + sin(q.z + sin(q.y))) * 0.5 - 1.0;
 }
 
 void main() {
-  vec2 uv = gl_FragCoord.xy / u_res - 0.5;
-  float t = u_time * 1.8;
-  // slowly warped field so the light flows like liquid
-  vec2 w = vec2(fbm(uv * 2.2 + vec2(t * 0.35, 0.0)), fbm(uv * 2.2 + vec2(3.1, -t * 0.3)));
-  vec2 p = uv + (w - 0.5) * 0.45;
-  // a violet glow that drifts round the circle, and a fainter grey one opposite
-  vec2 g1 = 0.24 * vec2(cos(t * 0.9), sin(t * 0.7));
-  vec2 g2 = 0.26 * vec2(cos(t * 0.6 + 3.1), sin(t * 0.8 + 2.0));
-  float l1 = smoothstep(0.42, 0.0, length(p - g1));
-  float l2 = smoothstep(0.38, 0.0, length(p - g2));
-  vec3 col = C3;
-  col = mix(col, C1, l2 * 0.75);
-  col = mix(col, C2, l1 * 0.9);
-  gl_FragColor = vec4(col, 1.0);
+  vec2 uv = (gl_FragCoord.xy / u_resolution) * 2.0 - 1.0;
+  float r = length(uv);
+  float mask = smoothstep(1.01, 0.96, r);
+
+  vec3 ro = vec3(0.0, 0.0, 2.0);
+  vec3 rd = normalize(vec3(uv * 0.78, -1.3));
+
+  vec3 col = vec3(0.0);
+  float stepSize = 0.065;
+
+  for (int i = 0; i < 35; i++) {
+    vec3 p = ro + rd * (float(i) * stepSize);
+    float m = abs(map(p));
+    float fi = float(i) / 35.0;
+    float glow = 0.0011 / (m * m + 0.008);
+    col += mix(u_color1, u_color2, fi * 0.5) * glow;
+  }
+
+  float lum = dot(col, vec3(0.299, 0.587, 0.114)) + 0.001;
+  col = col / lum * (1.0 - exp(-lum * 0.55));
+  col = pow(max(col, vec3(0.0)), vec3(0.4545));
+
+  col *= mask;
+  gl_FragColor = vec4(col, mask);
 }
 `
 
@@ -57,7 +68,7 @@ export function AiOrb() {
     const wrap = wrapRef.current
     const canvas = canvasRef.current
     if (!wrap || !canvas) return
-    const gl = canvas.getContext("webgl", { antialias: false, premultipliedAlpha: false })
+    const gl = canvas.getContext("webgl", { antialias: false, premultipliedAlpha: false, alpha: true })
     if (!gl) return
 
     const compile = (type: number, src: string) => {
@@ -80,7 +91,11 @@ export function AiOrb() {
     gl.enableVertexAttribArray(pos)
     gl.vertexAttribPointer(pos, 2, gl.FLOAT, false, 0, 0)
     const uTime = gl.getUniformLocation(program, "u_time")
-    const uRes = gl.getUniformLocation(program, "u_res")
+    const uRes = gl.getUniformLocation(program, "u_resolution")
+    gl.uniform3f(gl.getUniformLocation(program, "u_color1"), 0.553, 0.490, 0.792) // #8d7dca
+    gl.uniform3f(gl.getUniformLocation(program, "u_color2"), 0.376, 0.376, 0.502) // #606080
+    gl.enable(gl.BLEND)
+    gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA)
 
     const resize = () => {
       const dpr = Math.min(window.devicePixelRatio || 1, 2)
@@ -98,7 +113,9 @@ export function AiOrb() {
     const start = performance.now()
     let frame = 0
     const render = () => {
-      gl.uniform1f(uTime, reduceMotion ? 4 : (performance.now() - start) / 1000 + 4)
+      gl.clearColor(0, 0, 0, 0)
+      gl.clear(gl.COLOR_BUFFER_BIT)
+      gl.uniform1f(uTime, reduceMotion ? 4 : ((performance.now() - start) / 1000) * 0.9 + 4)
       gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4)
       if (!reduceMotion) frame = requestAnimationFrame(render)
     }
