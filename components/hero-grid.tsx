@@ -132,17 +132,30 @@ export function HeroGrid() {
       canvas.height = Math.round(height * dpr)
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
 
-      // Areas marked data-grid-quiet (the statement) keep their marks still.
-      const pad = 12
-      const quietRects = Array.from(document.querySelectorAll<HTMLElement>("[data-grid-quiet]")).map((el) => {
-        const r = el.getBoundingClientRect()
-        return {
-          l: r.left - rect.left - pad,
-          t: r.top - rect.top - pad,
-          r: r.right - rect.left + pad,
-          b: r.bottom - rect.top + pad,
+      // Marks behind the statement stay still so the copy reads cleanly. Measure each
+      // rendered line of text, not the whole wrapper: the wrapper is wider than the
+      // lines, and using it left a dead strip to the right of the text.
+      const pad = 10
+      const quietRects: { l: number; t: number; r: number; b: number }[] = []
+      for (const el of Array.from(document.querySelectorAll<HTMLElement>("[data-grid-quiet]"))) {
+        const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT)
+        const lines: DOMRect[] = []
+        for (let n = walker.nextNode(); n; n = walker.nextNode()) {
+          if (!n.textContent?.trim()) continue
+          const range = document.createRange()
+          range.selectNodeContents(n)
+          lines.push(...Array.from(range.getClientRects()))
         }
-      })
+        for (const r of lines) {
+          if (r.width < 1 || r.height < 1) continue
+          quietRects.push({
+            l: r.left - rect.left - pad,
+            t: r.top - rect.top - pad,
+            r: r.right - rect.left + pad,
+            b: r.bottom - rect.top + pad,
+          })
+        }
+      }
       const isQuiet = (x: number, y: number) => quietRects.some((q) => x > q.l && x < q.r && y > q.t && y < q.b)
 
       cells = []
@@ -219,10 +232,14 @@ export function HeroGrid() {
     build()
     const ro = new ResizeObserver(build)
     ro.observe(canvas)
+    // Line breaks settle once the fonts and the text's fade-in have finished; measure again then
+    document.fonts?.ready.then(build)
+    const settle = window.setTimeout(build, 900)
     if (interactive) window.addEventListener("pointermove", onMove, { passive: true })
 
     return () => {
       cancelAnimationFrame(frame)
+      window.clearTimeout(settle)
       ro.disconnect()
       window.removeEventListener("pointermove", onMove)
     }
