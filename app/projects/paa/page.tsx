@@ -94,7 +94,7 @@ export default function PAAStory() {
 
         {/* 3. Discovery */}
         <div id="discovery" className="scroll-mt-28" aria-hidden />
-        <Beat kicker="02 Research" title="Finding where clinicians lose time">
+        <Beat kicker="02 Research" title="Finding where clinicians lose time between admission, assessment and discharge">
           <p>
             I ran working sessions with clinical staff, case managers, care coordinators and admissions teams to see
             which tasks slipped, and why.
