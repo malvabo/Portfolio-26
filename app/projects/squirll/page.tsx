@@ -53,7 +53,7 @@ export default function SquirllStory() {
           title="Designing an AI finance app from zero"
           meta={[
             { label: "Company", value: "Squirll" },
-            { label: "Timeline", value: "Feb - Apr 2025" },
+            { label: "Timeline", value: "3 months, 2025" },
             { label: "Role", value: "Lead product designer" },
           ]}
           intro={

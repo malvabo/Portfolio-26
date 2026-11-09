@@ -1,5 +1,4 @@
 import { LightboxImage } from "@/components/lightbox-image"
-import Link from "next/link"
 
 export function SquirllSection() {
   return (
@@ -16,15 +15,6 @@ export function SquirllSection() {
           <p className="text-base leading-relaxed text-foreground">
             I led the design of an AI-driven budgeting platform that does the heavy lifting for you. Computer vision reads receipts and fills in the data, turning a tedious manual task into a seamless, autopilot experience.
           </p>
-          <Link
-            href="/projects/squirll"
-            className="inline-flex items-center gap-2 mt-6 px-5 py-2.5 text-sm font-medium rounded-full bg-white/40 backdrop-blur-md border border-gray-300/50 hover:bg-white/60 hover:border-gray-400/60 transition-all duration-300 shadow-sm hover:shadow-md"
-          >
-            Read more
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </Link>
         </div>
 
         <div>
@@ -54,7 +44,7 @@ export function SquirllSection() {
           <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">Role</h3>
           <div className="text-base leading-relaxed text-foreground space-y-0.5">
             <p>Lead Product Designer</p>
-            <p>Feb &ndash; Apr 2025</p>
+            <p>3 months, 2025</p>
             <div className="flex flex-wrap gap-1.5 mt-2">
               {["Web", "iOS"].map((platform) => (
                 <span

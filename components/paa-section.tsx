@@ -53,7 +53,7 @@ export function PAASection() {
           <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">Role</h3>
           <div className="text-base leading-relaxed text-foreground space-y-0.5">
             <p>Lead Designer</p>
-            <p>Mar &ndash; Aug 2020</p>
+            <p>6 months, 2024</p>
             <div className="flex flex-wrap gap-1.5 mt-2">
               {["Web", "Dashboard"].map((platform) => (
                 <span

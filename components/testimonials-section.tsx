@@ -3,6 +3,15 @@ import Image from "next/image"
 export function TestimonialsSection() {
   const testimonials = [
     {
+      title: "Strong recommendation",
+      keyPhrase: "communication skills, leadership qualities",
+      text: "I've worked under the leadership of Maria. Her superb communication skills, leadership qualities, enthusiastic personality are the reasons why I recommend her strongly.",
+      author: "Kateryna Lezhukh",
+      role: "Founder at Quema (presently)",
+      linkedin: "#",
+      avatar: "/images/kateryna-lezhukh.png",
+    },
+    {
       title: "Drives projects to completion",
       keyPhrase: "reduce uncertainty for everyone",
       text: "Immerses themselves entirely in the project to drive it to completion. Works to reduce uncertainty for everyone else to understand user needs.",
@@ -11,15 +20,6 @@ export function TestimonialsSection() {
       linkedin: "#",
       avatar:
         "https://framerusercontent.com/images/78dofovJbAtympTLqZLY1jA24.jpeg?scale-down-to=512&width=800&height=800",
-    },
-    {
-      title: "Strong recommendation",
-      keyPhrase: "communication skills, leadership qualities",
-      text: "I've worked under the leadership of Maria. Her superb communication skills, leadership qualities, enthusiastic personality are the reasons why I recommend her strongly.",
-      author: "Kateryna Lezhukh",
-      role: "Founder at Quema (presently)",
-      linkedin: "#",
-      avatar: "/images/kateryna-lezhukh.png",
     },
     {
       title: "Thorough and analytical",

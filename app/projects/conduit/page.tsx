@@ -54,7 +54,7 @@ export default function ConduitStory() {
           title="Conduit: Automating the customs paperwork for importers"
           meta={[
             { label: "Company", value: "Conduit" },
-            { label: "Timeline", value: "Four weeks" },
+            { label: "Timeline", value: "4 weeks, 2026" },
             { label: "Role", value: "Product and design lead" },
           ]}
           intro={

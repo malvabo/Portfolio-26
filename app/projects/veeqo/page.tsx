@@ -63,7 +63,7 @@ export default function VeeqoStory() {
           title="Moving 50,000 sellers off a third-party editor"
           meta={[
             { label: "Company", value: "Veeqo · Amazon" },
-            { label: "Timeline", value: "3 months" },
+            { label: "Timeline", value: "3 months, 2026" },
             { label: "Role", value: "Design lead" },
             { label: "Team", value: "10 people" },
           ]}
