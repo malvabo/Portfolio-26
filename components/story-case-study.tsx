@@ -10,7 +10,7 @@
  * (see .story-reveal in globals.css). Big statements reveal word by word.
  */
 
-import { useEffect, useRef, useState, type ReactNode, type ElementType } from "react"
+import { createContext, useContext, useEffect, useRef, useState, type ReactNode, type ElementType } from "react"
 import type { LucideIcon } from "lucide-react"
 import { LightboxImage } from "@/components/lightbox-image"
 
@@ -18,23 +18,38 @@ const ACCENT = "text-[#B4532A]"
 
 /* ---------- Scroll reveal ---------- */
 
-/** Sets `shown` once the element is ~15% into the viewport. Plays once. */
+/*
+ * Keeps the opening sequence in reading order. The hero plays its own timed
+ * sequence (cover, title, facts, intro, key numbers). Anything further down that
+ * happens to be on screen when the page opens waits until that sequence has
+ * finished, so nothing lower on the page appears before something above it.
+ */
+let heroDoneAt = 0
+const InHero = createContext(false)
+
+
+/** Sets `shown` once the element is ~15% into the viewport. Plays once.
+ *  Outside the hero, `wait` holds back anything revealed while the opening
+ *  sequence is still playing; it is set in the same update as `shown`. */
 function useInView<T extends HTMLElement>(onLoad = false) {
   const ref = useRef<T>(null)
-  const [shown, setShown] = useState(false)
+  const inHero = useContext(InHero)
+  const [state, setState] = useState({ shown: false, wait: 0 })
 
   useEffect(() => {
     const el = ref.current
     if (!el) return
+    const show = () =>
+      setState({ shown: true, wait: inHero ? 0 : Math.max(0, Math.round(heroDoneAt - performance.now())) })
     // Opening-screen content plays straight away, wherever it sits on the screen
     if (onLoad || typeof IntersectionObserver === "undefined") {
-      setShown(true)
+      show()
       return
     }
     const io = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setShown(true)
+          show()
           io.disconnect()
         }
       },
@@ -42,9 +57,9 @@ function useInView<T extends HTMLElement>(onLoad = false) {
     )
     io.observe(el)
     return () => io.disconnect()
-  }, [onLoad])
+  }, [onLoad, inHero])
 
-  return { ref, shown }
+  return { ref, shown: state.shown, wait: state.wait }
 }
 
 /** Fades and lifts its content into place when scrolled into view */
@@ -64,13 +79,13 @@ export function Reveal({
   /** Play on page load instead of on scroll (for the opening screen) */
   onLoad?: boolean
 }) {
-  const { ref, shown } = useInView<HTMLElement>(onLoad)
+  const { ref, shown, wait } = useInView<HTMLElement>(onLoad)
   return (
     <Tag
       ref={ref}
       data-shown={shown || undefined}
       className={`story-reveal ${className}`}
-      style={{ ...style, "--d": `${delay}ms` } as React.CSSProperties}
+      style={{ ...style, "--d": `${delay + wait}ms` } as React.CSSProperties}
     >
       {children}
     </Tag>
@@ -91,7 +106,7 @@ export function Words({
   delay?: number
   step?: number
 }) {
-  const { ref, shown } = useInView<HTMLElement>()
+  const { ref, shown, wait } = useInView<HTMLElement>()
 
   if (typeof children !== "string") {
     return (
@@ -106,7 +121,7 @@ export function Words({
     <Tag ref={ref} data-shown={shown || undefined} className={`story-words ${className}`} aria-label={children}>
       {words.map((w, i) => (
         <span key={i} aria-hidden>
-          <span className="story-word" style={{ "--d": `${delay + i * step}ms` } as React.CSSProperties}>
+          <span className="story-word" style={{ "--d": `${delay + wait + i * step}ms` } as React.CSSProperties}>
             {w}
           </span>
           {i < words.length - 1 ? " " : null}
@@ -160,12 +175,20 @@ export function StoryHero({
 }) {
   // Title words take roughly words × step; the rest follows just after
   const after = 200 + Math.min(title.split(" ").length * 45, 500)
+  // When the last key number has finished fading in (delay + ~0.7s transition)
+  const span = after + 180 + stats.length * 90 + 700
+  const started = useRef(false)
+  if (typeof window !== "undefined" && !started.current) {
+    started.current = true
+    heroDoneAt = performance.now() + span
+  }
   return (
+    <InHero.Provider value={true}>
     <header>
       {/* Cover first, wider than the reading column (but clear of the contents list on
           wide screens). On desktop its height follows the viewport so the cover, the
           title card and the first line of the intro all fit on the opening screen. */}
-      <Reveal className="max-w-[1100px] xl:max-w-[min(1100px,calc(100vw-400px))] mx-auto rounded-lg overflow-hidden bg-[#EDE8E1] border border-foreground/[0.08]">
+      <Reveal onLoad className="max-w-[1100px] xl:max-w-[min(1100px,calc(100vw-400px))] mx-auto rounded-lg overflow-hidden bg-[#EDE8E1] border border-foreground/[0.08]">
         <img
           src={image}
           alt={imageAlt}
@@ -198,6 +221,7 @@ export function StoryHero({
 
           <Reveal
             as="dl"
+            onLoad
             delay={after}
             className={`grid grid-cols-2 ${meta.length === 3 ? "md:grid-cols-3" : "md:grid-cols-4"} gap-x-6 gap-y-5`}
           >
@@ -219,6 +243,7 @@ export function StoryHero({
             {stats.map((s, i) => (
               <Reveal
                 key={s.label}
+                onLoad
                 delay={after + 180 + i * 90}
                 className="rounded-md bg-white border border-black/10 p-5 flex sm:flex-col items-baseline sm:items-start gap-3 sm:gap-0"
               >
@@ -230,6 +255,7 @@ export function StoryHero({
         </div>
       </Wide>
     </header>
+    </InHero.Provider>
   )
 }
 
