@@ -27,7 +27,7 @@ export function Hero() {
             <h1 className="hero-reveal hero-reveal-2 font-serif text-[32px] leading-[40px] sm:text-[48px] sm:leading-[56px] font-normal tracking-[-0.02em] text-foreground text-balance relative z-10">
               I&apos;m Mary, a product designer who makes complex AI workflows feel simple.
             </h1>
-            <p className="hero-reveal hero-reveal-3 mt-6 max-w-[540px] text-pretty font-sans text-[18px] leading-[30px] sm:text-[20px] sm:leading-[32px] font-normal tracking-[-0.01em] text-muted-foreground relative z-10">
+            <p className="hero-reveal hero-reveal-3 mt-6 max-w-[540px] text-pretty font-sans text-[17px] leading-relaxed font-normal text-muted-foreground relative z-10">
               I lead products from first sketch to launch for Amazon, venture studios and unicorns, with work recognised by international design awards. I also write and speak about how AI is changing the way products get designed.
             </p>
           </div>
