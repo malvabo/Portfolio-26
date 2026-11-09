@@ -398,7 +398,7 @@ export type StoryCard = { icon: LucideIcon; image: string; title: ReactNode; bod
 /** Small boxed mono label, e.g. "WHAT I LEARNED" */
 export function BoxLabel({ children }: { children: ReactNode }) {
   return (
-    <span className="inline-block rounded-md border border-black/20 bg-white px-2 py-1 font-mono text-[11px] uppercase tracking-wider leading-none">
+    <span className="inline-block bg-black text-white px-1.5 py-1 font-mono text-[11px] uppercase tracking-wider leading-none">
       {children}
     </span>
   )
@@ -421,15 +421,15 @@ export function CardStack({ label, cards }: { label: string; cards: StoryCard[] 
             <div key={i}>
               {i > 0 && (
                 <Reveal delay={i * 140} className="flex justify-center">
-                  <span className="block w-px h-10 md:h-14 bg-black/20" aria-hidden />
+                  <span className="block w-px h-10 md:h-14 bg-[#B4532A]/50" aria-hidden />
                 </Reveal>
               )}
               <Reveal
                 delay={80 + i * 140}
-                className="group rounded-xl bg-white border border-black/15 flex flex-col sm:flex-row overflow-hidden"
+                className="group rounded-md bg-white border border-black/10 shadow-[0_8px_24px_rgba(0,0,0,0.08)] flex flex-col sm:flex-row overflow-hidden"
               >
                 <div className="p-1 sm:self-stretch">
-                  <div className="relative w-full h-40 sm:w-32 sm:h-full sm:min-h-[128px] rounded-lg overflow-hidden flex items-center justify-center">
+                  <div className="relative w-full h-40 sm:w-32 sm:h-full sm:min-h-[128px] rounded overflow-hidden flex items-center justify-center">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={c.image}
@@ -437,7 +437,7 @@ export function CardStack({ label, cards }: { label: string; cards: StoryCard[] 
                       loading="lazy"
                       className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                     />
-                    <span className="relative flex items-center justify-center w-14 h-14 rounded-xl bg-white text-foreground ring-4 ring-white/50 shadow-[0_1px_2px_rgba(0,0,0,0.08)]">
+                    <span className="relative flex items-center justify-center w-14 h-14 rounded-md bg-white text-foreground ring-4 ring-white/50 shadow-[0_1px_2px_rgba(0,0,0,0.08)]">
                       <Icon className="w-[22px] h-[22px]" strokeWidth={1.75} aria-hidden />
                     </span>
                   </div>
