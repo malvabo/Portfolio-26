@@ -94,7 +94,7 @@ export default function PAAStory() {
 
         {/* 3. Discovery */}
         <div id="discovery" className="scroll-mt-28" aria-hidden />
-        <Beat kicker="02 Research" title="Mapping how each clinical role moves a patient from admission to discharge">
+        <Beat kicker="02 Research" title="Mapping clinical workflows, from admission to discharge">
           <p>
             I ran working sessions with clinical staff, case managers, care coordinators and admissions teams to map
             each of their workflows step by step, and where they handed work to each other.
