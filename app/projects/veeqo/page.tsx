@@ -344,7 +344,7 @@ export default function VeeqoStory() {
             title="Custom logic for non-coders"
             visual={
               <Figure
-                src="/images/aidocs.jpeg" maxWidth={640}
+                src="/images/aidocs.jpeg"
                 alt="AI documentation and system instructions"
                 caption="The rules sellers give their AI to write templates that render"
               />
