@@ -295,9 +295,6 @@ export default function VeeqoStory() {
                 </p>
               </Reveal>
             </Narrow>
-            <Wide>
-              <Figure src="/images/vq-doc8.png" alt="Plain document table exploration" caption="A plain document table, explored and dropped" />
-            </Wide>
             <Narrow>
               <Reveal className="text-[17px] leading-relaxed text-muted-foreground">
                 <p>
@@ -306,6 +303,9 @@ export default function VeeqoStory() {
                 </p>
               </Reveal>
             </Narrow>
+            <Wide>
+              <Figure src="/images/vq-doc8.png" alt="Plain document table exploration" caption="A plain document table, explored and dropped" />
+            </Wide>
           </div>
 
           <Moment
