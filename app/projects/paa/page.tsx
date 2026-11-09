@@ -62,7 +62,7 @@ export default function PAAStory() {
             </p>
           }
           stats={[
-            { value: "40%", label: "time saved answering document requests" },
+            { value: "~$14M", label: "a year saved, from 40% less time managing document workflows" },
             { value: "1,000s", label: "clinicians and facility staff using it" },
             { value: "Tier-1", label: "deals with Kaiser, Humana and United Healthcare" },
           ]}
@@ -207,7 +207,7 @@ export default function PAAStory() {
         <div id="process" className="scroll-mt-28" aria-hidden />
         <Beat kicker="04" title="Key decisions" />
 
-        <div className="mt-16 space-y-24 md:space-y-32">
+        <div className="mt-8 md:mt-10 space-y-24 md:space-y-32">
           <Moment
             n={1}
             title="Splitting &ldquo;am I on fire?&rdquo; from &ldquo;what&apos;s next?&rdquo;"
@@ -283,7 +283,7 @@ export default function PAAStory() {
                 image: "/images/paa-tile-time.jpg",
                 value: "~$14M",
                 label: "a year in clinician time",
-                body: "40% less time answering document requests. Across 1,000+ staff who spent about 30% of their week on them, at $60 an hour, that adds up to roughly $14M a year.",
+                body: "From 40% less time managing document workflows.",
               },
               {
                 icon: Handshake,

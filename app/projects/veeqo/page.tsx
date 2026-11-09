@@ -24,7 +24,6 @@ import {
   Wide,
   Narrow,
   Figure,
-  FigurePair,
   Clip,
   CardStack,
   Stage,
@@ -75,9 +74,9 @@ export default function VeeqoStory() {
             </p>
           }
           stats={[
+            { value: "$2.3M", label: "a year saved in third-party platform costs" },
             { value: "50k+", label: "sellers migrated" },
             { value: "0%", label: "enterprise churn" },
-            { value: "$2.3M", label: "a year saved in third-party platform costs" },
           ]}
         />
 
@@ -269,30 +268,45 @@ export default function VeeqoStory() {
         <div id="process" className="scroll-mt-28" aria-hidden />
         <Beat kicker="04" title="Key decisions" />
 
-        <div className="mt-16 space-y-24 md:space-y-32">
-          <Moment
-            n={1}
-            title="Cutting drag and drop"
-            visual={
-              <FigurePair
-                stacked
-                images={[
-                  { src: "/images/vq-doc12.png", alt: "Drag-and-drop editor exploration" },
-                  { src: "/images/vq-doc8.png", alt: "Early ideation drafts" },
-                ]}
-                caption="Drag and drop, and a plain document table, both explored and dropped"
-              />
-            }
-          >
-            <p>
-              Drag and drop was the obvious start. In critique it proved too expensive to build with the engineers we had, and a
-              simple version couldn&apos;t handle enterprise complexity.
-            </p>
-            <p>
-              A plain document table failed too: sellers name documents inconsistently, and without previews the list
-              turned into noise.
-            </p>
-          </Moment>
+        <div className="mt-8 md:mt-10 space-y-24 md:space-y-32">
+          {/* Each rejected direction sits right under the text about it, then what we chose */}
+          <div className="space-y-8 md:space-y-10">
+            <Moment
+              n={1}
+              title="Cutting drag and drop"
+              visual={
+                <Figure
+                  src="/images/vq-doc12.png"
+                  alt="Drag-and-drop editor exploration"
+                  caption="Drag and drop, explored and dropped"
+                />
+              }
+            >
+              <p>
+                Drag and drop was the obvious start. In critique it proved too expensive to build with the engineers we
+                had, and a simple version couldn&apos;t handle enterprise complexity.
+              </p>
+            </Moment>
+            <Narrow>
+              <Reveal className="text-[17px] leading-relaxed text-muted-foreground">
+                <p>
+                  A plain document table failed too: sellers name documents inconsistently, and without previews the
+                  list turned into noise.
+                </p>
+              </Reveal>
+            </Narrow>
+            <Wide>
+              <Figure src="/images/vq-doc8.png" alt="Plain document table exploration" caption="A plain document table, explored and dropped" />
+            </Wide>
+            <Narrow>
+              <Reveal className="text-[17px] leading-relaxed text-muted-foreground">
+                <p>
+                  We chose a document library with a live preview of every template: ready-made defaults for small
+                  sellers, and an HTML editor with AI for complex ones.
+                </p>
+              </Reveal>
+            </Narrow>
+          </div>
 
           <Moment
             n={2}
@@ -354,18 +368,18 @@ export default function VeeqoStory() {
           <Results
             items={[
               {
-                icon: Users,
-                image: "/images/veeqo-tile-sellers.jpg",
-                value: "50k+",
-                label: "sellers migrated",
-                body: "The core document infrastructure moved over, protecting $15B+ in annual GMV from interruptions.",
-              },
-              {
                 icon: Banknote,
                 image: "/images/veeqo-tile-market.jpg",
                 value: "$2.3M",
                 label: "a year saved",
                 body: "Switching off the third-party editor removed its platform costs.",
+              },
+              {
+                icon: Users,
+                image: "/images/veeqo-tile-sellers.jpg",
+                value: "50k+",
+                label: "sellers migrated",
+                body: "The core document infrastructure moved over, protecting $15B+ in annual GMV from interruptions.",
               },
               {
                 icon: ShieldCheck,
@@ -396,7 +410,7 @@ export default function VeeqoStory() {
 
         <div id="next" className="scroll-mt-28" aria-hidden />
         <Beat kicker="What's next" title="Owning the infrastructure opens the door to document intelligence." />
-        <div className="mt-12 space-y-10">
+        <div className="mt-8 md:mt-10 space-y-10">
           <Reveal className="max-w-[920px] mx-auto">
             <Roadmap />
           </Reveal>

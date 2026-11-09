@@ -65,8 +65,8 @@ export default function ConduitStory() {
             </p>
           }
           stats={[
+            { value: "$1.3M", label: "a year saved in compliance work" },
             { value: "1-3 min", label: "to verify a shipment, down from 20" },
-            { value: "95%", label: "lower cost per document" },
             { value: "5", label: "organisations rolled out to" },
           ]}
         />
@@ -228,7 +228,7 @@ export default function ConduitStory() {
         <div id="process" className="scroll-mt-28" aria-hidden />
         <Beat kicker="04" title="Key decisions" />
 
-        <div className="mt-16 space-y-24 md:space-y-32">
+        <div className="mt-8 md:mt-10 space-y-24 md:space-y-32">
           <Moment
             n={1}
             title="Dropping the rules engine"
@@ -237,12 +237,12 @@ export default function ConduitStory() {
                 <Figure
                   src="/conduit/ideation.webp"
                   alt="Six inbox directions explored side by side: document queue, shipment master-detail, shipment table, shipment cards, stages, and by shipment"
-                  caption="Alternatives explored during design ideation phase"
+                  caption="Alternatives explored during ideation"
                 />
                 <Figure
-                  src="/conduit/inbox.png"
-                  alt="The chosen inbox: documents grouped by shipment, each marked clear or needs review"
-                  caption="The direction we chose: documents grouped by shipment, with only what needs review flagged"
+                  src="/conduit/inbox-by-shipment.png"
+                  alt="Inbox with one row per shipment and a column per document type, each marked clear or needs review"
+                  caption="Inbox grouped by shipment, with the documents that need attention flagged"
                 />
               </div>
             }
@@ -321,18 +321,18 @@ export default function ConduitStory() {
           <Results
             items={[
               {
-                icon: Timer,
-                image: "/conduit/tile-time.jpg",
-                value: "1-3 min",
-                label: "to verify a shipment",
-                body: "Down from 20 minutes, saving up to two hours per shipment once pipelines replaced manual checks.",
-              },
-              {
                 icon: Banknote,
                 image: "/conduit/tile-sacks.jpg",
                 value: "$1.3M",
                 label: "a year saved in compliance work",
                 body: "Across the 5 importer organisations using it, from fewer manual checks and filing errors.",
+              },
+              {
+                icon: Timer,
+                image: "/conduit/tile-time.jpg",
+                value: "1-3 min",
+                label: "to verify a shipment",
+                body: "Down from 20 minutes, saving up to two hours per shipment once pipelines replaced manual checks.",
               },
               {
                 icon: Coins,

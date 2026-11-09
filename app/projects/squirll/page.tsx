@@ -64,9 +64,8 @@ export default function SquirllStory() {
             </p>
           }
           stats={[
-            { value: "0 → 1", label: "web and iOS" },
-            { value: "3", label: "months to build the mobile app" },
-            { value: "1", label: "designer" },
+            { value: "3×", label: "Design Awards: 1 Gold & 2 Silver" },
+            { value: "3 months", label: "to build the mobile app" },
           ]}
         />
 
@@ -204,7 +203,7 @@ export default function SquirllStory() {
         <div id="process" className="scroll-mt-28" aria-hidden />
         <Beat kicker="04" title="Key decisions" />
 
-        <div className="mt-16 space-y-24 md:space-y-32">
+        <div className="mt-8 md:mt-10 space-y-24 md:space-y-32">
           <Moment
             n={1}
             title="A palette that lowers money anxiety"

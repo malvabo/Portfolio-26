@@ -40,7 +40,7 @@ export function PAASection() {
           <div className="space-y-4">
             <div>
               <div className="text-xl font-medium text-foreground mb-0.5">~$14M a year</div>
-              <div className="text-sm text-muted-foreground opacity-80">in clinician time, from 40% less time answering document requests</div>
+              <div className="text-sm text-muted-foreground opacity-80">in clinician time, from 40% less time managing document workflows</div>
             </div>
             <div>
               <div className="text-xl font-medium text-foreground mb-0.5">Tier-1 deals</div>

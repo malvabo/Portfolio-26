@@ -242,7 +242,7 @@ export function StoryHero({
             {intro}
           </Reveal>
           {/* Key numbers as a row of white cards under the intro, same family as the diagram cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-8">
+          <div className={`grid grid-cols-1 ${stats.length === 2 ? "sm:grid-cols-2" : "sm:grid-cols-3"} gap-3 mt-8`}>
             {stats.map((s, i) => (
               <Reveal
                 key={s.label}
@@ -374,7 +374,7 @@ export function Figure({
       <div className="rounded-xl overflow-hidden bg-[#EDE8E1] border border-foreground/[0.08]">
         {blur ? (
           // eslint-disable-next-line @next/next/no-img-element
-          <img src={src} alt={alt} className="w-full h-auto blur-[3px] scale-[1.02]" />
+          <img src={src} alt={alt} className="w-full h-auto blur-[1.5px] scale-[1.01]" />
         ) : (
           <LightboxImage src={src} alt={alt} className="w-full h-auto" />
         )}

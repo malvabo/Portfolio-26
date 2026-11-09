@@ -41,12 +41,12 @@ export function VeeqoSection() {
             </h3>
             <div className="space-y-4">
               <div>
-                <div className="text-xl font-medium text-foreground mb-0.5">0% churn</div>
-                <div className="text-sm text-muted-foreground opacity-80">among top-tier enterprise accounts</div>
-              </div>
-              <div>
                 <div className="text-xl font-medium text-foreground mb-0.5">$2.3M a year</div>
                 <div className="text-sm text-muted-foreground opacity-80">saved in third-party platform costs</div>
+              </div>
+              <div>
+                <div className="text-xl font-medium text-foreground mb-0.5">0% churn</div>
+                <div className="text-sm text-muted-foreground opacity-80">among top-tier enterprise accounts</div>
               </div>
             </div>
           </div>

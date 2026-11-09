@@ -32,12 +32,11 @@ export function Hero() {
             </p>
 
             {/* Key numbers from the case studies, in a row under the intro */}
-            <dl className="hero-reveal hero-reveal-4 mt-10 grid grid-cols-2 sm:grid-cols-4 gap-x-6 gap-y-6 relative z-10">
+            <dl className="hero-reveal hero-reveal-4 mt-10 grid grid-cols-1 sm:grid-cols-3 gap-x-8 gap-y-6 relative z-10">
               {[
-                { value: "$2.3M", label: "a year saved for Amazon in platform costs" },
-                { value: "~$14M", label: "a year in clinician time saved at PAA" },
-                { value: "50k+", label: "sellers moved to a system I designed" },
-                { value: "3", label: "Indigo Design Awards, 1 Gold and 2 Silver" },
+                { value: "$14M/year", label: "Operational costs saved through workflow redesign" },
+                { value: "100K+", label: "Business users across enterprise products I’ve designed" },
+                { value: "3", label: "International Design Awards, 1 Gold and 2 Silver" },
               ].map((s) => (
                 <div key={s.value}>
                   <dt className="font-serif text-[1.75rem] md:text-[2rem] tracking-[-0.02em] leading-none text-[#3D3D3D] mb-2">
