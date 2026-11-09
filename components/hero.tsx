@@ -1,12 +1,12 @@
-import Image from "next/image"
 import { HeroGrid } from "@/components/hero-grid"
 import { AiOrb } from "@/components/ai-orb"
+import { HeroPhotos } from "@/components/hero-photos"
 
 export function Hero() {
   return (
     <div className="relative">
     <HeroGrid />
-    <section className="pt-24 pb-5 lg:pt-28 lg:pb-5 container mx-auto px-8 lg:px-12 max-w-7xl relative z-10">
+    <section className="pt-28 pb-5 lg:pt-36 lg:pb-5 container mx-auto px-8 lg:px-12 max-w-7xl relative z-10">
       <style>{`
         @keyframes fadeInUp {
           from { opacity: 0; transform: translateY(10px); }
@@ -22,7 +22,7 @@ export function Hero() {
         .hero-reveal-3 { animation-delay: 0.22s; }
         .hero-reveal-4 { animation-delay: 0.3s; }
       `}</style>
-      <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_360px] gap-10 lg:gap-16 items-center">
+      <div className="grid grid-cols-1">
         <div className="flex flex-col">
           <div data-grid-quiet className="w-full max-w-[720px] relative z-40">
             <h1 className="hero-reveal hero-reveal-2 font-serif text-[1.75rem] md:text-[2rem] leading-[1.15] font-normal tracking-[-0.02em] text-foreground text-balance relative z-10">
@@ -50,18 +50,12 @@ export function Hero() {
           </div>
         </div>
 
-        <figure className="hero-reveal hero-reveal-4 hidden lg:block relative aspect-[4/5] rounded-xl overflow-hidden bg-[#f1f1f1] border border-border/60 shadow-sm">
-          <Image
-            src="/images/speaking-2.jpg"
-            alt="Mary on stage at How to Web, presenting as Product Designer at Amazon"
-            fill
-            priority
-            className="object-cover object-[center_35%]"
-            sizes="360px"
-          />
-        </figure>
       </div>
     </section>
+    {/* Photos sit inside the hero so the mark field runs down to their bottom edge */}
+    <div className="relative z-10">
+      <HeroPhotos />
+    </div>
     </div>
   )
 }

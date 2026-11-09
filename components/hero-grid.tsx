@@ -8,7 +8,7 @@ import { useEffect, useRef } from "react"
 // once the cursor moves on. Static on touch devices and for reduced motion.
 
 const SPACING = 20
-const RADIUS = 150 // how far the cursor reaches, px
+const RADIUS = 190 // how far the cursor reaches, px
 const REST = [176, 172, 166] as const // resting grey
 const ACCENT = [180, 83, 42] as const // same accent as the cursor, #B4532A
 const TEXT_DIM = 0.45 // dashes behind the text react more softly
@@ -26,9 +26,10 @@ function turn(a: number, b: number) {
 
 function drawDash(ctx: CanvasRenderingContext2D, d: Dash) {
   const e = d.e * (d.dim ? TEXT_DIM : 1)
-  const mix = (a: number, b: number) => Math.round(a + (b - a) * e * 0.85)
-  ctx.strokeStyle = `rgba(${mix(REST[0], ACCENT[0])},${mix(REST[1], ACCENT[1])},${mix(REST[2], ACCENT[2])},${(0.4 + e * 0.45) * (d.dim ? TEXT_ALPHA : 1)})`
-  const half = (3 + e * 2.5) / 2
+  const mix = (a: number, b: number) => Math.round(a + (b - a) * e * 0.6)
+  ctx.strokeStyle = `rgba(${mix(REST[0], ACCENT[0])},${mix(REST[1], ACCENT[1])},${mix(REST[2], ACCENT[2])},${(0.4 + e * 0.2) * (d.dim ? TEXT_ALPHA : 1)})`
+  ctx.lineWidth = 1 + e * 0.3
+  const half = (3 + e * 5) / 2
   const ca = Math.cos(d.a) * half
   const sa = Math.sin(d.a) * half
   ctx.beginPath()
@@ -60,8 +61,7 @@ export function HeroGrid() {
 
     const draw = () => {
       ctx.clearRect(0, 0, width, height)
-      ctx.lineWidth = 1
-      ctx.lineCap = "butt"
+            ctx.lineCap = "butt"
       for (const d of dashes) drawDash(ctx, d)
     }
 
@@ -189,8 +189,8 @@ export function HeroGrid() {
       aria-hidden
       className="absolute inset-0 w-full h-full pointer-events-none"
       style={{
-        maskImage: "linear-gradient(to bottom, transparent 0, #000 12%, #000 85%, transparent 100%)",
-        WebkitMaskImage: "linear-gradient(to bottom, transparent 0, #000 12%, #000 85%, transparent 100%)",
+        maskImage: "linear-gradient(to bottom, transparent 0, #000 8%, #000 94%, transparent 100%)",
+        WebkitMaskImage: "linear-gradient(to bottom, transparent 0, #000 8%, #000 94%, transparent 100%)",
       }}
     />
   )
