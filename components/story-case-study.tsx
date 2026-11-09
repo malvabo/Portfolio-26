@@ -170,11 +170,11 @@ export function StoryHero({
           src={image}
           alt={imageAlt}
           loading="eager"
-          className="w-full aspect-[4/3] md:aspect-auto md:h-[clamp(240px,calc(100svh-320px),580px)] object-cover"
+          className="w-full aspect-[4/3] md:aspect-auto md:h-[clamp(260px,calc(100svh-280px),640px)] object-cover"
         />
       </Reveal>
 
-      <Wide className="relative z-10 -mt-16 sm:-mt-24 md:-mt-32">
+      <Wide className="relative z-10 -mt-16 sm:-mt-24 md:-mt-40">
         <div className="rounded-lg bg-white border border-foreground/[0.1] p-6 md:p-8 mx-3 sm:mx-0">
           <Words
             as="h1"
@@ -220,7 +220,7 @@ export function StoryHero({
               <Reveal
                 key={s.label}
                 delay={after + 180 + i * 90}
-                className="rounded-md bg-white border border-black/10 shadow-[0_8px_24px_rgba(0,0,0,0.08)] p-4 flex sm:flex-col items-baseline sm:items-start gap-3 sm:gap-0"
+                className="rounded-md bg-white border border-black/10 p-5 flex sm:flex-col items-baseline sm:items-start gap-3 sm:gap-0"
               >
                 <p className={`font-serif text-[1.75rem] md:text-[2rem] tracking-[-0.02em] leading-none sm:mb-2 text-[#3D3D3D]`}>{s.value}</p>
                 <p className="text-[13px] leading-snug text-muted-foreground">{s.label}</p>
@@ -430,10 +430,10 @@ export function CardStack({ label, cards }: { label: string; cards: StoryCard[] 
               )}
               <Reveal
                 delay={80 + i * 140}
-                className="group rounded-md bg-white border border-black/10 shadow-[0_8px_24px_rgba(0,0,0,0.08)] flex flex-col sm:flex-row overflow-hidden"
+                className="group rounded-md bg-white border border-black/10 flex flex-col sm:flex-row overflow-hidden"
               >
-                <div className="p-1 sm:self-stretch">
-                  <div className="relative w-full h-40 sm:w-32 sm:h-full sm:min-h-[128px] rounded overflow-hidden flex items-center justify-center">
+                <div className="sm:self-stretch">
+                  <div className="relative w-full h-40 sm:w-32 sm:h-full sm:min-h-[128px] overflow-hidden flex items-center justify-center">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={c.image}
