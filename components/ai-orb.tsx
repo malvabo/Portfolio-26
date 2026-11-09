@@ -33,7 +33,7 @@ float fbm(vec2 p) {
 
 void main() {
   vec2 uv = gl_FragCoord.xy / u_res - 0.5;
-  float t = u_time;
+  float t = u_time * 1.8;
   // slowly warped field so the light flows like liquid
   vec2 w = vec2(fbm(uv * 2.2 + vec2(t * 0.35, 0.0)), fbm(uv * 2.2 + vec2(3.1, -t * 0.3)));
   vec2 p = uv + (w - 0.5) * 0.45;
