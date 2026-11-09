@@ -8,6 +8,7 @@ import { BackLinkFooter } from "@/components/back-link"
 import {
   Building2,
   Gauge,
+  Banknote,
   Layers,
   MessageCircleQuestion,
   ShieldCheck,
@@ -76,7 +77,7 @@ export default function VeeqoStory() {
           stats={[
             { value: "50k+", label: "sellers migrated" },
             { value: "0%", label: "enterprise churn" },
-            { value: "30%", label: "fewer how-to tickets" },
+            { value: "$2.3M", label: "a year saved in third-party platform costs" },
           ]}
         />
 
@@ -353,6 +354,13 @@ export default function VeeqoStory() {
                 value: "50k+",
                 label: "sellers migrated",
                 body: "The core document infrastructure moved over, protecting $15B+ in annual GMV from interruptions.",
+              },
+              {
+                icon: Banknote,
+                image: "/images/veeqo-tile-market.jpg",
+                value: "$2.3M",
+                label: "a year saved",
+                body: "Switching off the third-party editor removed its platform costs.",
               },
               {
                 icon: ShieldCheck,

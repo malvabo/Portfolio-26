@@ -67,7 +67,7 @@ export default function ConduitStory() {
           stats={[
             { value: "1-3 min", label: "to verify a shipment, down from 20" },
             { value: "95%", label: "lower cost per document" },
-            { value: "5", label: "teams rolled out to" },
+            { value: "5", label: "organisations rolled out to" },
           ]}
         />
 
@@ -233,11 +233,18 @@ export default function ConduitStory() {
             n={1}
             title="Dropping the rules engine"
             visual={
-              <Figure
-                src="/conduit/ideation.webp"
-                alt="Six inbox directions explored side by side: document queue, shipment master-detail, shipment table, shipment cards, stages, and by shipment"
-                caption="Alternatives explored during design ideation phase"
-              />
+              <div className="space-y-10">
+                <Figure
+                  src="/conduit/ideation.webp"
+                  alt="Six inbox directions explored side by side: document queue, shipment master-detail, shipment table, shipment cards, stages, and by shipment"
+                  caption="Alternatives explored during design ideation phase"
+                />
+                <Figure
+                  src="/conduit/inbox.png"
+                  alt="The chosen inbox: documents grouped by shipment, each marked clear or needs review"
+                  caption="The direction we chose: documents grouped by shipment, with only what needs review flagged"
+                />
+              </div>
             }
           >
             <p>
@@ -330,7 +337,7 @@ export default function ConduitStory() {
               {
                 icon: Users,
                 image: "/conduit/tile-team.jpg",
-                value: "5 teams",
+                value: "5 organisations",
                 label: "rolled out to",
                 body: "Designed and built in four weeks, with a design system ready to grow with it.",
               },
