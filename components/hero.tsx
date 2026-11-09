@@ -1,5 +1,6 @@
 import { HeroGrid } from "@/components/hero-grid"
 import { AiOrb } from "@/components/ai-orb"
+import { HeroPhotos } from "@/components/hero-photos"
 
 export function Hero() {
   return (
@@ -51,6 +52,10 @@ export function Hero() {
 
       </div>
     </section>
+    {/* Photos sit inside the hero so the mark field runs down to their bottom edge */}
+    <div className="relative z-10">
+      <HeroPhotos />
+    </div>
     </div>
   )
 }
