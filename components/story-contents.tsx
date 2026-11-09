@@ -13,7 +13,7 @@ const EASE = "cubic-bezier(0.22, 1, 0.36, 1)"
  */
 export function StoryContents({ items }: { items: ContentsItem[] }) {
   const [hovered, setOpen] = useState(false)
-  // On arrival the panel opens for about a second, then folds away, so it's
+  // On arrival the panel opens for about two and a half seconds, then folds away, so it's
   // clear the line on the left can be expanded. Skipped for reduced motion.
   const [peek, setPeek] = useState(false)
   const open = hovered || peek
@@ -21,7 +21,7 @@ export function StoryContents({ items }: { items: ContentsItem[] }) {
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return
     const show = window.setTimeout(() => setPeek(true), 700)
-    const hide = window.setTimeout(() => setPeek(false), 2000)
+    const hide = window.setTimeout(() => setPeek(false), 3400)
     return () => {
       window.clearTimeout(show)
       window.clearTimeout(hide)
