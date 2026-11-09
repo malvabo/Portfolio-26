@@ -109,7 +109,7 @@ export function Architecture() {
     <Stage bg="/images/veeqo-tile-churn.jpg" className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-4 md:gap-3 items-center">
       <Card className="self-stretch">
         <Tag>Before</Tag>
-        <CardTitle>Settings here, editing elsewhere</CardTitle>
+        <CardTitle>Sellers left Amazon to edit</CardTitle>
         <div className="rounded border border-black/10 bg-[#F5F3F0] p-3 mb-3">
           <p className="text-[13px] font-medium text-foreground/70 mb-2">Amazon settings</p>
           <div className="flex items-center gap-2 text-[13px] text-muted-foreground">
@@ -138,7 +138,7 @@ export function Architecture() {
 
       <Card className="self-stretch">
         <Tag accent>After</Tag>
-        <CardTitle>One library, two paths</CardTitle>
+        <CardTitle>Everything stays in Amazon</CardTitle>
         <div className="space-y-2.5">
           <div className="flex items-center justify-between gap-3 rounded border border-black/10 p-3">
             <div>
@@ -166,7 +166,7 @@ export function DecisionTable() {
   const heads = ["Lead time", "Enterprise risk", "Vendor savings"]
   const options = [
     { tag: "Dropped", title: "Automated migration tool", cells: ["4 months", "Accounts exposed for longer", "Vendor stays on 3 months longer"], chosen: false },
-    { tag: "Chosen", title: "White-glove manual porting", cells: ["2 weeks", "0% churn, hands-on porting", "$X00k saved, vendor sunset 3 months early"], chosen: true },
+    { tag: "Chosen", title: "White-glove manual porting", cells: ["2 weeks", "0% churn, hands-on porting", "Vendor sunset 3 months early"], chosen: true },
   ]
   const cols = "grid grid-cols-[170px_130px_minmax(0,1fr)_minmax(0,1fr)]"
   return (
@@ -245,7 +245,7 @@ export function BrandScheme() {
           <div className="flex items-center gap-2 mb-1">
             <span className="bg-[#3D3D3D] text-white font-mono text-[10px] uppercase tracking-wider px-1.5 py-0.5 leading-none">Before</span>
           </div>
-          <p className="font-serif text-[1.125rem] tracking-[-0.01em] mb-4">Two tools, nothing linked</p>
+          <p className="font-serif text-[1.125rem] tracking-[-0.01em] mb-4">Brands scattered across files</p>
 
           <div className="rounded border border-black/10 bg-[#F5F3F0] p-3 mb-3">
             <p className="text-[13px] font-medium text-foreground/70 mb-2">Amazon settings</p>
@@ -287,7 +287,7 @@ export function BrandScheme() {
           <div className="flex items-center gap-2 mb-1">
             <span className="bg-[#B4532A] text-white font-mono text-[10px] uppercase tracking-wider px-1.5 py-0.5 leading-none">After</span>
           </div>
-          <p className="font-serif text-[1.125rem] tracking-[-0.01em] mb-4">One document library</p>
+          <p className="font-serif text-[1.125rem] tracking-[-0.01em] mb-4">Brands attached to each document</p>
 
           <div className="space-y-3">
             {library.map(({ label, brands }) => (
