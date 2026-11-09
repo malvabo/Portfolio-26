@@ -168,7 +168,7 @@ export function DecisionTable() {
     { tag: "Dropped", title: "Automated migration tool", cells: ["4 months", "Accounts exposed for longer", "Vendor stays on 3 months longer"], chosen: false },
     { tag: "Chosen", title: "White-glove manual porting", cells: ["2 weeks", "0% churn, hands-on porting", "Vendor sunset 3 months early"], chosen: true },
   ]
-  const cols = "grid grid-cols-[170px_130px_minmax(0,1fr)_minmax(0,1fr)]"
+  const cols = "grid grid-cols-[190px_110px_minmax(0,1fr)_minmax(0,1fr)]"
   return (
     <Stage bg="/images/veeqo-tile-voices.jpg">
       <Card className="!p-0 overflow-hidden">
@@ -184,16 +184,28 @@ export function DecisionTable() {
               ))}
             </div>
             {options.map((o, k) => (
-              <div role="row" key={o.title} className={`${cols} ${k === 0 ? "border-b border-black/10" : ""}`}>
+              <div
+                role="row"
+                key={o.title}
+                className={`${cols} ${k === 0 ? "border-b border-black/10" : ""} ${o.chosen ? "bg-[#B4532A]/[0.05]" : ""}`}
+              >
+                {/* Option name, with a quiet status line underneath instead of a tag */}
                 <div role="rowheader" className="p-3 sm:p-4">
-                  <Tag accent={o.chosen}>{o.tag}</Tag>
-                  <p className="font-serif text-[1rem] tracking-[-0.01em] mt-2 leading-snug">{o.title}</p>
+                  <p className="font-serif text-[1rem] tracking-[-0.01em] leading-snug">{o.title}</p>
+                  <p
+                    className={`mt-1.5 inline-flex items-center gap-1.5 text-[12px] ${o.chosen ? "text-[#B4532A]" : "text-muted-foreground"}`}
+                  >
+                    <span className={`w-1.5 h-1.5 rounded-full ${o.chosen ? "bg-[#B4532A]" : "bg-black/25"}`} aria-hidden />
+                    {o.tag}
+                  </p>
                 </div>
                 {o.cells.map((c, n) => (
                   <div
                     key={n}
                     role="cell"
-                    className="p-3 sm:p-4 border-l border-black/10 text-[13px] leading-snug text-foreground/85"
+                    className={`p-3 sm:p-4 border-l border-black/10 text-[13px] leading-snug ${
+                      o.chosen ? "text-foreground/85" : "text-muted-foreground"
+                    }`}
                   >
                     {c}
                   </div>
