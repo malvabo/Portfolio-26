@@ -285,8 +285,12 @@ export function BrandScheme() {
           <p className="font-serif text-[1.125rem] tracking-[-0.01em] mb-4">Brands attached to each document</p>
 
           <div className="space-y-3">
-            {library.map(({ label, brands }) => (
-              <div key={label}>
+            {library.map(({ label, brands }, k) => (
+              <div key={label} className="relative">
+                {/* Thin line joining each document icon to the next one */}
+                {k < library.length - 1 && (
+                  <span aria-hidden className="absolute left-3 top-7 -bottom-2 w-px bg-black/15" />
+                )}
                 <div className="flex items-center gap-2 text-[13px] font-medium">
                   <span className="grid place-items-center w-6 h-6 rounded bg-[#B4532A]/10 text-[#B4532A]">
                     <DocIcon />
