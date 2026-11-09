@@ -81,3 +81,63 @@ export function LightboxImage({ src, alt, className, lightboxSrc, loading = "laz
     </>
   )
 }
+
+/** Looping muted video with the same hover "Expand" badge and full-screen view as LightboxImage */
+export function LightboxVideo({ src, className, label }: { src: string; className?: string; label?: string }) {
+  const [open, setOpen] = useState(false)
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  useEffect(() => {
+    if (!open) return
+    document.body.style.overflow = "hidden"
+    const handleKey = (e: KeyboardEvent) => { if (e.key === "Escape") setOpen(false) }
+    window.addEventListener("keydown", handleKey)
+    return () => {
+      document.body.style.overflow = ""
+      window.removeEventListener("keydown", handleKey)
+    }
+  }, [open])
+
+  return (
+    <>
+      <div className="relative group cursor-zoom-in w-full h-full" onClick={() => setOpen(true)}>
+        <video src={src} autoPlay loop muted playsInline aria-label={label} className={className ?? ""} />
+        <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+          <div className="flex items-center gap-1.5 bg-[#1a1a1a] text-white px-2.5 py-1.5 text-[11px] font-medium tracking-wide">
+            <Maximize2 className="w-3 h-3" />
+            Expand
+          </div>
+        </div>
+      </div>
+      {open && mounted && createPortal(
+        <div
+          className="fixed inset-0 z-50 bg-black/85 flex items-center justify-center p-6"
+          onClick={() => setOpen(false)}
+        >
+          <button
+            className="absolute top-5 right-5 text-white/70 hover:text-white transition-colors bg-black/30 rounded-full p-2"
+            onClick={() => setOpen(false)}
+            aria-label="Close"
+          >
+            <X className="w-5 h-5" />
+          </button>
+          <video
+            src={src}
+            autoPlay
+            loop
+            muted
+            playsInline
+            aria-label={label}
+            className="max-w-[92vw] max-h-[92vh] object-contain rounded-lg shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>,
+        document.body
+      )}
+    </>
+  )
+}
