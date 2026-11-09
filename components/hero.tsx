@@ -24,7 +24,7 @@ export function Hero() {
       <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_360px] gap-10 lg:gap-16 items-center">
         <div className="flex flex-col">
           <div data-grid-quiet className="w-full max-w-[720px] relative z-40">
-            <h1 className="hero-reveal hero-reveal-2 font-serif text-[32px] leading-[40px] sm:text-[48px] sm:leading-[56px] font-normal tracking-[-0.02em] text-foreground text-balance relative z-10">
+            <h1 className="hero-reveal hero-reveal-2 font-serif text-[22px] md:text-[26px] leading-[1.15] font-normal tracking-tight text-foreground text-balance relative z-10">
               I&apos;m Mary, a product designer who makes complex AI workflows feel simple.
             </h1>
             <p className="hero-reveal hero-reveal-3 mt-6 max-w-[540px] text-pretty font-sans text-[17px] leading-relaxed font-normal text-muted-foreground relative z-10">
