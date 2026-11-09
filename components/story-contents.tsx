@@ -6,18 +6,10 @@ export type ContentsItem = { id: string; label: string }
 
 const EASE = "cubic-bezier(0.22, 1, 0.36, 1)"
 
-function Sparkle({ className = "" }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 10 10" className={className} aria-hidden>
-      <path d="M5 0C5.55 3.4 6.6 4.45 10 5 6.6 5.55 5.55 6.6 5 10 4.45 6.6 3.4 5.55 0 5 3.4 4.45 4.45 3.4 5 0Z" />
-    </svg>
-  )
-}
-
 /**
  * Sticky table of contents for story case studies.
  * Rests as a small pill on the left edge, opens into a bordered panel on
- * hover or keyboard focus, and a sparkle marks the section in view.
+ * hover or keyboard focus, and a dot marks the section in view.
  */
 export function StoryContents({ items }: { items: ContentsItem[] }) {
   const [open, setOpen] = useState(false)
@@ -58,7 +50,7 @@ export function StoryContents({ items }: { items: ContentsItem[] }) {
     }
   }, [items])
 
-  // Move the sparkle to the active item
+  // Move the dot to the active item
   useEffect(() => {
     const b = active ? buttonRefs.current[active] : null
     if (b) setMarker(b.offsetTop + b.offsetHeight / 2)
@@ -84,7 +76,7 @@ export function StoryContents({ items }: { items: ContentsItem[] }) {
       {/* Offset outline behind the open panel */}
       <div
         aria-hidden
-        className="absolute left-0 top-0 border border-foreground pointer-events-none"
+        className="absolute left-0 top-0 border border-foreground/20 rounded-[10px] pointer-events-none"
         style={{
           width: w,
           height: h,
@@ -100,9 +92,9 @@ export function StoryContents({ items }: { items: ContentsItem[] }) {
         style={{
           width: w,
           height: h,
-          borderRadius: open ? 0 : 4,
+          borderRadius: open ? 10 : 4,
           background: open ? "var(--background)" : "color-mix(in srgb, var(--foreground) 35%, transparent)",
-          border: open ? "1px solid var(--foreground)" : "0px solid transparent",
+          border: open ? "1px solid color-mix(in srgb, var(--foreground) 22%, transparent)" : "0px solid transparent",
           transition: `width .45s ${EASE}, height .45s ${EASE}, border-radius .3s ease, background-color .2s ease`,
         }}
       >
@@ -116,7 +108,7 @@ export function StoryContents({ items }: { items: ContentsItem[] }) {
           }}
         >
           <div className="relative flex">
-            {/* Rail + sparkle */}
+            {/* Rail + dot */}
             <div className="relative w-[13px] shrink-0">
               <div className="absolute inset-y-1 left-1/2 -translate-x-1/2 w-px bg-foreground/20" />
               <div
@@ -127,7 +119,7 @@ export function StoryContents({ items }: { items: ContentsItem[] }) {
                   transition: `top .5s ${EASE}`,
                 }}
               >
-                <Sparkle className="w-[10px] h-[10px] fill-[#B4532A]" />
+                <span className="block w-[7px] h-[7px] rounded-full bg-[#B4532A]" />
               </div>
             </div>
 

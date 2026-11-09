@@ -214,11 +214,15 @@ export function StoryHero({
           <Reveal onLoad delay={after + 80} className="text-[17px] leading-relaxed text-muted-foreground">
             {intro}
           </Reveal>
-          {/* Key numbers sit in a row under the intro */}
-          <div className="grid grid-cols-3 gap-5 sm:gap-8 mt-10">
+          {/* Key numbers as a row of white cards under the intro, same family as the diagram cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mt-8">
             {stats.map((s, i) => (
-              <Reveal key={s.label} delay={after + 180 + i * 90}>
-                <p className={`font-serif text-[1.375rem] md:text-[1.5rem] tracking-[-0.02em] leading-none mb-1.5 ${ACCENT}`}>{s.value}</p>
+              <Reveal
+                key={s.label}
+                delay={after + 180 + i * 90}
+                className="rounded-md bg-white border border-black/10 shadow-[0_8px_24px_rgba(0,0,0,0.08)] p-4 flex sm:flex-col items-baseline sm:items-start gap-3 sm:gap-0"
+              >
+                <p className={`font-serif text-[1.75rem] md:text-[2rem] tracking-[-0.02em] leading-none sm:mb-2 text-[#3D3D3D]`}>{s.value}</p>
                 <p className="text-[13px] leading-snug text-muted-foreground">{s.label}</p>
               </Reveal>
             ))}
@@ -398,7 +402,7 @@ export type StoryCard = { icon: LucideIcon; image: string; title: ReactNode; bod
 /** Small boxed mono label, e.g. "WHAT I LEARNED" */
 export function BoxLabel({ children }: { children: ReactNode }) {
   return (
-    <span className="inline-block bg-black text-white px-1.5 py-1 font-mono text-[11px] uppercase tracking-wider leading-none">
+    <span className="inline-block bg-[#3D3D3D] text-white px-1.5 py-1 font-mono text-[11px] uppercase tracking-wider leading-none">
       {children}
     </span>
   )
