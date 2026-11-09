@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { HeroGrid } from "@/components/hero-grid"
+import { AiOrb } from "@/components/ai-orb"
 
 export function Hero() {
   return (
@@ -24,8 +25,8 @@ export function Hero() {
       <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_360px] gap-10 lg:gap-16 items-center">
         <div className="flex flex-col">
           <div data-grid-quiet className="w-full max-w-[720px] relative z-40">
-            <h1 className="hero-reveal hero-reveal-2 font-serif text-[22px] md:text-[26px] leading-[1.15] font-normal tracking-tight text-foreground text-balance relative z-10">
-              I&apos;m Mary, a product designer who makes complex AI workflows feel simple.
+            <h1 className="hero-reveal hero-reveal-2 font-serif text-[1.75rem] md:text-[2rem] leading-[1.15] font-normal tracking-[-0.02em] text-foreground text-balance relative z-10">
+              I&apos;m Mary, a product designer who makes complex AI<AiOrb /> workflows feel simple.
             </h1>
             <p className="hero-reveal hero-reveal-3 mt-6 max-w-[540px] text-pretty font-sans text-[17px] leading-relaxed font-normal text-muted-foreground relative z-10">
               I lead products from first sketch to launch for Amazon, venture studios and unicorns, with work recognised by international design awards. I also write and speak about how AI is changing the way products get designed.
@@ -42,7 +43,7 @@ export function Hero() {
                   <dt className="font-serif text-[1.75rem] md:text-[2rem] tracking-[-0.02em] leading-none text-[#3D3D3D] mb-2">
                     {s.value}
                   </dt>
-                  <dd className="text-sm text-muted-foreground opacity-80 whitespace-pre-line">{s.label}</dd>
+                  <dd className="text-sm text-muted-foreground whitespace-pre-line">{s.label}</dd>
                 </div>
               ))}
             </dl>

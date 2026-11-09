@@ -11,7 +11,8 @@ const SPACING = 20
 const RADIUS = 150 // how far the cursor reaches, px
 const REST = [176, 172, 166] as const // resting grey
 const ACCENT = [180, 83, 42] as const // same accent as the cursor, #B4532A
-const TEXT_DIM = 0.75 // dashes behind the statement react a little more softly
+const TEXT_DIM = 0.45 // dashes behind the text react more softly
+const TEXT_ALPHA = 0.45 // and are much lighter, so the copy stays readable
 
 type Dash = { x: number; y: number; a0: number; a: number; e: number; dim: boolean }
 
@@ -26,7 +27,7 @@ function turn(a: number, b: number) {
 function drawDash(ctx: CanvasRenderingContext2D, d: Dash) {
   const e = d.e * (d.dim ? TEXT_DIM : 1)
   const mix = (a: number, b: number) => Math.round(a + (b - a) * e * 0.85)
-  ctx.strokeStyle = `rgba(${mix(REST[0], ACCENT[0])},${mix(REST[1], ACCENT[1])},${mix(REST[2], ACCENT[2])},${0.4 + e * 0.45})`
+  ctx.strokeStyle = `rgba(${mix(REST[0], ACCENT[0])},${mix(REST[1], ACCENT[1])},${mix(REST[2], ACCENT[2])},${(0.4 + e * 0.45) * (d.dim ? TEXT_ALPHA : 1)})`
   const half = (3 + e * 2.5) / 2
   const ca = Math.cos(d.a) * half
   const sa = Math.sin(d.a) * half
