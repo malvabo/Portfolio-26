@@ -59,7 +59,7 @@ export default function VeeqoStory() {
         <StoryHero
           image="/images/vq_cover.png"
           imageAlt="Editing an integrated packing slip in the new Veeqo document system"
-          title="Amazon: Redesigning a document system for 50,000+ sellers"
+          title="Amazon: Redesigning a document system for 50k+ sellers"
           meta={[
             { label: "Company", value: "Veeqo · Amazon" },
             { label: "Timeline", value: "3 months, 2026" },

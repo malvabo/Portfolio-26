@@ -368,7 +368,7 @@ export default function ConduitStory() {
             image="/images/vq_cover.png"
             imageAlt="Editing a packing slip in the Veeqo document system"
             title="Veeqo"
-            summary="Rebuilding the document system behind 50,000+ sellers."
+            summary="Rebuilding the document system behind 50k+ sellers."
             meta={["Shipping", "Product designer"]}
           />
         </div>

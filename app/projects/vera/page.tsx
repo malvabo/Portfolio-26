@@ -35,7 +35,7 @@ export default function VeraCaseStudy() {
                 Amazon: Introducing AI insights for sellers
               </h1>
               <p className="text-[17px] leading-relaxed text-muted-foreground">
-                Starting from a blank slate - no problem statement, no defined scope - and exploring how AI could surface actionable intelligence inside the platform 50,000+ sellers already lived in.
+                Starting from a blank slate - no problem statement, no defined scope - and exploring how AI could surface actionable intelligence inside the platform 50k+ sellers already lived in.
               </p>
             </div>
 
