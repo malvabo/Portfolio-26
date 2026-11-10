@@ -44,15 +44,15 @@ function drawCell(ctx: CanvasRenderingContext2D, c: Cell) {
   // At rest every mark is a small dot; it unfolds into its symbol as it wakes.
   if (e < 0.05 || c.shape === "dot") {
     ctx.beginPath()
-    ctx.arc(0, 0, c.shape === "dot" ? 1.1 + e * 1.6 : 1.1, 0, Math.PI * 2)
+    ctx.arc(0, 0, c.shape === "dot" ? 0.7 + e * 1 : 0.7, 0, Math.PI * 2)
     ctx.fill()
     ctx.restore()
     return
   }
 
   ctx.rotate(c.angle)
-  const s = 2 + e * 6 // half-size of the symbol
-  ctx.lineWidth = 1.4
+  const s = 1.2 + e * 3.6 // half-size of the symbol
+  ctx.lineWidth = 1.1
   ctx.lineCap = "square"
   ctx.lineJoin = "miter"
   ctx.beginPath()
