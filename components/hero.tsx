@@ -1,12 +1,11 @@
 import { HeroGrid } from "@/components/hero-grid"
 import { AiOrb } from "@/components/ai-orb"
-import { HeroPhotos } from "@/components/hero-photos"
 
 export function Hero() {
   return (
-    <div className="relative">
+    <div className="relative min-h-[calc(100svh-96px)] flex flex-col justify-center">
     <HeroGrid />
-    <section className="pt-28 pb-5 lg:pt-36 lg:pb-5 container mx-auto px-8 lg:px-12 max-w-7xl relative z-10">
+    <section className="pt-20 pb-8 lg:pt-24 lg:pb-10 w-full container mx-auto px-8 lg:px-12 max-w-7xl relative z-10">
       <style>{`
         @keyframes fadeInUp {
           from { opacity: 0; transform: translateY(10px); }
@@ -25,11 +24,12 @@ export function Hero() {
       <div className="grid grid-cols-1">
         <div className="flex flex-col">
           <div data-grid-quiet className="w-full max-w-[720px] relative z-40">
+            <img src="/images/mary-face.webp" alt="Mary Borysova" width={80} height={80} className="hero-reveal hero-reveal-1 mb-5 h-20 w-20 rounded-xl object-cover relative z-10" />
             <h1 className="hero-reveal hero-reveal-2 font-serif text-[1.75rem] md:text-[2rem] leading-[1.15] font-normal tracking-[-0.02em] text-foreground text-balance relative z-10">
               I&apos;m Mary, a product designer who makes complex AI<AiOrb /> workflows feel simple.
             </h1>
             <p className="hero-reveal hero-reveal-3 mt-6 max-w-[540px] text-pretty font-sans text-[17px] leading-relaxed font-normal text-muted-foreground relative z-10">
-              I lead products from first sketch to launch for Amazon, venture studios and unicorns, with work recognised by international design awards. I also write and speak about how AI is changing the way products get designed.
+              I led products from first sketch to launch for Amazon, venture studios and unicorns. I also write and speak about how AI is changing the way products get designed.
             </p>
 
             {/* Key numbers from the case studies, in a row under the intro */}
@@ -52,10 +52,6 @@ export function Hero() {
 
       </div>
     </section>
-    {/* Photos sit inside the hero so the mark field runs down to their bottom edge */}
-    <div className="relative z-10">
-      <HeroPhotos />
-    </div>
     </div>
   )
 }

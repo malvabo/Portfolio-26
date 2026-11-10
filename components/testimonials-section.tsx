@@ -4,7 +4,6 @@ export function TestimonialsSection() {
   const testimonials = [
     {
       title: "Strong recommendation",
-      keyPhrase: "communication skills, leadership qualities",
       text: "I've worked under the leadership of Maria. Her superb communication skills, leadership qualities, enthusiastic personality are the reasons why I recommend her strongly.",
       author: "Kateryna Lezhukh",
       role: "Founder at Quema (presently)",
@@ -13,7 +12,6 @@ export function TestimonialsSection() {
     },
     {
       title: "Drives projects to completion",
-      keyPhrase: "reduce uncertainty for everyone",
       text: "Immerses themselves entirely in the project to drive it to completion. Works to reduce uncertainty for everyone else to understand user needs.",
       author: "Konstantin Valiotti",
       role: "Director of Product at PandaDoc",
@@ -23,7 +21,6 @@ export function TestimonialsSection() {
     },
     {
       title: "Thorough and analytical",
-      keyPhrase: "push the team to build with purpose",
       text: "She questions the status quo and asks the tough questions that push the team to build with purpose.",
       author: "Carla Ruiz Entrecanales",
       role: "Venture Builder at ColdStart",
@@ -32,32 +29,23 @@ export function TestimonialsSection() {
     },
   ]
 
-  function highlightPhrase(text: string, phrase: string) {
-    const idx = text.toLowerCase().indexOf(phrase.toLowerCase())
-    if (idx === -1) return text
-    const before = text.slice(0, idx)
-    const matched = text.slice(idx, idx + phrase.length)
-    const after = text.slice(idx + phrase.length)
-    return (
-      <>
-        {before}
-        <mark className="bg-amber-200/90 text-amber-950 rounded-sm px-0.5">{matched}</mark>
-        {after}
-      </>
-    )
-  }
-
   return (
-    <section className="relative pt-10 md:pt-7 pb-8 md:pb-10 container mx-auto px-8 lg:px-12 overflow-hidden">
+    <section id="reviews" className="relative pt-10 md:pt-12 pb-16 md:pb-20 container mx-auto px-8 lg:px-12 overflow-hidden scroll-mt-24">
       <div className="relative max-w-7xl mx-auto">
+        <div className="flex items-center gap-2 mb-2">
+          <span className="uppercase text-[13px] text-muted-foreground/70 font-mono tracking-wide">Reviews</span>
+        </div>
+        <h2 className="font-serif text-2xl md:text-3xl leading-[1.1] tracking-tight text-foreground mb-10">
+          What the people I&apos;ve worked with say
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-[#f1f1f1] rounded-xl p-6 md:p-7 h-full flex flex-col">
-              <p className="text-base md:text-[17px] leading-relaxed text-foreground/90 mb-4 flex-grow font-serif">
-                {highlightPhrase(testimonial.text, testimonial.keyPhrase)}
+            <div key={index} className="bg-[#f1f1f1] rounded-xl p-5 h-full flex flex-col">
+              <p className="text-base leading-relaxed text-foreground/70 mb-3 flex-grow font-sans">
+                {testimonial.text}
               </p>
 
-              <div className="flex items-center gap-3 pt-4 border-t border-border/30">
+              <div className="flex items-center gap-3 pt-3 border-t border-border/30">
                 <div className="w-10 h-10 rounded-full overflow-hidden bg-muted flex-shrink-0 ring-2 ring-white shadow-sm">
                   <Image
                     src={testimonial.avatar || "/placeholder.svg"}

@@ -1,6 +1,7 @@
 "use client"
 
 import { StoryTopBar } from "@/components/story-top-bar"
+import { wip } from "@/components/wip"
 import { StoryContents } from "@/components/story-contents"
 import { StoryCursor } from "@/components/story-cursor"
 import { ScrollToTop } from "@/components/scroll-to-top"
@@ -230,14 +231,14 @@ export default function PAAStory() {
           <Moment
             n={2}
             title="One locked record, one source of truth"
-            visual={
+            visual={wip(
               <Figure
                 src="/images/paa-discharge.png"
                 blur
                 alt="Discharge documentation flow"
                 caption="The AI drafts only from the locked assessment"
               />
-            }
+            )}
           >
             <p>
               Clinicians enter the core patient assessment first: the objective, unambiguous data the rest of the care
