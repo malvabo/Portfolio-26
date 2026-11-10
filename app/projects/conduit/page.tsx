@@ -302,8 +302,8 @@ export default function ConduitStory() {
             visual={
               <Figure
                 src="/conduit/ask-1.webp"
-                alt="Asking Conduit a question about processed documents, with sources attached"
-                caption="Every answer arrives with the documents it came from"
+                alt="Conduit chat: an answer about what blocks a shipment, with its sources, then the agent asking which value to file in the declaration"
+                caption="Before filing a declaration, the agent asks the officer to make the call"
               />
             }
           >
