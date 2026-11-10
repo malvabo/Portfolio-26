@@ -30,8 +30,14 @@ export function TestimonialsSection() {
   ]
 
   return (
-    <section className="relative pt-12 md:pt-14 pb-8 md:pb-10 container mx-auto px-8 lg:px-12 overflow-hidden">
+    <section id="reviews" className="relative pt-10 md:pt-12 pb-16 md:pb-20 container mx-auto px-8 lg:px-12 overflow-hidden scroll-mt-24">
       <div className="relative max-w-7xl mx-auto">
+        <div className="flex items-center gap-2 mb-2">
+          <span className="uppercase text-[13px] text-muted-foreground/70 font-mono tracking-wide">Reviews</span>
+        </div>
+        <h2 className="font-serif text-2xl md:text-3xl leading-[1.1] tracking-tight text-foreground mb-10">
+          What the people I&apos;ve worked with say
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-start">
           {testimonials.map((testimonial, index) => (
             <div key={index} className="bg-[#f1f1f1] rounded-xl p-5 flex flex-col">
