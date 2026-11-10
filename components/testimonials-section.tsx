@@ -35,7 +35,7 @@ export function TestimonialsSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {testimonials.map((testimonial, index) => (
             <div key={index} className="bg-[#f1f1f1] rounded-xl p-6 md:p-7 h-full flex flex-col">
-              <p className="text-base leading-relaxed text-foreground mb-4 flex-grow font-sans">
+              <p className="text-base leading-relaxed text-foreground/70 mb-4 flex-grow font-sans">
                 {testimonial.text}
               </p>
 
