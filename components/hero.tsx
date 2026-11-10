@@ -24,7 +24,7 @@ export function Hero() {
       <div className="grid grid-cols-1">
         <div className="flex flex-col">
           <div data-grid-quiet className="w-full max-w-[720px] relative z-40">
-            <img src="/images/mary-face.webp" alt="Mary Borysova" width={62} height={62} className="hero-reveal hero-reveal-1 mb-5 h-[62px] w-[62px] rounded-xl object-cover relative z-10" />
+            <img src="/images/mary-face.webp" alt="Mary Borysova" width={80} height={80} className="hero-reveal hero-reveal-1 mb-5 h-20 w-20 rounded-xl object-cover relative z-10" />
             <h1 className="hero-reveal hero-reveal-2 font-serif text-[1.75rem] md:text-[2rem] leading-[1.15] font-normal tracking-[-0.02em] text-foreground text-balance relative z-10">
               I&apos;m Mary, a product designer who makes complex AI<AiOrb /> workflows feel simple.
             </h1>
