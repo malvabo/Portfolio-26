@@ -1,6 +1,7 @@
 "use client"
 
 import { StoryTopBar } from "@/components/story-top-bar"
+import { wip } from "@/components/wip"
 import { StoryContents } from "@/components/story-contents"
 import { StoryCursor } from "@/components/story-cursor"
 import { ScrollToTop } from "@/components/scroll-to-top"
@@ -274,13 +275,13 @@ export default function VeeqoStory() {
             <Moment
               n={1}
               title="Cutting drag and drop"
-              visual={
+              visual={wip(
                 <Figure
                   src="/images/vq-doc12.png"
                   alt="Drag-and-drop editor exploration"
                   caption="Drag and drop, explored and dropped"
                 />
-              }
+              )}
             >
               <p>
                 Drag and drop was the obvious start. In critique it proved too expensive to build with the engineers we
@@ -303,9 +304,11 @@ export default function VeeqoStory() {
                 </p>
               </Reveal>
             </Narrow>
-            <Wide>
-              <Figure src="/images/vq-doc8.png" alt="Plain document table exploration" caption="A plain document table, explored and dropped" />
-            </Wide>
+            {wip(
+              <Wide>
+                <Figure src="/images/vq-doc8.png" alt="Plain document table exploration" caption="A plain document table, explored and dropped" />
+              </Wide>
+            )}
           </div>
 
           <Moment

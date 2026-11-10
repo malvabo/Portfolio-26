@@ -1,6 +1,7 @@
 "use client"
 
 import { StoryTopBar } from "@/components/story-top-bar"
+import { wip } from "@/components/wip"
 import { ScrollToTop } from "@/components/scroll-to-top"
 import { BackLinkFooter } from "@/components/back-link"
 import { StoryContents } from "@/components/story-contents"
@@ -138,13 +139,15 @@ export default function ConduitStory() {
               to four jobs: extract the data, catch bad documents early, flag shipments at risk and cut manual filing errors.
             </Reveal>
           </Narrow>
-          <Wide>
-            <Figure
-              src="/conduit/workshop.webp"
+          {wip(
+            <Wide>
+              <Figure
+                src="/conduit/workshop.webp"
                 alt="A service blueprint above a workshop board of sticky notes"
-              caption="Journey mapping and artifacts from the stakeholder workshops"
-            />
-          </Wide>
+                caption="Journey mapping and artifacts from the stakeholder workshops"
+              />
+            </Wide>
+          )}
         </div>
 
         <Divider />
@@ -234,13 +237,13 @@ export default function ConduitStory() {
             <Moment
               n={1}
               title="Dropping the rules engine"
-              visual={
+              visual={wip(
                 <Figure
                   src="/conduit/inbox-by-shipment.webp"
                   alt="Inbox with one row per shipment and a column per document type, each marked clear or needs review"
                   caption="Inbox grouped by shipment, with the documents that need attention flagged"
                 />
-              }
+              )}
             >
               <p>
                 The plan was for Conduit to pass or fail each document. Research showed that every importer checks
