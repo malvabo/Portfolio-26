@@ -3,9 +3,9 @@ import { AiOrb } from "@/components/ai-orb"
 
 export function Hero() {
   return (
-    <div className="relative min-h-[calc(100svh-101px)] flex flex-col justify-center">
+    <div className="relative min-h-[calc(100svh-96px)] flex flex-col justify-center">
     <HeroGrid />
-    <section className="pt-28 pb-12 lg:pt-28 lg:pb-12 w-full container mx-auto px-8 lg:px-12 max-w-7xl relative z-10">
+    <section className="pt-20 pb-8 lg:pt-24 lg:pb-10 w-full container mx-auto px-8 lg:px-12 max-w-7xl relative z-10">
       <style>{`
         @keyframes fadeInUp {
           from { opacity: 0; transform: translateY(10px); }
