@@ -5,7 +5,7 @@ export function Hero() {
   return (
     <div className="relative">
     <HeroGrid />
-    <section className="pt-28 pb-5 lg:pt-36 lg:pb-5 container mx-auto px-8 lg:px-12 max-w-7xl relative z-10">
+    <section className="pt-24 pb-5 lg:pt-28 lg:pb-5 container mx-auto px-8 lg:px-12 max-w-7xl relative z-10">
       <style>{`
         @keyframes fadeInUp {
           from { opacity: 0; transform: translateY(10px); }
@@ -24,8 +24,9 @@ export function Hero() {
       <div className="grid grid-cols-1">
         <div className="flex flex-col">
           <div data-grid-quiet className="w-full max-w-[720px] relative z-40">
+            <img src="/images/mary-face.webp" alt="Mary Borysova" width={48} height={48} className="hero-reveal hero-reveal-1 mb-5 h-12 w-12 rounded-lg object-cover relative z-10" />
             <h1 className="hero-reveal hero-reveal-2 font-serif text-[1.75rem] md:text-[2rem] leading-[1.15] font-normal tracking-[-0.02em] text-foreground text-balance relative z-10">
-              I&apos;m Mary<img src="/images/mary-face.webp" alt="" aria-hidden width={96} height={96} className="inline-block align-[-0.12em] ml-[0.18em] h-[0.92em] w-[0.92em] rounded-full object-cover ring-1 ring-black/10" />, a product designer who makes complex AI<AiOrb /> workflows feel simple.
+              I&apos;m Mary, a product designer who makes complex AI<AiOrb /> workflows feel simple.
             </h1>
             <p className="hero-reveal hero-reveal-3 mt-6 max-w-[540px] text-pretty font-sans text-[17px] leading-relaxed font-normal text-muted-foreground relative z-10">
               I lead products from first sketch to launch for Amazon, venture studios and unicorns. I also write and speak about how AI is changing the way products get designed.

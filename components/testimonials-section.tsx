@@ -32,16 +32,20 @@ export function TestimonialsSection() {
   return (
     <section className="relative pt-12 md:pt-14 pb-8 md:pb-10 container mx-auto px-8 lg:px-12 overflow-hidden">
       <div className="relative max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-[#f1f1f1] rounded-xl p-5 md:p-6 h-full flex flex-col gap-4">
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-lg overflow-hidden bg-muted flex-shrink-0">
+            <div key={index} className="bg-[#f1f1f1] rounded-xl p-6 md:p-7 h-full flex flex-col">
+              <p className="text-base leading-relaxed text-foreground/70 mb-4 flex-grow font-sans">
+                {testimonial.text}
+              </p>
+
+              <div className="flex items-center gap-3 pt-4 border-t border-border/30">
+                <div className="w-10 h-10 rounded-full overflow-hidden bg-muted flex-shrink-0 ring-2 ring-white shadow-sm">
                   <Image
                     src={testimonial.avatar || "/placeholder.svg"}
                     alt={testimonial.author}
-                    width={48}
-                    height={48}
+                    width={40}
+                    height={40}
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -50,9 +54,6 @@ export function TestimonialsSection() {
                   <p className="text-xs font-medium text-muted-foreground mt-0.5">{testimonial.role}</p>
                 </div>
               </div>
-              <p className="text-base leading-relaxed text-foreground/70 font-sans">
-                {testimonial.text}
-              </p>
             </div>
           ))}
         </div>
