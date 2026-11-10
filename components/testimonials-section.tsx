@@ -38,10 +38,10 @@ export function TestimonialsSection() {
         <h2 className="font-serif text-2xl md:text-3xl leading-[1.1] tracking-tight text-foreground mb-10">
           What the people I&apos;ve worked with say
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-[#f1f1f1] rounded-xl p-5 flex flex-col">
-              <p className="text-base leading-relaxed text-foreground/70 mb-3 font-sans">
+            <div key={index} className="bg-[#f1f1f1] rounded-xl p-5 h-full flex flex-col">
+              <p className="text-base leading-relaxed text-foreground/70 mb-3 flex-grow font-sans">
                 {testimonial.text}
               </p>
 
