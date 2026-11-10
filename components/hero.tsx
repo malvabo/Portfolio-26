@@ -28,7 +28,7 @@ export function Hero() {
               I&apos;m Mary, a product designer who makes complex AI<AiOrb /> workflows feel simple.
             </h1>
             <p className="hero-reveal hero-reveal-3 mt-6 max-w-[540px] text-pretty font-sans text-[17px] leading-relaxed font-normal text-muted-foreground relative z-10">
-              I lead products from first sketch to launch for Amazon, venture studios and unicorns, with work recognised by international design awards. I also write and speak about how AI is changing the way products get designed.
+              I lead products from first sketch to launch for Amazon, venture studios and unicorns. I also write and speak about how AI is changing the way products get designed.
             </p>
 
             {/* Key numbers from the case studies, in a row under the intro */}
