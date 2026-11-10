@@ -62,7 +62,7 @@ export function Header() {
             aria-label="Mary Borysova, home"
             className="flex items-center hover:opacity-80 transition-opacity"
           >
-            <Image src="/favicon.png" alt="" width={28} height={28} priority className="rounded-md" />
+            <Image src="/logo-mb.svg" alt="" width={45} height={35} priority className="h-[30px] w-auto" />
           </Link>
 
           <nav className="hidden md:flex items-center gap-10">
