@@ -25,7 +25,7 @@ export function Hero() {
         <div className="flex flex-col">
           <div data-grid-quiet className="w-full max-w-[720px] relative z-40">
             <h1 className="hero-reveal hero-reveal-2 font-serif text-[1.75rem] md:text-[2rem] leading-[1.15] font-normal tracking-[-0.02em] text-foreground text-balance relative z-10">
-              I&apos;m Mary, a product designer who makes complex AI<AiOrb /> workflows feel simple.
+              I&apos;m Mary<img src="/images/mary-face.webp" alt="" aria-hidden width={96} height={96} className="inline-block align-[-0.12em] ml-[0.18em] h-[0.92em] w-[0.92em] rounded-full object-cover ring-1 ring-black/10" />, a product designer who makes complex AI<AiOrb /> workflows feel simple.
             </h1>
             <p className="hero-reveal hero-reveal-3 mt-6 max-w-[540px] text-pretty font-sans text-[17px] leading-relaxed font-normal text-muted-foreground relative z-10">
               I lead products from first sketch to launch for Amazon, venture studios and unicorns. I also write and speak about how AI is changing the way products get designed.
