@@ -24,9 +24,7 @@ export default function Home() {
       <main>
         <Hero />
         {/* <ShowreelSection /> */}
-        <AnimatedSection>
-          <WorkSection />
-        </AnimatedSection>
+        <WorkSection />
         {/* Hidden for now; kept to bring back later. */}
         {/* <AnimatedSection>
           <AmazonSection />

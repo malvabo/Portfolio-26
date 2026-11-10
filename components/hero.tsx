@@ -3,9 +3,9 @@ import { AiOrb } from "@/components/ai-orb"
 
 export function Hero() {
   return (
-    <div className="relative">
+    <div className="relative min-h-[calc(100svh-101px)] flex flex-col justify-center">
     <HeroGrid />
-    <section className="pt-32 pb-20 lg:pt-40 lg:pb-28 container mx-auto px-8 lg:px-12 max-w-7xl relative z-10">
+    <section className="pt-28 pb-12 lg:pt-28 lg:pb-12 w-full container mx-auto px-8 lg:px-12 max-w-7xl relative z-10">
       <style>{`
         @keyframes fadeInUp {
           from { opacity: 0; transform: translateY(10px); }
@@ -24,7 +24,7 @@ export function Hero() {
       <div className="grid grid-cols-1">
         <div className="flex flex-col">
           <div data-grid-quiet className="w-full max-w-[720px] relative z-40">
-            <img src="/images/mary-face.webp" alt="Mary Borysova" width={48} height={48} className="hero-reveal hero-reveal-1 mb-5 h-12 w-12 rounded-lg object-cover relative z-10" />
+            <img src="/images/mary-face.webp" alt="Mary Borysova" width={62} height={62} className="hero-reveal hero-reveal-1 mb-5 h-[62px] w-[62px] rounded-xl object-cover relative z-10" />
             <h1 className="hero-reveal hero-reveal-2 font-serif text-[1.75rem] md:text-[2rem] leading-[1.15] font-normal tracking-[-0.02em] text-foreground text-balance relative z-10">
               I&apos;m Mary, a product designer who makes complex AI<AiOrb /> workflows feel simple.
             </h1>
