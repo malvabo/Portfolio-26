@@ -164,8 +164,8 @@ export default function ConduitStory() {
             title="Monitoring"
             visual={
               <Figure
-                src="/conduit/dash.webp"
-                alt="Inbox listing each shipment's documents with their status, type and source"
+                src="/conduit/inbox-all.webp"
+                alt="Inbox listing every document with its status, type and source"
                 caption="Every document's status, type and source at a glance"
               />
             }
@@ -211,7 +211,7 @@ export default function ConduitStory() {
             visual={
               <FigurePair
                 images={[
-                  { src: "/conduit/runs.png", alt: "Runs page listing every processed document with its status" },
+                  { src: "/conduit/runs.webp", alt: "Runs page listing every processed document with its pipeline, status and run ID" },
                   { src: "/conduit/home-api.png", alt: "Direct API call dialog for running a saved pipeline" },
                 ]}
                 caption="Runs for auditing every execution, and the API for connecting existing systems"
