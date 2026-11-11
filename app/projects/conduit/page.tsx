@@ -56,12 +56,12 @@ export default function ConduitStory() {
           meta={[
             { label: "Company", value: "Conduit" },
             { label: "Timeline", value: "4 weeks, 2026" },
-            { label: "Role", value: "Product and design lead" },
+            { label: "Role", value: "Product, design and front end lead" },
           ]}
           intro={
             <p>
               Conduit reads supplier documents and fills in the compliance forms food importers file. I led product and design for the first version, built in four weeks,
-              and its design system from scratch. I worked directly with the founders and changed what the
+              and its design system from scratch. I designed it and built it: I shipped the product&apos;s front end and worked side by side with the backend team. I worked directly with the founders and changed what the
               product does: importers set their own compliance rules, and Conduit gets the data right.
             </p>
           }
