@@ -237,28 +237,33 @@ export default function ConduitStory() {
             <Moment
               n={1}
               title="Dropping the rules engine"
-              visual={wip(
-                <Figure
-                  src="/conduit/inbox-by-shipment.webp"
-                  alt="Inbox with one row per shipment and a column per document type, each marked clear or needs review"
-                  caption="Inbox grouped by shipment, with the documents that need attention flagged"
-                />
-              )}
+              visual={
+                <div className="space-y-8 md:space-y-10">
+                  {wip(
+                    <Figure
+                      src="/conduit/inbox-by-shipment.webp"
+                      alt="Inbox with one row per shipment and a column per document type, each marked clear or needs review"
+                      caption="Inbox grouped by shipment, with the documents that need attention flagged"
+                    />
+                  )}
+                  <Figure
+                    src="/conduit/ecosystem.svg"
+                    alt="Supplier documents flow into Conduit, which fills compliance forms and acts on them, powered by pipelines"
+                    caption="Documents in, compliance out, powered by the importer's own pipelines"
+                  />
+                </div>
+              }
             >
               <p>
                 The plan was for Conduit to pass or fail each document. Research showed that every importer checks
                 documents against its own policy. A single pass or fail rule couldn&apos;t serve them all.
               </p>
+              <p>
+                I recommended letting each importer choose what to check. Conduit only extracts the data from the
+                importer&apos;s documents and fills in the compliance forms, based on the pipelines the importer sets
+                up. The founders agreed, and we built the pipelines instead.
+              </p>
             </Moment>
-            <Narrow>
-              <Reveal className="text-[17px] leading-relaxed text-muted-foreground">
-                <p>
-                  I recommended letting each importer choose what to check. Conduit only extracts the data from the
-                  importer&apos;s documents and fills in the compliance forms, based on the pipelines the importer sets
-                  up. The founders agreed, and we built the pipelines instead.
-                </p>
-              </Reveal>
-            </Narrow>
           </div>
 
           <Moment
