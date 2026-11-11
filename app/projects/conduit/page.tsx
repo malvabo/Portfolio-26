@@ -42,7 +42,6 @@ export default function ConduitStory() {
           { id: "built", label: "The solution" },
           { id: "process", label: "Key decisions" },
           { id: "impact", label: "Outcome" },
-          { id: "next", label: "What's next" },
         ]}
       />
 
@@ -366,14 +365,6 @@ export default function ConduitStory() {
         </div>
 
         <Divider />
-
-        <div id="next" className="scroll-mt-28" aria-hidden />
-        <Narrow className="mb-12">
-          <Reveal as="p" className="text-[17px] leading-relaxed text-muted-foreground">
-            Next, an agent could notice a missing document, find the supplier file, run the right pipeline and flag
-            anything it can&apos;t resolve.
-          </Reveal>
-        </Narrow>
 
         <div className="mt-24 md:mt-32">
           <UpNext
