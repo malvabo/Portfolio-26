@@ -248,6 +248,7 @@ export default function ConduitStory() {
                   )}
                   <Figure
                     src="/conduit/ecosystem.svg"
+                    maxWidth={560}
                     alt="Supplier documents flow into Conduit, which fills compliance forms and acts on them, powered by pipelines"
                     caption="Documents in, compliance out, powered by the importer's own pipelines"
                   />
