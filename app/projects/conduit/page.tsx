@@ -59,11 +59,11 @@ export default function ConduitStory() {
           ]}
           intro={
             <p>
-              Conduit reads supplier documents and fills in the compliance forms food importers file. I led product
-              and design for the first version, built in four weeks: I created the design system from scratch, shipped
-              the front end and worked side by side with the backend team. I worked directly with the founders to
-              change the product&apos;s direction: importers own their compliance rules, and Conduit makes sure the
-              data behind them is right.
+              Conduit reads supplier documents and fills in the compliance forms food importers file. I owned product
+              and design for the first version, from strategy to shipped front end, in four weeks. I challenged the
+              founders’ original plan, for Conduit to approve or reject each document itself, and shifted the product
+              to pipelines that each importer sets up to meet their unique needs the best. I set up the design system
+              from scratch and worked hand in hand with the backend team on the data and the API.
             </p>
           }
           stats={[
