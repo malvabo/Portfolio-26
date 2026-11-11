@@ -55,7 +55,7 @@ export default function ConduitStory() {
           meta={[
             { label: "Company", value: "Conduit" },
             { label: "Timeline", value: "4 weeks, 2026" },
-            { label: "Role", value: "Product, design and front end lead" },
+            { label: "Role", value: "Product lead and design engineer" },
           ]}
           intro={
             <p>
