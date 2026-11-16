@@ -58,6 +58,7 @@ export default function ConduitStory() {
             { label: "Role", value: "Product lead and design engineer" },
           ]}
           intro={
+            <>
             <p>
               Conduit reads supplier documents and fills in the compliance forms food importers file. I owned product
               and design for the first version, from strategy to shipped front end, in four weeks. I challenged the
@@ -65,6 +66,11 @@ export default function ConduitStory() {
               to pipelines that each importer sets up to meet their unique needs the best. I set up the design system
               from scratch and worked hand in hand with the backend team on the data and the API.
             </p>
+            <p className="mt-4 text-sm leading-relaxed text-muted-foreground/80">
+              Shared with permission under NDA. Identifying details and visuals have been recreated from scratch;
+              the product thinking is as it was.
+            </p>
+            </>
           }
           stats={[
             { value: "$1.3M", label: "a year saved in compliance work" },
