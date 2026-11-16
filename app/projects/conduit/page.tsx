@@ -67,8 +67,8 @@ export default function ConduitStory() {
               from scratch and worked hand in hand with the backend team on the data and the API.
             </p>
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground/80">
-              This project is under NDA. The company&apos;s name, branding and data have been replaced and every
-              screen rebuilt from scratch; the product logic and flows are true to the original.
+              Shared with permission under NDA. Identifying details and visuals have been recreated from scratch;
+              the product thinking is as it was.
             </p>
             </>
           }
