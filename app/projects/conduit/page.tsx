@@ -26,7 +26,7 @@ import {
   Reveal,
   Words,
 } from "@/components/story-case-study"
-import { InformationArchitecture } from "./diagrams"
+import { InformationArchitecture, UserFlow } from "./diagrams"
 
 export default function ConduitStory() {
   return (
@@ -167,10 +167,17 @@ export default function ConduitStory() {
           title="I designed reusable pipelines that importers set up once and run on every shipment."
         />
 
-        <div className="mt-12">
-          <Reveal className="max-w-[720px] mx-auto">
-            <InformationArchitecture />
-          </Reveal>
+        <div className="mt-12 space-y-10">
+          <Wide>
+            <Reveal>
+              <InformationArchitecture />
+            </Reveal>
+          </Wide>
+          <Wide>
+            <Reveal>
+              <UserFlow />
+            </Reveal>
+          </Wide>
         </div>
 
         <div className="mt-16 space-y-24 md:space-y-32">
