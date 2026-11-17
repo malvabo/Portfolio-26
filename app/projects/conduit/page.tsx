@@ -1,7 +1,7 @@
 "use client"
 
 import { StoryTopBar } from "@/components/story-top-bar"
-import { wip } from "@/components/wip"
+import { SHOW_WIP, wip } from "@/components/wip"
 import { ScrollToTop } from "@/components/scroll-to-top"
 import { BackLinkFooter } from "@/components/back-link"
 import { StoryContents } from "@/components/story-contents"
@@ -26,7 +26,7 @@ import {
   Reveal,
   Words,
 } from "@/components/story-case-study"
-import { Ecosystem, UserFlow } from "./diagrams"
+import { BeforeFlow, Ecosystem, UserFlow } from "./diagrams"
 
 export default function ConduitStory() {
   return (
@@ -263,9 +263,15 @@ export default function ConduitStory() {
                     />
                   )}
                   <Reveal as="figure">
+                    <BeforeFlow />
+                    <figcaption className="mt-3 text-[13px] text-muted-foreground text-center">
+                      Before: A rigid, one-size-fits-all extraction pipeline
+                    </figcaption>
+                  </Reveal>
+                  <Reveal as="figure">
                     <Ecosystem />
                     <figcaption className="mt-3 text-[13px] text-muted-foreground text-center">
-                      Documents in, compliance out, powered by the importer&apos;s own pipelines
+                      After: each importer&apos;s policy sets what Conduit pulls and which form it fills
                     </figcaption>
                   </Reveal>
                 </div>
@@ -322,11 +328,15 @@ export default function ConduitStory() {
             n={4}
             title="Reducing manual work across complex operations"
             visual={
-              <Figure
-                src="/conduit/ask-1.webp"
-                alt="Conduit chat: an answer about what blocks a shipment, with its sources, then the agent asking which value to file in the declaration"
-                caption="The agent files the paperwork, but leaves the judgement calls to the officer"
-              />
+              <>
+                {wip(
+                  <Figure
+                    src="/conduit/ask-1.webp"
+                    alt="Conduit chat: an answer about what blocks a shipment, with its sources, then the agent asking which value to file in the declaration"
+                    caption="The agent files the paperwork, but leaves the judgement calls to the officer"
+                  />
+                )}
+              </>
             }
           >
             <p>
@@ -335,6 +345,13 @@ export default function ConduitStory() {
               and provides source-backed answers so officers can verify results without manually searching multiple
               systems.
             </p>
+            {!SHOW_WIP && (
+              <p className="!-mt-1 flex w-fit items-center gap-2 rounded-md border border-[#B4532A]/25 bg-[#B4532A]/[0.06] px-2.5 py-1 font-mono text-[12px] leading-none text-[#B4532A]">
+                {/* The accent square used across the site, pulsing gently */}
+                <span aria-hidden className="h-1.5 w-1.5 bg-[#B4532A] motion-safe:animate-pulse" />
+                Case study coming soon!
+              </p>
+            )}
           </Moment>
         </div>
 

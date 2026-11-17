@@ -69,7 +69,7 @@ function ArrowDefs({ id }: { id: string }) {
   )
 }
 
-type Label = { lines: string[]; x: number; y: number; side: "above" | "right" }
+type Label = { lines: string[]; x: number; y: number; side: "above" | "right" | "left" }
 
 /** Labels follow one rule: above the middle of a horizontal run, or right of the middle of a vertical one */
 function Edge({ d, marker, label, dashed = false }: { d: string; marker: string; label?: Label; dashed?: boolean }) {
@@ -93,9 +93,19 @@ function Edge({ d, marker, label, dashed = false }: { d: string; marker: string;
             ))}
           </text>
         ) : (
-          <text x={label.x + LABEL_OFFSET} dominantBaseline="middle" fontSize={12} fill={MUTED}>
+          <text
+            x={label.side === "left" ? label.x - LABEL_OFFSET : label.x + LABEL_OFFSET}
+            textAnchor={label.side === "left" ? "end" : "start"}
+            dominantBaseline="middle"
+            fontSize={12}
+            fill={MUTED}
+          >
             {label.lines.map((l, i) => (
-              <tspan key={l} x={label.x + LABEL_OFFSET} y={label.y + (i - (label.lines.length - 1) / 2) * 14}>
+              <tspan
+                key={l}
+                x={label.side === "left" ? label.x - LABEL_OFFSET : label.x + LABEL_OFFSET}
+                y={label.y + (i - (label.lines.length - 1) / 2) * 14}
+              >
                 {l}
               </tspan>
             ))}
@@ -309,7 +319,7 @@ export function UserFlow() {
         viewBox={`0 0 ${FLOW_W} ${LANES.length * LANE_H}`}
         className="w-full min-w-[760px] md:min-w-0 h-auto font-sans"
         role="img"
-        aria-label="Swimlane diagram of one document. The exporter sends documents by email or upload, and the importer's existing tools can send them through the API. Conduit receives them and extracts the fields, using the pipeline the importer set up once. If every field is confident, the status changes to Done. If not, the importer reviews the flagged fields and confirms or corrects them first. Conduit then fills the form and sends it to the importer's existing tools through the API."
+        aria-label="Swimlane diagram of one document. The exporter sends documents by email or upload, and the importer's existing tools can send them through the API. Conduit receives them and extracts the fields, using the pipeline the importer set up once. If every field is confident, the status changes to Done. If not, the importer reviews the flagged fields and confirms or corrects them first. The extracted data then goes to the importer's existing tools through the API, and Conduit fills the form and sends that through the API too."
       >
         <ArrowDefs id="flow-arrow" />
 
@@ -355,7 +365,12 @@ export function UserFlow() {
           label={{ lines: ["Confirms", "or corrects"], x: mid(c[2] + HALF, c[3]), y: cy(1), side: "above" }}
         />
         <Edge marker="flow-arrow" d={`M${c[3] + HALF} ${cy(2)} H${c[4] - HALF - GAP}`} />
-        {/* Out: back to the importer's systems */}
+        {/* Out: the extracted data, and then the filled form, go back to existing tools */}
+        <Edge
+          marker="flow-arrow"
+          d={`M${c[3]} ${bottom(2)} V${top(3) - GAP}`}
+          label={{ lines: ["API"], x: c[3], y: mid(bottom(2), top(3)), side: "right" }}
+        />
         <Edge
           marker="flow-arrow"
           d={`M${c[4]} ${bottom(2)} V${top(3) - GAP}`}
@@ -370,8 +385,9 @@ export function UserFlow() {
         <Decision x={c[2]} lane={2} lines={["Every field", "confident?"]} />
         <Box x={c[3]} lane={2} lines={["Status changes", "to Done"]} />
         <Box x={c[4]} lane={2} lines={["Fills", "the form"]} />
-        <Box x={c[0]} lane={3} lines={["Send documents", "automatically"]} />
-        <Box x={c[4]} lane={3} lines={["Receive", "the form"]} />
+        <Box x={c[0]} lane={3} lines={["Sends documents", "automatically"]} />
+        <Box x={c[3]} lane={3} lines={["Receives the", "extracted data"]} />
+        <Box x={c[4]} lane={3} lines={["Receives", "the form"]} />
       </svg>
     </Panel>
   )
@@ -471,12 +487,86 @@ export function Ecosystem() {
         {/* Unsure fields go to a person and come back */}
         <Edge
           marker="df-arrow"
-          d={`M${fieldsX + 22} ${nodeY + DF_NODE_H} V${reviewY - GAP}`}
-          label={{ lines: ["Unsure fields"], x: fieldsX + 22, y: (nodeY + DF_NODE_H + reviewY) / 2, side: "right" }}
+          d={`M${fieldsX - 40} ${nodeY + DF_NODE_H} V${reviewY - GAP}`}
+          label={{ lines: ["Unsure", "fields"], x: fieldsX - 40, y: (nodeY + DF_NODE_H + reviewY) / 2, side: "left" }}
         />
-        <Edge marker="df-arrow" d={`M${fieldsX - 22} ${reviewY} V${nodeY + DF_NODE_H + GAP}`} />
+        <Edge
+          marker="df-arrow"
+          d={`M${fieldsX + 40} ${reviewY} V${nodeY + DF_NODE_H + GAP}`}
+          label={{ lines: ["Corrected"], x: fieldsX + 40, y: (nodeY + DF_NODE_H + reviewY) / 2, side: "right" }}
+        />
         <rect x={fieldsX - 90} y={reviewY} width={180} height={reviewH} rx={4} fill="#FFFFFF" stroke={STROKE} />
         <Lines x={fieldsX} y={reviewY + reviewH / 2} lines={["A person confirms", "or corrects"]} />
+      </svg>
+    </Panel>
+  )
+}
+
+/* ------------------------------------------------------------------ */
+/* 4. Before: the first direction, and where it ended                  */
+/* ------------------------------------------------------------------ */
+
+const BEFORE_STEPS = [
+  ["All incoming", "documents"],
+  ["Grouped by Conduit's", "set structure"],
+  ["Every field", "extracted"],
+  ["Documents flagged by", "Conduit-defined rules"],
+]
+
+export function BeforeFlow() {
+  const W = 1060
+  const nodeW = 170
+  const nodeH = 60
+  const step = 214
+  const x = (i: number) => W / 2 + (i - (BEFORE_STEPS.length - 1) / 2) * step
+  const rowY = 74
+  const height = rowY + nodeH / 2 + 18
+  const last = BEFORE_STEPS.length - 1
+
+  // A sticky note on the last step, in the same style as the Veeqo notes
+  const noteW = 236
+  const noteH = 30
+  const noteX = x(last) - noteW / 2
+  const noteY = rowY - nodeH / 2 - noteH + 4
+
+  return (
+    <Panel bg="/conduit/tile-hands.jpg" label="First direction">
+      <svg
+        viewBox={`0 0 ${W} ${height}`}
+        className="w-full min-w-[760px] md:min-w-0 h-auto font-sans"
+        role="img"
+        aria-label="First direction. All incoming documents were grouped by Conduit's set structure, every field was extracted, and documents were flagged by Conduit-defined rules. It didn't fit many importers' policies."
+      >
+        <ArrowDefs id="before-arrow" />
+        <defs>
+          <filter id="note-shadow" x="-10%" y="-30%" width="120%" height="160%">
+            <feDropShadow dx="0" dy="2" stdDeviation="3" floodColor="#000000" floodOpacity="0.14" />
+          </filter>
+        </defs>
+        {BEFORE_STEPS.slice(0, -1).map((_, i) => (
+          <Edge key={i} marker="before-arrow" d={`M${x(i) + nodeW / 2} ${rowY} H${x(i + 1) - nodeW / 2 - GAP}`} />
+        ))}
+        {BEFORE_STEPS.map((lines, i) => (
+          <g key={lines[0]}>
+            <rect x={x(i) - nodeW / 2} y={rowY - nodeH / 2} width={nodeW} height={nodeH} rx={4} fill="#FFFFFF" stroke={STROKE} />
+            <Lines x={x(i)} y={rowY} lines={lines} />
+          </g>
+        ))}
+
+        <g transform={`rotate(-3 ${noteX + noteW / 2} ${noteY + noteH / 2})`} filter="url(#note-shadow)">
+          <rect x={noteX} y={noteY} width={noteW} height={noteH} fill="#F4A3A0" />
+          <text
+            x={noteX + noteW / 2}
+            y={noteY + noteH / 2 + 1}
+            textAnchor="middle"
+            dominantBaseline="central"
+            fontSize={12}
+            fontWeight={500}
+            fill="rgba(0,0,0,0.8)"
+          >
+            Didn&apos;t fit many importers&apos; policies
+          </text>
+        </g>
       </svg>
     </Panel>
   )
