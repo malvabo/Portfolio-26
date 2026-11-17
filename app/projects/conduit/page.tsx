@@ -26,7 +26,7 @@ import {
   Reveal,
   Words,
 } from "@/components/story-case-study"
-import { InformationArchitecture, UserFlow } from "./diagrams"
+import { Ecosystem, InformationArchitecture, UserFlow } from "./diagrams"
 
 export default function ConduitStory() {
   return (
@@ -267,12 +267,12 @@ export default function ConduitStory() {
                       caption="Inbox grouped by shipment, with the documents that need attention flagged"
                     />
                   )}
-                  <Figure
-                    src="/conduit/ecosystem.svg"
-                    maxWidth={680}
-                    alt="Supplier documents flow into Conduit, which fills compliance forms and acts on them, powered by pipelines"
-                    caption="Documents in, compliance out, powered by the importer's own pipelines"
-                  />
+                  <Reveal as="figure">
+                    <Ecosystem />
+                    <figcaption className="mt-3 text-[13px] text-muted-foreground text-center">
+                      Documents in, compliance out, powered by the importer&apos;s own pipelines
+                    </figcaption>
+                  </Reveal>
                 </div>
               }
             >

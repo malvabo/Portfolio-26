@@ -285,3 +285,131 @@ export function UserFlow() {
     </Panel>
   )
 }
+
+/* ------------------------------------------------------------------ */
+/* Ecosystem: documents in, compliance out, powered by pipelines      */
+/* ------------------------------------------------------------------ */
+
+type EcoGroup = { label: string; items: string[]; y: number }
+
+const ECO_W = 1060
+const ECO_ITEM_W = 250
+const ECO_ITEM_H = 34
+const ECO_STEP = 42
+const ECO_LEFT = 80 // left edge of the documents column
+const ECO_RIGHT = ECO_W - ECO_LEFT - ECO_ITEM_W // left edge of the compliance column
+const ECO_CORE_W = 200
+const ECO_CORE_H = 110
+const ECO_BRANCH = 30 // item edge to its spine
+
+const DOCUMENTS: EcoGroup[] = [
+  { label: "Incoming", y: 78, items: ["Certificate of origin", "Supplier documents", "Batches"] },
+  { label: "Monitoring", y: 252, items: ["At-risk shipments", "Needs review", "Missing files"] },
+]
+const COMPLIANCE: EcoGroup[] = [
+  { label: "Forms", y: 78, items: ["Internal forms", "Declarations"] },
+  { label: "Acting on", y: 252, items: ["Filing documents", "Comparing data", "Flagging risks"] },
+]
+const PIPELINE_TYPES = ["Extraction", "Injection", "Agent", "API"]
+
+/** One side of the ecosystem: a heading, its groups, and a spine joining every item */
+function EcoSide({ title, groups, x, spineX }: { title: string; groups: EcoGroup[]; x: number; spineX: number }) {
+  const centres = groups.flatMap((g) => g.items.map((_, k) => g.y + 18 + k * ECO_STEP + ECO_ITEM_H / 2))
+  const itemEdge = spineX > x ? x + ECO_ITEM_W : x
+  return (
+    <g>
+      <text x={x} y={34} fontSize={16} fontWeight={500} fill={INK}>
+        {title}
+      </text>
+      <path d={`M${spineX} ${centres[0]} V${centres[centres.length - 1]}`} fill="none" stroke={STROKE} />
+      {groups.map((g) => (
+        <g key={g.label}>
+          <text x={x} y={g.y} fontSize={13} fill={MUTED}>
+            {g.label}
+          </text>
+          {g.items.map((item, k) => {
+            const top = g.y + 18 + k * ECO_STEP
+            return (
+              <g key={item}>
+                <path d={`M${itemEdge} ${top + ECO_ITEM_H / 2} H${spineX}`} fill="none" stroke={STROKE} />
+                <rect x={x} y={top} width={ECO_ITEM_W} height={ECO_ITEM_H} rx={4} fill="#FFFFFF" stroke={STROKE} />
+                <Lines x={x + ECO_ITEM_W / 2} y={top + ECO_ITEM_H / 2} lines={[item]} size={13.5} />
+              </g>
+            )
+          })}
+        </g>
+      ))}
+    </g>
+  )
+}
+
+export function Ecosystem() {
+  const leftSpine = ECO_LEFT + ECO_ITEM_W + ECO_BRANCH
+  const rightSpine = ECO_RIGHT - ECO_BRANCH
+  // The core sits on the line through the middle of both spines
+  const allCentres = DOCUMENTS.flatMap((g) => g.items.map((_, k) => g.y + 18 + k * ECO_STEP + ECO_ITEM_H / 2))
+  const midY = (allCentres[0] + allCentres[allCentres.length - 1]) / 2
+  const coreX = ECO_W / 2 - ECO_CORE_W / 2
+  const coreY = midY - ECO_CORE_H / 2
+
+  const chipW = 92
+  const chipGap = 8
+  const pipeW = PIPELINE_TYPES.length * chipW + (PIPELINE_TYPES.length - 1) * chipGap + 32
+  const pipeY = allCentres[allCentres.length - 1] + ECO_ITEM_H / 2 + 44
+  const pipeH = 84
+  const height = pipeY + pipeH + 8
+
+  return (
+    <Panel bg="/conduit/tile-beans.jpg" label="Conduit ecosystem">
+      <svg
+        viewBox={`0 0 ${ECO_W} ${height}`}
+        className="w-full min-w-[760px] md:min-w-0 h-auto font-sans"
+        role="img"
+        aria-label="Ecosystem. Documents come into Conduit: incoming certificates of origin, supplier documents and batches, and monitoring of at-risk shipments, documents that need review and missing files. Compliance comes out: internal forms and declarations, and acting on them by filing documents, comparing data and flagging risks. Conduit runs on the importer's own pipelines: extraction, injection, agent and API."
+      >
+        <defs>
+          <marker id="eco-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0 0L10 5L0 10z" fill={MUTED} />
+          </marker>
+        </defs>
+
+        <EcoSide title="Documents" groups={DOCUMENTS} x={ECO_LEFT} spineX={leftSpine} />
+        <EcoSide title="Compliance" groups={COMPLIANCE} x={ECO_RIGHT} spineX={rightSpine} />
+
+        {/* Documents in, compliance out: the same length on both sides */}
+        <path d={`M${leftSpine} ${midY} H${coreX - GAP}`} fill="none" stroke={MUTED} strokeWidth={1.2} markerEnd="url(#eco-arrow)" />
+        <path d={`M${coreX + ECO_CORE_W} ${midY} H${rightSpine - GAP}`} fill="none" stroke={MUTED} strokeWidth={1.2} markerEnd="url(#eco-arrow)" />
+        <text x={(leftSpine + coreX) / 2} y={midY - LABEL_OFFSET} textAnchor="middle" fontSize={12} fill={MUTED}>
+          In
+        </text>
+        <text x={(coreX + ECO_CORE_W + rightSpine) / 2} y={midY - LABEL_OFFSET} textAnchor="middle" fontSize={12} fill={MUTED}>
+          Out
+        </text>
+
+        {/* Pipelines power the core */}
+        <path d={`M${ECO_W / 2} ${pipeY} V${coreY + ECO_CORE_H + GAP}`} fill="none" stroke={MUTED} strokeWidth={1.2} markerEnd="url(#eco-arrow)" />
+        <text x={ECO_W / 2 + LABEL_OFFSET} y={(pipeY + coreY + ECO_CORE_H) / 2} dominantBaseline="middle" fontSize={12} fill={MUTED}>
+          Powers
+        </text>
+
+        {/* Core */}
+        <rect x={coreX} y={coreY} width={ECO_CORE_W} height={ECO_CORE_H} rx={6} fill={INK} />
+        <Lines x={ECO_W / 2} y={coreY + 36} lines={["Conduit"]} size={18} weight={500} fill="#FFFFFF" />
+        <Lines x={ECO_W / 2} y={coreY + 74} lines={["Compliance", "intelligence system"]} size={13} fill="rgba(255,255,255,0.72)" />
+
+        {/* Pipelines */}
+        <rect x={ECO_W / 2 - pipeW / 2} y={pipeY} width={pipeW} height={pipeH} rx={6} fill={TINT} stroke={STROKE} />
+        <Lines x={ECO_W / 2} y={pipeY + 20} lines={["The importer's own pipelines"]} size={13} fill={MUTED} />
+        {PIPELINE_TYPES.map((t, i) => {
+          const x = ECO_W / 2 - pipeW / 2 + 16 + i * (chipW + chipGap)
+          return (
+            <g key={t}>
+              <rect x={x} y={pipeY + 38} width={chipW} height={ECO_ITEM_H} rx={4} fill="#FFFFFF" stroke={STROKE} />
+              <Lines x={x + chipW / 2} y={pipeY + 38 + ECO_ITEM_H / 2} lines={[t]} size={13.5} />
+            </g>
+          )
+        })}
+      </svg>
+    </Panel>
+  )
+}
