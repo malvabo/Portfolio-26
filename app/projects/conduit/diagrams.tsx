@@ -535,7 +535,7 @@ export function BeforeFlow() {
         viewBox={`0 0 ${W} ${height}`}
         className="w-full min-w-[760px] md:min-w-0 h-auto font-sans"
         role="img"
-        aria-label="First direction. All incoming documents were grouped by Conduit's set structure, every field was extracted, and documents were flagged by Conduit-defined rules. It didn't fit most importers' policies."
+        aria-label="First direction. All incoming documents were grouped by Conduit's set structure, every field was extracted, and documents were flagged by Conduit-defined rules. It didn't fit many importers' policies."
       >
         <ArrowDefs id="before-arrow" />
         <defs>
@@ -564,7 +564,7 @@ export function BeforeFlow() {
             fontWeight={500}
             fill="rgba(0,0,0,0.8)"
           >
-            Didn&apos;t fit most importers&apos; policies
+            Didn&apos;t fit many importers&apos; policies
           </text>
         </g>
       </svg>
