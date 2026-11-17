@@ -265,7 +265,7 @@ export default function ConduitStory() {
                   <Reveal as="figure">
                     <Ecosystem />
                     <figcaption className="mt-3 text-[13px] text-muted-foreground text-center">
-                      Documents in, compliance out, governed by the importer&apos;s own policies
+                      Documents in, compliance out
                     </figcaption>
                   </Reveal>
                 </div>

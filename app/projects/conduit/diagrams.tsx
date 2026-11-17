@@ -69,7 +69,7 @@ function ArrowDefs({ id }: { id: string }) {
   )
 }
 
-type Label = { lines: string[]; x: number; y: number; side: "above" | "right" }
+type Label = { lines: string[]; x: number; y: number; side: "above" | "right" | "left" }
 
 /** Labels follow one rule: above the middle of a horizontal run, or right of the middle of a vertical one */
 function Edge({ d, marker, label, dashed = false }: { d: string; marker: string; label?: Label; dashed?: boolean }) {
@@ -93,9 +93,19 @@ function Edge({ d, marker, label, dashed = false }: { d: string; marker: string;
             ))}
           </text>
         ) : (
-          <text x={label.x + LABEL_OFFSET} dominantBaseline="middle" fontSize={12} fill={MUTED}>
+          <text
+            x={label.side === "left" ? label.x - LABEL_OFFSET : label.x + LABEL_OFFSET}
+            textAnchor={label.side === "left" ? "end" : "start"}
+            dominantBaseline="middle"
+            fontSize={12}
+            fill={MUTED}
+          >
             {label.lines.map((l, i) => (
-              <tspan key={l} x={label.x + LABEL_OFFSET} y={label.y + (i - (label.lines.length - 1) / 2) * 14}>
+              <tspan
+                key={l}
+                x={label.side === "left" ? label.x - LABEL_OFFSET : label.x + LABEL_OFFSET}
+                y={label.y + (i - (label.lines.length - 1) / 2) * 14}
+              >
                 {l}
               </tspan>
             ))}
@@ -309,7 +319,7 @@ export function UserFlow() {
         viewBox={`0 0 ${FLOW_W} ${LANES.length * LANE_H}`}
         className="w-full min-w-[760px] md:min-w-0 h-auto font-sans"
         role="img"
-        aria-label="Swimlane diagram of one document. The exporter sends documents by email or upload, and the importer's existing tools can send them through the API. Conduit receives them and extracts the fields, using the pipeline the importer set up once. If every field is confident, the status changes to Done. If not, the importer reviews the flagged fields and confirms or corrects them first. Conduit then fills the form and sends it to the importer's existing tools through the API."
+        aria-label="Swimlane diagram of one document. The exporter sends documents by email or upload, and the importer's existing tools can send them through the API. Conduit receives them and extracts the fields, using the pipeline the importer set up once. If every field is confident, the status changes to Done. If not, the importer reviews the flagged fields and confirms or corrects them first. The extracted data then goes to the importer's existing tools through the API, and Conduit fills the form and sends that through the API too."
       >
         <ArrowDefs id="flow-arrow" />
 
@@ -355,7 +365,12 @@ export function UserFlow() {
           label={{ lines: ["Confirms", "or corrects"], x: mid(c[2] + HALF, c[3]), y: cy(1), side: "above" }}
         />
         <Edge marker="flow-arrow" d={`M${c[3] + HALF} ${cy(2)} H${c[4] - HALF - GAP}`} />
-        {/* Out: back to the importer's systems */}
+        {/* Out: the extracted data, and then the filled form, go back to existing tools */}
+        <Edge
+          marker="flow-arrow"
+          d={`M${c[3]} ${bottom(2)} V${top(3) - GAP}`}
+          label={{ lines: ["API"], x: c[3], y: mid(bottom(2), top(3)), side: "right" }}
+        />
         <Edge
           marker="flow-arrow"
           d={`M${c[4]} ${bottom(2)} V${top(3) - GAP}`}
@@ -371,6 +386,7 @@ export function UserFlow() {
         <Box x={c[3]} lane={2} lines={["Status changes", "to Done"]} />
         <Box x={c[4]} lane={2} lines={["Fills", "the form"]} />
         <Box x={c[0]} lane={3} lines={["Sends documents", "automatically"]} />
+        <Box x={c[3]} lane={3} lines={["Receives the", "extracted data"]} />
         <Box x={c[4]} lane={3} lines={["Receives", "the form"]} />
       </svg>
     </Panel>
@@ -471,13 +487,13 @@ export function Ecosystem() {
         {/* Unsure fields go to a person and come back */}
         <Edge
           marker="df-arrow"
-          d={`M${fieldsX + 40} ${nodeY + DF_NODE_H} V${reviewY - GAP}`}
-          label={{ lines: ["Unsure fields"], x: fieldsX + 40, y: (nodeY + DF_NODE_H + reviewY) / 2, side: "right" }}
+          d={`M${fieldsX - 40} ${nodeY + DF_NODE_H} V${reviewY - GAP}`}
+          label={{ lines: ["Unsure", "fields"], x: fieldsX - 40, y: (nodeY + DF_NODE_H + reviewY) / 2, side: "left" }}
         />
         <Edge
           marker="df-arrow"
-          d={`M${fieldsX - 40} ${reviewY} V${nodeY + DF_NODE_H + GAP}`}
-          label={{ lines: ["Corrected"], x: fieldsX - 40, y: (nodeY + DF_NODE_H + reviewY) / 2, side: "right" }}
+          d={`M${fieldsX + 40} ${reviewY} V${nodeY + DF_NODE_H + GAP}`}
+          label={{ lines: ["Corrected"], x: fieldsX + 40, y: (nodeY + DF_NODE_H + reviewY) / 2, side: "right" }}
         />
         <rect x={fieldsX - 90} y={reviewY} width={180} height={reviewH} rx={4} fill="#FFFFFF" stroke={STROKE} />
         <Lines x={fieldsX} y={reviewY + reviewH / 2} lines={["A person confirms", "or corrects"]} />
