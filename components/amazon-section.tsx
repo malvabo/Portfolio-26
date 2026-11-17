@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { wip } from "@/components/wip"
 
 export function AmazonSection() {
   return (
@@ -11,7 +12,7 @@ export function AmazonSection() {
           Amazon: AI automation for complex shipping workflows
         </h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 mb-10">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
           <div>
             <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">About</h3>
             <p className="text-base leading-relaxed text-foreground">
@@ -53,6 +54,7 @@ export function AmazonSection() {
           </div>
         </div>
 
+        {wip(
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {["/images/aivq1.png", "/images/aivq2.png", "/images/aivq3.png"].map((src, i) => (
             <div key={i} className="relative aspect-[4/3] rounded-lg overflow-hidden bg-gray-50 border border-gray-200">
@@ -74,6 +76,7 @@ export function AmazonSection() {
             </div>
           ))}
         </div>
+        )}
       </div>
     </section>
   )
