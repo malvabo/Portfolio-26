@@ -17,63 +17,86 @@ function Tag({ children, accent = false }: { children: ReactNode; accent?: boole
   )
 }
 
-function BandLabel({ children }: { children: ReactNode }) {
-  return <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-2.5">{children}</p>
-}
-
-function Chip({ children }: { children: ReactNode }) {
+/** Numbered marker that ties a spot in the sitemap to a decision listed under it */
+function Marker({ n }: { n: number }) {
   return (
-    <span className="text-[11px] px-1.5 py-0.5 rounded border border-black/10 bg-[#F5F3F0] text-foreground/80 whitespace-nowrap">
-      {children}
+    <span
+      className="inline-grid place-items-center w-4 h-4 rounded-full text-white font-mono text-[9px] leading-none shrink-0"
+      style={{ background: ACCENT }}
+      aria-label={`Decision ${n}`}
+    >
+      {n}
     </span>
   )
 }
 
-function Arrow({ className = "" }: { className?: string }) {
-  return (
-    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden className={`shrink-0 ${className}`}>
-      <path d="M2 7h10M8 3l4 4-4 4" stroke={ACCENT} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  )
-}
-
-/** One step in a flow: a small numbered square and its label */
-function Step({ n, children }: { n: number; children: ReactNode }) {
-  return (
-    <div className="flex items-center gap-2 text-[12.5px] leading-tight">
-      <span
-        className="grid place-items-center w-5 h-5 shrink-0 font-mono text-[10px] text-white"
-        style={{ background: ACCENT }}
-      >
-        {n}
-      </span>
-      {children}
-    </div>
-  )
-}
+type IAPage = { name: string; marker?: number; children: { text: string; marker?: number }[] }
+type IAGroup = { group: string; note: string; marker?: number; pages: IAPage[] }
 
 /**
- * Information architecture as a system map, in three layers:
- * 1. Two loops: importers set a pipeline up once, then every shipment runs through it.
- * 2. The four places people work, and which objects each one acts on.
- * 3. The objects underneath: a shipment holds documents, documents give fields, fields fill forms.
+ * Information architecture as a sitemap, taken from the product's own navigation:
+ * level 1 groups, level 2 pages and level 3 views, with the reasoning behind
+ * the structure numbered underneath.
  */
 export function InformationArchitecture() {
-  const setup = ["Choose fields to extract", "Map them onto the form", "Test on a sample"]
-  const run = ["Documents arrive", "Fields extracted", "Unsure fields flagged", "Form filled", "Run recorded"]
-
-  const surfaces = [
-    { name: "Pipelines", job: "Build and test pipelines", acts: ["Field", "Form"] },
-    { name: "Inbox", job: "Review every shipment", acts: ["Shipment", "Document"] },
-    { name: "Runs", job: "Audit and connect", acts: ["Document", "Form"] },
-    { name: "Ask", job: "Find answers with sources", acts: ["Shipment", "Document", "Field"] },
+  const groups: IAGroup[] = [
+    {
+      group: "Build",
+      note: "Set up once",
+      marker: 1,
+      pages: [
+        {
+          name: "Pipelines",
+          marker: 4,
+          children: [
+            { text: "New pipeline: Extract, Inject or a template" },
+            { text: "Editor: Parse, then Extract" },
+            { text: "Configure fields, then check results" },
+            { text: "View code" },
+          ],
+        },
+        { name: "Runs", children: [{ text: "Every processed document" }, { text: "Pipeline, status and run ID" }] },
+      ],
+    },
+    {
+      group: "Activity",
+      note: "Every day",
+      marker: 1,
+      pages: [
+        { name: "Shipments", children: [{ text: "Each shipment and its documents" }] },
+        {
+          name: "Inbox",
+          children: [
+            { text: "All, Processing, To do, Done" },
+            { text: "View by shipment or all documents", marker: 2 },
+            { text: "Document review with field states" },
+          ],
+        },
+      ],
+    },
+    {
+      group: "Settings",
+      note: "Admins",
+      pages: [
+        { name: "Developers", children: [{ text: "API calls into saved pipelines" }] },
+        { name: "Workspace", children: [] },
+      ],
+    },
+    {
+      group: "Help",
+      note: "When stuck",
+      pages: [
+        { name: "Documentation", children: [] },
+        { name: "What's new", children: [] },
+      ],
+    },
   ]
 
-  const objects = [
-    { name: "Shipment", note: "Grouped in the inbox" },
-    { name: "Document", note: "Certificate of origin, supplier files" },
-    { name: "Field", note: "Confident, needs review or not found" },
-    { name: "Form", note: "The importer's own compliance forms" },
+  const decisions = [
+    "Build and Activity are split by how often people need them. Pipelines are set up once, while shipments are checked every day, so daily work never sits behind setup screens.",
+    "The shipment is the unit importers think in, so the inbox can group documents by shipment as well as list them one by one.",
+    "Ask lives on every page instead of in the menu, so an officer can question a document without leaving it.",
+    "Pipelines are named by what they do, Extract or Inject, so creating one starts from the job, not a blank setup.",
   ]
 
   return (
@@ -82,81 +105,108 @@ export function InformationArchitecture() {
       <img src="/conduit/tile-sacks.jpg" alt="" aria-hidden className="absolute inset-0 w-full h-full object-cover" />
       <div className="absolute inset-0 bg-black/25" aria-hidden />
 
-      <div className="relative p-4 sm:p-6 md:p-8">
+      <div className="relative p-3 sm:p-4 md:p-5">
         <div className="bg-white rounded-md border border-black/10 shadow-[0_8px_24px_rgba(0,0,0,0.18)] p-4 sm:p-5">
           <Tag accent>Information architecture</Tag>
           <p className="font-serif text-[1.125rem] tracking-[-0.01em] mt-1 mb-5">
-            Set a pipeline up once, and every shipment runs through it
+            Organised by how often people need each part
           </p>
 
-          {/* 1. Two loops */}
-          <BandLabel>User flows</BandLabel>
-          <div className="grid grid-cols-1 md:grid-cols-[minmax(0,0.85fr)_auto_minmax(0,1.15fr)] gap-3 items-stretch">
-            <div className="rounded border border-dashed p-3" style={{ borderColor: `${ACCENT}80` }}>
-              <p className="text-[12px] font-medium mb-2.5" style={{ color: ACCENT }}>
-                Set up once
-              </p>
-              <div className="space-y-2">
-                {setup.map((s, i) => (
-                  <Step key={s} n={i + 1}>
-                    {s}
-                  </Step>
-                ))}
-              </div>
+          {/* Level 0: the app in the middle, the landing page on the left, what is on every page on the right */}
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] items-center gap-2 md:gap-4">
+            <div className="flex items-center gap-2 md:justify-end order-2 md:order-1">
+              <span className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground">Lands on</span>
+              <span className="text-[12px] px-2 py-1 rounded border border-black/15 bg-[#F5F3F0]">Home</span>
             </div>
-
-            <div className="flex md:flex-col items-center justify-center gap-1 text-[10px] font-mono uppercase tracking-wider text-muted-foreground">
-              <span className="hidden md:block">Pipeline</span>
-              <Arrow className="rotate-90 md:rotate-0" />
-            </div>
-
-            <div className="rounded border border-black/10 bg-[#F5F3F0] p-3">
-              <p className="text-[12px] font-medium text-foreground/70 mb-2.5">Runs on every shipment</p>
-              <div className="space-y-2">
-                {run.map((s, i) => (
-                  <Step key={s} n={i + 1}>
-                    {s}
-                  </Step>
-                ))}
-              </div>
+            <span className="justify-self-start md:justify-self-center order-1 md:order-2 text-white text-[13px] font-medium px-3 py-1.5 rounded" style={{ background: "#3D3D3D" }}>
+              Conduit
+            </span>
+            <div className="flex flex-wrap items-center gap-2 order-3">
+              <span className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground">On every page</span>
+              <span className="flex items-center gap-1.5 text-[12px] px-2 py-1 rounded border border-dashed" style={{ borderColor: `${ACCENT}99` }}>
+                <svg width="12" height="12" viewBox="0 0 10 10" aria-hidden>
+                  <path d="M5 0C5.55 3.4 6.6 4.45 10 5 6.6 5.55 5.55 6.6 5 10 4.45 6.6 3.4 5.55 0 5 3.4 4.45 4.45 3.4 5 0Z" fill={ACCENT} />
+                </svg>
+                Ask
+                <Marker n={3} />
+              </span>
+              <span className="text-[12px] px-2 py-1 rounded border border-dashed border-black/20">Workspace switcher</span>
             </div>
           </div>
 
-          {/* 2. Surfaces */}
-          <div className="mt-6">
-            <BandLabel>Where people work</BandLabel>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
-              {surfaces.map((s) => (
-                <div key={s.name} className="rounded border border-black/10 p-2.5 flex flex-col">
-                  <p className="text-[13px] font-medium">{s.name}</p>
-                  <p className="text-[11.5px] text-muted-foreground leading-snug mb-2 md:min-h-[2.6em]">{s.job}</p>
-                  <p className="font-mono text-[9.5px] uppercase tracking-wider text-muted-foreground mb-1">Acts on</p>
-                  <div className="flex flex-wrap gap-1">
-                    {s.acts.map((a) => (
-                      <Chip key={a}>{a}</Chip>
+          {/* Trunk from the app down to the groups */}
+          <div className="hidden md:block relative h-8 mx-[12.5%]" aria-hidden>
+            <span className="absolute left-1/2 top-0 h-1/2 w-px bg-black/15" />
+            <span className="absolute left-0 right-0 top-1/2 h-px bg-black/15" />
+            <span className="absolute left-[-1px] top-1/2 bottom-0 w-px bg-black/15" />
+            <span className="absolute right-[-1px] top-1/2 bottom-0 w-px bg-black/15" />
+            <span className="absolute left-1/3 top-1/2 bottom-0 w-px bg-black/15" />
+            <span className="absolute left-2/3 top-1/2 bottom-0 w-px bg-black/15" />
+          </div>
+
+          {/* Levels 1 to 3 */}
+          <div className="mt-5 md:mt-0 grid grid-cols-2 md:grid-cols-4 gap-x-3 gap-y-6">
+            {groups.map((g) => {
+              const primary = g.group === "Build" || g.group === "Activity"
+              return (
+                <div key={g.group} className="min-w-0">
+                  <div
+                    className="rounded px-2.5 py-2 text-center"
+                    style={{ background: primary ? `${ACCENT}14` : "#F5F3F0" }}
+                  >
+                    <p className="flex items-center justify-center gap-1.5 text-[13px] font-medium" style={{ color: primary ? ACCENT : undefined }}>
+                      {g.group}
+                      {g.marker && <Marker n={g.marker} />}
+                    </p>
+                    <p className="font-mono text-[9.5px] uppercase tracking-wider text-muted-foreground">{g.note}</p>
+                  </div>
+
+                  <div className="mt-2 space-y-2.5 pl-2">
+                    {g.pages.map((p) => (
+                      <div key={p.name} className="relative pl-3 border-l border-black/15">
+                        <div className="relative">
+                          <span aria-hidden className="absolute -left-3 top-1/2 w-2.5 h-px bg-black/15" />
+                          <span className="inline-flex items-center gap-1.5 text-[12.5px] font-medium px-2 py-1 rounded border border-black/15 bg-white">
+                            {p.name}
+                            {p.marker && <Marker n={p.marker} />}
+                          </span>
+                        </div>
+                        {p.children.length > 0 && (
+                          <ul className="mt-1.5 space-y-1 pl-2">
+                            {p.children.map((ch) => (
+                              <li key={ch.text} className="flex items-start gap-1.5 text-[11.5px] leading-snug text-foreground/75">
+                                <span aria-hidden className="mt-[7px] w-1 h-1 shrink-0 bg-black/30" />
+                                <span>
+                                  {ch.text}
+                                  {ch.marker && (
+                                    <span className="ml-1 align-middle">
+                                      <Marker n={ch.marker} />
+                                    </span>
+                                  )}
+                                </span>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </div>
                     ))}
                   </div>
                 </div>
-              ))}
-            </div>
+              )
+            })}
           </div>
 
-          {/* 3. Objects */}
-          <div className="mt-6">
-            <BandLabel>What it&apos;s built on</BandLabel>
-            <div className="flex flex-col md:flex-row md:items-stretch gap-1.5 md:gap-1">
-              {objects.map((o, i) => (
-                <div key={o.name} className="flex flex-col md:flex-row md:items-center gap-1.5 md:gap-1 md:flex-1 md:min-w-0">
-                  <div className="rounded px-2.5 py-2 md:flex-1 md:self-stretch" style={{ background: `${ACCENT}14` }}>
-                    <p className="text-[13px] font-medium" style={{ color: ACCENT }}>
-                      {o.name}
-                    </p>
-                    <p className="text-[11px] text-foreground/70 leading-snug">{o.note}</p>
-                  </div>
-                  {i < objects.length - 1 && <Arrow className="self-center rotate-90 md:rotate-0" />}
-                </div>
+          {/* Why it is shaped this way */}
+          <div className="mt-6 pt-4 border-t border-black/10">
+            <p className="font-mono text-[10px] uppercase tracking-wider text-muted-foreground mb-3">Structure decisions</p>
+            <ol className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-3">
+              {decisions.map((d, i) => (
+                <li key={i} className="flex gap-2 text-[12.5px] leading-snug text-foreground/80">
+                  <Marker n={i + 1} />
+                  <span>{d}</span>
+                </li>
               ))}
-            </div>
+            </ol>
           </div>
         </div>
       </div>
