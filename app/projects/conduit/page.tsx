@@ -330,11 +330,6 @@ export default function ConduitStory() {
                     caption="The agent files the paperwork, but leaves the judgement calls to the officer"
                   />
                 )}
-                {!SHOW_WIP && (
-                  <Reveal className="rounded-xl border border-foreground/[0.08] bg-[#F5F3F0] px-6 py-16 md:py-20 text-center">
-                    <p className="font-serif text-[1.25rem] md:text-[1.5rem] tracking-[-0.015em]">Case study coming soon!</p>
-                  </Reveal>
-                )}
               </>
             }
           >
@@ -344,6 +339,13 @@ export default function ConduitStory() {
               and provides source-backed answers so officers can verify results without manually searching multiple
               systems.
             </p>
+            {!SHOW_WIP && (
+              <p className="!mt-6 inline-flex items-center gap-2 rounded-md border border-[#B4532A]/25 bg-[#B4532A]/[0.06] px-2.5 py-1 font-mono text-[12px] leading-none text-[#B4532A]">
+                {/* The accent square used across the site, pulsing gently */}
+                <span aria-hidden className="h-1.5 w-1.5 bg-[#B4532A] motion-safe:animate-pulse" />
+                Case study coming soon!
+              </p>
+            )}
           </Moment>
         </div>
 
