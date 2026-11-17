@@ -524,10 +524,10 @@ export function BeforeFlow() {
   const last = BEFORE_STEPS.length - 1
 
   // A sticky note on the last step, in the same style as the Veeqo notes
-  const noteW = 196
+  const noteW = 236
   const noteH = 30
-  const noteX = x(last) - noteW / 2 + 22
-  const noteY = rowY - nodeH / 2 - noteH + 8
+  const noteX = x(last) - noteW / 2 + 18
+  const noteY = rowY - nodeH / 2 - noteH + 4
 
   return (
     <Panel bg="/conduit/tile-hands.jpg" label="First direction">
@@ -557,10 +557,10 @@ export function BeforeFlow() {
           <rect x={noteX} y={noteY} width={noteW} height={noteH} fill="#F4A3A0" />
           <text
             x={noteX + noteW / 2}
-            y={noteY + noteH / 2}
+            y={noteY + noteH / 2 + 1}
             textAnchor="middle"
-            dominantBaseline="middle"
-            fontSize={12.5}
+            dominantBaseline="central"
+            fontSize={12}
             fontWeight={500}
             fill="rgba(0,0,0,0.8)"
           >
