@@ -265,7 +265,7 @@ export default function ConduitStory() {
                   <Reveal as="figure">
                     <BeforeFlow />
                     <figcaption className="mt-3 text-[13px] text-muted-foreground text-center">
-                      Before: extract every field and flag it against one rule
+                      Before: Conduit&apos;s own structure and rules for every importer
                     </figcaption>
                   </Reveal>
                   <Reveal as="figure">

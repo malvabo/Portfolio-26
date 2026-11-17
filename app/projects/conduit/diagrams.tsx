@@ -504,70 +504,125 @@ export function Ecosystem() {
 
 /* ------------------------------------------------------------------ */
 /* 4. Before: the first direction, and why it was dropped              */
+/*    Same before / after card language as the Veeqo diagrams          */
 /* ------------------------------------------------------------------ */
 
-const BEFORE_STEPS = [
-  ["All incoming", "documents"],
-  ["Extracts every", "field"],
-  ["Flags fields against", "one standard rule"],
+const BRAND = "#B4532A"
+
+function Pill({ children, accent = false }: { children: ReactNode; accent?: boolean }) {
+  return (
+    <span
+      className="inline-block text-white text-[11px] font-medium px-2 py-1 rounded leading-none"
+      style={{ background: accent ? BRAND : "#3D3D3D" }}
+    >
+      {children}
+    </span>
+  )
+}
+
+function DocIcon() {
+  return (
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden className="shrink-0">
+      <path d="M3 1.5h5l3 3v8H3z" stroke="currentColor" strokeWidth="1.2" strokeLinejoin="round" />
+      <path d="M8 1.5v3h3M5 7.5h4M5 9.5h4" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
+    </svg>
+  )
+}
+
+// Field names as they appear in the product
+const FLAG_NOTES = [
+  { text: "certificateId · flagged", bg: "#F6B98F", rot: "-3deg" },
+  { text: "expiryDate · flagged", bg: "#A9C8F5", rot: "2.5deg" },
+  { text: "reference · flagged", bg: "#CDB6F2", rot: "-2deg" },
+  { text: "issueDate · flagged?", bg: "#F5B3CF", rot: "3deg" },
 ]
+
 const BEFORE_REASONS = [
-  ["Every importer checks documents against its", "own policy, so one set of flags fit no one"],
-  ["Pulling every field meant reviewing data", "that no form needed"],
+  {
+    title: "Conduit's rules fit no one",
+    body: "Every importer checks documents against its own policy, so one structure and one set of flags matched nobody's.",
+  },
+  {
+    title: "Too much to review",
+    body: "Pulling every field meant reviewing data that no form needed.",
+  },
 ]
 
 export function BeforeFlow() {
-  const W = 1060
-  const nodeW = 150
-  const nodeH = 56
-  const step = 210
-  const x = (i: number) => 95 + step * i
-  const rowY = 90
-  const whyX = x(2) + nodeW / 2 + 60
-  const whyW = W - whyX - 20
-  const whyY = 22
-  const whyH = 136
-  const height = whyY + whyH + 22
-
   return (
-    <Panel bg="/conduit/tile-hands.jpg" label="First direction">
-      <svg
-        viewBox={`0 0 ${W} ${height}`}
-        className="w-full min-w-[760px] md:min-w-0 h-auto font-sans"
-        role="img"
-        aria-label="First direction. Conduit took all incoming documents, extracted every field, and flagged fields against one standard rule. It didn't work: every importer checks documents against its own policy, so one set of flags fit no one, and pulling every field meant reviewing data that no form needed."
-      >
-        <ArrowDefs id="before-arrow" />
-        {BEFORE_STEPS.slice(0, -1).map((_, i) => (
-          <Edge key={i} marker="before-arrow" d={`M${x(i) + nodeW / 2} ${rowY} H${x(i + 1) - nodeW / 2 - GAP}`} />
-        ))}
-        {/* The last step leads into why it failed */}
-        <Edge marker="before-arrow" d={`M${x(2) + nodeW / 2} ${rowY} H${whyX - GAP}`} />
-        {BEFORE_STEPS.map((lines, i) => (
-          <g key={lines[0]}>
-            <rect x={x(i) - nodeW / 2} y={rowY - nodeH / 2} width={nodeW} height={nodeH} rx={4} fill="#FFFFFF" stroke={STROKE} />
-            <Lines x={x(i)} y={rowY} lines={lines} />
-          </g>
-        ))}
+    <div className="relative rounded-lg overflow-hidden" role="group" aria-label="First direction">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src="/conduit/tile-hands.jpg" alt="" aria-hidden className="absolute inset-0 w-full h-full object-cover" />
+      <div className="absolute inset-0 bg-black/25" aria-hidden />
 
-        <rect x={whyX} y={whyY} width={whyW} height={whyH} rx={4} fill={TINT} stroke={STROKE} />
-        <text x={whyX + 18} y={whyY + 28} fontSize={14} fontWeight={500} fill={INK}>
-          Why it didn&apos;t work
-        </text>
-        {BEFORE_REASONS.map((lines, k) => {
-          const top = whyY + 58 + k * 44
-          return (
-            <g key={lines[0]}>
-              <rect x={whyX + 18} y={top - 3} width={6} height={6} fill="#B4532A" />
-              {lines.map((l, j) => (
-                <text key={l} x={whyX + 34} y={top + j * 17} dominantBaseline="middle" fontSize={13} fill={MUTED}>
-                  {l}
-                </text>
+      <div className="relative grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-4 md:gap-3 items-center p-4 sm:p-6 md:p-8">
+        {/* What Conduit did */}
+        <div className="bg-white rounded-md border border-black/10 shadow-[0_8px_24px_rgba(0,0,0,0.18)] p-4 self-stretch">
+          <Pill>Before</Pill>
+          <p className="font-serif text-[1.125rem] tracking-[-0.01em] mt-2 mb-4">Conduit decided for every importer</p>
+
+          <div className="rounded border border-black/10 bg-[#F5F3F0] p-3 mb-3">
+            <p className="text-[13px] font-medium text-foreground/70 mb-2">Grouped by Conduit&apos;s own structure</p>
+            {["Certificates of origin", "Invoices", "Packing lists"].map((d) => (
+              <div key={d} className="flex items-center gap-2 text-[13px] text-muted-foreground py-0.5">
+                <DocIcon />
+                {d}
+              </div>
+            ))}
+          </div>
+
+          <div className="rounded border border-dashed p-3 pb-4" style={{ borderColor: `${BRAND}80` }}>
+            <p className="text-[13px] font-medium mb-3" style={{ color: BRAND }}>
+              Every field pulled, flagged by Conduit&apos;s rules
+            </p>
+            <div className="flex flex-col items-start gap-1.5">
+              {FLAG_NOTES.map((n, i) => (
+                <span
+                  key={n.text}
+                  className="text-[12px] font-medium text-black/80 px-2.5 py-1.5 shadow-[0_2px_6px_rgba(0,0,0,0.12)]"
+                  style={{ background: n.bg, transform: `rotate(${n.rot})`, marginLeft: `${(i % 2) * 18}px` }}
+                >
+                  {n.text}
+                </span>
               ))}
-            </g>
-          )
-        })}
-      </svg>
-    </Panel>
+            </div>
+          </div>
+        </div>
+
+        {/* Arrow badge */}
+        <div className="flex justify-center">
+          <span className="grid place-items-center w-10 h-10 rounded-full bg-white shadow-[0_4px_14px_rgba(0,0,0,0.2)] rotate-90 md:rotate-0">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden>
+              <path d="M3 9h12M10 4l5 5-5 5" stroke={BRAND} strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </span>
+        </div>
+
+        {/* Why it failed */}
+        <div className="bg-white rounded-md border border-black/10 shadow-[0_8px_24px_rgba(0,0,0,0.18)] p-4 self-stretch">
+          <Pill accent>Why it didn&apos;t work</Pill>
+          <p className="font-serif text-[1.125rem] tracking-[-0.01em] mt-2 mb-4">It matched no importer&apos;s policy</p>
+          <div className="space-y-2.5">
+            {BEFORE_REASONS.map((r) => (
+              <div key={r.title} className="flex gap-3 rounded border border-black/10 p-3">
+                <span
+                  className="grid place-items-center w-6 h-6 rounded shrink-0"
+                  style={{ background: `${BRAND}1A`, color: BRAND }}
+                  aria-hidden
+                >
+                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                    <path d="M2 2l6 6M8 2l-6 6" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+                  </svg>
+                </span>
+                <div>
+                  <p className="text-[13px] font-medium">{r.title}</p>
+                  <p className="text-[12.5px] leading-snug text-muted-foreground mt-0.5">{r.body}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
   )
 }
