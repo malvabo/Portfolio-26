@@ -25,12 +25,11 @@ export default function Home() {
         <Hero />
         {/* <ShowreelSection /> */}
         <WorkSection />
-        {/* Hidden for now; kept to bring back later. */}
-        {/* <AnimatedSection>
-          <AmazonSection />
-        </AnimatedSection> */}
         <AnimatedSection>
           <VeeqoSection />
+        </AnimatedSection>
+        <AnimatedSection>
+          <AmazonSection />
         </AnimatedSection>
         <AnimatedSection>
           <ConduitSection />

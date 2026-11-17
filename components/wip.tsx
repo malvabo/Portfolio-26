@@ -11,6 +11,7 @@ import type { ReactNode } from "react"
  * - PAA: "The AI drafts only from the locked assessment" (paa-discharge)
  * - Conduit: "Journey mapping and artifacts from the stakeholder workshops" (workshop)
  * - Conduit: "Inbox grouped by shipment, with the documents that need attention flagged" (inbox-by-shipment)
+ * - Homepage Amazon AI card: the three screenshots (aivq1-3)
  */
 export const SHOW_WIP = false
 
