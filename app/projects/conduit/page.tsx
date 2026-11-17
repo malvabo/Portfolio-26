@@ -26,7 +26,7 @@ import {
   Reveal,
   Words,
 } from "@/components/story-case-study"
-import { Ecosystem, UserFlow } from "./diagrams"
+import { BeforeFlow, Ecosystem, UserFlow } from "./diagrams"
 
 export default function ConduitStory() {
   return (
@@ -263,9 +263,15 @@ export default function ConduitStory() {
                     />
                   )}
                   <Reveal as="figure">
+                    <BeforeFlow />
+                    <figcaption className="mt-3 text-[13px] text-muted-foreground text-center">
+                      Before: extract every field and flag it against one rule
+                    </figcaption>
+                  </Reveal>
+                  <Reveal as="figure">
                     <Ecosystem />
                     <figcaption className="mt-3 text-[13px] text-muted-foreground text-center">
-                      Documents in, compliance out
+                      After: each importer&apos;s policy sets what Conduit pulls and which form it fills
                     </figcaption>
                   </Reveal>
                 </div>

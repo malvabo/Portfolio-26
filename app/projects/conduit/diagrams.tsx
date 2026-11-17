@@ -501,3 +501,73 @@ export function Ecosystem() {
     </Panel>
   )
 }
+
+/* ------------------------------------------------------------------ */
+/* 4. Before: the first direction, and why it was dropped              */
+/* ------------------------------------------------------------------ */
+
+const BEFORE_STEPS = [
+  ["All incoming", "documents"],
+  ["Extracts every", "field"],
+  ["Flags fields against", "one standard rule"],
+]
+const BEFORE_REASONS = [
+  ["Every importer checks documents against its", "own policy, so one set of flags fit no one"],
+  ["Pulling every field meant reviewing data", "that no form needed"],
+]
+
+export function BeforeFlow() {
+  const W = 1060
+  const nodeW = 150
+  const nodeH = 56
+  const step = 210
+  const x = (i: number) => 95 + step * i
+  const rowY = 90
+  const whyX = x(2) + nodeW / 2 + 60
+  const whyW = W - whyX - 20
+  const whyY = 22
+  const whyH = 136
+  const height = whyY + whyH + 22
+
+  return (
+    <Panel bg="/conduit/tile-hands.jpg" label="First direction">
+      <svg
+        viewBox={`0 0 ${W} ${height}`}
+        className="w-full min-w-[760px] md:min-w-0 h-auto font-sans"
+        role="img"
+        aria-label="First direction. Conduit took all incoming documents, extracted every field, and flagged fields against one standard rule. It didn't work: every importer checks documents against its own policy, so one set of flags fit no one, and pulling every field meant reviewing data that no form needed."
+      >
+        <ArrowDefs id="before-arrow" />
+        {BEFORE_STEPS.slice(0, -1).map((_, i) => (
+          <Edge key={i} marker="before-arrow" d={`M${x(i) + nodeW / 2} ${rowY} H${x(i + 1) - nodeW / 2 - GAP}`} />
+        ))}
+        {/* The last step leads into why it failed */}
+        <Edge marker="before-arrow" d={`M${x(2) + nodeW / 2} ${rowY} H${whyX - GAP}`} />
+        {BEFORE_STEPS.map((lines, i) => (
+          <g key={lines[0]}>
+            <rect x={x(i) - nodeW / 2} y={rowY - nodeH / 2} width={nodeW} height={nodeH} rx={4} fill="#FFFFFF" stroke={STROKE} />
+            <Lines x={x(i)} y={rowY} lines={lines} />
+          </g>
+        ))}
+
+        <rect x={whyX} y={whyY} width={whyW} height={whyH} rx={4} fill={TINT} stroke={STROKE} />
+        <text x={whyX + 18} y={whyY + 28} fontSize={14} fontWeight={500} fill={INK}>
+          Why it didn&apos;t work
+        </text>
+        {BEFORE_REASONS.map((lines, k) => {
+          const top = whyY + 58 + k * 44
+          return (
+            <g key={lines[0]}>
+              <rect x={whyX + 18} y={top - 3} width={6} height={6} fill="#B4532A" />
+              {lines.map((l, j) => (
+                <text key={l} x={whyX + 34} y={top + j * 17} dominantBaseline="middle" fontSize={13} fill={MUTED}>
+                  {l}
+                </text>
+              ))}
+            </g>
+          )
+        })}
+      </svg>
+    </Panel>
+  )
+}
