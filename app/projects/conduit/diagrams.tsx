@@ -93,8 +93,12 @@ function Edge({ d, marker, label, dashed = false }: { d: string; marker: string;
             ))}
           </text>
         ) : (
-          <text x={label.x + LABEL_OFFSET} y={label.y} dominantBaseline="middle" fontSize={12} fill={MUTED}>
-            {label.lines[0]}
+          <text x={label.x + LABEL_OFFSET} dominantBaseline="middle" fontSize={12} fill={MUTED}>
+            {label.lines.map((l, i) => (
+              <tspan key={l} x={label.x + LABEL_OFFSET} y={label.y + (i - (label.lines.length - 1) / 2) * 14}>
+                {l}
+              </tspan>
+            ))}
           </text>
         ))}
     </g>
@@ -257,7 +261,7 @@ export function InformationArchitecture() {
 /* 2. Swimlane: who does what to a document                           */
 /* ------------------------------------------------------------------ */
 
-const LANES = ["Exporter", "Importer", "Conduit", "Importer's systems"]
+const LANES = ["Exporter", "Importer", "Conduit", "Existing tools"]
 const LANE_H = 110
 const FLOW_W = 1060
 const LABEL_W = 160
@@ -305,7 +309,7 @@ export function UserFlow() {
         viewBox={`0 0 ${FLOW_W} ${LANES.length * LANE_H}`}
         className="w-full min-w-[760px] md:min-w-0 h-auto font-sans"
         role="img"
-        aria-label="Swimlane diagram of one document. The exporter sends documents by email or upload, and the importer's systems can send them through the API. Conduit receives them and extracts the fields, using the pipeline the importer set up once. If every field is confident, the status changes to Done. If not, the importer reviews the flagged fields and confirms or corrects them first. Conduit then fills the form and sends it to the importer's systems through the API."
+        aria-label="Swimlane diagram of one document. The exporter sends documents by email or upload, and the importer's existing tools can send them through the API. Conduit receives them and extracts the fields, using the pipeline the importer set up once. If every field is confident, the status changes to Done. If not, the importer reviews the flagged fields and confirms or corrects them first. Conduit then fills the form and sends it to the importer's existing tools through the API."
       >
         <ArrowDefs id="flow-arrow" />
 
@@ -323,7 +327,7 @@ export function UserFlow() {
         <Edge
           marker="flow-arrow"
           d={`M${c[0]} ${bottom(0)} V${top(2) - GAP}`}
-          label={{ lines: ["Email or upload"], x: c[0], y: cy(1), side: "right" }}
+          label={{ lines: ["Email", "or upload"], x: c[0], y: cy(1), side: "right" }}
         />
         <Edge
           marker="flow-arrow"
@@ -331,11 +335,7 @@ export function UserFlow() {
           label={{ lines: ["API"], x: c[0], y: mid(bottom(2), top(3)), side: "right" }}
         />
         {/* The importer's pipeline, set up once, drives extraction */}
-        <Edge
-          marker="flow-arrow"
-          d={`M${c[1]} ${bottom(1)} V${top(2) - GAP}`}
-          label={{ lines: ["Pipeline, set up once"], x: c[1], y: mid(bottom(1), top(2)), side: "right" }}
-        />
+        <Edge marker="flow-arrow" d={`M${c[1]} ${bottom(1)} V${top(2) - GAP}`} />
         <Edge marker="flow-arrow" d={`M${c[0] + HALF} ${cy(2)} H${c[1] - HALF - GAP}`} />
         <Edge marker="flow-arrow" d={`M${c[1] + HALF} ${cy(2)} H${c[2] - HALF - GAP}`} />
         {/* Confident: done. Unsure: the importer checks first */}
@@ -389,7 +389,7 @@ const STAGES: Stage[] = [
   { name: "Documents", items: ["Certificates of origin", "Invoices", "Packing lists", "Bills of lading"] },
   { name: "Fields", items: ["Confident", "Needs review", "Not found", "Corrected"] },
   { name: "Forms", items: ["Internal forms", "Declarations"] },
-  { name: "Importer's systems", items: ["The tools they", "already use"] },
+  { name: "Existing tools", items: ["ERP", "Internal tools", "Customs portals", "WMS"] },
 ]
 
 const DF_W = 1060
@@ -420,7 +420,7 @@ export function Ecosystem() {
         viewBox={`0 0 ${DF_W} ${height}`}
         className="w-full min-w-[760px] md:min-w-0 h-auto font-sans"
         role="img"
-        aria-label="Data flow. Documents arrive by email, portal upload, field scan or the API: certificates of origin, invoices, packing lists and bills of lading. An extraction pipeline turns each document into fields, which arrive confident, needing review, not found or corrected. Unsure fields go to a person, who confirms or corrects them. An injection pipeline fills internal forms and declarations, which go to the importer's own systems through the API. The importer's own policy sets both pipelines: which fields to pull and which form they fill."
+        aria-label="Data flow. Documents arrive by email, portal upload, field scan or the API: certificates of origin, invoices, packing lists and bills of lading. An extraction pipeline turns each document into fields, which arrive confident, needing review, not found or corrected. Unsure fields go to a person, who confirms or corrects them. An injection pipeline fills internal forms and declarations, which go to the importer's existing tools, such as ERP, internal tools, customs portals and WMS, through the API. The importer's own policy sets both pipelines: which fields to pull and which form they fill."
       >
         <ArrowDefs id="df-arrow" />
 
