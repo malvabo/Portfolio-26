@@ -529,6 +529,17 @@ function DocIcon() {
   )
 }
 
+/** Short down arrow between stacked steps */
+function StepArrow() {
+  return (
+    <div className="flex justify-center py-1" aria-hidden>
+      <svg width="10" height="16" viewBox="0 0 10 16" fill="none">
+        <path d="M5 0v13M1.5 9.5 5 13l3.5-3.5" stroke={MUTED} strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    </div>
+  )
+}
+
 // Field names as they appear in the product
 const FLAG_NOTES = [
   { text: "certificateId · flagged", bg: "#F6B98F", rot: "-3deg" },
@@ -539,8 +550,8 @@ const FLAG_NOTES = [
 
 const BEFORE_REASONS = [
   {
-    title: "Conduit's rules fit no one",
-    body: "Every importer checks documents against its own policy, so one structure and one set of flags matched nobody's.",
+    title: "Conduit's rules fit few importers",
+    body: "Every importer checks documents against its own policy, so one structure and one set of flags missed most of them.",
   },
   {
     title: "Too much to review",
@@ -559,21 +570,23 @@ export function BeforeFlow() {
         {/* What Conduit did */}
         <div className="bg-white rounded-md border border-black/10 shadow-[0_8px_24px_rgba(0,0,0,0.18)] p-4 self-stretch">
           <Pill>Before</Pill>
-          <p className="font-serif text-[1.125rem] tracking-[-0.01em] mt-2 mb-4">Conduit decided for every importer</p>
 
-          <div className="rounded border border-black/10 bg-[#F5F3F0] p-3 mb-3">
-            <p className="text-[13px] font-medium text-foreground/70 mb-2">Grouped by Conduit&apos;s own structure</p>
-            {["Certificates of origin", "Invoices", "Packing lists"].map((d) => (
-              <div key={d} className="flex items-center gap-2 text-[13px] text-muted-foreground py-0.5">
-                <DocIcon />
-                {d}
+          {/* The first direction, step by step */}
+          <div className="mt-4">
+            {["All incoming documents", "Grouped by Conduit's pre-defined structure", "Every field extracted"].map((step) => (
+              <div key={step}>
+                <div className="flex items-center gap-2 rounded border border-black/15 bg-white px-3 py-2 text-[13px]">
+                  <DocIcon />
+                  {step}
+                </div>
+                <StepArrow />
               </div>
             ))}
           </div>
 
           <div className="rounded border border-dashed p-3 pb-4" style={{ borderColor: `${BRAND}80` }}>
             <p className="text-[13px] font-medium mb-3" style={{ color: BRAND }}>
-              Every field pulled, flagged by Conduit&apos;s rules
+              Fields flagged against Conduit&apos;s rules
             </p>
             <div className="flex flex-col items-start gap-1.5">
               {FLAG_NOTES.map((n, i) => (
@@ -600,9 +613,8 @@ export function BeforeFlow() {
 
         {/* Why it failed */}
         <div className="bg-white rounded-md border border-black/10 shadow-[0_8px_24px_rgba(0,0,0,0.18)] p-4 self-stretch">
-          <Pill accent>Why it didn&apos;t work</Pill>
-          <p className="font-serif text-[1.125rem] tracking-[-0.01em] mt-2 mb-4">It matched no importer&apos;s policy</p>
-          <div className="space-y-2.5">
+          <Pill accent>It didn&apos;t match many importers&apos; policies</Pill>
+          <div className="mt-4 space-y-2.5">
             {BEFORE_REASONS.map((r) => (
               <div key={r.title} className="flex gap-3 rounded border border-black/10 p-3">
                 <span
