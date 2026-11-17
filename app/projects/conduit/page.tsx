@@ -340,7 +340,7 @@ export default function ConduitStory() {
               systems.
             </p>
             {!SHOW_WIP && (
-              <p className="!mt-2 inline-flex items-center gap-2 rounded-md border border-[#B4532A]/25 bg-[#B4532A]/[0.06] px-2.5 py-1 font-mono text-[12px] leading-none text-[#B4532A]">
+              <p className="!-mt-1 flex w-fit items-center gap-2 rounded-md border border-[#B4532A]/25 bg-[#B4532A]/[0.06] px-2.5 py-1 font-mono text-[12px] leading-none text-[#B4532A]">
                 {/* The accent square used across the site, pulsing gently */}
                 <span aria-hidden className="h-1.5 w-1.5 bg-[#B4532A] motion-safe:animate-pulse" />
                 Case study coming soon!
