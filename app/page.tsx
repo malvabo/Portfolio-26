@@ -26,10 +26,10 @@ export default function Home() {
         {/* <ShowreelSection /> */}
         <WorkSection />
         <AnimatedSection>
-          <AmazonSection />
+          <VeeqoSection />
         </AnimatedSection>
         <AnimatedSection>
-          <VeeqoSection />
+          <AmazonSection />
         </AnimatedSection>
         <AnimatedSection>
           <ConduitSection />
