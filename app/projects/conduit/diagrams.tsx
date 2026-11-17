@@ -506,24 +506,28 @@ export function Ecosystem() {
 /* 4. Before: the first direction, and where it ended                  */
 /* ------------------------------------------------------------------ */
 
-const BRAND = "#B4532A"
-
 const BEFORE_STEPS = [
   ["All incoming", "documents"],
   ["Grouped by Conduit's", "set structure"],
   ["Every field", "extracted"],
-  ["Fields flagged by", "Conduit-defined rules"],
+  ["Documents flagged by", "Conduit-defined rules"],
 ]
 
 export function BeforeFlow() {
   const W = 1060
-  const nodeW = 164
+  const nodeW = 170
   const nodeH = 60
-  const step = 204
-  const x = (i: number) => 106 + step * i
-  const rowY = 46
-  const height = rowY + nodeH / 2 + 16
-  const out = BEFORE_STEPS.length // the outcome sits in the last column
+  const step = 214
+  const x = (i: number) => W / 2 + (i - (BEFORE_STEPS.length - 1) / 2) * step
+  const rowY = 74
+  const height = rowY + nodeH / 2 + 18
+  const last = BEFORE_STEPS.length - 1
+
+  // A sticky note on the last step, in the same style as the Veeqo notes
+  const noteW = 196
+  const noteH = 30
+  const noteX = x(last) - noteW / 2 + 22
+  const noteY = rowY - nodeH / 2 - noteH + 8
 
   return (
     <Panel bg="/conduit/tile-hands.jpg" label="First direction">
@@ -531,10 +535,15 @@ export function BeforeFlow() {
         viewBox={`0 0 ${W} ${height}`}
         className="w-full min-w-[760px] md:min-w-0 h-auto font-sans"
         role="img"
-        aria-label="First direction. All incoming documents were grouped by Conduit's set structure, every field was extracted, and fields were flagged by Conduit-defined rules. It didn't fit most importers' policies."
+        aria-label="First direction. All incoming documents were grouped by Conduit's set structure, every field was extracted, and documents were flagged by Conduit-defined rules. It didn't fit most importers' policies."
       >
         <ArrowDefs id="before-arrow" />
-        {BEFORE_STEPS.map((_, i) => (
+        <defs>
+          <filter id="note-shadow" x="-10%" y="-30%" width="120%" height="160%">
+            <feDropShadow dx="0" dy="2" stdDeviation="3" floodColor="#000000" floodOpacity="0.14" />
+          </filter>
+        </defs>
+        {BEFORE_STEPS.slice(0, -1).map((_, i) => (
           <Edge key={i} marker="before-arrow" d={`M${x(i) + nodeW / 2} ${rowY} H${x(i + 1) - nodeW / 2 - GAP}`} />
         ))}
         {BEFORE_STEPS.map((lines, i) => (
@@ -544,12 +553,20 @@ export function BeforeFlow() {
           </g>
         ))}
 
-        {/* Where it ended */}
-        <rect x={x(out) - nodeW / 2} y={rowY - nodeH / 2} width={nodeW} height={nodeH} rx={4} fill="#F8ECE6" stroke={BRAND} />
-        <g transform={`translate(${x(out) - nodeW / 2 + 16} ${rowY - 6})`}>
-          <path d="M0 0l12 12M12 0L0 12" stroke={BRAND} strokeWidth={1.8} strokeLinecap="round" />
+        <g transform={`rotate(-3 ${noteX + noteW / 2} ${noteY + noteH / 2})`} filter="url(#note-shadow)">
+          <rect x={noteX} y={noteY} width={noteW} height={noteH} fill="#F4A3A0" />
+          <text
+            x={noteX + noteW / 2}
+            y={noteY + noteH / 2}
+            textAnchor="middle"
+            dominantBaseline="middle"
+            fontSize={12.5}
+            fontWeight={500}
+            fill="rgba(0,0,0,0.8)"
+          >
+            Didn&apos;t fit most importers&apos; policies
+          </text>
         </g>
-        <Lines x={x(out) + 12} y={rowY} lines={["Didn't fit most", "importers' policies"]} fill={BRAND} />
       </svg>
     </Panel>
   )

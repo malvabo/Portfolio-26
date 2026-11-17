@@ -265,7 +265,7 @@ export default function ConduitStory() {
                   <Reveal as="figure">
                     <BeforeFlow />
                     <figcaption className="mt-3 text-[13px] text-muted-foreground text-center">
-                      Before: Conduit&apos;s own structure and rules for every importer
+                      Before: A rigid, one-size-fits-all extraction pipeline
                     </figcaption>
                   </Reveal>
                   <Reveal as="figure">
