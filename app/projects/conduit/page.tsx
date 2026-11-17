@@ -1,7 +1,7 @@
 "use client"
 
 import { StoryTopBar } from "@/components/story-top-bar"
-import { wip } from "@/components/wip"
+import { SHOW_WIP, wip } from "@/components/wip"
 import { ScrollToTop } from "@/components/scroll-to-top"
 import { BackLinkFooter } from "@/components/back-link"
 import { StoryContents } from "@/components/story-contents"
@@ -322,11 +322,20 @@ export default function ConduitStory() {
             n={4}
             title="Reducing manual work across complex operations"
             visual={
-              <Figure
-                src="/conduit/ask-1.webp"
-                alt="Conduit chat: an answer about what blocks a shipment, with its sources, then the agent asking which value to file in the declaration"
-                caption="The agent files the paperwork, but leaves the judgement calls to the officer"
-              />
+              <>
+                {wip(
+                  <Figure
+                    src="/conduit/ask-1.webp"
+                    alt="Conduit chat: an answer about what blocks a shipment, with its sources, then the agent asking which value to file in the declaration"
+                    caption="The agent files the paperwork, but leaves the judgement calls to the officer"
+                  />
+                )}
+                {!SHOW_WIP && (
+                  <Reveal className="rounded-xl border border-foreground/[0.08] bg-[#F5F3F0] px-6 py-16 md:py-20 text-center">
+                    <p className="font-serif text-[1.25rem] md:text-[1.5rem] tracking-[-0.015em]">Case study coming soon!</p>
+                  </Reveal>
+                )}
+              </>
             }
           >
             <p>

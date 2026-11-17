@@ -12,6 +12,7 @@ import type { ReactNode } from "react"
  * - Conduit: "Journey mapping and artifacts from the stakeholder workshops" (workshop)
  * - Conduit: "Inbox grouped by shipment, with the documents that need attention flagged" (inbox-by-shipment)
  * - Homepage Amazon AI card: the three screenshots (aivq1-3)
+ * - Conduit: "The agent files the paperwork, but leaves the judgement calls to the officer" (ask-1), shown as "Case study coming soon!"
  */
 export const SHOW_WIP = false
 
