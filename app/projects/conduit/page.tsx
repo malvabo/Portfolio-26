@@ -26,6 +26,7 @@ import {
   Reveal,
   Words,
 } from "@/components/story-case-study"
+import { Ecosystem, UserFlow } from "./diagrams"
 
 export default function ConduitStory() {
   return (
@@ -166,7 +167,15 @@ export default function ConduitStory() {
           title="I designed reusable pipelines that importers set up once and run on every shipment."
         />
 
-        <div className="mt-5 space-y-24 md:space-y-32">
+        <div className="mt-12">
+          <Wide>
+            <Reveal>
+              <UserFlow />
+            </Reveal>
+          </Wide>
+        </div>
+
+        <div className="mt-16 space-y-24 md:space-y-32">
           <Stage
             title="Monitoring"
             visual={
@@ -253,12 +262,12 @@ export default function ConduitStory() {
                       caption="Inbox grouped by shipment, with the documents that need attention flagged"
                     />
                   )}
-                  <Figure
-                    src="/conduit/ecosystem.svg"
-                    maxWidth={680}
-                    alt="Supplier documents flow into Conduit, which fills compliance forms and acts on them, powered by pipelines"
-                    caption="Documents in, compliance out, powered by the importer's own pipelines"
-                  />
+                  <Reveal as="figure">
+                    <Ecosystem />
+                    <figcaption className="mt-3 text-[13px] text-muted-foreground text-center">
+                      Documents in, compliance out, powered by the importer&apos;s own pipelines
+                    </figcaption>
+                  </Reveal>
                 </div>
               }
             >
