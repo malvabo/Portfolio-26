@@ -370,8 +370,8 @@ export function UserFlow() {
         <Decision x={c[2]} lane={2} lines={["Every field", "confident?"]} />
         <Box x={c[3]} lane={2} lines={["Status changes", "to Done"]} />
         <Box x={c[4]} lane={2} lines={["Fills", "the form"]} />
-        <Box x={c[0]} lane={3} lines={["Send documents", "automatically"]} />
-        <Box x={c[4]} lane={3} lines={["Receive", "the form"]} />
+        <Box x={c[0]} lane={3} lines={["Sends documents", "automatically"]} />
+        <Box x={c[4]} lane={3} lines={["Receives", "the form"]} />
       </svg>
     </Panel>
   )
@@ -471,10 +471,14 @@ export function Ecosystem() {
         {/* Unsure fields go to a person and come back */}
         <Edge
           marker="df-arrow"
-          d={`M${fieldsX + 22} ${nodeY + DF_NODE_H} V${reviewY - GAP}`}
-          label={{ lines: ["Unsure fields"], x: fieldsX + 22, y: (nodeY + DF_NODE_H + reviewY) / 2, side: "right" }}
+          d={`M${fieldsX + 40} ${nodeY + DF_NODE_H} V${reviewY - GAP}`}
+          label={{ lines: ["Unsure fields"], x: fieldsX + 40, y: (nodeY + DF_NODE_H + reviewY) / 2, side: "right" }}
         />
-        <Edge marker="df-arrow" d={`M${fieldsX - 22} ${reviewY} V${nodeY + DF_NODE_H + GAP}`} />
+        <Edge
+          marker="df-arrow"
+          d={`M${fieldsX - 40} ${reviewY} V${nodeY + DF_NODE_H + GAP}`}
+          label={{ lines: ["Corrected"], x: fieldsX - 40, y: (nodeY + DF_NODE_H + reviewY) / 2, side: "right" }}
+        />
         <rect x={fieldsX - 90} y={reviewY} width={180} height={reviewH} rx={4} fill="#FFFFFF" stroke={STROKE} />
         <Lines x={fieldsX} y={reviewY + reviewH / 2} lines={["A person confirms", "or corrects"]} />
       </svg>
