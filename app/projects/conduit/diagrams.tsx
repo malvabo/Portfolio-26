@@ -526,7 +526,7 @@ export function BeforeFlow() {
   // A sticky note on the last step, in the same style as the Veeqo notes
   const noteW = 236
   const noteH = 30
-  const noteX = x(last) - noteW / 2 + 18
+  const noteX = x(last) - noteW / 2
   const noteY = rowY - nodeH / 2 - noteH + 4
 
   return (
