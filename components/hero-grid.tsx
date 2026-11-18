@@ -95,7 +95,10 @@ function drawCell(ctx: CanvasRenderingContext2D, c: Cell) {
   ctx.restore()
 }
 
-export function HeroGrid() {
+// Calmer behind the statement, fading out at the top and bottom edges.
+const DEFAULT_MASK = "linear-gradient(to bottom, transparent 0, #000 12%, #000 85%, transparent 100%)"
+
+export function HeroGrid({ mask = DEFAULT_MASK }: { mask?: string } = {}) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
 
   useEffect(() => {
@@ -242,13 +245,7 @@ export function HeroGrid() {
       ref={canvasRef}
       aria-hidden
       className="absolute inset-0 w-full h-full pointer-events-none"
-      style={{
-        // Calmer behind the statement, fading out at the top and bottom edges.
-        maskImage:
-          "linear-gradient(to bottom, transparent 0, #000 12%, #000 85%, transparent 100%)",
-        WebkitMaskImage:
-          "linear-gradient(to bottom, transparent 0, #000 12%, #000 85%, transparent 100%)",
-      }}
+      style={{ maskImage: mask, WebkitMaskImage: mask }}
     />
   )
 }
