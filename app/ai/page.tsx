@@ -30,12 +30,12 @@ const BUILT_WITH = "[Claude Code, model/API, front-end stack]"
 export const metadata: Metadata = {
   title: "Mary Borysova – I build AI products for complex B2B work",
   description:
-    "Product manager in London. From the problem to a working prototype in code, then into real users' hands. 12 years in tech, ex-Amazon.",
+    "Product manager in London. I build AI products for complex B2B work and prototype them in code. 12 years in tech, ex-Amazon.",
   alternates: { canonical: "/ai" },
   openGraph: {
     title: "Mary Borysova – I build AI products for complex B2B work",
     description:
-      "From the problem to a working prototype in code, then into real users' hands. $2.3M a year saved at Amazon.",
+      "Product manager in London. At Amazon, my last project saved $2.3M a year.",
     url: "/ai",
     images: [{ url: "/ai/og.png", width: 1200, height: 630, alt: "Mary Borysova. I build AI products for complex B2B work. $2.3M a year saved at Amazon." }],
     type: "profile",
@@ -52,13 +52,13 @@ const CHAPTERS = [
     src: "/ai/conduit-extract.mp4",
     poster: "/ai/conduit-extract.webp",
     title: "Set up extraction",
-    caption: "Choosing which fields to pull from a document, then checking and correcting what the model found.",
+    caption: "Pick the fields to pull from a document, then check and correct what the model found.",
   },
   {
     src: "/ai/conduit-fill.mp4",
     poster: "/ai/conduit-fill.webp",
     title: "Fill the form",
-    caption: "Mapping fields straight onto the form, then running it on a real supplier document.",
+    caption: "Map the fields onto the form, then run it on a real supplier document.",
   },
 ]
 
@@ -70,32 +70,8 @@ const NUMBERS = [
 ]
 
 const MORE_RESULTS = [
-  { value: "~$14M", label: "a year in clinician time saved", context: "Post Acute Analytics, from 40% less time managing document workflows" },
-  { value: "40%", label: "faster document turnaround", context: "PandaDoc, Chrome extension used by 50K+ businesses" },
-]
-
-// Each principle is backed by a decision already on this page.
-const PRINCIPLES = [
-  {
-    title: "Cut scope before adding it.",
-    body: "Most risk sits in what a team agrees to build. I find the feature that costs the most and serves the fewest users, and remove it first.",
-    proof: "Veeqo: cut drag and drop. Conduit: no rules engine, so each importer keeps their own policy.",
-  },
-  {
-    title: "Pick the path with the least to lose.",
-    body: "When a deadline carries revenue, I compare options by what the business could lose, then commit and defend the call.",
-    proof: "Won the VP of Product and tech leads over to hand-porting enterprise templates in 2 weeks instead of a 4-month migration tool. Vendor off 3 months early, 0% enterprise churn.",
-  },
-  {
-    title: "Segment before solving.",
-    body: "One product for users with opposite needs serves neither. I split by need, then design what the segments share.",
-    proof: "Simple templates for small sellers, a code editor with AI assist for enterprise, one document system underneath.",
-  },
-  {
-    title: "Put AI where someone can stand behind it.",
-    body: "I prototype with real model calls to see where the model fails, then design the hand-off to a person around those failures.",
-    proof: "Conduit flags any field below a confidence threshold, because the officer signs their name to it.",
-  },
+  { value: "~$14M", label: "a year in clinician time at Post Acute Analytics", context: "Clinicians spent 40% less time on document work." },
+  { value: "40%", label: "faster document turnaround at PandaDoc", context: "In a Chrome extension used by 50K+ businesses." },
 ]
 
 // Same three reviews as the homepage (components/testimonials-section.tsx), quoted as given.
@@ -198,8 +174,8 @@ export default function AiPage() {
                 I build AI<AiOrb /> products for complex B2B work.
               </h1>
               <p className="mt-4 md:mt-6 max-w-[540px] text-pretty text-[17px] leading-relaxed text-muted-foreground">
-                From the problem to a working prototype in code, then into real users&apos; hands. 12 years in tech across
-                product, growth and marketing, ex-Amazon.
+                I start with the problem, build a working prototype in code and get it into real users&apos; hands. 12
+                years in tech across product, growth and marketing, most recently at Amazon.
               </p>
               <div className="mt-6 md:mt-8 flex flex-wrap gap-3">
                 <a href={MAILTO} className={PILL_SOLID}>
@@ -213,7 +189,7 @@ export default function AiPage() {
                 </a>
               </div>
               <div className="mt-7 md:mt-10">
-                <p className={`${EYEBROW} mb-2`}>Products for</p>
+                <p className={`${EYEBROW} mb-2`}>I&apos;ve built products for</p>
                 <ul className="flex flex-wrap gap-y-1 text-[15px] text-foreground [&>li:not(:last-child)]:after:content-['·'] [&>li:not(:last-child)]:after:mx-2.5 [&>li:not(:last-child)]:after:text-muted-foreground">
                   {CLIENTS.map((c) => (
                     <li key={c}>{c}</li>
@@ -254,15 +230,15 @@ export default function AiPage() {
                 fields to extract, and which form they fill.
               </p>
               <div className="pt-2">
-                <h3 className={LABEL}>Two decisions that shaped it</h3>
+                <h3 className={LABEL}>Two decisions I made</h3>
                 <ul className={BULLETS}>
                   <li>
-                    <strong className="font-medium">No pass/fail rules engine.</strong> Every importer checks documents
-                    against their own policy, so the importer decides what to check, not Conduit.
+                    <strong className="font-medium">No pass/fail rules engine.</strong> Importers already check documents
+                    against their own policies, so they decide what to check.
                   </li>
                   <li>
-                    <strong className="font-medium">Confidence on every field.</strong> Any value below the threshold is
-                    flagged for a person to confirm, because the officer signs their name to it.
+                    <strong className="font-medium">Confidence on every field.</strong> Conduit flags any value below the
+                    threshold for a person to confirm, because the officer signs their name to it.
                   </li>
                 </ul>
               </div>
@@ -312,43 +288,43 @@ export default function AiPage() {
               <h3 className={LABEL}>What I found</h3>
               <p>
                 Two segments with opposite needs. For enterprise sellers, documents are infrastructure: years of custom
-                layouts with business logic built in. Small sellers just need them to work. Competitors offered either
-                rigid templates or full code editors, nothing in between.
+                layouts with business logic built in. Small sellers just need them to work. Competitors offered rigid
+                templates or a full code editor, and nobody served the sellers in the middle.
               </p>
             </div>
             <div>
               <h3 className={LABEL}>What I built</h3>
               <p>
-                Split the product by need: category-aware templates with simple toggles for small sellers, and an HTML
-                editor with AI assist and pre-coded base templates for complex sellers. Brands attach to each document,
-                so a seller running 5 to 10 brands sees which version applies where, and picks a version right in the
-                print flow.
+                I split the product by need. Small sellers got category-aware templates with simple toggles. Complex
+                sellers got an HTML editor with AI assist and pre-coded base templates. Brands attach to each document,
+                so a seller running 5 to 10 brands can see which version applies where and pick one in the print flow.
               </p>
             </div>
             <div className="lg:col-span-2">
               <h3 className={LABEL}>Key decisions</h3>
               <ul className={BULLETS}>
                 <li>
-                  <strong className="font-medium">Cut drag and drop.</strong> Too expensive with our engineering team, and
-                  too limited for enterprise.
+                  <strong className="font-medium">Cut drag and drop.</strong> It would have taken too much of our
+                  engineering time and still been too limited for enterprise sellers.
                 </li>
                 <li>
-                  <strong className="font-medium">Hand-porting over a migration tool.</strong> Automation would take 4
-                  months; porting enterprise templates by hand took 2 weeks. I made the case for the manual path to the VP of Product and the tech leads: we hit the
-                  deadline, kept every top account and switched the vendor off 3 months earlier.
+                  <strong className="font-medium">Hand-porting over a migration tool.</strong> Building the tool would
+                  have taken 4 months, and porting the enterprise templates by hand took 2 weeks. I made the case for it
+                  to the VP of Product and the tech leads. We hit the deadline, kept every top account and switched the
+                  vendor off 3 months early.
                 </li>
                 <li>
-                  <strong className="font-medium">AI for non-coders.</strong> A ready-made prompt sellers give any AI tool
-                  to write a working template, so they could migrate without hands-on support.
+                  <strong className="font-medium">AI for non-coders.</strong> We gave sellers a ready-made prompt to paste
+                  into any AI tool and get a working template back, so they could migrate without hands-on help from us.
                 </li>
               </ul>
             </div>
             <div>
               <h3 className={LABEL}>Result</h3>
               <p>
-                Vendor switched off without losing a single top-tier account. $2.3M a year saved, 50K+ sellers migrated,
-                $15B+ in annual GMV protected from interruption, new documents set up in minutes instead of months, 30%
-                fewer support tickets.
+                We switched the vendor off without losing a single top-tier account. That saved $2.3M a year and kept
+                $15B+ in annual GMV moving without interruption. 50K+ sellers migrated, support tickets fell by 30%, and
+                setting up a new document now takes minutes instead of months.
               </p>
               <div className="mt-5 flex flex-wrap items-center gap-x-3 gap-y-2">
                 <a href={LINKS.caseStudy} className={PILL_GLASS}>
@@ -364,7 +340,7 @@ export default function AiPage() {
         {/* More results */}
         <section aria-labelledby="more-title" className={`${CONTAINER} pt-10 pb-10 md:pt-16 md:pb-16 border-t border-border/40`}>
           <h2 id="more-title" className={`${EYEBROW} mb-6`}>
-            More shipped results
+            Other results
           </h2>
           <dl className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6 max-w-[880px]">
             {MORE_RESULTS.map((m) => (
@@ -409,31 +385,6 @@ export default function AiPage() {
               </li>
             ))}
           </ul>
-        </section>
-
-        {/* How I work */}
-        <section aria-labelledby="how-title" className={`${CONTAINER} pt-10 pb-10 md:pt-16 md:pb-16 border-t border-border/40`}>
-          <h2 id="how-title" className={`${H2} mb-2`}>
-            How I make product calls
-          </h2>
-          <p className="mb-8 md:mb-10 max-w-[540px] text-base leading-relaxed text-muted-foreground">
-            Four calls I make on every product, and where I made them.
-          </p>
-          <ol className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 md:gap-y-10">
-            {PRINCIPLES.map((p, i) => (
-              <li key={p.title} className="border-t border-border/60 pt-4">
-                <span aria-hidden="true" className="block font-mono text-[13px] text-muted-foreground mb-2">
-                  0{i + 1}
-                </span>
-                <h3 className="font-serif text-[20px] leading-[1.25] tracking-tight mb-2 text-balance">{p.title}</h3>
-                <p className="text-base leading-relaxed text-foreground">{p.body}</p>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  <span className="font-mono text-[12px] uppercase tracking-wide mr-1.5">Proof</span>
-                  {p.proof}
-                </p>
-              </li>
-            ))}
-          </ol>
         </section>
 
         {/* Background */}
