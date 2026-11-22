@@ -69,6 +69,11 @@ const NUMBERS = [
   { value: "30%", label: "fewer support tickets" },
 ]
 
+const AI_NUMBERS = [
+  { value: "~80%", label: "faster to pick a shipping label" },
+  { value: "Over half", label: "of sellers who saw an insight acted on it" },
+]
+
 const MORE_RESULTS = [
   { value: "~$14M", label: "a year in clinician time at Post Acute Analytics", context: "Clinicians spent 40% less time on document work." },
   { value: "40%", label: "faster document turnaround at PandaDoc", context: "In a Chrome extension used by 50K+ businesses." },
@@ -246,8 +251,94 @@ export default function AiPage() {
           </div>
         </section>
 
+        {/* Case study: Veeqo AI (kept vague on purpose: NDA, no screenshots, rounded numbers) */}
+        <section id="work" aria-labelledby="ai-title" className={`${CONTAINER} pt-10 pb-10 md:pt-16 md:pb-16 border-t border-border/40 scroll-mt-20`}>
+          <div className="flex flex-wrap gap-2 mb-3">
+            <span className={TAG}>Amazon (Veeqo)</span>
+          </div>
+          <h2 id="ai-title" className={H2}>
+            Bringing AI into Veeqo with no PM on the team
+          </h2>
+          <ul aria-label="Project details" className="mt-3 flex flex-wrap text-[15px] text-muted-foreground [&>li:not(:last-child)]:after:content-['·'] [&>li:not(:last-child)]:after:mx-2">
+            <li>Product designer, owning the product calls</li>
+            <li>6 months</li>
+            <li>2025 to 2026</li>
+          </ul>
+
+          <dl className="mt-6 md:mt-8 grid grid-cols-2 gap-x-6 gap-y-5 md:gap-x-8 max-w-[660px]">
+            {AI_NUMBERS.map((n) => (
+              <div key={n.label} className="flex flex-col-reverse justify-end">
+                <dt className="mt-2 text-sm text-muted-foreground">{n.label}</dt>
+                <dd className={`${STAT_VALUE} text-[2.25rem] md:text-[2.75rem]`}>{n.value}</dd>
+              </div>
+            ))}
+          </dl>
+
+          <div className="mt-10 md:mt-14 max-w-[660px] space-y-8 md:space-y-10">
+            <div>
+              <h3 className={H3}>The problem</h3>
+              <div className={READ}>
+                <p>
+                  Sellers had stopped using Veeqo&apos;s analytics. The product showed plenty of data but never said what to
+                  do next, so people built their own spreadsheets instead.
+                </p>
+                <p>
+                  I was brought in to explore where AI could help, with no problem statement and no scope. There was no PM,
+                  so deciding what to build fell to me.
+                </p>
+              </div>
+            </div>
+            <div>
+              <h3 className={H3}>How I chose what to build</h3>
+              <div className={READ}>
+                <p>
+                  I mapped a seller&apos;s day and scored every place AI could step in on four things: how often sellers
+                  would use it, whether it would keep them on the platform, whether we could build it on data we already
+                  had, and whether competitors offered it.
+                </p>
+                <p>
+                  Setup automation looked good at first, but sellers only do it once, so I cut it. Two areas won: picking
+                  a shipping rate, which sellers do on every order, and insights built on order and inventory data that
+                  competitors didn&apos;t have.
+                </p>
+              </div>
+            </div>
+            <div>
+              <h3 className={H3}>What I decided</h3>
+              <div className={READ}>
+                <p>
+                  I set the North Star metric and got engineering and product leadership behind a phased rollout, with
+                  quick wins first.
+                </p>
+                <p>
+                  Veeqo&apos;s page templates were rigid. Instead of waiting for a refactor, we put AI in a drawer that
+                  opens on top of any page, which shipped faster than changing pages one by one.
+                </p>
+                <p>
+                  With data science, I set a confidence threshold. Below it, the product hides a suggestion rather than
+                  show a weak one. Every suggestion also shows its reasoning, because sellers act on what they can check.
+                </p>
+              </div>
+            </div>
+            <div>
+              <h3 className={H3}>Result</h3>
+              <div className={READ}>
+                <p>
+                  In the pilot, sellers picked a shipping label about 80% faster, and over half of the sellers who saw an
+                  insight acted on it. That earned the AI work a long-term mandate.
+                </p>
+                <p>
+                  I also ran workshops for the design and product teams on how people learn to trust AI, so the next
+                  features could reuse the same patterns.
+                </p>
+              </div>
+              <p className="mt-6 text-sm text-muted-foreground">Details and screens available in an interview.</p>
+            </div>
+          </div>
+        </section>
+
         {/* Case study */}
-        <section id="work" aria-labelledby="work-title" className={`${CONTAINER} pt-10 pb-10 md:pt-16 md:pb-16 border-t border-border/40 scroll-mt-20`}>
+        <section id="work-docs" aria-labelledby="work-title" className={`${CONTAINER} pt-10 pb-10 md:pt-16 md:pb-16 border-t border-border/40 scroll-mt-20`}>
           <div className="flex flex-wrap gap-2 mb-3">
             <span className={TAG}>Amazon (Veeqo)</span>
           </div>
