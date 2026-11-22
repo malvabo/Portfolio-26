@@ -74,6 +74,30 @@ const MORE_RESULTS = [
   { value: "40%", label: "faster document turnaround", context: "PandaDoc, Chrome extension used by 50K+ businesses" },
 ]
 
+// Each principle is backed by a decision already on this page.
+const PRINCIPLES = [
+  {
+    title: "Cut scope before adding it.",
+    body: "Most risk sits in what a team agrees to build. I find the feature that costs the most and serves the fewest users, and remove it first.",
+    proof: "Veeqo: cut drag and drop. Conduit: no rules engine, so each importer keeps their own policy.",
+  },
+  {
+    title: "Pick the path with the least to lose.",
+    body: "When a deadline carries revenue, I compare options by what the business could lose, then commit and defend the call.",
+    proof: "Hand-ported enterprise templates in 2 weeks instead of building a 4-month migration tool. Vendor off 3 months early, 0% enterprise churn.",
+  },
+  {
+    title: "Segment before solving.",
+    body: "One product for users with opposite needs serves neither. I split by need, then design what the segments share.",
+    proof: "Simple templates for small sellers, a code editor with AI assist for enterprise, one document system underneath.",
+  },
+  {
+    title: "Put AI where someone can stand behind it.",
+    body: "I prototype with real model calls to see where the model fails, then design the hand-off to a person around those failures.",
+    proof: "Conduit flags any field below a confidence threshold, because the officer signs their name to it.",
+  },
+]
+
 const CLIENTS = ["Amazon", "PandaDoc", "Post Acute Analytics", "CVS Pharmacy"]
 
 /* Shared classes, lifted from the homepage components */
@@ -358,21 +382,24 @@ export default function AiPage() {
 
         {/* How I work */}
         <section aria-labelledby="how-title" className={`${CONTAINER} pt-10 pb-10 md:pt-16 md:pb-16 border-t border-border/40`}>
-          <h2 id="how-title" className={`${H2} mb-6 md:mb-8`}>
-            How I work
+          <h2 id="how-title" className={`${H2} mb-2`}>
+            How I make product calls
           </h2>
-          <ol className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-12">
-            {[
-              ["Find the real problem", "Users and data before deciding what to build."],
-              ["Build it in code", "Working prototypes with real model calls, so decisions rest on real behaviour."],
-              ["Measure and ship", "Define success, test it, get it adopted."],
-            ].map(([title, body], i) => (
-              <li key={title}>
+          <p className="mb-8 md:mb-10 max-w-[540px] text-base leading-relaxed text-muted-foreground">
+            Four calls I make on every product, and where I made them.
+          </p>
+          <ol className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8 md:gap-y-10">
+            {PRINCIPLES.map((p, i) => (
+              <li key={p.title} className="border-t border-border/60 pt-4">
                 <span aria-hidden="true" className="block font-mono text-[13px] text-muted-foreground mb-2">
                   0{i + 1}
                 </span>
-                <h3 className="font-serif text-[20px] leading-[1.2] tracking-tight mb-1.5">{title}</h3>
-                <p className="text-base leading-relaxed text-muted-foreground">{body}</p>
+                <h3 className="font-serif text-[20px] leading-[1.25] tracking-tight mb-2 text-balance">{p.title}</h3>
+                <p className="text-base leading-relaxed text-foreground">{p.body}</p>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                  <span className="font-mono text-[12px] uppercase tracking-wide mr-1.5">Proof</span>
+                  {p.proof}
+                </p>
               </li>
             ))}
           </ol>
