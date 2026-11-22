@@ -105,6 +105,8 @@ const EYEBROW = "text-sm text-muted-foreground"
 const LABEL = "text-sm font-medium mb-1.5 text-muted-foreground"
 const TAG = "inline-block px-2.5 py-0.5 text-[13px] rounded-md bg-[#E8E3DD] text-[#6B5D4F]"
 const H2 = "font-serif text-[22px] md:text-[26px] leading-[1.15] tracking-tight text-foreground text-balance"
+const H3 = "font-serif text-[19px] md:text-[21px] leading-snug tracking-tight text-foreground mb-2.5"
+const READ = "space-y-4 text-base md:text-[17px] leading-[1.7] text-foreground"
 const STAT_VALUE = "font-serif tracking-[-0.02em] leading-none text-[#3D3D3D]"
 const PILL_GLASS = `inline-flex items-center justify-center gap-2 min-h-11 px-5 text-sm font-medium rounded-full bg-white/40 backdrop-blur-md border border-gray-300/70 text-foreground hover:bg-white/60 hover:border-gray-400/70 transition-all duration-300 shadow-sm hover:shadow-md ${FOCUS}`
 const PILL_SOLID = `inline-flex items-center justify-center gap-2 min-h-11 px-5 text-sm font-medium rounded-full bg-foreground text-background hover:opacity-80 transition-opacity ${FOCUS}`
@@ -219,7 +221,7 @@ export default function AiPage() {
               )}
             </div>
 
-            <div className="text-base leading-relaxed text-foreground space-y-3.5">
+            <div className="space-y-4 text-base md:text-[17px] leading-[1.7] text-foreground">
               <p>
                 Food importers retype details from every supplier certificate into compliance forms. One wrong weight or
                 missing certificate number holds a shipment at the border.
@@ -238,7 +240,7 @@ export default function AiPage() {
               </p>
               <div className="pt-2">
                 <h3 className={LABEL}>Built with</h3>
-                <p className="text-[15px] text-muted-foreground">{BUILT_WITH}</p>
+                <p className="text-[15px] leading-relaxed text-foreground/80">{BUILT_WITH}</p>
               </div>
             </div>
           </div>
@@ -268,34 +270,47 @@ export default function AiPage() {
             ))}
           </dl>
 
-          <div className="mt-10 md:mt-14 grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 text-base leading-relaxed">
+          <div className="mt-10 md:mt-14 max-w-[660px] space-y-8 md:space-y-10">
             <div>
-              <h3 className={LABEL}>The problem</h3>
-              <p>
-                Veeqo, Amazon&apos;s multi-channel shipping platform, printed every UK seller&apos;s documents through a
-                third-party editor that couldn&apos;t be extended. Moving UK sellers onto the US product without a real
-                replacement put the biggest accounts at risk.
-              </p>
+              <h3 className={H3}>The problem</h3>
+              <div className={READ}>
+                <p>
+                  Veeqo is Amazon&apos;s multi-channel shipping platform. Every UK seller printed their documents through a
+                  third-party editor that we couldn&apos;t extend.
+                </p>
+                <p>
+                  Moving UK sellers onto the US product without a real replacement would have put the biggest accounts at
+                  risk.
+                </p>
+              </div>
             </div>
             <div>
-              <h3 className={LABEL}>What I found</h3>
-              <p>
-                Sellers fell into two groups with opposite needs. For enterprise sellers, documents are infrastructure: years of custom
-                layouts with business logic built in. Small sellers just need them to work. Competitors offered rigid
-                templates or a full code editor, and nobody served the sellers in the middle.
-              </p>
+              <h3 className={H3}>What I found</h3>
+              <div className={READ}>
+                <p>
+                  Sellers fell into two groups with opposite needs. For enterprise sellers, documents are
+                  infrastructure: years of custom layouts with business logic built in. Small sellers just need them to
+                  work.
+                </p>
+                <p>Competitors offered rigid templates or a full code editor, and nobody served the sellers in the middle.</p>
+              </div>
             </div>
             <div>
-              <h3 className={LABEL}>What I built</h3>
-              <p>
-                I split the product by need. Small sellers got category-aware templates with simple toggles. Complex
-                sellers got an HTML editor with AI assist and pre-coded base templates. Brands attach to each document,
-                so a seller running 5 to 10 brands can see which version applies where and pick one in the print flow.
-              </p>
+              <h3 className={H3}>What I built</h3>
+              <div className={READ}>
+                <p>
+                  I split the product by need. Small sellers got category-aware templates with simple toggles. Complex
+                  sellers got an HTML editor with AI assist and pre-coded base templates.
+                </p>
+                <p>
+                  Brands attach to each document. A seller running 5 to 10 brands can see which version applies where and
+                  pick one in the print flow.
+                </p>
+              </div>
             </div>
-            <div className="lg:col-span-2">
-              <h3 className={LABEL}>What I decided</h3>
-              <div className="space-y-3">
+            <div>
+              <h3 className={H3}>What I decided</h3>
+              <div className={READ}>
                 <p>
                   I cut drag and drop. It would have taken too much of our engineering time and still been too limited
                   for enterprise sellers.
@@ -312,13 +327,18 @@ export default function AiPage() {
               </div>
             </div>
             <div>
-              <h3 className={LABEL}>Result</h3>
-              <p>
-                We switched the vendor off without losing a single top-tier account. That saved $2.3M a year and kept
-                $15B+ in annual GMV moving without interruption. 50K+ sellers migrated, support tickets fell by 30%, and
-                setting up a new document now takes minutes instead of months.
-              </p>
-              <div className="mt-5 flex flex-wrap items-center gap-x-3 gap-y-2">
+              <h3 className={H3}>Result</h3>
+              <div className={READ}>
+                <p>
+                  We switched the vendor off without losing a single top-tier account. That saved $2.3M a year and kept
+                  $15B+ in annual GMV moving without interruption.
+                </p>
+                <p>
+                  50K+ sellers migrated and support tickets fell by 30%. Setting up a new document now takes minutes
+                  instead of months.
+                </p>
+              </div>
+              <div className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-2">
                 <a href={LINKS.caseStudy} className={PILL_GLASS}>
                   Full case study
                   <Arrow />
@@ -331,7 +351,7 @@ export default function AiPage() {
 
         {/* More results */}
         <section aria-labelledby="more-title" className={`${CONTAINER} pt-10 pb-10 md:pt-16 md:pb-16 border-t border-border/40`}>
-          <h2 id="more-title" className={`${EYEBROW} mb-6`}>
+          <h2 id="more-title" className={`${H2} mb-6`}>
             Other results
           </h2>
           <dl className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6 max-w-[880px]">
