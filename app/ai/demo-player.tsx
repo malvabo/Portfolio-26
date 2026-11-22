@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import styles from "./ai.module.css"
 
 export type Chapter = { src: string; poster: string; title: string; caption: string }
 
@@ -108,8 +107,8 @@ export function DemoPlayer({ chapters, label }: { chapters: Chapter[]; label: st
   const current = chapters[index]
 
   return (
-    <figure className={styles.player} aria-label={label}>
-      <div ref={wrapRef} className={styles.video}>
+    <figure className="m-0" aria-label={label}>
+      <div ref={wrapRef} className="relative aspect-[1280/802] overflow-hidden rounded-lg border border-gray-200 bg-[#ebecf3]">
         <video
           ref={videoRef}
           src={current.src}
@@ -117,6 +116,7 @@ export function DemoPlayer({ chapters, label }: { chapters: Chapter[]; label: st
           muted
           playsInline
           preload="none"
+          className="absolute inset-0 h-full w-full object-contain"
           onEnded={onEnded}
           onTimeUpdate={onTime}
           onPause={() => setPlaying(false)}
@@ -125,7 +125,7 @@ export function DemoPlayer({ chapters, label }: { chapters: Chapter[]; label: st
         />
         <button
           type="button"
-          className={styles.playToggle}
+          className="absolute right-2.5 bottom-2.5 inline-flex items-center gap-1.5 min-h-9 px-3 rounded-full bg-[rgba(20,20,20,0.82)] text-white text-sm hover:bg-[rgba(20,20,20,0.95)] cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
           onClick={toggle}
           aria-label={finished ? "Replay demo" : playing ? "Pause demo" : "Play demo"}
         >
@@ -142,28 +142,28 @@ export function DemoPlayer({ chapters, label }: { chapters: Chapter[]; label: st
         </button>
       </div>
 
-      <ol className={styles.chapters}>
+      <ol className="mt-3 grid grid-cols-2 gap-3">
         {chapters.map((c, i) => (
           <li key={c.src}>
             <button
               type="button"
-              className={styles.chapter}
+              className={`grid w-full grid-cols-[auto_1fr] gap-x-2 gap-y-0.5 pb-1 text-left text-[15px] cursor-pointer rounded ${i === index ? "text-foreground" : "text-muted-foreground hover:text-foreground"} focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground`}
               aria-current={i === index ? "step" : undefined}
               onClick={() => {
                 userPaused.current = false
                 goTo(i)
               }}
             >
-              <span className={styles.chapterBar} aria-hidden="true">
-                <span style={{ transform: `scaleX(${progress[i]})` }} />
+              <span className="col-span-full mb-2 block h-[3px] overflow-hidden rounded-sm bg-[#E8E3DD]" aria-hidden="true">
+                <span className="block h-full origin-left bg-foreground transition-transform duration-200 ease-linear" style={{ transform: `scaleX(${progress[i]})` }} />
               </span>
-              <span className={styles.chapterNum}>{String(i + 1).padStart(2, "0")}</span>
-              <span className={styles.chapterTitle}>{c.title}</span>
+              <span className="font-mono text-[13px] text-muted-foreground pt-px">{String(i + 1).padStart(2, "0")}</span>
+              <span className="font-medium">{c.title}</span>
             </button>
           </li>
         ))}
       </ol>
-      <figcaption className={styles.chapterCaption} aria-live="polite">
+      <figcaption className="hidden md:block mt-2 min-h-[3em] text-sm text-muted-foreground" aria-live="polite">
         {current.caption}
       </figcaption>
     </figure>
