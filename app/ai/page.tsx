@@ -101,14 +101,13 @@ const CLIENTS = ["Amazon", "PandaDoc", "Post Acute Analytics", "CVS Pharmacy"]
 /* Shared classes, lifted from the homepage components */
 const CONTAINER = "container mx-auto px-6 md:px-8 lg:px-12 max-w-7xl"
 const FOCUS = "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
-const EYEBROW = "uppercase text-[13px] font-mono tracking-wide text-muted-foreground"
-const LABEL = "text-xs font-normal mb-2 uppercase tracking-wide text-muted-foreground"
-const TAG = "inline-block px-2.5 py-0.5 text-[11px] font-mono uppercase tracking-normal rounded-md bg-[#E8E3DD] text-[#6B5D4F]"
+const EYEBROW = "text-sm text-muted-foreground"
+const LABEL = "text-sm font-medium mb-1.5 text-muted-foreground"
+const TAG = "inline-block px-2.5 py-0.5 text-[13px] rounded-md bg-[#E8E3DD] text-[#6B5D4F]"
 const H2 = "font-serif text-[22px] md:text-[26px] leading-[1.15] tracking-tight text-foreground text-balance"
 const STAT_VALUE = "font-serif tracking-[-0.02em] leading-none text-[#3D3D3D]"
 const PILL_GLASS = `inline-flex items-center justify-center gap-2 min-h-11 px-5 text-sm font-medium rounded-full bg-white/40 backdrop-blur-md border border-gray-300/70 text-foreground hover:bg-white/60 hover:border-gray-400/70 transition-all duration-300 shadow-sm hover:shadow-md ${FOCUS}`
 const PILL_SOLID = `inline-flex items-center justify-center gap-2 min-h-11 px-5 text-sm font-medium rounded-full bg-foreground text-background hover:opacity-80 transition-opacity ${FOCUS}`
-const BULLETS = "space-y-2.5 [&>li]:relative [&>li]:pl-4 [&>li]:before:absolute [&>li]:before:left-0 [&>li]:before:top-[0.7em] [&>li]:before:h-px [&>li]:before:w-2 [&>li]:before:bg-foreground/60"
 const TEXT_LINK = `underline underline-offset-4 decoration-border hover:text-foreground hover:decoration-foreground ${FOCUS}`
 
 const Arrow = () => (
@@ -229,19 +228,14 @@ export default function AiPage() {
                 Conduit reads supplier documents and fills in the forms. Each importer sets up their own pipeline: which
                 fields to extract, and which form they fill.
               </p>
-              <div className="pt-2">
-                <h3 className={LABEL}>Two decisions I made</h3>
-                <ul className={BULLETS}>
-                  <li>
-                    <strong className="font-medium">No pass/fail rules engine.</strong> Importers already check documents
-                    against their own policies, so they decide what to check.
-                  </li>
-                  <li>
-                    <strong className="font-medium">Confidence on every field.</strong> Conduit flags any value below the
-                    threshold for a person to confirm, because the officer signs their name to it.
-                  </li>
-                </ul>
-              </div>
+              <p>
+                I left out a pass/fail rules engine. Importers already check documents against their own policies, so
+                they decide what to check.
+              </p>
+              <p>
+                Every field gets a confidence score, and anything below the threshold goes to a person to confirm. The
+                officer signs their name to the form, so they need to know which values to double-check.
+              </p>
               <div className="pt-2">
                 <h3 className={LABEL}>Built with</h3>
                 <p className="text-[15px] text-muted-foreground">{BUILT_WITH}</p>
@@ -253,7 +247,6 @@ export default function AiPage() {
         {/* Case study */}
         <section id="work" aria-labelledby="work-title" className={`${CONTAINER} pt-10 pb-10 md:pt-16 md:pb-16 border-t border-border/40 scroll-mt-20`}>
           <div className="flex flex-wrap gap-2 mb-3">
-            <span className={TAG}>Big tech</span>
             <span className={TAG}>Amazon (Veeqo)</span>
           </div>
           <h2 id="work-title" className={H2}>
@@ -287,7 +280,7 @@ export default function AiPage() {
             <div>
               <h3 className={LABEL}>What I found</h3>
               <p>
-                Two segments with opposite needs. For enterprise sellers, documents are infrastructure: years of custom
+                Sellers fell into two groups with opposite needs. For enterprise sellers, documents are infrastructure: years of custom
                 layouts with business logic built in. Small sellers just need them to work. Competitors offered rigid
                 templates or a full code editor, and nobody served the sellers in the middle.
               </p>
@@ -301,23 +294,22 @@ export default function AiPage() {
               </p>
             </div>
             <div className="lg:col-span-2">
-              <h3 className={LABEL}>Key decisions</h3>
-              <ul className={BULLETS}>
-                <li>
-                  <strong className="font-medium">Cut drag and drop.</strong> It would have taken too much of our
-                  engineering time and still been too limited for enterprise sellers.
-                </li>
-                <li>
-                  <strong className="font-medium">Hand-porting over a migration tool.</strong> Building the tool would
-                  have taken 4 months, and porting the enterprise templates by hand took 2 weeks. I made the case for it
-                  to the VP of Product and the tech leads. We hit the deadline, kept every top account and switched the
-                  vendor off 3 months early.
-                </li>
-                <li>
-                  <strong className="font-medium">AI for non-coders.</strong> We gave sellers a ready-made prompt to paste
-                  into any AI tool and get a working template back, so they could migrate without hands-on help from us.
-                </li>
-              </ul>
+              <h3 className={LABEL}>What I decided</h3>
+              <div className="space-y-3">
+                <p>
+                  I cut drag and drop. It would have taken too much of our engineering time and still been too limited
+                  for enterprise sellers.
+                </p>
+                <p>
+                  We could build a migration tool in 4 months or port the enterprise templates by hand in 2 weeks. I made
+                  the case for porting by hand to the VP of Product and the tech leads. We hit the deadline, kept every
+                  top account and switched the vendor off 3 months early.
+                </p>
+                <p>
+                  For sellers who don&apos;t code, we wrote a ready-made prompt they could paste into any AI tool to get a
+                  working template back. They migrated without hands-on help from us.
+                </p>
+              </div>
             </div>
             <div>
               <h3 className={LABEL}>Result</h3>
