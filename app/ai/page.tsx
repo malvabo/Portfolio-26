@@ -30,7 +30,7 @@ const BUILT_WITH = "[Claude Code, model/API, front-end stack]"
 export const metadata: Metadata = {
   title: "Mary Borysova – I build AI products for complex B2B work",
   description:
-    "Product builder in London. From the problem to a working prototype in code, then into real users' hands. 12 years in tech, ex-Amazon.",
+    "Product manager in London. From the problem to a working prototype in code, then into real users' hands. 12 years in tech, ex-Amazon.",
   alternates: { canonical: "/ai" },
   openGraph: {
     title: "Mary Borysova – I build AI products for complex B2B work",
@@ -84,7 +84,7 @@ const PRINCIPLES = [
   {
     title: "Pick the path with the least to lose.",
     body: "When a deadline carries revenue, I compare options by what the business could lose, then commit and defend the call.",
-    proof: "Hand-ported enterprise templates in 2 weeks instead of building a 4-month migration tool. Vendor off 3 months early, 0% enterprise churn.",
+    proof: "Won the VP of Product and tech leads over to hand-porting enterprise templates in 2 weeks instead of a 4-month migration tool. Vendor off 3 months early, 0% enterprise churn.",
   },
   {
     title: "Segment before solving.",
@@ -95,6 +95,28 @@ const PRINCIPLES = [
     title: "Put AI where someone can stand behind it.",
     body: "I prototype with real model calls to see where the model fails, then design the hand-off to a person around those failures.",
     proof: "Conduit flags any field below a confidence threshold, because the officer signs their name to it.",
+  },
+]
+
+// Same three reviews as the homepage (components/testimonials-section.tsx), quoted as given.
+const REVIEWS = [
+  {
+    text: "I've worked under the leadership of Maria. Her superb communication skills, leadership qualities, enthusiastic personality are the reasons why I recommend her strongly.",
+    author: "Kateryna Lezhukh",
+    role: "Founder at Quema",
+    avatar: "/images/kateryna-lezhukh.png",
+  },
+  {
+    text: "Immerses themselves entirely in the project to drive it to completion. Works to reduce uncertainty for everyone else to understand user needs.",
+    author: "Konstantin Valiotti",
+    role: "Director of Product at PandaDoc",
+    avatar: "https://framerusercontent.com/images/78dofovJbAtympTLqZLY1jA24.jpeg?scale-down-to=512&width=800&height=800",
+  },
+  {
+    text: "She questions the status quo and asks the tough questions that push the team to build with purpose.",
+    author: "Carla Ruiz Entrecanales",
+    role: "Venture Builder at ColdStart",
+    avatar: "https://framerusercontent.com/images/Hd1E2e8ZG1g4zNUsGWNhHe5seg.jpeg?width=387&height=387",
   },
 ]
 
@@ -171,6 +193,7 @@ export default function AiPage() {
                 priority
                 className="mb-4 md:mb-5 h-14 w-14 md:h-20 md:w-20 rounded-xl object-cover"
               />
+              <p className={`${EYEBROW} mb-2`}>Product manager · London</p>
               <h1 id="hero-title" className="font-serif text-[1.75rem] md:text-[2rem] leading-[1.15] font-normal tracking-[-0.02em] text-foreground text-balance">
                 I build AI<AiOrb /> products for complex B2B work.
               </h1>
@@ -311,7 +334,7 @@ export default function AiPage() {
                 </li>
                 <li>
                   <strong className="font-medium">Hand-porting over a migration tool.</strong> Automation would take 4
-                  months; porting enterprise templates by hand took 2 weeks. I pushed for the manual path: we hit the
+                  months; porting enterprise templates by hand took 2 weeks. I made the case for the manual path to the VP of Product and the tech leads: we hit the
                   deadline, kept every top account and switched the vendor off 3 months earlier.
                 </li>
                 <li>
@@ -343,41 +366,49 @@ export default function AiPage() {
           <h2 id="more-title" className={`${EYEBROW} mb-6`}>
             More shipped results
           </h2>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
-            <dl className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6">
-              {MORE_RESULTS.map((m) => (
-                <div key={m.value} className="flex flex-col-reverse justify-end">
-                  <dt className="mt-2 text-sm text-muted-foreground">
-                    <span className="text-foreground">{m.label}</span>
-                    <br />
-                    {m.context}
-                  </dt>
-                  <dd className={`${STAT_VALUE} text-[1.75rem] md:text-[2rem]`}>{m.value}</dd>
-                </div>
-              ))}
-            </dl>
-            <figure className="bg-[#f1f1f1] rounded-xl p-5 flex flex-col">
-              <blockquote className="flex-grow">
-                <p className="text-base leading-relaxed text-foreground/80">
-                  &ldquo;Immerses themselves entirely in the project to drive it to completion. Works to reduce
-                  uncertainty for everyone else to understand user needs.&rdquo;
-                </p>
-              </blockquote>
-              <figcaption className="flex items-center gap-3 pt-3 mt-3 border-t border-border/30">
-                <Image
-                  src="https://framerusercontent.com/images/78dofovJbAtympTLqZLY1jA24.jpeg?scale-down-to=512&width=800&height=800"
-                  alt=""
-                  width={40}
-                  height={40}
-                  className="w-10 h-10 rounded-full object-cover ring-2 ring-white shadow-sm"
-                />
-                <div>
-                  <p className="text-sm font-semibold text-foreground">Konstantin Valiotti</p>
-                  <p className="text-xs font-medium text-muted-foreground mt-0.5">Director of Product at PandaDoc</p>
-                </div>
-              </figcaption>
-            </figure>
-          </div>
+          <dl className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6 max-w-[880px]">
+            {MORE_RESULTS.map((m) => (
+              <div key={m.value} className="flex flex-col-reverse justify-end">
+                <dt className="mt-2 text-sm text-muted-foreground">
+                  <span className="text-foreground">{m.label}</span>
+                  <br />
+                  {m.context}
+                </dt>
+                <dd className={`${STAT_VALUE} text-[1.75rem] md:text-[2rem]`}>{m.value}</dd>
+              </div>
+            ))}
+          </dl>
+        </section>
+
+        {/* Reviews: same cards as the homepage */}
+        <section aria-labelledby="reviews-title" className={`${CONTAINER} pt-10 pb-10 md:pt-16 md:pb-16 border-t border-border/40`}>
+          <h2 id="reviews-title" className={`${H2} mb-6 md:mb-8`}>
+            What the people I&apos;ve worked with say
+          </h2>
+          <ul className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {REVIEWS.map((r) => (
+              <li key={r.author}>
+                <figure className="bg-[#f1f1f1] rounded-xl p-5 h-full flex flex-col">
+                  <blockquote className="flex-grow">
+                    <p className="text-base leading-relaxed text-foreground/80">&ldquo;{r.text}&rdquo;</p>
+                  </blockquote>
+                  <figcaption className="flex items-center gap-3 pt-3 mt-3 border-t border-border/30">
+                    <Image
+                      src={r.avatar}
+                      alt=""
+                      width={40}
+                      height={40}
+                      className="w-10 h-10 rounded-full object-cover ring-2 ring-white shadow-sm"
+                    />
+                    <div>
+                      <p className="text-sm font-semibold text-foreground">{r.author}</p>
+                      <p className="text-xs font-medium text-muted-foreground mt-0.5">{r.role}</p>
+                    </div>
+                  </figcaption>
+                </figure>
+              </li>
+            ))}
+          </ul>
         </section>
 
         {/* How I work */}
