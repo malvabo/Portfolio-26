@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
-import { VideoEmbed } from "./video-embed"
+import Image from "next/image"
+import { DemoPlayer } from "./demo-player"
 import styles from "./ai.module.css"
 
 /* ------------------------------------------------------------------
@@ -7,9 +8,11 @@ import styles from "./ai.module.css"
    this page is shared. Search the file for "TODO".
 ------------------------------------------------------------------- */
 const EMAIL = "borysova.mary@gmail.com"
+const MAILTO = `mailto:${EMAIL}?subject=${encodeURIComponent("Building with AI")}`
+// TODO (recommended): what you're open to, e.g. "Open to founding and lead product roles, London or remote, from January."
+// Leave empty to hide.
+const AVAILABILITY = ""
 const LINKS = {
-  // TODO: Loom or YouTube *embed* URL, e.g. https://www.loom.com/embed/<id>
-  demoVideo: "",
   // TODO (optional): live prototype URL. Leave empty to hide the link.
   prototype: "",
   // TODO: your LinkedIn profile URL
@@ -31,13 +34,13 @@ export const metadata: Metadata = {
     description:
       "From the problem to a working prototype in code, then into real users' hands. $2.3M a year saved at Amazon.",
     url: "/ai",
-    images: [{ url: "/conduit/dash.webp", width: 2000, height: 1131, alt: "Conduit inbox showing supplier documents and their review status" }],
+    images: [{ url: "/ai/og.png", width: 1200, height: 630, alt: "Mary Borysova. I build AI products for complex B2B work. $2.3M a year saved at Amazon." }],
     type: "profile",
   },
   twitter: {
     card: "summary_large_image",
     title: "Mary Borysova – I build AI products for complex B2B work",
-    images: ["/conduit/dash.webp"],
+    images: ["/ai/og.png"],
   },
 }
 
@@ -46,6 +49,26 @@ const NUMBERS = [
   { value: "50K+", label: "sellers migrated" },
   { value: "0%", label: "enterprise churn" },
   { value: "30%", label: "fewer support tickets" },
+]
+
+const CHAPTERS = [
+  {
+    src: "/ai/conduit-extract.mp4",
+    poster: "/ai/conduit-extract.webp",
+    title: "Set up extraction",
+    caption: "Choosing which fields to pull from a document, then checking and correcting what the model found.",
+  },
+  {
+    src: "/ai/conduit-fill.mp4",
+    poster: "/ai/conduit-fill.webp",
+    title: "Fill the form",
+    caption: "Mapping fields straight onto the form, then running it on a real supplier document.",
+  },
+]
+
+const MORE_RESULTS = [
+  { value: "~$14M", label: "a year in clinician time saved", context: "Post Acute Analytics, 40% less time managing document workflows" },
+  { value: "40%", label: "faster document turnaround", context: "PandaDoc, Chrome extension used by 50K+ businesses" },
 ]
 
 const CLIENTS = ["Amazon", "PandaDoc", "Post Acute Analytics", "CVS Pharmacy"]
@@ -60,6 +83,7 @@ export default function AiPage() {
       <header className={styles.header}>
         <div className={styles.headerInner}>
           <a href="#top" className={styles.brand}>
+            <Image src="/images/mary-face.webp" alt="" width={32} height={32} className={styles.face} priority />
             Mary Borysova
           </a>
           <nav aria-label="Sections">
@@ -75,6 +99,7 @@ export default function AiPage() {
       <main id="main">
         {/* Hero */}
         <section id="top" className={`${styles.wrap} ${styles.hero}`} aria-labelledby="hero-title">
+          <p className={styles.role}>Product lead and design engineer · London</p>
           <h1 id="hero-title" className={styles.h1}>
             I build AI products for complex B2B work.
           </h1>
@@ -86,7 +111,7 @@ export default function AiPage() {
             <a href="#demo" className={styles.btnPrimary}>
               See the demo
             </a>
-            <a href={`mailto:${EMAIL}`} className={styles.btnGhost}>
+            <a href={MAILTO} className={styles.btnGhost}>
               Email me
             </a>
           </div>
@@ -107,12 +132,7 @@ export default function AiPage() {
             Conduit: an AI pipeline for customs paperwork
           </h2>
 
-          <VideoEmbed
-            src={LINKS.demoVideo}
-            title="Conduit walkthrough, 2 minutes"
-            poster="/conduit/dash.webp"
-            posterAlt="Conduit inbox: supplier documents grouped by shipment, each marked Clear or Needs review"
-          />
+          <DemoPlayer chapters={CHAPTERS} label="Conduit demo, 54 seconds, no sound" />
           {LINKS.prototype && (
             <p className={styles.afterVideo}>
               <a href={LINKS.prototype} className={styles.textLink} target="_blank" rel="noopener noreferrer">
@@ -230,6 +250,35 @@ export default function AiPage() {
           </div>
         </section>
 
+        {/* More results */}
+        <section className={`${styles.wrap} ${styles.section}`} aria-labelledby="more-title">
+          <h2 id="more-title" className={styles.h2}>
+            More shipped results
+          </h2>
+          <dl className={styles.more}>
+            {MORE_RESULTS.map((m) => (
+              <div key={m.value} className={styles.number}>
+                <dt className={styles.numberLabel}>
+                  {m.label}
+                  <span className={styles.moreContext}>{m.context}</span>
+                </dt>
+                <dd className={styles.numberValue}>{m.value}</dd>
+              </div>
+            ))}
+          </dl>
+          <figure className={styles.quote}>
+            <blockquote>
+              <p>
+                &ldquo;Immerses themselves entirely in the project to drive it to completion. Works to reduce
+                uncertainty for everyone else to understand user needs.&rdquo;
+              </p>
+            </blockquote>
+            <figcaption>
+              Konstantin Valiotti, <span className={styles.muted}>Director of Product at PandaDoc</span>
+            </figcaption>
+          </figure>
+        </section>
+
         {/* How I work */}
         <section className={`${styles.wrap} ${styles.section}`} aria-labelledby="how-title">
           <h2 id="how-title" className={styles.h2}>
@@ -271,12 +320,13 @@ export default function AiPage() {
       <footer id="contact" className={styles.footer}>
         <div className={styles.wrap}>
           <h2 className={styles.footerTitle}>Building something with AI? Let&apos;s talk.</h2>
-          <a href={`mailto:${EMAIL}`} className={styles.btnPrimary}>
+          {AVAILABILITY && <p className={styles.availability}>{AVAILABILITY}</p>}
+          <a href={MAILTO} className={styles.btnPrimary}>
             Email me
           </a>
           <ul className={styles.contactList}>
             <li>
-              <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
+              <a href={MAILTO}>{EMAIL}</a>
             </li>
             <li>
               <a href={LINKS.linkedin} target="_blank" rel="noopener noreferrer">

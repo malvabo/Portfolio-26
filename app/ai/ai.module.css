@@ -68,6 +68,9 @@
   gap: 16px;
 }
 .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   font-family: var(--font-serif), Georgia, serif;
   font-size: 18px;
   letter-spacing: -0.01em;
@@ -179,7 +182,7 @@
   border-color: var(--ink);
 }
 .proof {
-  margin-top: 26px;
+  margin-top: 22px;
   padding-top: 18px;
   border-top: 1px solid var(--line);
 }
@@ -207,12 +210,26 @@
 
 /* ---------- Sections ---------- */
 .section {
-  padding-top: 36px;
-  padding-bottom: 40px;
+  padding-top: 32px;
+  padding-bottom: 36px;
   border-top: 1px solid var(--line);
 }
 #top + .section {
   border-top: 0;
+}
+
+/* Who */
+.role {
+  display: none;
+  margin: 0 0 16px;
+  font-size: 15px;
+  color: var(--muted);
+}
+.face {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  object-fit: cover;
 }
 
 /* Video */
@@ -232,47 +249,96 @@
   height: 100%;
   border: 0;
 }
-.poster {
-  object-fit: cover;
-  object-position: left top;
+.player {
+  margin: 16px 0 0;
 }
-.play {
-  all: unset;
+.player .video {
+  margin-top: 0;
+  aspect-ratio: 1280 / 802;
+  background: #ebecf3;
+}
+.video video {
   position: absolute;
   inset: 0;
-  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
-.play:focus-visible {
-  outline: 3px solid var(--accent);
-  outline-offset: -3px;
-}
-.playBadge,
-.videoSoon {
+.playToggle {
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  right: 10px;
+  bottom: 10px;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 12px 18px;
+  gap: 6px;
+  min-height: 36px;
+  padding: 0 12px;
+  border: 0;
   border-radius: 999px;
+  background: rgba(20, 20, 20, 0.82);
+  color: #fff;
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+.playToggle:hover {
+  background: rgba(20, 20, 20, 0.95);
+}
+.chapters {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+}
+.chapter {
+  all: unset;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2px 8px;
+  width: 100%;
+  padding: 0 0 4px;
+  cursor: pointer;
+  color: var(--muted);
   font-size: 15px;
-  font-weight: 500;
-  white-space: nowrap;
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
 }
-.playBadge {
+.chapter[aria-current] {
+  color: var(--ink);
+}
+.chapterBar {
+  grid-column: 1 / -1;
+  display: block;
+  height: 3px;
+  margin-bottom: 8px;
+  border-radius: 2px;
+  background: var(--line);
+  overflow: hidden;
+}
+.chapterBar span {
+  display: block;
+  height: 100%;
   background: var(--accent);
-  color: var(--accent-ink);
-  transition: transform 0.15s ease;
+  transform-origin: left;
+  transition: transform 0.25s linear;
 }
-.play:hover .playBadge {
-  transform: translate(-50%, -50%) scale(1.04);
+.chapterNum {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+  padding-top: 1px;
 }
-.videoSoon {
-  background: var(--ink);
-  color: var(--bg);
+.chapterTitle {
+  font-weight: 500;
+}
+.chapterCaption {
+  display: none;
+  margin-top: 8px;
+  font-size: 15px;
+  color: var(--muted);
+  min-height: 3em;
 }
 .afterVideo {
   margin: 12px 0 0;
@@ -297,7 +363,7 @@
   margin: 0 0 14px;
 }
 .prose .h3 {
-  margin-top: 20px;
+  margin-top: 16px;
   margin-bottom: 10px;
 }
 .decisions {
@@ -325,7 +391,7 @@
 .small {
   font-size: 15px;
   color: var(--muted);
-  padding-top: 14px;
+  padding-top: 10px;
   border-top: 1px dashed var(--line);
 }
 .smallLabel {
@@ -386,6 +452,47 @@
 }
 .storyBlock .decisions {
   margin-top: 8px;
+}
+
+/* More results */
+.more {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 24px 0 0;
+  border-top: 1px solid var(--ink);
+}
+.moreContext {
+  display: block;
+  margin-top: 2px;
+  font-size: 14px;
+  color: var(--muted);
+  opacity: 0.95;
+}
+.more .numberLabel {
+  color: var(--ink);
+}
+.quote {
+  margin: 32px 0 0;
+  max-width: 38em;
+}
+.quote blockquote {
+  margin: 0;
+}
+.quote p {
+  margin: 0;
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 1.3rem;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+}
+.quote figcaption {
+  margin-top: 12px;
+  font-size: 15px;
+}
+.availability {
+  margin: -6px 0 22px;
+  max-width: 34em;
+  color: var(--muted);
 }
 
 /* How I work */
@@ -475,6 +582,13 @@
   }
   .number {
     padding: 22px 16px 22px 0;
+  }
+  .more {
+    grid-template-columns: 1fr 1fr;
+  }
+  .role,
+  .chapterCaption {
+    display: block;
   }
   .steps {
     grid-template-columns: repeat(3, minmax(0, 1fr));
