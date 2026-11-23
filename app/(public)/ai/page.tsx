@@ -1,7 +1,6 @@
 import type { Metadata } from "next"
 import Image from "next/image"
 import { HeroGrid } from "@/components/hero-grid"
-import { AiOrb } from "@/components/ai-orb"
 import { StoryCursor } from "@/components/story-cursor"
 import { DemoPlayer } from "./demo-player"
 
@@ -219,7 +218,7 @@ export default function AiPage() {
                 className="mb-3 md:mb-4 h-14 w-14 md:h-20 md:w-20 rounded-xl object-cover"
               />
               <h1 id="hero-title" className="font-serif text-[1.75rem] md:text-[2rem] leading-[1.15] font-normal tracking-[-0.02em] text-foreground text-balance">
-                I build AI<AiOrb /> products for complex B2B work.
+                Product leader shaping strategy and building products that solve complex problems at scale.
               </h1>
               <p className="mt-3 md:mt-[18px] max-w-[560px] text-pretty text-[17px] leading-relaxed text-muted-foreground">
                 With 12 years in technology across product, growth and marketing, I bring a commercial and systems-level
