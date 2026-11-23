@@ -199,7 +199,7 @@ export default function AiPage() {
         {/* Hero: the homepage hero, with the dot field and the AI orb */}
         <div id="top" className="relative">
           <HeroGrid quietPad={30} includeMedia />
-          <section aria-labelledby="hero-title" className={`${CONTAINER} relative z-10 pt-6 pb-6 md:pt-[72px] md:pb-12`}>
+          <section aria-labelledby="hero-title" className={`${CONTAINER} relative z-10 pt-6 pb-6 md:pt-[72px] md:pb-6`}>
             <div data-grid-quiet className="max-w-[720px]">
               <Image
                 src="/images/mary-face.webp"
@@ -232,7 +232,7 @@ export default function AiPage() {
                   </div>
                 ))}
               </dl>
-              <ul aria-label="Companies I've built products for" className="mt-9 md:mt-[60px] flex flex-wrap items-center gap-x-6 sm:gap-x-8 gap-y-4">
+              <ul aria-label="Companies I've built products for" className="mt-9 md:mt-12 flex flex-wrap items-center gap-x-6 sm:gap-x-8 gap-y-4">
                 {LOGOS.map((l) => (
                   <li key={l.name} className="flex h-6 items-center">
                     <Image
@@ -250,7 +250,7 @@ export default function AiPage() {
         </div>
 
         {/* Featured projects: same label as the homepage, no divider */}
-        <div id="work" className={`${CONTAINER} pt-12 md:pt-20 scroll-mt-20`}>
+        <div id="work" className={`${CONTAINER} pt-12 md:pt-12 scroll-mt-20`}>
           <p className={`${EYEBROW_CAPS} inline-flex items-center gap-1.5`}>
             Featured projects
             <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth={1.75} viewBox="0 0 24 24" aria-hidden="true">
