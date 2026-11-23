@@ -30,12 +30,12 @@ const BUILT_WITH = "[Claude Code, model/API, front-end stack]"
 export const metadata: Metadata = {
   title: "Mary Borysova – I build AI products for complex B2B work",
   description:
-    "Product manager in London. I build AI products for complex B2B work and prototype them in code. 12 years in tech, ex-Amazon.",
+    "Product manager in London. I build AI products for complex B2B work and prototype them in code. 12 years in tech, most recently at Amazon.",
   alternates: { canonical: "/ai" },
   openGraph: {
     title: "Mary Borysova – I build AI products for complex B2B work",
     description:
-      "Product manager in London. At Amazon, my last project saved $2.3M a year.",
+      "Product manager in London. My last project at Amazon saved $2.3M a year.",
     url: "/ai",
     images: [{ url: "/ai/og.png", width: 1200, height: 630, alt: "Mary Borysova. I build AI products for complex B2B work. $2.3M a year saved at Amazon." }],
     type: "profile",
@@ -180,8 +180,8 @@ export default function AiPage() {
                 I build AI<AiOrb /> products for complex B2B work.
               </h1>
               <p className="mt-4 md:mt-6 max-w-[540px] text-pretty text-[17px] leading-relaxed text-muted-foreground">
-                I take complex B2B workflows from problem to shipped AI product, and I prototype in code so decisions
-                rest on real behaviour. 12 years across product, growth and marketing, most recently at Amazon.
+                I prototype in code, so my team can try an idea before we commit to building it. I&apos;ve worked in
+                tech for 12 years across product, growth and marketing, most recently at Amazon.
               </p>
               <div className="mt-6 md:mt-8 flex flex-wrap gap-3">
                 <a href={MAILTO} className={PILL_SOLID}>
@@ -228,20 +228,20 @@ export default function AiPage() {
 
             <div className="space-y-4 text-base md:text-[17px] leading-[1.7] text-foreground">
               <p>
-                Food importers retype every supplier certificate into compliance forms. One wrong weight or missing
-                certificate number holds a shipment at the border for days.
+                Food importers copy details from every supplier certificate into compliance forms by hand. If one weight
+                or certificate number is wrong, the shipment can sit at the border for days.
               </p>
               <p>
-                Conduit reads supplier documents and fills in the forms. Each importer configures their own pipeline:
-                which fields to extract and which form to fill.
+                Conduit reads the supplier documents and fills in the forms. Each importer sets up their own pipeline,
+                choosing which fields to pull out and which form to fill.
               </p>
               <p>
-                I chose not to build a pass/fail rules engine. Every importer works to its own compliance policy, so
-                they decide what to check.
+                I didn&apos;t build a pass/fail rules engine, because every importer already checks documents against
+                their own policy.
               </p>
               <p>
-                Every field carries a confidence score, and anything below the threshold goes to a person, because the
-                officer signs the form.
+                Conduit gives every field a confidence score and sends anything below the threshold to a person,
+                because the compliance officer is the one who signs the form.
               </p>
               <div className="pt-2">
                 <h3 className={LABEL}>Built with</h3>
@@ -280,12 +280,12 @@ export default function AiPage() {
               <h3 className={H3}>The problem</h3>
               <div className={READ}>
                 <p>
-                  Veeqo is Amazon&apos;s multi-channel shipping platform. Every UK seller&apos;s invoices, customs forms and
-                  packing slips ran through a third-party editor we couldn&apos;t extend, at $2.3M a year.
+                  Veeqo is Amazon&apos;s multi-channel shipping platform. UK sellers made their invoices, customs forms
+                  and packing slips in a third-party editor that cost $2.3M a year, and we couldn&apos;t extend it.
                 </p>
                 <p>
-                  UK sellers were moving onto the US product, and without a real replacement our biggest accounts would
-                  walk. My goal was to switch the vendor off on time without losing any of them.
+                  We were moving UK sellers onto the US product. If their documents broke along the way, we risked
+                  losing the biggest accounts, so my job was to replace the editor on time and keep them.
                 </p>
               </div>
             </div>
@@ -293,55 +293,56 @@ export default function AiPage() {
               <h3 className={H3}>What I found</h3>
               <div className={READ}>
                 <p>
-                  Sellers fell into two groups with opposite needs. For enterprise sellers, documents are
-                  infrastructure: years of custom layouts with business logic built in. Small sellers just need them to
-                  work.
-                </p>
-                <p>Competitors offered rigid templates or a full code editor, which left the middle of the market open.</p>
-              </div>
-            </div>
-            <div>
-              <h3 className={H3}>What I shipped</h3>
-              <div className={READ}>
-                <p>
-                  I split the product by segment instead of building one editor for everyone. Small sellers got
-                  category-aware templates with simple toggles. Complex sellers got an HTML editor with AI assist and
-                  pre-coded base templates.
+                  Sellers needed very different things. Enterprise sellers had years of custom layouts with business
+                  logic built into them. Small sellers wanted something that worked straight away.
                 </p>
                 <p>
-                  Brands attach to each document, so a seller running 5 to 10 brands picks the right version inside the
-                  print flow.
+                  Competitors offered either fixed templates or a full code editor, and there was nothing for the sellers
+                  in between.
                 </p>
               </div>
             </div>
             <div>
-              <h3 className={H3}>Trade-offs</h3>
+              <h3 className={H3}>What we built</h3>
               <div className={READ}>
                 <p>
-                  I cut drag and drop. It would have taken a large share of engineering time and still been too limited
-                  for enterprise sellers.
+                  We built two paths. Small sellers get templates that match their product category, with simple
+                  toggles. Larger sellers get an HTML editor with AI help and pre-coded starting templates.
                 </p>
                 <p>
-                  The riskiest call was the migration. A migration tool would have taken 4 months, while porting the
-                  enterprise templates by hand took 2 weeks. I argued to the VP of Product and the tech leads that the
-                  deadline and the top accounts mattered more than automation, and we went manual.
-                </p>
-                <p>
-                  For sellers who don&apos;t code, we shipped a ready-made prompt that gets any AI tool to write a working
-                  template, so they could migrate without our support.
+                  A seller with 5 to 10 brands attaches a brand to each document and picks the right version when they
+                  print.
                 </p>
               </div>
             </div>
             <div>
-              <h3 className={H3}>Outcome</h3>
+              <h3 className={H3}>What I decided</h3>
               <div className={READ}>
                 <p>
-                  We switched the vendor off 3 months early without losing a single top-tier account. That saved $2.3M a
-                  year and kept $15B+ in annual GMV moving without interruption.
+                  I cut drag and drop. It would have taken a big chunk of engineering time, and enterprise sellers would
+                  still have found it too limited.
                 </p>
                 <p>
-                  50K+ sellers migrated, support tickets fell by 30%, and a new document now takes minutes to set up
-                  instead of months.
+                  The bigger decision was how to migrate. A migration tool would have taken 4 months to build, and
+                  porting the enterprise templates by hand took 2 weeks. I pushed the VP of Product and the tech leads to
+                  go manual, because a late migration would have put the top accounts at risk.
+                </p>
+                <p>
+                  For sellers who don&apos;t code, we wrote a prompt they could paste into any AI tool to get a working
+                  template back. That let them move over without our help.
+                </p>
+              </div>
+            </div>
+            <div>
+              <h3 className={H3}>What happened</h3>
+              <div className={READ}>
+                <p>
+                  We turned the vendor off 3 months early and didn&apos;t lose a single top-tier account. That saved $2.3M
+                  a year, and $15B+ in annual GMV kept flowing without a break.
+                </p>
+                <p>
+                  50K+ sellers moved over, support tickets dropped by 30%, and setting up a new document now takes
+                  minutes rather than months.
                 </p>
               </div>
               <div className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-2">
@@ -383,57 +384,58 @@ export default function AiPage() {
               <h3 className={H3}>The problem</h3>
               <div className={READ}>
                 <p>
-                  Sellers had stopped using Veeqo&apos;s analytics. The product showed plenty of data but no clear next
-                  step, so sellers ran their business from spreadsheets instead.
+                  Sellers had stopped using Veeqo&apos;s analytics. The numbers were there, but nothing told them what to
+                  do about them, so many ran their business from spreadsheets.
                 </p>
                 <p>
-                  I joined a 0-to-1 AI effort with no problem statement and no scope, working with the PM, engineering
-                  and data science to decide where AI should go first.
-                </p>
-              </div>
-            </div>
-            <div>
-              <h3 className={H3}>Where to bet</h3>
-              <div className={READ}>
-                <p>
-                  I mapped a seller&apos;s day and scored each opportunity on four things: how often sellers would use
-                  it, whether it would keep them on the platform, whether we could build it on data we already had, and
-                  whether competitors offered it.
-                </p>
-                <p>
-                  Setup automation looked strong for activation, but sellers do it once, so it didn&apos;t justify the
-                  investment. Two bets won: shipping-rate selection, the most frequent decision in the product, and
-                  insights built on order and inventory data that competitors didn&apos;t have.
+                  I joined a new AI effort that had no brief and no scope yet, and worked with the PM, engineering and
+                  data science to figure out where AI should go first.
                 </p>
               </div>
             </div>
             <div>
-              <h3 className={H3}>Trade-offs</h3>
+              <h3 className={H3}>Choosing where to start</h3>
               <div className={READ}>
                 <p>
-                  With the PM, I defined the North Star metric and a phased rollout that put quick wins first, and we
-                  got engineering and product leadership behind it.
+                  I mapped out a seller&apos;s day and scored each idea on four questions. How often would sellers use
+                  it? Would it keep them on Veeqo? Could we build it with data we already had? Did competitors already
+                  offer it?
                 </p>
                 <p>
-                  Veeqo&apos;s page templates were rigid. Rather than wait for a refactor, we shipped AI as a drawer that
-                  opens over any page, which reached every screen faster than changing pages one by one.
-                </p>
-                <p>
-                  With data science, I set a confidence threshold: below it, the product hides a suggestion rather than
-                  show a weak one. Every suggestion shows its reasoning, because sellers act on what they can verify.
+                  Setup automation scored well at first, but sellers only set up once, so it wasn&apos;t worth the
+                  investment. We picked two things instead: choosing a shipping rate, which sellers do on every order,
+                  and insights built on order and inventory data that competitors didn&apos;t have.
                 </p>
               </div>
             </div>
             <div>
-              <h3 className={H3}>Outcome</h3>
+              <h3 className={H3}>What I decided</h3>
               <div className={READ}>
                 <p>
-                  In the pilot, sellers picked a shipping label about 80% faster, and over half of the sellers who saw an
-                  insight acted on it. That earned the AI work a long-term mandate.
+                  The PM and I set the North Star metric and planned a phased rollout that started with quick wins.
+                  Engineering and product leadership signed off on it.
                 </p>
                 <p>
-                  I also ran workshops for the design and product teams on how people come to trust AI, so later
-                  features could reuse the same patterns.
+                  Veeqo&apos;s page templates were hard to change, so we didn&apos;t wait for a refactor. We put the AI in a
+                  drawer that opens over any page, which got it onto every screen much sooner.
+                </p>
+                <p>
+                  With data science, I set a confidence threshold. When the model isn&apos;t sure enough, the product
+                  hides the suggestion. Every suggestion that does appear explains its reasoning, since sellers
+                  won&apos;t act on something they can&apos;t check.
+                </p>
+              </div>
+            </div>
+            <div>
+              <h3 className={H3}>What happened</h3>
+              <div className={READ}>
+                <p>
+                  In the pilot, sellers chose a shipping label about 80% faster, and over half of the sellers who saw an
+                  insight acted on it. After the pilot, leadership committed to the AI work for the long term.
+                </p>
+                <p>
+                  I also ran workshops for the design and product teams on how people learn to trust AI, so later
+                  features could start from the same patterns.
                 </p>
               </div>
               <p className="mt-6 text-sm text-muted-foreground">Details and screens available in an interview.</p>
@@ -497,9 +499,9 @@ export default function AiPage() {
             Background
           </h2>
           <p className="max-w-[640px] text-[17px] leading-relaxed text-foreground">
-            12 years in tech. Started in marketing and was CMO twice, then moved into product. Co-founded SmartMum AI,
-            which was acquired. I speak and write about AI, behaviour design and Machine Experience (MX), with 100,000+
-            readers.
+            I started in marketing and was CMO twice before moving into product. I co-founded SmartMum AI, which was
+            later acquired. I also speak and write about AI, behaviour design and Machine Experience (MX), and more
+            than 100,000 people read my work.
           </p>
         </section>
       </main>
