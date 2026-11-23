@@ -405,7 +405,7 @@ export default function AiPage() {
         <div id="work" className={`${CONTAINER} pt-12 md:pt-12 scroll-mt-20`}>
           <p className={`${EYEBROW_CAPS} inline-flex items-center gap-1.5`}>
             Featured projects
-            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth={1.75} viewBox="0 0 24 24" aria-hidden="true">
+            <svg className="w-3.5 h-3.5 motion-safe:animate-[nudge-down_1.8s_ease-in-out_infinite]" fill="none" stroke="currentColor" strokeWidth={1.75} viewBox="0 0 24 24" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" d="M12 5v14m0 0l-5-5m5 5l5-5" />
             </svg>
           </p>
@@ -415,7 +415,16 @@ export default function AiPage() {
         <section aria-label="Featured projects" className={`${CONTAINER} pt-6 md:pt-20 pb-14 md:pb-24`}>
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 lg:gap-x-8 gap-y-14 md:gap-y-20">
             {PROJECTS.filter((p) => !p.hidden).map((p) => (
-              <li key={p.id} className={p.demo || !p.image ? "md:col-span-2" : undefined}>
+              <li
+                key={p.id}
+                className={
+                  p.demo
+                    ? "md:col-span-2 pb-14 md:pb-20 border-b border-gray-200"
+                    : !p.image
+                      ? "md:col-span-2"
+                      : undefined
+                }
+              >
                 <article
                   aria-labelledby={p.id}
                   className={

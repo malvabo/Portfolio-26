@@ -187,3 +187,9 @@ html.story-cursor-on * {
   transform: none;
   transition: none;
 }
+
+/* Subtle downward nudge for "scroll down" arrows */
+@keyframes nudge-down {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(3px); }
+}
