@@ -75,8 +75,8 @@ const PROJECTS: Project[] = [
   {
     id: "conduit-title",
     title: "Conduit: an AI pipeline for customs paperwork",
-    summary: "Reads supplier documents and fills in compliance forms, so importers stop retyping data by hand.",
-    role: "Sole PM and designer",
+    summary: "I led product and design for an AI pipeline that cut customs data checks from 20 minutes to under 3 per shipment. It removed manual entry for compliance teams and reduced the filing errors that hold shipments at the border.",
+    role: "Sole product manager and designer",
     results: [
       { value: "20 → 3 min", label: "customs check per shipment" },
     ],
@@ -86,9 +86,9 @@ const PROJECTS: Project[] = [
   {
     id: "veeqo-title",
     tag: "Big tech",
-    title: "Amazon: a new document system for 50k+ sellers",
-    summary: "Replaced a third-party PDF tool with an HTML engine, AI-assisted editing and a new document library.",
-    role: "Sole PM and designer",
+    title: "Amazon: Redesigning a document system for 50k+ sellers",
+    summary: "I led the design that replaced the third-party PDF tool behind documents: an HTML-based engine with AI-assisted editing, a new document library, and a migration path for the enterprise accounts.",
+    role: "Sole product manager and designer",
     year: "2026",
     results: [
       { value: "$2.3M/yr", label: "saved in platform costs" },
@@ -106,8 +106,8 @@ const PROJECTS: Project[] = [
   {
     id: "bodyspec-title",
     tag: "Series A",
-    title: "BodySpec: 20% more bookings for 500K+ users",
-    summary: "Redesigned the platform and mobile app to lift conversions and average order value.",
+    title: "BodySpec: Scaling bookings by 20% for 500K+ users",
+    summary: "I redesigned the BodySpec platform and mobile app end to end to improve conversions and increase average order value.",
     role: "Product lead",
     year: "2022–23",
     results: [
@@ -123,8 +123,8 @@ const PROJECTS: Project[] = [
   },
   {
     id: "tempstars-title",
-    title: "TempStars: faster matching for 25K+ dentists",
-    summary: "Rebuilt signup and matching for Canada's largest dental marketplace to fix a 40% drop-off.",
+    title: "TempStars: Building marketplace liquidity for 25K+ dentists",
+    summary: "I re-engineered the signup and matching logic for Canada's largest dental marketplace to fix a 40% drop-off between signup and first booking. By making matching faster and more transparent, we turned a week-long wait into a 48-hour match.",
     role: "Product lead",
     year: "2023",
     results: [
@@ -137,6 +137,24 @@ const PROJECTS: Project[] = [
       alt: "TempStars app on two phones: a dental clinic profile with neighbourhood details, and onboarding",
       width: 2048,
       height: 1152,
+    },
+  },
+  {
+    id: "paa-title",
+    tag: "Series C",
+    title: "PAA: Scaling clinical efficiency through AI-driven workflows",
+    summary: "I led the dashboard redesign that turned a dense data view into a prioritised task list for clinicians, cutting the time they spend managing documents by 40% and reducing patient service delays.",
+    role: "Lead product designer",
+    year: "2024",
+    results: [
+      { value: "~$14M/yr", label: "in clinician time saved" },
+      { value: "Tier-1 deals", label: "with Kaiser, Humana and UHC" },
+    ],
+    image: {
+      src: "/images/paa-cover.png",
+      alt: "PAA patient tracker dashboard on a laptop: pending actions, patient overview and a task list",
+      width: 2416,
+      height: 1932,
     },
   },
 ]
@@ -348,7 +366,7 @@ export default function AiPage() {
                       <DemoPlayer chapters={CHAPTERS} label="Conduit demo, 27 seconds, no sound" />
                     </div>
                   ) : (
-                    <div className="aspect-[4/3] overflow-hidden rounded-lg border border-gray-200 bg-gray-50">
+                    <div className="aspect-[16/10] overflow-hidden rounded-lg border border-gray-200 bg-gray-50">
                       <Image
                         src={p.image!.src}
                         alt={p.image!.alt}
