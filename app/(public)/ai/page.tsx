@@ -234,7 +234,7 @@ export default function AiPage() {
                   </div>
                 ))}
               </dl>
-              <ul aria-label="Companies I've built products for" className="mt-9 md:mt-12 flex flex-wrap items-center gap-x-6 sm:gap-x-8 gap-y-4">
+              <ul aria-label="Companies I've built products for" className="mt-9 md:mt-12 flex flex-wrap items-center gap-x-10 sm:gap-x-14 gap-y-4">
                 {LOGOS.map((l) => (
                   <li key={l.name} className="flex h-6 items-center">
                     <Image
