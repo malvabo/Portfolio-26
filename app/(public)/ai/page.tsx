@@ -270,8 +270,8 @@ export default function AiPage() {
               </div>
               <p>
                 I led product and design for an AI pipeline that cut customs data checks from 20 minutes to under 3 per
-                shipment. It removed manual entry for compliance teams and the filing errors that hold shipments at the
-                border.
+                shipment. It removed manual entry for compliance teams and reduced the filing errors that hold shipments at
+                the border.
               </p>
               <dl className={`${CASE_META} mt-2 md:mt-3`}>
                 <div>
@@ -306,9 +306,8 @@ export default function AiPage() {
                 </h2>
               </div>
               <p>
-                I led the design that replaced the third-party PDF tool behind every invoice, customs form and packing
-                slip: an HTML-based engine with AI-assisted editing, a rebuilt document library, and a migration path for
-                the enterprise accounts.
+                I led the design that replaced the third-party PDF tool behind documents: an HTML-based engine with
+                AI-assisted editing, a rebuilt document library, and a migration path for the enterprise accounts.
               </p>
               <dl className={CASE_META}>
                 <div className="flex flex-col-reverse justify-end">
