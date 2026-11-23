@@ -107,7 +107,7 @@ const PROJECTS: Project[] = [
     title: "Conduit: an AI product for customs compliance",
     summary: "I own Conduit end to end, from discovery to launch: an AI product that reads supplier documents and prepares customs filings for importers. It cut data checks from 20 minutes to under 3 per shipment, removed manual entry for compliance teams and reduced the filing errors that hold shipments at the border.",
     role: "Sole product manager and designer",
-    builtWith: "Built with Claude",
+    builtWith: `Built with ${BUILT_WITH.replace(/\.$/, "")}`,
     results: [
       { value: "20 → 3 min", label: "customs check per shipment" },
     ],
