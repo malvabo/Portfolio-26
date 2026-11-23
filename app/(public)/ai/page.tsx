@@ -334,7 +334,7 @@ export default function AiPage() {
               <dl className={`${CASE_META} mt-6 md:mt-8`}>
                 <div>
                   <dt className={META_LABEL}>Role</dt>
-                  <dd>Product design lead</dd>
+                  <dd>Sole product manager and designer</dd>
                 </div>
                 <div>
                   <dt className={META_LABEL}>Timeline</dt>
