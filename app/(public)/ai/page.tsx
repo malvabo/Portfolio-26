@@ -330,14 +330,23 @@ export default function AiPage() {
           </p>
         </div>
 
-        {/* Projects: the Conduit demo full width, then a two-up grid; media on top, short copy below */}
+        {/* Projects: Conduit as one row (text left, demo right), then a two-up grid; media on top, short copy below */}
         <section aria-label="Featured projects" className={`${CONTAINER} pt-6 md:pt-8 pb-14 md:pb-24`}>
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 lg:gap-x-8 gap-y-14 md:gap-y-20">
             {PROJECTS.map((p) => (
               <li key={p.id} className={p.demo ? "md:col-span-2" : undefined}>
-                <article aria-labelledby={p.id} className="flex h-full flex-col">
+                <article
+                  aria-labelledby={p.id}
+                  className={
+                    p.demo
+                      ? "flex flex-col lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)] lg:gap-12 lg:items-center"
+                      : "flex h-full flex-col"
+                  }
+                >
                   {p.demo ? (
-                    <DemoPlayer chapters={CHAPTERS} label="Conduit demo, 27 seconds, no sound" />
+                    <div className="lg:order-2">
+                      <DemoPlayer chapters={CHAPTERS} label="Conduit demo, 27 seconds, no sound" />
+                    </div>
                   ) : (
                     <div className="aspect-[4/3] overflow-hidden rounded-lg border border-gray-200 bg-gray-50">
                       <Image
@@ -353,9 +362,7 @@ export default function AiPage() {
 
                   <div
                     className={
-                      p.demo
-                        ? "flex flex-col md:grid md:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)] md:gap-x-12 md:items-end"
-                        : "flex flex-1 flex-col"
+                      p.demo ? "flex flex-col lg:order-1 lg:[&>div:first-child>p:first-child]:mt-0" : "flex flex-1 flex-col"
                     }
                   >
                     <div>
