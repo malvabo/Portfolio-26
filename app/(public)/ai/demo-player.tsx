@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react"
 
-export type Chapter = { src: string; poster: string; title: string; caption: string }
+export type Chapter = { src: string; poster: string; width: number; height: number; title: string; caption: string }
 
 // Plays the chapters back to back. Nothing downloads until the player is on
 // screen; it then starts muted (unless the visitor prefers reduced motion),
@@ -108,7 +108,11 @@ export function DemoPlayer({ chapters, label }: { chapters: Chapter[]; label: st
 
   return (
     <figure className="m-0" aria-label={label}>
-      <div ref={wrapRef} className="relative aspect-[1280/802] overflow-hidden rounded-lg border border-gray-200 bg-[#ebecf3]">
+      <div
+        ref={wrapRef}
+        className="relative overflow-hidden rounded-lg border border-gray-200 bg-[#ebecf3] transition-[aspect-ratio] duration-300"
+        style={{ aspectRatio: `${current.width} / ${current.height}` }}
+      >
         <video
           ref={videoRef}
           src={current.src}
@@ -116,7 +120,7 @@ export function DemoPlayer({ chapters, label }: { chapters: Chapter[]; label: st
           muted
           playsInline
           preload="none"
-          className="absolute inset-0 h-full w-full object-contain"
+          className="absolute inset-0 h-full w-full object-cover"
           onEnded={onEnded}
           onTimeUpdate={onTime}
           onPause={() => setPlaying(false)}

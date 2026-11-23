@@ -5,7 +5,6 @@ import { SHOW_WIP, wip } from "@/components/wip"
 import { ScrollToTop } from "@/components/scroll-to-top"
 import { BackLinkFooter } from "@/components/back-link"
 import { StoryContents } from "@/components/story-contents"
-import { StoryCursor } from "@/components/story-cursor"
 import { Banknote, Coins, Files, Keyboard, OctagonAlert, Timer, Users } from "lucide-react"
 import {
   StoryPage,
@@ -23,16 +22,14 @@ import {
   Moment,
   Results,
   UpNext,
-  Reveal,
   Words,
 } from "@/components/story-case-study"
 import { BeforeFlow, Ecosystem, UserFlow } from "./diagrams"
 
 export default function ConduitStory() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background story-static">
       <ScrollToTop />
-      <StoryCursor />
       <StoryTopBar project="Conduit" />
 
       <StoryContents
@@ -56,7 +53,7 @@ export default function ConduitStory() {
           meta={[
             { label: "Company", value: "Conduit" },
             { label: "Timeline", value: "4 weeks, 2026" },
-            { label: "Role", value: "Product lead and design engineer" },
+            { label: "Role", value: "Product lead" },
           ]}
           intro={
             <>
@@ -64,8 +61,8 @@ export default function ConduitStory() {
               Conduit reads supplier documents and fills in the compliance forms food importers file. I owned product
               and design for the first version, from strategy to shipped front end, in four weeks. I challenged the
               founders’ original plan, for Conduit to approve or reject each document itself, and shifted the product
-              to pipelines that each importer sets up to meet their unique needs the best. I set up the design system
-              from scratch and worked hand in hand with the backend team on the data and the API.
+              to pipelines that each importer sets up to meet their unique needs the best. I worked hand in hand with
+              the backend team on the data and the API.
             </p>
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground/80">
               Shared with permission under NDA. Identifying details and visuals have been recreated from scratch;
@@ -142,10 +139,10 @@ export default function ConduitStory() {
 
         <div className="mt-10 md:mt-14 space-y-10">
           <Narrow>
-            <Reveal as="p" className="text-[17px] leading-relaxed text-muted-foreground">
+            <p className="text-[17px] leading-relaxed text-muted-foreground">
               With the founders and product partners, I mapped the journey end to end and narrowed the first release
               to four jobs: extract the data, catch bad documents early, flag shipments at risk and cut manual filing errors.
-            </Reveal>
+            </p>
           </Narrow>
           {wip(
             <Wide>
@@ -169,9 +166,9 @@ export default function ConduitStory() {
 
         <div className="mt-12">
           <Wide>
-            <Reveal>
+            <div>
               <UserFlow />
-            </Reveal>
+            </div>
           </Wide>
         </div>
 
@@ -262,18 +259,18 @@ export default function ConduitStory() {
                       caption="Inbox grouped by shipment, with the documents that need attention flagged"
                     />
                   )}
-                  <Reveal as="figure">
+                  <figure>
                     <BeforeFlow />
                     <figcaption className="mt-3 text-[13px] text-muted-foreground text-center">
                       Before: A rigid, one-size-fits-all extraction pipeline
                     </figcaption>
-                  </Reveal>
-                  <Reveal as="figure">
+                  </figure>
+                  <figure>
                     <Ecosystem />
                     <figcaption className="mt-3 text-[13px] text-muted-foreground text-center">
                       After: each importer&apos;s policy sets what Conduit pulls and which form it fills
                     </figcaption>
-                  </Reveal>
+                  </figure>
                 </div>
               }
             >
@@ -307,25 +304,9 @@ export default function ConduitStory() {
             </p>
           </Moment>
 
-          <Moment
-            n={3}
-            title="A design system from day one"
-            visual={
-              <Figure
-                src="/conduit/ds.webp"
-                alt="The design system: foundations, motion spec, colour tokens and input states"
-                caption="Foundations, components, states and motion"
-              />
-            }
-          >
-            <p>
-              There was no design system to start from. I built the foundations, components, states and motion in
-              parallel with the product, so a product built in four weeks could still scale afterwards.
-            </p>
-          </Moment>
 
           <Moment
-            n={4}
+            n={3}
             title="Reducing manual work across complex operations"
             visual={
               <>
@@ -347,8 +328,8 @@ export default function ConduitStory() {
             </p>
             {!SHOW_WIP && (
               <p className="!-mt-1 flex w-fit items-center gap-2 rounded-md border border-[#B4532A]/25 bg-[#B4532A]/[0.06] px-2.5 py-1 font-mono text-[12px] leading-none text-[#B4532A]">
-                {/* The accent square used across the site, pulsing gently */}
-                <span aria-hidden className="h-1.5 w-1.5 bg-[#B4532A] motion-safe:animate-pulse" />
+                {/* The accent square used across the site */}
+                <span aria-hidden className="h-1.5 w-1.5 bg-[#B4532A]" />
                 Case study coming soon!
               </p>
             )}
@@ -390,7 +371,7 @@ export default function ConduitStory() {
                 image: "/conduit/tile-team.jpg",
                 value: "5 organisations",
                 label: "rolled out to",
-                body: "Designed and built in four weeks, with a design system ready to grow with it.",
+                body: "Built in four weeks.",
               },
             ]}
           />
