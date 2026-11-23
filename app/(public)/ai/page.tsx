@@ -469,7 +469,7 @@ export default function AiPage() {
                   <dd className="text-xl font-medium text-foreground mb-0.5">+25%</dd>
                 </div>
               </dl>
-              <dl className={CASE_META}>
+              <dl className="grid w-full grid-cols-3 gap-4 text-[15px] leading-snug">
                 <div>
                   <dt className={META_LABEL}>Role</dt>
                   <dd>Product lead</dd>
