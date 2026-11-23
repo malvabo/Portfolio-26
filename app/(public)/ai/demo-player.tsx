@@ -146,30 +146,35 @@ export function DemoPlayer({ chapters, label }: { chapters: Chapter[]; label: st
         </button>
       </div>
 
-      <ol className="mt-3 grid grid-cols-2 gap-3">
-        {chapters.map((c, i) => (
-          <li key={c.src}>
-            <button
-              type="button"
-              className={`grid w-full grid-cols-[auto_1fr] gap-x-2 gap-y-0.5 pb-1 text-left text-[15px] cursor-pointer rounded ${i === index ? "text-foreground" : "text-muted-foreground hover:text-foreground"} focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground`}
-              aria-current={i === index ? "step" : undefined}
-              onClick={() => {
-                userPaused.current = false
-                goTo(i)
-              }}
-            >
-              <span className="col-span-full mb-2 block h-[3px] overflow-hidden rounded-sm bg-[#E8E3DD]" aria-hidden="true">
-                <span className="block h-full origin-left bg-foreground transition-transform duration-200 ease-linear" style={{ transform: `scaleX(${progress[i]})` }} />
-              </span>
-              <span className="font-mono text-[13px] text-muted-foreground pt-px">{String(i + 1).padStart(2, "0")}</span>
-              <span className="font-medium">{c.title}</span>
-            </button>
-          </li>
-        ))}
-      </ol>
-      <figcaption className="hidden md:block mt-2 min-h-[3em] text-sm text-muted-foreground" aria-live="polite">
-        {current.caption}
-      </figcaption>
+      {/* Chapter tabs and caption only when there is more than one clip */}
+      {chapters.length > 1 && (
+        <>
+          <ol className="mt-3 grid grid-cols-2 gap-3">
+            {chapters.map((c, i) => (
+              <li key={c.src}>
+                <button
+                  type="button"
+                  className={`grid w-full grid-cols-[auto_1fr] gap-x-2 gap-y-0.5 pb-1 text-left text-[15px] cursor-pointer rounded ${i === index ? "text-foreground" : "text-muted-foreground hover:text-foreground"} focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground`}
+                  aria-current={i === index ? "step" : undefined}
+                  onClick={() => {
+                    userPaused.current = false
+                    goTo(i)
+                  }}
+                >
+                  <span className="col-span-full mb-2 block h-[3px] overflow-hidden rounded-sm bg-[#E8E3DD]" aria-hidden="true">
+                    <span className="block h-full origin-left bg-foreground transition-transform duration-200 ease-linear" style={{ transform: `scaleX(${progress[i]})` }} />
+                  </span>
+                  <span className="font-mono text-[13px] text-muted-foreground pt-px">{String(i + 1).padStart(2, "0")}</span>
+                  <span className="font-medium">{c.title}</span>
+                </button>
+              </li>
+            ))}
+          </ol>
+          <figcaption className="hidden md:block mt-2 min-h-[3em] text-sm text-muted-foreground" aria-live="polite">
+            {current.caption}
+          </figcaption>
+        </>
+      )}
     </figure>
   )
 }

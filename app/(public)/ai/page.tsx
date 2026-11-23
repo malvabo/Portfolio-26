@@ -48,14 +48,6 @@ export const metadata: Metadata = {
 
 const CHAPTERS = [
   {
-    src: "/ai/conduit-extract.mp4",
-    poster: "/ai/conduit-extract.webp",
-    width: 1280,
-    height: 724,
-    title: "Set up extraction",
-    caption: "Pick the fields to pull from a document, then check and correct what the model found.",
-  },
-  {
     src: "/ai/conduit-fill.mp4",
     poster: "/ai/conduit-fill.webp",
     width: 1280,
@@ -301,7 +293,7 @@ export default function AiPage() {
             </div>
 
             <div>
-              <DemoPlayer chapters={CHAPTERS} label="Conduit demo, 54 seconds, no sound" />
+              <DemoPlayer chapters={CHAPTERS} label="Conduit demo, 27 seconds, no sound" />
             </div>
           </div>
         </section>
