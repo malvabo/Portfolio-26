@@ -25,7 +25,6 @@ import {
   Wide,
   Narrow,
   Figure,
-  Clip,
   CardStack,
   Stage,
   Moment,
@@ -172,7 +171,7 @@ export default function VeeqoStory() {
           </Wide>
 
           <Stage
-            title="Templates that know their document type"
+            title="Ready-to-go templates"
             visual={
               <Figure
                 src="/images/vq-doc0.jpg"
@@ -285,25 +284,12 @@ export default function VeeqoStory() {
             >
               <p>
                 Drag and drop was the obvious start. In critique it proved too expensive to build with the engineers we
-                had, and a simple version couldn&apos;t handle enterprise complexity.
+                had, and a simple version couldn&apos;t handle enterprise complexity. A plain document table failed too:
+                sellers name documents inconsistently, and without previews the list turned into noise. We chose a
+                document library with a live preview of every template: ready-made defaults for small sellers, and an
+                HTML editor with AI for complex ones.
               </p>
             </Moment>
-            <Narrow>
-              <Reveal className="text-[17px] leading-relaxed text-muted-foreground">
-                <p>
-                  A plain document table failed too: sellers name documents inconsistently, and without previews the
-                  list turned into noise.
-                </p>
-              </Reveal>
-            </Narrow>
-            <Narrow>
-              <Reveal className="text-[17px] leading-relaxed text-muted-foreground">
-                <p>
-                  We chose a document library with a live preview of every template: ready-made defaults for small
-                  sellers, and an HTML editor with AI for complex ones.
-                </p>
-              </Reveal>
-            </Narrow>
             {wip(
               <Wide>
                 <Figure src="/images/vq-doc8.png" alt="Plain document table exploration" caption="A plain document table, explored and dropped" />
@@ -328,22 +314,6 @@ export default function VeeqoStory() {
 
           <Moment
             n={3}
-            title="Designing around a slow API"
-            visual={
-              <div className="grid md:grid-cols-2 gap-4 md:gap-6">
-                <Clip src="/images/skeleton.mov" label="Skeleton loading state" />
-                <Clip src="/images/skeleton2.mov" label="Second skeleton loading state" />
-              </div>
-            }
-          >
-            <p>
-              The document API could be slow, so I added loading states that keep the screen feeling responsive while
-              documents load.
-            </p>
-          </Moment>
-
-          <Moment
-            n={4}
             title="Custom logic for non-coders"
             visual={
               <Figure

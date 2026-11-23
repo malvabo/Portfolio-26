@@ -259,7 +259,7 @@ export default function AiPage() {
         </div>
 
         {/* Featured projects: same label as the homepage, no divider */}
-        <div id="work" className={`${CONTAINER} pt-2 md:pt-4 scroll-mt-20`}>
+        <div id="work" className={`${CONTAINER} pt-12 md:pt-20 scroll-mt-20`}>
           <p className={`${EYEBROW_CAPS} inline-flex items-center gap-1.5`}>
             Featured projects
             <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth={1.75} viewBox="0 0 24 24" aria-hidden="true">
@@ -285,7 +285,7 @@ export default function AiPage() {
                 Importers set up their own pipelines, choosing which fields to pull out and how to fill in the forms.
               </p>
               <p>Conduit gives extracted data confidence scores and marks data below the threshold for human review.</p>
-              <dl className={CASE_META}>
+              <dl className={`${CASE_META} mt-6 md:mt-8`}>
                 <div>
                   <dt className={META_LABEL}>Role</dt>
                   <dd>Sole product manager and designer</dd>
@@ -332,7 +332,7 @@ export default function AiPage() {
                   <dd className="text-xl font-medium text-foreground mb-0.5">0% churn</dd>
                 </div>
               </dl>
-              <dl className={CASE_META}>
+              <dl className={`${CASE_META} mt-6 md:mt-8`}>
                 <div>
                   <dt className={META_LABEL}>Role</dt>
                   <dd>Product design lead</dd>
@@ -361,7 +361,7 @@ export default function AiPage() {
         </section>
 
         {/* Amazon: AI automation, same layout */}
-        <section aria-labelledby="amazon-ai-title" className={`${CONTAINER} ${CASE_SECTION} pb-12 md:pb-20`}>
+        <section aria-labelledby="amazon-ai-title" className={`${CONTAINER} ${CASE_SECTION}`}>
           <div className="flex flex-wrap gap-2 mb-3">
             <span className={TAG}>Big tech</span>
           </div>
@@ -374,7 +374,7 @@ export default function AiPage() {
                 I designed AI-powered automation for Amazon&apos;s internal shipping operations, cutting manual work for
                 thousands of operators and speeding up decisions across complex logistics workflows.
               </p>
-              <dl className={CASE_META}>
+              <dl className={`${CASE_META} mt-6 md:mt-8`}>
                 <div>
                   <dt className={META_LABEL}>Role</dt>
                   <dd>Product design lead</dd>
@@ -395,6 +395,55 @@ export default function AiPage() {
                 alt="Orders page with an AI actions panel: a shipping savings insight and restock and stock-move recommendations"
                 width={2844}
                 height={2010}
+                sizes="(min-width: 1024px) 60vw, 100vw"
+                className="h-auto w-full"
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* BodySpec: same layout, no case study link */}
+        <section aria-labelledby="bodyspec-title" className={`${CONTAINER} ${CASE_SECTION} pb-12 md:pb-20`}>
+          <div className="flex flex-wrap gap-2 mb-3">
+            <span className={TAG}>Series A</span>
+          </div>
+          <h2 id="bodyspec-title" className={`${CARD_TITLE} mb-4 md:mb-6`}>
+            BodySpec: Scaling bookings by 20% for 500K+ users
+          </h2>
+          <div className={CASE_GRID}>
+            <div className={CASE_TEXT}>
+              <p>
+                Medical data can be scary and confusing. I overhauled the BodySpec experience to turn complex DXA scans
+                into simple, actionable health stories. By shifting the focus from one-off data to long-term habits, we
+                helped 500K users understand their bodies and keep coming back for tracking.
+              </p>
+              <dl className={CASE_META}>
+                <div className="flex flex-col-reverse justify-end">
+                  <dt className="text-sm text-muted-foreground">in annual recurring revenue potential</dt>
+                  <dd className="text-xl font-medium text-foreground mb-0.5">$2M+</dd>
+                </div>
+                <div className="flex flex-col-reverse justify-end">
+                  <dt className="text-sm text-muted-foreground">funding round secured</dt>
+                  <dd className="text-xl font-medium text-foreground mb-0.5">$17.2M</dd>
+                </div>
+              </dl>
+              <dl className={`${CASE_META} mt-6 md:mt-8`}>
+                <div>
+                  <dt className={META_LABEL}>Role</dt>
+                  <dd>Senior product designer</dd>
+                </div>
+                <div>
+                  <dt className={META_LABEL}>Timeline</dt>
+                  <dd>May 2022 – Apr 2023</dd>
+                </div>
+              </dl>
+            </div>
+            <div className={CASE_MEDIA}>
+              <Image
+                src="/images/bodyspec-location-booking.webp"
+                alt="BodySpec booking page with a list of scan locations and time slots beside a map"
+                width={2048}
+                height={1366}
                 sizes="(min-width: 1024px) 60vw, 100vw"
                 className="h-auto w-full"
               />
