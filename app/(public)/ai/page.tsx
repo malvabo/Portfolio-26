@@ -330,16 +330,16 @@ export default function AiPage() {
           </p>
         </div>
 
-        {/* Projects: two-up grid, media on top, short copy below */}
+        {/* Projects: the Conduit demo full width, then a two-up grid; media on top, short copy below */}
         <section aria-label="Featured projects" className={`${CONTAINER} pt-6 md:pt-8 pb-14 md:pb-24`}>
-          <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 lg:gap-x-12 gap-y-14 md:gap-y-20">
+          <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 lg:gap-x-8 gap-y-14 md:gap-y-20">
             {PROJECTS.map((p) => (
-              <li key={p.id}>
+              <li key={p.id} className={p.demo ? "md:col-span-2" : undefined}>
                 <article aria-labelledby={p.id} className="flex h-full flex-col">
                   {p.demo ? (
                     <DemoPlayer chapters={CHAPTERS} label="Conduit demo, 27 seconds, no sound" />
                   ) : (
-                    <div className="aspect-[16/10] overflow-hidden rounded-lg border border-gray-200 bg-gray-50">
+                    <div className="aspect-[4/3] overflow-hidden rounded-lg border border-gray-200 bg-gray-50">
                       <Image
                         src={p.image!.src}
                         alt={p.image!.alt}
@@ -351,38 +351,49 @@ export default function AiPage() {
                     </div>
                   )}
 
-                  <p className="mt-5 flex flex-wrap items-center gap-x-2.5 gap-y-1 text-sm text-muted-foreground">
-                    {p.tag && <span className={TAG}>{p.tag}</span>}
-                    <span>{p.role}</span>
-                    {p.year && (
-                      <>
-                        <span aria-hidden="true">·</span>
-                        <span>{p.year}</span>
-                      </>
-                    )}
-                  </p>
-                  <h2 id={p.id} className={`${CARD_TITLE} mt-2.5`}>
-                    {p.title}
-                  </h2>
-                  <p className="mt-2.5 max-w-[56ch] text-[15px] md:text-base leading-relaxed text-muted-foreground text-pretty">
-                    {p.summary}
-                  </p>
+                  <div
+                    className={
+                      p.demo
+                        ? "flex flex-col md:grid md:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)] md:gap-x-12 md:items-end"
+                        : "flex flex-1 flex-col"
+                    }
+                  >
+                    <div>
+                      <p className="mt-5 flex flex-wrap items-center gap-x-2.5 gap-y-1 text-sm text-muted-foreground">
+                        {p.tag && <span className={TAG}>{p.tag}</span>}
+                        <span>{p.role}</span>
+                        {p.year && (
+                          <>
+                            <span aria-hidden="true">·</span>
+                            <span>{p.year}</span>
+                          </>
+                        )}
+                      </p>
+                      <h2 id={p.id} className={`${CARD_TITLE} mt-2.5`}>
+                        {p.title}
+                      </h2>
+                      <p className="mt-2.5 max-w-[56ch] text-[15px] md:text-base leading-relaxed text-muted-foreground text-pretty">
+                        {p.summary}
+                      </p>
+                    </div>
+                    <div className="flex flex-col">
+                      <dl className="pt-6 flex flex-wrap gap-x-8 gap-y-3">
+                        {p.results.map((r) => (
+                          <div key={r.label} className="flex flex-col-reverse justify-end">
+                            <dt className="text-[13px] leading-snug text-muted-foreground">{r.label}</dt>
+                            <dd className="text-lg font-medium text-foreground leading-tight mb-0.5">{r.value}</dd>
+                          </div>
+                        ))}
+                      </dl>
 
-                  <dl className="mt-auto pt-6 flex flex-wrap gap-x-8 gap-y-3">
-                    {p.results.map((r) => (
-                      <div key={r.label} className="flex flex-col-reverse justify-end">
-                        <dt className="text-[13px] leading-snug text-muted-foreground">{r.label}</dt>
-                        <dd className="text-lg font-medium text-foreground leading-tight mb-0.5">{r.value}</dd>
-                      </div>
-                    ))}
-                  </dl>
-
-                  {p.caseStudy && (
-                    <a href={p.caseStudy} className={`${ARROW_LINK} mt-5 self-start text-[15px]`}>
-                      Read the case study
-                      <Arrow />
-                    </a>
-                  )}
+                      {p.caseStudy && (
+                        <a href={p.caseStudy} className={`${ARROW_LINK} mt-5 self-start text-[15px]`}>
+                          Read the case study
+                          <Arrow />
+                        </a>
+                      )}
+                    </div>
+                  </div>
                 </article>
               </li>
             ))}
