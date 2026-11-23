@@ -453,7 +453,7 @@ export default function AiPage() {
               <p>
                 I re-engineered the signup and matching logic for Canada&apos;s largest dental marketplace to fix a 40%
                 drop-off between signup and first booking. By making matching faster and more transparent, we turned a
-                week-long wait into a 48-hour win.
+                week-long wait into a 48-hour match.
               </p>
               <dl className="grid w-full grid-cols-3 gap-4 text-[15px] leading-snug">
                 <div className="flex flex-col-reverse justify-end">
