@@ -124,7 +124,7 @@ const TAG = "inline-block px-2.5 py-0.5 text-[11px] font-mono uppercase tracking
 // Project blocks: media left, text right on desktop; stacked on mobile
 const CASE_SECTION = "pt-6 pb-8 md:pt-8 md:pb-14"
 const CASE_GRID = "grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)] gap-5 lg:gap-12"
-const CASE_MEDIA = "overflow-hidden rounded-lg border border-gray-200 bg-gray-50 self-start"
+const CASE_MEDIA = "aspect-[16/10] overflow-hidden rounded-lg border border-gray-200 bg-gray-50 self-start"
 const CASE_TEXT = "flex flex-col items-start gap-4 text-base md:text-[17px] leading-[1.7] text-foreground"
 const CASE_META = "grid w-full grid-cols-2 gap-4 text-[15px] leading-snug"
 const META_LABEL = "text-sm text-muted-foreground mb-1"
@@ -343,7 +343,7 @@ export default function AiPage() {
                 width={2844}
                 height={2010}
                 sizes="(min-width: 1024px) 60vw, 100vw"
-                className="h-auto w-full"
+                className="h-full w-full object-cover object-top"
               />
             </div>
           </div>
@@ -386,7 +386,7 @@ export default function AiPage() {
                 width={2844}
                 height={2010}
                 sizes="(min-width: 1024px) 60vw, 100vw"
-                className="h-auto w-full"
+                className="h-full w-full object-cover object-top"
               />
             </div>
           </div>
@@ -435,7 +435,7 @@ export default function AiPage() {
                 width={1586}
                 height={1235}
                 sizes="(min-width: 1024px) 60vw, 100vw"
-                className="h-auto w-full"
+                className="h-full w-full object-cover"
               />
             </div>
           </div>
@@ -472,7 +472,7 @@ export default function AiPage() {
               <dl className={CASE_META}>
                 <div>
                   <dt className={META_LABEL}>Role</dt>
-                  <dd>Lead product designer</dd>
+                  <dd>Product lead</dd>
                 </div>
                 <div>
                   <dt className={META_LABEL}>Timeline</dt>
@@ -487,7 +487,7 @@ export default function AiPage() {
                 width={2048}
                 height={1152}
                 sizes="(min-width: 1024px) 60vw, 100vw"
-                className="h-auto w-full"
+                className="h-full w-full object-cover"
               />
             </div>
           </div>
