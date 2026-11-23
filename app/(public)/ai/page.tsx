@@ -268,14 +268,10 @@ export default function AiPage() {
           <div className={CASE_GRID}>
             <div className={CASE_TEXT}>
               <p>
-                Food importers copy details from supplier documentation into internal compliance forms by hand. If one
-                data point is incorrect, the shipment can be blocked at the border for days.
+                I led product and design for an AI pipeline that cut customs data checks from 20 minutes to under 3 per
+                shipment, removing manual entry for compliance teams and the filing errors that hold shipments at the
+                border.
               </p>
-              <p>
-                I have built Conduit, a tool that reads the supplier documents and fills in the compliance forms.
-                Importers set up their own pipelines, choosing which fields to pull out and how to fill in the forms.
-              </p>
-              <p>Conduit gives extracted data confidence scores and marks data below the threshold for human review.</p>
               <dl className={`${CASE_META} mt-6 md:mt-8`}>
                 <div>
                   <dt className={META_LABEL}>Role</dt>
