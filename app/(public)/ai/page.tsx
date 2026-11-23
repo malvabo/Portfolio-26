@@ -69,6 +69,7 @@ type Project = {
   results: { value: string; label: string }[]
   caseStudy?: string
   note?: string
+  builtWith?: string
   hidden?: boolean
   demo?: boolean
   image?: { src: string; alt: string; width: number; height: number; position?: string }
@@ -106,6 +107,7 @@ const PROJECTS: Project[] = [
     title: "Conduit: an AI product for customs compliance",
     summary: "I own Conduit end to end, from discovery to launch: an AI product that reads supplier documents and prepares customs filings for importers. It cut data checks from 20 minutes to under 3 per shipment, removed manual entry for compliance teams and reduced the filing errors that hold shipments at the border.",
     role: "Sole product manager and designer",
+    builtWith: "Built with Claude",
     results: [
       { value: "20 → 3 min", label: "customs check per shipment" },
     ],
@@ -462,6 +464,12 @@ export default function AiPage() {
                       <h2 id={p.id} className={`${CARD_TITLE} mt-2.5`}>
                         {p.title}
                       </h2>
+                      {p.builtWith && (
+                        <>
+                          <p className="mt-2 text-sm text-muted-foreground">{p.builtWith}</p>
+                          <hr className="mt-4 mb-1 border-0 border-t border-gray-200" />
+                        </>
+                      )}
                       <p className="mt-2.5 max-w-[56ch] text-[15px] md:text-base leading-relaxed text-muted-foreground text-pretty">
                         {p.summary}
                       </p>
