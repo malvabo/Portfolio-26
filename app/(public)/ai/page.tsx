@@ -89,7 +89,7 @@ const PROJECTS: Project[] = [
     title: "Amazon: Redesigning a document system for 50k+ sellers",
     summary: "I led the design that replaced the third-party PDF tool behind documents: an HTML-based engine with AI-assisted editing, a new document library, and a migration path for the enterprise accounts.",
     role: "Sole product manager and designer",
-    year: "2026",
+    year: "2025",
     results: [
       { value: "$2.3M/yr", label: "saved in platform costs" },
       { value: "0%", label: "churn in top enterprise accounts" },
