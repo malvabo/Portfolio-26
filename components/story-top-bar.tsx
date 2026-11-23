@@ -5,7 +5,15 @@ import { useEffect, useState } from "react"
 import { ArrowLeft } from "lucide-react"
 
 /** Minimal breadcrumb bar for story case studies: "← Work / Project" */
-export function StoryTopBar({ project }: { project: string }) {
+export function StoryTopBar({
+  project,
+  backHref = "/#work",
+  backLabel = "Work",
+}: {
+  project: string
+  backHref?: string
+  backLabel?: string
+}) {
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
@@ -25,11 +33,11 @@ export function StoryTopBar({ project }: { project: string }) {
         <ol className="flex items-center gap-2 text-[15px] leading-none">
           <li>
             <Link
-              href="/#work"
+              href={backHref}
               className="group inline-flex items-center gap-2 text-foreground/45 hover:text-foreground transition-colors"
             >
               <ArrowLeft className="w-4 h-4 transition-transform duration-200 group-hover:-translate-x-0.5" strokeWidth={1.75} />
-              Work
+              {backLabel}
             </Link>
           </li>
           <li aria-hidden className="text-foreground/30">

@@ -1,0 +1,354 @@
+"use client"
+
+import { StoryTopBar } from "@/components/story-top-bar"
+import { SHOW_WIP, wip } from "@/components/wip"
+import { ScrollToTop } from "@/components/scroll-to-top"
+import { BackLinkFooter } from "@/components/back-link"
+import { StoryContents } from "@/components/story-contents"
+import { Banknote, Coins, Files, Keyboard, OctagonAlert, Timer, Users } from "lucide-react"
+import {
+  StoryPage,
+  StoryHero,
+  Divider,
+  Lede,
+  Beat,
+  Wide,
+  Narrow,
+  Figure,
+  FigurePair,
+  Clip,
+  CardStack,
+  Stage,
+  Moment,
+  Results,
+  UpNext,
+  Words,
+} from "@/components/story-case-study"
+import { BeforeFlow, Ecosystem, UserFlow } from "./diagrams"
+
+export default function ConduitStory() {
+  return (
+    <div className="min-h-screen bg-background story-static">
+      <ScrollToTop />
+      <StoryTopBar project="Conduit" backHref="/ai" backLabel="Mary Borysova" />
+
+      <StoryContents
+        items={[
+          { id: "overview", label: "Overview" },
+          { id: "problem", label: "Who and why" },
+          { id: "discovery", label: "Research" },
+          { id: "built", label: "The solution" },
+          { id: "process", label: "Key decisions" },
+        ]}
+      />
+
+      <StoryPage>
+        {/* 1. Hero */}
+        <div id="overview" className="scroll-mt-28" aria-hidden />
+        <StoryHero
+          image="/conduit/cover.png"
+          imageAlt="A coffee Certificate of Origin open in Conduit, with the fields to extract listed beside it"
+          title="Conduit: Automating the customs paperwork for importers"
+          meta={[
+            { label: "Company", value: "Conduit" },
+            { label: "Timeline", value: "4 weeks, 2026" },
+            { label: "Role", value: "Sole product manager and designer" },
+          ]}
+          intro={
+            <>
+            <p>
+              Conduit reads supplier documents and fills in the compliance forms food importers file. I was the only
+              product manager and the only designer on the team, and I owned the first version from strategy to shipped
+              front end in four weeks. I challenged the
+              founders’ original plan, for Conduit to approve or reject each document itself, and shifted the product
+              to pipelines that each importer sets up to meet their unique needs the best. I worked hand in hand with
+              the backend team on the data and the API.
+            </p>
+            <p className="mt-4 text-sm leading-relaxed text-muted-foreground/80">
+              Shared with permission under NDA. Identifying details and visuals have been recreated from scratch;
+              the product thinking is as it was.
+            </p>
+            </>
+          }
+          stats={[]}
+        />
+
+        <Divider />
+
+        {/* 2. The setup */}
+        <div id="problem" className="scroll-mt-28" aria-hidden />
+        <Lede kicker="01 Who and why" statement="Every food shipment that crosses a border travels with a stack of certificates, and compliance teams retype the details from each one.">
+          <p>
+            A single wrong weight or missing certificate number is enough to hold the shipment at the border.
+          </p>
+        </Lede>
+
+        <div className="mt-10 md:mt-14">
+          <Wide>
+            <FigurePair
+              images={[
+                { src: "/conduit/supply-drying.webp", alt: "A worker turning cocoa beans by hand on a drying rack" },
+                { src: "/conduit/supply-warehouse.webp", alt: "Warehouse workers cutting open sacks of cocoa beans" },
+              ]}
+              caption="The shipments the paperwork follows, from the farm to the warehouse"
+              aspect="3/2"
+            />
+          </Wide>
+        </div>
+
+        <Divider />
+
+        {/* 3. Discovery */}
+        <div id="discovery" className="scroll-mt-28" aria-hidden />
+        <Beat kicker="02 Research" title="Sitting with the people who do the paperwork">
+          <p>
+            I interviewed suppliers and importers to see how documents moved between them, and where the work piled
+            up.
+          </p>
+        </Beat>
+
+        <div className="mt-14">
+          <CardStack
+            label="What research showed"
+            cards={[
+              {
+                icon: Files,
+                image: "/conduit/tile-documents.jpg",
+                title: "Hundreds of documents at once",
+                body: "Large importers receive a certificate of origin and supplier documents for every shipment, and they arrive in batches.",
+              },
+              {
+                icon: Keyboard,
+                image: "/conduit/tile-hands.jpg",
+                title: "Everything is retyped",
+                body: "Compliance teams find the product name, origin, weight and certificate number, then copy them into internal forms by hand.",
+              },
+              {
+                icon: OctagonAlert,
+                image: "/conduit/tile-sacks.jpg",
+                title: "Mistakes show up at the border",
+                body: "Incomplete or incorrect data holds the shipment, and teams often find out only once it is already stuck.",
+              },
+            ]}
+          />
+        </div>
+
+        <div className="mt-10 md:mt-14 space-y-10">
+          <Narrow>
+            <p className="text-[17px] leading-relaxed text-muted-foreground">
+              With the founders, I mapped the journey end to end and narrowed the first release
+              to four jobs: extract the data, catch bad documents early, flag shipments at risk and cut manual filing errors.
+            </p>
+          </Narrow>
+          {wip(
+            <Wide>
+              <Figure
+                src="/conduit/workshop.webp"
+                alt="A service blueprint above a workshop board of sticky notes"
+                caption="Journey mapping and artifacts from the stakeholder workshops"
+              />
+            </Wide>
+          )}
+        </div>
+
+        <Divider />
+
+        {/* 4. What we built */}
+        <div id="built" className="scroll-mt-28" aria-hidden />
+        <Beat
+          kicker="03 The solution"
+          title="I designed reusable pipelines that importers set up once and run on every shipment."
+        />
+
+        <div className="mt-12">
+          <Wide>
+            <div>
+              <UserFlow />
+            </div>
+          </Wide>
+        </div>
+
+        <div className="mt-16 space-y-24 md:space-y-32">
+          <Stage
+            title="Monitoring"
+            visual={
+              <Figure
+                src="/conduit/inbox-all.webp"
+                alt="Inbox listing every document with its status, type and source"
+                caption="Every document's status, type and source at a glance"
+              />
+            }
+          >
+            <p>
+              Documents arrive grouped by shipment, and anything that needs a person's decision or a new file
+              from the exporter is flagged. Importers can see which shipments are at risk without opening them.
+            </p>
+          </Stage>
+
+          <Stage
+            title="Extraction"
+            visual={
+              <Clip
+                src="/conduit/parsing.mp4"
+                label="Building an extraction workflow on a real supplier document"
+                caption="Building an extraction pipeline on a real certificate"
+              />
+            }
+          >
+            <p>
+              Importers choose which fields to pull from each document type, or start from Conduit's suggestions and adjust them.
+            </p>
+          </Stage>
+
+          <Stage
+            title="Injection"
+            visual={
+              <Clip
+                src="/conduit/prepop.mp4"
+                label="Mapping fields on a form preview"
+                caption="Mapping fields straight onto the form they fill"
+              />
+            }
+          >
+            <p>
+              Importers map fields directly on the form preview, test it on a sample document and adjust it before it goes live.
+            </p>
+          </Stage>
+
+          <Stage
+            title="Audit and connect"
+            visual={
+              <FigurePair
+                images={[
+                  { src: "/conduit/runs.webp", alt: "Runs page listing every processed document with its pipeline, status and run ID" },
+                  { src: "/conduit/home-api.png", alt: "Direct API call dialog for running a saved pipeline" },
+                ]}
+                caption="Runs for auditing every execution, and the API for connecting existing systems"
+              />
+            }
+          >
+            <p>
+              Every run is recorded with its status, so compliance teams can see what happened to each document. An API
+              connects the pipelines to the tools importers already use.
+            </p>
+          </Stage>
+        </div>
+
+        <Divider />
+
+        {/* 5. Moments */}
+        <div id="process" className="scroll-mt-28" aria-hidden />
+        <Beat kicker="04" title="Key decisions" />
+
+        <div className="mt-5 space-y-24 md:space-y-32">
+          {/* Problem, the direction we chose, then why */}
+          <div className="space-y-8 md:space-y-10">
+            <Moment
+              n={1}
+              title="Dropping the rules engine"
+              visual={
+                <div className="space-y-8 md:space-y-10">
+                  {wip(
+                    <Figure
+                      src="/conduit/inbox-by-shipment.webp"
+                      alt="Inbox with one row per shipment and a column per document type, each marked clear or needs review"
+                      caption="Inbox grouped by shipment, with the documents that need attention flagged"
+                    />
+                  )}
+                  <figure>
+                    <BeforeFlow />
+                    <figcaption className="mt-3 text-[13px] text-muted-foreground text-center">
+                      Before: A rigid, one-size-fits-all extraction pipeline
+                    </figcaption>
+                  </figure>
+                  <figure>
+                    <Ecosystem />
+                    <figcaption className="mt-3 text-[13px] text-muted-foreground text-center">
+                      After: each importer&apos;s policy sets what Conduit pulls and which form it fills
+                    </figcaption>
+                  </figure>
+                </div>
+              }
+            >
+              <p>
+                The plan was for Conduit to pass or fail each document. Research showed that every importer checks
+                documents against its own policy. A single pass or fail rule couldn&apos;t serve them all.
+              </p>
+              <p>
+                I recommended letting each importer choose what to check. Conduit only extracts the data from the
+                importer&apos;s documents and fills in the compliance forms, based on the pipelines the importer sets
+                up. The founders agreed, and we built the pipelines instead.
+              </p>
+            </Moment>
+          </div>
+
+          <Moment
+            n={2}
+            title="Confidence on every field"
+            visual={
+              <Figure
+                src="/conduit/states.webp"
+                alt="Extracted fields as confident, needs review, not found and corrected"
+                caption="The states a field can arrive in"
+              />
+            }
+          >
+            <p>
+              Reading a scanned certificate is never certain, and an officer who accepts a wrong value signs their name
+              to it. Each extracted field carries a confidence level, and anything below the threshold is flagged for
+              review.
+            </p>
+          </Moment>
+
+
+          <Moment
+            n={3}
+            title="Reducing manual work across complex operations"
+            visual={
+              <>
+                {wip(
+                  <Figure
+                    src="/conduit/ask-1.webp"
+                    alt="Conduit chat: an answer about what blocks a shipment, with its sources, then the agent asking which value to file in the declaration"
+                    caption="The agent files the paperwork, but leaves the judgement calls to the officer"
+                  />
+                )}
+              </>
+            }
+          >
+            <p>
+              I designed an agentic AI system that helps officers identify missing or expiring documents, verify
+              requirements, and file paperwork. It retrieves information across documents, executes operational tasks,
+              and provides source-backed answers so officers can verify results without manually searching multiple
+              systems.
+            </p>
+            {!SHOW_WIP && (
+              <p className="!-mt-1 flex w-fit items-center gap-2 rounded-md border border-[#B4532A]/25 bg-[#B4532A]/[0.06] px-2.5 py-1 font-mono text-[12px] leading-none text-[#B4532A]">
+                {/* The accent square used across the site */}
+                <span aria-hidden className="h-1.5 w-1.5 bg-[#B4532A]" />
+                Case study coming soon!
+              </p>
+            )}
+          </Moment>
+        </div>
+
+        <Divider />
+
+        <div className="mt-24 md:mt-32">
+          <UpNext
+            href="/cases/veeqo"
+            image="/images/vq_cover.png"
+            imageAlt="Editing a packing slip in the Veeqo document system"
+            title="Veeqo"
+            summary="Rebuilding the document system behind 50k+ sellers."
+            meta={["Shipping", "Product design lead"]}
+          />
+        </div>
+
+        <Narrow className="mt-16">
+          <BackLinkFooter />
+        </Narrow>
+      </StoryPage>
+    </div>
+  )
+}

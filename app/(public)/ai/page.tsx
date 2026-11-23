@@ -13,15 +13,15 @@ import { DemoPlayer } from "./demo-player"
 ------------------------------------------------------------------- */
 const EMAIL = "borysova.mary@gmail.com"
 const MAILTO = `mailto:${EMAIL}?subject=${encodeURIComponent("Hello from your AI page")}`
-// Case study links point at the main domain (those pages are public, see root-password-gate.tsx), so they work from the subdomain too.
+// Speaking lives on the main domain (open, see root-password-gate.tsx). The PM case studies are in app/(public)/cases.
 const MAIN_SITE = "https://maryborysova.com"
 // TODO (recommended): what you're open to, e.g. "Open to product roles at AI startups, London or remote, from January."
 // Leave empty to hide.
 const AVAILABILITY = ""
 const LINKS = {
   linkedin: "https://www.linkedin.com/in/maria-borysova/",
-  conduitCase: `${MAIN_SITE}/projects/conduit`,
-  veeqoCase: `${MAIN_SITE}/projects/veeqo`,
+  conduitCase: "/cases/conduit",
+  veeqoCase: "/cases/veeqo",
   substack: "https://healthmattersandme.substack.com/",
   speaking: `${MAIN_SITE}/speaking`,
 }
@@ -288,7 +288,7 @@ export default function AiPage() {
               <dl className={CASE_META}>
                 <div>
                   <dt className={META_LABEL}>Role</dt>
-                  <dd>Product lead</dd>
+                  <dd>Sole product manager and designer</dd>
                 </div>
                 <div>
                   <dt className={META_LABEL}>Built with</dt>
