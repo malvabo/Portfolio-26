@@ -402,7 +402,7 @@ export default function AiPage() {
         </section>
 
         {/* BodySpec: same layout, no case study link */}
-        <section aria-labelledby="bodyspec-title" className={`${CONTAINER} ${CASE_SECTION} pb-12 md:pb-20`}>
+        <section aria-labelledby="bodyspec-title" className={`${CONTAINER} ${CASE_SECTION}`}>
           <div className="flex flex-wrap gap-2 mb-3">
             <span className={TAG}>Series A</span>
           </div>
@@ -443,6 +443,56 @@ export default function AiPage() {
                 alt="BodySpec booking page with a list of scan locations and time slots beside a map"
                 width={2048}
                 height={1366}
+                sizes="(min-width: 1024px) 60vw, 100vw"
+                className="h-auto w-full"
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* TempStars: same layout, no case study link */}
+        <section aria-labelledby="tempstars-title" className={`${CONTAINER} ${CASE_SECTION} pb-12 md:pb-20`}>
+          <h2 id="tempstars-title" className={`${CARD_TITLE} mb-4 md:mb-6`}>
+            TempStars: Building marketplace liquidity for 25K+ dentists
+          </h2>
+          <div className={CASE_GRID}>
+            <div className={CASE_TEXT}>
+              <p>
+                When a dental clinic is short-staffed, it needs help now. I re-engineered the signup and matching logic
+                for Canada&apos;s largest dental marketplace to fix a 40% drop-off between signup and first booking. By
+                making matching faster and more transparent, we turned a week-long wait into a 48-hour win.
+              </p>
+              <dl className="grid w-full grid-cols-3 gap-4 text-[15px] leading-snug">
+                <div className="flex flex-col-reverse justify-end">
+                  <dt className="text-sm text-muted-foreground">lift in activation</dt>
+                  <dd className="text-xl font-medium text-foreground mb-0.5">20%</dd>
+                </div>
+                <div className="flex flex-col-reverse justify-end">
+                  <dt className="text-sm text-muted-foreground">time to first offer</dt>
+                  <dd className="text-xl font-medium text-foreground mb-0.5">7d → 2d</dd>
+                </div>
+                <div className="flex flex-col-reverse justify-end">
+                  <dt className="text-sm text-muted-foreground">booked shifts year on year</dt>
+                  <dd className="text-xl font-medium text-foreground mb-0.5">+25%</dd>
+                </div>
+              </dl>
+              <dl className={`${CASE_META} mt-6 md:mt-8`}>
+                <div>
+                  <dt className={META_LABEL}>Role</dt>
+                  <dd>Lead product designer</dd>
+                </div>
+                <div>
+                  <dt className={META_LABEL}>Timeline</dt>
+                  <dd>Shipped 2023</dd>
+                </div>
+              </dl>
+            </div>
+            <div className={CASE_MEDIA}>
+              <Image
+                src="/images/tempstars-phones-hero.png"
+                alt="TempStars app on two phones: a dental clinic profile with neighbourhood details, and onboarding"
+                width={2048}
+                height={1152}
                 sizes="(min-width: 1024px) 60vw, 100vw"
                 className="h-auto w-full"
               />
