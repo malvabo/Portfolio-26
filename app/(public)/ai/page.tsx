@@ -273,7 +273,7 @@ export default function AiPage() {
                 shipment. It removed manual entry for compliance teams and reduced the filing errors that hold shipments at
                 the border.
               </p>
-              <dl className={`${CASE_META} mt-2 md:mt-3`}>
+              <dl className={CASE_META}>
                 <div>
                   <dt className={META_LABEL}>Role</dt>
                   <dd>Sole product manager and designer</dd>
@@ -307,7 +307,7 @@ export default function AiPage() {
               </div>
               <p>
                 I led the design that replaced the third-party PDF tool behind documents: an HTML-based engine with
-                AI-assisted editing, a rebuilt document library, and a migration path for the enterprise accounts.
+                AI-assisted editing, a new document library, and a migration path for the enterprise accounts.
               </p>
               <dl className={CASE_META}>
                 <div className="flex flex-col-reverse justify-end">
@@ -319,7 +319,7 @@ export default function AiPage() {
                   <dd className="text-xl font-medium text-foreground mb-0.5">0% churn</dd>
                 </div>
               </dl>
-              <dl className={`${CASE_META} mt-6 md:mt-8`}>
+              <dl className={CASE_META}>
                 <div>
                   <dt className={META_LABEL}>Role</dt>
                   <dd>Sole product manager and designer</dd>
@@ -361,7 +361,7 @@ export default function AiPage() {
                 I designed AI-powered automation for Amazon&apos;s internal shipping operations, cutting manual work for
                 thousands of operators and speeding up decisions across complex logistics workflows.
               </p>
-              <dl className={`${CASE_META} mt-6 md:mt-8`}>
+              <dl className={CASE_META}>
                 <div>
                   <dt className={META_LABEL}>Role</dt>
                   <dd>Product design lead</dd>
@@ -413,7 +413,7 @@ export default function AiPage() {
                   <dd className="text-xl font-medium text-foreground mb-0.5">$17.2M</dd>
                 </div>
               </dl>
-              <dl className={`${CASE_META} mt-2 md:mt-3`}>
+              <dl className={CASE_META}>
                 <div>
                   <dt className={META_LABEL}>Role</dt>
                   <dd>Product lead</dd>
@@ -465,7 +465,7 @@ export default function AiPage() {
                   <dd className="text-xl font-medium text-foreground mb-0.5">+25%</dd>
                 </div>
               </dl>
-              <dl className={`${CASE_META} mt-2 md:mt-3`}>
+              <dl className={CASE_META}>
                 <div>
                   <dt className={META_LABEL}>Role</dt>
                   <dd>Lead product designer</dd>
