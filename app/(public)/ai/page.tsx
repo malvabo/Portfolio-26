@@ -349,7 +349,7 @@ export default function AiPage() {
         {/* Hero: the homepage hero, with the dot field and the AI orb */}
         <div id="top" className="relative">
           <HeroGrid quietPad={30} includeMedia />
-          <section aria-labelledby="hero-title" className={`${CONTAINER} relative z-10 pt-6 pb-6 md:pt-[72px] md:pb-6`}>
+          <section aria-labelledby="hero-title" className={`${CONTAINER} relative z-10 pt-6 pb-6 md:pt-[72px] md:pb-6 md:min-h-[calc(100svh-184px)]`}>
             <div data-grid-quiet className="max-w-[720px]">
               <Image
                 src="/images/mary-face.webp"
@@ -412,7 +412,7 @@ export default function AiPage() {
         </div>
 
         {/* Projects: Conduit as one row (text left, demo right), then a two-up grid; media on top, short copy below */}
-        <section aria-label="Featured projects" className={`${CONTAINER} pt-6 md:pt-8 pb-14 md:pb-24`}>
+        <section aria-label="Featured projects" className={`${CONTAINER} pt-6 md:pt-20 pb-14 md:pb-24`}>
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 lg:gap-x-8 gap-y-14 md:gap-y-20">
             {PROJECTS.filter((p) => !p.hidden).map((p) => (
               <li key={p.id} className={p.demo || !p.image ? "md:col-span-2" : undefined}>
