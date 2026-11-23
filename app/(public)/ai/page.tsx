@@ -181,6 +181,17 @@ const PROJECTS: Project[] = [
       height: 1152,
     },
   },
+  {
+    id: "paid-plans-title",
+    title: "Paid plans across iOS, Android, devices and web",
+    summary: "I was responsible for the paid plan rollout across iOS, Android, devices and web: 12 features, launched on every platform. The plans now bring in multi-million revenue.",
+    role: "Responsible for the rollout",
+    results: [
+      { value: "12", label: "paid features" },
+      { value: "4", label: "platforms" },
+      { value: "Multi-million", label: "in revenue" },
+    ],
+  },
 ]
 
 // Logos are black on transparent and share one height (CVS is wider, so a touch shorter).
@@ -379,20 +390,22 @@ export default function AiPage() {
         <section aria-label="Featured projects" className={`${CONTAINER} pt-6 md:pt-8 pb-14 md:pb-24`}>
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 lg:gap-x-8 gap-y-14 md:gap-y-20">
             {PROJECTS.filter((p) => !p.hidden).map((p) => (
-              <li key={p.id} className={p.demo ? "md:col-span-2" : undefined}>
+              <li key={p.id} className={p.demo || !p.image ? "md:col-span-2" : undefined}>
                 <article
                   aria-labelledby={p.id}
                   className={
                     p.demo
                       ? "flex flex-col lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)] lg:gap-12 lg:items-center"
-                      : "flex h-full flex-col"
+                      : p.image
+                        ? "flex h-full flex-col"
+                        : "flex flex-col border-t border-gray-200"
                   }
                 >
                   {p.demo ? (
                     <div className="lg:order-2">
                       <DemoPlayer chapters={CHAPTERS} label="Conduit demo, 27 seconds, no sound" />
                     </div>
-                  ) : (
+                  ) : p.image ? (
                     <div className="aspect-[16/10] overflow-hidden rounded-lg border border-gray-200 bg-gray-50">
                       <Image
                         src={p.image!.src}
@@ -403,7 +416,7 @@ export default function AiPage() {
                         className={`h-full w-full object-cover ${p.image!.position ?? ""}`}
                       />
                     </div>
-                  )}
+                  ) : null}
 
                   <div
                     className={
