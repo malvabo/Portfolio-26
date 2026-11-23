@@ -261,12 +261,13 @@ export default function AiPage() {
 
         {/* Conduit: demo */}
         <section id="demo" aria-labelledby="demo-title" className={`${CONTAINER} ${CASE_SECTION} scroll-mt-20`}>
-          <h2 id="demo-title" className={`${CARD_TITLE} mb-4 md:mb-6`}>
-            Conduit: an AI pipeline for customs paperwork
-          </h2>
-
           <div className={CASE_GRID}>
             <div className={CASE_TEXT}>
+              <div>
+                <h2 id="demo-title" className={CARD_TITLE}>
+                  Conduit: an AI pipeline for customs paperwork
+                </h2>
+              </div>
               <p>
                 I led product and design for an AI pipeline that cut customs data checks from 20 minutes to under 3 per
                 shipment. It removed manual entry for compliance teams and the filing errors that hold shipments at the
@@ -296,14 +297,14 @@ export default function AiPage() {
 
         {/* Amazon: document system, same layout as Conduit */}
         <section aria-labelledby="veeqo-title" className={`${CONTAINER} ${CASE_SECTION}`}>
-          <div className="flex flex-wrap gap-2 mb-3">
-            <span className={TAG}>Big tech</span>
-          </div>
-          <h2 id="veeqo-title" className={`${CARD_TITLE} mb-4 md:mb-6`}>
-            Amazon: Redesigning a document system for 50k+ sellers
-          </h2>
           <div className={CASE_GRID}>
             <div className={CASE_TEXT}>
+              <div>
+                <span className={`${TAG} mb-2`}>Big tech</span>
+                <h2 id="veeqo-title" className={CARD_TITLE}>
+                  Amazon: Redesigning a document system for 50k+ sellers
+                </h2>
+              </div>
               <p>
                 I led the design that replaced the third-party PDF tool behind every invoice, customs form and packing
                 slip: an HTML-based engine with AI-assisted editing, a rebuilt document library, and a migration path for
@@ -349,14 +350,14 @@ export default function AiPage() {
 
         {/* Amazon: AI automation, same layout */}
         <section aria-labelledby="amazon-ai-title" className={`${CONTAINER} ${CASE_SECTION}`}>
-          <div className="flex flex-wrap gap-2 mb-3">
-            <span className={TAG}>Big tech</span>
-          </div>
-          <h2 id="amazon-ai-title" className={`${CARD_TITLE} mb-4 md:mb-6`}>
-            Amazon: AI automation for complex shipping workflows
-          </h2>
           <div className={CASE_GRID}>
             <div className={CASE_TEXT}>
+              <div>
+                <span className={`${TAG} mb-2`}>Big tech</span>
+                <h2 id="amazon-ai-title" className={CARD_TITLE}>
+                  Amazon: AI automation for complex shipping workflows
+                </h2>
+              </div>
               <p>
                 I designed AI-powered automation for Amazon&apos;s internal shipping operations, cutting manual work for
                 thousands of operators and speeding up decisions across complex logistics workflows.
@@ -391,18 +392,17 @@ export default function AiPage() {
 
         {/* BodySpec: same layout, no case study link */}
         <section aria-labelledby="bodyspec-title" className={`${CONTAINER} ${CASE_SECTION}`}>
-          <div className="flex flex-wrap gap-2 mb-3">
-            <span className={TAG}>Series A</span>
-          </div>
-          <h2 id="bodyspec-title" className={`${CARD_TITLE} mb-4 md:mb-6`}>
-            BodySpec: Scaling bookings by 20% for 500K+ users
-          </h2>
           <div className={CASE_GRID}>
             <div className={CASE_TEXT}>
+              <div>
+                <span className={`${TAG} mb-2`}>Series A</span>
+                <h2 id="bodyspec-title" className={CARD_TITLE}>
+                  BodySpec: Scaling bookings by 20% for 500K+ users
+                </h2>
+              </div>
               <p>
-                Medical data can be scary and confusing. I overhauled the BodySpec experience to turn complex DXA scans
-                into simple, actionable health stories. By shifting the focus from one-off data to long-term habits, we
-                helped 500K users understand their bodies and keep coming back for tracking.
+                I redesigned how BodySpec presents DXA scan results, turning complex body composition data into clear
+                progress tracking that brings people back for repeat scans.
               </p>
               <dl className={CASE_META}>
                 <div className="flex flex-col-reverse justify-end">
@@ -414,10 +414,10 @@ export default function AiPage() {
                   <dd className="text-xl font-medium text-foreground mb-0.5">$17.2M</dd>
                 </div>
               </dl>
-              <dl className={`${CASE_META} mt-6 md:mt-8`}>
+              <dl className={`${CASE_META} mt-2 md:mt-3`}>
                 <div>
                   <dt className={META_LABEL}>Role</dt>
-                  <dd>Senior product designer</dd>
+                  <dd>Product lead</dd>
                 </div>
                 <div>
                   <dt className={META_LABEL}>Timeline</dt>
@@ -427,10 +427,10 @@ export default function AiPage() {
             </div>
             <div className={CASE_MEDIA}>
               <Image
-                src="/images/bodyspec-location-booking.webp"
-                alt="BodySpec booking page with a list of scan locations and time slots beside a map"
+                src="/images/vv2onqfz97c3kh8t7xcotjbkzs.avif"
+                alt="BodySpec DXA results on a phone: body fat, muscle, bone density and visceral fat cards"
                 width={2048}
-                height={1366}
+                height={1365}
                 sizes="(min-width: 1024px) 60vw, 100vw"
                 className="h-auto w-full"
               />
@@ -440,15 +440,17 @@ export default function AiPage() {
 
         {/* TempStars: same layout, no case study link */}
         <section aria-labelledby="tempstars-title" className={`${CONTAINER} ${CASE_SECTION} pb-12 md:pb-20`}>
-          <h2 id="tempstars-title" className={`${CARD_TITLE} mb-4 md:mb-6`}>
-            TempStars: Building marketplace liquidity for 25K+ dentists
-          </h2>
           <div className={CASE_GRID}>
             <div className={CASE_TEXT}>
+              <div>
+                <h2 id="tempstars-title" className={CARD_TITLE}>
+                  TempStars: Building marketplace liquidity for 25K+ dentists
+                </h2>
+              </div>
               <p>
-                When a dental clinic is short-staffed, it needs help now. I re-engineered the signup and matching logic
-                for Canada&apos;s largest dental marketplace to fix a 40% drop-off between signup and first booking. By
-                making matching faster and more transparent, we turned a week-long wait into a 48-hour win.
+                I re-engineered the signup and matching logic for Canada&apos;s largest dental marketplace to fix a 40%
+                drop-off between signup and first booking. By making matching faster and more transparent, we turned a
+                week-long wait into a 48-hour win.
               </p>
               <dl className="grid w-full grid-cols-3 gap-4 text-[15px] leading-snug">
                 <div className="flex flex-col-reverse justify-end">
@@ -464,7 +466,7 @@ export default function AiPage() {
                   <dd className="text-xl font-medium text-foreground mb-0.5">+25%</dd>
                 </div>
               </dl>
-              <dl className={`${CASE_META} mt-6 md:mt-8`}>
+              <dl className={`${CASE_META} mt-2 md:mt-3`}>
                 <div>
                   <dt className={META_LABEL}>Role</dt>
                   <dd>Lead product designer</dd>
