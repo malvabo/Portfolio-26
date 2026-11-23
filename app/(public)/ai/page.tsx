@@ -130,7 +130,7 @@ const EYEBROW_CAPS = "uppercase text-[13px] font-mono tracking-wide text-muted-f
 const TAG = "inline-block px-2.5 py-0.5 text-[11px] font-mono uppercase tracking-normal rounded-md bg-[#E8E3DD] text-[#6B5D4F]"
 // Project blocks: media left, text right on desktop; stacked on mobile
 const CASE_SECTION = "pt-6 pb-8 md:pt-8 md:pb-14"
-const CASE_GRID = "grid grid-cols-1 lg:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)] gap-5 lg:gap-12"
+const CASE_GRID = "grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)] gap-5 lg:gap-12"
 const CASE_MEDIA = "overflow-hidden rounded-lg border border-gray-200 bg-gray-50 self-start"
 const CASE_TEXT = "flex flex-col items-start gap-4 text-base md:text-[17px] leading-[1.7] text-foreground"
 const CASE_META = "grid w-full grid-cols-2 gap-4 text-[15px] leading-snug"
@@ -138,6 +138,7 @@ const META_LABEL = "text-sm text-muted-foreground mb-1"
 const CARD_TITLE = "font-serif text-[22px] md:text-[26px] leading-[1.15] tracking-tight text-foreground text-balance"
 const PILL_GLASS = `inline-flex items-center justify-center gap-2 min-h-11 px-5 text-sm font-medium rounded-full bg-white/40 backdrop-blur-md border border-gray-300/70 text-foreground hover:bg-white/60 hover:border-gray-400/70 transition-all duration-300 shadow-sm hover:shadow-md ${FOCUS}`
 const ARROW_LINK = `inline-flex items-center gap-1.5 text-base font-medium text-foreground underline underline-offset-[6px] decoration-foreground/25 hover:decoration-foreground transition-colors rounded ${FOCUS}`
+const NAV_LINK = `text-muted-foreground hover:text-foreground transition-colors rounded ${FOCUS}`
 const TEXT_LINK = `underline underline-offset-4 decoration-border hover:text-foreground hover:decoration-foreground ${FOCUS}`
 
 const Arrow = () => (
@@ -178,18 +179,25 @@ export default function AiPage() {
               <Image src="/logo-mb.svg" alt="" width={52} height={40} priority className="h-[30px] md:h-[38px] w-auto" />
             </a>
             <nav aria-label="Sections">
-              <ul className="flex items-center gap-6 md:gap-10">
-                {[
-                  ["Work", "#work"],
-                  ["Speaking", LINKS.speaking],
-                  ["Contact", "#contact"],
-                ].map(([label, href]) => (
-                  <li key={href}>
-                    <a href={href} className={`text-[15px] text-muted-foreground hover:text-foreground transition-colors rounded ${FOCUS}`}>
-                      {label}
-                    </a>
-                  </li>
-                ))}
+              <ul className="flex items-center gap-5 md:gap-10 text-[15px]">
+                <li className="hidden sm:block">
+                  <a href="#work" className={NAV_LINK}>Work</a>
+                </li>
+                <li>
+                  <a href={LINKS.speaking} className={NAV_LINK}>Speaking</a>
+                </li>
+                <li>
+                  <a href={MAILTO} className={`${NAV_LINK} inline-flex items-center gap-1 text-foreground`}>
+                    Say hello
+                    <ArrowUpRight />
+                  </a>
+                </li>
+                <li>
+                  <a href={LINKS.linkedin} target="_blank" rel="noopener noreferrer" className={`${NAV_LINK} inline-flex items-center gap-1 text-foreground`}>
+                    LinkedIn<span className="sr-only"> (opens in a new tab)</span>
+                    <ArrowUpRight />
+                  </a>
+                </li>
               </ul>
             </nav>
           </div>
@@ -199,7 +207,7 @@ export default function AiPage() {
       <main id="main">
         {/* Hero: the homepage hero, with the dot field and the AI orb */}
         <div id="top" className="relative">
-          <HeroGrid />
+          <HeroGrid quietPad={30} includeMedia />
           <section aria-labelledby="hero-title" className={`${CONTAINER} relative z-10 pt-6 pb-6 md:pt-[72px] md:pb-12`}>
             <div data-grid-quiet className="max-w-[720px]">
               <Image
@@ -218,18 +226,8 @@ export default function AiPage() {
                 perspective to product development. Most recently at Amazon, I led work on AI-powered products and
                 enterprise platforms, translating complex business needs into scalable solutions.
               </p>
-              <div className="mt-[18px] md:mt-6 flex flex-wrap gap-x-7 gap-y-2">
-                <a href={MAILTO} className={ARROW_LINK}>
-                  Say hello
-                  <ArrowUpRight />
-                </a>
-                <a href={LINKS.linkedin} target="_blank" rel="noopener noreferrer" className={ARROW_LINK}>
-                  LinkedIn<span className="sr-only"> (opens in a new tab)</span>
-                  <ArrowUpRight />
-                </a>
-              </div>
               {/* Key numbers, as on the portfolio hero */}
-              <dl className="mt-[18px] md:mt-[30px] grid grid-cols-3 gap-x-4 sm:gap-x-8">
+              <dl className="mt-6 md:mt-9 grid grid-cols-3 gap-x-4 sm:gap-x-8">
                 {[
                   { value: "$14M/year", label: "Operational costs saved through workflow optimization" },
                   { value: "100K+", label: "Business users across enterprise products" },
@@ -272,18 +270,11 @@ export default function AiPage() {
 
         {/* Conduit: demo */}
         <section id="demo" aria-labelledby="demo-title" className={`${CONTAINER} ${CASE_SECTION} scroll-mt-20`}>
-          <div className="flex flex-wrap gap-2 mb-3">
-            <span className={TAG}>Prototype, designed and built by me</span>
-          </div>
           <h2 id="demo-title" className={`${CARD_TITLE} mb-4 md:mb-6`}>
             Conduit: an AI pipeline for customs paperwork
           </h2>
 
           <div className={CASE_GRID}>
-            <div>
-              <DemoPlayer chapters={CHAPTERS} label="Conduit demo, 54 seconds, no sound" />
-            </div>
-
             <div className={CASE_TEXT}>
               <p>
                 Food importers copy details from supplier documentation into internal compliance forms by hand. If one
@@ -309,6 +300,10 @@ export default function AiPage() {
                 <Arrow />
               </a>
             </div>
+
+            <div>
+              <DemoPlayer chapters={CHAPTERS} label="Conduit demo, 54 seconds, no sound" />
+            </div>
           </div>
         </section>
 
@@ -321,16 +316,6 @@ export default function AiPage() {
             Amazon: Redesigning a document system for 50k+ sellers
           </h2>
           <div className={CASE_GRID}>
-            <div className={CASE_MEDIA}>
-              <Image
-                src="/images/vq11.png"
-                alt="Document setup with branding controls and a live invoice preview"
-                width={2844}
-                height={2010}
-                sizes="(min-width: 1024px) 60vw, 100vw"
-                className="h-auto w-full"
-              />
-            </div>
             <div className={CASE_TEXT}>
               <p>
                 I led the design that replaced the third-party PDF tool behind every invoice, customs form and packing
@@ -362,6 +347,16 @@ export default function AiPage() {
                 <Arrow />
               </a>
             </div>
+            <div className={CASE_MEDIA}>
+              <Image
+                src="/images/vq11.png"
+                alt="Document setup with branding controls and a live invoice preview"
+                width={2844}
+                height={2010}
+                sizes="(min-width: 1024px) 60vw, 100vw"
+                className="h-auto w-full"
+              />
+            </div>
           </div>
         </section>
 
@@ -374,16 +369,6 @@ export default function AiPage() {
             Amazon: AI automation for complex shipping workflows
           </h2>
           <div className={CASE_GRID}>
-            <div className={CASE_MEDIA}>
-              <Image
-                src="/images/aivq3.png"
-                alt="An AI shipping-rate suggestion with its reasoning, above the cheapest and fastest options"
-                width={2844}
-                height={2010}
-                sizes="(min-width: 1024px) 60vw, 100vw"
-                className="h-auto w-full"
-              />
-            </div>
             <div className={CASE_TEXT}>
               <p>
                 I designed AI-powered automation for Amazon&apos;s internal shipping operations, cutting manual work for
@@ -403,6 +388,16 @@ export default function AiPage() {
                 <Lock />
                 Case study and results available during the interview
               </span>
+            </div>
+            <div className={CASE_MEDIA}>
+              <Image
+                src="/images/aivq1.png"
+                alt="Orders page with an AI actions panel: a shipping savings insight and restock and stock-move recommendations"
+                width={2844}
+                height={2010}
+                sizes="(min-width: 1024px) 60vw, 100vw"
+                className="h-auto w-full"
+              />
             </div>
           </div>
         </section>
@@ -494,7 +489,7 @@ export default function AiPage() {
 
       {/* Contact: closes on the same dot field as the homepage footer */}
       <footer id="contact" className="relative overflow-hidden border-t border-border/40 py-14 md:py-24 scroll-mt-20">
-        <HeroGrid mask="linear-gradient(to bottom, transparent 0, #000 35%, #000 100%)" />
+        <HeroGrid mask="linear-gradient(to bottom, transparent 0, #000 35%, #000 100%)" quietPad={30} includeMedia />
         <div className={`${CONTAINER} relative`}>
           <div data-grid-quiet className="max-w-[720px]">
             <h2 className="font-serif text-[1.75rem] md:text-[2rem] leading-[1.15] tracking-[-0.02em] text-balance">

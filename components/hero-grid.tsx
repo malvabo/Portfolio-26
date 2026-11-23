@@ -98,7 +98,13 @@ function drawCell(ctx: CanvasRenderingContext2D, c: Cell) {
 // Calmer behind the statement, fading out at the top and bottom edges.
 const DEFAULT_MASK = "linear-gradient(to bottom, transparent 0, #000 12%, #000 85%, transparent 100%)"
 
-export function HeroGrid({ mask = DEFAULT_MASK }: { mask?: string } = {}) {
+// quietPad: how far (px) the still zone extends around quiet text. includeMedia: also keep
+// images, SVGs and canvases inside [data-grid-quiet] still (logos, the AI orb).
+export function HeroGrid({
+  mask = DEFAULT_MASK,
+  quietPad = 10,
+  includeMedia = false,
+}: { mask?: string; quietPad?: number; includeMedia?: boolean } = {}) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
 
   useEffect(() => {
@@ -130,7 +136,7 @@ export function HeroGrid({ mask = DEFAULT_MASK }: { mask?: string } = {}) {
       // Marks behind the statement stay still so the copy reads cleanly. Measure each
       // rendered line of text, not the whole wrapper: the wrapper is wider than the
       // lines, and using it left a dead strip to the right of the text.
-      const pad = 10
+      const pad = quietPad
       const quietRects: { l: number; t: number; r: number; b: number }[] = []
       for (const el of Array.from(document.querySelectorAll<HTMLElement>("[data-grid-quiet]"))) {
         const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT)
@@ -140,6 +146,9 @@ export function HeroGrid({ mask = DEFAULT_MASK }: { mask?: string } = {}) {
           const range = document.createRange()
           range.selectNodeContents(n)
           lines.push(...Array.from(range.getClientRects()))
+        }
+        if (includeMedia) {
+          for (const m of Array.from(el.querySelectorAll("img, svg, canvas"))) lines.push(m.getBoundingClientRect())
         }
         for (const r of lines) {
           if (r.width < 1 || r.height < 1) continue
