@@ -3,7 +3,7 @@ import { Geist, Lora } from 'next/font/google'
 import localFont from 'next/font/local'
 import { Analytics } from '@vercel/analytics/next'
 import { RootPasswordGate } from '@/components/root-password-gate'
-import './globals.css'
+import '../globals.css'
 
 const _geist = Geist({ 
   subsets: ['latin'],

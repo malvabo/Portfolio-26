@@ -179,3 +179,11 @@ html.story-cursor-on,
 html.story-cursor-on * {
   cursor: none !important;
 }
+
+/* Static case study: no scroll reveals or word-by-word animation (used on the Conduit case) */
+.story-static .story-reveal,
+.story-static .story-word {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
