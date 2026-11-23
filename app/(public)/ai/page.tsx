@@ -126,9 +126,16 @@ const REVIEWS = [
 const CONTAINER = "container mx-auto px-6 md:px-8 lg:px-12 max-w-7xl"
 const FOCUS = "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
 const EYEBROW = "text-sm text-muted-foreground"
-const TAG = "inline-block px-2.5 py-0.5 text-[13px] rounded-md bg-[#E8E3DD] text-[#6B5D4F]"
+const EYEBROW_CAPS = "uppercase text-[13px] font-mono tracking-wide text-muted-foreground"
+const TAG = "inline-block px-2.5 py-0.5 text-[11px] font-mono uppercase tracking-normal rounded-md bg-[#E8E3DD] text-[#6B5D4F]"
+// Project blocks: media left, text right on desktop; stacked on mobile
+const CASE_SECTION = "pt-6 pb-8 md:pt-8 md:pb-14"
+const CASE_GRID = "grid grid-cols-1 lg:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)] gap-5 lg:gap-12"
+const CASE_MEDIA = "overflow-hidden rounded-lg border border-gray-200 bg-gray-50 self-start"
+const CASE_TEXT = "flex flex-col items-start gap-4 text-base md:text-[17px] leading-[1.7] text-foreground"
+const CASE_META = "grid w-full grid-cols-2 gap-4 text-[15px] leading-snug"
+const META_LABEL = "text-sm text-muted-foreground mb-1"
 const CARD_TITLE = "font-serif text-[22px] md:text-[26px] leading-[1.15] tracking-tight text-foreground text-balance"
-const COL_LABEL = "text-sm mb-3 text-muted-foreground"
 const PILL_GLASS = `inline-flex items-center justify-center gap-2 min-h-11 px-5 text-sm font-medium rounded-full bg-white/40 backdrop-blur-md border border-gray-300/70 text-foreground hover:bg-white/60 hover:border-gray-400/70 transition-all duration-300 shadow-sm hover:shadow-md ${FOCUS}`
 const ARROW_LINK = `inline-flex items-center gap-1.5 text-base font-medium text-foreground underline underline-offset-[6px] decoration-foreground/25 hover:decoration-foreground transition-colors rounded ${FOCUS}`
 const TEXT_LINK = `underline underline-offset-4 decoration-border hover:text-foreground hover:decoration-foreground ${FOCUS}`
@@ -236,7 +243,7 @@ export default function AiPage() {
                   </div>
                 ))}
               </dl>
-              <ul aria-label="Companies I've built products for" className="mt-[18px] md:mt-[30px] flex flex-wrap items-center gap-x-6 sm:gap-x-8 gap-y-4">
+              <ul aria-label="Companies I've built products for" className="mt-9 md:mt-[60px] flex flex-wrap items-center gap-x-6 sm:gap-x-8 gap-y-4">
                 {LOGOS.map((l) => (
                   <li key={l.name} className="flex h-6 items-center">
                     <Image
@@ -253,8 +260,18 @@ export default function AiPage() {
           </section>
         </div>
 
-        {/* Demo: Conduit */}
-        <section id="demo" aria-labelledby="demo-title" className={`${CONTAINER} pt-5 pb-8 md:pt-12 md:pb-16 scroll-mt-20`}>
+        {/* Featured projects: same label as the homepage, no divider */}
+        <div id="work" className={`${CONTAINER} pt-2 md:pt-4 scroll-mt-20`}>
+          <p className={`${EYEBROW_CAPS} inline-flex items-center gap-1.5`}>
+            Featured projects
+            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth={1.75} viewBox="0 0 24 24" aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 5v14m0 0l-5-5m5 5l5-5" />
+            </svg>
+          </p>
+        </div>
+
+        {/* Conduit: demo */}
+        <section id="demo" aria-labelledby="demo-title" className={`${CONTAINER} ${CASE_SECTION} scroll-mt-20`}>
           <div className="flex flex-wrap gap-2 mb-3">
             <span className={TAG}>Prototype, designed and built by me</span>
           </div>
@@ -262,12 +279,12 @@ export default function AiPage() {
             Conduit: an AI pipeline for customs paperwork
           </h2>
 
-          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)] gap-5 lg:gap-12">
+          <div className={CASE_GRID}>
             <div>
               <DemoPlayer chapters={CHAPTERS} label="Conduit demo, 54 seconds, no sound" />
             </div>
 
-            <div className="space-y-4 text-base md:text-[17px] leading-[1.7] text-foreground">
+            <div className={CASE_TEXT}>
               <p>
                 Food importers copy details from supplier documentation into internal compliance forms by hand. If one
                 data point is incorrect, the shipment can be blocked at the border for days.
@@ -277,13 +294,13 @@ export default function AiPage() {
                 Importers set up their own pipelines, choosing which fields to pull out and how to fill in the forms.
               </p>
               <p>Conduit gives extracted data confidence scores and marks data below the threshold for human review.</p>
-              <dl className="grid grid-cols-2 gap-4 text-[15px]">
+              <dl className={CASE_META}>
                 <div>
-                  <dt className={COL_LABEL.replace("mb-3", "mb-1")}>Role</dt>
+                  <dt className={META_LABEL}>Role</dt>
                   <dd>Product lead</dd>
                 </div>
                 <div>
-                  <dt className={COL_LABEL.replace("mb-3", "mb-1")}>Built with</dt>
+                  <dt className={META_LABEL}>Built with</dt>
                   <dd>{BUILT_WITH}</dd>
                 </div>
               </dl>
@@ -295,42 +312,32 @@ export default function AiPage() {
           </div>
         </section>
 
-        {/* Featured projects: the homepage project cards */}
-        <div id="work" className={`${CONTAINER} pt-6 md:pt-12 scroll-mt-20 border-t border-border/40`}>
-          <p className={`${EYEBROW} inline-flex items-center gap-1.5`}>
-            Featured projects
-            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth={1.75} viewBox="0 0 24 24" aria-hidden="true">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M12 5v14m0 0l-5-5m5 5l5-5" />
-            </svg>
-          </p>
-        </div>
-
-        {/* Veeqo documents */}
-        <section aria-labelledby="veeqo-title" className={`${CONTAINER} pt-4 md:pt-6 pb-10 md:pb-14`}>
-          <div className="flex gap-2 mb-3">
+        {/* Amazon: document system, same layout as Conduit */}
+        <section aria-labelledby="veeqo-title" className={`${CONTAINER} ${CASE_SECTION}`}>
+          <div className="flex flex-wrap gap-2 mb-3">
             <span className={TAG}>Big tech</span>
           </div>
-          <h2 id="veeqo-title" className={`${CARD_TITLE} mb-6 md:mb-8`}>
+          <h2 id="veeqo-title" className={`${CARD_TITLE} mb-4 md:mb-6`}>
             Amazon: Redesigning a document system for 50k+ sellers
           </h2>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 mb-8 md:mb-10">
-            <div className="order-2 lg:order-1">
-              <h3 className={COL_LABEL}>About</h3>
-              <p className="text-base leading-relaxed text-foreground">
+          <div className={CASE_GRID}>
+            <div className={CASE_MEDIA}>
+              <Image
+                src="/images/vq11.png"
+                alt="Document setup with branding controls and a live invoice preview"
+                width={2844}
+                height={2010}
+                sizes="(min-width: 1024px) 60vw, 100vw"
+                className="h-auto w-full"
+              />
+            </div>
+            <div className={CASE_TEXT}>
+              <p>
                 I led the design that replaced the third-party PDF tool behind every invoice, customs form and packing
                 slip: an HTML-based engine with AI-assisted editing, a rebuilt document library, and a migration path for
                 the enterprise accounts.
               </p>
-              <a href={LINKS.veeqoCase} className={`${PILL_GLASS} mt-6`}>
-                Read more<span className="sr-only"> about the Amazon document system</span>
-                <Arrow />
-              </a>
-            </div>
-
-            <div className="order-1 lg:order-2">
-              <h3 className={COL_LABEL}>Results</h3>
-              <dl className="grid grid-cols-2 lg:grid-cols-1 gap-4">
+              <dl className={CASE_META}>
                 <div className="flex flex-col-reverse justify-end">
                   <dt className="text-sm text-muted-foreground">saved in third-party platform costs</dt>
                   <dd className="text-xl font-medium text-foreground mb-0.5">$2.3M a year</dd>
@@ -340,59 +347,62 @@ export default function AiPage() {
                   <dd className="text-xl font-medium text-foreground mb-0.5">0% churn</dd>
                 </div>
               </dl>
-            </div>
-
-            <div className="order-3">
-              <h3 className={COL_LABEL}>Role</h3>
-              <div className="text-base leading-relaxed text-foreground space-y-0.5">
-                <p>Product design lead</p>
-                <p>3 months, 2026</p>
-                <span className="inline-block mt-2 px-2 py-0.5 text-[13px] tracking-tight rounded-md bg-[#E8E3DD] text-[#6B5D4F]">Web</span>
-              </div>
+              <dl className={CASE_META}>
+                <div>
+                  <dt className={META_LABEL}>Role</dt>
+                  <dd>Product design lead</dd>
+                </div>
+                <div>
+                  <dt className={META_LABEL}>Timeline</dt>
+                  <dd>3 months, 2026</dd>
+                </div>
+              </dl>
+              <a href={LINKS.veeqoCase} className={PILL_GLASS}>
+                Read the case study
+                <Arrow />
+              </a>
             </div>
           </div>
-
-          <ul className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {VEEQO_IMAGES.map((img) => (
-              <li key={img.src} className="relative aspect-[4/3] overflow-hidden rounded-lg bg-gray-50 border border-gray-200">
-                <Image src={img.src} alt={img.alt} fill sizes="(min-width: 768px) 33vw, 100vw" className="object-cover" />
-              </li>
-            ))}
-          </ul>
         </section>
 
-        {/* Amazon AI automation */}
-        <section aria-labelledby="amazon-ai-title" className={`${CONTAINER} pt-6 pb-10 md:pb-16`}>
-          <div className="flex gap-2 mb-3">
+        {/* Amazon: AI automation, same layout */}
+        <section aria-labelledby="amazon-ai-title" className={`${CONTAINER} ${CASE_SECTION} pb-12 md:pb-20`}>
+          <div className="flex flex-wrap gap-2 mb-3">
             <span className={TAG}>Big tech</span>
           </div>
-          <h2 id="amazon-ai-title" className={`${CARD_TITLE} mb-6 md:mb-8`}>
+          <h2 id="amazon-ai-title" className={`${CARD_TITLE} mb-4 md:mb-6`}>
             Amazon: AI automation for complex shipping workflows
           </h2>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
-            <div>
-              <h3 className={COL_LABEL}>About</h3>
-              <p className="text-base leading-relaxed text-foreground">
+          <div className={CASE_GRID}>
+            <div className={CASE_MEDIA}>
+              <Image
+                src="/images/aivq3.png"
+                alt="An AI shipping-rate suggestion with its reasoning, above the cheapest and fastest options"
+                width={2844}
+                height={2010}
+                sizes="(min-width: 1024px) 60vw, 100vw"
+                className="h-auto w-full"
+              />
+            </div>
+            <div className={CASE_TEXT}>
+              <p>
                 I designed AI-powered automation for Amazon&apos;s internal shipping operations, cutting manual work for
                 thousands of operators and speeding up decisions across complex logistics workflows.
               </p>
-              <span className="inline-flex items-center gap-2 mt-6 px-4 sm:px-5 py-2.5 text-[13px] sm:text-sm font-medium rounded-full bg-[#E8E3DD] text-[#6B5D4F]">
+              <dl className={CASE_META}>
+                <div>
+                  <dt className={META_LABEL}>Role</dt>
+                  <dd>Product design lead</dd>
+                </div>
+                <div>
+                  <dt className={META_LABEL}>Timeline</dt>
+                  <dd>6 months, 2025–2026</dd>
+                </div>
+              </dl>
+              <span className="inline-flex w-fit items-center gap-2 px-4 sm:px-5 py-2.5 text-[13px] sm:text-sm font-medium rounded-full bg-[#E8E3DD] text-[#6B5D4F]">
                 <Lock />
-                Case study available during the interview
+                Case study and results available during the interview
               </span>
-            </div>
-            <div>
-              <h3 className={COL_LABEL}>Results</h3>
-              <p className="text-base leading-relaxed text-foreground">Available during the interview</p>
-            </div>
-            <div>
-              <h3 className={COL_LABEL}>Role</h3>
-              <div className="text-base leading-relaxed text-foreground space-y-0.5">
-                <p>Product design lead</p>
-                <p>6 months, 2025–2026</p>
-                <span className="inline-block mt-2 px-2 py-0.5 text-[13px] tracking-tight rounded-md bg-[#E8E3DD] text-[#6B5D4F]">Web</span>
-              </div>
             </div>
           </div>
         </section>
@@ -441,7 +451,7 @@ export default function AiPage() {
 
         {/* Writing: the homepage articles block */}
         <section aria-labelledby="writing-title" className={`${CONTAINER} pt-10 pb-14 md:pt-16 md:pb-20 border-t border-border/40`}>
-          <p className={`${EYEBROW} mb-2`}>Writing</p>
+          <p className={`${EYEBROW_CAPS} mb-2`}>Writing</p>
           <h2 id="writing-title" className="font-serif text-2xl md:text-3xl leading-[1.1] tracking-tight text-foreground mb-2">
             Deep dives on AI, trust &amp; product
           </h2>
