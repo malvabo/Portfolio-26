@@ -160,6 +160,7 @@ const PROJECTS: Project[] = [
 ]
 
 // Logos are black on transparent and share one height (CVS is wider, so a touch shorter).
+const SHOW_LOGOS = false // hidden for now
 const LOGOS = [
   { name: "Amazon", src: "/ai/logos/amazon.svg", width: 603, height: 182, className: "h-[20px] sm:h-[24px]" },
   { name: "PandaDoc", src: "/ai/logos/pandadoc.png", width: 334, height: 96, className: "h-[20px] sm:h-[24px]" },
@@ -321,6 +322,7 @@ export default function AiPage() {
                   </div>
                 ))}
               </dl>
+              {SHOW_LOGOS && (
               <ul aria-label="Companies I've built products for" className="mt-9 md:mt-12 flex flex-wrap items-center gap-x-10 sm:gap-x-14 gap-y-4">
                 {LOGOS.map((l) => (
                   <li key={l.name} className="flex h-6 items-center">
@@ -334,6 +336,7 @@ export default function AiPage() {
                   </li>
                 ))}
               </ul>
+              )}
             </div>
           </section>
         </div>
