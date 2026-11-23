@@ -66,6 +66,7 @@ type Project = {
   year?: string
   results: { value: string; label: string }[]
   caseStudy?: string
+  note?: string
   demo?: boolean
   image?: { src: string; alt: string; width: number; height: number; position?: string }
 }
@@ -104,12 +105,29 @@ const PROJECTS: Project[] = [
     },
   },
   {
+    id: "amazon-ai-title",
+    tag: "Big tech",
+    title: "Amazon: AI automation for complex shipping workflows",
+    summary: "I designed AI-powered automation for Amazon's internal shipping operations, cutting manual work for thousands of operators and speeding up decisions across complex logistics workflows.",
+    role: "Product design lead",
+    year: "2026",
+    results: [],
+    note: "Case study and results available during the interview",
+    image: {
+      src: "/images/aivq1.png",
+      alt: "Orders page with an AI actions panel: a shipping savings insight and restock and stock-move recommendations",
+      width: 2844,
+      height: 2010,
+      position: "object-top",
+    },
+  },
+  {
     id: "bodyspec-title",
     tag: "Series A",
     title: "BodySpec: Scaling bookings by 20% for 500K+ users",
     summary: "I redesigned the BodySpec platform and mobile app end to end to improve conversions and increase average order value.",
     role: "Product lead",
-    year: "2022–23",
+    year: "2023",
     results: [
       { value: "$2M+", label: "ARR potential" },
       { value: "$17.2M", label: "funding round secured" },
@@ -405,6 +423,10 @@ export default function AiPage() {
                       </p>
                     </div>
                     <div className="flex flex-col">
+                      {p.note && (
+                        <p className="pt-6 text-sm text-muted-foreground">{p.note}</p>
+                      )}
+                      {p.results.length > 0 && (
                       <dl className="pt-6 flex flex-wrap gap-x-8 gap-y-3">
                         {p.results.map((r) => (
                           <div key={r.label} className="flex flex-col-reverse justify-end">
@@ -413,6 +435,7 @@ export default function AiPage() {
                           </div>
                         ))}
                       </dl>
+                      )}
 
                       {p.caseStudy && (
                         <a href={p.caseStudy} className={`${ARROW_LINK} mt-5 self-start text-[15px]`}>
