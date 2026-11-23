@@ -13,14 +13,13 @@ import { DemoPlayer } from "./demo-player"
 ------------------------------------------------------------------- */
 const EMAIL = "borysova.mary@gmail.com"
 const MAILTO = `mailto:${EMAIL}?subject=${encodeURIComponent("Hello from your AI page")}`
-// Case study links point at the main (password protected) portfolio, so they work from the subdomain too.
+// Case study links point at the main domain (those pages are public, see root-password-gate.tsx), so they work from the subdomain too.
 const MAIN_SITE = "https://maryborysova.com"
 // TODO (recommended): what you're open to, e.g. "Open to product roles at AI startups, London or remote, from January."
 // Leave empty to hide.
 const AVAILABILITY = ""
 const LINKS = {
-  // TODO: your LinkedIn profile URL
-  linkedin: "https://www.linkedin.com/in/TODO",
+  linkedin: "https://www.linkedin.com/in/maria-borysova/",
   conduitCase: `${MAIN_SITE}/projects/conduit`,
   veeqoCase: `${MAIN_SITE}/projects/veeqo`,
   substack: "https://healthmattersandme.substack.com/",
@@ -67,12 +66,11 @@ const CHAPTERS = [
   },
 ]
 
-// Logos render black at one height. To swap a wordmark for the official logo,
-// drop an SVG into public/ai/logos/ and set `src` (TODO: PandaDoc and CVS Pharmacy).
-const LOGOS: { name: string; src?: string; width: number }[] = [
-  { name: "Amazon", src: "/ai/logos/amazon.svg", width: 79 },
-  { name: "PandaDoc", width: 0 },
-  { name: "CVS Pharmacy", width: 0 },
+// Logos are black on transparent and share one height (CVS is wider, so a touch shorter).
+const LOGOS = [
+  { name: "Amazon", src: "/ai/logos/amazon.svg", width: 603, height: 182, className: "h-[20px] sm:h-[24px]" },
+  { name: "PandaDoc", src: "/ai/logos/pandadoc.png", width: 334, height: 96, className: "h-[20px] sm:h-[24px]" },
+  { name: "CVS Pharmacy", src: "/ai/logos/cvs-pharmacy.png", width: 733, height: 96, className: "h-[15px] sm:h-[18px]" },
 ]
 
 const VEEQO_IMAGES = [
@@ -132,7 +130,7 @@ const TAG = "inline-block px-2.5 py-0.5 text-[13px] rounded-md bg-[#E8E3DD] text
 const CARD_TITLE = "font-serif text-[22px] md:text-[26px] leading-[1.15] tracking-tight text-foreground text-balance"
 const COL_LABEL = "text-sm mb-3 text-muted-foreground"
 const PILL_GLASS = `inline-flex items-center justify-center gap-2 min-h-11 px-5 text-sm font-medium rounded-full bg-white/40 backdrop-blur-md border border-gray-300/70 text-foreground hover:bg-white/60 hover:border-gray-400/70 transition-all duration-300 shadow-sm hover:shadow-md ${FOCUS}`
-const PILL_SOLID = `inline-flex items-center justify-center gap-2 min-h-11 px-5 text-sm font-medium rounded-full bg-foreground text-background hover:opacity-80 transition-opacity ${FOCUS}`
+const ARROW_LINK = `inline-flex items-center gap-1.5 text-base font-medium text-foreground underline underline-offset-[6px] decoration-foreground/25 hover:decoration-foreground transition-colors rounded ${FOCUS}`
 const TEXT_LINK = `underline underline-offset-4 decoration-border hover:text-foreground hover:decoration-foreground ${FOCUS}`
 
 const Arrow = () => (
@@ -195,7 +193,7 @@ export default function AiPage() {
         {/* Hero: the homepage hero, with the dot field and the AI orb */}
         <div id="top" className="relative">
           <HeroGrid />
-          <section aria-labelledby="hero-title" className={`${CONTAINER} relative z-10 pt-8 pb-8 md:pt-24 md:pb-16`}>
+          <section aria-labelledby="hero-title" className={`${CONTAINER} relative z-10 pt-6 pb-6 md:pt-[72px] md:pb-12`}>
             <div data-grid-quiet className="max-w-[720px]">
               <Image
                 src="/images/mary-face.webp"
@@ -203,31 +201,31 @@ export default function AiPage() {
                 width={80}
                 height={80}
                 priority
-                className="mb-4 md:mb-5 h-14 w-14 md:h-20 md:w-20 rounded-xl object-cover"
+                className="mb-3 md:mb-4 h-14 w-14 md:h-20 md:w-20 rounded-xl object-cover"
               />
               <h1 id="hero-title" className="font-serif text-[1.75rem] md:text-[2rem] leading-[1.15] font-normal tracking-[-0.02em] text-foreground text-balance">
                 I build AI<AiOrb /> products for complex B2B work.
               </h1>
-              <p className="mt-4 md:mt-6 max-w-[560px] text-pretty text-[17px] leading-relaxed text-muted-foreground">
+              <p className="mt-3 md:mt-[18px] max-w-[560px] text-pretty text-[17px] leading-relaxed text-muted-foreground">
                 With 12 years in technology across product, growth and marketing, I bring a commercial and systems-level
                 perspective to product development. Most recently at Amazon, I led work on AI-powered products and
                 enterprise platforms, translating complex business needs into scalable solutions.
               </p>
-              <div className="mt-6 md:mt-8 flex flex-wrap gap-3">
-                <a href={MAILTO} className={PILL_SOLID}>
+              <div className="mt-[18px] md:mt-6 flex flex-wrap gap-x-7 gap-y-2">
+                <a href={MAILTO} className={ARROW_LINK}>
                   Say hello
                   <ArrowUpRight />
                 </a>
-                <a href={LINKS.linkedin} target="_blank" rel="noopener noreferrer" className={PILL_GLASS}>
+                <a href={LINKS.linkedin} target="_blank" rel="noopener noreferrer" className={ARROW_LINK}>
                   LinkedIn<span className="sr-only"> (opens in a new tab)</span>
                   <ArrowUpRight />
                 </a>
               </div>
               {/* Key numbers, as on the portfolio hero */}
-              <dl className="mt-6 md:mt-10 grid grid-cols-3 gap-x-4 sm:gap-x-8">
+              <dl className="mt-[18px] md:mt-[30px] grid grid-cols-3 gap-x-4 sm:gap-x-8">
                 {[
-                  { value: "$14M/year", label: "Operational costs saved through workflow redesign" },
-                  { value: "100K+", label: "Business users across enterprise products I’ve designed" },
+                  { value: "$14M/year", label: "Operational costs saved through workflow optimization" },
+                  { value: "100K+", label: "Business users across enterprise products" },
                   { value: "3", label: "International Design Awards\n1 Gold and 2 Silver" },
                 ].map((st) => (
                   <div key={st.value} className="flex flex-col-reverse justify-end">
@@ -238,20 +236,16 @@ export default function AiPage() {
                   </div>
                 ))}
               </dl>
-              <ul aria-label="Companies I've built products for" className="mt-6 md:mt-10 flex flex-wrap items-center gap-x-6 sm:gap-x-8 gap-y-4">
+              <ul aria-label="Companies I've built products for" className="mt-[18px] md:mt-[30px] flex flex-wrap items-center gap-x-6 sm:gap-x-8 gap-y-4">
                 {LOGOS.map((l) => (
                   <li key={l.name} className="flex h-6 items-center">
-                    {l.src ? (
-                      <Image
-                        src={l.src}
-                        alt={l.name}
-                        width={l.width}
-                        height={24}
-                        className="h-[18px] sm:h-[22px] w-auto [filter:brightness(0)] opacity-80"
-                      />
-                    ) : (
-                      <span className="text-[15px] sm:text-[19px] font-semibold tracking-[-0.02em] leading-none text-foreground/80">{l.name}</span>
-                    )}
+                    <Image
+                      src={l.src}
+                      alt={l.name}
+                      width={l.width}
+                      height={l.height}
+                      className={`${l.className} w-auto [filter:brightness(0)] opacity-85`}
+                    />
                   </li>
                 ))}
               </ul>
@@ -351,7 +345,7 @@ export default function AiPage() {
             <div className="order-3">
               <h3 className={COL_LABEL}>Role</h3>
               <div className="text-base leading-relaxed text-foreground space-y-0.5">
-                <p>Product lead</p>
+                <p>Product design lead</p>
                 <p>3 months, 2026</p>
                 <span className="inline-block mt-2 px-2 py-0.5 text-[13px] tracking-tight rounded-md bg-[#E8E3DD] text-[#6B5D4F]">Web</span>
               </div>
@@ -395,7 +389,7 @@ export default function AiPage() {
             <div>
               <h3 className={COL_LABEL}>Role</h3>
               <div className="text-base leading-relaxed text-foreground space-y-0.5">
-                <p>Product lead</p>
+                <p>Product design lead</p>
                 <p>6 months, 2025–2026</p>
                 <span className="inline-block mt-2 px-2 py-0.5 text-[13px] tracking-tight rounded-md bg-[#E8E3DD] text-[#6B5D4F]">Web</span>
               </div>
@@ -497,7 +491,7 @@ export default function AiPage() {
               Building something with AI? Let&apos;s talk.
             </h2>
             {AVAILABILITY && <p className="mt-4 max-w-[540px] text-[17px] leading-relaxed text-muted-foreground">{AVAILABILITY}</p>}
-            <a href={MAILTO} className={`${PILL_SOLID} mt-6`}>
+            <a href={MAILTO} className={`${ARROW_LINK} mt-5`}>
               Say hello
               <ArrowUpRight />
             </a>

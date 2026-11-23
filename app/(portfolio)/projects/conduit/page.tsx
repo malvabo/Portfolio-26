@@ -39,7 +39,6 @@ export default function ConduitStory() {
           { id: "discovery", label: "Research" },
           { id: "built", label: "The solution" },
           { id: "process", label: "Key decisions" },
-          { id: "impact", label: "Outcome" },
         ]}
       />
 
@@ -70,11 +69,7 @@ export default function ConduitStory() {
             </p>
             </>
           }
-          stats={[
-            { value: "$1.3M", label: "a year saved in compliance work" },
-            { value: "1-3 min", label: "to verify a shipment, down from 20" },
-            { value: "5", label: "organisations rolled out to" },
-          ]}
+          stats={[]}
         />
 
         <Divider />
@@ -337,45 +332,6 @@ export default function ConduitStory() {
         </div>
 
         <Divider />
-
-        {/* 6. Results */}
-        <div id="impact" className="scroll-mt-28" aria-hidden />
-        <Lede kicker="05 Outcome" statement="Importers stopped retyping certificates, and found problems before the border did." />
-
-        <div className="mt-14">
-          <Results
-            items={[
-              {
-                icon: Banknote,
-                image: "/conduit/tile-sacks.jpg",
-                value: "$1.3M",
-                label: "a year saved in compliance work",
-                body: "Across the 5 importer organisations using it, from fewer manual checks and filing errors.",
-              },
-              {
-                icon: Timer,
-                image: "/conduit/tile-time.jpg",
-                value: "1-3 min",
-                label: "to verify a shipment",
-                body: "Down from 20 minutes, saving up to two hours per shipment once pipelines replaced manual checks.",
-              },
-              {
-                icon: Coins,
-                image: "/conduit/tile-beans.jpg",
-                value: "95%",
-                label: "lower cost per document",
-                body: "Measured against the cost of processing each document by hand.",
-              },
-              {
-                icon: Users,
-                image: "/conduit/tile-team.jpg",
-                value: "5 organisations",
-                label: "rolled out to",
-                body: "Built in four weeks.",
-              },
-            ]}
-          />
-        </div>
 
         <Divider />
 
