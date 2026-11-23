@@ -74,6 +74,31 @@ type Project = {
   image?: { src: string; alt: string; width: number; height: number; position?: string }
 }
 
+// How I work: the loop, then each step with where I did it.
+const LOOP = ["Talk to customers", "Read the data", "Decide what matters", "Ship", "Measure", "Fix what isn't working"]
+const PRINCIPLES = [
+  {
+    title: "Start with customers and the numbers",
+    body: "Interviews, support tickets and funnels, side by side, until the real problem is clear and everyone agrees on it.",
+    proof: "At TempStars, 15 interviews and a funnel analysis traced a 40% drop-off to a cancellation policy, not the UI. At BodySpec, I trained technicians in several states to run interviews during scans.",
+  },
+  {
+    title: "Decide what matters, and what doesn't ship",
+    body: "I tie each call to a business outcome and take the trade-offs to leadership early, with options and their cost.",
+    proof: "At Amazon, I cut drag and drop and made the case to the VP of Product to hand-port templates: 2 weeks instead of a 4-month tool, with every top account kept.",
+  },
+  {
+    title: "Build to learn",
+    body: "I prototype with real data and real model calls, so the team argues about evidence, not opinions.",
+    proof: "Conduit flags any field below a confidence threshold for a person to confirm, a rule that came from watching the model fail on real documents.",
+  },
+  {
+    title: "Ship, measure, keep improving",
+    body: "A lean first version on time, then iterate on what the numbers say. I fix the system around the product too: policy, pricing, operations.",
+    proof: "At BodySpec, a lean first release helped close a $17.2M Series A and funded the fuller version. I rolled out paid plans across 4 platforms that now bring in multi-million revenue.",
+  },
+]
+
 // Featured projects, in order. Conduit shows the demo video instead of an image.
 const PROJECTS: Project[] = [
   {
@@ -468,6 +493,33 @@ export default function AiPage() {
               </li>
             ))}
           </ul>
+        </section>
+
+        {/* How I work: the loop, then four principles with proof */}
+        <section aria-labelledby="how-title" className={`${CONTAINER} pt-10 pb-10 md:pt-16 md:pb-16 border-t border-border/40`}>
+          <h2 id="how-title" className={`${CARD_TITLE} mb-3`}>
+            How I work
+          </h2>
+          <ol aria-label="My product loop" className="mb-8 md:mb-12 flex flex-wrap items-center gap-x-2 gap-y-1 text-base md:text-[17px] text-muted-foreground">
+            {LOOP.map((step, i) => (
+              <li key={step} className="inline-flex items-center gap-2">
+                {i > 0 && <span aria-hidden="true">→</span>}
+                <span className={i === 0 ? "text-foreground" : undefined}>{step}</span>
+              </li>
+            ))}
+          </ol>
+          <ol className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+            {PRINCIPLES.map((p, i) => (
+              <li key={p.title} className="border-t border-border/60 pt-4">
+                <span aria-hidden="true" className="block font-mono text-[13px] text-muted-foreground mb-2">
+                  0{i + 1}
+                </span>
+                <h3 className="font-serif text-[20px] leading-[1.25] tracking-tight mb-2 text-balance">{p.title}</h3>
+                <p className="text-base leading-relaxed text-foreground">{p.body}</p>
+                <p className="mt-3 text-[15px] leading-relaxed text-muted-foreground">{p.proof}</p>
+              </li>
+            ))}
+          </ol>
         </section>
 
         {/* Reviews: same cards as the homepage */}
