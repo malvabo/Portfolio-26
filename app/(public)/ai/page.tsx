@@ -24,6 +24,8 @@ const LINKS = {
   substack: "https://healthmattersandme.substack.com/",
   speaking: `${MAIN_SITE}/speaking`,
 }
+// Amazon AI automation project: hidden for now, set to true to show it again.
+const SHOW_AMAZON_AI = false
 const BUILT_WITH = "Claude Code, Google Document AI, Pydantic, Vercel, Codex, Claude API."
 
 export const metadata: Metadata = {
@@ -348,6 +350,7 @@ export default function AiPage() {
         </section>
 
         {/* Amazon: AI automation, same layout */}
+        {SHOW_AMAZON_AI && (
         <section aria-labelledby="amazon-ai-title" className={`${CONTAINER} ${CASE_SECTION}`}>
           <div className={CASE_GRID}>
             <div className={CASE_TEXT}>
@@ -388,6 +391,7 @@ export default function AiPage() {
             </div>
           </div>
         </section>
+        )}
 
         {/* BodySpec: same layout, no case study link */}
         <section aria-labelledby="bodyspec-title" className={`${CONTAINER} ${CASE_SECTION}`}>
@@ -400,8 +404,8 @@ export default function AiPage() {
                 </h2>
               </div>
               <p>
-                I redesigned how BodySpec presents DXA scan results, turning complex body composition data into clear
-                progress tracking that brings people back for repeat scans.
+                I redesigned the BodySpec platform and mobile app end to end to improve conversions and increase average
+                order value.
               </p>
               <dl className={CASE_META}>
                 <div className="flex flex-col-reverse justify-end">
@@ -426,10 +430,10 @@ export default function AiPage() {
             </div>
             <div className={CASE_MEDIA}>
               <Image
-                src="/images/vv2onqfz97c3kh8t7xcotjbkzs.avif"
-                alt="BodySpec DXA results on a phone: body fat, muscle, bone density and visceral fat cards"
-                width={2048}
-                height={1365}
+                src="/images/bodyspec-mobile-location.png"
+                alt="BodySpec app on a phone: a map of nearby scan locations with available times"
+                width={1586}
+                height={1235}
                 sizes="(min-width: 1024px) 60vw, 100vw"
                 className="h-auto w-full"
               />
