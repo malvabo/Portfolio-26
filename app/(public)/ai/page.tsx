@@ -21,6 +21,8 @@ const LINKS = {
   linkedin: "https://www.linkedin.com/in/maria-borysova/",
   conduitCase: "/cases/conduit",
   veeqoCase: "/cases/veeqo",
+  bodyspecCase: "/cases/bodyspec",
+  tempstarsCase: "/cases/tempstars",
   substack: "https://healthmattersandme.substack.com/",
   speaking: `${MAIN_SITE}/speaking`,
 }
@@ -76,8 +78,8 @@ type Project = {
 const PROJECTS: Project[] = [
   {
     id: "conduit-title",
-    title: "Conduit: an AI pipeline for customs paperwork",
-    summary: "I led product and design for an AI pipeline that cut customs data checks from 20 minutes to under 3 per shipment. It removed manual entry for compliance teams and reduced the filing errors that hold shipments at the border.",
+    title: "Conduit: an AI product for customs compliance",
+    summary: "I own Conduit end to end, from discovery to launch: an AI product that reads supplier documents and prepares customs filings for importers. It cut data checks from 20 minutes to under 3 per shipment, removed manual entry for compliance teams and reduced the filing errors that hold shipments at the border.",
     role: "Sole product manager and designer",
     results: [
       { value: "20 → 3 min", label: "customs check per shipment" },
@@ -135,6 +137,7 @@ const PROJECTS: Project[] = [
       { value: "$2M+", label: "ARR potential" },
       { value: "$17.2M", label: "funding round secured" },
     ],
+    caseStudy: LINKS.bodyspecCase,
     image: {
       src: "/images/bodyspec-mobile-location.png",
       alt: "BodySpec app on a phone: a map of nearby scan locations with available times",
@@ -153,6 +156,7 @@ const PROJECTS: Project[] = [
       { value: "7d → 2d", label: "to first offer" },
       { value: "+25%", label: "booked shifts YoY" },
     ],
+    caseStudy: LINKS.tempstarsCase,
     image: {
       src: "/images/tempstars-phones-hero.png",
       alt: "TempStars app on two phones: a dental clinic profile with neighbourhood details, and onboarding",

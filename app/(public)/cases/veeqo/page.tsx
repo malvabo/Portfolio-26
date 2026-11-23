@@ -385,7 +385,7 @@ export default function VeeqoStory() {
             image="/conduit/cover.png"
             imageAlt="A coffee Certificate of Origin open in Conduit"
             title="Conduit"
-            summary="An AI pipeline for customs paperwork."
+            summary="An AI product for customs compliance."
             meta={["Logistics", "Sole product manager and designer"]}
           />
         </div>
