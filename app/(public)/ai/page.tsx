@@ -67,6 +67,7 @@ type Project = {
   results: { value: string; label: string }[]
   caseStudy?: string
   note?: string
+  hidden?: boolean
   demo?: boolean
   image?: { src: string; alt: string; width: number; height: number; position?: string }
 }
@@ -106,6 +107,7 @@ const PROJECTS: Project[] = [
   },
   {
     id: "paa-title",
+    hidden: true, // hidden for now
     tag: "Series C",
     title: "PAA: Scaling clinical efficiency through AI-driven workflows",
     summary: "I led the dashboard redesign that turned a dense data view into a prioritised task list for clinicians, cutting the time they spend managing documents by 40% and reducing patient service delays.",
@@ -162,11 +164,11 @@ const PROJECTS: Project[] = [
     id: "amazon-ai-title",
     tag: "Big tech",
     title: "Amazon: AI automation for complex shipping workflows",
-    summary: "I designed AI-powered automation for Amazon's internal shipping operations, cutting manual work for thousands of operators and speeding up decisions across complex logistics workflows.",
+    summary: "I designed AI-powered automation for Amazon's internal shipping operations, cutting manual work for operators and speeding up decisions across complex logistics workflows.",
     role: "Product design lead",
     year: "2026",
     results: [],
-    note: "Case study and results available during the interview",
+    note: "Details available during the interview",
     image: {
       src: "/images/aivq1.png",
       alt: "Orders page with an AI actions panel: a shipping savings insight and restock and stock-move recommendations",
@@ -372,7 +374,7 @@ export default function AiPage() {
         {/* Projects: Conduit as one row (text left, demo right), then a two-up grid; media on top, short copy below */}
         <section aria-label="Featured projects" className={`${CONTAINER} pt-6 md:pt-8 pb-14 md:pb-24`}>
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 lg:gap-x-8 gap-y-14 md:gap-y-20">
-            {PROJECTS.map((p) => (
+            {PROJECTS.filter((p) => !p.hidden).map((p) => (
               <li key={p.id} className={p.demo ? "md:col-span-2" : undefined}>
                 <article
                   aria-labelledby={p.id}
