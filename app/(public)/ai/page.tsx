@@ -269,10 +269,10 @@ export default function AiPage() {
             <div className={CASE_TEXT}>
               <p>
                 I led product and design for an AI pipeline that cut customs data checks from 20 minutes to under 3 per
-                shipment, removing manual entry for compliance teams and the filing errors that hold shipments at the
+                shipment. It removed manual entry for compliance teams and the filing errors that hold shipments at the
                 border.
               </p>
-              <dl className={`${CASE_META} mt-6 md:mt-8`}>
+              <dl className={`${CASE_META} mt-2 md:mt-3`}>
                 <div>
                   <dt className={META_LABEL}>Role</dt>
                   <dd>Sole product manager and designer</dd>
