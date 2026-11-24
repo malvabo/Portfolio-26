@@ -4,7 +4,8 @@ import { StoryTopBar } from "@/components/story-top-bar"
 import { StoryContents } from "@/components/story-contents"
 import { ScrollToTop } from "@/components/scroll-to-top"
 import { BackLinkFooter } from "@/components/back-link"
-import { StoryPage, StoryHero, Lede, Beat, Narrow, Moment, KeyCall, UpNext } from "@/components/story-case-study"
+import { StoryPage, StoryHero, Lede, Beat, Narrow, Moment, KeyCall, UpNext, Wide } from "@/components/story-case-study"
+import { PlanStaircase } from "./diagrams"
 
 const Gap = () => <div className="h-14 md:h-20" aria-hidden />
 
@@ -96,10 +97,14 @@ export default function PaidPlansStory() {
           <Moment title="Price on order volume, not on seats">
             <p>
               Shipping stayed free with unlimited users, SKUs and warehouses. The paid Inventory and High Volume plans
-              scale with monthly seller-fulfilled orders, and Amazon FBA orders don&apos;t count, so sellers never feel
-              charged twice. The price grows with the seller&apos;s business, not with their team.
+              scale with monthly seller-fulfilled orders. The price grows with the seller&apos;s business, not with their
+              team.
             </p>
           </Moment>
+
+          <Wide>
+            <PlanStaircase />
+          </Wide>
 
           <Moment title="No hard stops in the middle of work">
             <p>

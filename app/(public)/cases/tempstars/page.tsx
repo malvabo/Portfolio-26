@@ -14,7 +14,9 @@ import {
   Moment,
   KeyCall,
   UpNext,
+  Wide,
 } from "@/components/story-case-study"
+import { FirstWeek } from "./diagrams"
 
 // A short version of the portfolio case study: the problem, what we changed, and the result.
 export default function TempStarsStory() {
@@ -143,6 +145,10 @@ export default function TempStarsStory() {
               caption="Onboarding captures skills early, so the first shifts shown are a match"
             />
           </div>
+
+          <Wide>
+            <FirstWeek />
+          </Wide>
         </div>
 
         <div className="h-14 md:h-20" aria-hidden />
