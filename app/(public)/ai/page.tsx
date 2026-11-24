@@ -173,7 +173,7 @@ const PROJECTS: Project[] = [
     tag: "Series A",
     title: "BodySpec: Scaling bookings by 20% for 500K+ users",
     summary: "I redesigned the BodySpec platform and mobile app end to end to improve conversions and increase average order value.",
-    role: "Product lead",
+    role: "Product manager",
     year: "2023",
     results: [
       { value: "$2M+", label: "ARR potential" },
@@ -191,7 +191,7 @@ const PROJECTS: Project[] = [
     id: "tempstars-title",
     title: "TempStars: Building marketplace liquidity for 25K+ dentists",
     summary: "I re-engineered the signup and matching logic for Canada's largest dental marketplace to fix a 40% drop-off between signup and first booking. By making matching faster and more transparent, we turned a week-long wait into a 48-hour match.",
-    role: "Product lead",
+    role: "Product manager",
     year: "2023",
     results: [
       { value: "+20%", label: "activation" },
@@ -361,7 +361,7 @@ export default function AiPage() {
                 className="mb-3 md:mb-4 h-14 w-14 md:h-20 md:w-20 rounded-xl object-cover"
               />
               <h1 id="hero-title" className="font-serif text-[1.75rem] md:text-[2rem] leading-[1.15] font-normal tracking-[-0.02em] text-foreground text-balance">
-                Product leader shaping strategy and building products that solve complex problems at scale.
+                Product manager shaping strategy and building products that solve complex problems at scale.
               </h1>
               <p className="mt-3 md:mt-[18px] max-w-[560px] text-pretty text-[17px] leading-relaxed text-muted-foreground">
                 With 12 years in technology across product, growth and marketing, I bring a commercial and systems-level

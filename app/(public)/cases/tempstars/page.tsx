@@ -42,7 +42,7 @@ export default function TempStarsStory() {
           meta={[
             { label: "Company", value: "TempStars" },
             { label: "Timeline", value: "Shipped 2023" },
-            { label: "Role", value: "Product lead" },
+            { label: "Role", value: "Product manager" },
             { label: "Team", value: "PM, customer success, data analyst, engineers" },
           ]}
           intro={

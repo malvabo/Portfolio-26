@@ -42,7 +42,7 @@ export default function BodySpecStory() {
           meta={[
             { label: "Company", value: "BodySpec, Series A" },
             { label: "Timeline", value: "2023" },
-            { label: "Role", value: "Product lead" },
+            { label: "Role", value: "Product manager" },
             { label: "Team", value: "12 people" },
           ]}
           intro={
@@ -146,7 +146,7 @@ export default function BodySpecStory() {
             imageAlt="TempStars app on two phones: a dental clinic profile and onboarding"
             title="TempStars"
             summary="Faster matching for Canada's largest dental marketplace."
-            meta={["Marketplace", "Product lead"]}
+            meta={["Marketplace", "Product manager"]}
           />
         </div>
 
