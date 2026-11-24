@@ -28,7 +28,7 @@ export default function PaidPlansStory() {
         <StoryHero
           image="/images/paid-plans.webp"
           imageAlt="Pricing page with three plans: Shipping (free), Inventory from £17 a month and High Volume from £313 a month"
-          title="Amazon: Paid plans across iOS, Android, devices and web"
+          title="Amazon: Paid plan rollout across iOS, Android, devices and web"
           meta={[
             { label: "Company", value: "Veeqo, an Amazon company" },
             { label: "Scope", value: "0 to 1 monetisation" },

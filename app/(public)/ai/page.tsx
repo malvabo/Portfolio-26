@@ -160,7 +160,7 @@ const PROJECTS: Project[] = [
     id: "paid-plans-title",
     strip: "amazon",
     tag: "Big tech",
-    title: "Amazon: Paid plans across iOS, Android, devices and web",
+    title: "Amazon: Paid plan rollout across iOS, Android, devices and web",
     summary: "I was responsible for the paid plan rollout across iOS, Android, devices and web: 12+ features, launched on every platform. The plans now bring in multi-million revenue.",
     role: "Product design lead",
     results: [
@@ -178,23 +178,24 @@ const PROJECTS: Project[] = [
     },
   },
   {
-    id: "paa-title",
-    strip: "paa",
-    tag: "Series C",
-    title: "PAA: Scaling clinical efficiency through AI-driven workflows",
-    summary: "I led the clinician workspace for an AI platform in post-hospital care: triage first, then AI that drafts insurer reports from a locked assessment. Clinicians spend 40% less time on document workflows, and PAA closed Tier-1 deals with major health plans.",
-    role: "Product design lead",
-    year: "2024",
+    id: "tempstars-title",
+    strip: "tempstars",
+    tag: "Marketplace",
+    title: "TempStars: Fixing a 65% onboarding drop-off",
+    summary: "I re-engineered the signup and matching logic for Canada's largest dental marketplace to fix a 65% drop-off between signup and first booking. By making matching faster and more transparent, we turned a week-long wait into an under-48-hour match.",
+    role: "Product lead",
+    year: "2023",
     results: [
-      { value: "~$14M/yr", label: "in clinician time saved" },
-      { value: "Tier-1 deals", label: "with Kaiser, Humana and UHC" },
+      { value: "+23%", label: "projected booked shifts YoY" },
+      { value: "~$2M", label: "a year in projected added revenue" },
+      { value: "7d → 2d", label: "to first offer" },
     ],
-    caseStudy: LINKS.paaCase,
+    caseStudy: LINKS.tempstarsCase,
     image: {
-      src: "/images/paa-cover.png",
-      alt: "PAA patient tracker dashboard on a laptop: pending actions, patient overview and a task list",
-      width: 2416,
-      height: 1932,
+      src: "/images/tempstars-phones-hero.png",
+      alt: "TempStars app on two phones: a dental clinic profile with neighbourhood details, and onboarding",
+      width: 2048,
+      height: 1152,
     },
   },
   {
@@ -219,24 +220,23 @@ const PROJECTS: Project[] = [
     },
   },
   {
-    id: "tempstars-title",
-    strip: "tempstars",
-    tag: "Local marketplace",
-    title: "TempStars: Fixing a 65% onboarding drop-off",
-    summary: "I re-engineered the signup and matching logic for Canada's largest dental marketplace to fix a 65% drop-off between signup and first booking. By making matching faster and more transparent, we turned a week-long wait into an under-48-hour match.",
-    role: "Product lead",
-    year: "2023",
+    id: "paa-title",
+    strip: "paa",
+    tag: "Series C",
+    title: "PAA: Scaling clinical efficiency through AI-driven workflows",
+    summary: "I led the clinician workspace for an AI platform in post-hospital care: triage first, then AI that drafts insurer reports from a locked assessment. Clinicians spend 40% less time on document workflows, and PAA closed Tier-1 deals with major health plans.",
+    role: "Product design lead",
+    year: "2024",
     results: [
-      { value: "+23%", label: "projected booked shifts YoY" },
-      { value: "~$2M", label: "a year in projected added revenue" },
-      { value: "7d → 2d", label: "to first offer" },
+      { value: "~$14M/yr", label: "in clinician time saved" },
+      { value: "Tier-1 deals", label: "with Kaiser, Humana and UHC" },
     ],
-    caseStudy: LINKS.tempstarsCase,
+    caseStudy: LINKS.paaCase,
     image: {
-      src: "/images/tempstars-phones-hero.png",
-      alt: "TempStars app on two phones: a dental clinic profile with neighbourhood details, and onboarding",
-      width: 2048,
-      height: 1152,
+      src: "/images/paa-cover.png",
+      alt: "PAA patient tracker dashboard on a laptop: pending actions, patient overview and a task list",
+      width: 2416,
+      height: 1932,
     },
   },
 ]
@@ -503,7 +503,7 @@ export default function AiPage() {
                       )}
                       {p.results.length > 0 && (
                       // Results: three equal columns under a hairline, so values line up across every card
-                      <dl className={`mt-6 grid ${p.demo ? "grid-cols-2" : "grid-cols-3"} gap-x-3 md:gap-x-6 border-t border-black/[0.07] pt-4`}>
+                      <dl className={`mt-6 grid ${p.demo ? "grid-cols-[repeat(2,minmax(0,9rem))]" : "grid-cols-[repeat(3,minmax(0,9rem))]"} gap-x-3 md:gap-x-5 border-t border-black/[0.07] pt-4`}>
                         {p.results.map((r) => (
                           <div key={r.label} className="flex min-w-0 flex-col-reverse justify-end">
                             <dt className="mt-1 text-[13px] leading-snug text-muted-foreground text-pretty">{r.label}</dt>
