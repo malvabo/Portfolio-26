@@ -71,6 +71,7 @@ type Project = {
   note?: string
   hidden?: boolean
   demo?: boolean
+  wide?: boolean // one full-width row: text left, image right
   image?: { src: string; alt: string; width: number; height: number; position?: string }
 }
 
@@ -216,6 +217,14 @@ const PROJECTS: Project[] = [
       { value: "4", label: "platforms" },
       { value: "Multi-million", label: "in revenue" },
     ],
+    wide: true,
+    image: {
+      src: "/images/paid-plans.webp",
+      alt: "Pricing page with three plans: Shipping (free), Inventory from £17 a month and High Volume from £313 a month",
+      width: 2000,
+      height: 1296,
+      position: "object-top",
+    },
   },
 ]
 
@@ -421,7 +430,7 @@ export default function AiPage() {
                 className={
                   p.demo
                     ? "md:col-span-2 pb-14 md:pb-20 border-b border-gray-200"
-                    : !p.image
+                    : p.wide || !p.image
                       ? "md:col-span-2"
                       : undefined
                 }
@@ -429,7 +438,7 @@ export default function AiPage() {
                 <article
                   aria-labelledby={p.id}
                   className={
-                    p.demo
+                    p.demo || p.wide
                       ? "flex flex-col lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)] lg:gap-12 lg:items-center"
                       : p.image
                         ? "flex h-full flex-col"
@@ -441,7 +450,7 @@ export default function AiPage() {
                       <DemoPlayer chapters={CHAPTERS} label="Conduit demo, 27 seconds, no sound" />
                     </div>
                   ) : p.image ? (
-                    <div className="aspect-[16/10] overflow-hidden rounded-lg border border-gray-200 bg-gray-50">
+                    <div className={`${p.wide ? "lg:order-2 " : ""}aspect-[16/10] overflow-hidden rounded-lg border border-gray-200 bg-gray-50`}>
                       <Image
                         src={p.image!.src}
                         alt={p.image!.alt}
@@ -455,7 +464,7 @@ export default function AiPage() {
 
                   <div
                     className={
-                      p.demo ? "flex flex-col lg:order-1 lg:[&>div:first-child>p:first-child]:mt-0" : "flex flex-1 flex-col"
+                      p.demo || p.wide ? "flex flex-col lg:order-1 lg:[&>div:first-child>p:first-child]:mt-0" : "flex flex-1 flex-col"
                     }
                   >
                     <div>
