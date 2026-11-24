@@ -38,7 +38,7 @@ export default function BodySpecStory() {
         <StoryHero
           image="/images/bodyspec-mobile-location.png"
           imageAlt="BodySpec mobile app: choosing a scan location on a map"
-          title="BodySpec: Scaling bookings by 20% for 500K+ monthly visitors"
+          title="BodySpec: Scaling bookings by 25% for 500K+ monthly visitors"
           meta={[
             { label: "Company", value: "BodySpec, Series A" },
             { label: "Timeline", value: "2023" },
@@ -53,8 +53,8 @@ export default function BodySpecStory() {
             </p>
           }
           stats={[
-            { value: "+20%", label: "bookings" },
-            { value: "−30%", label: "checkout abandonment" },
+            { value: "+25%", label: "bookings" },
+            { value: "+26%", label: "average order value" },
             { value: "$17.2M", label: "Series A the work supported" },
           ]}
         />
@@ -132,7 +132,7 @@ export default function BodySpecStory() {
         <Divider />
 
         <div id="impact" className="scroll-mt-28" aria-hidden />
-        <Lede kicker="03 Outcome" statement="Bookings rose 20% and checkout abandonment fell 30%.">
+        <Lede kicker="03 Outcome" statement="Bookings rose 25% and average order value rose 26%.">
           <p>
             The conversion lift was worth an estimated $2M+ in annual recurring revenue, and the live product helped
             BodySpec close its $17.2M Series A.

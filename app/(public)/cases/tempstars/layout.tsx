@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 
 const title = 'TempStars: Building marketplace liquidity for 25K+ dentists'
 const description =
-  "Fixing a 40% drop-off between signup and first booking on Canada's largest dental staffing marketplace."
+  "Fixing a 65% drop-off between signup and first booking on Canada's largest dental staffing marketplace."
 
 export const metadata: Metadata = {
   title: `${title} – Mary Borysova`,

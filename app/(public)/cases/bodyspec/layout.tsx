@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 
-const title = 'BodySpec: Scaling bookings by 20% for 500K+ monthly visitors'
+const title = 'BodySpec: Scaling bookings by 25% for 500K+ monthly visitors'
 const description =
   'Redesigning the BodySpec platform and mobile app to lift booking conversion and turn one-off scans into repeat visits.'
 

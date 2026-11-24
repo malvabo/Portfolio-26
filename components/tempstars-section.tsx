@@ -19,7 +19,7 @@ export function TempStarsSection() {
         <div>
           <h3 className="text-xs font-normal mb-3 uppercase tracking-wide text-muted-foreground opacity-80">About</h3>
           <p className="text-base leading-relaxed text-foreground">
-            When a dental clinic is short-staffed, they need help now. I re-engineered the signup and matching logic for Canada&apos;s largest dental marketplace to fix a 40% user drop-off. By making the matching process more transparent and faster, we turned a week-long headache into a 48-hour win.
+            When a dental clinic is short-staffed, they need help now. I re-engineered the signup and matching logic for Canada&apos;s largest dental marketplace to fix a 65% user drop-off. By making the matching process more transparent and faster, we turned a week-long headache into an under-48-hour win.
           </p>
           <Link
             href="/projects/tempstars"
@@ -46,7 +46,7 @@ export function TempStarsSection() {
               <div className="text-sm text-muted-foreground opacity-80">Time-to-First-Offer</div>
             </div>
             <div>
-              <div className="text-xl font-medium text-foreground mb-0.5">+20%</div>
+              <div className="text-xl font-medium text-foreground mb-0.5">+23%</div>
               <div className="text-sm text-muted-foreground opacity-80">Booked shifts YoY</div>
             </div>
           </div>
