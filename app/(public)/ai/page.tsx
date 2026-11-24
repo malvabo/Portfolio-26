@@ -374,8 +374,13 @@ export default function AiPage() {
               </h1>
               <p className="mt-3 md:mt-[18px] max-w-[560px] text-pretty text-[17px] leading-relaxed text-muted-foreground">
                 With 12 years in technology across product, growth and marketing, I bring a commercial and systems-level
-                perspective to product development. Most recently at Amazon, I led work on AI-powered products and
-                enterprise platforms, translating complex business needs into scalable solutions.
+                perspective to product development. Most recently at Amazon I owned paid plans across four platforms
+                and replaced a document system for 50K sellers, saving $2.3M a year.
+              </p>
+              <p className="mt-3 max-w-[560px] text-pretty text-[17px] leading-relaxed text-muted-foreground">
+                I also run my own product studio. For TempStars I fixed signup and matching for 25K dentists, and booked
+                shifts went up 23%. For BodySpec I redesigned the platform and mobile app for 500K monthly visitors, and
+                average order value increased by 26%.
               </p>
               {/* Key numbers, as on the portfolio hero */}
               <dl className="mt-6 md:mt-9 grid grid-cols-3 gap-x-4 sm:gap-x-8">
