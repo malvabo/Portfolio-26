@@ -25,18 +25,6 @@ function StepItem({ children, first = false, tone = "plain" }: { children: React
   )
 }
 
-/** Small trend: body composition across scans */
-function Trend() {
-  const bars = [44, 58, 70, 86]
-  return (
-    <span className="inline-flex items-end gap-[3px] h-4 ml-auto pl-2" aria-hidden>
-      {bars.map((h, i) => (
-        <span key={i} className="w-1.5 rounded-[1px]" style={{ height: `${h}%`, background: ACCENT, opacity: 0.35 + i * 0.2 }} />
-      ))}
-    </span>
-  )
-}
-
 export function JourneyLoop() {
   return (
     <ExplainerStage bg="/hand-holding-phone-with-map-interface.jpg" className="grid gap-3 sm:gap-4 md:grid-cols-2">
@@ -68,29 +56,15 @@ export function JourneyLoop() {
           <StepItem first>Nearby slots, from your location</StepItem>
           <StepItem>Book</StepItem>
           <StepItem>Scan</StepItem>
-          <StepItem tone="accent">
-            Progress since your last scan
-            <Trend />
+          <StepItem>See progress since the last scan</StepItem>
+          <StepItem>
+            <svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden className="mr-2 shrink-0">
+              <path d="M13.5 8A5.5 5.5 0 1 1 11.6 3.8" stroke={ACCENT} strokeWidth="1.6" strokeLinecap="round" />
+              <path d="M12 1.5v2.8H9.2" stroke={ACCENT} strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+            Book the next scan
           </StepItem>
         </Steps>
-        <p className="mt-2 flex items-center gap-2 text-[12px] text-[#8A3D1D]">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden>
-            <path d="M13 3v3a4 4 0 0 1-4 4H3" stroke={ACCENT} strokeWidth="1.5" strokeLinecap="round" />
-            <path d="M6 7l-3 3 3 3" stroke={ACCENT} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-          Seeing change brings people back to book
-        </p>
-        <div className="mt-4 grid grid-cols-2 gap-2">
-          {[
-            { k: "+25%", v: "bookings" },
-            { k: "+26%", v: "average order value" },
-          ].map((m) => (
-            <div key={m.k} className="rounded border border-black/10 px-3 py-2">
-              <p className="text-[15px] font-medium text-foreground">{m.k}</p>
-              <p className="text-[12px] text-muted-foreground leading-snug">{m.v}</p>
-            </div>
-          ))}
-        </div>
       </ExplainerCard>
     </ExplainerStage>
   )

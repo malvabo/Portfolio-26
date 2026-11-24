@@ -15,7 +15,6 @@ import {
   Moment,
   KeyCall,
   UpNext,
-  Wide,
 } from "@/components/story-case-study"
 import { ReportFlow } from "./diagrams"
 
@@ -158,9 +157,9 @@ export default function PAAStory() {
             </p>
           </Moment>
 
-          <Wide>
+          <div className="mx-auto max-w-[760px]">
             <ReportFlow />
-          </Wide>
+          </div>
 
           <Moment title="Requests next to the patient">
             <p>
