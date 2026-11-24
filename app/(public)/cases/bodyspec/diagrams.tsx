@@ -53,7 +53,7 @@ export function JourneyLoop() {
         <ExplainerTag accent>After</ExplainerTag>
         <ExplainerTitle>Two clicks to book, and a reason to return</ExplainerTitle>
         <Steps>
-          <StepItem first>Nearby slots, from your location</StepItem>
+          <StepItem first>Nearby slots</StepItem>
           <StepItem>Book</StepItem>
           <StepItem>Scan</StepItem>
           <StepItem>See progress since the last scan</StepItem>
