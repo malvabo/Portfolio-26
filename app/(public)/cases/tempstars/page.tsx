@@ -11,7 +11,6 @@ import {
   Beat,
   Narrow,
   Figure,
-  Stage,
   Moment,
   KeyCall,
   UpNext,
@@ -117,38 +116,33 @@ export default function TempStarsStory() {
             </p>
           </Moment>
 
-          <Stage
-            title="Clinic details where the decision happens"
-            visual={
-              <Figure
-                src="/images/tempstars-information-scent-before-after.png"
-                alt="Before and after: a bare shift screen next to a clinic profile with equipment, payment, parking and a neighbourhood map"
-                caption="Before and after: the shift screen became a clinic profile"
-              />
-            }
-          >
+          <Moment title="Clinic details where the decision happens">
             <p>
               The shift page now shows what hygienists actually check before applying: equipment, software, payment,
               parking and the neighbourhood. They no longer have to leave the app to decide.
             </p>
-          </Stage>
+          </Moment>
 
-          <Stage
-            title="Skills-based matching from signup"
-            visual={
-              <Figure
-                src="/images/tempstars-onboarding-skills-photo.png"
-                alt="New onboarding: choosing extra skills and adding a profile photo"
-                caption="Onboarding captures skills early, so the first shifts shown are a match"
-              />
-            }
-          >
+          <Moment title="Skills-based matching from signup">
             <p>
               We replaced the one-size-fits-all signup with a shorter staged flow that captures skills early. With
               engineering, we moved from free-text skills to a standard taxonomy, which powered weighted matching:
               must-have skills first, nice-to-haves after.
             </p>
-          </Stage>
+          </Moment>
+
+          <div className="mx-auto max-w-[1040px] grid gap-6 md:grid-cols-2 md:items-end">
+            <Figure
+              src="/images/tempstars-information-scent-before-after.png"
+              alt="Before and after: a bare shift screen next to a clinic profile with equipment, payment, parking and a neighbourhood map"
+              caption="Before and after: the shift screen became a clinic profile"
+            />
+            <Figure
+              src="/images/tempstars-onboarding-skills-photo.png"
+              alt="New onboarding: choosing extra skills and adding a profile photo"
+              caption="Onboarding captures skills early, so the first shifts shown are a match"
+            />
+          </div>
         </div>
 
         <div className="h-14 md:h-20" aria-hidden />

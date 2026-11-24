@@ -185,21 +185,12 @@ export default function VeeqoStory() {
             </p>
           </Stage>
 
-          <Stage
-            title="Settings ordered by real demand"
-            visual={
-              <Figure
-                src="/images/vq-doc31.png"
-                alt="Additional settings panel with fields ordered by priority"
-                caption="Most-requested fields first, edge cases after"
-              />
-            }
-          >
+          <Moment title="Settings ordered by real demand">
             <p>
               I ranked every field by how often it came up in tickets and interviews. The most requested made
               the first release, and edge cases followed.
             </p>
-          </Stage>
+          </Moment>
 
           <Stage
             title="An HTML editor for people who don't code"
@@ -224,20 +215,6 @@ export default function VeeqoStory() {
                 <Reveal>
                   <BrandScheme />
                 </Reveal>
-                <Narrow>
-                  <Reveal className="text-[17px] leading-relaxed text-muted-foreground">
-                    <p>
-                      Enterprise sellers often run 5 to 10 brands from one account, and each brand needs its own packing
-                      slips and invoices. Each brand has a default version of every document, and sellers can change which
-                      version applies to which brand.
-                    </p>
-                  </Reveal>
-                </Narrow>
-                <Figure
-                  src="/images/vq-doc2.jpg"
-                  alt="Document library with template versions mapped to brands"
-                  caption="Every brand shows which document versions apply to it by default"
-                />
               </div>
             }
           >
