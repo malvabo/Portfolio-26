@@ -36,7 +36,7 @@ export default function TempStarsStory() {
         <StoryHero
           image="/images/tempstars-phones-hero.png"
           imageAlt="TempStars app on two phones: a dental clinic profile with neighbourhood details, and onboarding"
-          title="TempStars: Building marketplace liquidity for 45K+ dental professionals"
+          title="TempStars: Fixing a 65% onboarding drop-off"
           meta={[
             { label: "Company", value: "TempStars" },
             { label: "Timeline", value: "Shipped 2023" },

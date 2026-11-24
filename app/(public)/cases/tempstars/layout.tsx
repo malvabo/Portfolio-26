@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 
-const title = 'TempStars: Building marketplace liquidity for 45K+ dental professionals'
+const title = 'TempStars: Fixing a 65% onboarding drop-off'
 const description =
   "Fixing a 65% drop-off between signup and first booking on Canada's largest dental staffing marketplace."
 

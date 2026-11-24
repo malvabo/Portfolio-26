@@ -62,7 +62,7 @@ export default function TempStarsCaseStudy() {
           <main className="flex-1 px-8 lg:px-12 pb-20 lg:pb-24">
           <div className="mb-12 max-w-[750px]">
             <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl tracking-[-0.02em] leading-[1.2] mb-4">
-              TempStars: Building marketplace liquidity for 45K+ dental professionals
+              TempStars: Fixing a 65% onboarding drop-off
             </h1>
             <p className="text-[17px] leading-relaxed text-muted-foreground">
               Building trust in a marketplace for dental professionals
