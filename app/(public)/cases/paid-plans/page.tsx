@@ -38,14 +38,14 @@ export default function PaidPlansStory() {
           intro={
             <p>
               Veeqo was a free shipping and operations platform for Amazon sellers, earning only a small commission on
-              shipping labels. I was responsible for the rollout of paid plans across iOS, Android, devices and web: 12
+              shipping labels. I was responsible for the rollout of paid plans across iOS, Android, devices and web: 12+
               features, launched on every platform, without breaking the daily work of sellers who had always had
               everything for free.
             </p>
           }
           stats={[
             { value: "Multi-million", label: "in revenue from the new plans" },
-            { value: "12", label: "paid features" },
+            { value: "12+", label: "paid features" },
             { value: "4", label: "platforms: iOS, Android, devices and web" },
           ]}
         />
@@ -110,7 +110,7 @@ export default function PaidPlansStory() {
             </p>
           </Moment>
 
-          <Moment title="One system across 12 features and 4 platforms">
+          <Moment title="One system across 12+ features and 4 platforms">
             <p>
               Instead of each team building its own upgrade prompt, we agreed one set of rules for gating, trials and
               messaging, and rolled it out across iOS, Android, devices and web. Sellers see the same plan logic
