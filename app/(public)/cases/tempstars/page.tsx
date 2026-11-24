@@ -173,7 +173,7 @@ export default function TempStarsStory() {
             imageAlt="A coffee Certificate of Origin open in Conduit"
             title="Conduit"
             summary="An AI product for customs compliance."
-            meta={["Logistics", "Led product and design end to end"]}
+            meta={["Logistics", "Product lead"]}
           />
         </div>
 
