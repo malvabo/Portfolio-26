@@ -314,11 +314,10 @@ const FOCUS = "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visi
 const EYEBROW = "text-sm text-muted-foreground"
 const EYEBROW_CAPS = "uppercase text-[13px] font-mono tracking-wide text-muted-foreground"
 // Case cards: soft bordered tile, pill, serif title, mono link; the whole tile is the link target
+const TAG = "inline-block px-2.5 py-0.5 text-[11px] font-mono uppercase tracking-normal rounded-md bg-[#E8E3DD] text-[#6B5D4F]"
 const CASE_CARD = "group relative flex h-full flex-col rounded-3xl border border-black/[0.07] bg-white p-6 md:p-9 transition-[border-color,box-shadow] duration-200"
 const CASE_CARD_LINKED = "hover:border-black/[0.14] hover:shadow-[0_2px_20px_-8px_rgba(0,0,0,0.12)] focus-within:border-black/[0.14]"
-const CARD_PILL = "inline-block rounded-full px-3 py-1 text-[11px] font-mono uppercase tracking-[0.14em]"
-const CASE_TITLE = "font-serif text-[26px] md:text-[30px] leading-[1.1] tracking-[-0.015em] text-foreground text-balance"
-const CASE_LINK = `mt-8 self-start inline-flex items-center gap-1.5 font-mono text-[13px] tracking-wide text-foreground/80 hover:text-foreground after:absolute after:inset-0 after:rounded-3xl after:content-[''] rounded ${FOCUS}`
+const CARD_STRETCH = "after:absolute after:inset-0 after:rounded-3xl after:content-['']"
 const CARD_TITLE = "font-serif text-[22px] md:text-[26px] leading-[1.15] tracking-tight text-foreground text-balance"
 const PILL_GLASS = `inline-flex items-center justify-center gap-2 min-h-11 px-5 text-sm font-medium rounded-full bg-white/40 backdrop-blur-md border border-gray-300/70 text-foreground hover:bg-white/60 hover:border-gray-400/70 transition-all duration-300 shadow-sm hover:shadow-md ${FOCUS}`
 const ARROW_LINK = `inline-flex items-center gap-1.5 text-base font-medium text-foreground underline underline-offset-[6px] decoration-foreground/25 hover:decoration-foreground transition-colors rounded ${FOCUS}`
@@ -487,18 +486,14 @@ export default function AiPage() {
                     }
                   >
                     <div>
-                      <p className="flex flex-wrap items-center gap-x-3 gap-y-2">
-                        {p.tag && (
-                          <span className={`${CARD_PILL} ${p.strip ? `${STRIP[p.strip].bg} ${STRIP[p.strip].fg}` : "bg-[#F6EBDD] text-[#6B4A22]"}`}>
-                            {p.tag}
-                          </span>
-                        )}
-                        <span className="text-[13px] text-muted-foreground">{p.role}</span>
+                      <p className="flex flex-wrap items-center gap-x-2.5 gap-y-1 text-sm text-muted-foreground">
+                        {p.tag && <span className={TAG}>{p.tag}</span>}
+                        <span>{p.role}</span>
                       </p>
-                      <h2 id={p.id} className={`${CASE_TITLE} mt-5`}>
+                      <h2 id={p.id} className={`${CARD_TITLE} mt-3`}>
                         {p.title}
                       </h2>
-                      <p className="mt-3 max-w-[56ch] text-[15px] md:text-base leading-relaxed text-muted-foreground text-pretty">
+                      <p className="mt-2.5 max-w-[56ch] text-[15px] md:text-base leading-relaxed text-muted-foreground text-pretty">
                         {p.summary}
                       </p>
                     </div>
@@ -507,18 +502,20 @@ export default function AiPage() {
                         <p className="pt-6 text-sm text-muted-foreground">{p.note}</p>
                       )}
                       {p.results.length > 0 && (
-                      <dl className="pt-6 flex flex-wrap gap-x-8 gap-y-3">
+                      // Results: three equal columns under a hairline, so values line up across every card
+                      <dl className={`mt-6 grid ${p.demo ? "grid-cols-2" : "grid-cols-3"} gap-x-3 md:gap-x-6 border-t border-black/[0.07] pt-4`}>
                         {p.results.map((r) => (
-                          <div key={r.label} className="flex flex-col-reverse justify-end">
-                            <dt className="text-[13px] leading-snug text-muted-foreground">{r.label}</dt>
-                            <dd className="text-lg font-medium text-foreground leading-tight mb-0.5">{r.value}</dd>
+                          <div key={r.label} className="flex min-w-0 flex-col-reverse justify-end">
+                            <dt className="mt-1 text-[13px] leading-snug text-muted-foreground text-pretty">{r.label}</dt>
+                            <dd className="text-[15px] sm:text-lg font-medium text-foreground leading-tight tabular-nums whitespace-nowrap">{r.value}</dd>
                           </div>
                         ))}
                       </dl>
                       )}
                       {p.caseStudy && (
-                        <a href={p.caseStudy} className={CASE_LINK}>
-                          View case study <span aria-hidden="true" className="transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">↗</span>
+                        <a href={p.caseStudy} className={`${ARROW_LINK} ${CARD_STRETCH} mt-6 self-start text-[15px]`}>
+                          Read the case study
+                          <Arrow />
                         </a>
                       )}
                     </div>
