@@ -151,6 +151,43 @@ const PROJECTS: Project[] = [
     },
   },
   {
+    id: "paid-plans-title",
+    tag: "Big tech",
+    title: "Amazon: Paid plans across iOS, Android, devices and web",
+    summary: "I was responsible for the paid plan rollout across iOS, Android, devices and web: 12 features, launched on every platform. The plans now bring in multi-million revenue.",
+    role: "Product design lead",
+    results: [
+      { value: "12", label: "paid features" },
+      { value: "4", label: "platforms" },
+      { value: "Multi-million", label: "in revenue" },
+    ],
+    image: {
+      src: "/images/paid-plans.webp",
+      alt: "Pricing page with three plans: Shipping (free), Inventory from £17 a month and High Volume from £313 a month",
+      width: 2000,
+      height: 1296,
+      position: "object-top",
+    },
+  },
+  {
+    id: "paa-title",
+    tag: "Series C",
+    title: "PAA: Scaling clinical efficiency through AI-driven workflows",
+    summary: "I led the dashboard redesign that turned a dense data view into a prioritised task list for clinicians, cutting the time they spend managing documents by 40% and reducing patient service delays.",
+    role: "Lead product designer",
+    year: "2024",
+    results: [
+      { value: "~$14M/yr", label: "in clinician time saved" },
+      { value: "Tier-1 deals", label: "with Kaiser, Humana and UHC" },
+    ],
+    image: {
+      src: "/images/paa-cover.png",
+      alt: "PAA patient tracker dashboard on a laptop: pending actions, patient overview and a task list",
+      width: 2416,
+      height: 1932,
+    },
+  },
+  {
     id: "bodyspec-title",
     tag: "Series A",
     title: "BodySpec: Scaling bookings by 25% for 500K+ monthly visitors",
@@ -187,42 +224,6 @@ const PROJECTS: Project[] = [
       alt: "TempStars app on two phones: a dental clinic profile with neighbourhood details, and onboarding",
       width: 2048,
       height: 1152,
-    },
-  },
-  {
-    id: "paid-plans-title",
-    title: "Paid plans across iOS, Android, devices and web",
-    summary: "I was responsible for the paid plan rollout across iOS, Android, devices and web: 12 features, launched on every platform. The plans now bring in multi-million revenue.",
-    role: "Product design lead",
-    results: [
-      { value: "12", label: "paid features" },
-      { value: "4", label: "platforms" },
-      { value: "Multi-million", label: "in revenue" },
-    ],
-    image: {
-      src: "/images/paid-plans.webp",
-      alt: "Pricing page with three plans: Shipping (free), Inventory from £17 a month and High Volume from £313 a month",
-      width: 2000,
-      height: 1296,
-      position: "object-top",
-    },
-  },
-  {
-    id: "paa-title",
-    tag: "Series C",
-    title: "PAA: Scaling clinical efficiency through AI-driven workflows",
-    summary: "I led the dashboard redesign that turned a dense data view into a prioritised task list for clinicians, cutting the time they spend managing documents by 40% and reducing patient service delays.",
-    role: "Lead product designer",
-    year: "2024",
-    results: [
-      { value: "~$14M/yr", label: "in clinician time saved" },
-      { value: "Tier-1 deals", label: "with Kaiser, Humana and UHC" },
-    ],
-    image: {
-      src: "/images/paa-cover.png",
-      alt: "PAA patient tracker dashboard on a laptop: pending actions, patient overview and a task list",
-      width: 2416,
-      height: 1932,
     },
   },
 ]
@@ -373,8 +374,13 @@ export default function AiPage() {
               </h1>
               <p className="mt-3 md:mt-[18px] max-w-[560px] text-pretty text-[17px] leading-relaxed text-muted-foreground">
                 With 12 years in technology across product, growth and marketing, I bring a commercial and systems-level
-                perspective to product development. Most recently at Amazon, I led work on AI-powered products and
-                enterprise platforms, translating complex business needs into scalable solutions.
+                perspective to product development. Most recently at Amazon I owned paid plans across four platforms
+                and replaced a document system for 50K sellers, saving $2.3M a year.
+              </p>
+              <p className="mt-3 max-w-[560px] text-pretty text-[17px] leading-relaxed text-muted-foreground">
+                I also run my own product studio. For TempStars I fixed signup and matching for 25K dentists, and booked
+                shifts went up 23%. For BodySpec I redesigned the platform and mobile app for 500K monthly visitors, and
+                average order value increased by 26%.
               </p>
               {/* Key numbers, as on the portfolio hero */}
               <dl className="mt-6 md:mt-9 grid grid-cols-3 gap-x-4 sm:gap-x-8">
