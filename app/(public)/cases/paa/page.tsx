@@ -44,7 +44,7 @@ export default function PAAStory() {
           meta={[
             { label: "Company", value: "PAA, Series C" },
             { label: "Timeline", value: "6 months, 2024" },
-            { label: "Role", value: "Lead product designer" },
+            { label: "Role", value: "Product design lead" },
             { label: "Worked with", value: "Clinical director, operations director, CTO" },
           ]}
           intro={
@@ -182,7 +182,7 @@ export default function PAAStory() {
             imageAlt="A coffee Certificate of Origin open in Conduit"
             title="Conduit"
             summary="An AI product for customs compliance."
-            meta={["Logistics", "Led product and design end to end"]}
+            meta={["Logistics", "Product lead"]}
           />
         </div>
 

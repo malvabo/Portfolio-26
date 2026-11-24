@@ -24,6 +24,7 @@ const LINKS = {
   bodyspecCase: "/cases/bodyspec",
   tempstarsCase: "/cases/tempstars",
   paaCase: "/cases/paa",
+  paidPlansCase: "/cases/paid-plans",
   substack: "https://healthmattersandme.substack.com/",
   speaking: `${MAIN_SITE}/speaking`,
 }
@@ -107,7 +108,7 @@ const PROJECTS: Project[] = [
     id: "conduit-title",
     title: "Conduit: an AI product for customs compliance",
     summary: "I own Conduit end to end, from discovery to launch: an AI product that reads supplier documents and prepares customs filings for importers. It cut data checks from 20 minutes to under 3 per shipment, removed manual entry for compliance teams and reduced the filing errors that hold shipments at the border.",
-    role: "Led product and design end to end",
+    role: "Product lead",
     results: [
       { value: "20 → 3 min", label: "customs check per shipment" },
     ],
@@ -136,7 +137,7 @@ const PROJECTS: Project[] = [
     tag: "Big tech",
     title: "Amazon: Redesigning a document system for 50k+ sellers",
     summary: "I led the design that replaced the third-party PDF tool behind documents: an HTML-based engine with AI-assisted editing, a new document library, and a migration path for the enterprise accounts.",
-    role: "Led product and design end to end",
+    role: "Product lead",
     year: "2025",
     results: [
       { value: "$2.3M/yr", label: "saved in platform costs" },
@@ -162,7 +163,7 @@ const PROJECTS: Project[] = [
       { value: "4", label: "platforms" },
       { value: "Multi-million", label: "in revenue" },
     ],
-    note: "Details available during the interview",
+    caseStudy: LINKS.paidPlansCase,
     image: {
       src: "/images/paid-plans.webp",
       alt: "Pricing page with three plans: Shipping (free), Inventory from £17 a month and High Volume from £313 a month",
@@ -176,7 +177,7 @@ const PROJECTS: Project[] = [
     tag: "Series C",
     title: "PAA: Scaling clinical efficiency through AI-driven workflows",
     summary: "I led the clinician workspace for an AI platform in post-hospital care: triage first, then AI that drafts insurer reports from a locked assessment. Clinicians spend 40% less time on document workflows, and PAA closed Tier-1 deals with major health plans.",
-    role: "Lead product designer",
+    role: "Product design lead",
     year: "2024",
     results: [
       { value: "~$14M/yr", label: "in clinician time saved" },
@@ -235,6 +236,7 @@ const PROJECTS: Project[] = [
 // Logos are black on transparent and share one height (CVS is wider, so a touch shorter).
 const SHOW_HOW_I_WORK = false // hidden for now
 const SHOW_LOGOS = false // hidden for now
+const SHOW_CARD_IMAGES = false // project cards are text only for now
 const LOGOS = [
   { name: "Amazon", src: "/ai/logos/amazon.svg", width: 603, height: 182, className: "h-[20px] sm:h-[24px]" },
   { name: "PandaDoc", src: "/ai/logos/pandadoc.png", width: 334, height: 96, className: "h-[20px] sm:h-[24px]" },
@@ -433,13 +435,15 @@ export default function AiPage() {
         {/* Projects: Conduit as one row (text left, demo right), then a two-up grid; media on top, short copy below */}
         <section aria-label="Featured projects" className={`${CONTAINER} pt-6 md:pt-20 pb-14 md:pb-24`}>
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 lg:gap-x-8 gap-y-14 md:gap-y-20">
-            {PROJECTS.filter((p) => !p.hidden).map((p) => (
+            {PROJECTS.filter((p) => !p.hidden)
+              .map((p) => (SHOW_CARD_IMAGES ? p : { ...p, image: undefined }))
+              .map((p) => (
               <li
                 key={p.id}
                 className={
                   p.demo
-                    ? "md:col-span-2 pb-14 md:pb-20 border-b border-gray-200"
-                    : p.wide || !p.image
+                    ? `md:col-span-2${SHOW_CARD_IMAGES ? " pb-14 md:pb-20 border-b border-gray-200" : ""}`
+                    : p.wide && p.image
                       ? "md:col-span-2"
                       : undefined
                 }
@@ -447,11 +451,11 @@ export default function AiPage() {
                 <article
                   aria-labelledby={p.id}
                   className={
-                    p.demo || p.wide
+                    p.demo || (p.wide && p.image)
                       ? "flex flex-col lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)] lg:gap-12 lg:items-center"
                       : p.image
                         ? "flex h-full flex-col"
-                        : "flex flex-col border-t border-gray-200"
+                        : "flex h-full flex-col border-t border-gray-200"
                   }
                 >
                   {p.demo ? (
@@ -473,7 +477,7 @@ export default function AiPage() {
 
                   <div
                     className={
-                      p.demo || p.wide ? "flex flex-col lg:order-1 lg:[&>div:first-child>p:first-child]:mt-0" : "flex flex-1 flex-col"
+                      p.demo || (p.wide && p.image) ? "flex flex-col lg:order-1 lg:[&>div:first-child>p:first-child]:mt-0" : "flex flex-1 flex-col"
                     }
                   >
                     <div>

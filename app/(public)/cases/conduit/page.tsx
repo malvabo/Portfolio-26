@@ -52,7 +52,7 @@ export default function ConduitStory() {
           meta={[
             { label: "Company", value: "Conduit" },
             { label: "Timeline", value: "4 weeks, 2026" },
-            { label: "Role", value: "Led product and design end to end" },
+            { label: "Role", value: "Product lead" },
             { label: "Built with", value: "Claude Code, Google Document AI, Pydantic, Vercel, Codex, Claude API" },
           ]}
           intro={
