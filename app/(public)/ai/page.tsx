@@ -380,7 +380,7 @@ export default function AiPage() {
         {/* Hero: the homepage hero, with the dot field and the AI orb */}
         <div id="top" className="relative">
           <HeroGrid quietPad={30} includeMedia />
-          <section aria-labelledby="hero-title" className={`${CONTAINER} relative z-10 pt-6 pb-6 md:pt-6 md:pb-0 md:min-h-[calc(100svh-150px)]`}>
+          <section aria-labelledby="hero-title" className={`${CONTAINER} relative z-10 pt-8 pb-8 md:pt-10 md:pb-16 md:min-h-[calc(100svh-150px)] md:flex md:flex-col md:justify-center`}>
             <div data-grid-quiet className="max-w-[720px]">
               <Image
                 src="/images/mary-face.webp"
@@ -388,18 +388,18 @@ export default function AiPage() {
                 width={80}
                 height={80}
                 priority
-                className="mb-3 md:mb-4 h-14 w-14 md:h-20 md:w-20 rounded-xl object-cover"
+                className="mb-5 md:mb-6 h-14 w-14 md:h-20 md:w-20 rounded-xl object-cover"
               />
               <h1 id="hero-title" className="font-serif text-[1.75rem] md:text-[2rem] leading-[1.15] font-normal tracking-[-0.02em] text-foreground text-balance lg:whitespace-nowrap">
                 Leader in Digital and Growth Product Management
               </h1>
-              <p className="mt-3 md:mt-[18px] max-w-[560px] text-pretty text-[17px] leading-relaxed text-muted-foreground">
+              <p className="mt-4 md:mt-5 max-w-[600px] text-pretty text-[17px] leading-relaxed text-muted-foreground">
                 With 12 years in technology across product, growth and marketing, I bring a commercial and systems-level
                 perspective to product development. Most recently at Amazon I owned paid plans across four platforms
                 and replaced a document system for 50K sellers, saving $2.3M a year.
               </p>
               {/* Key numbers, as on the portfolio hero */}
-              <dl className="mt-6 md:mt-7 grid grid-cols-3 gap-x-4 sm:gap-x-8">
+              <dl className="mt-8 md:mt-10 grid grid-cols-3 gap-x-4 sm:gap-x-8">
                 {[
                   { value: "$14M/year", label: "Operational costs saved through workflow optimization" },
                   { value: "100K+", label: "Business users across enterprise products" },
