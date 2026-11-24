@@ -7,7 +7,6 @@ import { BackLinkFooter } from "@/components/back-link"
 import {
   StoryPage,
   StoryHero,
-  Divider,
   Lede,
   Beat,
   Narrow,
@@ -59,7 +58,7 @@ export default function BodySpecStory() {
           ]}
         />
 
-        <Divider />
+        <div className="h-14 md:h-20" aria-hidden />
 
         <div id="problem" className="scroll-mt-28" aria-hidden />
         <Lede
@@ -91,12 +90,12 @@ export default function BodySpecStory() {
           />
         </div>
 
-        <Divider />
+        <div className="h-14 md:h-20" aria-hidden />
 
         <div id="built" className="scroll-mt-28" aria-hidden />
         <Beat kicker="02 Key decisions" title="Make booking fast, then give people a reason to come back." />
 
-        <div className="mt-10 md:mt-14 space-y-24 md:space-y-32">
+        <div className="mt-10 md:mt-14 space-y-12 md:space-y-16">
           <Stage
             title="Two clicks to book"
             visual={
@@ -129,7 +128,7 @@ export default function BodySpecStory() {
           </Moment>
         </div>
 
-        <Divider />
+        <div className="h-14 md:h-20" aria-hidden />
 
         <div id="impact" className="scroll-mt-28" aria-hidden />
         <Lede kicker="03 Outcome" statement="Bookings rose 25% and average order value rose 26%.">
@@ -139,7 +138,7 @@ export default function BodySpecStory() {
           </p>
         </Lede>
 
-        <div className="mt-24 md:mt-32">
+        <div className="mt-16 md:mt-20">
           <UpNext
             href="/cases/tempstars"
             image="/images/tempstars-phones-hero.png"

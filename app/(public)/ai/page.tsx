@@ -209,6 +209,7 @@ const PROJECTS: Project[] = [
   },
   {
     id: "tempstars-title",
+    tag: "Local marketplace",
     title: "TempStars: Building marketplace liquidity for 25K+ dentists",
     summary: "I re-engineered the signup and matching logic for Canada's largest dental marketplace to fix a 65% drop-off between signup and first booking. By making matching faster and more transparent, we turned a week-long wait into an under-48-hour match.",
     role: "Product lead",
