@@ -90,11 +90,16 @@ export default function TempStarsStory() {
           />
         </div>
 
-        <div className="mt-12 md:mt-16 mx-auto max-w-[620px]">
+        <div className="mt-12 md:mt-16 mx-auto max-w-[1040px] grid gap-6 md:grid-cols-2 md:items-end">
           <Figure
-            src="/images/tempstars-survey-charts.png"
-            alt="Onboarding survey results and the distribution of shifts across users"
-            caption="Survey and funnel data showed where people stalled"
+            src="/images/tempstars-survey.png"
+            alt="Onboarding survey results: agree, neutral and disagree for eight statements about the app"
+            caption="Onboarding survey of hygienists"
+          />
+          <Figure
+            src="/images/tempstars-shifts-chart.png"
+            alt="Bar chart of how many shifts each hygienist worked over the last 24 months"
+            caption="Shifts worked per hygienist, last 24 months"
           />
         </div>
 
