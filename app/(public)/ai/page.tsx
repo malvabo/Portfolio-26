@@ -21,6 +21,8 @@ const LINKS = {
   linkedin: "https://www.linkedin.com/in/maria-borysova/",
   conduitCase: "/cases/conduit",
   veeqoCase: "/cases/veeqo",
+  bodyspecCase: "/cases/bodyspec",
+  tempstarsCase: "/cases/tempstars",
   substack: "https://healthmattersandme.substack.com/",
   speaking: `${MAIN_SITE}/speaking`,
 }
@@ -48,14 +50,6 @@ export const metadata: Metadata = {
 
 const CHAPTERS = [
   {
-    src: "/ai/conduit-extract.mp4",
-    poster: "/ai/conduit-extract.webp",
-    width: 1280,
-    height: 724,
-    title: "Set up extraction",
-    caption: "Pick the fields to pull from a document, then check and correct what the model found.",
-  },
-  {
     src: "/ai/conduit-fill.mp4",
     poster: "/ai/conduit-fill.webp",
     width: 1280,
@@ -65,7 +59,178 @@ const CHAPTERS = [
   },
 ]
 
+type Project = {
+  id: string
+  tag?: string
+  title: string
+  summary: string
+  role: string
+  year?: string
+  results: { value: string; label: string }[]
+  caseStudy?: string
+  note?: string
+  hidden?: boolean
+  demo?: boolean
+  wide?: boolean // one full-width row: text left, image right
+  image?: { src: string; alt: string; width: number; height: number; position?: string }
+}
+
+// How I work: the loop, then each step with where I did it.
+const LOOP = ["Talk to customers", "Read the data", "Decide what matters", "Ship", "Measure", "Fix what isn't working"]
+const PRINCIPLES = [
+  {
+    title: "Start with customers and the numbers",
+    body: "Interviews, support tickets and funnels, side by side, until the real problem is clear and everyone agrees on it.",
+    proof: "At TempStars, 15 interviews and a funnel analysis traced a 40% drop-off to a cancellation policy, not the UI. At BodySpec, I trained technicians in several states to run interviews during scans.",
+  },
+  {
+    title: "Decide what matters, and what doesn't ship",
+    body: "I tie each call to a business outcome and take the trade-offs to leadership early, with options and their cost.",
+    proof: "At Amazon, I cut drag and drop and made the case to the VP of Product to hand-port templates: 2 weeks instead of a 4-month tool, with every top account kept.",
+  },
+  {
+    title: "Build to learn",
+    body: "I prototype with real data and real model calls, so the team argues about evidence, not opinions.",
+    proof: "Conduit flags any field below a confidence threshold for a person to confirm, a rule that came from watching the model fail on real documents.",
+  },
+  {
+    title: "Ship, measure, keep improving",
+    body: "A lean first version on time, then iterate on what the numbers say. I fix the system around the product too: policy, pricing, operations.",
+    proof: "At BodySpec, a lean first release helped close a $17.2M Series A and funded the fuller version. I rolled out paid plans across 4 platforms that now bring in multi-million revenue.",
+  },
+]
+
+// Featured projects, in order. Conduit shows the demo video instead of an image.
+const PROJECTS: Project[] = [
+  {
+    id: "conduit-title",
+    title: "Conduit: an AI product for customs compliance",
+    summary: "I own Conduit end to end, from discovery to launch: an AI product that reads supplier documents and prepares customs filings for importers. It cut data checks from 20 minutes to under 3 per shipment, removed manual entry for compliance teams and reduced the filing errors that hold shipments at the border.",
+    role: "Sole product manager and designer",
+    results: [
+      { value: "20 → 3 min", label: "customs check per shipment" },
+    ],
+    caseStudy: LINKS.conduitCase,
+    demo: true,
+  },
+  {
+    id: "amazon-ai-title",
+    tag: "Big tech",
+    title: "Amazon: AI automation for complex shipping workflows",
+    summary: "I designed AI-powered automation for Amazon's internal shipping operations, cutting manual work for operators and speeding up decisions across complex logistics workflows.",
+    role: "Product design lead",
+    year: "2026",
+    results: [],
+    note: "Details available during the interview",
+    image: {
+      src: "/images/aivq1.png",
+      alt: "Orders page with an AI actions panel: a shipping savings insight and restock and stock-move recommendations",
+      width: 2844,
+      height: 2010,
+      position: "object-top",
+    },
+  },
+  {
+    id: "veeqo-title",
+    tag: "Big tech",
+    title: "Amazon: Redesigning a document system for 50k+ sellers",
+    summary: "I led the design that replaced the third-party PDF tool behind documents: an HTML-based engine with AI-assisted editing, a new document library, and a migration path for the enterprise accounts.",
+    role: "Sole product manager and designer",
+    year: "2025",
+    results: [
+      { value: "$2.3M/yr", label: "saved in platform costs" },
+      { value: "0%", label: "churn in top enterprise accounts" },
+    ],
+    caseStudy: LINKS.veeqoCase,
+    image: {
+      src: "/images/vq11.png",
+      alt: "Document setup with branding controls and a live invoice preview",
+      width: 2844,
+      height: 2010,
+      position: "object-top",
+    },
+  },
+  {
+    id: "paa-title",
+    hidden: true, // hidden for now
+    tag: "Series C",
+    title: "PAA: Scaling clinical efficiency through AI-driven workflows",
+    summary: "I led the dashboard redesign that turned a dense data view into a prioritised task list for clinicians, cutting the time they spend managing documents by 40% and reducing patient service delays.",
+    role: "Lead product designer",
+    year: "2024",
+    results: [
+      { value: "~$14M/yr", label: "in clinician time saved" },
+      { value: "Tier-1 deals", label: "with Kaiser, Humana and UHC" },
+    ],
+    image: {
+      src: "/images/paa-cover.png",
+      alt: "PAA patient tracker dashboard on a laptop: pending actions, patient overview and a task list",
+      width: 2416,
+      height: 1932,
+    },
+  },
+  {
+    id: "bodyspec-title",
+    tag: "Series A",
+    title: "BodySpec: Scaling bookings by 20% for 500K+ users",
+    summary: "I redesigned the BodySpec platform and mobile app end to end to improve conversions and increase average order value.",
+    role: "Product lead",
+    year: "2023",
+    results: [
+      { value: "$2M+", label: "ARR potential" },
+      { value: "$17.2M", label: "funding round secured" },
+    ],
+    caseStudy: LINKS.bodyspecCase,
+    image: {
+      src: "/images/bodyspec-mobile-location.png",
+      alt: "BodySpec app on a phone: a map of nearby scan locations with available times",
+      width: 1586,
+      height: 1235,
+    },
+  },
+  {
+    id: "tempstars-title",
+    title: "TempStars: Building marketplace liquidity for 25K+ dentists",
+    summary: "I re-engineered the signup and matching logic for Canada's largest dental marketplace to fix a 40% drop-off between signup and first booking. By making matching faster and more transparent, we turned a week-long wait into a 48-hour match.",
+    role: "Product lead",
+    year: "2023",
+    results: [
+      { value: "+20%", label: "booked shifts YoY" },
+      { value: "~$2M", label: "projected annual revenue" },
+      { value: "7d → 2d", label: "to first offer" },
+    ],
+    caseStudy: LINKS.tempstarsCase,
+    image: {
+      src: "/images/tempstars-phones-hero.png",
+      alt: "TempStars app on two phones: a dental clinic profile with neighbourhood details, and onboarding",
+      width: 2048,
+      height: 1152,
+    },
+  },
+  {
+    id: "paid-plans-title",
+    title: "Paid plans across iOS, Android, devices and web",
+    summary: "I was responsible for the paid plan rollout across iOS, Android, devices and web: 12 features, launched on every platform. The plans now bring in multi-million revenue.",
+    role: "Product design lead",
+    results: [
+      { value: "12", label: "paid features" },
+      { value: "4", label: "platforms" },
+      { value: "Multi-million", label: "in revenue" },
+    ],
+    wide: true,
+    image: {
+      src: "/images/paid-plans.webp",
+      alt: "Pricing page with three plans: Shipping (free), Inventory from £17 a month and High Volume from £313 a month",
+      width: 2000,
+      height: 1296,
+      position: "object-top",
+    },
+  },
+]
+
 // Logos are black on transparent and share one height (CVS is wider, so a touch shorter).
+const SHOW_HOW_I_WORK = false // hidden for now
+const SHOW_LOGOS = false // hidden for now
 const LOGOS = [
   { name: "Amazon", src: "/ai/logos/amazon.svg", width: 603, height: 182, className: "h-[20px] sm:h-[24px]" },
   { name: "PandaDoc", src: "/ai/logos/pandadoc.png", width: 334, height: 96, className: "h-[20px] sm:h-[24px]" },
@@ -127,13 +292,6 @@ const FOCUS = "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visi
 const EYEBROW = "text-sm text-muted-foreground"
 const EYEBROW_CAPS = "uppercase text-[13px] font-mono tracking-wide text-muted-foreground"
 const TAG = "inline-block px-2.5 py-0.5 text-[11px] font-mono uppercase tracking-normal rounded-md bg-[#E8E3DD] text-[#6B5D4F]"
-// Project blocks: media left, text right on desktop; stacked on mobile
-const CASE_SECTION = "pt-6 pb-8 md:pt-8 md:pb-14"
-const CASE_GRID = "grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)] gap-5 lg:gap-12"
-const CASE_MEDIA = "overflow-hidden rounded-lg border border-gray-200 bg-gray-50 self-start"
-const CASE_TEXT = "flex flex-col items-start gap-4 text-base md:text-[17px] leading-[1.7] text-foreground"
-const CASE_META = "grid w-full grid-cols-2 gap-4 text-[15px] leading-snug"
-const META_LABEL = "text-sm text-muted-foreground mb-1"
 const CARD_TITLE = "font-serif text-[22px] md:text-[26px] leading-[1.15] tracking-tight text-foreground text-balance"
 const PILL_GLASS = `inline-flex items-center justify-center gap-2 min-h-11 px-5 text-sm font-medium rounded-full bg-white/40 backdrop-blur-md border border-gray-300/70 text-foreground hover:bg-white/60 hover:border-gray-400/70 transition-all duration-300 shadow-sm hover:shadow-md ${FOCUS}`
 const ARROW_LINK = `inline-flex items-center gap-1.5 text-base font-medium text-foreground underline underline-offset-[6px] decoration-foreground/25 hover:decoration-foreground transition-colors rounded ${FOCUS}`
@@ -150,12 +308,6 @@ const Arrow = () => (
 const ArrowUpRight = () => (
   <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17L17 7M8 7h9v9" />
-  </svg>
-)
-
-const Lock = () => (
-  <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
   </svg>
 )
 
@@ -207,7 +359,7 @@ export default function AiPage() {
         {/* Hero: the homepage hero, with the dot field and the AI orb */}
         <div id="top" className="relative">
           <HeroGrid quietPad={30} includeMedia />
-          <section aria-labelledby="hero-title" className={`${CONTAINER} relative z-10 pt-6 pb-6 md:pt-[72px] md:pb-12`}>
+          <section aria-labelledby="hero-title" className={`${CONTAINER} relative z-10 pt-6 pb-6 md:pt-[72px] md:pb-6 md:min-h-[calc(100svh-184px)]`}>
             <div data-grid-quiet className="max-w-[720px]">
               <Image
                 src="/images/mary-face.webp"
@@ -218,7 +370,7 @@ export default function AiPage() {
                 className="mb-3 md:mb-4 h-14 w-14 md:h-20 md:w-20 rounded-xl object-cover"
               />
               <h1 id="hero-title" className="font-serif text-[1.75rem] md:text-[2rem] leading-[1.15] font-normal tracking-[-0.02em] text-foreground text-balance">
-                Product leader shaping strategy and building products that solve complex problems at scale.
+                Product manager shaping strategy and building products that solve complex problems at scale.
               </h1>
               <p className="mt-3 md:mt-[18px] max-w-[560px] text-pretty text-[17px] leading-relaxed text-muted-foreground">
                 With 12 years in technology across product, growth and marketing, I bring a commercial and systems-level
@@ -240,7 +392,8 @@ export default function AiPage() {
                   </div>
                 ))}
               </dl>
-              <ul aria-label="Companies I've built products for" className="mt-9 md:mt-[60px] flex flex-wrap items-center gap-x-6 sm:gap-x-8 gap-y-4">
+              {SHOW_LOGOS && (
+              <ul aria-label="Companies I've built products for" className="mt-9 md:mt-12 flex flex-wrap items-center gap-x-10 sm:gap-x-14 gap-y-4">
                 {LOGOS.map((l) => (
                   <li key={l.name} className="flex h-6 items-center">
                     <Image
@@ -253,252 +406,142 @@ export default function AiPage() {
                   </li>
                 ))}
               </ul>
+              )}
             </div>
           </section>
         </div>
 
         {/* Featured projects: same label as the homepage, no divider */}
-        <div id="work" className={`${CONTAINER} pt-12 md:pt-20 scroll-mt-20`}>
+        <div id="work" className={`${CONTAINER} pt-12 md:pt-12 scroll-mt-20`}>
           <p className={`${EYEBROW_CAPS} inline-flex items-center gap-1.5`}>
             Featured projects
-            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth={1.75} viewBox="0 0 24 24" aria-hidden="true">
+            <svg className="w-3.5 h-3.5 motion-safe:animate-[nudge-down_1.8s_ease-in-out_infinite]" fill="none" stroke="currentColor" strokeWidth={1.75} viewBox="0 0 24 24" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" d="M12 5v14m0 0l-5-5m5 5l5-5" />
             </svg>
           </p>
         </div>
 
-        {/* Conduit: demo */}
-        <section id="demo" aria-labelledby="demo-title" className={`${CONTAINER} ${CASE_SECTION} scroll-mt-20`}>
-          <h2 id="demo-title" className={`${CARD_TITLE} mb-4 md:mb-6`}>
-            Conduit: an AI pipeline for customs paperwork
-          </h2>
+        {/* Projects: Conduit as one row (text left, demo right), then a two-up grid; media on top, short copy below */}
+        <section aria-label="Featured projects" className={`${CONTAINER} pt-6 md:pt-20 pb-14 md:pb-24`}>
+          <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 lg:gap-x-8 gap-y-14 md:gap-y-20">
+            {PROJECTS.filter((p) => !p.hidden).map((p) => (
+              <li
+                key={p.id}
+                className={
+                  p.demo
+                    ? "md:col-span-2 pb-14 md:pb-20 border-b border-gray-200"
+                    : p.wide || !p.image
+                      ? "md:col-span-2"
+                      : undefined
+                }
+              >
+                <article
+                  aria-labelledby={p.id}
+                  className={
+                    p.demo || p.wide
+                      ? "flex flex-col lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)] lg:gap-12 lg:items-center"
+                      : p.image
+                        ? "flex h-full flex-col"
+                        : "flex flex-col border-t border-gray-200"
+                  }
+                >
+                  {p.demo ? (
+                    <div className="lg:order-2">
+                      <DemoPlayer chapters={CHAPTERS} label="Conduit demo, 27 seconds, no sound" />
+                    </div>
+                  ) : p.image ? (
+                    <div className={`${p.wide ? "lg:order-2 " : ""}aspect-[16/10] overflow-hidden rounded-lg border border-gray-200 bg-gray-50`}>
+                      <Image
+                        src={p.image!.src}
+                        alt={p.image!.alt}
+                        width={p.image!.width}
+                        height={p.image!.height}
+                        sizes="(min-width: 768px) 50vw, 100vw"
+                        className={`h-full w-full object-cover ${p.image!.position ?? ""}`}
+                      />
+                    </div>
+                  ) : null}
 
-          <div className={CASE_GRID}>
-            <div className={CASE_TEXT}>
-              <p>
-                Food importers copy details from supplier documentation into internal compliance forms by hand. If one
-                data point is incorrect, the shipment can be blocked at the border for days.
-              </p>
-              <p>
-                I have built Conduit, a tool that reads the supplier documents and fills in the compliance forms.
-                Importers set up their own pipelines, choosing which fields to pull out and how to fill in the forms.
-              </p>
-              <p>Conduit gives extracted data confidence scores and marks data below the threshold for human review.</p>
-              <dl className={`${CASE_META} mt-6 md:mt-8`}>
-                <div>
-                  <dt className={META_LABEL}>Role</dt>
-                  <dd>Sole product manager and designer</dd>
-                </div>
-                <div>
-                  <dt className={META_LABEL}>Built with</dt>
-                  <dd>{BUILT_WITH}</dd>
-                </div>
-              </dl>
-              <a href={LINKS.conduitCase} className={PILL_GLASS}>
-                Read the case study
-                <Arrow />
-              </a>
-            </div>
+                  <div
+                    className={
+                      p.demo || p.wide ? "flex flex-col lg:order-1 lg:[&>div:first-child>p:first-child]:mt-0" : "flex flex-1 flex-col"
+                    }
+                  >
+                    <div>
+                      <p className="mt-5 flex flex-wrap items-center gap-x-2.5 gap-y-1 text-sm text-muted-foreground">
+                        {p.tag && <span className={TAG}>{p.tag}</span>}
+                        <span>{p.role}</span>
+                        {p.year && (
+                          <>
+                            <span aria-hidden="true">·</span>
+                            <span>{p.year}</span>
+                          </>
+                        )}
+                      </p>
+                      <h2 id={p.id} className={`${CARD_TITLE} mt-2.5`}>
+                        {p.title}
+                      </h2>
+                      <p className="mt-2.5 max-w-[56ch] text-[15px] md:text-base leading-relaxed text-muted-foreground text-pretty">
+                        {p.summary}
+                      </p>
+                    </div>
+                    <div className="flex flex-col">
+                      {p.note && (
+                        <p className="pt-6 text-sm text-muted-foreground">{p.note}</p>
+                      )}
+                      {p.results.length > 0 && (
+                      <dl className="pt-6 flex flex-wrap gap-x-8 gap-y-3">
+                        {p.results.map((r) => (
+                          <div key={r.label} className="flex flex-col-reverse justify-end">
+                            <dt className="text-[13px] leading-snug text-muted-foreground">{r.label}</dt>
+                            <dd className="text-lg font-medium text-foreground leading-tight mb-0.5">{r.value}</dd>
+                          </div>
+                        ))}
+                      </dl>
+                      )}
 
-            <div>
-              <DemoPlayer chapters={CHAPTERS} label="Conduit demo, 54 seconds, no sound" />
-            </div>
-          </div>
+                      {p.caseStudy && (
+                        <a href={p.caseStudy} className={`${ARROW_LINK} mt-5 self-start text-[15px]`}>
+                          Read the case study
+                          <Arrow />
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                </article>
+              </li>
+            ))}
+          </ul>
         </section>
 
-        {/* Amazon: document system, same layout as Conduit */}
-        <section aria-labelledby="veeqo-title" className={`${CONTAINER} ${CASE_SECTION}`}>
-          <div className="flex flex-wrap gap-2 mb-3">
-            <span className={TAG}>Big tech</span>
-          </div>
-          <h2 id="veeqo-title" className={`${CARD_TITLE} mb-4 md:mb-6`}>
-            Amazon: Redesigning a document system for 50k+ sellers
+        {/* How I work: the loop, then four principles with proof */}
+{SHOW_HOW_I_WORK && (
+        <section aria-labelledby="how-title" className={`${CONTAINER} pt-10 pb-10 md:pt-16 md:pb-16 border-t border-border/40`}>
+          <h2 id="how-title" className={`${CARD_TITLE} mb-3`}>
+            How I work
           </h2>
-          <div className={CASE_GRID}>
-            <div className={CASE_TEXT}>
-              <p>
-                I led the design that replaced the third-party PDF tool behind every invoice, customs form and packing
-                slip: an HTML-based engine with AI-assisted editing, a rebuilt document library, and a migration path for
-                the enterprise accounts.
-              </p>
-              <dl className={CASE_META}>
-                <div className="flex flex-col-reverse justify-end">
-                  <dt className="text-sm text-muted-foreground">saved in third-party platform costs</dt>
-                  <dd className="text-xl font-medium text-foreground mb-0.5">$2.3M a year</dd>
-                </div>
-                <div className="flex flex-col-reverse justify-end">
-                  <dt className="text-sm text-muted-foreground">among top-tier enterprise accounts</dt>
-                  <dd className="text-xl font-medium text-foreground mb-0.5">0% churn</dd>
-                </div>
-              </dl>
-              <dl className={`${CASE_META} mt-6 md:mt-8`}>
-                <div>
-                  <dt className={META_LABEL}>Role</dt>
-                  <dd>Product design lead</dd>
-                </div>
-                <div>
-                  <dt className={META_LABEL}>Timeline</dt>
-                  <dd>3 months, 2026</dd>
-                </div>
-              </dl>
-              <a href={LINKS.veeqoCase} className={PILL_GLASS}>
-                Read the case study
-                <Arrow />
-              </a>
-            </div>
-            <div className={CASE_MEDIA}>
-              <Image
-                src="/images/vq11.png"
-                alt="Document setup with branding controls and a live invoice preview"
-                width={2844}
-                height={2010}
-                sizes="(min-width: 1024px) 60vw, 100vw"
-                className="h-auto w-full"
-              />
-            </div>
-          </div>
+          <ol aria-label="My product loop" className="mb-8 md:mb-12 flex flex-wrap items-center gap-x-2 gap-y-1 text-base md:text-[17px] text-muted-foreground">
+            {LOOP.map((step, i) => (
+              <li key={step} className="inline-flex items-center gap-2">
+                {i > 0 && <span aria-hidden="true">→</span>}
+                <span className={i === 0 ? "text-foreground" : undefined}>{step}</span>
+              </li>
+            ))}
+          </ol>
+          <ol className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+            {PRINCIPLES.map((p, i) => (
+              <li key={p.title} className="border-t border-border/60 pt-4">
+                <span aria-hidden="true" className="block font-mono text-[13px] text-muted-foreground mb-2">
+                  0{i + 1}
+                </span>
+                <h3 className="font-serif text-[20px] leading-[1.25] tracking-tight mb-2 text-balance">{p.title}</h3>
+                <p className="text-base leading-relaxed text-foreground">{p.body}</p>
+                <p className="mt-3 text-[15px] leading-relaxed text-muted-foreground">{p.proof}</p>
+              </li>
+            ))}
+          </ol>
         </section>
-
-        {/* Amazon: AI automation, same layout */}
-        <section aria-labelledby="amazon-ai-title" className={`${CONTAINER} ${CASE_SECTION}`}>
-          <div className="flex flex-wrap gap-2 mb-3">
-            <span className={TAG}>Big tech</span>
-          </div>
-          <h2 id="amazon-ai-title" className={`${CARD_TITLE} mb-4 md:mb-6`}>
-            Amazon: AI automation for complex shipping workflows
-          </h2>
-          <div className={CASE_GRID}>
-            <div className={CASE_TEXT}>
-              <p>
-                I designed AI-powered automation for Amazon&apos;s internal shipping operations, cutting manual work for
-                thousands of operators and speeding up decisions across complex logistics workflows.
-              </p>
-              <dl className={`${CASE_META} mt-6 md:mt-8`}>
-                <div>
-                  <dt className={META_LABEL}>Role</dt>
-                  <dd>Product design lead</dd>
-                </div>
-                <div>
-                  <dt className={META_LABEL}>Timeline</dt>
-                  <dd>6 months, 2025–2026</dd>
-                </div>
-              </dl>
-              <span className="inline-flex w-fit items-center gap-2 px-4 sm:px-5 py-2.5 text-[13px] sm:text-sm font-medium rounded-full bg-[#E8E3DD] text-[#6B5D4F]">
-                <Lock />
-                Case study and results available during the interview
-              </span>
-            </div>
-            <div className={CASE_MEDIA}>
-              <Image
-                src="/images/aivq1.png"
-                alt="Orders page with an AI actions panel: a shipping savings insight and restock and stock-move recommendations"
-                width={2844}
-                height={2010}
-                sizes="(min-width: 1024px) 60vw, 100vw"
-                className="h-auto w-full"
-              />
-            </div>
-          </div>
-        </section>
-
-        {/* BodySpec: same layout, no case study link */}
-        <section aria-labelledby="bodyspec-title" className={`${CONTAINER} ${CASE_SECTION}`}>
-          <div className="flex flex-wrap gap-2 mb-3">
-            <span className={TAG}>Series A</span>
-          </div>
-          <h2 id="bodyspec-title" className={`${CARD_TITLE} mb-4 md:mb-6`}>
-            BodySpec: Scaling bookings by 20% for 500K+ users
-          </h2>
-          <div className={CASE_GRID}>
-            <div className={CASE_TEXT}>
-              <p>
-                Medical data can be scary and confusing. I overhauled the BodySpec experience to turn complex DXA scans
-                into simple, actionable health stories. By shifting the focus from one-off data to long-term habits, we
-                helped 500K users understand their bodies and keep coming back for tracking.
-              </p>
-              <dl className={CASE_META}>
-                <div className="flex flex-col-reverse justify-end">
-                  <dt className="text-sm text-muted-foreground">in annual recurring revenue potential</dt>
-                  <dd className="text-xl font-medium text-foreground mb-0.5">$2M+</dd>
-                </div>
-                <div className="flex flex-col-reverse justify-end">
-                  <dt className="text-sm text-muted-foreground">funding round secured</dt>
-                  <dd className="text-xl font-medium text-foreground mb-0.5">$17.2M</dd>
-                </div>
-              </dl>
-              <dl className={`${CASE_META} mt-6 md:mt-8`}>
-                <div>
-                  <dt className={META_LABEL}>Role</dt>
-                  <dd>Senior product designer</dd>
-                </div>
-                <div>
-                  <dt className={META_LABEL}>Timeline</dt>
-                  <dd>May 2022 – Apr 2023</dd>
-                </div>
-              </dl>
-            </div>
-            <div className={CASE_MEDIA}>
-              <Image
-                src="/images/bodyspec-location-booking.webp"
-                alt="BodySpec booking page with a list of scan locations and time slots beside a map"
-                width={2048}
-                height={1366}
-                sizes="(min-width: 1024px) 60vw, 100vw"
-                className="h-auto w-full"
-              />
-            </div>
-          </div>
-        </section>
-
-        {/* TempStars: same layout, no case study link */}
-        <section aria-labelledby="tempstars-title" className={`${CONTAINER} ${CASE_SECTION} pb-12 md:pb-20`}>
-          <h2 id="tempstars-title" className={`${CARD_TITLE} mb-4 md:mb-6`}>
-            TempStars: Building marketplace liquidity for 25K+ dentists
-          </h2>
-          <div className={CASE_GRID}>
-            <div className={CASE_TEXT}>
-              <p>
-                When a dental clinic is short-staffed, it needs help now. I re-engineered the signup and matching logic
-                for Canada&apos;s largest dental marketplace to fix a 40% drop-off between signup and first booking. By
-                making matching faster and more transparent, we turned a week-long wait into a 48-hour win.
-              </p>
-              <dl className="grid w-full grid-cols-3 gap-4 text-[15px] leading-snug">
-                <div className="flex flex-col-reverse justify-end">
-                  <dt className="text-sm text-muted-foreground">lift in activation</dt>
-                  <dd className="text-xl font-medium text-foreground mb-0.5">20%</dd>
-                </div>
-                <div className="flex flex-col-reverse justify-end">
-                  <dt className="text-sm text-muted-foreground">time to first offer</dt>
-                  <dd className="text-xl font-medium text-foreground mb-0.5">7d → 2d</dd>
-                </div>
-                <div className="flex flex-col-reverse justify-end">
-                  <dt className="text-sm text-muted-foreground">booked shifts year on year</dt>
-                  <dd className="text-xl font-medium text-foreground mb-0.5">+25%</dd>
-                </div>
-              </dl>
-              <dl className={`${CASE_META} mt-6 md:mt-8`}>
-                <div>
-                  <dt className={META_LABEL}>Role</dt>
-                  <dd>Lead product designer</dd>
-                </div>
-                <div>
-                  <dt className={META_LABEL}>Timeline</dt>
-                  <dd>Shipped 2023</dd>
-                </div>
-              </dl>
-            </div>
-            <div className={CASE_MEDIA}>
-              <Image
-                src="/images/tempstars-phones-hero.png"
-                alt="TempStars app on two phones: a dental clinic profile with neighbourhood details, and onboarding"
-                width={2048}
-                height={1152}
-                sizes="(min-width: 1024px) 60vw, 100vw"
-                className="h-auto w-full"
-              />
-            </div>
-          </div>
-        </section>
+        )}
 
         {/* Reviews: same cards as the homepage */}
         <section aria-labelledby="reviews-title" className={`${CONTAINER} pt-10 pb-10 md:pt-16 md:pb-16 border-t border-border/40`}>
