@@ -156,10 +156,10 @@ const PROJECTS: Project[] = [
     id: "paid-plans-title",
     tag: "Big tech",
     title: "Amazon: Paid plans across iOS, Android, devices and web",
-    summary: "I was responsible for the paid plan rollout across iOS, Android, devices and web: 12 features, launched on every platform. The plans now bring in multi-million revenue.",
+    summary: "I was responsible for the paid plan rollout across iOS, Android, devices and web: 12+ features, launched on every platform. The plans now bring in multi-million revenue.",
     role: "Product design lead",
     results: [
-      { value: "12", label: "paid features" },
+      { value: "12+", label: "paid features" },
       { value: "4", label: "platforms" },
       { value: "Multi-million", label: "in revenue" },
     ],

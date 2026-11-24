@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 
 const title = 'Amazon: Paid plans across iOS, Android, devices and web'
 const description =
-  'Taking Veeqo from a free shipping tool to paid plans: 12 features on 4 platforms, now bringing in multi-million revenue.'
+  'Taking Veeqo from a free shipping tool to paid plans: 12+ features on 4 platforms, now bringing in multi-million revenue.'
 
 export const metadata: Metadata = {
   title: `${title} – Mary Borysova`,
