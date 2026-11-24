@@ -173,7 +173,7 @@ const PROJECTS: Project[] = [
     tag: "Series A",
     title: "BodySpec: Scaling bookings by 20% for 500K+ users",
     summary: "I redesigned the BodySpec platform and mobile app end to end to improve conversions and increase average order value.",
-    role: "Product manager",
+    role: "Product lead",
     year: "2023",
     results: [
       { value: "$2M+", label: "ARR potential" },
@@ -191,7 +191,7 @@ const PROJECTS: Project[] = [
     id: "tempstars-title",
     title: "TempStars: Building marketplace liquidity for 25K+ dentists",
     summary: "I re-engineered the signup and matching logic for Canada's largest dental marketplace to fix a 40% drop-off between signup and first booking. By making matching faster and more transparent, we turned a week-long wait into a 48-hour match.",
-    role: "Product manager",
+    role: "Product lead",
     year: "2023",
     results: [
       { value: "+20%", label: "booked shifts YoY" },
