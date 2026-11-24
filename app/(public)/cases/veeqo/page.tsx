@@ -62,7 +62,7 @@ export default function VeeqoStory() {
           meta={[
             { label: "Company", value: "Veeqo · Amazon" },
             { label: "Timeline", value: "3 months, 2026" },
-            { label: "Role", value: "Sole product manager and designer" },
+            { label: "Role", value: "Led product and design end to end" },
             { label: "Team", value: "10 people" },
           ]}
           intro={
@@ -386,7 +386,7 @@ export default function VeeqoStory() {
             imageAlt="A coffee Certificate of Origin open in Conduit"
             title="Conduit"
             summary="An AI product for customs compliance."
-            meta={["Logistics", "Sole product manager and designer"]}
+            meta={["Logistics", "Led product and design end to end"]}
           />
         </div>
 
