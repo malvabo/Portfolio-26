@@ -47,7 +47,7 @@ export function TempStarsSection() {
             </div>
             <div>
               <div className="text-xl font-medium text-foreground mb-0.5">+23%</div>
-              <div className="text-sm text-muted-foreground opacity-80">Booked shifts YoY</div>
+              <div className="text-sm text-muted-foreground opacity-80">Projected booked shifts YoY</div>
             </div>
           </div>
         </div>

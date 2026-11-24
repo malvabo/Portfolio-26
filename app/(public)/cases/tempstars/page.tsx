@@ -51,7 +51,7 @@ export default function TempStarsStory() {
             </p>
           }
           stats={[
-            { value: "+23%", label: "booked shifts year over year" },
+            { value: "+23%", label: "projected booked shifts year over year" },
             { value: "~$2M", label: "a year in projected added revenue" },
             { value: "7d → 2d", label: "time to first offer" },
           ]}

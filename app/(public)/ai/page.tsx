@@ -218,7 +218,7 @@ const PROJECTS: Project[] = [
     role: "Product lead",
     year: "2023",
     results: [
-      { value: "+23%", label: "booked shifts YoY" },
+      { value: "+23%", label: "projected booked shifts YoY" },
       { value: "~$2M", label: "a year in projected added revenue" },
       { value: "7d → 2d", label: "to first offer" },
     ],
