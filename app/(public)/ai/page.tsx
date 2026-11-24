@@ -580,8 +580,9 @@ export default function AiPage() {
             Background
           </h2>
           <p className="max-w-[640px] text-base md:text-[17px] leading-[1.7] text-foreground">
-            I started in marketing and was CMO twice before moving into product. I co-founded SmartMum AI, which was
-            later acquired.
+            I started in marketing and was CMO at two companies before moving into product. I then co-founded
+            SmartMum AI, which was later acquired. That path shapes how I build: I think about who buys a product,
+            why they pay for it and how it reaches them from day one, not after launch.
           </p>
         </section>
 
