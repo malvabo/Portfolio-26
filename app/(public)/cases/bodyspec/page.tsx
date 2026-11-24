@@ -119,22 +119,13 @@ export default function BodySpecStory() {
             </p>
           </Moment>
 
-          <Stage
-            title="New messaging and website around progress"
-            visual={
-              <Figure
-                src="/images/bodyspec-collage-5.jpg"
-                alt="Collage of real people of different body shapes and sizes, used as the visual direction for the new messaging"
-                caption="Visual direction for the new messaging and website"
-              />
-            }
-          >
+          <Moment title="New messaging and website around progress">
             <p>
               I reworked the whole messaging and the website proposal around the same idea: track how your body
               changes, not a one-off scan. The homepage and value proposition now lead with progress, so the reason to
               come back is clear before the first booking.
             </p>
-          </Stage>
+          </Moment>
 
           <Moment title="A lean first version to meet the funding deadline">
             <p>

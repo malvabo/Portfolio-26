@@ -235,6 +235,7 @@ const PROJECTS: Project[] = [
 // Logos are black on transparent and share one height (CVS is wider, so a touch shorter).
 const SHOW_HOW_I_WORK = false // hidden for now
 const SHOW_LOGOS = false // hidden for now
+const SHOW_CARD_IMAGES = false // project cards are text only for now
 const LOGOS = [
   { name: "Amazon", src: "/ai/logos/amazon.svg", width: 603, height: 182, className: "h-[20px] sm:h-[24px]" },
   { name: "PandaDoc", src: "/ai/logos/pandadoc.png", width: 334, height: 96, className: "h-[20px] sm:h-[24px]" },
@@ -433,13 +434,15 @@ export default function AiPage() {
         {/* Projects: Conduit as one row (text left, demo right), then a two-up grid; media on top, short copy below */}
         <section aria-label="Featured projects" className={`${CONTAINER} pt-6 md:pt-20 pb-14 md:pb-24`}>
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 lg:gap-x-8 gap-y-14 md:gap-y-20">
-            {PROJECTS.filter((p) => !p.hidden).map((p) => (
+            {PROJECTS.filter((p) => !p.hidden)
+              .map((p) => (SHOW_CARD_IMAGES ? p : { ...p, image: undefined }))
+              .map((p) => (
               <li
                 key={p.id}
                 className={
                   p.demo
-                    ? "md:col-span-2 pb-14 md:pb-20 border-b border-gray-200"
-                    : p.wide || !p.image
+                    ? `md:col-span-2${SHOW_CARD_IMAGES ? " pb-14 md:pb-20 border-b border-gray-200" : ""}`
+                    : p.wide && p.image
                       ? "md:col-span-2"
                       : undefined
                 }
@@ -447,11 +450,11 @@ export default function AiPage() {
                 <article
                   aria-labelledby={p.id}
                   className={
-                    p.demo || p.wide
+                    p.demo || (p.wide && p.image)
                       ? "flex flex-col lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)] lg:gap-12 lg:items-center"
                       : p.image
                         ? "flex h-full flex-col"
-                        : "flex flex-col border-t border-gray-200"
+                        : "flex h-full flex-col border-t border-gray-200"
                   }
                 >
                   {p.demo ? (
@@ -473,7 +476,7 @@ export default function AiPage() {
 
                   <div
                     className={
-                      p.demo || p.wide ? "flex flex-col lg:order-1 lg:[&>div:first-child>p:first-child]:mt-0" : "flex flex-1 flex-col"
+                      p.demo || (p.wide && p.image) ? "flex flex-col lg:order-1 lg:[&>div:first-child>p:first-child]:mt-0" : "flex flex-1 flex-col"
                     }
                   >
                     <div>
