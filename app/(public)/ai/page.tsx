@@ -213,7 +213,7 @@ const PROJECTS: Project[] = [
   {
     id: "tempstars-title",
     tag: "Local marketplace",
-    title: "TempStars: Building marketplace liquidity for 25K+ dentists",
+    title: "TempStars: Building marketplace liquidity for 45K+ dental professionals",
     summary: "I re-engineered the signup and matching logic for Canada's largest dental marketplace to fix a 65% drop-off between signup and first booking. By making matching faster and more transparent, we turned a week-long wait into an under-48-hour match.",
     role: "Product lead",
     year: "2023",
@@ -382,7 +382,7 @@ export default function AiPage() {
                 and replaced a document system for 50K sellers, saving $2.3M a year.
               </p>
               <p className="mt-3 max-w-[560px] text-pretty text-[17px] leading-relaxed text-muted-foreground">
-                I also run my own product studio. For TempStars I fixed signup and matching for 25K dentists, and booked
+                I also run my own product studio. For TempStars I fixed signup and matching for 45K dental professionals, and booked
                 shifts went up 23%. For BodySpec I redesigned the platform for 500K monthly visitors, and
                 average order value increased by 26%.
               </p>

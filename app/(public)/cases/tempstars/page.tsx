@@ -37,7 +37,7 @@ export default function TempStarsStory() {
         <StoryHero
           image="/images/tempstars-phones-hero.png"
           imageAlt="TempStars app on two phones: a dental clinic profile with neighbourhood details, and onboarding"
-          title="TempStars: Building marketplace liquidity for 25K+ dentists"
+          title="TempStars: Building marketplace liquidity for 45K+ dental professionals"
           meta={[
             { label: "Company", value: "TempStars" },
             { label: "Timeline", value: "Shipped 2023" },
@@ -46,7 +46,7 @@ export default function TempStarsStory() {
           ]}
           intro={
             <p>
-              TempStars is Canada&apos;s largest dental staffing marketplace. 65% of hygienists who signed up never
+              TempStars is Canada&apos;s largest dental staffing marketplace, with 45,000 registered dental professionals across North America. 65% of hygienists who signed up never
               booked a shift. I found out why and fixed signup, matching and the policy that was pushing people away.
             </p>
           }
