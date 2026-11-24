@@ -211,7 +211,7 @@ const PROJECTS: Project[] = [
     id: "paid-plans-title",
     title: "Paid plans across iOS, Android, devices and web",
     summary: "I was responsible for the paid plan rollout across iOS, Android, devices and web: 12 features, launched on every platform. The plans now bring in multi-million revenue.",
-    role: "Responsible for the rollout",
+    role: "Product design lead",
     results: [
       { value: "12", label: "paid features" },
       { value: "4", label: "platforms" },
