@@ -10,8 +10,8 @@ type Owner = "clinician" | "platform" | "insurer"
 
 const OWNER: Record<Owner, { label: string; color: string }> = {
   clinician: { label: "Clinician", color: "#3D3D3D" },
-  platform: { label: "PAA platform", color: ACCENT },
-  insurer: { label: "Insurer", color: "#9A968D" },
+  platform: { label: "PAA platform", color: "#8A7A66" },
+  insurer: { label: "Insurer", color: "#ADA79D" },
 }
 
 const STEPS: { owner: Owner; title: string; detail: string; icon?: "lock" | "ai" }[] = [
@@ -65,9 +65,9 @@ function StepText({ step }: { step: (typeof STEPS)[number] }) {
 
 function Before({ children }: { children: ReactNode }) {
   return (
-    <div className="rounded border border-dashed border-[#B4532A]/50 px-3 py-2">
+    <div className="rounded border border-dashed border-black/20 px-3 py-2">
       <ExplainerTag>Before</ExplainerTag>
-      <p className="mt-1.5 text-[12px] text-[#B4532A] leading-snug">{children}</p>
+      <p className="mt-1.5 text-[12px] text-[#6B5D4F] leading-snug">{children}</p>
     </div>
   )
 }

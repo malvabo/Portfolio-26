@@ -1,6 +1,6 @@
 "use client"
 
-import { ACCENT, ExplainerCard, ExplainerStage, ExplainerTag, ExplainerTitle, Sticky } from "@/components/explainer-stage"
+import { ACCENT, NOTE, ExplainerCard, ExplainerStage, ExplainerTag, ExplainerTitle, Sticky } from "@/components/explainer-stage"
 
 /* Paid plans: plans as a staircase that rises with order volume, plus the rules for moving between them */
 
@@ -25,11 +25,11 @@ export function PlanStaircase() {
             <li
               key={p.name}
               className="rounded-t p-2 sm:p-2.5 flex flex-col"
-              style={{ height: `${p.h}%`, background: i === 0 ? "#EEECE7" : `rgba(180,83,42,${0.16 + i * 0.12})` }}
+              style={{ height: `${p.h}%`, background: ["#F2F0EB", "#E8E3DD", "#DBD3C7"][i] }}
             >
               <span className="text-[12px] sm:text-[13px] font-medium text-foreground leading-tight">{p.name}</span>
               <span className="mt-0.5 text-[11px] sm:text-[12px] text-foreground/65 leading-snug">{p.gets}</span>
-              <span className="mt-auto text-[10px] font-mono uppercase tracking-wider" style={{ color: i === 0 ? "#6B6860" : "#7A3417" }}>
+              <span className="mt-auto text-[10px] font-mono uppercase tracking-wider" style={{ color: "#6B5D4F" }}>
                 {p.price}
               </span>
             </li>
@@ -54,7 +54,7 @@ export function PlanStaircase() {
         </ul>
 
         <div className="mt-4">
-          <Sticky color="#F6B98F" tilt={-1.5}>Before: everything free, revenue only from label commission</Sticky>
+          <Sticky color={NOTE.sand} tilt={-1.5}>Before: everything free, revenue only from label commission</Sticky>
         </div>
       </ExplainerCard>
     </ExplainerStage>

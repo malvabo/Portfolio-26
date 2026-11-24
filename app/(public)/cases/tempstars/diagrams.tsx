@@ -1,7 +1,7 @@
 "use client"
 
 import type { ReactNode } from "react"
-import { ACCENT, ExplainerCard, ExplainerStage, ExplainerTag, ExplainerTitle, Sticky } from "@/components/explainer-stage"
+import { ACCENT, NOTE, ExplainerCard, ExplainerStage, ExplainerTag, ExplainerTitle, Sticky } from "@/components/explainer-stage"
 
 /* TempStars: a new hygienist's first week, from signup to first offer, before and after */
 
@@ -41,7 +41,7 @@ function Track({ days, accent, start, end }: { days: number; accent?: boolean; s
 
 function Chip({ children }: { children: ReactNode }) {
   return (
-    <span className="inline-flex items-center gap-1.5 rounded border border-[#B4532A]/30 bg-[#FBEEE8] px-2.5 py-1.5 text-[12px] leading-snug text-[#7A3417]">
+    <span className="inline-flex items-center gap-1.5 rounded border border-black/10 bg-[#F5F3F0] px-2.5 py-1.5 text-[12px] leading-snug text-foreground/80">
       <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden>
         <path d="M2.5 6.2l2.3 2.3 4.7-5" stroke={ACCENT} strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
@@ -76,11 +76,11 @@ export function FirstWeek() {
           <div className="mt-2">
             <Track days={7} start="Generic signup" end="First offer, about a week later" />
           </div>
-          <div className="mt-3 flex flex-wrap gap-x-3 gap-y-2.5 rounded border border-dashed border-[#B4532A]/50 p-3 pb-4">
-            <p className="w-full text-[13px] font-medium text-[#B4532A]">Why people stalled, and 65% never booked</p>
-            <Sticky color="#F6B98F" tilt={-2}>Same shift list for everyone, whatever their skills</Sticky>
-            <Sticky color="#B9D0F2" tilt={1.5}>Left the app to research clinics on Google</Sticky>
-            <Sticky color="#F5B3CF" tilt={-1}>Cancellation policy one-sided toward clinics</Sticky>
+          <div className="mt-3 flex flex-wrap gap-x-3 gap-y-2.5 rounded border border-dashed border-black/20 p-3 pb-4">
+            <p className="w-full text-[13px] font-medium text-[#6B5D4F]">Why people stalled, and 65% never booked</p>
+            <Sticky color={NOTE.sand} tilt={-2}>Same shift list for everyone, whatever their skills</Sticky>
+            <Sticky color={NOTE.blue} tilt={1.5}>Left the app to research clinics on Google</Sticky>
+            <Sticky color={NOTE.lilac} tilt={-1}>Cancellation policy one-sided toward clinics</Sticky>
           </div>
         </div>
 

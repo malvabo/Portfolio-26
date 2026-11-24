@@ -4,7 +4,10 @@ import type { ReactNode } from "react"
 
 /* Shared pieces for case explainers: white cards on a darkened photo stage (same look as the Veeqo diagrams) */
 
-export const ACCENT = "#B4532A"
+// Brand palette: ink for what's new, warm taupe for what was, soft pastels from the AI page cards for notes
+export const ACCENT = "#3D3D3D"
+export const TAUPE = "#6B5D4F"
+export const NOTE = { sand: "#F4E6D4", blue: "#E1E8F5", lilac: "#ECE3F3", mint: "#DCEDE6" }
 
 /** Photo backdrop with a dark wash; content sits on top */
 export function ExplainerStage({ bg, children, className = "" }: { bg: string; children: ReactNode; className?: string }) {
@@ -25,12 +28,13 @@ export function ExplainerCard({ children, className = "" }: { children: ReactNod
   )
 }
 
-/** Small square-cornered label: dark by default, accent for the new side */
+/** Mono label in the site's tag style: taupe for before, ink for after */
 export function ExplainerTag({ children, accent = false }: { children: ReactNode; accent?: boolean }) {
   return (
     <span
-      className="inline-block text-white font-mono text-[10px] uppercase tracking-wider px-1.5 py-0.5 leading-none"
-      style={{ background: accent ? ACCENT : "#3D3D3D" }}
+      className={`inline-block font-mono text-[10px] uppercase tracking-wider px-2 py-0.5 leading-[1.4] rounded-md ${
+        accent ? "bg-[#3D3D3D] text-white" : "bg-[#E8E3DD] text-[#6B5D4F]"
+      }`}
     >
       {children}
     </span>
@@ -45,7 +49,7 @@ export function ExplainerTitle({ children }: { children: ReactNode }) {
 export function Sticky({ children, color, tilt = 0, className = "" }: { children: ReactNode; color: string; tilt?: number; className?: string }) {
   return (
     <span
-      className={`inline-block text-[12px] font-medium text-black/80 px-2.5 py-1.5 leading-snug shadow-[0_2px_6px_rgba(0,0,0,0.12)] ${className}`}
+      className={`inline-block text-[12px] font-medium text-black/80 px-2.5 py-1.5 leading-snug shadow-[0_1px_3px_rgba(0,0,0,0.08)] ${className}`}
       style={{ background: color, transform: `rotate(${tilt}deg)` }}
     >
       {children}
