@@ -220,6 +220,7 @@ const PROJECTS: Project[] = [
 ]
 
 // Logos are black on transparent and share one height (CVS is wider, so a touch shorter).
+const SHOW_HOW_I_WORK = false // hidden for now
 const SHOW_LOGOS = false // hidden for now
 const LOGOS = [
   { name: "Amazon", src: "/ai/logos/amazon.svg", width: 603, height: 182, className: "h-[20px] sm:h-[24px]" },
@@ -505,6 +506,7 @@ export default function AiPage() {
         </section>
 
         {/* How I work: the loop, then four principles with proof */}
+{SHOW_HOW_I_WORK && (
         <section aria-labelledby="how-title" className={`${CONTAINER} pt-10 pb-10 md:pt-16 md:pb-16 border-t border-border/40`}>
           <h2 id="how-title" className={`${CARD_TITLE} mb-3`}>
             How I work
@@ -530,6 +532,7 @@ export default function AiPage() {
             ))}
           </ol>
         </section>
+        )}
 
         {/* Reviews: same cards as the homepage */}
         <section aria-labelledby="reviews-title" className={`${CONTAINER} pt-10 pb-10 md:pt-16 md:pb-16 border-t border-border/40`}>
