@@ -4,7 +4,7 @@ import { StoryTopBar } from "@/components/story-top-bar"
 import { StoryContents } from "@/components/story-contents"
 import { ScrollToTop } from "@/components/scroll-to-top"
 import { BackLinkFooter } from "@/components/back-link"
-import { StoryPage, StoryHero, Lede, Beat, Narrow, Moment, KeyCall, UpNext, Wide } from "@/components/story-case-study"
+import { StoryPage, StoryHero, Lede, Beat, Narrow, Moment, KeyCall, UpNext } from "@/components/story-case-study"
 import { PlanStaircase } from "./diagrams"
 
 const Gap = () => <div className="h-14 md:h-20" aria-hidden />
@@ -102,9 +102,9 @@ export default function PaidPlansStory() {
             </p>
           </Moment>
 
-          <Wide>
+          <div className="mx-auto max-w-[560px]">
             <PlanStaircase />
-          </Wide>
+          </div>
 
           <Moment title="No hard stops in the middle of work">
             <p>
