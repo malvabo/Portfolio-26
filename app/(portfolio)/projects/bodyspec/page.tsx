@@ -46,7 +46,7 @@ export default function BodySpecCaseStudy() {
           <main className="flex-1 px-8 lg:px-12 pb-20 lg:pb-24">
           <div className="mb-12 max-w-[750px]">
             <h1 className="font-serif text-2xl md:text-3xl lg:text-4xl tracking-[-0.02em] leading-[1.2] mb-4">
-              BodySpec: Driving 20% more bookings for 500K+ monthly visitors
+              BodySpec: Driving 25% more bookings for 500K+ monthly visitors
             </h1>
             <p className="text-[17px] leading-relaxed text-muted-foreground">
               How we transformed complex body composition data into an intuitive consumer experience.
@@ -98,7 +98,7 @@ export default function BodySpecCaseStudy() {
             <ul className="space-y-2 text-[17px] leading-relaxed max-w-[750px]">
               <li className="flex gap-3">
                 <span className="text-muted-foreground mt-0.5">•</span>
-                <span className="text-muted-foreground"><strong className="font-medium text-foreground">Impact:</strong> Redesigned the core scheduling engine, driving a 20% increase in booking conversion that unlocked an estimated $2M+ in annual recurring revenue (ARR) potential.</span>
+                <span className="text-muted-foreground"><strong className="font-medium text-foreground">Impact:</strong> Redesigned the core scheduling engine, driving a 25% increase in booking conversion that unlocked an estimated $2M+ in annual recurring revenue (ARR) potential.</span>
               </li>
               <li className="flex gap-3">
                 <span className="text-muted-foreground mt-0.5">•</span>
@@ -278,12 +278,12 @@ export default function BodySpecCaseStudy() {
 
             <div className="grid md:grid-cols-3 gap-4 mb-4">
               <div className="bg-background rounded-lg p-6">
-                <div className="text-2xl font-serif mb-2 tracking-[-0.02em]">20%</div>
+                <div className="text-2xl font-serif mb-2 tracking-[-0.02em]">25%</div>
                 <p className="text-sm leading-relaxed text-muted-foreground">lift in bookings</p>
               </div>
               <div className="bg-background rounded-lg p-6">
-                <div className="text-2xl font-serif mb-2 tracking-[-0.02em]">30%</div>
-                <p className="text-sm leading-relaxed text-muted-foreground">reduction in checkout abandonment</p>
+                <div className="text-2xl font-serif mb-2 tracking-[-0.02em]">26%</div>
+                <p className="text-sm leading-relaxed text-muted-foreground">increase in average order value</p>
               </div>
               <div className="bg-background rounded-lg p-6">
                 <div className="text-2xl font-serif mb-2 tracking-[-0.02em]">$17.2M</div>
@@ -293,7 +293,7 @@ export default function BodySpecCaseStudy() {
 
             <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
               <p>
-                The results were immediate: we saw a 20% lift in bookings and a 30% reduction in checkout abandonment. Beyond the UI, this work provided the strategic foundation that supported BodySpec’s $17.2M Series A funding.
+                The results were immediate: we saw a 25% lift in bookings and a 26% increase in average order value. Beyond the UI, this work provided the strategic foundation that supported BodySpec’s $17.2M Series A funding.
               </p>
             </div>
           </section>

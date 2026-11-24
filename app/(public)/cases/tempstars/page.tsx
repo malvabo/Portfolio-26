@@ -47,12 +47,12 @@ export default function TempStarsStory() {
           ]}
           intro={
             <p>
-              TempStars is Canada&apos;s largest dental staffing marketplace. 40% of hygienists who signed up never
+              TempStars is Canada&apos;s largest dental staffing marketplace. 65% of hygienists who signed up never
               booked a shift. I found out why and fixed signup, matching and the policy that was pushing people away.
             </p>
           }
           stats={[
-            { value: "+20%", label: "booked shifts year over year" },
+            { value: "+23%", label: "booked shifts year over year" },
             { value: "~$2M", label: "a year in projected added revenue" },
             { value: "7d → 2d", label: "time to first offer" },
           ]}
@@ -133,9 +133,9 @@ export default function TempStarsStory() {
         <Divider />
 
         <div id="impact" className="scroll-mt-28" aria-hidden />
-        <Lede kicker="03 Outcome" statement="A week-long wait for a first offer became two days.">
+        <Lede kicker="03 Outcome" statement="A week-long wait for a first offer became less than 48 hours.">
           <p>
-            Activation rose 20%, as fewer people dropped off at the policy or at signup. Booked shifts grew 20% year
+            Activation rose 20%, as fewer people dropped off at the policy or at signup. Booked shifts grew 23% year
             over year, with more active workers and shifts that were easier to judge. At about $50 per shift, that
             is about $2M a year in projected added revenue for TempStars.
           </p>

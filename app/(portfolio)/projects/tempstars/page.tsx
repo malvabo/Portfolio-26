@@ -113,7 +113,7 @@ export default function TempStarsCaseStudy() {
             <ul className="space-y-2 text-[17px] leading-relaxed max-w-[750px]">
               <li className="flex gap-3">
                 <span className="text-muted-foreground mt-0.5">•</span>
-                <span className="text-muted-foreground"><strong className="font-medium text-foreground">Impact:</strong> 20% increase in user activation and a 20% YoY increase in booked shifts, about $2M a year in projected added revenue.</span>
+                <span className="text-muted-foreground"><strong className="font-medium text-foreground">Impact:</strong> 20% increase in user activation and a 23% YoY increase in booked shifts, about $2M a year in projected added revenue.</span>
               </li>
               <li className="flex gap-3">
                 <span className="text-muted-foreground mt-0.5">•</span>
@@ -137,7 +137,7 @@ export default function TempStarsCaseStudy() {
             </h2>
             <div className="space-y-3 text-[17px] leading-relaxed text-muted-foreground max-w-[750px]">
               <p>
-                TempStars is Canada&apos;s largest dental staffing platform. When I joined, 40% of signups never booked a shift. The product looked dated, the business rules were unclear to users, and hygienists didn&apos;t feel like the platform was working in their interest. My job was to understand why people weren&apos;t coming back and fix the underlying problems.
+                TempStars is Canada&apos;s largest dental staffing platform. When I joined, 65% of signups never booked a shift. The product looked dated, the business rules were unclear to users, and hygienists didn&apos;t feel like the platform was working in their interest. My job was to understand why people weren&apos;t coming back and fix the underlying problems.
               </p>
             </div>
           </section>
@@ -164,7 +164,7 @@ export default function TempStarsCaseStudy() {
               </div>
               <div className="flex gap-6 p-4">
                 <span className="font-medium text-foreground text-[15px] shrink-0 w-40">Data analysis</span>
-                <span className="text-[15px] text-muted-foreground">Analysed quantitative data to identify drop-off points and surface the biggest issues - 40% signup-to-activation gap, 7-day time-to-first-offer, and shift abandonment rates by user segment.</span>
+                <span className="text-[15px] text-muted-foreground">Analysed quantitative data to identify drop-off points and surface the biggest issues - 65% signup-to-activation gap, 7-day time-to-first-offer, and shift abandonment rates by user segment.</span>
               </div>
             </div>
 
@@ -213,7 +213,7 @@ export default function TempStarsCaseStudy() {
                 I started by mapping the end-to-end user journey to understand where people were dropping off. The problems were concentrated in the first 48 hours after signup.
               </p>
               <p>
-                <strong className="font-medium text-foreground">The 40% drop-off:</strong> Users were registering but not booking. Some were put off by the cancellation policy before they even took a shift. Others simply didn&apos;t have enough information to feel confident applying.
+                <strong className="font-medium text-foreground">The 65% drop-off:</strong> Users were registering but not booking. Some were put off by the cancellation policy before they even took a shift. Others simply didn&apos;t have enough information to feel confident applying.
               </p>
               <p>
                 <strong className="font-medium text-foreground">Missing context:</strong> Users were leaving the app to look up dental offices on Google before applying, because shift cards didn&apos;t include the details they needed - parking, equipment, team size, office culture.
@@ -476,7 +476,7 @@ export default function TempStarsCaseStudy() {
                 <p className="text-sm leading-relaxed text-muted-foreground">Time-to-first-offer: 7 days → 2 days</p>
               </div>
               <div className="bg-background rounded-lg p-6">
-                <div className="text-2xl font-serif mb-2 tracking-[-0.02em]">20%</div>
+                <div className="text-2xl font-serif mb-2 tracking-[-0.02em]">23%</div>
                 <p className="text-sm leading-relaxed text-muted-foreground">YoY increase in booked shifts, about $2M a year in projected added revenue</p>
               </div>
             </div>
@@ -489,7 +489,7 @@ export default function TempStarsCaseStudy() {
                 <strong className="font-medium text-foreground">Velocity:</strong> Time-to-first-offer dropped from 7 days to 2 days, mainly because the matching was more targeted from day one.
               </p>
               <p>
-                <strong className="font-medium text-foreground">Booked shifts:</strong> Up 20% YoY, about $2M a year in projected added revenue at around $50 per shift. A combination of more active workers in the system and shifts being easier to evaluate and apply for.
+                <strong className="font-medium text-foreground">Booked shifts:</strong> Up 23% YoY, about $2M a year in projected added revenue at around $50 per shift. A combination of more active workers in the system and shifts being easier to evaluate and apply for.
               </p>
             </div>
           </section>

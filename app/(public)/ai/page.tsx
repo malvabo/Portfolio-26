@@ -81,7 +81,7 @@ const PRINCIPLES = [
   {
     title: "Start with customers and the numbers",
     body: "Interviews, support tickets and funnels, side by side, until the real problem is clear and everyone agrees on it.",
-    proof: "At TempStars, 15 interviews and a funnel analysis traced a 40% drop-off to a cancellation policy, not the UI. At BodySpec, I trained technicians in several states to run interviews during scans.",
+    proof: "At TempStars, 15 interviews and a funnel analysis traced a 65% drop-off to a cancellation policy, not the UI. At BodySpec, I trained technicians in several states to run interviews during scans.",
   },
   {
     title: "Decide what matters, and what doesn't ship",
@@ -153,12 +153,13 @@ const PROJECTS: Project[] = [
   {
     id: "bodyspec-title",
     tag: "Series A",
-    title: "BodySpec: Scaling bookings by 20% for 500K+ monthly visitors",
+    title: "BodySpec: Scaling bookings by 25% for 500K+ monthly visitors",
     summary: "I redesigned the BodySpec platform and mobile app end to end to improve conversions and increase average order value.",
     role: "Product lead",
     year: "2023",
     results: [
-      { value: "$2M+", label: "ARR potential" },
+      { value: "+25%", label: "bookings" },
+      { value: "+26%", label: "average order value" },
       { value: "$17.2M", label: "funding round secured" },
     ],
     caseStudy: LINKS.bodyspecCase,
@@ -172,11 +173,11 @@ const PROJECTS: Project[] = [
   {
     id: "tempstars-title",
     title: "TempStars: Building marketplace liquidity for 25K+ dentists",
-    summary: "I re-engineered the signup and matching logic for Canada's largest dental marketplace to fix a 40% drop-off between signup and first booking. By making matching faster and more transparent, we turned a week-long wait into a 48-hour match.",
+    summary: "I re-engineered the signup and matching logic for Canada's largest dental marketplace to fix a 65% drop-off between signup and first booking. By making matching faster and more transparent, we turned a week-long wait into an under-48-hour match.",
     role: "Product lead",
     year: "2023",
     results: [
-      { value: "+20%", label: "booked shifts YoY" },
+      { value: "+23%", label: "booked shifts YoY" },
       { value: "~$2M", label: "a year in projected added revenue" },
       { value: "7d → 2d", label: "to first offer" },
     ],
