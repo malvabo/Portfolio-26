@@ -582,10 +582,17 @@ export default function AiPage() {
           <h2 id="bg-title" className={`${CARD_TITLE} mb-4`}>
             Background
           </h2>
-          <p className="max-w-[56ch] text-[15px] md:text-base leading-relaxed text-muted-foreground text-pretty">
-            I started in marketing and was CMO twice before moving into product. I co-founded SmartMum AI, which was
-            later acquired.
-          </p>
+          <div className="max-w-[60ch] space-y-3 text-[15px] md:text-base leading-relaxed text-muted-foreground text-pretty">
+            <p>
+              I started in marketing, as CMO twice, leading teams of 10 and 6. That taught me how products sell. I
+              learned growth, pricing and go-to-market from the commercial side first.
+            </p>
+            <p>
+              I moved into product to own the full journey, from problem to launch to growth. That is what I have done
+              for the last 8 years in design and product, most recently at Amazon, and as Product Lead at Tech Matters
+              Studio, SmartMum AI and BodySpec.
+            </p>
+          </div>
         </section>
 
         {/* Writing: the homepage articles block */}
