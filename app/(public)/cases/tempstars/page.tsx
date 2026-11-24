@@ -90,7 +90,7 @@ export default function TempStarsStory() {
           />
         </div>
 
-        <div className="mt-12 md:mt-16">
+        <div className="mt-12 md:mt-16 mx-auto max-w-[620px]">
           <Figure
             src="/images/tempstars-survey-charts.png"
             alt="Onboarding survey results and the distribution of shifts across users"

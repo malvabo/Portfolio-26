@@ -1,29 +1,25 @@
 "use client"
 
 import { StoryTopBar } from "@/components/story-top-bar"
-import { wip } from "@/components/wip"
 import { StoryContents } from "@/components/story-contents"
 import { ScrollToTop } from "@/components/scroll-to-top"
 import { BackLinkFooter } from "@/components/back-link"
-import { AlarmClock, Handshake, Lock, MessagesSquare, Rows3, Timer } from "lucide-react"
 import {
   StoryPage,
   StoryHero,
-  Divider,
   Lede,
   Beat,
-  Wide,
   Narrow,
   Figure,
-  CardStack,
   Stage,
   Moment,
-  Results,
+  KeyCall,
   UpNext,
-  Reveal,
-  Words,
 } from "@/components/story-case-study"
 
+const Gap = () => <div className="h-14 md:h-20" aria-hidden />
+
+// A short, product-focused version of the PAA case: the business problem, the calls that mattered, the result.
 export default function PAAStory() {
   return (
     <div className="min-h-screen bg-background story-static">
@@ -32,160 +28,111 @@ export default function PAAStory() {
       <StoryContents
         items={[
           { id: "overview", label: "Overview" },
-          { id: "problem", label: "Who and why" },
-          { id: "discovery", label: "Research" },
-          { id: "built", label: "The solution" },
-          { id: "process", label: "Key decisions" },
+          { id: "problem", label: "The problem" },
+          { id: "discovery", label: "What we found" },
+          { id: "built", label: "Key decisions" },
           { id: "impact", label: "Outcome" },
         ]}
       />
 
       <StoryPage>
-        {/* 1. Hero */}
         <div id="overview" className="scroll-mt-28" aria-hidden />
         <StoryHero
           image="/images/paa_11.png"
           imageAlt="PAA clinical dashboard with pending action tiles and a message drawer"
           title="PAA: Scaling clinical efficiency through AI-driven workflows"
           meta={[
-            { label: "Company", value: "PAA" },
+            { label: "Company", value: "PAA, Series C" },
             { label: "Timeline", value: "6 months, 2024" },
             { label: "Role", value: "Lead product designer" },
+            { label: "Worked with", value: "Clinical director, operations director, CTO" },
           ]}
           intro={
             <p>
-              PAA is an AI platform for managing patient care after a hospital stay. I led design from a legacy
-              product with no design files to a dashboard that shows clinicians what&apos;s urgent in seconds,
-              and cuts paperwork with AI that drafts reports for clinicians to check. I worked with the clinical
-              director, operations director and CTO, and owned the interaction model end to end.
+              PAA is an AI platform for managing patient care after a hospital stay. Clinicians were losing hours to
+              paperwork and missing deadlines that carried penalties. I led the clinician workspace end to end:
+              deciding what to fix first, setting how AI may work with clinical data, and getting the clinical,
+              operations and engineering leads behind it.
             </p>
           }
           stats={[
-            { value: "~$14M", label: "a year saved, from 40% less time managing document workflows" },
-            { value: "1,000s", label: "clinicians and facility staff using it" },
+            { value: "~$14M", label: "a year in clinician time saved" },
+            { value: "40%", label: "less time managing document workflows" },
             { value: "Tier-1", label: "deals with Kaiser, Humana and United Healthcare" },
           ]}
         />
 
-        <Divider />
+        <Gap />
 
-        {/* 2. The setup */}
         <div id="problem" className="scroll-mt-28" aria-hidden />
-        <Lede kicker="01 Who and why" statement="Patients who've just left hospital still need care. Their plans are complex, and every deadline has a regulator or insurer behind it.">
+        <Lede
+          kicker="01 The problem"
+          statement="Every deadline had a regulator or insurer behind it, and the product treated them all the same."
+        >
           <p>
-            Yet in PAA&apos;s legacy dashboard, a task that could trigger a penalty looked exactly like one that could
-            wait a week. Requests from physicians sat in a separate chat tab, cut off from the task list.
+            In the legacy dashboard, a task that could trigger a penalty looked exactly like one that could wait a week.
+            Requests from doctors and insurers sat in a separate tab, and clinicians wrote every insurer report by hand
+            from an assessment they had already filled in. The cost was clinician time, missed deadlines and slower
+            approvals.
           </p>
         </Lede>
 
-        <div className="mt-10 md:mt-14">
-          <Wide>
-            <Figure
-              src="/images/paa-0.png"
-              alt="Legacy dashboard with a flat, unsorted task table"
-              caption="Past due, due today, due next week: all with the same visual weight"
-            />
-          </Wide>
-        </div>
+        <Gap />
 
-        <Divider />
-
-        {/* 3. Discovery */}
         <div id="discovery" className="scroll-mt-28" aria-hidden />
-        <Beat kicker="02 Research" title="Mapping clinical workflows, from admission to discharge">
+        <Beat kicker="02 What we found" title="Mapping the work, from admission to discharge">
           <p>
             I ran working sessions with clinical staff, case managers, care coordinators and admissions teams to map
-            each of their workflows step by step, and where they handed work to each other.
+            each workflow and every handoff between them. Three problems stood out, and I ranked them by what they cost
+            the business.
           </p>
         </Beat>
 
-        <div className="mt-14">
-          <CardStack
-            label="What research showed"
-            cards={[
+        <div className="mt-12">
+          <KeyCall
+            label="Ranked by cost"
+            rows={[
               {
-                icon: Rows3,
-                image: "/images/paa-tile-triage.jpg",
-                title: "Prioritization paralysis",
-                body: "Clinicians re-sorted their whole list at every login. Nothing separated a regulatory risk from routine work.",
+                label: "Triage",
+                text: "Nothing separated a regulatory risk from routine work, so clinicians re-sorted their whole list at every login and overdue tasks stayed overdue.",
               },
               {
-                icon: MessagesSquare,
-                image: "/images/paa-tile-silos.jpg",
-                title: "Information silos",
-                body: "Insurers and doctors asked for notes and approvals by message, in a tab nobody saw from the task view.",
+                label: "Paperwork",
+                text: "Reports for insurers repeated the assessment by hand. This was the biggest single drain on clinician time.",
               },
               {
-                icon: AlarmClock,
-                image: "/images/paa-tile-overdue.jpg",
-                title: "No escalation trigger",
-                body: "Without any sign of urgency, overdue tasks simply stayed overdue.",
+                label: "Context",
+                text: "Requests from doctors and insurers lived in a tab nobody saw from the task view, so answers came late.",
               },
             ]}
           />
         </div>
 
-        <Divider />
+        <Gap />
 
-        {/* 4. What we built */}
         <div id="built" className="scroll-mt-28" aria-hidden />
-        <Beat
-          kicker="03 The solution"
-          title="A dashboard that answers the most urgent question first, then lets clinicians dig in."
-        />
+        <Beat kicker="03 Key decisions" title="Fix triage first, then let AI take the paperwork, on rules clinicians and insurers can trust." />
 
-        <div className="mt-5 space-y-12 md:space-y-16">
+        <div className="mt-10 md:mt-14 space-y-12 md:space-y-16">
           <Stage
-            title="Pending action tiles"
+            title="Start with what's urgent"
             visual={
               <Figure
                 src="/images/paa-tasks.png"
                 alt="Pending action tiles above the task table"
-                caption="Tiles surface the critical picture, the table handles the detail"
+                caption="Past due, due today and unread first; everything else in one table"
               />
             }
           >
             <p>
-              A row of high-contrast tiles counts what is past due, due today and unread. A clinician can read the
-              urgency of a whole shift in under three seconds.
+              Before adding AI, I made sure clinicians could see the risk in their day. The workspace now opens on what
+              is past due, due today and unread, so a clinician reads the urgency of a whole shift in seconds. Everything
+              else lives in one table they can sort, filter and approve from.
             </p>
           </Stage>
 
           <Stage
-            title="A message drawer that carries the patient’s condition and hospital status"
-            visual={
-              <Figure
-                src="/images/paa-messages.png"
-                alt="Messages inbox with a patient's case summary shown above the conversation thread"
-                caption="Messages beside the patient's case, with starring and key metadata"
-              />
-            }
-          >
-            <p>
-              Requests from insurers and doctors lived in a separate tab, so clinicians switched screens to
-              understand a single patient. Messages now open in a drawer that shows the patient&apos;s key data
-              above the thread: their condition and their current status in hospital.
-            </p>
-          </Stage>
-
-          <Stage
-            title="A task table that goes deeper"
-            visual={
-              <Figure
-                src="/images/paa-2.png"
-                alt="Assessment completion screen with a Generate Documentation button"
-                caption="Finishing an assessment leads straight to documentation"
-              />
-            }
-          >
-            <p>
-              Everything else lives in one task table that clinicians can sort and filter, and approve documents from
-              without leaving the page.
-            </p>
-          </Stage>
-
-          <Stage
-            title="Faster reports with AI drafts"
+            title="AI drafts the report, the clinician signs it"
             visual={
               <Figure
                 src="/images/paa-doc2.png"
@@ -195,95 +142,38 @@ export default function PAAStory() {
             }
           >
             <p>
-              Clinicians filled in a patient assessment, then wrote the same facts out again as a report for the insurer.
-              Now the AI turns the assessment into that report, and the clinician reviews and signs it.
+              The biggest time cost was rewriting the assessment as a report for the insurer. Now the AI drafts that
+              report from the assessment, and the clinician reviews and signs it. A person stays accountable for every
+              report that leaves the building.
             </p>
           </Stage>
-        </div>
 
-        <Divider />
-
-        {/* 5. Moments */}
-        <div id="process" className="scroll-mt-28" aria-hidden />
-        <Beat kicker="04" title="Key decisions" />
-
-        <div className="mt-5 space-y-12 md:space-y-16">
-          <Moment
-            n={1}
-            title="Splitting &ldquo;am I on fire?&rdquo; from &ldquo;what&apos;s next?&rdquo;"
-            visual={
-              <Figure
-                src="/images/paa-3.png"
-                alt="Dashboard iterations, each with status tiles above a patient table"
-                caption="Dashboard iterations: tiles for what's urgent, a table for what's next"
-              />
-            }
-          >
+          <Moment title="One locked record as the source of truth">
             <p>
-              My early wireframes put everything in one feed sorted by urgency. Clinicians needed to tell immediate
-              risks apart from ongoing work, so I split the screen: tiles for &quot;am I on fire right now?&quot; and a
-              table for &quot;what do I work through next?&quot;
+              For AI recommendations to be trusted, the input had to be trustworthy. Clinicians submit the core
+              assessment first and it locks. Only then does the AI generate the recommendation and the report, from
+              nothing but that record. Nobody can go back and adjust the assessment to steer the outcome.
             </p>
           </Moment>
 
-          <Moment
-            n={2}
-            title="One locked record, one source of truth"
-            visual={wip(
-              <Figure
-                src="/images/paa-discharge.png"
-                blur
-                alt="Discharge documentation flow"
-                caption="The AI drafts only from the locked assessment"
-              />
-            )}
-          >
+          <Moment title="Requests next to the patient">
             <p>
-              Clinicians enter the core patient assessment first: the objective, unambiguous data the rest of the care
-              plan depends on. When they submit it, it locks. Only then does the AI generate the recommendation and the
-              report for the insurer, built from nothing but that record.
-            </p>
-            <p>
-              Nobody can go back and adjust the assessment to steer the AI towards the outcome they want. The locked
-              record becomes the single source of truth for every recommendation and report, and it can&apos;t be changed
-              after the fact.
+              Messages from doctors and insurers now open beside the patient&apos;s case, with their condition and
+              hospital status above the thread, so clinicians answer without switching screens.
             </p>
           </Moment>
         </div>
 
-        <Divider />
+        <Gap />
 
-        {/* 6. Results */}
         <div id="impact" className="scroll-mt-28" aria-hidden />
-        <Lede kicker="05 Outcome" statement="Clinicians got their time back, and major health plans signed contracts for the platform." />
-
-        <div className="mt-14">
-          <Results
-            items={[
-              {
-                icon: Timer,
-                image: "/images/paa-tile-time.jpg",
-                value: "~$14M",
-                label: "a year in clinician time",
-                body: "From 40% less time managing document workflows.",
-              },
-              {
-                icon: Handshake,
-                image: "/images/paa-tile-deals.jpg",
-                value: "Tier-1",
-                label: "deals unlocked",
-                body: "Multi-million deals with Kaiser, Humana and United Healthcare.",
-              },
-              {
-                icon: Lock,
-                image: "/images/paa-tile-lock.jpg",
-                value: "AI",
-                label: "recommendations that can’t be gamed",
-                body: "AI-powered recommendations now draw on a locked clinical assessment, so they stay accurate and clinicians can’t steer the outcome.",
-              },
-            ]}
-          />
-        </div>
+        <Lede kicker="04 Outcome" statement="Clinicians got their time back, and major health plans signed on.">
+          <p>
+            Time spent managing document workflows fell 40%, worth about $14M a year in clinician time. Thousands of
+            clinicians and facility staff use the platform, and PAA closed multi-million deals with Kaiser, Humana and
+            United Healthcare.
+          </p>
+        </Lede>
 
         <div className="mt-16 md:mt-20">
           <UpNext
