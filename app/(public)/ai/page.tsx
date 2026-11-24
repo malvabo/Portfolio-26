@@ -313,6 +313,12 @@ const FOCUS = "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visi
 const EYEBROW = "text-sm text-muted-foreground"
 const EYEBROW_CAPS = "uppercase text-[13px] font-mono tracking-wide text-muted-foreground"
 const TAG = "inline-block px-2.5 py-0.5 text-[11px] font-mono uppercase tracking-normal rounded-md bg-[#E8E3DD] text-[#6B5D4F]"
+// Case cards: soft bordered tile, pill, serif title, mono link; the whole tile is the link target
+const CASE_CARD = "group relative flex h-full flex-col rounded-3xl border border-black/[0.07] bg-white p-7 md:p-9 transition-[border-color,box-shadow] duration-200"
+const CASE_CARD_LINKED = "hover:border-black/[0.14] hover:shadow-[0_2px_20px_-8px_rgba(0,0,0,0.12)] focus-within:border-black/[0.14]"
+const CARD_PILL = "inline-block rounded-full px-3 py-1 text-[11px] font-mono uppercase tracking-[0.14em]"
+const CASE_TITLE = "font-serif text-[26px] md:text-[30px] leading-[1.1] tracking-[-0.015em] text-foreground text-balance"
+const CASE_LINK = `mt-8 self-start inline-flex items-center gap-1.5 font-mono text-[13px] tracking-wide text-foreground/80 hover:text-foreground after:absolute after:inset-0 after:rounded-3xl after:content-[''] rounded ${FOCUS}`
 const CARD_TITLE = "font-serif text-[22px] md:text-[26px] leading-[1.15] tracking-tight text-foreground text-balance"
 const PILL_GLASS = `inline-flex items-center justify-center gap-2 min-h-11 px-5 text-sm font-medium rounded-full bg-white/40 backdrop-blur-md border border-gray-300/70 text-foreground hover:bg-white/60 hover:border-gray-400/70 transition-all duration-300 shadow-sm hover:shadow-md ${FOCUS}`
 const ARROW_LINK = `inline-flex items-center gap-1.5 text-base font-medium text-foreground underline underline-offset-[6px] decoration-foreground/25 hover:decoration-foreground transition-colors rounded ${FOCUS}`
@@ -380,7 +386,7 @@ export default function AiPage() {
         {/* Hero: the homepage hero, with the dot field and the AI orb */}
         <div id="top" className="relative">
           <HeroGrid quietPad={30} includeMedia />
-          <section aria-labelledby="hero-title" className={`${CONTAINER} relative z-10 pt-6 pb-6 md:pt-6 md:pb-0 md:min-h-[calc(100svh-150px)]`}>
+          <section aria-labelledby="hero-title" className={`${CONTAINER} relative z-10 pt-8 pb-8 md:pt-10 md:pb-16 md:min-h-[calc(100svh-150px)] md:flex md:flex-col md:justify-center`}>
             <div data-grid-quiet className="max-w-[720px]">
               <Image
                 src="/images/mary-face.webp"
@@ -388,18 +394,18 @@ export default function AiPage() {
                 width={80}
                 height={80}
                 priority
-                className="mb-3 md:mb-4 h-14 w-14 md:h-20 md:w-20 rounded-xl object-cover"
+                className="mb-5 md:mb-6 h-14 w-14 md:h-20 md:w-20 rounded-xl object-cover"
               />
               <h1 id="hero-title" className="font-serif text-[1.75rem] md:text-[2rem] leading-[1.15] font-normal tracking-[-0.02em] text-foreground text-balance lg:whitespace-nowrap">
                 Leader in Digital and Growth Product Management
               </h1>
-              <p className="mt-3 md:mt-[18px] max-w-[560px] text-pretty text-[17px] leading-relaxed text-muted-foreground">
+              <p className="mt-4 md:mt-5 max-w-[600px] text-pretty text-[17px] leading-relaxed text-muted-foreground">
                 With 12 years in technology across product, growth and marketing, I bring a commercial and systems-level
                 perspective to product development. Most recently at Amazon I owned paid plans across four platforms
                 and replaced a document system for 50K sellers, saving $2.3M a year.
               </p>
               {/* Key numbers, as on the portfolio hero */}
-              <dl className="mt-6 md:mt-7 grid grid-cols-3 gap-x-4 sm:gap-x-8">
+              <dl className="mt-8 md:mt-10 grid grid-cols-3 gap-x-4 sm:gap-x-8">
                 {[
                   { value: "$14M/year", label: "Operational costs saved through workflow optimization" },
                   { value: "100K+", label: "Business users across enterprise products" },
@@ -444,7 +450,7 @@ export default function AiPage() {
 
         {/* Projects: Conduit as one row (text left, demo right), then a two-up grid; media on top, short copy below */}
         <section aria-label="Featured projects" className={`${CONTAINER} pt-6 md:pt-20 pb-14 md:pb-24`}>
-          <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 lg:gap-x-8 gap-y-14 md:gap-y-20">
+          <ul className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-6">
             {PROJECTS.filter((p) => !p.hidden)
               .map((p) => (SHOW_CARD_IMAGES ? p : { ...p, image: undefined }))
               .map((p) => (
@@ -452,7 +458,7 @@ export default function AiPage() {
                 key={p.id}
                 className={
                   p.demo
-                    ? `md:col-span-2${SHOW_CARD_IMAGES ? " pb-14 md:pb-20 border-b border-gray-200" : ""}`
+                    ? `md:col-span-2 mb-9 md:mb-14${SHOW_CARD_IMAGES ? " pb-14 md:pb-20 border-b border-gray-200" : ""}`
                     : p.wide && p.image
                       ? "md:col-span-2"
                       : undefined
@@ -463,21 +469,12 @@ export default function AiPage() {
                   className={
                     p.demo || (p.wide && p.image)
                       ? "flex flex-col lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)] lg:gap-12 lg:items-center"
-                      : p.image
-                        ? "flex h-full flex-col"
-                        : "flex h-full flex-col"
+                      : `${CASE_CARD} ${p.caseStudy ? CASE_CARD_LINKED : ""}`
                   }
                 >
                   {p.demo ? (
                     <div className="lg:order-2">
                       <DemoPlayer chapters={CHAPTERS} label="Conduit demo, 27 seconds, no sound" />
-                    </div>
-                  ) : !p.image && p.strip ? (
-                    <div
-                      aria-hidden="true"
-                      className={`flex h-16 md:h-20 items-end rounded-lg px-4 pb-3 ${STRIP[p.strip].bg}`}
-                    >
-                      <span className={`text-[13px] font-medium tracking-tight ${STRIP[p.strip].fg}`}>{STRIP[p.strip].label}</span>
                     </div>
                   ) : p.image ? (
                     <div className={`${p.wide ? "lg:order-2 " : ""}aspect-[2/1] overflow-hidden rounded-lg border border-gray-200 bg-gray-50`}>
@@ -498,18 +495,29 @@ export default function AiPage() {
                     }
                   >
                     <div>
-                      <p className="mt-5 flex flex-wrap items-center gap-x-2.5 gap-y-1 text-sm text-muted-foreground">
-                        {p.tag && <span className={TAG}>{p.tag}</span>}
-                        <span>{p.role}</span>
-                      </p>
-                      <h2 id={p.id} className={`${CARD_TITLE} mt-2.5`}>
+                      {p.demo ? (
+                        <p className="mt-5 flex flex-wrap items-center gap-x-2.5 gap-y-1 text-sm text-muted-foreground">
+                          {p.tag && <span className={TAG}>{p.tag}</span>}
+                          <span>{p.role}</span>
+                        </p>
+                      ) : (
+                        <p className="flex flex-wrap items-center gap-x-3 gap-y-2">
+                          {p.tag && (
+                            <span className={`${CARD_PILL} ${p.strip ? `${STRIP[p.strip].bg} ${STRIP[p.strip].fg}` : "bg-[#F6EBDD] text-[#6B4A22]"}`}>
+                              {p.tag}
+                            </span>
+                          )}
+                          <span className="text-[13px] text-muted-foreground">{p.role}</span>
+                        </p>
+                      )}
+                      <h2 id={p.id} className={p.demo ? `${CARD_TITLE} mt-2.5` : `${CASE_TITLE} mt-5`}>
                         {p.title}
                       </h2>
-                      <p className="mt-2.5 max-w-[56ch] text-[15px] md:text-base leading-relaxed text-muted-foreground text-pretty">
+                      <p className={`${p.demo ? "mt-2.5" : "mt-3"} max-w-[56ch] text-[15px] md:text-base leading-relaxed text-muted-foreground text-pretty`}>
                         {p.summary}
                       </p>
                     </div>
-                    <div className="flex flex-col">
+                    <div className={p.demo ? "flex flex-col" : "mt-auto flex flex-col"}>
                       {p.note && (
                         <p className="pt-6 text-sm text-muted-foreground">{p.note}</p>
                       )}
@@ -524,10 +532,15 @@ export default function AiPage() {
                       </dl>
                       )}
 
-                      {p.caseStudy && (
+                      {p.caseStudy && p.demo && (
                         <a href={p.caseStudy} className={`${ARROW_LINK} mt-5 self-start text-[15px]`}>
                           Read the case study
                           <Arrow />
+                        </a>
+                      )}
+                      {p.caseStudy && !p.demo && (
+                        <a href={p.caseStudy} className={CASE_LINK}>
+                          View case study <span aria-hidden="true" className="transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">↗</span>
                         </a>
                       )}
                     </div>
