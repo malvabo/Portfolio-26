@@ -198,7 +198,6 @@ const PROJECTS: Project[] = [
       { value: "4", label: "platforms" },
       { value: "Multi-million", label: "in revenue" },
     ],
-    wide: true,
     image: {
       src: "/images/paid-plans.webp",
       alt: "Pricing page with three plans: Shipping (free), Inventory from £17 a month and High Volume from £313 a month",
@@ -218,7 +217,6 @@ const PROJECTS: Project[] = [
       { value: "~$14M/yr", label: "in clinician time saved" },
       { value: "Tier-1 deals", label: "with Kaiser, Humana and UHC" },
     ],
-    wide: true,
     image: {
       src: "/images/paa-cover.png",
       alt: "PAA patient tracker dashboard on a laptop: pending actions, patient overview and a task list",
