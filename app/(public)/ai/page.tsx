@@ -106,7 +106,7 @@ const PROJECTS: Project[] = [
     id: "conduit-title",
     title: "Conduit: an AI product for customs compliance",
     summary: "I own Conduit end to end, from discovery to launch: an AI product that reads supplier documents and prepares customs filings for importers. It cut data checks from 20 minutes to under 3 per shipment, removed manual entry for compliance teams and reduced the filing errors that hold shipments at the border.",
-    role: "Sole product manager and designer",
+    role: "Led product and design end to end",
     results: [
       { value: "20 → 3 min", label: "customs check per shipment" },
     ],
@@ -135,7 +135,7 @@ const PROJECTS: Project[] = [
     tag: "Big tech",
     title: "Amazon: Redesigning a document system for 50k+ sellers",
     summary: "I led the design that replaced the third-party PDF tool behind documents: an HTML-based engine with AI-assisted editing, a new document library, and a migration path for the enterprise accounts.",
-    role: "Sole product manager and designer",
+    role: "Led product and design end to end",
     year: "2025",
     results: [
       { value: "$2.3M/yr", label: "saved in platform costs" },
@@ -359,7 +359,7 @@ export default function AiPage() {
         {/* Hero: the homepage hero, with the dot field and the AI orb */}
         <div id="top" className="relative">
           <HeroGrid quietPad={30} includeMedia />
-          <section aria-labelledby="hero-title" className={`${CONTAINER} relative z-10 pt-6 pb-6 md:pt-[72px] md:pb-6 md:min-h-[calc(100svh-184px)]`}>
+          <section aria-labelledby="hero-title" className={`${CONTAINER} relative z-10 pt-6 pb-6 md:pt-6 md:pb-0 md:min-h-[calc(100svh-150px)]`}>
             <div data-grid-quiet className="max-w-[720px]">
               <Image
                 src="/images/mary-face.webp"
@@ -383,7 +383,7 @@ export default function AiPage() {
                 average order value increased by 26%.
               </p>
               {/* Key numbers, as on the portfolio hero */}
-              <dl className="mt-6 md:mt-9 grid grid-cols-3 gap-x-4 sm:gap-x-8">
+              <dl className="mt-6 md:mt-7 grid grid-cols-3 gap-x-4 sm:gap-x-8">
                 {[
                   { value: "$14M/year", label: "Operational costs saved through workflow optimization" },
                   { value: "100K+", label: "Business users across enterprise products" },
@@ -417,7 +417,7 @@ export default function AiPage() {
         </div>
 
         {/* Featured projects: same label as the homepage, no divider */}
-        <div id="work" className={`${CONTAINER} pt-12 md:pt-12 scroll-mt-20`}>
+        <div id="work" className={`${CONTAINER} pt-12 md:pt-8 scroll-mt-20`}>
           <p className={`${EYEBROW_CAPS} inline-flex items-center gap-1.5`}>
             Featured projects
             <svg className="w-3.5 h-3.5 motion-safe:animate-[nudge-down_1.8s_ease-in-out_infinite]" fill="none" stroke="currentColor" strokeWidth={1.75} viewBox="0 0 24 24" aria-hidden="true">
@@ -476,12 +476,6 @@ export default function AiPage() {
                       <p className="mt-5 flex flex-wrap items-center gap-x-2.5 gap-y-1 text-sm text-muted-foreground">
                         {p.tag && <span className={TAG}>{p.tag}</span>}
                         <span>{p.role}</span>
-                        {p.year && (
-                          <>
-                            <span aria-hidden="true">·</span>
-                            <span>{p.year}</span>
-                          </>
-                        )}
                       </p>
                       <h2 id={p.id} className={`${CARD_TITLE} mt-2.5`}>
                         {p.title}
