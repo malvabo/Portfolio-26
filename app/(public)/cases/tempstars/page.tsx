@@ -52,9 +52,9 @@ export default function TempStarsStory() {
             </p>
           }
           stats={[
-            { value: "+20%", label: "activation, signup to active worker" },
+            { value: "+20%", label: "booked shifts year over year" },
+            { value: "~$2M", label: "a year in added revenue" },
             { value: "7d → 2d", label: "time to first offer" },
-            { value: "+25%", label: "booked shifts year over year" },
           ]}
         />
 
@@ -135,8 +135,9 @@ export default function TempStarsStory() {
         <div id="impact" className="scroll-mt-28" aria-hidden />
         <Lede kicker="03 Outcome" statement="A week-long wait for a first offer became two days.">
           <p>
-            Activation rose 20%, as fewer people dropped off at the policy or at signup. Booked shifts grew 25% year
-            over year, with more active workers and shifts that were easier to judge.
+            Activation rose 20%, as fewer people dropped off at the policy or at signup. Booked shifts grew 20% year
+            over year, with more active workers and shifts that were easier to judge. At about $50 per shift, that
+            is about $2M a year in added revenue for TempStars.
           </p>
           <p>
             The lesson I took from it: operations decisions and design decisions are often the same decision. No

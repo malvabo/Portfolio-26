@@ -194,9 +194,9 @@ const PROJECTS: Project[] = [
     role: "Product manager",
     year: "2023",
     results: [
-      { value: "+20%", label: "activation" },
+      { value: "+20%", label: "booked shifts YoY" },
+      { value: "~$2M/yr", label: "added revenue" },
       { value: "7d → 2d", label: "to first offer" },
-      { value: "+25%", label: "booked shifts YoY" },
     ],
     caseStudy: LINKS.tempstarsCase,
     image: {
