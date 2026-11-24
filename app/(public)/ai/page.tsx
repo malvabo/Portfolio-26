@@ -370,7 +370,7 @@ export default function AiPage() {
                 className="mb-3 md:mb-4 h-14 w-14 md:h-20 md:w-20 rounded-xl object-cover"
               />
               <h1 id="hero-title" className="font-serif text-[1.75rem] md:text-[2rem] leading-[1.15] font-normal tracking-[-0.02em] text-foreground text-balance">
-                Product manager shaping strategy and building products that solve complex problems at scale.
+                Leader in Digital and Growth Product Management
               </h1>
               <p className="mt-3 md:mt-[18px] max-w-[560px] text-pretty text-[17px] leading-relaxed text-muted-foreground">
                 With 12 years in technology across product, growth and marketing, I bring a commercial and systems-level
