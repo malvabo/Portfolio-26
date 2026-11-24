@@ -151,25 +151,6 @@ const PROJECTS: Project[] = [
     },
   },
   {
-    id: "paa-title",
-    hidden: true, // hidden for now
-    tag: "Series C",
-    title: "PAA: Scaling clinical efficiency through AI-driven workflows",
-    summary: "I led the dashboard redesign that turned a dense data view into a prioritised task list for clinicians, cutting the time they spend managing documents by 40% and reducing patient service delays.",
-    role: "Lead product designer",
-    year: "2024",
-    results: [
-      { value: "~$14M/yr", label: "in clinician time saved" },
-      { value: "Tier-1 deals", label: "with Kaiser, Humana and UHC" },
-    ],
-    image: {
-      src: "/images/paa-cover.png",
-      alt: "PAA patient tracker dashboard on a laptop: pending actions, patient overview and a task list",
-      width: 2416,
-      height: 1932,
-    },
-  },
-  {
     id: "bodyspec-title",
     tag: "Series A",
     title: "BodySpec: Scaling bookings by 20% for 500K+ monthly visitors",
@@ -224,6 +205,25 @@ const PROJECTS: Project[] = [
       width: 2000,
       height: 1296,
       position: "object-top",
+    },
+  },
+  {
+    id: "paa-title",
+    tag: "Series C",
+    title: "PAA: Scaling clinical efficiency through AI-driven workflows",
+    summary: "I led the dashboard redesign that turned a dense data view into a prioritised task list for clinicians, cutting the time they spend managing documents by 40% and reducing patient service delays.",
+    role: "Lead product designer",
+    year: "2024",
+    results: [
+      { value: "~$14M/yr", label: "in clinician time saved" },
+      { value: "Tier-1 deals", label: "with Kaiser, Humana and UHC" },
+    ],
+    wide: true,
+    image: {
+      src: "/images/paa-cover.png",
+      alt: "PAA patient tracker dashboard on a laptop: pending actions, patient overview and a task list",
+      width: 2416,
+      height: 1932,
     },
   },
 ]
