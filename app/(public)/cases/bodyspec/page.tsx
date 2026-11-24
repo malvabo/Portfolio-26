@@ -7,7 +7,6 @@ import { BackLinkFooter } from "@/components/back-link"
 import {
   StoryPage,
   StoryHero,
-  Divider,
   Lede,
   Beat,
   Narrow,
@@ -59,7 +58,7 @@ export default function BodySpecStory() {
           ]}
         />
 
-        <Divider />
+        <div className="h-14 md:h-20" aria-hidden />
 
         <div id="problem" className="scroll-mt-28" aria-hidden />
         <Lede
@@ -91,12 +90,12 @@ export default function BodySpecStory() {
           />
         </div>
 
-        <Divider />
+        <div className="h-14 md:h-20" aria-hidden />
 
         <div id="built" className="scroll-mt-28" aria-hidden />
         <Beat kicker="02 Key decisions" title="Make booking fast, then give people a reason to come back." />
 
-        <div className="mt-10 md:mt-14 space-y-24 md:space-y-32">
+        <div className="mt-10 md:mt-14 space-y-12 md:space-y-16">
           <Stage
             title="Two clicks to book"
             visual={
@@ -120,26 +119,44 @@ export default function BodySpecStory() {
             </p>
           </Moment>
 
+          <Stage
+            title="New messaging and website around progress"
+            visual={
+              <Figure
+                src="/images/bodyspec-homepage-final.png"
+                alt="BodySpec homepage redesign: a hero about tracking body composition over time, with benefits below"
+                caption="The new homepage leads with progress over time"
+              />
+            }
+          >
+            <p>
+              I reworked the whole messaging and the website proposal around the same idea: track how your body
+              changes, not a one-off scan. The homepage and value proposition now lead with progress, so the reason to
+              come back is clear before the first booking.
+            </p>
+          </Stage>
+
           <Moment title="A lean first version to meet the funding deadline">
             <p>
-              A Series A was coming and engineering was small. I cut the scope to what people needed to see value and
-              built it on the existing data, so it shipped on time. The funding then paid for a second, fuller
-              iteration.
+              A Series A was coming and engineering was small. I cut the full rework of the legacy checkout flow, which
+              was the most complex piece, and kept only the changes people needed to book faster and see value. Some
+              legacy checkout steps stayed for now. Building on the existing data, the release shipped on time, and the
+              funding then paid for a second, fuller iteration.
             </p>
           </Moment>
         </div>
 
-        <Divider />
+        <div className="h-14 md:h-20" aria-hidden />
 
         <div id="impact" className="scroll-mt-28" aria-hidden />
-        <Lede kicker="03 Outcome" statement="Bookings rose 25% and average order value rose 26%.">
+        <Lede kicker="03 Outcome" statement="Bookings up 25%, average order value up 26%.">
           <p>
             The conversion lift was worth an estimated $2M+ in annual recurring revenue, and the live product helped
             BodySpec close its $17.2M Series A.
           </p>
         </Lede>
 
-        <div className="mt-24 md:mt-32">
+        <div className="mt-16 md:mt-20">
           <UpNext
             href="/cases/tempstars"
             image="/images/tempstars-phones-hero.png"

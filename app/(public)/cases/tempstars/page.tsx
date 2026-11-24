@@ -7,7 +7,6 @@ import { BackLinkFooter } from "@/components/back-link"
 import {
   StoryPage,
   StoryHero,
-  Divider,
   Lede,
   Beat,
   Narrow,
@@ -38,7 +37,7 @@ export default function TempStarsStory() {
         <StoryHero
           image="/images/tempstars-phones-hero.png"
           imageAlt="TempStars app on two phones: a dental clinic profile with neighbourhood details, and onboarding"
-          title="TempStars: Building marketplace liquidity for 25K+ dentists"
+          title="TempStars: Building marketplace liquidity for 45K+ dental professionals"
           meta={[
             { label: "Company", value: "TempStars" },
             { label: "Timeline", value: "Shipped 2023" },
@@ -47,18 +46,18 @@ export default function TempStarsStory() {
           ]}
           intro={
             <p>
-              TempStars is Canada&apos;s largest dental staffing marketplace. 65% of hygienists who signed up never
+              TempStars is Canada&apos;s largest dental staffing marketplace, with 45,000 registered dental professionals across North America. 65% of hygienists who signed up never
               booked a shift. I found out why and fixed signup, matching and the policy that was pushing people away.
             </p>
           }
           stats={[
-            { value: "+23%", label: "booked shifts year over year" },
+            { value: "+23%", label: "projected booked shifts year over year" },
             { value: "~$2M", label: "a year in projected added revenue" },
             { value: "7d → 2d", label: "time to first offer" },
           ]}
         />
 
-        <Divider />
+        <div className="h-14 md:h-20" aria-hidden />
 
         <div id="problem" className="scroll-mt-28" aria-hidden />
         <Lede
@@ -91,12 +90,20 @@ export default function TempStarsStory() {
           />
         </div>
 
-        <Divider />
+        <div className="mt-12 md:mt-16">
+          <Figure
+            src="/images/tempstars-survey-charts.png"
+            alt="Onboarding survey results and the distribution of shifts across users"
+            caption="Survey and funnel data showed where people stalled"
+          />
+        </div>
+
+        <div className="h-14 md:h-20" aria-hidden />
 
         <div id="built" className="scroll-mt-28" aria-hidden />
         <Beat kicker="02 What we changed" title="Fix the policy first, then make matching faster and clearer." />
 
-        <div className="mt-10 md:mt-14 space-y-24 md:space-y-32">
+        <div className="mt-10 md:mt-14 space-y-12 md:space-y-16">
           <Moment title="Reworking the cancellation policy">
             <p>
               I ran workshops with the founders and made the case that keeping hygienists was worth more than the
@@ -121,16 +128,25 @@ export default function TempStarsStory() {
             </p>
           </Stage>
 
-          <Moment title="Skills-based matching from signup">
+          <Stage
+            title="Skills-based matching from signup"
+            visual={
+              <Figure
+                src="/images/tempstars-onboarding-skills-photo.png"
+                alt="New onboarding: choosing extra skills and adding a profile photo"
+                caption="Onboarding captures skills early, so the first shifts shown are a match"
+              />
+            }
+          >
             <p>
               We replaced the one-size-fits-all signup with a shorter staged flow that captures skills early. With
               engineering, we moved from free-text skills to a standard taxonomy, which powered weighted matching:
               must-have skills first, nice-to-haves after.
             </p>
-          </Moment>
+          </Stage>
         </div>
 
-        <Divider />
+        <div className="h-14 md:h-20" aria-hidden />
 
         <div id="impact" className="scroll-mt-28" aria-hidden />
         <Lede kicker="03 Outcome" statement="A week-long wait for a first offer became less than 48 hours.">
@@ -145,7 +161,7 @@ export default function TempStarsStory() {
           </p>
         </Lede>
 
-        <div className="mt-24 md:mt-32">
+        <div className="mt-16 md:mt-20">
           <UpNext
             href="/cases/conduit"
             image="/conduit/cover.png"

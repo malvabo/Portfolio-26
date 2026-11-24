@@ -12,7 +12,7 @@ export function TempStarsSection() {
     <section id="tempstars" className="container mx-auto px-8 lg:px-12 pt-2 md:pt-3 pb-8 md:pb-12 scroll-mt-24">
       <div className="max-w-7xl mx-auto">
       <h2 className="text-[22px] md:text-[26px] leading-[1.15] font-serif mb-10 tracking-tight">
-        TempStars: Building marketplace liquidity for 25K+ dentists
+        TempStars: Building marketplace liquidity for 45K+ dental professionals
       </h2>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 mb-10">
@@ -47,7 +47,7 @@ export function TempStarsSection() {
             </div>
             <div>
               <div className="text-xl font-medium text-foreground mb-0.5">+23%</div>
-              <div className="text-sm text-muted-foreground opacity-80">Booked shifts YoY</div>
+              <div className="text-sm text-muted-foreground opacity-80">Projected booked shifts YoY</div>
             </div>
           </div>
         </div>

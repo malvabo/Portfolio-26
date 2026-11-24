@@ -23,6 +23,7 @@ const LINKS = {
   veeqoCase: "/cases/veeqo",
   bodyspecCase: "/cases/bodyspec",
   tempstarsCase: "/cases/tempstars",
+  paaCase: "/cases/paa",
   substack: "https://healthmattersandme.substack.com/",
   speaking: `${MAIN_SITE}/speaking`,
 }
@@ -161,6 +162,7 @@ const PROJECTS: Project[] = [
       { value: "4", label: "platforms" },
       { value: "Multi-million", label: "in revenue" },
     ],
+    note: "Details available during the interview",
     image: {
       src: "/images/paid-plans.webp",
       alt: "Pricing page with three plans: Shipping (free), Inventory from £17 a month and High Volume from £313 a month",
@@ -180,6 +182,7 @@ const PROJECTS: Project[] = [
       { value: "~$14M/yr", label: "in clinician time saved" },
       { value: "Tier-1 deals", label: "with Kaiser, Humana and UHC" },
     ],
+    caseStudy: LINKS.paaCase,
     image: {
       src: "/images/paa-cover.png",
       alt: "PAA patient tracker dashboard on a laptop: pending actions, patient overview and a task list",
@@ -209,12 +212,13 @@ const PROJECTS: Project[] = [
   },
   {
     id: "tempstars-title",
-    title: "TempStars: Building marketplace liquidity for 25K+ dentists",
+    tag: "Local marketplace",
+    title: "TempStars: Building marketplace liquidity for 45K+ dental professionals",
     summary: "I re-engineered the signup and matching logic for Canada's largest dental marketplace to fix a 65% drop-off between signup and first booking. By making matching faster and more transparent, we turned a week-long wait into an under-48-hour match.",
     role: "Product lead",
     year: "2023",
     results: [
-      { value: "+23%", label: "booked shifts YoY" },
+      { value: "+23%", label: "projected booked shifts YoY" },
       { value: "~$2M", label: "a year in projected added revenue" },
       { value: "7d → 2d", label: "to first offer" },
     ],
@@ -378,7 +382,7 @@ export default function AiPage() {
                 and replaced a document system for 50K sellers, saving $2.3M a year.
               </p>
               <p className="mt-3 max-w-[560px] text-pretty text-[17px] leading-relaxed text-muted-foreground">
-                I also run my own product studio. For TempStars I fixed signup and matching for 25K dentists, and booked
+                I also run my own product studio. For TempStars I fixed signup and matching for 45K dental professionals, and booked
                 shifts went up 23%. For BodySpec I redesigned the platform for 500K monthly visitors, and
                 average order value increased by 26%.
               </p>
@@ -578,10 +582,17 @@ export default function AiPage() {
           <h2 id="bg-title" className={`${CARD_TITLE} mb-4`}>
             Background
           </h2>
-          <p className="max-w-[56ch] text-[15px] md:text-base leading-relaxed text-muted-foreground text-pretty">
-            I started in marketing and was CMO twice before moving into product. I co-founded SmartMum AI, which was
-            later acquired.
-          </p>
+          <div className="max-w-[60ch] space-y-3 text-[15px] md:text-base leading-relaxed text-muted-foreground text-pretty">
+            <p>
+              I started in marketing, as CMO twice, leading teams of 10 and 6. That taught me how products sell. I
+              learned growth, pricing and go-to-market from the commercial side first.
+            </p>
+            <p>
+              I moved into product to own the full journey, from problem to launch to growth. That is what I have done
+              for the last 8 years in design and product, most recently at Amazon, and as Product Lead at Tech Matters
+              Studio, SmartMum AI and BodySpec.
+            </p>
+          </div>
         </section>
 
         {/* Writing: the homepage articles block */}
