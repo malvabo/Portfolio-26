@@ -151,28 +151,9 @@ const PROJECTS: Project[] = [
     },
   },
   {
-    id: "paa-title",
-    hidden: true, // hidden for now
-    tag: "Series C",
-    title: "PAA: Scaling clinical efficiency through AI-driven workflows",
-    summary: "I led the dashboard redesign that turned a dense data view into a prioritised task list for clinicians, cutting the time they spend managing documents by 40% and reducing patient service delays.",
-    role: "Lead product designer",
-    year: "2024",
-    results: [
-      { value: "~$14M/yr", label: "in clinician time saved" },
-      { value: "Tier-1 deals", label: "with Kaiser, Humana and UHC" },
-    ],
-    image: {
-      src: "/images/paa-cover.png",
-      alt: "PAA patient tracker dashboard on a laptop: pending actions, patient overview and a task list",
-      width: 2416,
-      height: 1932,
-    },
-  },
-  {
     id: "bodyspec-title",
     tag: "Series A",
-    title: "BodySpec: Scaling bookings by 20% for 500K+ users",
+    title: "BodySpec: Scaling bookings by 20% for 500K+ monthly visitors",
     summary: "I redesigned the BodySpec platform and mobile app end to end to improve conversions and increase average order value.",
     role: "Product lead",
     year: "2023",
@@ -196,7 +177,7 @@ const PROJECTS: Project[] = [
     year: "2023",
     results: [
       { value: "+20%", label: "booked shifts YoY" },
-      { value: "~$2M", label: "projected annual revenue" },
+      { value: "~$2M", label: "a year in projected added revenue" },
       { value: "7d → 2d", label: "to first offer" },
     ],
     caseStudy: LINKS.tempstarsCase,
@@ -224,6 +205,25 @@ const PROJECTS: Project[] = [
       width: 2000,
       height: 1296,
       position: "object-top",
+    },
+  },
+  {
+    id: "paa-title",
+    tag: "Series C",
+    title: "PAA: Scaling clinical efficiency through AI-driven workflows",
+    summary: "I led the dashboard redesign that turned a dense data view into a prioritised task list for clinicians, cutting the time they spend managing documents by 40% and reducing patient service delays.",
+    role: "Lead product designer",
+    year: "2024",
+    results: [
+      { value: "~$14M/yr", label: "in clinician time saved" },
+      { value: "Tier-1 deals", label: "with Kaiser, Humana and UHC" },
+    ],
+    wide: true,
+    image: {
+      src: "/images/paa-cover.png",
+      alt: "PAA patient tracker dashboard on a laptop: pending actions, patient overview and a task list",
+      width: 2416,
+      height: 1932,
     },
   },
 ]
@@ -579,10 +579,9 @@ export default function AiPage() {
           <h2 id="bg-title" className={`${CARD_TITLE} mb-4`}>
             Background
           </h2>
-          <p className="max-w-[640px] text-base md:text-[17px] leading-[1.7] text-foreground">
-            I started in marketing and was CMO at two companies before moving into product. I then co-founded
-            SmartMum AI, which was later acquired. That path shapes how I build: I think about who buys a product,
-            why they pay for it and how it reaches them from day one, not after launch.
+          <p className="max-w-[56ch] text-[15px] md:text-base leading-relaxed text-muted-foreground text-pretty">
+            I started in marketing and was CMO twice before moving into product. I co-founded SmartMum AI, which was
+            later acquired.
           </p>
         </section>
 

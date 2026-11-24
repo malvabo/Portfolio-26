@@ -113,7 +113,7 @@ export default function TempStarsCaseStudy() {
             <ul className="space-y-2 text-[17px] leading-relaxed max-w-[750px]">
               <li className="flex gap-3">
                 <span className="text-muted-foreground mt-0.5">•</span>
-                <span className="text-muted-foreground"><strong className="font-medium text-foreground">Impact:</strong> 20% increase in user activation and a 20% YoY increase in booked shifts, about $2M in projected annual revenue.</span>
+                <span className="text-muted-foreground"><strong className="font-medium text-foreground">Impact:</strong> 20% increase in user activation and a 20% YoY increase in booked shifts, about $2M a year in projected added revenue.</span>
               </li>
               <li className="flex gap-3">
                 <span className="text-muted-foreground mt-0.5">•</span>
@@ -477,7 +477,7 @@ export default function TempStarsCaseStudy() {
               </div>
               <div className="bg-background rounded-lg p-6">
                 <div className="text-2xl font-serif mb-2 tracking-[-0.02em]">20%</div>
-                <p className="text-sm leading-relaxed text-muted-foreground">YoY increase in booked shifts, about $2M in projected annual revenue</p>
+                <p className="text-sm leading-relaxed text-muted-foreground">YoY increase in booked shifts, about $2M a year in projected added revenue</p>
               </div>
             </div>
 
@@ -489,7 +489,7 @@ export default function TempStarsCaseStudy() {
                 <strong className="font-medium text-foreground">Velocity:</strong> Time-to-first-offer dropped from 7 days to 2 days, mainly because the matching was more targeted from day one.
               </p>
               <p>
-                <strong className="font-medium text-foreground">Booked shifts:</strong> Up 20% YoY, about $2M in projected annual revenue at around $50 per shift. A combination of more active workers in the system and shifts being easier to evaluate and apply for.
+                <strong className="font-medium text-foreground">Booked shifts:</strong> Up 20% YoY, about $2M a year in projected added revenue at around $50 per shift. A combination of more active workers in the system and shifts being easier to evaluate and apply for.
               </p>
             </div>
           </section>
