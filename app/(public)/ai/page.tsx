@@ -24,6 +24,7 @@ const LINKS = {
   bodyspecCase: "/cases/bodyspec",
   tempstarsCase: "/cases/tempstars",
   paaCase: "/cases/paa",
+  paidPlansCase: "/cases/paid-plans",
   substack: "https://healthmattersandme.substack.com/",
   speaking: `${MAIN_SITE}/speaking`,
 }
@@ -162,7 +163,7 @@ const PROJECTS: Project[] = [
       { value: "4", label: "platforms" },
       { value: "Multi-million", label: "in revenue" },
     ],
-    note: "Details available during the interview",
+    caseStudy: LINKS.paidPlansCase,
     image: {
       src: "/images/paid-plans.webp",
       alt: "Pricing page with three plans: Shipping (free), Inventory from £17 a month and High Volume from £313 a month",
