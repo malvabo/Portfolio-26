@@ -370,7 +370,7 @@ export default function AiPage() {
                 className="mb-3 md:mb-4 h-14 w-14 md:h-20 md:w-20 rounded-xl object-cover"
               />
               <h1 id="hero-title" className="font-serif text-[1.75rem] md:text-[2rem] leading-[1.15] font-normal tracking-[-0.02em] text-foreground text-balance">
-                Product manager shaping strategy and building products that solve complex problems at scale.
+                Leader in Digital and Growth Product Management
               </h1>
               <p className="mt-3 md:mt-[18px] max-w-[560px] text-pretty text-[17px] leading-relaxed text-muted-foreground">
                 With 12 years in technology across product, growth and marketing, I bring a commercial and systems-level
@@ -379,7 +379,7 @@ export default function AiPage() {
               </p>
               <p className="mt-3 max-w-[560px] text-pretty text-[17px] leading-relaxed text-muted-foreground">
                 I also run my own product studio. For TempStars I fixed signup and matching for 25K dentists, and booked
-                shifts went up 23%. For BodySpec I redesigned the platform and mobile app for 500K monthly visitors, and
+                shifts went up 23%. For BodySpec I redesigned the platform for 500K monthly visitors, and
                 average order value increased by 26%.
               </p>
               {/* Key numbers, as on the portfolio hero */}
