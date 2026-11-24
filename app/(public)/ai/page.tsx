@@ -109,6 +109,7 @@ const PROJECTS: Project[] = [
     id: "conduit-title",
     title: "Conduit: an AI product for customs compliance",
     summary: "I own Conduit end to end, from discovery to launch: an AI product that reads supplier documents and prepares customs filings for importers. It cut data checks from 20 minutes to under 3 per shipment, removed manual entry for compliance teams and reduced the filing errors that hold shipments at the border.",
+    tag: "AI product",
     role: "Product lead",
     results: [
       { value: "20 → 3 min", label: "customs check per shipment" },
@@ -312,13 +313,11 @@ const CONTAINER = "container mx-auto px-6 md:px-8 lg:px-12 max-w-7xl"
 const FOCUS = "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
 const EYEBROW = "text-sm text-muted-foreground"
 const EYEBROW_CAPS = "uppercase text-[13px] font-mono tracking-wide text-muted-foreground"
-const TAG = "inline-block px-2.5 py-0.5 text-[11px] font-mono uppercase tracking-normal rounded-md bg-[#E8E3DD] text-[#6B5D4F]"
 // Case cards: soft bordered tile, pill, serif title, mono link; the whole tile is the link target
-const CASE_CARD = "group relative flex h-full flex-col rounded-3xl border border-black/[0.07] bg-white p-7 md:p-9 transition-[border-color,box-shadow] duration-200"
+const TAG = "inline-block px-2.5 py-0.5 text-[11px] font-mono uppercase tracking-normal rounded-md bg-[#E8E3DD] text-[#6B5D4F]"
+const CASE_CARD = "group relative flex h-full flex-col rounded-3xl border border-black/[0.07] bg-white p-6 md:p-9 transition-[border-color,box-shadow] duration-200"
 const CASE_CARD_LINKED = "hover:border-black/[0.14] hover:shadow-[0_2px_20px_-8px_rgba(0,0,0,0.12)] focus-within:border-black/[0.14]"
-const CARD_PILL = "inline-block rounded-full px-3 py-1 text-[11px] font-mono uppercase tracking-[0.14em]"
-const CASE_TITLE = "font-serif text-[26px] md:text-[30px] leading-[1.1] tracking-[-0.015em] text-foreground text-balance"
-const CASE_LINK = `mt-8 self-start inline-flex items-center gap-1.5 font-mono text-[13px] tracking-wide text-foreground/80 hover:text-foreground after:absolute after:inset-0 after:rounded-3xl after:content-[''] rounded ${FOCUS}`
+const CARD_STRETCH = "after:absolute after:inset-0 after:rounded-3xl after:content-['']"
 const CARD_TITLE = "font-serif text-[22px] md:text-[26px] leading-[1.15] tracking-tight text-foreground text-balance"
 const PILL_GLASS = `inline-flex items-center justify-center gap-2 min-h-11 px-5 text-sm font-medium rounded-full bg-white/40 backdrop-blur-md border border-gray-300/70 text-foreground hover:bg-white/60 hover:border-gray-400/70 transition-all duration-300 shadow-sm hover:shadow-md ${FOCUS}`
 const ARROW_LINK = `inline-flex items-center gap-1.5 text-base font-medium text-foreground underline underline-offset-[6px] decoration-foreground/25 hover:decoration-foreground transition-colors rounded ${FOCUS}`
@@ -449,35 +448,27 @@ export default function AiPage() {
         </div>
 
         {/* Projects: Conduit as one row (text left, demo right), then a two-up grid; media on top, short copy below */}
-        <section aria-label="Featured projects" className={`${CONTAINER} pt-6 md:pt-20 pb-14 md:pb-24`}>
+        <section aria-label="Featured projects" className={`${CONTAINER} pt-5 md:pt-6 pb-14 md:pb-24`}>
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-6">
             {PROJECTS.filter((p) => !p.hidden)
               .map((p) => (SHOW_CARD_IMAGES ? p : { ...p, image: undefined }))
               .map((p) => (
-              <li
-                key={p.id}
-                className={
-                  p.demo
-                    ? `md:col-span-2 mb-9 md:mb-14${SHOW_CARD_IMAGES ? " pb-14 md:pb-20 border-b border-gray-200" : ""}`
-                    : p.wide && p.image
-                      ? "md:col-span-2"
-                      : undefined
-                }
-              >
+              <li key={p.id} className={p.demo || (p.wide && p.image) ? "md:col-span-2" : undefined}>
                 <article
                   aria-labelledby={p.id}
-                  className={
+                  className={`${CASE_CARD} ${p.caseStudy ? CASE_CARD_LINKED : ""}${
                     p.demo || (p.wide && p.image)
-                      ? "flex flex-col lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)] lg:gap-12 lg:items-center"
-                      : `${CASE_CARD} ${p.caseStudy ? CASE_CARD_LINKED : ""}`
-                  }
+                      ? " lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.55fr)] lg:gap-12 lg:items-center md:p-10 lg:p-12"
+                      : ""
+                  }`}
                 >
                   {p.demo ? (
-                    <div className="lg:order-2">
+                    // Sits above the card's stretched link so the player controls stay usable
+                    <div className="relative z-10 lg:order-2">
                       <DemoPlayer chapters={CHAPTERS} label="Conduit demo, 27 seconds, no sound" />
                     </div>
                   ) : p.image ? (
-                    <div className={`${p.wide ? "lg:order-2 " : ""}aspect-[2/1] overflow-hidden rounded-lg border border-gray-200 bg-gray-50`}>
+                    <div className={`${p.wide ? "lg:order-2 " : ""}mb-6 aspect-[2/1] overflow-hidden rounded-xl border border-gray-200 bg-gray-50`}>
                       <Image
                         src={p.image!.src}
                         alt={p.image!.alt}
@@ -491,56 +482,40 @@ export default function AiPage() {
 
                   <div
                     className={
-                      p.demo || (p.wide && p.image) ? "flex flex-col lg:order-1 lg:[&>div:first-child>p:first-child]:mt-0" : "flex flex-1 flex-col"
+                      p.demo || (p.wide && p.image) ? "mt-7 flex flex-col lg:order-1 lg:mt-0" : "flex flex-1 flex-col"
                     }
                   >
                     <div>
-                      {p.demo ? (
-                        <p className="mt-5 flex flex-wrap items-center gap-x-2.5 gap-y-1 text-sm text-muted-foreground">
-                          {p.tag && <span className={TAG}>{p.tag}</span>}
-                          <span>{p.role}</span>
-                        </p>
-                      ) : (
-                        <p className="flex flex-wrap items-center gap-x-3 gap-y-2">
-                          {p.tag && (
-                            <span className={`${CARD_PILL} ${p.strip ? `${STRIP[p.strip].bg} ${STRIP[p.strip].fg}` : "bg-[#F6EBDD] text-[#6B4A22]"}`}>
-                              {p.tag}
-                            </span>
-                          )}
-                          <span className="text-[13px] text-muted-foreground">{p.role}</span>
-                        </p>
-                      )}
-                      <h2 id={p.id} className={p.demo ? `${CARD_TITLE} mt-2.5` : `${CASE_TITLE} mt-5`}>
+                      <p className="flex flex-wrap items-center gap-x-2.5 gap-y-1 text-sm text-muted-foreground">
+                        {p.tag && <span className={TAG}>{p.tag}</span>}
+                        <span>{p.role}</span>
+                      </p>
+                      <h2 id={p.id} className={`${CARD_TITLE} mt-3`}>
                         {p.title}
                       </h2>
-                      <p className={`${p.demo ? "mt-2.5" : "mt-3"} max-w-[56ch] text-[15px] md:text-base leading-relaxed text-muted-foreground text-pretty`}>
+                      <p className="mt-2.5 max-w-[56ch] text-[15px] md:text-base leading-relaxed text-muted-foreground text-pretty">
                         {p.summary}
                       </p>
                     </div>
-                    <div className={p.demo ? "flex flex-col" : "mt-auto flex flex-col"}>
+                    <div className={p.demo || (p.wide && p.image) ? "flex flex-col" : "mt-auto flex flex-col"}>
                       {p.note && (
                         <p className="pt-6 text-sm text-muted-foreground">{p.note}</p>
                       )}
                       {p.results.length > 0 && (
-                      <dl className="pt-6 flex flex-wrap gap-x-8 gap-y-3">
+                      // Results: three equal columns under a hairline, so values line up across every card
+                      <dl className={`mt-6 grid ${p.demo ? "grid-cols-2" : "grid-cols-3"} gap-x-3 md:gap-x-6 border-t border-black/[0.07] pt-4`}>
                         {p.results.map((r) => (
-                          <div key={r.label} className="flex flex-col-reverse justify-end">
-                            <dt className="text-[13px] leading-snug text-muted-foreground">{r.label}</dt>
-                            <dd className="text-lg font-medium text-foreground leading-tight mb-0.5">{r.value}</dd>
+                          <div key={r.label} className="flex min-w-0 flex-col-reverse justify-end">
+                            <dt className="mt-1 text-[13px] leading-snug text-muted-foreground text-pretty">{r.label}</dt>
+                            <dd className="text-[15px] sm:text-lg font-medium text-foreground leading-tight tabular-nums whitespace-nowrap">{r.value}</dd>
                           </div>
                         ))}
                       </dl>
                       )}
-
-                      {p.caseStudy && p.demo && (
-                        <a href={p.caseStudy} className={`${ARROW_LINK} mt-5 self-start text-[15px]`}>
+                      {p.caseStudy && (
+                        <a href={p.caseStudy} className={`${ARROW_LINK} ${CARD_STRETCH} mt-6 self-start text-[15px]`}>
                           Read the case study
                           <Arrow />
-                        </a>
-                      )}
-                      {p.caseStudy && !p.demo && (
-                        <a href={p.caseStudy} className={CASE_LINK}>
-                          View case study <span aria-hidden="true" className="transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">↗</span>
                         </a>
                       )}
                     </div>
