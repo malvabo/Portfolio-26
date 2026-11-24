@@ -175,7 +175,7 @@ const PROJECTS: Project[] = [
     id: "paa-title",
     tag: "Series C",
     title: "PAA: Scaling clinical efficiency through AI-driven workflows",
-    summary: "I led the dashboard redesign that turned a dense data view into a prioritised task list for clinicians, cutting the time they spend managing documents by 40% and reducing patient service delays.",
+    summary: "I led the clinician workspace for an AI platform in post-hospital care: triage first, then AI that drafts insurer reports from a locked assessment. Clinicians spend 40% less time on document workflows, and PAA closed Tier-1 deals with major health plans.",
     role: "Lead product designer",
     year: "2024",
     results: [
