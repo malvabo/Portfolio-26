@@ -149,7 +149,7 @@ export default function BodySpecStory() {
         <div className="h-14 md:h-20" aria-hidden />
 
         <div id="impact" className="scroll-mt-28" aria-hidden />
-        <Lede kicker="03 Outcome" statement="Bookings rose 25% and average order value rose 26%.">
+        <Lede kicker="03 Outcome" statement="Bookings up 25%, average order value up 26%.">
           <p>
             The conversion lift was worth an estimated $2M+ in annual recurring revenue, and the live product helped
             BodySpec close its $17.2M Series A.
