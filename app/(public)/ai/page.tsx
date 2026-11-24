@@ -379,7 +379,7 @@ export default function AiPage() {
               </p>
               <p className="mt-3 max-w-[560px] text-pretty text-[17px] leading-relaxed text-muted-foreground">
                 I also run my own product studio. For TempStars I fixed signup and matching for 25K dentists, and booked
-                shifts went up 23%. For BodySpec I redesigned the platform and mobile app for 500K monthly visitors, and
+                shifts went up 23%. For BodySpec I redesigned the platform for 500K monthly visitors, and
                 average order value increased by 26%.
               </p>
               {/* Key numbers, as on the portfolio hero */}
