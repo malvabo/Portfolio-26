@@ -169,7 +169,7 @@ export default function ConduitStory() {
           </Wide>
         </div>
 
-        <div className="mt-16 space-y-24 md:space-y-32">
+        <div className="mt-16 space-y-12 md:space-y-16">
           <Stage
             title="Monitoring"
             visual={
@@ -241,7 +241,7 @@ export default function ConduitStory() {
         <div id="process" className="scroll-mt-28" aria-hidden />
         <Beat kicker="04" title="Key decisions" />
 
-        <div className="mt-5 space-y-24 md:space-y-32">
+        <div className="mt-5 space-y-12 md:space-y-16">
           {/* Problem, the direction we chose, then why */}
           <div className="space-y-8 md:space-y-10">
             <Moment
@@ -335,7 +335,7 @@ export default function ConduitStory() {
 
         <Divider />
 
-        <div className="mt-24 md:mt-32">
+        <div className="mt-16 md:mt-20">
           <UpNext
             href="/cases/veeqo"
             image="/images/vq_cover.png"

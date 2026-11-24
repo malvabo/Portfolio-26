@@ -162,7 +162,7 @@ export default function VeeqoStory() {
           </p>
         </Beat>
 
-        <div className="mt-8 md:mt-10 space-y-24 md:space-y-32">
+        <div className="mt-8 md:mt-10 space-y-12 md:space-y-16">
           <Wide>
             <Reveal>
               <Architecture />
@@ -255,7 +255,7 @@ export default function VeeqoStory() {
         <div id="process" className="scroll-mt-28" aria-hidden />
         <Beat kicker="04" title="Key decisions" />
 
-        <div className="mt-5 space-y-24 md:space-y-32">
+        <div className="mt-5 space-y-12 md:space-y-16">
           {/* Each rejected direction sits right under the text about it, then what we chose */}
           <div className="space-y-8 md:space-y-10">
             <Moment
@@ -379,7 +379,7 @@ export default function VeeqoStory() {
 
 
 
-        <div className="mt-24 md:mt-32">
+        <div className="mt-16 md:mt-20">
           <UpNext
             href="/cases/conduit"
             image="/conduit/cover.png"
