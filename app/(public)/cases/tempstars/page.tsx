@@ -53,7 +53,7 @@ export default function TempStarsStory() {
           }
           stats={[
             { value: "+20%", label: "booked shifts year over year" },
-            { value: "~$2M", label: "a year in added revenue" },
+            { value: "~$2M", label: "projected annual revenue" },
             { value: "7d → 2d", label: "time to first offer" },
           ]}
         />
@@ -137,7 +137,7 @@ export default function TempStarsStory() {
           <p>
             Activation rose 20%, as fewer people dropped off at the policy or at signup. Booked shifts grew 20% year
             over year, with more active workers and shifts that were easier to judge. At about $50 per shift, that
-            is about $2M a year in added revenue for TempStars.
+            is about $2M in projected annual revenue for TempStars.
           </p>
           <p>
             The lesson I took from it: operations decisions and design decisions are often the same decision. No

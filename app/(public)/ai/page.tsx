@@ -195,7 +195,7 @@ const PROJECTS: Project[] = [
     year: "2023",
     results: [
       { value: "+20%", label: "booked shifts YoY" },
-      { value: "~$2M/yr", label: "added revenue" },
+      { value: "~$2M", label: "projected annual revenue" },
       { value: "7d → 2d", label: "to first offer" },
     ],
     caseStudy: LINKS.tempstarsCase,
