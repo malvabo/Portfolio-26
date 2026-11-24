@@ -73,6 +73,7 @@ type Project = {
   note?: string
   hidden?: boolean
   demo?: boolean
+  strip?: "amazon" | "paa" | "bodyspec" | "tempstars"
   wide?: boolean // one full-width row: text left, image right
   image?: { src: string; alt: string; width: number; height: number; position?: string }
 }
@@ -117,6 +118,7 @@ const PROJECTS: Project[] = [
   },
   {
     id: "amazon-ai-title",
+    strip: "amazon",
     tag: "Big tech",
     title: "Amazon: AI automation for complex shipping workflows",
     summary: "I designed AI-powered automation for Amazon's internal shipping operations, cutting manual work for operators and speeding up decisions across complex logistics workflows.",
@@ -134,6 +136,7 @@ const PROJECTS: Project[] = [
   },
   {
     id: "veeqo-title",
+    strip: "amazon",
     tag: "Big tech",
     title: "Amazon: Redesigning a document system for 50k+ sellers",
     summary: "I led the design that replaced the third-party PDF tool behind documents: an HTML-based engine with AI-assisted editing, a new document library, and a migration path for the enterprise accounts.",
@@ -154,6 +157,7 @@ const PROJECTS: Project[] = [
   },
   {
     id: "paid-plans-title",
+    strip: "amazon",
     tag: "Big tech",
     title: "Amazon: Paid plans across iOS, Android, devices and web",
     summary: "I was responsible for the paid plan rollout across iOS, Android, devices and web: 12+ features, launched on every platform. The plans now bring in multi-million revenue.",
@@ -174,6 +178,7 @@ const PROJECTS: Project[] = [
   },
   {
     id: "paa-title",
+    strip: "paa",
     tag: "Series C",
     title: "PAA: Scaling clinical efficiency through AI-driven workflows",
     summary: "I led the clinician workspace for an AI platform in post-hospital care: triage first, then AI that drafts insurer reports from a locked assessment. Clinicians spend 40% less time on document workflows, and PAA closed Tier-1 deals with major health plans.",
@@ -193,6 +198,7 @@ const PROJECTS: Project[] = [
   },
   {
     id: "bodyspec-title",
+    strip: "bodyspec",
     tag: "Series A",
     title: "BodySpec: Scaling bookings by 25% for 500K+ monthly visitors",
     summary: "I redesigned the BodySpec platform and mobile app end to end to improve conversions and increase average order value.",
@@ -213,6 +219,7 @@ const PROJECTS: Project[] = [
   },
   {
     id: "tempstars-title",
+    strip: "tempstars",
     tag: "Local marketplace",
     title: "TempStars: Building marketplace liquidity for 45K+ dental professionals",
     summary: "I re-engineered the signup and matching logic for Canada's largest dental marketplace to fix a 65% drop-off between signup and first booking. By making matching faster and more transparent, we turned a week-long wait into an under-48-hour match.",
@@ -236,7 +243,15 @@ const PROJECTS: Project[] = [
 // Logos are black on transparent and share one height (CVS is wider, so a touch shorter).
 const SHOW_HOW_I_WORK = false // hidden for now
 const SHOW_LOGOS = false // hidden for now
-const SHOW_CARD_IMAGES = false // project cards are text only for now
+const SHOW_CARD_IMAGES = false // cards use a coloured strip instead of screenshots
+
+// Card strip colour per company: soft tint, darker label in the same hue.
+const STRIP: Record<string, { bg: string; fg: string; label: string }> = {
+  amazon: { bg: "bg-[#F4E6D4]", fg: "text-[#7A4B12]", label: "Amazon" },
+  paa: { bg: "bg-[#DCEDE6]", fg: "text-[#1F5C47]", label: "PAA" },
+  bodyspec: { bg: "bg-[#E1E8F5]", fg: "text-[#28447A]", label: "BodySpec" },
+  tempstars: { bg: "bg-[#ECE3F3]", fg: "text-[#553178]", label: "TempStars" },
+}
 const LOGOS = [
   { name: "Amazon", src: "/ai/logos/amazon.svg", width: 603, height: 182, className: "h-[20px] sm:h-[24px]" },
   { name: "PandaDoc", src: "/ai/logos/pandadoc.png", width: 334, height: 96, className: "h-[20px] sm:h-[24px]" },
@@ -450,15 +465,22 @@ export default function AiPage() {
                       ? "flex flex-col lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)] lg:gap-12 lg:items-center"
                       : p.image
                         ? "flex h-full flex-col"
-                        : "flex h-full flex-col border-t border-gray-200"
+                        : "flex h-full flex-col"
                   }
                 >
                   {p.demo ? (
                     <div className="lg:order-2">
                       <DemoPlayer chapters={CHAPTERS} label="Conduit demo, 27 seconds, no sound" />
                     </div>
+                  ) : !p.image && p.strip ? (
+                    <div
+                      aria-hidden="true"
+                      className={`flex h-16 md:h-20 items-end rounded-lg px-4 pb-3 ${STRIP[p.strip].bg}`}
+                    >
+                      <span className={`text-[13px] font-medium tracking-tight ${STRIP[p.strip].fg}`}>{STRIP[p.strip].label}</span>
+                    </div>
                   ) : p.image ? (
-                    <div className={`${p.wide ? "lg:order-2 " : ""}aspect-[16/10] overflow-hidden rounded-lg border border-gray-200 bg-gray-50`}>
+                    <div className={`${p.wide ? "lg:order-2 " : ""}aspect-[2/1] overflow-hidden rounded-lg border border-gray-200 bg-gray-50`}>
                       <Image
                         src={p.image!.src}
                         alt={p.image!.alt}
