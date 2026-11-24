@@ -172,7 +172,7 @@ const PROJECTS: Project[] = [
   {
     id: "bodyspec-title",
     tag: "Series A",
-    title: "BodySpec: Scaling bookings by 20% for 500K+ users",
+    title: "BodySpec: Scaling bookings by 20% for 500K+ monthly visitors",
     summary: "I redesigned the BodySpec platform and mobile app end to end to improve conversions and increase average order value.",
     role: "Product lead",
     year: "2023",
@@ -196,7 +196,7 @@ const PROJECTS: Project[] = [
     year: "2023",
     results: [
       { value: "+20%", label: "booked shifts YoY" },
-      { value: "~$2M", label: "projected annual revenue" },
+      { value: "~$2M", label: "a year in projected added revenue" },
       { value: "7d → 2d", label: "to first offer" },
     ],
     caseStudy: LINKS.tempstarsCase,

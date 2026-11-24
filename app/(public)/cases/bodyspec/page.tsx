@@ -38,7 +38,7 @@ export default function BodySpecStory() {
         <StoryHero
           image="/images/bodyspec-mobile-location.png"
           imageAlt="BodySpec mobile app: choosing a scan location on a map"
-          title="BodySpec: Scaling bookings by 20% for 500K+ users"
+          title="BodySpec: Scaling bookings by 20% for 500K+ monthly visitors"
           meta={[
             { label: "Company", value: "BodySpec, Series A" },
             { label: "Timeline", value: "2023" },
