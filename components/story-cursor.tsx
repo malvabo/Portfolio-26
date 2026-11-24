@@ -13,7 +13,7 @@ import { useEffect, useRef, useState } from "react"
 
 type Mode = { kind: "dot" } | { kind: "text"; h: number } | { kind: "label"; text: string }
 
-const ACCENT = "#B4532A"
+const ACCENT = "#28447A"
 
 function caretAt(x: number, y: number): number | null {
   type CaretDoc = Document & {

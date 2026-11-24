@@ -157,7 +157,7 @@ export default function PAAStory() {
             </p>
           </Moment>
 
-          <div className="mx-auto max-w-[760px]">
+          <div className="mx-auto max-w-[920px]">
             <ReportFlow />
           </div>
 

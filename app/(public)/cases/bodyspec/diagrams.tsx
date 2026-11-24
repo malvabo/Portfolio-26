@@ -1,70 +1,75 @@
 "use client"
 
-import type { ReactNode } from "react"
-import { ACCENT, NOTE, ExplainerCard, ExplainerStage, ExplainerTag, ExplainerTitle, Sticky } from "@/components/explainer-stage"
+import { ExplainerCard, ExplainerStage, ExplainerTag, ExplainerTitle } from "@/components/explainer-stage"
 
-/* BodySpec: the customer journey before (a dead end) and after (a loop back to the next scan), side by side */
+/* BodySpec: the journey stage by stage. Columns are steps; the top row is how it worked before,
+   the bottom row is what changed. Steps where we lost people are highlighted so the eye goes there first. */
 
-function Steps({ children }: { children: ReactNode }) {
-  return <ol className="space-y-1">{children}</ol>
-}
+const STAGES: { stage: string; before: string; broken?: boolean; after: string }[] = [
+  { stage: "Find a location", before: "Manual search", broken: true, after: "Uses your location" },
+  { stage: "Pick a time", before: "Hunt for open slots", broken: true, after: "Nearby slots on one screen" },
+  { stage: "Check out", before: "Extra fields", after: "Unneeded fields dropped" },
+  { stage: "Results", before: "One-off report", broken: true, after: "Progress since the last scan" },
+  { stage: "Come back", before: "No next step", broken: true, after: "A reason to book again" },
+]
 
-/** One step in a vertical flow, with a short connector above it */
-function StepItem({ children, first = false, tone = "plain" }: { children: ReactNode; first?: boolean; tone?: "muted" | "plain" | "accent" }) {
-  const box =
-    tone === "accent"
-      ? "border-black/10 bg-white text-foreground"
-      : tone === "muted"
-        ? "border-black/10 bg-[#F5F3F0] text-muted-foreground"
-        : "border-black/10 bg-white text-foreground"
-  return (
-    <li>
-      {!first && <span className={`block w-px h-2.5 ml-4 ${tone === "muted" ? "bg-black/15" : "bg-[#3D3D3D]/40"}`} aria-hidden />}
-      <span className={`flex items-center rounded border px-2.5 py-1.5 text-[12px] leading-tight ${box}`}>{children}</span>
-    </li>
-  )
-}
+const BROKEN = "bg-[#F4E6D4] text-[#7A4B12]"
 
 export function JourneyLoop() {
   return (
-    <ExplainerStage bg="/hand-holding-phone-with-map-interface.jpg" className="grid gap-3 sm:gap-4 md:grid-cols-2">
-      <ExplainerCard>
-        <ExplainerTag>Before</ExplainerTag>
-        <ExplainerTitle>A five-minute booking, then a dead end</ExplainerTitle>
-        <Steps>
-          <StepItem first tone="muted">Search locations</StepItem>
-          <StepItem tone="muted">Find a free slot</StepItem>
-          <StepItem tone="muted">Fill in details and pay</StepItem>
-          <StepItem tone="muted">Scan</StepItem>
-          <StepItem tone="muted">
-            One-off report
-            <span className="ml-auto text-[#6B5D4F]" aria-label="Dead end">
-              ×
-            </span>
-          </StepItem>
-        </Steps>
-        <div className="mt-4 flex flex-col items-start gap-2">
-          <Sticky color={NOTE.sand} tilt={-2}>Most people dropped out at location and slot</Sticky>
-          <Sticky color={NOTE.lilac} tilt={1.5}>Good results, no idea what to do next</Sticky>
+    <ExplainerStage bg="/hand-holding-phone-with-map-interface.jpg">
+      <ExplainerCard className="sm:!p-6">
+        <div className="flex flex-wrap items-start justify-between gap-x-6 gap-y-2">
+          <ExplainerTitle>Where the journey broke, and what changed</ExplainerTitle>
+          <span className="inline-flex items-center gap-1.5 text-[11px] text-muted-foreground" aria-hidden>
+            <span className="w-3 h-3 rounded-sm bg-[#F4E6D4]" /> Where we lost people
+          </span>
         </div>
-      </ExplainerCard>
 
-      <ExplainerCard>
-        <ExplainerTag accent>After</ExplainerTag>
-        <ExplainerTitle>Two clicks to book, and a reason to return</ExplainerTitle>
-        <Steps>
-          <StepItem first>Nearby slots</StepItem>
-          <StepItem>Book</StepItem>
-          <StepItem>Scan</StepItem>
-          <StepItem>See progress since the last scan</StepItem>
-          <StepItem>
-            <svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden className="mr-2 shrink-0">
-              <path d="M13.5 8A5.5 5.5 0 1 1 11.6 3.8" stroke={ACCENT} strokeWidth="1.6" strokeLinecap="round" />
-              <path d="M12 1.5v2.8H9.2" stroke={ACCENT} strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-            Book the next scan
-          </StepItem>
-        </Steps>
+        {/* Desktop: stages as columns */}
+        <div className="hidden md:grid grid-cols-[72px_repeat(5,minmax(0,1fr))] gap-x-1.5 text-[12px] leading-snug" role="table" aria-label="Journey before and after">
+          <div role="row" className="contents">
+            <span role="columnheader" />
+            {STAGES.map((s) => (
+              <span key={s.stage} role="columnheader" className="pb-2 px-2 text-[10px] font-mono uppercase tracking-wider text-muted-foreground">
+                {s.stage}
+              </span>
+            ))}
+          </div>
+          <div role="row" className="contents">
+            <span role="rowheader" className="py-2.5 border-t border-black/10 flex items-center">
+              <ExplainerTag>Before</ExplainerTag>
+            </span>
+            {STAGES.map((s) => (
+              <span key={s.stage} role="cell" className="py-2.5 border-t border-black/10">
+                <span className={`block rounded px-2 py-1.5 ${s.broken ? BROKEN : "text-muted-foreground"}`}>{s.before}</span>
+              </span>
+            ))}
+          </div>
+          <div role="row" className="contents">
+            <span role="rowheader" className="py-2.5 border-t border-black/10 flex items-center">
+              <ExplainerTag accent>After</ExplainerTag>
+            </span>
+            {STAGES.map((s) => (
+              <span key={s.stage} role="cell" className="py-2.5 border-t border-black/10">
+                <span className="block px-2 py-1.5 font-medium text-[#28447A]">{s.after}</span>
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* Mobile: one stage per row, before then after */}
+        <dl className="md:hidden divide-y divide-black/10 border-t border-black/10 text-[13px] leading-snug">
+          {STAGES.map((s) => (
+            <div key={s.stage} className="py-2.5">
+              <dt className="text-[10px] font-mono uppercase tracking-wider text-muted-foreground">{s.stage}</dt>
+              <dd className="mt-1">
+                <span className={`inline-block rounded py-0.5 ${s.broken ? `px-1.5 ${BROKEN}` : "text-muted-foreground"}`}>{s.before}</span>
+              </dd>
+              <dd className="mt-1 font-medium text-[#28447A]">{s.after}</dd>
+            </div>
+          ))}
+        </dl>
       </ExplainerCard>
     </ExplainerStage>
   )

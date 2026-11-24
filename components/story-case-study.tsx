@@ -14,7 +14,7 @@ import { createContext, useContext, useEffect, useRef, useState, type ReactNode,
 import type { LucideIcon } from "lucide-react"
 import { LightboxImage } from "@/components/lightbox-image"
 
-const ACCENT = "text-[#B4532A]"
+const ACCENT = "text-[#28447A]"
 
 /* ---------- Scroll reveal ---------- */
 
@@ -462,7 +462,7 @@ export function CardStack({ label, cards }: { label: string; cards: StoryCard[] 
             <div key={i}>
               {i > 0 && (
                 <Reveal delay={i * 140} className="flex justify-center">
-                  <span className="block w-px h-10 md:h-14 bg-[#B4532A]/50" aria-hidden />
+                  <span className="block w-px h-10 md:h-14 bg-[#28447A]/50" aria-hidden />
                 </Reveal>
               )}
               <Reveal
