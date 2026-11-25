@@ -15,7 +15,7 @@ import {
   KeyCall,
   UpNext,
 } from "@/components/story-case-study"
-import { FirstWeek } from "./diagrams"
+import { FirstWeek, ShiftPriorities } from "./diagrams"
 
 // A short version of the portfolio case study: the problem, what we changed, and the result.
 export default function TempStarsStory() {
@@ -130,6 +130,10 @@ export default function TempStarsStory() {
               alt="Before and after: a bare shift screen next to a clinic profile with equipment, payment, parking and a neighbourhood map"
               caption="Before and after: the shift screen became a clinic profile"
             />
+          </div>
+
+          <div className="mx-auto max-w-[680px]">
+            <ShiftPriorities />
           </div>
 
           <Moment title="Skills-based matching from signup">
