@@ -125,14 +125,6 @@ export default function TempStarsStory() {
             </p>
           </Moment>
 
-          <Moment title="Skills-based matching from signup">
-            <p>
-              We replaced the one-size-fits-all signup with a shorter staged flow that captures skills early. With
-              engineering, we moved from free-text skills to a standard taxonomy, which powered weighted matching:
-              must-have skills first, nice-to-haves after.
-            </p>
-          </Moment>
-
           <div className="mx-auto max-w-[680px]">
             <Figure
               src="/images/tempstars-information-scent-before-after.png"
@@ -140,6 +132,14 @@ export default function TempStarsStory() {
               caption="Before and after: the shift screen became a clinic profile"
             />
           </div>
+
+          <Moment title="Skills-based matching from signup">
+            <p>
+              We replaced the one-size-fits-all signup with a shorter staged flow that captures skills early. With
+              engineering, we moved from free-text skills to a standard taxonomy, which powered weighted matching:
+              must-have skills first, nice-to-haves after.
+            </p>
+          </Moment>
 
           <Wide>
             <FirstWeek />
