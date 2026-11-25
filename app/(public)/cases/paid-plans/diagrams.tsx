@@ -55,26 +55,19 @@ export function PlanStaircase() {
   )
 }
 
-/* Rollout roadmap: workstreams as lanes, bars across the stages each one ran through. Facts from the case;
-   how long each bar runs is a reading of the case, which gives no dates. */
+/* Rollout roadmap: the team's workstreams in the order they ran, each on its own track across the stages.
+   How long each bar runs is a reading of the case, which gives no dates. */
 
-const STAGES = ["Design", "Development", "Launch", "Next"]
+const STAGES = ["Discovery", "Design", "Build", "Launch"]
 
-const LANES: { lane: string; from: number; to: number; text: string; tone?: "launch" | "next" }[] = [
-  { lane: "Pricing", from: 0, to: 0, text: "Priced on orders, not seats" },
-  { lane: "Plan system", from: 0, to: 1, text: "Plans, limits and upgrade paths, built from zero" },
-  { lane: "Gating rules", from: 0, to: 2, text: "One rule set for gating, trials and messaging, shared by every team" },
-  { lane: "Migration", from: 1, to: 2, text: "Free sellers: advance notice, then grace-period banners" },
-  { lane: "Monetisation", from: 2, to: 2, text: "12+ features gated, no-card trials", tone: "launch" },
-  { lane: "Platforms", from: 2, to: 2, text: "iOS, Android, devices and web", tone: "launch" },
-  { lane: "Billing", from: 3, to: 3, text: "Warn before seasonal spikes", tone: "next" },
+const LANES: { lane: string; from: number; to: number; text: string; live?: boolean }[] = [
+  { lane: "Research", from: 0, to: 0, text: "Seller interviews on limits and price" },
+  { lane: "Plans", from: 0, to: 1, text: "Plans, limits and upgrade paths" },
+  { lane: "Marketing", from: 1, to: 3, text: "Pricing page, plan messaging and launch campaign" },
+  { lane: "Engineering", from: 2, to: 2, text: "Gating on iOS, Android, devices and web" },
+  { lane: "Sellers", from: 2, to: 3, text: "Advance notice, then grace periods" },
+  { lane: "Launch", from: 3, to: 3, text: "12+ paid features, free trials", live: true },
 ]
-
-const TONE = {
-  base: "bg-[#F2F0EB] text-foreground/85",
-  launch: "bg-[#E1E8F5] text-[#28447A]",
-  next: "bg-white border border-dashed border-black/25 text-muted-foreground",
-}
 
 export function LegacyAndRoadmap() {
   return (
@@ -82,22 +75,24 @@ export function LegacyAndRoadmap() {
       <ExplainerCard className="sm:!p-6">
         <ExplainerTitle>Paid plan rollout roadmap</ExplainerTitle>
 
-        {/* Desktop: lanes across stages */}
-        <div className="hidden md:grid grid-cols-[96px_repeat(4,minmax(0,1fr))] gap-x-1 gap-y-1.5 items-center text-[12px] leading-snug">
-          <span className="pb-1.5 border-b border-black/10" />
-          {STAGES.map((st) => (
-            <span key={st} className="pb-1.5 border-b border-black/10 text-muted-foreground">
+        {/* Desktop: each lane is a track across the stages, the bar sits on it */}
+        <div className="hidden md:grid grid-cols-[104px_repeat(4,minmax(0,1fr))] gap-x-1 gap-y-1.5 items-center text-[12px] leading-snug">
+          <span style={{ gridRow: 1, gridColumn: 1 }} />
+          {STAGES.map((st, i) => (
+            <span key={st} className="text-muted-foreground px-2" style={{ gridRow: 1, gridColumn: i + 2 }}>
               {st}
             </span>
           ))}
-          {LANES.map((l) => (
+          <span className="h-px bg-black/10 mb-1" style={{ gridRow: 2, gridColumn: "1 / -1" }} aria-hidden />
+          {LANES.map((l, r) => (
             <div key={l.lane} className="contents">
-              <span className="font-medium text-foreground" style={{ gridColumn: 1 }}>
+              <span className="font-medium text-foreground" style={{ gridRow: r + 3, gridColumn: 1 }}>
                 {l.lane}
               </span>
+              <span className="h-full min-h-8 rounded bg-black/[0.025]" style={{ gridRow: r + 3, gridColumn: "2 / -1" }} aria-hidden />
               <span
-                className={`rounded px-2 py-1.5 ${TONE[l.tone ?? "base"]}`}
-                style={{ gridColumn: `${l.from + 2} / ${l.to + 3}` }}
+                className={`relative rounded px-2 py-1.5 ${l.live ? "bg-[#E1E8F5] text-[#28447A]" : "bg-[#E8E3DD] text-foreground/85"}`}
+                style={{ gridRow: r + 3, gridColumn: `${l.from + 2} / ${l.to + 3}` }}
               >
                 {l.text}
               </span>
@@ -138,7 +133,7 @@ export function UserFlows() {
       <ExplainerCard className="sm:!p-6">
         <ExplainerTitle>User flows for plans, trials and limits</ExplainerTitle>
         <div aria-hidden>
-          <svg viewBox="0 0 640 378" className="w-full h-auto">
+          <svg viewBox="0 0 640 352" className="w-full h-auto">
             <defs>
               <marker id="flow-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto">
                 <path d="M0 0L8 4L0 8z" fill="#9a958d" />
@@ -184,9 +179,6 @@ export function UserFlows() {
               </g>
               <g stroke="#c9c4bc" strokeDasharray="3 3">
                 <path d="M210 0v320M430 0v320" />
-              </g>
-              <g fontSize="9" fill="#7a746c">
-                <text x="0" y="336">Same rules on iOS, Android, devices and web</text>
               </g>
             </g>
           </svg>
