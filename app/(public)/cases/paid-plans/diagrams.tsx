@@ -55,24 +55,19 @@ export function PlanStaircase() {
   )
 }
 
-/* Rollout roadmap: workstreams as lanes, bars across the stages each one ran through. Facts from the case;
-   how long each bar runs is a reading of the case, which gives no dates. */
+/* Rollout roadmap: the team's workstreams in the order they ran, each on its own track across the stages.
+   How long each bar runs is a reading of the case, which gives no dates. */
 
-const STAGES = ["Design", "Development", "Launch", "Next"]
+const STAGES = ["Discovery", "Design", "Build", "Launch"]
 
-const LANES: { lane: string; from: number; to: number; text: string; tone?: "launch" | "next" }[] = [
-  { lane: "Entitlements", from: 0, to: 1, text: "Plan model, usage limits and upgrade paths" },
-  { lane: "Gating", from: 0, to: 2, text: "One framework for paywalls, trials and upgrade messaging" },
-  { lane: "Migration", from: 1, to: 2, text: "Existing free sellers moved with advance notice and grace periods" },
-  { lane: "Monetisation", from: 2, to: 2, text: "12+ features paid, card-free trials", tone: "launch" },
-  { lane: "Billing", from: 3, to: 3, text: "Early alerts for seasonal spikes", tone: "next" },
+const LANES: { lane: string; from: number; to: number; text: string; live?: boolean }[] = [
+  { lane: "Research", from: 0, to: 0, text: "Seller interviews on limits and price" },
+  { lane: "Plans", from: 0, to: 1, text: "Plans, limits and upgrade paths" },
+  { lane: "Marketing", from: 1, to: 3, text: "Pricing page, plan messaging and launch campaign" },
+  { lane: "Engineering", from: 2, to: 2, text: "Gating on iOS, Android, devices and web" },
+  { lane: "Sellers", from: 2, to: 3, text: "Advance notice, then grace periods" },
+  { lane: "Launch", from: 3, to: 3, text: "12+ paid features, free trials", live: true },
 ]
-
-const TONE = {
-  base: "bg-[#F2F0EB] text-foreground/85",
-  launch: "bg-[#E1E8F5] text-[#28447A]",
-  next: "bg-white border border-dashed border-black/25 text-muted-foreground",
-}
 
 export function LegacyAndRoadmap() {
   return (
@@ -80,23 +75,24 @@ export function LegacyAndRoadmap() {
       <ExplainerCard className="sm:!p-6">
         <ExplainerTitle>Paid plan rollout roadmap</ExplainerTitle>
 
-        {/* Desktop: lanes across stages */}
-        <div className="hidden md:grid grid-cols-[96px_repeat(4,minmax(0,1fr))] gap-x-1 gap-y-1.5 items-center text-[12px] leading-snug">
-          <span />
-          {STAGES.map((st) => (
-            <span key={st} className="text-muted-foreground">
+        {/* Desktop: each lane is a track across the stages, the bar sits on it */}
+        <div className="hidden md:grid grid-cols-[104px_repeat(4,minmax(0,1fr))] gap-x-1 gap-y-1.5 items-center text-[12px] leading-snug">
+          <span style={{ gridRow: 1, gridColumn: 1 }} />
+          {STAGES.map((st, i) => (
+            <span key={st} className="text-muted-foreground px-2" style={{ gridRow: 1, gridColumn: i + 2 }}>
               {st}
             </span>
           ))}
-          <span className="h-px bg-black/10 mb-1" style={{ gridColumn: "1 / -1" }} aria-hidden />
-          {LANES.map((l) => (
+          <span className="h-px bg-black/10 mb-1" style={{ gridRow: 2, gridColumn: "1 / -1" }} aria-hidden />
+          {LANES.map((l, r) => (
             <div key={l.lane} className="contents">
-              <span className="font-medium text-foreground" style={{ gridColumn: 1 }}>
+              <span className="font-medium text-foreground" style={{ gridRow: r + 3, gridColumn: 1 }}>
                 {l.lane}
               </span>
+              <span className="h-full min-h-8 rounded bg-black/[0.025]" style={{ gridRow: r + 3, gridColumn: "2 / -1" }} aria-hidden />
               <span
-                className={`rounded px-2 py-1.5 ${TONE[l.tone ?? "base"]}`}
-                style={{ gridColumn: `${l.from + 2} / ${l.to + 3}` }}
+                className={`relative rounded px-2 py-1.5 ${l.live ? "bg-[#E1E8F5] text-[#28447A]" : "bg-[#E8E3DD] text-foreground/85"}`}
+                style={{ gridRow: r + 3, gridColumn: `${l.from + 2} / ${l.to + 3}` }}
               >
                 {l.text}
               </span>
