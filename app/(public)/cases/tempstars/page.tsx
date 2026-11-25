@@ -125,15 +125,15 @@ export default function TempStarsStory() {
           </Moment>
 
           <div className="mx-auto max-w-[680px]">
+            <ShiftPriorities />
+          </div>
+
+          <div className="mx-auto max-w-[680px]">
             <Figure
               src="/images/tempstars-information-scent-before-after.png"
               alt="Before and after: a bare shift screen next to a clinic profile with equipment, payment, parking and a neighbourhood map"
               caption="Before and after: the shift screen became a clinic profile"
             />
-          </div>
-
-          <div className="mx-auto max-w-[680px]">
-            <ShiftPriorities />
           </div>
 
           <Moment title="Skills-based matching from signup">
