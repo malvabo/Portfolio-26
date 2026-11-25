@@ -160,7 +160,7 @@ export function UserFlows() {
                   k === "d" ? (
                     <g key={t + x}>
                       <path d={`M${x} ${y - h}l${w} ${h}-${w} ${h}-${w}-${h}z`} fill="#fff" stroke="#c9c4bc" />
-                      <text x={x} y={y + 3}>{t}</text>
+                      <text x={x} y={y + 2.8} fontSize="8">{t}</text>
                     </g>
                   ) : (
                     <g key={t + x + y}>
