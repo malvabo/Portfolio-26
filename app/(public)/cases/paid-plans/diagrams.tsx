@@ -29,7 +29,7 @@ export function PlanStaircase() {
             <li key={p.name} className={`rounded-t p-2 sm:p-2.5 flex flex-col ${p.fg}`} style={{ height: `${p.h}%`, background: p.bg }}>
               <span className="text-[12px] sm:text-[13px] font-medium leading-tight">{p.name}</span>
               <span className="mt-0.5 text-[11px] sm:text-[12px] opacity-75 leading-snug">{p.gets}</span>
-              <span className="mt-auto text-[10px] font-mono uppercase tracking-wider opacity-70">{p.paid ? "Paid" : "Free"}</span>
+              <span className="mt-auto text-[12px] opacity-70">{p.paid ? "Paid" : "Free"}</span>
             </li>
           ))}
         </ul>
@@ -41,7 +41,7 @@ export function PlanStaircase() {
         </p>
 
         {/* Moving between plans: the same rules on every platform */}
-        <p className="mt-5 text-[10px] font-mono uppercase tracking-wider text-muted-foreground">Moving between plans</p>
+        <p className="mt-5 text-[12px] text-muted-foreground">Moving between plans</p>
         <ul className="mt-2 grid grid-cols-3 gap-1.5 sm:gap-2" aria-label="Moving between plans">
           {PATH.map((s) => (
             <li key={s.title} className="rounded border border-black/10 px-2 py-1.5 sm:px-2.5 sm:py-2">
@@ -63,21 +63,18 @@ const MOVE = [
   { title: "Old free model", text: "Every feature, no plan", now: false },
   { title: "Notice in advance", text: "Before anything changed", now: false },
   { title: "Grace period", text: "Banners, work carries on", now: false },
-  { title: "New plan", text: "Shipping stays free", now: true },
+  { title: "New plan", text: "Shipping stays free, 12+ features are gated", now: true },
 ]
 
-const ROADMAP = [
-  { when: "Paid for by the plans", items: ["Demand forecasting", "ERP integrations"] },
-  { when: "Added after launch", items: ["Earlier warning before a higher order band, for seasonal sellers"] },
-]
+const ROADMAP = [{ when: "Paid for by the plans", items: ["12+ features are now paid"] }]
 
 export function LegacyAndRoadmap() {
   return (
     <ExplainerStage bg="/images/veeqo-tile-sellers.jpg">
       <ExplainerCard className="sm:!p-6">
-        <ExplainerTitle>Existing sellers first, then the roadmap</ExplainerTitle>
+        <ExplainerTitle>The roadmap for the paid plan rollout</ExplainerTitle>
 
-        <p className="text-[10px] font-mono uppercase tracking-wider text-muted-foreground">Existing sellers</p>
+        <p className="text-[12px] text-muted-foreground">Existing sellers</p>
         <ol className="mt-2 grid grid-cols-2 sm:grid-cols-4 gap-1.5 sm:gap-2" aria-label="How existing sellers moved to the new plans">
           {MOVE.map((s) => (
             <li
@@ -90,10 +87,10 @@ export function LegacyAndRoadmap() {
           ))}
         </ol>
 
-        <div className="mt-5 grid gap-4 sm:grid-cols-2 border-t border-black/10 pt-4">
+        <div className="mt-5 border-t border-black/10 pt-4">
           {ROADMAP.map((r) => (
             <div key={r.when}>
-              <p className="text-[10px] font-mono uppercase tracking-wider text-muted-foreground">{r.when}</p>
+              <p className="text-[12px] text-muted-foreground">{r.when}</p>
               <ul className="mt-2 space-y-1.5">
                 {r.items.map((i) => (
                   <li key={i} className="text-[12px] sm:text-[13px] leading-snug text-foreground/85 pl-3 border-l-2 border-[#28447A]/40">

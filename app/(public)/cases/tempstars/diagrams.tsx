@@ -6,9 +6,9 @@ import { ExplainerCard, ExplainerStage, ExplainerTag, ExplainerTitle } from "@/c
 
 const STEPS: { step: string; before: string; left?: boolean; after: string }[] = [
   { step: "Sign up", before: "Generic signup", after: "Skills asked up front" },
-  { step: "Browse shifts", before: "Same list for everyone", left: true, after: "Matched on must-haves" },
-  { step: "Judge the clinic", before: "Left the app for Google", left: true, after: "Clinic profile in the app" },
-  { step: "Accept the terms", before: "Policy favoured clinics", left: true, after: "A fairer policy" },
+  { step: "Browse shifts", before: "Same list for everyone", left: true, after: "Matched based on skills" },
+  { step: "Choose a clinic to work in", before: "Left the app to check clinic reviews", left: true, after: "Clinic reviews in the app" },
+  { step: "Accept the terms", before: "Policy favoured clinics", left: true, after: "A clear, fair policy" },
 ]
 
 const LEFT = "bg-[#F4E6D4] text-[#7A4B12]"
@@ -63,6 +63,59 @@ export function FirstWeek() {
             </div>
           ))}
         </dl>
+      </ExplainerCard>
+    </ExplainerStage>
+  )
+}
+
+/* TempStars: what hygienists check on a shift posting, grouped by how early the page answers it.
+   The answers are what the new shift page shows (from the after screen); the grouping is the design's priority. */
+
+const PRIORITIES = [
+  {
+    group: "Checked first",
+    rows: [
+      ["Will I get paid on time?", "Payment within 24 hours"],
+      ["Is this a good clinic?", "Google rating and reviews"],
+      ["Can I work with their tools?", "Radiography, ultrasonic, charting, software"],
+    ],
+  },
+  {
+    group: "Then",
+    rows: [
+      ["How do I get there?", "Neighbourhood map and parking"],
+      ["Do I get a break?", "Lunch break, paid or unpaid"],
+    ],
+  },
+  {
+    group: "Nice to know",
+    rows: [
+      ["What's the team like?", "Tags like a friendly office"],
+      ["Will I be protected?", "What the office will provide"],
+    ],
+  },
+]
+
+export function ShiftPriorities() {
+  return (
+    <ExplainerStage bg="/images/veeqo-tile-tickets.jpg">
+      <ExplainerCard className="sm:!p-6">
+        <ExplainerTitle>Shift page priorities</ExplainerTitle>
+        <div className="text-[13px] leading-snug">
+          {PRIORITIES.map((g) => (
+            <div key={g.group} className="grid gap-2 md:grid-cols-[104px_minmax(0,1fr)] md:gap-4 border-t border-black/10 py-3.5">
+              <p className="font-medium text-foreground">{g.group}</p>
+              <ul className="space-y-2">
+                {g.rows.map(([q, a]) => (
+                  <li key={q} className="grid grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] gap-3 items-baseline">
+                    <span className="text-muted-foreground">{q}</span>
+                    <span className="text-foreground">{a}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
       </ExplainerCard>
     </ExplainerStage>
   )

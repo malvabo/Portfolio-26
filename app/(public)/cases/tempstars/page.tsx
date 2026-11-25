@@ -14,9 +14,8 @@ import {
   Moment,
   KeyCall,
   UpNext,
-  Wide,
 } from "@/components/story-case-study"
-import { FirstWeek } from "./diagrams"
+import { FirstWeek, ShiftPriorities } from "./diagrams"
 
 // A short version of the portfolio case study: the problem, what we changed, and the result.
 export default function TempStarsStory() {
@@ -133,6 +132,10 @@ export default function TempStarsStory() {
             />
           </div>
 
+          <div className="mx-auto max-w-[680px]">
+            <ShiftPriorities />
+          </div>
+
           <Moment title="Skills-based matching from signup">
             <p>
               We replaced the one-size-fits-all signup with a shorter staged flow that captures skills early. With
@@ -141,9 +144,9 @@ export default function TempStarsStory() {
             </p>
           </Moment>
 
-          <Wide>
+          <div className="mx-auto max-w-[680px]">
             <FirstWeek />
-          </Wide>
+          </div>
         </div>
 
         <div className="h-14 md:h-20" aria-hidden />

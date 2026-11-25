@@ -32,7 +32,7 @@ export function ExplainerCard({ children, className = "" }: { children: ReactNod
 export function ExplainerTag({ children, accent = false }: { children: ReactNode; accent?: boolean }) {
   return (
     <span
-      className={`inline-block font-mono text-[10px] uppercase tracking-wider px-2 py-0.5 leading-[1.4] rounded-md ${
+      className={`inline-block text-[11px] font-medium px-2 py-0.5 leading-[1.4] rounded-md ${
         accent ? "bg-[#3D3D3D] text-white" : "bg-[#E8E3DD] text-[#6B5D4F]"
       }`}
     >
@@ -42,7 +42,7 @@ export function ExplainerTag({ children, accent = false }: { children: ReactNode
 }
 
 export function ExplainerTitle({ children }: { children: ReactNode }) {
-  return <p className="font-serif text-[1.125rem] tracking-[-0.01em] mt-1.5 mb-4 leading-snug">{children}</p>
+  return <p className="font-serif text-[1.125rem] tracking-[-0.01em] mt-0.5 mb-6 leading-snug">{children}</p>
 }
 
 /** A rotated paper note for pain points */

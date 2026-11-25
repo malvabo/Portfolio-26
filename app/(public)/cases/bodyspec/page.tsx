@@ -17,7 +17,7 @@ import {
   UpNext,
   Wide,
 } from "@/components/story-case-study"
-import { JourneyLoop } from "./diagrams"
+import { JourneyLoop, UserSegments } from "./diagrams"
 
 // A short version of the portfolio case study: the problem, the calls that mattered, and the result.
 export default function BodySpecStory() {
@@ -132,6 +132,10 @@ export default function BodySpecStory() {
               come back is clear before the first booking.
             </p>
           </Moment>
+
+          <div className="mx-auto max-w-[680px]">
+            <UserSegments />
+          </div>
 
           <Moment title="A lean first version to meet the funding deadline">
             <p>

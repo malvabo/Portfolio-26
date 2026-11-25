@@ -29,7 +29,7 @@ function Card({ children, className = "" }: { children: ReactNode; className?: s
 function Tag({ children, accent = false }: { children: ReactNode; accent?: boolean }) {
   return (
     <span
-      className="inline-block text-white font-mono text-[10px] uppercase tracking-wider px-1.5 py-0.5 leading-none"
+      className="inline-block text-white text-[11px] font-medium px-1.5 py-0.5 leading-none"
       style={{ background: accent ? ACCENT : "#3D3D3D" }}
     >
       {children}
@@ -152,7 +152,7 @@ export function Architecture() {
               <p className="text-[13px] font-medium">Custom templates</p>
               <p className="text-[12px] text-muted-foreground">Enterprise · full control</p>
             </div>
-            <span className="text-[11px] font-mono uppercase tracking-wider px-1.5 py-1 rounded border border-[#28447A]/30 bg-[#28447A]/10 text-[#28447A] whitespace-nowrap">
+            <span className="text-[12px] px-1.5 py-1 rounded border border-[#28447A]/30 bg-[#28447A]/10 text-[#28447A] whitespace-nowrap">
               HTML + AI
             </span>
           </div>
@@ -250,7 +250,7 @@ export function BrandScheme() {
         {/* Before */}
         <div className="bg-white rounded-md border border-black/10 shadow-[0_8px_24px_rgba(0,0,0,0.18)] p-4 self-stretch">
           <div className="flex items-center gap-2 mb-1">
-            <span className="bg-[#3D3D3D] text-white font-mono text-[10px] uppercase tracking-wider px-1.5 py-0.5 leading-none">Before</span>
+            <span className="bg-[#3D3D3D] text-white text-[11px] font-medium px-1.5 py-0.5 leading-none">Before</span>
           </div>
           <p className="font-serif text-[1.125rem] tracking-[-0.01em] mb-4">Brands scattered across files</p>
 
@@ -292,7 +292,7 @@ export function BrandScheme() {
         {/* After */}
         <div className="bg-white rounded-md border border-black/10 shadow-[0_8px_24px_rgba(0,0,0,0.18)] p-4 self-stretch">
           <div className="flex items-center gap-2 mb-1">
-            <span className="bg-[#28447A] text-white font-mono text-[10px] uppercase tracking-wider px-1.5 py-0.5 leading-none">After</span>
+            <span className="bg-[#28447A] text-white text-[11px] font-medium px-1.5 py-0.5 leading-none">After</span>
           </div>
           <p className="font-serif text-[1.125rem] tracking-[-0.01em] mb-4">Brands attached to each document</p>
 
