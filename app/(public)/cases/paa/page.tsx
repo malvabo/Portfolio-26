@@ -16,6 +16,7 @@ import {
   KeyCall,
   UpNext,
 } from "@/components/story-case-study"
+import { ReportFlow } from "./diagrams"
 
 const Gap = () => <div className="h-14 md:h-20" aria-hidden />
 
@@ -155,6 +156,10 @@ export default function PAAStory() {
               nothing but that record. Nobody can go back and adjust the assessment to steer the outcome.
             </p>
           </Moment>
+
+          <div className="mx-auto max-w-[920px]">
+            <ReportFlow />
+          </div>
 
           <Moment title="Requests next to the patient">
             <p>

@@ -4,7 +4,7 @@ import type { ReactNode } from "react"
 
 /* Veeqo diagrams, drawn as white cards on a photographic stage */
 
-const ACCENT = "#B4532A"
+const ACCENT = "#28447A"
 
 /** Photo backdrop with a soft dark wash; content sits on top */
 function Stage({ bg, children, className = "" }: { bg: string; children: ReactNode; className?: string }) {
@@ -117,8 +117,8 @@ export function Architecture() {
             Documents on / off
           </div>
         </div>
-        <div className="rounded border border-dashed border-[#B4532A]/50 p-3 pb-4">
-          <p className="text-[13px] font-medium text-[#B4532A] mb-3">Third-party tool, outside Amazon</p>
+        <div className="rounded border border-dashed border-[#28447A]/50 p-3 pb-4">
+          <p className="text-[13px] font-medium text-[#28447A] mb-3">Third-party tool, outside Amazon</p>
           <span
             className="inline-block text-[12px] font-medium text-black/80 px-2.5 py-1.5 shadow-[0_2px_6px_rgba(0,0,0,0.12)]"
             style={{ background: "#F6B98F", transform: "rotate(-3deg)" }}
@@ -152,7 +152,7 @@ export function Architecture() {
               <p className="text-[13px] font-medium">Custom templates</p>
               <p className="text-[12px] text-muted-foreground">Enterprise · full control</p>
             </div>
-            <span className="text-[11px] font-mono uppercase tracking-wider px-1.5 py-1 rounded border border-[#B4532A]/30 bg-[#B4532A]/10 text-[#B4532A] whitespace-nowrap">
+            <span className="text-[11px] font-mono uppercase tracking-wider px-1.5 py-1 rounded border border-[#28447A]/30 bg-[#28447A]/10 text-[#28447A] whitespace-nowrap">
               HTML + AI
             </span>
           </div>
@@ -187,15 +187,15 @@ export function DecisionTable() {
               <div
                 role="row"
                 key={o.title}
-                className={`${cols} ${k === 0 ? "border-b border-black/10" : ""} ${o.chosen ? "bg-[#B4532A]/[0.05]" : ""}`}
+                className={`${cols} ${k === 0 ? "border-b border-black/10" : ""} ${o.chosen ? "bg-[#28447A]/[0.05]" : ""}`}
               >
                 {/* Option name, with a quiet status line underneath instead of a tag */}
                 <div role="rowheader" className="p-3 sm:p-4">
                   <p className="font-serif text-[1rem] tracking-[-0.01em] leading-snug">{o.title}</p>
                   <p
-                    className={`mt-1.5 inline-flex items-center gap-1.5 text-[12px] ${o.chosen ? "text-[#B4532A]" : "text-muted-foreground"}`}
+                    className={`mt-1.5 inline-flex items-center gap-1.5 text-[12px] ${o.chosen ? "text-[#28447A]" : "text-muted-foreground"}`}
                   >
-                    <span className={`w-1.5 h-1.5 rounded-full ${o.chosen ? "bg-[#B4532A]" : "bg-black/25"}`} aria-hidden />
+                    <span className={`w-1.5 h-1.5 rounded-full ${o.chosen ? "bg-[#28447A]" : "bg-black/25"}`} aria-hidden />
                     {o.tag}
                   </p>
                 </div>
@@ -264,8 +264,8 @@ export function BrandScheme() {
             ))}
           </div>
 
-          <div className="rounded border border-dashed border-[#B4532A]/50 p-3 pb-4">
-            <p className="text-[13px] font-medium text-[#B4532A] mb-3">Third-party tool, outside Amazon</p>
+          <div className="rounded border border-dashed border-[#28447A]/50 p-3 pb-4">
+            <p className="text-[13px] font-medium text-[#28447A] mb-3">Third-party tool, outside Amazon</p>
             <div className="flex flex-col items-start gap-1.5">
               {notes.map((n, i) => (
                 <span
@@ -284,7 +284,7 @@ export function BrandScheme() {
         <div className="flex justify-center">
           <span className="grid place-items-center w-10 h-10 rounded-full bg-white shadow-[0_4px_14px_rgba(0,0,0,0.2)] rotate-90 md:rotate-0">
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden>
-              <path d="M3 9h12M10 4l5 5-5 5" stroke="#B4532A" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M3 9h12M10 4l5 5-5 5" stroke="#28447A" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </span>
         </div>
@@ -292,7 +292,7 @@ export function BrandScheme() {
         {/* After */}
         <div className="bg-white rounded-md border border-black/10 shadow-[0_8px_24px_rgba(0,0,0,0.18)] p-4 self-stretch">
           <div className="flex items-center gap-2 mb-1">
-            <span className="bg-[#B4532A] text-white font-mono text-[10px] uppercase tracking-wider px-1.5 py-0.5 leading-none">After</span>
+            <span className="bg-[#28447A] text-white font-mono text-[10px] uppercase tracking-wider px-1.5 py-0.5 leading-none">After</span>
           </div>
           <p className="font-serif text-[1.125rem] tracking-[-0.01em] mb-4">Brands attached to each document</p>
 
@@ -304,7 +304,7 @@ export function BrandScheme() {
                   <span aria-hidden className="absolute left-3 top-7 -bottom-2 w-px bg-black/15" />
                 )}
                 <div className="flex items-center gap-2 text-[13px] font-medium">
-                  <span className="grid place-items-center w-6 h-6 rounded bg-[#B4532A]/10 text-[#B4532A]">
+                  <span className="grid place-items-center w-6 h-6 rounded bg-[#28447A]/10 text-[#28447A]">
                     <DocIcon />
                   </span>
                   {label}

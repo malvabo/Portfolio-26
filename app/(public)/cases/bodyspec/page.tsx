@@ -15,7 +15,9 @@ import {
   Moment,
   KeyCall,
   UpNext,
+  Wide,
 } from "@/components/story-case-study"
+import { JourneyLoop } from "./diagrams"
 
 // A short version of the portfolio case study: the problem, the calls that mattered, and the result.
 export default function BodySpecStory() {
@@ -118,6 +120,10 @@ export default function BodySpecStory() {
               around progress between scans, which gave people a reason to book the next one.
             </p>
           </Moment>
+
+          <Wide>
+            <JourneyLoop />
+          </Wide>
 
           <Moment title="New messaging and website around progress">
             <p>

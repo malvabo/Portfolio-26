@@ -133,7 +133,7 @@ export function StoryContents({ items }: { items: ContentsItem[] }) {
                   transition: `top .5s ${EASE}`,
                 }}
               >
-                <span className="block w-[7px] h-[7px] rounded-full bg-[#B4532A]" />
+                <span className="block w-[7px] h-[7px] rounded-full bg-[#28447A]" />
               </div>
             </div>
 

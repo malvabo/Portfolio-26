@@ -346,9 +346,9 @@ export default function ConduitStory() {
               systems.
             </p>
             {!SHOW_WIP && (
-              <p className="!-mt-1 flex w-fit items-center gap-2 rounded-md border border-[#B4532A]/25 bg-[#B4532A]/[0.06] px-2.5 py-1 font-mono text-[12px] leading-none text-[#B4532A]">
+              <p className="!-mt-1 flex w-fit items-center gap-2 rounded-md border border-[#28447A]/25 bg-[#28447A]/[0.06] px-2.5 py-1 font-mono text-[12px] leading-none text-[#28447A]">
                 {/* The accent square used across the site, pulsing gently */}
-                <span aria-hidden className="h-1.5 w-1.5 bg-[#B4532A] motion-safe:animate-pulse" />
+                <span aria-hidden className="h-1.5 w-1.5 bg-[#28447A] motion-safe:animate-pulse" />
                 Case study coming soon!
               </p>
             )}
