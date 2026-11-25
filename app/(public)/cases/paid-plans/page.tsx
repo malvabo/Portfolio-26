@@ -123,7 +123,7 @@ export default function PaidPlansStory() {
             </p>
           </Moment>
 
-          <div className="mx-auto max-w-[680px]">
+          <div className="mx-auto max-w-[920px]">
             <UserFlows />
           </div>
 
@@ -134,7 +134,7 @@ export default function PaidPlansStory() {
             </p>
           </Moment>
 
-          <div className="mx-auto max-w-[680px]">
+          <div className="mx-auto max-w-[920px]">
             <LegacyAndRoadmap />
           </div>
         </div>

@@ -138,7 +138,7 @@ export function UserFlows() {
       <ExplainerCard className="sm:!p-6">
         <ExplainerTitle>User flows for plans, trials and limits</ExplainerTitle>
         <div aria-hidden>
-          <svg viewBox="0 0 640 378" className="w-full h-auto">
+          <svg viewBox="0 0 640 352" className="w-full h-auto">
             <defs>
               <marker id="flow-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto">
                 <path d="M0 0L8 4L0 8z" fill="#9a958d" />
@@ -184,9 +184,6 @@ export function UserFlows() {
               </g>
               <g stroke="#c9c4bc" strokeDasharray="3 3">
                 <path d="M210 0v320M430 0v320" />
-              </g>
-              <g fontSize="9" fill="#7a746c">
-                <text x="0" y="336">Same rules on iOS, Android, devices and web</text>
               </g>
             </g>
           </svg>
