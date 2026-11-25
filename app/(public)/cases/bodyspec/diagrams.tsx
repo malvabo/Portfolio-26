@@ -13,7 +13,7 @@ const STAGES: { stage: string; before: string; broken?: boolean; after: string }
   { stage: "Come back", before: "No next step", broken: true, after: "A reason to book the next scan" },
 ]
 
-const BROKEN = "bg-[#F4E6D4] text-[#7A4B12]"
+const BROKEN = "text-foreground"
 
 export function JourneyLoop() {
   return (
@@ -59,7 +59,7 @@ export function JourneyLoop() {
             <div key={s.stage} className="py-2.5">
               <dt className="text-[12px] text-muted-foreground">{s.stage}</dt>
               <dd className="mt-1">
-                <span className={`inline-block rounded py-0.5 ${s.broken ? `px-1.5 ${BROKEN}` : "text-muted-foreground"}`}>{s.before}</span>
+                <span className={`inline-block rounded py-0.5 ${s.broken ? BROKEN : "text-muted-foreground"}`}>{s.before}</span>
               </dd>
               <dd className="mt-1 font-medium text-[#28447A]">{s.after}</dd>
             </div>
