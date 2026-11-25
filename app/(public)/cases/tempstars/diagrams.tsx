@@ -1,101 +1,74 @@
 "use client"
 
-import type { ReactNode } from "react"
-import { ACCENT, NOTE, ExplainerCard, ExplainerStage, ExplainerTag, ExplainerTitle, Sticky } from "@/components/explainer-stage"
+import { ExplainerCard, ExplainerStage, ExplainerTitle } from "@/components/explainer-stage"
 
-/* TempStars: a new hygienist's first week, from signup to first offer, before and after */
+/* TempStars: the three questions a hygienist asks before taking a first shift.
+   Each column is one question, in the order they meet it: what they got before, and what they get now. */
 
-const DAYS = [0, 1, 2, 3, 4, 5, 6, 7]
+const QUESTIONS = [
+  {
+    where: "At signup",
+    ask: "Will I see shifts that fit me?",
+    before: "The same generic list for everyone",
+    after: "Matched on must-have skills first",
+  },
+  {
+    where: "On the shift page",
+    ask: "What is this clinic like?",
+    before: "Leave the app and search on Google",
+    after: "Equipment, pay and parking on the page",
+  },
+  {
+    where: "Before accepting",
+    ask: "What if the clinic cancels?",
+    before: "A policy that protects the clinic",
+    after: "A fairer policy for both sides",
+  },
+]
 
-/** One track: a bar from signup (day 0) to the first offer */
-function Track({ days, accent, start, end }: { days: number; accent?: boolean; start: string; end: string }) {
-  const pct = (days / 7) * 100
+const BEFORE = "bg-[#F4E6D4] text-[#7A4B12]"
+const AFTER = "bg-[#E1E8F5] text-[#28447A]"
+
+function Legend() {
   return (
-    <div>
-      <div className="relative h-5 text-[12px]">
-        <span
-          className={`absolute whitespace-nowrap ${days === 7 ? "right-0" : "-translate-x-1/2"} font-medium`}
-          style={days === 7 ? undefined : { left: `${pct}%`, color: ACCENT }}
-        >
-          {end}
-        </span>
-      </div>
-      <div className="relative h-7">
-        {/* full week, faint */}
-        <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 h-1.5 rounded-full bg-black/[0.06]" />
-        {/* time spent waiting */}
-        <div
-          className="absolute left-0 top-1/2 -translate-y-1/2 h-1.5 rounded-full"
-          style={{ width: `${pct}%`, background: accent ? ACCENT : "#9A968D" }}
-        />
-        <span className="absolute left-0 top-1/2 -translate-y-1/2 w-3 h-3 rounded-full border-2 bg-white" style={{ borderColor: accent ? ACCENT : "#9A968D" }} />
-        <span
-          className="absolute top-1/2 -translate-y-1/2 -translate-x-full w-3 h-3 rounded-full"
-          style={{ left: `${pct}%`, background: accent ? ACCENT : "#3D3D3D" }}
-        />
-      </div>
-      <p className="text-[12px] text-muted-foreground">{start}</p>
+    <div className="flex items-center gap-4 text-[11px] text-muted-foreground" aria-hidden>
+      <span className="inline-flex items-center gap-1.5">
+        <span className="w-3 h-3 rounded-sm bg-[#F4E6D4]" /> Why they stalled
+      </span>
+      <span className="inline-flex items-center gap-1.5">
+        <span className="w-3 h-3 rounded-sm bg-[#E1E8F5]" /> What they get now
+      </span>
     </div>
-  )
-}
-
-function Chip({ children }: { children: ReactNode }) {
-  return (
-    <span className="inline-flex items-center gap-1.5 rounded border border-black/10 bg-[#F5F3F0] px-2.5 py-1.5 text-[12px] leading-snug text-foreground/80">
-      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden>
-        <path d="M2.5 6.2l2.3 2.3 4.7-5" stroke={ACCENT} strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-      </svg>
-      {children}
-    </span>
   )
 }
 
 export function FirstWeek() {
   return (
     <ExplainerStage bg="/images/veeqo-tile-speed.jpg">
-      <ExplainerCard>
-        <ExplainerTag accent>A new hygienist&apos;s first week</ExplainerTag>
-        <ExplainerTitle>From a week of waiting to an offer in under 48 hours</ExplainerTitle>
+      <ExplainerCard className="sm:!p-6">
+        <div className="flex flex-wrap items-start justify-between gap-x-6 gap-y-2">
+          <ExplainerTitle>Three questions before a first shift</ExplainerTitle>
+          <Legend />
+        </div>
 
-        {/* Day scale */}
-        <div className="relative h-6 text-[10px] font-mono uppercase tracking-wider text-muted-foreground border-b border-black/10" aria-hidden>
-          {DAYS.map((d) => (
-            <span
-              key={d}
-              className={`absolute top-0 whitespace-nowrap ${d === 0 ? "" : d === 7 ? "-translate-x-full" : "-translate-x-1/2"} ${d === 0 || d === 2 || d === 7 ? "" : "hidden sm:block"}`}
-              style={{ left: `${(d / 7) * 100}%` }}
-            >
-              {d === 0 ? "Signup" : `Day ${d}`}
-            </span>
+        <ol className="grid gap-3 md:grid-cols-3 md:gap-0 md:divide-x divide-black/10 border-t border-black/10 pt-4">
+          {QUESTIONS.map((q) => (
+            <li key={q.ask} className="md:px-4 md:first:pl-0 md:last:pr-0 pb-3 md:pb-0 border-b md:border-b-0 border-black/10 last:border-b-0">
+              <p className="text-[10px] font-mono uppercase tracking-wider text-muted-foreground">{q.where}</p>
+              <p className="mt-1 text-[14px] font-medium leading-snug text-foreground">{q.ask}</p>
+              <div className="mt-3 space-y-1.5 text-[12px] leading-snug">
+                <p className={`rounded px-2 py-1.5 ${BEFORE}`}>
+                  <span className="sr-only">Before: </span>
+                  {q.before}
+                </p>
+                <p className={`rounded px-2 py-1.5 font-medium ${AFTER}`}>
+                  <span className="sr-only">After: </span>
+                  {q.after}
+                </p>
+              </div>
+            </li>
           ))}
-        </div>
-
-        {/* Before */}
-        <div className="mt-4">
-          <ExplainerTag>Before</ExplainerTag>
-          <div className="mt-2">
-            <Track days={7} start="Generic signup" end="First offer, about a week later" />
-          </div>
-          <div className="mt-3 flex flex-wrap gap-x-3 gap-y-2.5 rounded border border-dashed border-black/20 p-3 pb-4">
-            <p className="w-full text-[13px] font-medium text-[#6B5D4F]">Why people stalled, and 65% never booked</p>
-            <Sticky color={NOTE.sand} tilt={-2}>Same shift list for everyone, whatever their skills</Sticky>
-            <Sticky color={NOTE.blue} tilt={1.5}>Left the app to research clinics on Google</Sticky>
-            <Sticky color={NOTE.lilac} tilt={-1}>Cancellation policy one-sided toward clinics</Sticky>
-          </div>
-        </div>
-
-        {/* After */}
-        <div className="mt-6">
-          <ExplainerTag accent>After</ExplainerTag>
-          <div className="mt-2">
-            <Track days={2} accent start="Skills at signup" end="First offer" />
-          </div>
-          <div className="mt-3 flex flex-wrap gap-2">
-            <Chip>Matched on must-have skills first</Chip>
-            <Chip>Equipment, parking and pay on the shift page</Chip>
-            <Chip>A fairer cancellation policy</Chip>
-          </div>
-        </div>
+        </ol>
       </ExplainerCard>
     </ExplainerStage>
   )
