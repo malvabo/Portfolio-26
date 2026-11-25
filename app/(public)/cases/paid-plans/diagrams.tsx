@@ -106,11 +106,13 @@ export function LegacyAndRoadmap() {
 }
 
 
-/* Detailed user flows for trials, limits and downgrades */
+/* Detailed user flows for trials, limits and downgrades. Each flow runs down one main path;
+   decisions exit to the side, with yes and no on every branch. */
 
 type FlowNode = [number, number, number, number, string, "n" | "b" | "d"]
-const FLOW_NODES: FlowNode[] = [[30, 20, 120, 24, "Opens paid feature", "n"], [30, 60, 120, 24, "Feature explainer", "n"], [90, 115, 38, 17, "In their plan?", "d"], [0, 156, 76, 26, "Has access", "b"], [104, 156, 76, 26, "Start trial", "n"], [0, 200, 76, 26, "Use feature", "n"], [104, 200, 76, 26, "No card asked", "n"], [0, 244, 76, 26, "Usage logged", "n"], [104, 244, 76, 26, "Trial reminders", "n"], [142, 301, 26, 13, "Ends", "d"], [0, 334, 76, 26, "Stay on plan", "b"], [104, 334, 76, 26, "Upgrade or not", "n"], [250, 20, 120, 24, "Monthly orders rise", "n"], [250, 60, 120, 24, "Band check", "n"], [310, 115, 30, 17, "Over limit?", "d"], [220, 156, 76, 26, "No change", "b"], [324, 156, 76, 26, "Advance notice", "n"], [220, 200, 76, 26, "Keep shipping", "n"], [324, 200, 76, 26, "Grace period", "n"], [220, 244, 76, 26, "Next cycle", "n"], [324, 244, 76, 26, "Banner, all apps", "n"], [220, 334, 76, 26, "Free plan", "b"], [324, 288, 76, 26, "Limits kick in", "n"], [324, 334, 76, 26, "Upgrade", "b"], [470, 20, 120, 24, "Chooses free plan", "n"], [470, 60, 120, 24, "What changes", "n"], [530, 115, 30, 17, "Confirm?", "d"], [440, 156, 76, 26, "Stays paid", "n"], [544, 156, 76, 26, "Until cycle end", "n"], [440, 200, 76, 26, "Back to plan", "n"], [544, 200, 76, 26, "Features lock", "n"], [440, 244, 76, 26, "No change", "n"], [544, 244, 76, 26, "Data kept", "n"], [492, 288, 76, 26, "Re-upgrade", "n"], [475, 334, 110, 26, "All data still there", "b"]]
-const FLOW_PATHS = ["M90 44v14", "M90 84v14", "M68 132l-30 22", "M112 132l30 22", "M38 182v16", "M142 182v16", "M38 226v16", "M142 226v16", "M142 270v16", "M38 270v62", "M142 314v18", "M310 44v14", "M310 84v14", "M288 132l-30 22", "M332 132l30 22", "M258 182v16", "M362 182v16", "M362 226v16", "M258 226v16", "M362 270v16", "M362 314v18", "M258 270v62", "M530 44v14", "M530 84v14", "M508 132l-30 22", "M552 132l30 22", "M478 182v16", "M582 182v16", "M478 226v16", "M582 226v16", "M530 270v16", "M530 314v18"]
+const FLOW_NODES: FlowNode[] = [[0, 20, 110, 24, "Opens paid feature", "n"], [55, 76, 40, 16, "In their plan?", "d"], [124, 64, 76, 24, "Opens as usual", "b"], [0, 108, 110, 24, "Explainer", "n"], [0, 148, 110, 24, "Free trial, no card", "n"], [0, 188, 110, 24, "Trial reminders", "n"], [55, 244, 30, 16, "Upgrades?", "d"], [124, 232, 76, 24, "Feature locks", "n"], [0, 284, 110, 24, "Feature stays on", "b"], [220, 20, 110, 24, "Monthly orders rise", "n"], [275, 76, 42, 16, "Over the band?", "d"], [344, 64, 76, 24, "No change", "b"], [220, 108, 110, 24, "Notice in advance", "n"], [220, 148, 110, 24, "Grace period", "n"], [220, 188, 110, 24, "Banners in every app", "n"], [275, 244, 30, 16, "Upgrades?", "d"], [344, 232, 76, 24, "Limits kick in", "n"], [220, 284, 110, 24, "Higher plan", "b"], [440, 20, 110, 24, "Chooses free plan", "n"], [495, 76, 36, 16, "Confirms?", "d"], [564, 64, 76, 24, "Stays on plan", "b"], [440, 108, 110, 24, "Paid until cycle ends", "n"], [440, 148, 110, 24, "Paid features lock", "n"], [440, 188, 110, 24, "All data kept", "n"], [495, 244, 44, 16, "Upgrades again?", "d"], [564, 232, 76, 24, "Stays on free", "n"], [440, 284, 110, 24, "Data still there", "b"]]
+const FLOW_PATHS = ["M55 44v14", "M55 92v14", "M55 132v14", "M55 172v14", "M55 212v14", "M55 260v22", "M95 76H122", "M85 244H122", "M275 44v14", "M275 92v14", "M275 132v14", "M275 172v14", "M275 212v14", "M275 260v22", "M317 76H342", "M305 244H342", "M495 44v14", "M495 92v14", "M495 132v14", "M495 172v14", "M495 212v14", "M495 260v22", "M531 76H562", "M539 244H562"]
+const FLOW_LABELS: [number, number, string, "start" | "middle"][] = [[99, 71, "Yes", "start"], [60, 103, "No", "start"], [89, 239, "No", "start"], [60, 271, "Yes", "start"], [321, 71, "No", "start"], [280, 103, "Yes", "start"], [309, 239, "No", "start"], [280, 271, "Yes", "start"], [382, 267, "Shipping still works", "middle"], [535, 71, "No", "start"], [500, 103, "Yes", "start"], [543, 239, "No", "start"], [500, 271, "Yes", "start"]]
 
 export function UserFlows() {
   return (
@@ -118,7 +120,7 @@ export function UserFlows() {
       <ExplainerCard className="sm:!p-6">
         <ExplainerTitle>User flows for plans, trials and limits</ExplainerTitle>
         <div aria-hidden>
-          <svg viewBox="0 0 640 447" className="w-full h-auto">
+          <svg viewBox="0 0 640 378" className="w-full h-auto">
             <defs>
               <marker id="flow-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto">
                 <path d="M0 0L8 4L0 8z" fill="#9a958d" />
@@ -135,41 +137,39 @@ export function UserFlows() {
               <text x="440" y="27">Paid until the cycle ends</text>
             </g>
             <g transform="translate(0 22)">
-            <g stroke="#9a958d" strokeWidth="1" fill="none" markerEnd="url(#flow-arrow)">
-              {FLOW_PATHS.map((d) => (
-                <path key={d} d={d} />
-              ))}
-            </g>
-            <g fontSize="9.5" fill="#3d3d3d" textAnchor="middle">
-              {FLOW_NODES.map(([x, y, w, h, t, k]) =>
-                k === "d" ? (
-                  <g key={t + x}>
-                    <path d={`M${x} ${y - h}l${w} ${h}-${w} ${h}-${w}-${h}z`} fill="#fff" stroke="#c9c4bc" />
-                    <text x={x} y={y + 3}>{t}</text>
-                  </g>
-                ) : (
-                  <g key={t + x + y}>
-                    <rect x={x} y={y} width={w} height={h} rx="4" fill={k === "b" ? "#E1E8F5" : "#F2F0EB"} />
-                    <text x={x + w / 2} y={y + h / 2 + 3.5}>{t}</text>
-                  </g>
-                ),
-              )}
-            </g>
-            <g fontSize="9" fill="#7a746c">
-              <text x="46" y="142" textAnchor="end">Yes</text>
-              <text x="134" y="142">No</text>
-              <text x="266" y="142" textAnchor="end">No</text>
-              <text x="354" y="142">Yes</text>
-              <text x="486" y="142" textAnchor="end">No</text>
-              <text x="574" y="142">Yes</text>
-            </g>
-            <g stroke="#c9c4bc" strokeDasharray="3 3">
-              <path d="M205 20v390M425 20v390" />
-            </g>
-            <g fontSize="9" fill="#7a746c">
-              <text x="0" y="400">Same rules on iOS, Android, devices and web</text>
-              <text x="0" y="416">Edge cases: shared accounts, seasonal spikes, failed payment</text>
-            </g>
+              <g stroke="#9a958d" strokeWidth="1" fill="none" markerEnd="url(#flow-arrow)">
+                {FLOW_PATHS.map((d) => (
+                  <path key={d} d={d} />
+                ))}
+              </g>
+              <g fontSize="9.5" fill="#3d3d3d" textAnchor="middle">
+                {FLOW_NODES.map(([x, y, w, h, t, k]) =>
+                  k === "d" ? (
+                    <g key={t + x}>
+                      <path d={`M${x} ${y - h}l${w} ${h}-${w} ${h}-${w}-${h}z`} fill="#fff" stroke="#c9c4bc" />
+                      <text x={x} y={y + 3}>{t}</text>
+                    </g>
+                  ) : (
+                    <g key={t + x + y}>
+                      <rect x={x} y={y} width={w} height={h} rx="4" fill={k === "b" ? "#E1E8F5" : "#F2F0EB"} />
+                      <text x={x + w / 2} y={y + h / 2 + 3.5}>{t}</text>
+                    </g>
+                  ),
+                )}
+              </g>
+              <g fontSize="9" fill="#7a746c">
+                {FLOW_LABELS.map(([x, y, t, a]) => (
+                  <text key={t + x + y} x={x} y={y} textAnchor={a}>
+                    {t}
+                  </text>
+                ))}
+              </g>
+              <g stroke="#c9c4bc" strokeDasharray="3 3">
+                <path d="M210 0v320M430 0v320" />
+              </g>
+              <g fontSize="9" fill="#7a746c">
+                <text x="0" y="336">Same rules on iOS, Android, devices and web</text>
+              </g>
             </g>
           </svg>
         </div>
