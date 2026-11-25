@@ -71,7 +71,10 @@ export default function ConduitStory() {
             </p>
             </>
           }
-          stats={[]}
+          stats={[
+            { value: "20 → 3 min", label: "customs check per shipment" },
+            { value: "3 teams", label: "rolled out to" },
+          ]}
         />
 
         <Divider />
