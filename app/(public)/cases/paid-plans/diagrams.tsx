@@ -55,56 +55,74 @@ export function PlanStaircase() {
   )
 }
 
-/* The rollout as phases: what shipped in each and why. Facts only from the case. */
+/* Rollout roadmap: workstreams as lanes, bars across the stages each one ran through. Facts from the case;
+   how long each bar runs is a reading of the case, which gives no dates. */
 
-const PHASES = [
-  {
-    phase: "Foundations",
-    why: "The product had no concept of plans",
-    items: ["Plans, limits and upgrade paths built from scratch", "Price set on monthly seller-fulfilled orders, not seats", "One set of rules for gating, trials and messaging"],
-  },
-  {
-    phase: "Existing sellers",
-    why: "Sellers had always had everything free",
-    items: ["Shipping stays free, with unlimited users and SKUs", "Notice in advance before anything changed", "Grace-period banners, no operation stopped"],
-  },
-  {
-    phase: "Paid features",
-    why: "Fund the advanced roadmap",
-    items: ["12+ features gated on iOS, Android, devices and web", "New features open with a free trial, no card", "Downgrades keep features to the end of the billing cycle"],
-  },
-  {
-    phase: "Next",
-    why: "Seasonal spikes caught sellers out",
-    items: ["Warn sellers before a busy season moves them up a plan"],
-  },
+const STAGES = ["Design", "Development", "Launch", "Next"]
+
+const LANES: { lane: string; from: number; to: number; text: string; tone?: "launch" | "next" }[] = [
+  { lane: "Pricing", from: 0, to: 0, text: "Priced on orders, not seats" },
+  { lane: "Plan system", from: 0, to: 1, text: "Plans, limits and upgrade paths, built from zero" },
+  { lane: "Gating rules", from: 0, to: 2, text: "One rule set for gating, trials and messaging, shared by every team" },
+  { lane: "Migration", from: 1, to: 2, text: "Free sellers: advance notice, then grace-period banners" },
+  { lane: "Monetisation", from: 2, to: 2, text: "12+ features gated, no-card trials", tone: "launch" },
+  { lane: "Platforms", from: 2, to: 2, text: "iOS, Android, devices and web", tone: "launch" },
+  { lane: "Billing", from: 3, to: 3, text: "Warn before seasonal spikes", tone: "next" },
 ]
+
+const TONE = {
+  base: "bg-[#F2F0EB] text-foreground/85",
+  launch: "bg-[#E1E8F5] text-[#28447A]",
+  next: "bg-white border border-dashed border-black/25 text-muted-foreground",
+}
 
 export function LegacyAndRoadmap() {
   return (
     <ExplainerStage bg="/images/veeqo-tile-sellers.jpg">
       <ExplainerCard className="sm:!p-6">
-        <ExplainerTitle>The roadmap for the paid plan rollout</ExplainerTitle>
-        <ol className="grid gap-4 md:grid-cols-4 md:gap-3" aria-label="Rollout phases">
-          {PHASES.map((p, i) => (
-            <li key={p.phase} className="border-t-2 pt-3 border-black/15" style={i === PHASES.length - 1 ? { borderTopStyle: "dashed" } : undefined}>
-              <p className="text-[13px] font-medium text-foreground">{p.phase}</p>
-              <p className="mt-0.5 text-[12px] leading-snug text-muted-foreground">{p.why}</p>
-              <ul className="mt-3 space-y-2">
-                {p.items.map((t) => (
-                  <li key={t} className="text-[12px] leading-snug text-foreground/85 pl-2.5 border-l border-black/15">
-                    {t}
-                  </li>
-                ))}
-              </ul>
-            </li>
+        <ExplainerTitle>Paid plan rollout roadmap</ExplainerTitle>
+
+        {/* Desktop: lanes across stages */}
+        <div className="hidden md:grid grid-cols-[96px_repeat(4,minmax(0,1fr))] gap-x-1 gap-y-1.5 items-center text-[12px] leading-snug">
+          <span className="pb-1.5 border-b border-black/10" />
+          {STAGES.map((st) => (
+            <span key={st} className="pb-1.5 border-b border-black/10 text-muted-foreground">
+              {st}
+            </span>
           ))}
-        </ol>
+          {LANES.map((l) => (
+            <div key={l.lane} className="contents">
+              <span className="font-medium text-foreground" style={{ gridColumn: 1 }}>
+                {l.lane}
+              </span>
+              <span
+                className={`rounded px-2 py-1.5 ${TONE[l.tone ?? "base"]}`}
+                style={{ gridColumn: `${l.from + 2} / ${l.to + 3}` }}
+              >
+                {l.text}
+              </span>
+            </div>
+          ))}
+        </div>
+
+        {/* Mobile: one lane per row, with its stages */}
+        <dl className="md:hidden divide-y divide-black/10 border-t border-black/10 text-[13px] leading-snug">
+          {LANES.map((l) => (
+            <div key={l.lane} className="py-2.5">
+              <dt className="flex justify-between gap-3">
+                <span className="font-medium text-foreground">{l.lane}</span>
+                <span className="text-[12px] text-muted-foreground">
+                  {l.from === l.to ? STAGES[l.from] : `${STAGES[l.from]} to ${STAGES[l.to].toLowerCase()}`}
+                </span>
+              </dt>
+              <dd className="mt-1 text-foreground/80">{l.text}</dd>
+            </div>
+          ))}
+        </dl>
       </ExplainerCard>
     </ExplainerStage>
   )
 }
-
 
 /* Detailed user flows for trials, limits and downgrades. Each flow runs down one main path;
    decisions exit to the side, with yes and no on every branch. */
