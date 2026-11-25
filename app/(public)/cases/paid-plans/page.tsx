@@ -5,7 +5,7 @@ import { StoryContents } from "@/components/story-contents"
 import { ScrollToTop } from "@/components/scroll-to-top"
 import { BackLinkFooter } from "@/components/back-link"
 import { StoryPage, StoryHero, Lede, Beat, Narrow, Moment, KeyCall, UpNext } from "@/components/story-case-study"
-import { LegacyAndRoadmap, PlanStaircase } from "./diagrams"
+import { LegacyAndRoadmap, PlanStaircase, UserFlows } from "./diagrams"
 
 const Gap = () => <div className="h-14 md:h-20" aria-hidden />
 
@@ -122,6 +122,10 @@ export default function PaidPlansStory() {
               wherever they work.
             </p>
           </Moment>
+
+          <div className="mx-auto max-w-[680px]">
+            <UserFlows />
+          </div>
 
           <Moment title="Downgrades without losing data">
             <p>
