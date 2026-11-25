@@ -61,12 +61,10 @@ export function PlanStaircase() {
 const STAGES = ["Design", "Development", "Launch", "Next"]
 
 const LANES: { lane: string; from: number; to: number; text: string; tone?: "launch" | "next" }[] = [
-  { lane: "Pricing", from: 0, to: 0, text: "Priced on orders, not seats" },
-  { lane: "Plan system", from: 0, to: 1, text: "Plans, limits and upgrade paths, built from zero" },
-  { lane: "Gating rules", from: 0, to: 2, text: "One rule set for gating, trials and messaging, shared by every team" },
+  { lane: "Plan system", from: 0, to: 1, text: "Plans, limits and upgrade paths" },
+  { lane: "Gating rules", from: 0, to: 2, text: "One rule set for gating, trials and messaging" },
   { lane: "Migration", from: 1, to: 2, text: "Free sellers: advance notice, then grace-period banners" },
   { lane: "Monetisation", from: 2, to: 2, text: "12+ features gated, no-card trials", tone: "launch" },
-  { lane: "Platforms", from: 2, to: 2, text: "iOS, Android, devices and web", tone: "launch" },
   { lane: "Billing", from: 3, to: 3, text: "Warn before seasonal spikes", tone: "next" },
 ]
 
