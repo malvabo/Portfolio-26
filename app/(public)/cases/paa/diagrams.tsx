@@ -46,17 +46,7 @@ export function ReportFlow() {
   return (
     <ExplainerStage bg="/images/paa-tile-time.jpg">
       <ExplainerCard className="sm:!p-6">
-        <div className="flex flex-wrap items-start justify-between gap-x-6 gap-y-2">
-          <ExplainerTitle>Clinicians stopped writing the same facts twice</ExplainerTitle>
-          <div className="flex items-center gap-4 text-[11px] text-muted-foreground" aria-hidden>
-            <span className="inline-flex items-center gap-1.5">
-              <span className="w-3 h-3 rounded-sm bg-[#E1E8F5]" /> Clinician&apos;s work
-            </span>
-            <span className="inline-flex items-center gap-1.5">
-              <span className="w-3 h-3 rounded-sm border border-dashed border-black/25" /> Automatic
-            </span>
-          </div>
-        </div>
+        <ExplainerTitle>Clinicians stopped writing the same facts twice</ExplainerTitle>
 
         <div className="space-y-4">
           <Row tag="Before">

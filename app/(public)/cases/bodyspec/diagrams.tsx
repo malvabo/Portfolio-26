@@ -19,12 +19,7 @@ export function JourneyLoop() {
   return (
     <ExplainerStage bg="/hand-holding-phone-with-map-interface.jpg">
       <ExplainerCard className="sm:!p-6">
-        <div className="flex flex-wrap items-start justify-between gap-x-6 gap-y-2">
-          <ExplainerTitle>Where people dropped off</ExplainerTitle>
-          <span className="inline-flex items-center gap-1.5 text-[11px] text-muted-foreground" aria-hidden>
-            <span className="w-3 h-3 rounded-sm bg-[#F4E6D4]" /> Drop-off point
-          </span>
-        </div>
+        <ExplainerTitle>Where people dropped off</ExplainerTitle>
 
         {/* Desktop: stages as columns */}
         <div className="hidden md:grid grid-cols-[72px_repeat(5,minmax(0,1fr))] gap-x-1.5 text-[12px] leading-snug" role="table" aria-label="Journey before and after">

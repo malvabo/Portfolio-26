@@ -1,74 +1,68 @@
 "use client"
 
-import { ExplainerCard, ExplainerStage, ExplainerTitle } from "@/components/explainer-stage"
+import { ExplainerCard, ExplainerStage, ExplainerTag, ExplainerTitle } from "@/components/explainer-stage"
 
-/* TempStars: the three questions a hygienist asks before taking a first shift.
-   Each column is one question, in the order they meet it: what they got before, and what they get now. */
+/* TempStars: the four steps to a first shift. Before shows where people left; after shows the fix at each step. */
 
-const QUESTIONS = [
-  {
-    where: "At signup",
-    ask: "Will I see shifts that fit me?",
-    before: "The same generic list for everyone",
-    after: "Matched on must-have skills first",
-  },
-  {
-    where: "On the shift page",
-    ask: "What is this clinic like?",
-    before: "Leave the app and search on Google",
-    after: "Equipment, pay and parking on the page",
-  },
-  {
-    where: "Before accepting",
-    ask: "What if the clinic cancels?",
-    before: "One-sided, in the clinic's favour",
-    after: "A fairer policy for both sides",
-  },
+const STEPS: { step: string; before: string; left?: boolean; after: string }[] = [
+  { step: "Sign up", before: "Generic signup", after: "Skills asked up front" },
+  { step: "Browse shifts", before: "Same list for everyone", left: true, after: "Matched on must-haves" },
+  { step: "Judge the clinic", before: "Left the app for Google", left: true, after: "Clinic profile in the app" },
+  { step: "Accept the terms", before: "Policy favoured clinics", left: true, after: "A fairer policy" },
 ]
 
-const BEFORE = "bg-[#F4E6D4] text-[#7A4B12]"
-const AFTER = "bg-[#E1E8F5] text-[#28447A]"
-
-function Legend() {
-  return (
-    <div className="flex items-center gap-4 text-[11px] text-muted-foreground" aria-hidden>
-      <span className="inline-flex items-center gap-1.5">
-        <span className="w-3 h-3 rounded-sm bg-[#F4E6D4]" /> Why they stalled
-      </span>
-      <span className="inline-flex items-center gap-1.5">
-        <span className="w-3 h-3 rounded-sm bg-[#E1E8F5]" /> What they get now
-      </span>
-    </div>
-  )
-}
+const LEFT = "bg-[#F4E6D4] text-[#7A4B12]"
 
 export function FirstWeek() {
   return (
     <ExplainerStage bg="/images/veeqo-tile-speed.jpg">
       <ExplainerCard className="sm:!p-6">
-        <div className="flex flex-wrap items-start justify-between gap-x-6 gap-y-2">
-          <ExplainerTitle>Three questions before a first shift</ExplainerTitle>
-          <Legend />
+        <ExplainerTitle>Where new hygienists left before a first shift</ExplainerTitle>
+
+        {/* Desktop: steps as columns, before and after as rows */}
+        <div className="hidden md:grid grid-cols-[64px_repeat(4,minmax(0,1fr))] gap-x-1.5 text-[12px] leading-snug" role="table" aria-label="Steps to a first shift, before and after">
+          <div role="row" className="contents">
+            <span role="columnheader" />
+            {STEPS.map((s) => (
+              <span key={s.step} role="columnheader" className="rounded bg-[#F2F0EB] px-2 py-1.5 font-medium text-foreground">
+                {s.step}
+              </span>
+            ))}
+          </div>
+          <div role="row" className="contents">
+            <span role="rowheader" className="mt-2.5 pt-2.5 border-t border-black/10 flex items-start">
+              <ExplainerTag>Before</ExplainerTag>
+            </span>
+            {STEPS.map((s) => (
+              <span key={s.step} role="cell" className="mt-2.5 pt-2.5 border-t border-black/10">
+                <span className={`block rounded px-2 py-1.5 ${s.left ? LEFT : "text-muted-foreground"}`}>{s.before}</span>
+              </span>
+            ))}
+          </div>
+          <div role="row" className="contents">
+            <span role="rowheader" className="mt-2.5 pt-2.5 border-t border-black/10 flex items-start">
+              <ExplainerTag accent>After</ExplainerTag>
+            </span>
+            {STEPS.map((s) => (
+              <span key={s.step} role="cell" className="mt-2.5 pt-2.5 border-t border-black/10">
+                <span className="block px-2 py-1.5 font-medium text-[#28447A]">{s.after}</span>
+              </span>
+            ))}
+          </div>
         </div>
 
-        <ol className="grid gap-3 md:grid-cols-3 md:gap-0 md:divide-x divide-black/10 border-t border-black/10 pt-4">
-          {QUESTIONS.map((q) => (
-            <li key={q.ask} className="md:px-4 md:first:pl-0 md:last:pr-0 pb-3 md:pb-0 border-b md:border-b-0 border-black/10 last:border-b-0">
-              <p className="text-[10px] font-mono uppercase tracking-wider text-muted-foreground">{q.where}</p>
-              <p className="mt-1 text-[14px] font-medium leading-snug text-foreground">{q.ask}</p>
-              <div className="mt-3 space-y-1.5 text-[12px] leading-snug">
-                <p className={`rounded px-2 py-1.5 ${BEFORE}`}>
-                  <span className="sr-only">Before: </span>
-                  {q.before}
-                </p>
-                <p className={`rounded px-2 py-1.5 font-medium ${AFTER}`}>
-                  <span className="sr-only">After: </span>
-                  {q.after}
-                </p>
-              </div>
-            </li>
+        {/* Mobile: one step per row */}
+        <dl className="md:hidden divide-y divide-black/10 border-t border-black/10 text-[13px] leading-snug">
+          {STEPS.map((s) => (
+            <div key={s.step} className="py-2.5">
+              <dt className="font-medium text-foreground">{s.step}</dt>
+              <dd className="mt-1">
+                <span className={`inline-block rounded py-0.5 ${s.left ? `px-1.5 ${LEFT}` : "text-muted-foreground"}`}>{s.before}</span>
+              </dd>
+              <dd className="mt-1 font-medium text-[#28447A]">{s.after}</dd>
+            </div>
           ))}
-        </ol>
+        </dl>
       </ExplainerCard>
     </ExplainerStage>
   )
