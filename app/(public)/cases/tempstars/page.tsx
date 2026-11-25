@@ -133,16 +133,11 @@ export default function TempStarsStory() {
             </p>
           </Moment>
 
-          <div className="mx-auto max-w-[1040px] grid gap-6 md:grid-cols-2 md:items-end">
+          <div className="mx-auto max-w-[680px]">
             <Figure
               src="/images/tempstars-information-scent-before-after.png"
               alt="Before and after: a bare shift screen next to a clinic profile with equipment, payment, parking and a neighbourhood map"
               caption="Before and after: the shift screen became a clinic profile"
-            />
-            <Figure
-              src="/images/tempstars-onboarding-skills-photo.png"
-              alt="New onboarding: choosing extra skills and adding a profile photo"
-              caption="Onboarding captures skills early, so the first shifts shown are a match"
             />
           </div>
 
