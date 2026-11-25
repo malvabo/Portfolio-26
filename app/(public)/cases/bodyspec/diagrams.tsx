@@ -26,7 +26,7 @@ export function JourneyLoop() {
           <div role="row" className="contents">
             <span role="columnheader" />
             {STAGES.map((s) => (
-              <span key={s.stage} role="columnheader" className="pb-2 px-2 text-[10px] font-mono uppercase tracking-wider text-muted-foreground">
+              <span key={s.stage} role="columnheader" className="pb-2 px-2 text-[12px] text-muted-foreground">
                 {s.stage}
               </span>
             ))}
@@ -57,7 +57,7 @@ export function JourneyLoop() {
         <dl className="md:hidden divide-y divide-black/10 border-t border-black/10 text-[13px] leading-snug">
           {STAGES.map((s) => (
             <div key={s.stage} className="py-2.5">
-              <dt className="text-[10px] font-mono uppercase tracking-wider text-muted-foreground">{s.stage}</dt>
+              <dt className="text-[12px] text-muted-foreground">{s.stage}</dt>
               <dd className="mt-1">
                 <span className={`inline-block rounded py-0.5 ${s.broken ? `px-1.5 ${BROKEN}` : "text-muted-foreground"}`}>{s.before}</span>
               </dd>
