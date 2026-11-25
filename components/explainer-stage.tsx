@@ -42,7 +42,7 @@ export function ExplainerTag({ children, accent = false }: { children: ReactNode
 }
 
 export function ExplainerTitle({ children }: { children: ReactNode }) {
-  return <p className="font-serif text-[1.125rem] tracking-[-0.01em] mt-1.5 mb-4 leading-snug">{children}</p>
+  return <p className="font-serif text-[1.125rem] tracking-[-0.01em] mt-0.5 mb-6 leading-snug">{children}</p>
 }
 
 /** A rotated paper note for pain points */
