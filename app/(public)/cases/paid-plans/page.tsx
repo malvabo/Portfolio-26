@@ -5,7 +5,7 @@ import { StoryContents } from "@/components/story-contents"
 import { ScrollToTop } from "@/components/scroll-to-top"
 import { BackLinkFooter } from "@/components/back-link"
 import { StoryPage, StoryHero, Lede, Beat, Narrow, Moment, KeyCall, UpNext } from "@/components/story-case-study"
-import { PlanStaircase } from "./diagrams"
+import { LegacyAndRoadmap, PlanStaircase } from "./diagrams"
 
 const Gap = () => <div className="h-14 md:h-20" aria-hidden />
 
@@ -129,6 +129,10 @@ export default function PaidPlansStory() {
               data lost. That made it safe to try a plan, and took the risk out of saying yes.
             </p>
           </Moment>
+
+          <div className="mx-auto max-w-[680px]">
+            <LegacyAndRoadmap />
+          </div>
         </div>
 
         <Gap />

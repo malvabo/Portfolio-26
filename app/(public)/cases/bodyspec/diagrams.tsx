@@ -6,11 +6,11 @@ import { ExplainerCard, ExplainerStage, ExplainerTag, ExplainerTitle } from "@/c
    the bottom row is what changed. Steps where we lost people are highlighted so the eye goes there first. */
 
 const STAGES: { stage: string; before: string; broken?: boolean; after: string }[] = [
-  { stage: "Find a location", before: "Manual search", broken: true, after: "Uses your location" },
+  { stage: "Find a location", before: "Search by hand", broken: true, after: "Starts from your location" },
   { stage: "Pick a time", before: "Hunt for open slots", broken: true, after: "Nearby slots on one screen" },
-  { stage: "Check out", before: "Extra fields", after: "Unneeded fields dropped" },
-  { stage: "Results", before: "One-off report", broken: true, after: "Progress since the last scan" },
-  { stage: "Come back", before: "No next step", broken: true, after: "A reason to book again" },
+  { stage: "Check out", before: "Extra fields", after: "Fewer fields" },
+  { stage: "Results", before: "One-off report", broken: true, after: "Change since your last scan" },
+  { stage: "Come back", before: "No next step", broken: true, after: "A reason to book the next scan" },
 ]
 
 const BROKEN = "bg-[#F4E6D4] text-[#7A4B12]"
@@ -19,12 +19,7 @@ export function JourneyLoop() {
   return (
     <ExplainerStage bg="/hand-holding-phone-with-map-interface.jpg">
       <ExplainerCard className="sm:!p-6">
-        <div className="flex flex-wrap items-start justify-between gap-x-6 gap-y-2">
-          <ExplainerTitle>Where the journey broke, and what changed</ExplainerTitle>
-          <span className="inline-flex items-center gap-1.5 text-[11px] text-muted-foreground" aria-hidden>
-            <span className="w-3 h-3 rounded-sm bg-[#F4E6D4]" /> Where we lost people
-          </span>
-        </div>
+        <ExplainerTitle>Where people dropped off</ExplainerTitle>
 
         {/* Desktop: stages as columns */}
         <div className="hidden md:grid grid-cols-[72px_repeat(5,minmax(0,1fr))] gap-x-1.5 text-[12px] leading-snug" role="table" aria-label="Journey before and after">

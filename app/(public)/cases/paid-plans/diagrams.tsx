@@ -12,16 +12,16 @@ const PLANS = [
 ]
 
 const PATH = [
-  { title: "Try it", text: "Free trial, no card" },
-  { title: "Keep working", text: "Grace-period banner, no hard stop" },
-  { title: "Step down", text: "All data kept" },
+  { title: "Try a feature", text: "Free trial without a card" },
+  { title: "Reach a limit", text: "Grace period, work carries on" },
+  { title: "Downgrade", text: "Nothing is lost" },
 ]
 
 export function PlanStaircase() {
   return (
     <ExplainerStage bg="/images/veeqo-tile-market.jpg">
       <ExplainerCard className="sm:!p-6">
-        <ExplainerTitle>The price rises with orders, not with seats</ExplainerTitle>
+        <ExplainerTitle>The price rises with orders</ExplainerTitle>
 
         {/* Staircase: step height stands for monthly order volume */}
         <ul className="grid grid-cols-3 gap-1.5 sm:gap-2 items-end h-48 sm:h-40 border-b border-black/15" aria-label="Plans">
@@ -50,6 +50,60 @@ export function PlanStaircase() {
             </li>
           ))}
         </ul>
+      </ExplainerCard>
+    </ExplainerStage>
+  )
+}
+
+/* Existing sellers on the old free model, moved across without a surprise; then what the revenue paid for.
+   Only facts from the case: advance notice, grace-period banners, forecasting and ERP integrations behind a trial,
+   and the post-launch finding on seasonal spikes. */
+
+const MOVE = [
+  { title: "Old free model", text: "Every feature, no plan", now: false },
+  { title: "Notice in advance", text: "Before anything changed", now: false },
+  { title: "Grace period", text: "Banners, work carries on", now: false },
+  { title: "New plan", text: "Shipping stays free", now: true },
+]
+
+const ROADMAP = [
+  { when: "Paid for by the plans", items: ["Demand forecasting", "ERP integrations"] },
+  { when: "Added after launch", items: ["Earlier warning before a higher order band, for seasonal sellers"] },
+]
+
+export function LegacyAndRoadmap() {
+  return (
+    <ExplainerStage bg="/images/veeqo-tile-sellers.jpg">
+      <ExplainerCard className="sm:!p-6">
+        <ExplainerTitle>Existing sellers first, then the roadmap</ExplainerTitle>
+
+        <p className="text-[10px] font-mono uppercase tracking-wider text-muted-foreground">Existing sellers</p>
+        <ol className="mt-2 grid grid-cols-2 sm:grid-cols-4 gap-1.5 sm:gap-2" aria-label="How existing sellers moved to the new plans">
+          {MOVE.map((s) => (
+            <li
+              key={s.title}
+              className={`rounded px-2 py-1.5 sm:px-2.5 sm:py-2 ${s.now ? "bg-[#E1E8F5] text-[#28447A]" : "bg-[#F2F0EB] text-foreground"}`}
+            >
+              <span className="block text-[12px] sm:text-[13px] font-medium leading-tight">{s.title}</span>
+              <span className="mt-0.5 block text-[11px] sm:text-[12px] leading-snug opacity-70">{s.text}</span>
+            </li>
+          ))}
+        </ol>
+
+        <div className="mt-5 grid gap-4 sm:grid-cols-2 border-t border-black/10 pt-4">
+          {ROADMAP.map((r) => (
+            <div key={r.when}>
+              <p className="text-[10px] font-mono uppercase tracking-wider text-muted-foreground">{r.when}</p>
+              <ul className="mt-2 space-y-1.5">
+                {r.items.map((i) => (
+                  <li key={i} className="text-[12px] sm:text-[13px] leading-snug text-foreground/85 pl-3 border-l-2 border-[#28447A]/40">
+                    {i}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
       </ExplainerCard>
     </ExplainerStage>
   )

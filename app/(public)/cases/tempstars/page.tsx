@@ -125,6 +125,14 @@ export default function TempStarsStory() {
             </p>
           </Moment>
 
+          <div className="mx-auto max-w-[680px]">
+            <Figure
+              src="/images/tempstars-information-scent-before-after.png"
+              alt="Before and after: a bare shift screen next to a clinic profile with equipment, payment, parking and a neighbourhood map"
+              caption="Before and after: the shift screen became a clinic profile"
+            />
+          </div>
+
           <Moment title="Skills-based matching from signup">
             <p>
               We replaced the one-size-fits-all signup with a shorter staged flow that captures skills early. With
@@ -132,19 +140,6 @@ export default function TempStarsStory() {
               must-have skills first, nice-to-haves after.
             </p>
           </Moment>
-
-          <div className="mx-auto max-w-[1040px] grid gap-6 md:grid-cols-2 md:items-end">
-            <Figure
-              src="/images/tempstars-information-scent-before-after.png"
-              alt="Before and after: a bare shift screen next to a clinic profile with equipment, payment, parking and a neighbourhood map"
-              caption="Before and after: the shift screen became a clinic profile"
-            />
-            <Figure
-              src="/images/tempstars-onboarding-skills-photo.png"
-              alt="New onboarding: choosing extra skills and adding a profile photo"
-              caption="Onboarding captures skills early, so the first shifts shown are a match"
-            />
-          </div>
 
           <Wide>
             <FirstWeek />
