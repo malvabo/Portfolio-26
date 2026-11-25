@@ -55,52 +55,51 @@ export function PlanStaircase() {
   )
 }
 
-/* Existing sellers on the old free model, moved across without a surprise; then what the revenue paid for.
-   Only facts from the case: advance notice, grace-period banners, forecasting and ERP integrations behind a trial,
-   and the post-launch finding on seasonal spikes. */
+/* The rollout as phases: what shipped in each and why. Facts only from the case. */
 
-const MOVE = [
-  { title: "Old free model", text: "Every feature, no plan", now: false },
-  { title: "Notice in advance", text: "Before anything changed", now: false },
-  { title: "Grace period", text: "Banners, work carries on", now: false },
-  { title: "New plan", text: "Shipping stays free, 12+ features are gated", now: true },
+const PHASES = [
+  {
+    phase: "Foundations",
+    why: "The product had no concept of plans",
+    items: ["Plans, limits and upgrade paths built from scratch", "Price set on monthly seller-fulfilled orders, not seats", "One set of rules for gating, trials and messaging"],
+  },
+  {
+    phase: "Existing sellers",
+    why: "Sellers had always had everything free",
+    items: ["Shipping stays free, with unlimited users and SKUs", "Notice in advance before anything changed", "Grace-period banners, no operation stopped"],
+  },
+  {
+    phase: "Paid features",
+    why: "Fund the advanced roadmap",
+    items: ["12+ features gated on iOS, Android, devices and web", "New features open with a free trial, no card", "Downgrades keep features to the end of the billing cycle"],
+  },
+  {
+    phase: "Next",
+    why: "Seasonal spikes caught sellers out",
+    items: ["Warn sellers before a busy season moves them up a plan"],
+  },
 ]
-
-const ROADMAP = [{ when: "Paid for by the plans", items: ["12+ features are now paid"] }]
 
 export function LegacyAndRoadmap() {
   return (
     <ExplainerStage bg="/images/veeqo-tile-sellers.jpg">
       <ExplainerCard className="sm:!p-6">
         <ExplainerTitle>The roadmap for the paid plan rollout</ExplainerTitle>
-
-        <p className="text-[12px] text-muted-foreground">Existing sellers</p>
-        <ol className="mt-2 grid grid-cols-2 sm:grid-cols-4 gap-1.5 sm:gap-2" aria-label="How existing sellers moved to the new plans">
-          {MOVE.map((s) => (
-            <li
-              key={s.title}
-              className={`rounded px-2 py-1.5 sm:px-2.5 sm:py-2 ${s.now ? "bg-[#E1E8F5] text-[#28447A]" : "bg-[#F2F0EB] text-foreground"}`}
-            >
-              <span className="block text-[12px] sm:text-[13px] font-medium leading-tight">{s.title}</span>
-              <span className="mt-0.5 block text-[11px] sm:text-[12px] leading-snug opacity-70">{s.text}</span>
-            </li>
-          ))}
-        </ol>
-
-        <div className="mt-5 border-t border-black/10 pt-4">
-          {ROADMAP.map((r) => (
-            <div key={r.when}>
-              <p className="text-[12px] text-muted-foreground">{r.when}</p>
-              <ul className="mt-2 space-y-1.5">
-                {r.items.map((i) => (
-                  <li key={i} className="text-[12px] sm:text-[13px] leading-snug text-foreground/85 pl-3 border-l-2 border-[#28447A]/40">
-                    {i}
+        <ol className="grid gap-4 md:grid-cols-4 md:gap-3" aria-label="Rollout phases">
+          {PHASES.map((p, i) => (
+            <li key={p.phase} className="border-t-2 pt-3 border-black/15" style={i === PHASES.length - 1 ? { borderTopStyle: "dashed" } : undefined}>
+              <p className="text-[13px] font-medium text-foreground">{p.phase}</p>
+              <p className="mt-0.5 text-[12px] leading-snug text-muted-foreground">{p.why}</p>
+              <ul className="mt-3 space-y-2">
+                {p.items.map((t) => (
+                  <li key={t} className="text-[12px] leading-snug text-foreground/85 pl-2.5 border-l border-black/15">
+                    {t}
                   </li>
                 ))}
               </ul>
-            </div>
+            </li>
           ))}
-        </div>
+        </ol>
       </ExplainerCard>
     </ExplainerStage>
   )
