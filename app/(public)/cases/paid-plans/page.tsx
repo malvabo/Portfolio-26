@@ -102,7 +102,7 @@ export default function PaidPlansStory() {
             </p>
           </Moment>
 
-          <div className="mx-auto max-w-[560px]">
+          <div className="mx-auto max-w-[680px]">
             <PlanStaircase />
           </div>
 
