@@ -14,7 +14,6 @@ import {
   Moment,
   KeyCall,
   UpNext,
-  Wide,
 } from "@/components/story-case-study"
 import { FirstWeek } from "./diagrams"
 
@@ -141,9 +140,9 @@ export default function TempStarsStory() {
             </p>
           </Moment>
 
-          <Wide>
+          <div className="mx-auto max-w-[680px]">
             <FirstWeek />
-          </Wide>
+          </div>
         </div>
 
         <div className="h-14 md:h-20" aria-hidden />

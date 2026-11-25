@@ -6,9 +6,9 @@ import { ExplainerCard, ExplainerStage, ExplainerTag, ExplainerTitle } from "@/c
 
 const STEPS: { step: string; before: string; left?: boolean; after: string }[] = [
   { step: "Sign up", before: "Generic signup", after: "Skills asked up front" },
-  { step: "Browse shifts", before: "Same list for everyone", left: true, after: "Matched on must-haves" },
-  { step: "Judge the clinic", before: "Left the app for Google", left: true, after: "Clinic profile in the app" },
-  { step: "Accept the terms", before: "Policy favoured clinics", left: true, after: "A fairer policy" },
+  { step: "Browse shifts", before: "Same list for everyone", left: true, after: "Matched based on skills" },
+  { step: "Choose a clinic to work in", before: "Left the app to check clinic reviews", left: true, after: "Clinic reviews in the app" },
+  { step: "Accept the terms", before: "Policy favoured clinics", left: true, after: "A clear, fair policy" },
 ]
 
 const LEFT = "bg-[#F4E6D4] text-[#7A4B12]"
