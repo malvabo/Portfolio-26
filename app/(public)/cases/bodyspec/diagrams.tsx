@@ -106,8 +106,8 @@ const SEGMENTS = [
   },
   {
     name: "People losing weight",
-    tint: "#F4E6D4",
-    ink: "#7A4B12",
+    tint: "#F2F0EB",
+    ink: "#3D3D3D",
     icon: (
       <svg width="22" height="20" viewBox="0 0 72 64" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" aria-hidden>
         <rect x="8" y="10" width="56" height="46" rx="10" />
