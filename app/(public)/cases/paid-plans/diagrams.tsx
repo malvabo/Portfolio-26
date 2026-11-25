@@ -21,7 +21,7 @@ export function PlanStaircase() {
   return (
     <ExplainerStage bg="/images/veeqo-tile-market.jpg">
       <ExplainerCard className="sm:!p-6">
-        <ExplainerTitle>The price rises with orders, not with seats</ExplainerTitle>
+        <ExplainerTitle>The price rises with orders</ExplainerTitle>
 
         {/* Staircase: step height stands for monthly order volume */}
         <ul className="grid grid-cols-3 gap-1.5 sm:gap-2 items-end h-48 sm:h-40 border-b border-black/15" aria-label="Plans">
