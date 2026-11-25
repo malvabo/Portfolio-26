@@ -109,7 +109,7 @@ export function LegacyAndRoadmap() {
 /* Detailed user flows for trials, limits and downgrades */
 
 type FlowNode = [number, number, number, number, string, "n" | "b" | "d"]
-const FLOW_NODES: FlowNode[] = [[30, 20, 120, 24, "Opens forecasting", "n"], [30, 60, 120, 24, "Feature explainer", "n"], [90, 115, 26, 17, "Plan?", "d"], [0, 156, 76, 26, "Has access", "b"], [104, 156, 76, 26, "Start trial", "n"], [0, 200, 76, 26, "Use feature", "n"], [104, 200, 76, 26, "No card asked", "n"], [0, 244, 76, 26, "Usage logged", "n"], [104, 244, 76, 26, "Trial reminders", "n"], [142, 301, 26, 13, "Ends", "d"], [0, 334, 76, 26, "Stay on plan", "b"], [104, 334, 76, 26, "Upgrade or not", "n"], [250, 20, 120, 24, "Monthly orders rise", "n"], [250, 60, 120, 24, "Band check", "n"], [310, 115, 26, 17, "Over?", "d"], [220, 156, 76, 26, "No change", "b"], [324, 156, 76, 26, "Advance notice", "n"], [220, 200, 76, 26, "Keep shipping", "n"], [324, 200, 76, 26, "Grace period", "n"], [220, 244, 76, 26, "Next cycle", "n"], [324, 244, 76, 26, "Banner, all apps", "n"], [306, 290, 68, 24, "Mobile", "n"], [378, 290, 62, 24, "Web", "n"], [220, 334, 76, 26, "Free plan", "b"], [306, 334, 68, 26, "Upgrade", "b"], [378, 334, 62, 26, "Admin asks", "n"], [470, 20, 120, 24, "Chooses free plan", "n"], [470, 60, 120, 24, "What changes", "n"], [530, 115, 26, 17, "Confirm?", "d"], [440, 156, 76, 26, "Stays paid", "n"], [544, 156, 76, 26, "Until cycle end", "n"], [440, 200, 76, 26, "Back to plan", "n"], [544, 200, 76, 26, "Features lock", "n"], [440, 244, 76, 26, "No change", "n"], [544, 244, 76, 26, "Data kept", "n"], [492, 288, 76, 26, "Re-upgrade", "n"], [492, 334, 76, 26, "Picks up", "b"]]
+const FLOW_NODES: FlowNode[] = [[30, 20, 120, 24, "Opens forecasting", "n"], [30, 60, 120, 24, "Feature explainer", "n"], [90, 115, 26, 17, "Plan?", "d"], [0, 156, 76, 26, "Has access", "b"], [104, 156, 76, 26, "Start trial", "n"], [0, 200, 76, 26, "Use feature", "n"], [104, 200, 76, 26, "No card asked", "n"], [0, 244, 76, 26, "Usage logged", "n"], [104, 244, 76, 26, "Trial reminders", "n"], [142, 301, 26, 13, "Ends", "d"], [0, 334, 76, 26, "Stay on plan", "b"], [104, 334, 76, 26, "Upgrade or not", "n"], [250, 20, 120, 24, "Monthly orders rise", "n"], [250, 60, 120, 24, "Band check", "n"], [310, 115, 26, 17, "Over?", "d"], [220, 156, 76, 26, "No change", "b"], [324, 156, 76, 26, "Advance notice", "n"], [220, 200, 76, 26, "Keep shipping", "n"], [324, 200, 76, 26, "Grace period", "n"], [220, 244, 76, 26, "Next cycle", "n"], [324, 244, 76, 26, "Banner, all apps", "n"], [306, 290, 68, 24, "Mobile", "n"], [378, 290, 62, 24, "Web", "n"], [220, 334, 76, 26, "Free plan", "b"], [306, 334, 68, 26, "Upgrade", "b"], [378, 334, 62, 26, "Admin asks", "n"], [470, 20, 120, 24, "Chooses free plan", "n"], [470, 60, 120, 24, "What changes", "n"], [530, 115, 26, 17, "Confirm?", "d"], [440, 156, 76, 26, "Stays paid", "n"], [544, 156, 76, 26, "Until cycle end", "n"], [440, 200, 76, 26, "Back to plan", "n"], [544, 200, 76, 26, "Features lock", "n"], [440, 244, 76, 26, "No change", "n"], [544, 244, 76, 26, "Data kept", "n"], [492, 288, 76, 26, "Re-upgrade", "n"], [475, 334, 110, 26, "All data still there", "b"]]
 const FLOW_PATHS = ["M90 44v14", "M90 84v14", "M68 132l-30 22", "M112 132l30 22", "M38 182v16", "M142 182v16", "M38 226v16", "M142 226v16", "M142 270v16", "M38 270v62", "M142 314v18", "M310 44v14", "M310 84v14", "M288 132l-30 22", "M332 132l30 22", "M258 182v16", "M362 182v16", "M362 226v16", "M258 226v16", "M362 270l-20 18", "M362 270l20 18", "M258 270v62", "M340 314v18", "M384 314v18", "M530 44v14", "M530 84v14", "M508 132l-30 22", "M552 132l30 22", "M478 182v16", "M582 182v16", "M478 226v16", "M582 226v16", "M530 270v16", "M530 314v18"]
 
 export function UserFlows() {
@@ -118,7 +118,7 @@ export function UserFlows() {
       <ExplainerCard className="sm:!p-6">
         <ExplainerTitle>User flows for plans, trials and limits</ExplainerTitle>
         <div aria-hidden>
-          <svg viewBox="0 0 640 425" className="w-full h-auto">
+          <svg viewBox="0 0 640 447" className="w-full h-auto">
             <defs>
               <marker id="flow-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto">
                 <path d="M0 0L8 4L0 8z" fill="#9a958d" />
@@ -129,6 +129,12 @@ export function UserFlows() {
               <text x="220" y="12">Reach a plan limit</text>
               <text x="440" y="12">Downgrade</text>
             </g>
+            <g fontSize="9.5" fill="#7a746c">
+              <text x="0" y="27">A free trial, no card needed</text>
+              <text x="220" y="27">Notice and a grace period first</text>
+              <text x="440" y="27">Paid until the cycle ends</text>
+            </g>
+            <g transform="translate(0 22)">
             <g stroke="#9a958d" strokeWidth="1" fill="none" markerEnd="url(#flow-arrow)">
               {FLOW_PATHS.map((d) => (
                 <path key={d} d={d} />
@@ -155,6 +161,7 @@ export function UserFlows() {
             <g fontSize="9" fill="#7a746c">
               <text x="0" y="400">Same rules on iOS, Android, devices and web</text>
               <text x="0" y="416">Edge cases: shared accounts, seasonal spikes, failed payment</text>
+            </g>
             </g>
           </svg>
         </div>
