@@ -11,13 +11,13 @@ const STEPS: { step: string; before: string; left?: boolean; after: string }[] =
   { step: "Accept the terms", before: "Policy favoured clinics", left: true, after: "A clear, fair policy" },
 ]
 
-const LEFT = "bg-[#F4E6D4] text-[#7A4B12]"
+const LEFT = "text-foreground"
 
 export function FirstWeek() {
   return (
     <ExplainerStage bg="/images/veeqo-tile-speed.jpg">
       <ExplainerCard className="sm:!p-6">
-        <ExplainerTitle>Where new hygienists left before a first shift</ExplainerTitle>
+        <ExplainerTitle>User journey</ExplainerTitle>
 
         {/* Desktop: steps as columns, before and after as rows */}
         <div className="hidden md:grid grid-cols-[64px_repeat(4,minmax(0,1fr))] gap-x-1.5 text-[12px] leading-snug" role="table" aria-label="Steps to a first shift, before and after">
@@ -57,7 +57,7 @@ export function FirstWeek() {
             <div key={s.step} className="py-2.5">
               <dt className="font-medium text-foreground">{s.step}</dt>
               <dd className="mt-1">
-                <span className={`inline-block rounded py-0.5 ${s.left ? `px-1.5 ${LEFT}` : "text-muted-foreground"}`}>{s.before}</span>
+                <span className={`inline-block rounded py-0.5 ${s.left ? LEFT : "text-muted-foreground"}`}>{s.before}</span>
               </dd>
               <dd className="mt-1 font-medium text-[#28447A]">{s.after}</dd>
             </div>
