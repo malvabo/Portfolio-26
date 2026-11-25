@@ -84,12 +84,13 @@ export function LegacyAndRoadmap() {
 
         {/* Desktop: lanes across stages */}
         <div className="hidden md:grid grid-cols-[96px_repeat(4,minmax(0,1fr))] gap-x-1 gap-y-1.5 items-center text-[12px] leading-snug">
-          <span className="pb-1.5 border-b border-black/10" />
+          <span />
           {STAGES.map((st) => (
-            <span key={st} className="pb-1.5 border-b border-black/10 text-muted-foreground">
+            <span key={st} className="text-muted-foreground">
               {st}
             </span>
           ))}
+          <span className="h-px bg-black/10 mb-1" style={{ gridColumn: "1 / -1" }} aria-hidden />
           {LANES.map((l) => (
             <div key={l.lane} className="contents">
               <span className="font-medium text-foreground" style={{ gridColumn: 1 }}>
