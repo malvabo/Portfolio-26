@@ -12,9 +12,9 @@ const PLANS = [
 ]
 
 const PATH = [
-  { title: "Try it", text: "Free trial, no card" },
-  { title: "Keep working", text: "Grace-period banner, no hard stop" },
-  { title: "Step down", text: "All data kept" },
+  { title: "Try a feature", text: "Free trial without a card" },
+  { title: "Reach a limit", text: "Grace period, work carries on" },
+  { title: "Downgrade", text: "Nothing is lost" },
 ]
 
 export function PlanStaircase() {

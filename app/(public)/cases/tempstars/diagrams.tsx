@@ -21,7 +21,7 @@ const QUESTIONS = [
   {
     where: "Before accepting",
     ask: "What if the clinic cancels?",
-    before: "A policy that protects the clinic",
+    before: "One-sided, in the clinic's favour",
     after: "A fairer policy for both sides",
   },
 ]

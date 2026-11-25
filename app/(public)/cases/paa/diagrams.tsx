@@ -47,13 +47,13 @@ export function ReportFlow() {
     <ExplainerStage bg="/images/paa-tile-time.jpg">
       <ExplainerCard className="sm:!p-6">
         <div className="flex flex-wrap items-start justify-between gap-x-6 gap-y-2">
-          <ExplainerTitle>The clinician stopped writing everything twice</ExplainerTitle>
+          <ExplainerTitle>Clinicians stopped writing the same facts twice</ExplainerTitle>
           <div className="flex items-center gap-4 text-[11px] text-muted-foreground" aria-hidden>
             <span className="inline-flex items-center gap-1.5">
               <span className="w-3 h-3 rounded-sm bg-[#E1E8F5]" /> Clinician&apos;s work
             </span>
             <span className="inline-flex items-center gap-1.5">
-              <span className="w-3 h-3 rounded-sm border border-dashed border-black/25" /> Done by the platform
+              <span className="w-3 h-3 rounded-sm border border-dashed border-black/25" /> Automatic
             </span>
           </div>
         </div>
@@ -62,7 +62,7 @@ export function ReportFlow() {
           <Row tag="Before">
             <Block kind="clinician">Assessment</Block>
             <To />
-            <Block kind="clinician" sub="Same facts, retyped">Insurer report by hand</Block>
+            <Block kind="clinician" sub="The assessment, retyped">Insurer report by hand</Block>
             <To />
             <Block kind="end">Insurer</Block>
           </Row>
@@ -74,9 +74,9 @@ export function ReportFlow() {
             <To />
             <Block kind="platform" sub="No edits after submit">Record locks</Block>
             <To />
-            <Block kind="platform" sub="Only from the locked record">AI drafts the report</Block>
+            <Block kind="platform" sub="From the locked record">AI drafts the report</Block>
             <To />
-            <Block kind="clinician" sub="A person stays accountable">Review and sign</Block>
+            <Block kind="clinician">Review and sign</Block>
             <To />
             <Block kind="end">Insurer</Block>
           </Row>
