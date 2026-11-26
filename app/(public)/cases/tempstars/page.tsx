@@ -132,7 +132,7 @@ export default function TempStarsStory() {
             </p>
           </Moment>
 
-          <div className="mx-auto max-w-[680px]">
+          <div className="mx-auto max-w-[920px]">
             <ShiftPriorities />
           </div>
 
@@ -152,7 +152,7 @@ export default function TempStarsStory() {
             </p>
           </Moment>
 
-          <div className="mx-auto max-w-[680px]">
+          <div className="mx-auto max-w-[920px]">
             <FirstWeek />
           </div>
         </div>
@@ -163,8 +163,7 @@ export default function TempStarsStory() {
         <Lede kicker="03 Outcome" statement="A week-long wait for a first offer became less than 48 hours.">
           <p>
             Activation rose 20%, as fewer people dropped off at the policy or at signup. Booked shifts grew 23% year
-            over year, with more active workers and shifts that were easier to judge. At about $50 per shift, that
-            is about $2M a year in projected added revenue for TempStars.
+            over year, with more active workers and shifts that were easier to judge.
           </p>
           <p>
             The lesson I took from it: operations decisions and design decisions are often the same decision. No

@@ -1,7 +1,7 @@
 "use client"
 
 import type { ReactNode } from "react"
-import { ExplainerCard, ExplainerStage, ExplainerTag, ExplainerTitle } from "@/components/explainer-stage"
+
 
 /* TempStars: the four steps to a first shift. Before shows where people left; after shows the fix at each step. */
 
@@ -12,60 +12,61 @@ const STEPS: { step: string; before: string; left?: boolean; after: string }[] =
   { step: "Accept the terms", before: "Policy favoured clinics", left: true, after: "A clear, fair policy" },
 ]
 
-const LEFT = "text-foreground"
-
-export function FirstWeek() {
+function Tick() {
   return (
-    <ExplainerStage bg="/images/veeqo-tile-speed.jpg">
-      <ExplainerCard className="sm:!p-6">
-        <ExplainerTitle>User journey</ExplainerTitle>
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden className="mt-0.5 shrink-0">
+      <path d="M2.5 7.5l3 3 6-7" stroke="#28447A" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  )
+}
 
-        {/* Desktop: steps as columns, before and after as rows */}
-        <div className="hidden md:grid grid-cols-[64px_repeat(4,minmax(0,1fr))] gap-x-1.5 text-[12px] leading-snug" role="table" aria-label="Steps to a first shift, before and after">
-          <div role="row" className="contents">
-            <span role="columnheader" />
-            {STEPS.map((s) => (
-              <span key={s.step} role="columnheader" className="rounded bg-[#F2F0EB] px-2 py-1.5 font-medium text-foreground">
-                {s.step}
-              </span>
-            ))}
-          </div>
-          <div role="row" className="contents">
-            <span role="rowheader" className="mt-2.5 pt-2.5 border-t border-black/10 flex items-start">
-              <ExplainerTag>Before</ExplainerTag>
-            </span>
-            {STEPS.map((s) => (
-              <span key={s.step} role="cell" className="mt-2.5 pt-2.5 border-t border-black/10">
-                <span className={`block rounded px-2 py-1.5 ${s.left ? LEFT : "text-muted-foreground"}`}>{s.before}</span>
-              </span>
-            ))}
-          </div>
-          <div role="row" className="contents">
-            <span role="rowheader" className="mt-2.5 pt-2.5 border-t border-black/10 flex items-start">
-              <ExplainerTag accent>After</ExplainerTag>
-            </span>
-            {STEPS.map((s) => (
-              <span key={s.step} role="cell" className="mt-2.5 pt-2.5 border-t border-black/10">
-                <span className="block px-2 py-1.5 font-medium text-[#28447A]">{s.after}</span>
-              </span>
-            ))}
-          </div>
-        </div>
+function Cross() {
+  return (
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden className="mt-0.5 shrink-0">
+      <path d="M3.5 3.5l7 7M10.5 3.5l-7 7" stroke="#9a958d" strokeWidth="1.5" strokeLinecap="round" />
+    </svg>
+  )
+}
 
-        {/* Mobile: one step per row */}
-        <dl className="md:hidden divide-y divide-black/10 border-t border-black/10 text-[13px] leading-snug">
-          {STEPS.map((s) => (
-            <div key={s.step} className="py-2.5">
-              <dt className="font-medium text-foreground">{s.step}</dt>
-              <dd className="mt-1">
-                <span className={`inline-block rounded py-0.5 ${s.left ? LEFT : "text-muted-foreground"}`}>{s.before}</span>
-              </dd>
-              <dd className="mt-1 font-medium text-[#28447A]">{s.after}</dd>
-            </div>
-          ))}
-        </dl>
-      </ExplainerCard>
-    </ExplainerStage>
+function JourneyArrow() {
+  return (
+    <div className="flex justify-center">
+      <span className="grid place-items-center w-10 h-10 rounded-full bg-white shadow-[0_4px_14px_rgba(0,0,0,0.2)] rotate-90 md:rotate-0">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden>
+          <path d="M3 9h12M10 4l5 5-5 5" stroke="#28447A" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      </span>
+    </div>
+  )
+}
+
+/** User journey as a before and after pair, the same layout as the doc case */
+export function FirstWeek() {
+  const side = (after: boolean) => (
+    <DocCard className="self-stretch">
+      <DocTag accent={after}>{after ? "After" : "Before"}</DocTag>
+      <p className="font-serif text-[1.125rem] tracking-[-0.01em] mt-1 mb-4">
+        {after ? "What we changed" : "Where people left"}
+      </p>
+      <ol className="space-y-2.5">
+        {STEPS.map((st) => (
+          <li key={st.step} className="rounded border border-black/10 p-3">
+            <p className="text-[12px] text-muted-foreground">{st.step}</p>
+            <p className={`mt-1 flex items-start gap-2 text-[13px] leading-snug ${after || st.left ? "text-foreground" : "text-muted-foreground"}`}>
+              {after ? <Tick /> : st.left ? <Cross /> : <span className="w-3.5 shrink-0" aria-hidden />}
+              {after ? st.after : st.before}
+            </p>
+          </li>
+        ))}
+      </ol>
+    </DocCard>
+  )
+  return (
+    <DocStage bg="/images/veeqo-tile-speed.jpg" className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-4 md:gap-3 items-center">
+      {side(false)}
+      <JourneyArrow />
+      {side(true)}
+    </DocStage>
   )
 }
 
@@ -99,27 +100,24 @@ const PRIORITIES = [
 
 export function ShiftPriorities() {
   return (
-    <ExplainerStage bg="/images/veeqo-tile-tickets.jpg">
-      <ExplainerCard className="sm:!p-6">
-        <ExplainerTitle>Shift page priorities</ExplainerTitle>
-        <p className="-mt-4 mb-5 text-[13px] text-muted-foreground">Ranked from survey results across hygienists</p>
-        <div className="text-[13px] leading-snug">
-          {PRIORITIES.map((g) => (
-            <div key={g.group} className="grid gap-2 md:grid-cols-[104px_minmax(0,1fr)] md:gap-4 border-t border-black/10 py-3.5">
-              <p className="font-medium text-foreground">{g.group}</p>
-              <ul className="space-y-2">
-                {g.rows.map(([q, a]) => (
-                  <li key={q} className="grid grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] gap-3 items-baseline">
-                    <span className="text-muted-foreground">{q}</span>
-                    <span className="text-foreground">{a}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </ExplainerCard>
-    </ExplainerStage>
+    <DocStage bg="/images/veeqo-tile-tickets.jpg">
+      <p className="mb-3 text-[13px] text-white/90">Shift page priorities, ranked from survey results across hygienists</p>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-3">
+        {PRIORITIES.map((g, gi) => (
+          <DocCard key={g.group} className={gi === 0 ? "ring-2 ring-[#28447A]/40" : ""}>
+            <DocTag accent={gi === 0}>{g.group}</DocTag>
+            <ul className="mt-4 space-y-3">
+              {g.rows.map(([q, a]) => (
+                <li key={q} className="border-t border-black/10 pt-3 first:border-0 first:pt-0">
+                  <p className="text-[12px] text-muted-foreground">{q}</p>
+                  <p className="mt-0.5 text-[13px] leading-snug text-foreground">{a}</p>
+                </li>
+              ))}
+            </ul>
+          </DocCard>
+        ))}
+      </div>
+    </DocStage>
   )
 }
 
