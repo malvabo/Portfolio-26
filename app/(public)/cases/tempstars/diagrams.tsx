@@ -152,13 +152,34 @@ function DocTag({ children, accent = false }: { children: ReactNode; accent?: bo
 /* Cohort analysis: how many shifts each hygienist worked in 3 months, split into three cohorts.
    Read from the shifts chart in the case; the chart hides counts under 1%, so 13+ is the remainder. */
 
+
+/* Small calendar illustrations: more filled days, more shifts */
+function PersonaArt({ days, tint, ink }: { days: number[]; tint: string; ink: string }) {
+  return (
+    <span className="grid place-items-center w-12 h-12 rounded-md shrink-0" style={{ background: tint, color: ink }} aria-hidden>
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+        <rect x="3" y="5" width="22" height="20" rx="3" stroke="currentColor" strokeWidth="1.5" />
+        <path d="M3 10h22M9 3v4M19 3v4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+        {Array.from({ length: 12 }).map((_, k) => {
+          const x = 6 + (k % 4) * 4.4
+          const y = 13 + Math.floor(k / 4) * 3.9
+          return <rect key={k} x={x} y={y} width="2.6" height="2.6" rx="0.6" fill="currentColor" opacity={days.includes(k) ? 1 : 0.18} />
+        })}
+      </svg>
+    </span>
+  )
+}
+
+type Bar = [string, number, string?]
+
 const SHIFT_COHORTS = [
   {
     tag: "Occasional",
+    art: { days: [5], tint: "#EEF1F6", ink: "#7D93BC" },
     often: "A shift now and then",
     share: "41%",
     range: "1–2 shifts",
-    bars: [["1", 26], ["2", 15]] as [string, number][],
+    bars: [["1", 26], ["2", 15]] as Bar[],
     fill: "#C7CFDD",
     needs: "No risk on a rare shift",
     dropped: "One-sided policy, no reviews to judge a clinic",
@@ -166,10 +187,11 @@ const SHIFT_COHORTS = [
   },
   {
     tag: "Frequent",
+    art: { days: [1, 4, 6, 9], tint: "#E1E8F5", ink: "#5F7299" },
     often: "Several times a month",
     share: "42%",
     range: "3–12 shifts",
-    bars: [["3", 10], ["4", 9.8], ["5", 4.8], ["6", 3.9], ["7", 2.9], ["8", 2.6], ["9", 2.9], ["10", 2.5], ["11", 1.9], ["12", 1.2]] as [string, number][],
+    bars: [["3", 10], ["4", 9.8], ["5", 4.8], ["6", 3.9], ["7", 2.9], ["8", 2.6], ["9", 2.9], ["10", 2.5], ["11", 1.9], ["12", 1.2]] as Bar[],
     fill: "#7D93BC",
     needs: "Clinics they can trust, fast",
     dropped: "Left the app to check clinic reviews",
@@ -177,10 +199,11 @@ const SHIFT_COHORTS = [
   },
   {
     tag: "Daily freelancers",
+    art: { days: [0, 1, 2, 3, 4, 5, 6, 8, 9, 10, 11], tint: "#D7E0F0", ink: "#28447A" },
     often: "Most days",
     share: "~17%",
     range: "13+ shifts",
-    bars: [["13+", 17]] as [string, number][],
+    bars: [["13", 0.6, "<1%"], ["14", 1.4], ["15", 1.4], ["16+", 13.6, "~14%"]] as Bar[],
     fill: INK,
     accent: true,
     needs: "A steady pipeline of shifts that fit",
@@ -193,22 +216,28 @@ const MAX_SHARE = 26
 
 export function CohortAnalysis() {
   return (
-    <DocStage bg="/images/veeqo-tile-segments.jpg" className="grid grid-cols-1 md:grid-cols-[1.25fr_2.3fr_1.25fr] gap-4 md:gap-3 items-stretch">
+    <DocStage bg="/images/veeqo-tile-segments.jpg" className="grid grid-cols-1 md:grid-cols-[1.4fr_2.5fr_1.6fr] gap-4 md:gap-3 items-stretch">
+      <p className="md:col-span-3 font-serif text-[1.375rem] tracking-[-0.01em] text-white">User personas</p>
       {SHIFT_COHORTS.map((c) => (
         <DocCard key={c.tag} className="flex flex-col">
-          <DocTag accent={c.accent}>{c.tag}</DocTag>
-          <p className="mt-1.5 text-[12px] text-muted-foreground">{c.often}</p>
+          <div className="flex items-start gap-3">
+            <PersonaArt {...c.art} />
+            <div>
+              <DocTag accent={c.accent}>{c.tag}</DocTag>
+              <p className="mt-1.5 text-[12px] text-muted-foreground">{c.often}</p>
+            </div>
+          </div>
           <p className="font-serif text-[1.5rem] tracking-[-0.01em] leading-none mt-4">{c.share}</p>
           <p className="mt-1.5 text-[12px] text-muted-foreground">of hygienists · {c.range}</p>
           {/* Bars share one scale across all three cards, so heights compare */}
           <div
             className="pt-5 flex items-end gap-1.5 h-[156px] border-b border-black/15"
             role="img"
-            aria-label={`${c.tag}: ${c.bars.map(([n, v]) => `${n} shifts ${v}%`).join(", ")}`}
+            aria-label={`${c.tag}: ${c.bars.map(([n, v, t]) => `${n} shifts ${t ?? `${v}%`}`).join(", ")}`}
           >
-            {c.bars.map(([n, v]) => (
+            {c.bars.map(([n, v, t]) => (
               <div key={n} className="flex-1 min-w-0 flex flex-col items-center justify-end h-full">
-                <span className="text-[10px] sm:text-[11px] font-medium text-foreground mb-1 tabular-nums">{v}%</span>
+                <span className="text-[10px] sm:text-[11px] font-medium text-foreground mb-1 tabular-nums whitespace-nowrap">{t ?? `${v}%`}</span>
                 <span className="w-full rounded-t-sm" style={{ height: `${(v / MAX_SHARE) * 112}px`, background: c.fill }} />
               </div>
             ))}
@@ -230,10 +259,6 @@ export function CohortAnalysis() {
             <div>
               <dt className="text-[12px] text-muted-foreground">Drop-off point</dt>
               <dd className="text-foreground/80">{c.dropped}</dd>
-            </div>
-            <div>
-              <dt className="text-[12px] text-muted-foreground">What we built</dt>
-              <dd className="text-foreground">{c.built}</dd>
             </div>
           </dl>
         </DocCard>
