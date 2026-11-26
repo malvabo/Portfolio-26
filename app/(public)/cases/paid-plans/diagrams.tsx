@@ -47,11 +47,9 @@ const STAGES = ["Discovery", "Design", "Build", "Launch"]
 
 const LANES: { lane: string; from: number; to: number; text: string; live?: boolean }[] = [
   { lane: "Research", from: 0, to: 0, text: "Seller interviews on limits and price" },
-  { lane: "Plans", from: 0, to: 1, text: "Plans, limits and upgrade paths" },
+  { lane: "Plans", from: 0, to: 1, text: "Plans, limits, upgrade paths and grace periods" },
   { lane: "Marketing", from: 1, to: 3, text: "Pricing page, plan messaging and launch campaign" },
-  { lane: "Engineering", from: 2, to: 2, text: "Gating on iOS, Android, devices and web" },
-  { lane: "Sellers", from: 2, to: 3, text: "Advance notice, then grace periods" },
-  { lane: "Launch", from: 3, to: 3, text: "12+ paid features, free trials", live: true },
+  { lane: "Engineering", from: 1, to: 2, text: "Gating, advance notice and grace periods on iOS, Android, devices and web" },
 ]
 
 export function LegacyAndRoadmap() {
