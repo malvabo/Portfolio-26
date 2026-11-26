@@ -79,7 +79,7 @@ const SEGMENTS = [
     tint: "#ECE3F3",
     ink: "#5B4A78",
     icon: (
-      <svg width="22" height="22" viewBox="0 0 72 72" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" aria-hidden>
+      <svg width="16" height="16" viewBox="0 0 72 72" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" aria-hidden>
         <path d="M30 16a6 6 0 1 0-8 8l18 24a6 6 0 1 0 8 8 6 6 0 1 0 4-8 6 6 0 1 0-8-8L26 16a6 6 0 0 0 4 0Z" />
       </svg>
     ),
@@ -92,7 +92,7 @@ const SEGMENTS = [
     tint: "#DCEDE6",
     ink: "#2F6B55",
     icon: (
-      <svg width="24" height="18" viewBox="0 0 76 56" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" aria-hidden>
+      <svg width="18" height="13" viewBox="0 0 76 56" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" aria-hidden>
         <rect x="6" y="18" width="8" height="20" rx="2" />
         <rect x="14" y="12" width="8" height="32" rx="2" />
         <path d="M22 28h32" />
@@ -109,7 +109,7 @@ const SEGMENTS = [
     tint: "#F2F0EB",
     ink: "#3D3D3D",
     icon: (
-      <svg width="22" height="20" viewBox="0 0 72 64" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" aria-hidden>
+      <svg width="16" height="14" viewBox="0 0 72 64" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" aria-hidden>
         <rect x="8" y="10" width="56" height="46" rx="10" />
         <path d="M22 28a14 14 0 0 1 28 0" />
         <path d="M36 28l6-8" />
@@ -124,7 +124,7 @@ const SEGMENTS = [
     tint: "#E1E8F5",
     ink: "#28447A",
     icon: (
-      <svg width="20" height="22" viewBox="0 0 60 66" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" aria-hidden>
+      <svg width="14" height="16" viewBox="0 0 60 66" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" aria-hidden>
         <circle cx="30" cy="38" r="22" />
         <path d="M24 6h12M30 6v10" />
         <path d="M30 38V26" />
@@ -138,8 +138,8 @@ const SEGMENTS = [
 
 function SegmentName({ s }: { s: (typeof SEGMENTS)[number] }) {
   return (
-    <span className="flex items-center gap-2.5 font-medium text-foreground">
-      <span className="w-9 h-9 rounded-md flex items-center justify-center shrink-0" style={{ background: s.tint, color: s.ink }}>
+    <span className="flex items-start gap-2.5 font-medium text-foreground">
+      <span className="w-7 h-7 -mt-1 rounded-md flex items-center justify-center shrink-0" style={{ background: s.tint, color: s.ink }}>
         {s.icon}
       </span>
       {s.name}
@@ -171,12 +171,12 @@ export function UserSegments() {
           </thead>
           <tbody>
             {SEGMENTS.map((s) => (
-              <tr key={s.name} className="border-t border-black/10 align-middle">
+              <tr key={s.name} className="border-t border-black/10 align-top">
                 <td className="py-3 pr-3">
                   <SegmentName s={s} />
                 </td>
                 <td className="py-3 pr-3 text-foreground/75">{s.worry}</td>
-                <td className="py-3 pr-3 font-medium text-[#28447A]">{s.message}</td>
+                <td className="py-3 pr-3 text-foreground">{s.message}</td>
                 <td className="py-3 text-foreground/75">{s.focus}</td>
               </tr>
             ))}
@@ -190,7 +190,7 @@ export function UserSegments() {
               <dt>
                 <SegmentName s={s} />
               </dt>
-              <dd className="mt-2 font-medium text-[#28447A]">{s.message}</dd>
+              <dd className="mt-2 text-foreground">{s.message}</dd>
               <dd className="mt-1.5 text-foreground/75">
                 <span className="text-muted-foreground">Worries: </span>
                 {s.worry}

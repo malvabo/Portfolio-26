@@ -11,7 +11,6 @@ import {
   Beat,
   Narrow,
   Figure,
-  Stage,
   Moment,
   KeyCall,
   UpNext,
@@ -98,21 +97,12 @@ export default function BodySpecStory() {
         <Beat kicker="02 Key decisions" title="Make booking fast, then give people a reason to come back." />
 
         <div className="mt-10 md:mt-14 space-y-12 md:space-y-16">
-          <Stage
-            title="Two clicks to book"
-            visual={
-              <Figure
-                src="/images/bodyspec-location-booking.webp"
-                alt="BodySpec booking page on a laptop: locations with open time slots next to a map"
-                caption="Locations and open slots on one screen"
-              />
-            }
-          >
+          <Moment title="Two clicks to book">
             <p>
               Location search was the bottleneck. The new flow uses the visitor&apos;s location to show nearby slots
               straight away and drops unneeded fields, cutting the path to checkout to two clicks.
             </p>
-          </Stage>
+          </Moment>
 
           <Moment title="Progress over time, not a single report">
             <p>
@@ -145,6 +135,14 @@ export default function BodySpecStory() {
               funding then paid for a second, fuller iteration.
             </p>
           </Moment>
+
+          <div className="mx-auto max-w-[920px]">
+            <Figure
+              src="/images/bodyspec-location-booking.webp"
+              alt="BodySpec booking page on a laptop: locations with open time slots next to a map"
+              caption="Locations and open slots on one screen"
+            />
+          </div>
         </div>
 
         <div className="h-14 md:h-20" aria-hidden />
