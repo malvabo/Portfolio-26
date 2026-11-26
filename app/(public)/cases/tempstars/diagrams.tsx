@@ -307,10 +307,19 @@ export function CohortAnalysis() {
    Placement is a reading of the case, which says the policy came first. */
 
 const QUADRANTS = [
-  { tag: "Do first", note: "High impact, low effort", accent: true, items: ["Fair cancellation policy", "Clinic details on the shift page", "Clinic reviews in the app"] },
-  { tag: "Plan for", note: "High impact, more effort", items: ["Skills taxonomy and matching", "Shorter staged signup"] },
-  { tag: "Quick wins", note: "Lower impact, low effort", items: ["Profile photo"] },
-  { tag: "Later", note: "Lower impact, more effort", items: ["Favourite offices"] },
+  {
+    tag: "Do first",
+    note: "High impact, low effort",
+    accent: true,
+    items: ["Fair cancellation policy, to rebuild trust", "Clinic reviews in the app, so the decision stays in the app"],
+  },
+  {
+    tag: "Plan for",
+    note: "High impact, more effort",
+    items: ["Skills taxonomy and weighted matching", "New signup and onboarding that capture skills"],
+  },
+  { tag: "Quick wins", note: "Lower impact, low effort", items: ["Shift page with equipment, pay and parking up front"] },
+  { tag: "Later", note: "Lower impact, more effort", items: ["Favourite offices, for repeat bookings"] },
 ]
 
 export function ImpactEffort() {
