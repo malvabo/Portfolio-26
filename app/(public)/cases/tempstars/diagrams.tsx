@@ -62,7 +62,7 @@ export function FirstWeek() {
     </DocCard>
   )
   return (
-    <DocStage bg="/images/paa-tile-deals.jpg" className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-4 md:gap-3 items-center">
+    <DocStage bg="/images/tempstars-bg-chair.jpg" className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-4 md:gap-3 items-center">
       <p className="md:col-span-3 font-serif text-[1.375rem] tracking-[-0.01em] text-white">User journey</p>
       {side(false)}
       <JourneyArrow />
@@ -101,7 +101,7 @@ const PRIORITIES = [
 
 export function ShiftPriorities() {
   return (
-    <DocStage bg="/images/paa-tile-triage.jpg">
+    <DocStage bg="/images/tempstars-bg-tools.jpg">
       <p className="mb-3 text-[13px] text-white/90">Shift page priorities, ranked from survey results across hygienists</p>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-3">
         {PRIORITIES.map((g, gi) => (
@@ -130,7 +130,7 @@ function DocStage({ bg, children, className = "" }: { bg: string; children: Reac
   return (
     <div className="relative rounded-lg overflow-hidden">
       <img src={bg} alt="" aria-hidden className="absolute inset-0 w-full h-full object-cover" />
-      <div className="absolute inset-0 bg-black/25" aria-hidden />
+      <div className="absolute inset-0 bg-black/45" aria-hidden />
       <div className={`relative p-4 sm:p-6 md:p-8 ${className}`}>{children}</div>
     </div>
   )
@@ -217,7 +217,7 @@ const MAX_SHARE = 26
 
 export function CohortAnalysis() {
   return (
-    <DocStage bg="/images/veeqo-tile-segments.jpg" className="grid grid-cols-1 md:grid-cols-[1.35fr_1.9fr_1.5fr] gap-4 md:gap-3 items-stretch">
+    <DocStage bg="/images/tempstars-bg-waiting.jpg" className="grid grid-cols-1 md:grid-cols-[1.35fr_1.9fr_1.5fr] gap-4 md:gap-3 items-stretch">
       <p className="md:col-span-3 font-serif text-[1.375rem] tracking-[-0.01em] text-white">User personas</p>
       {SHIFT_COHORTS.map((c) => (
         <DocCard key={c.tag} className="flex flex-col">
@@ -299,7 +299,7 @@ const PLOT = [
 
 export function ImpactEffort() {
   return (
-    <DocStage bg="/images/veeqo-tile-market.jpg">
+    <DocStage bg="/images/tempstars-bg-office.jpg">
       <DocCard className="sm:!p-6">
         <p className="font-serif text-[1.125rem] tracking-[-0.01em]">Release 1: impact and effort</p>
         <p className="mt-1 mb-5 text-[13px] text-muted-foreground">What went into the first release, and what waited</p>
