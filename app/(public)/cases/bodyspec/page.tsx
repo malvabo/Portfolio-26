@@ -123,7 +123,7 @@ export default function BodySpecStory() {
             </p>
           </Moment>
 
-          <div className="mx-auto max-w-[680px]">
+          <div className="mx-auto max-w-[920px]">
             <UserSegments />
           </div>
 
@@ -136,13 +136,17 @@ export default function BodySpecStory() {
             </p>
           </Moment>
 
-          <div className="mx-auto max-w-[920px]">
-            <Figure
-              src="/images/bodyspec-location-booking.webp"
-              alt="BodySpec booking page on a laptop: locations with open time slots next to a map"
-              caption="Locations and open slots on one screen"
-            />
-          </div>
+          <figure className="mx-auto max-w-[680px]">
+            <div className="rounded-xl overflow-hidden bg-[#EDE8E1] border border-foreground/[0.08]">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/bodyspec-location-booking.webp"
+                alt="BodySpec booking page on a laptop: locations with open time slots next to a map"
+                className="w-full h-auto scale-[1.16]"
+              />
+            </div>
+            <figcaption className="mt-3 text-[13px] text-muted-foreground text-center">Locations and open slots on one screen</figcaption>
+          </figure>
         </div>
 
         <div className="h-14 md:h-20" aria-hidden />
