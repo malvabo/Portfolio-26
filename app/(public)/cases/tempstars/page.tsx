@@ -156,7 +156,7 @@ export default function TempStarsStory() {
             <FirstWeek />
           </div>
 
-          <div className="mx-auto max-w-[680px]">
+          <div className="mx-auto max-w-[920px]">
             <Cohorts />
           </div>
         </div>
