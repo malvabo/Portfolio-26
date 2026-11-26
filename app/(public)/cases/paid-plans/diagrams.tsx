@@ -11,11 +11,6 @@ const PLANS = [
   { name: "High Volume", gets: "Warehouse features", paid: true, h: 96, bg: "#C9D5EC", fg: "text-[#28447A]" },
 ]
 
-const PATH = [
-  { title: "Try a feature", text: "Free trial without a card" },
-  { title: "Reach a limit", text: "Grace period, work carries on" },
-  { title: "Downgrade", text: "Nothing is lost" },
-]
 
 export function PlanStaircase() {
   return (
@@ -40,16 +35,6 @@ export function PlanStaircase() {
           </svg>
         </p>
 
-        {/* Moving between plans: the same rules on every platform */}
-        <p className="mt-5 text-[12px] text-muted-foreground">Moving between plans</p>
-        <ul className="mt-2 grid grid-cols-3 gap-1.5 sm:gap-2" aria-label="Moving between plans">
-          {PATH.map((s) => (
-            <li key={s.title} className="rounded border border-black/10 px-2 py-1.5 sm:px-2.5 sm:py-2">
-              <span className="block text-[12px] sm:text-[13px] font-medium leading-tight text-[#28447A]">{s.title}</span>
-              <span className="mt-0.5 block text-[11px] sm:text-[12px] leading-snug text-muted-foreground">{s.text}</span>
-            </li>
-          ))}
-        </ul>
       </ExplainerCard>
     </ExplainerStage>
   )
