@@ -150,7 +150,7 @@ function DocTag({ children, accent = false }: { children: ReactNode; accent?: bo
   )
 }
 
-/* Cohort analysis: how many shifts each hygienist worked in 24 months, split into three cohorts.
+/* Cohort analysis: how many shifts each hygienist worked in 3 months, split into three cohorts.
    Read from the shifts chart in the case; the chart hides counts under 1%, so 13+ is the remainder. */
 
 const SHIFT_COHORTS = [
@@ -191,7 +191,7 @@ export function CohortAnalysis() {
               </span>
             ))}
           </div>
-          <p className="mt-1 text-[11px] text-muted-foreground text-center">shifts in 24 months</p>
+          <p className="mt-1 text-[11px] text-muted-foreground text-center">shifts in 3 months</p>
         </DocCard>
       ))}
     </DocStage>
