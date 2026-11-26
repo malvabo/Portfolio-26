@@ -1,5 +1,6 @@
 "use client"
 
+import type { ReactNode } from "react"
 import { ExplainerCard, ExplainerStage, ExplainerTag, ExplainerTitle } from "@/components/explainer-stage"
 
 /* TempStars: the four steps to a first shift. Before shows where people left; after shows the fix at each step. */
@@ -223,5 +224,127 @@ export function Cohorts() {
         </dl>
       </ExplainerCard>
     </ExplainerStage>
+  )
+}
+
+/* ---------- Doc-case style pieces: photo stage, floating white cards, square tags ---------- */
+
+const INK = "#28447A"
+
+function DocStage({ bg, children, className = "" }: { bg: string; children: ReactNode; className?: string }) {
+  return (
+    <div className="relative rounded-lg overflow-hidden">
+      <img src={bg} alt="" aria-hidden className="absolute inset-0 w-full h-full object-cover" />
+      <div className="absolute inset-0 bg-black/25" aria-hidden />
+      <div className={`relative p-4 sm:p-6 md:p-8 ${className}`}>{children}</div>
+    </div>
+  )
+}
+
+function DocCard({ children, className = "" }: { children: ReactNode; className?: string }) {
+  return (
+    <div className={`bg-white rounded-md border border-black/10 shadow-[0_8px_24px_rgba(0,0,0,0.18)] p-4 ${className}`}>{children}</div>
+  )
+}
+
+function DocTag({ children, accent = false }: { children: ReactNode; accent?: boolean }) {
+  return (
+    <span className="inline-block self-start text-white text-[11px] font-medium px-1.5 py-0.5 leading-none" style={{ background: accent ? INK : "#3D3D3D" }}>
+      {children}
+    </span>
+  )
+}
+
+/* Cohort analysis: how many shifts each hygienist worked in 24 months, split into three cohorts.
+   Read from the shifts chart in the case; the chart hides counts under 1%, so 13+ is the remainder. */
+
+const SHIFT_COHORTS = [
+  { tag: "Occasional", share: "41%", range: "1–2 shifts", bars: [["1", 26], ["2", 15]] as [string, number][], fill: "#C7CFDD" },
+  {
+    tag: "Regular",
+    share: "42%",
+    range: "3–12 shifts",
+    bars: [["3", 10], ["4", 9.8], ["5", 4.8], ["6", 3.9], ["7", 2.9], ["8", 2.6], ["9", 2.9], ["10", 2.5], ["11", 1.9], ["12", 1.2]] as [string, number][],
+    fill: "#7D93BC",
+  },
+  { tag: "Frequent", share: "~17%", range: "13+ shifts", bars: [["13+", 17]] as [string, number][], fill: INK, accent: true },
+]
+
+const MAX_SHARE = 26
+
+export function CohortAnalysis() {
+  return (
+    <DocStage bg="/images/veeqo-tile-segments.jpg" className="grid grid-cols-1 md:grid-cols-[2fr_5fr_1.6fr] gap-4 md:gap-3 items-stretch">
+      {SHIFT_COHORTS.map((c) => (
+        <DocCard key={c.tag} className="flex flex-col">
+          <DocTag accent={c.accent}>{c.tag}</DocTag>
+          <p className="font-serif text-[1.5rem] tracking-[-0.01em] leading-none mt-3">{c.share}</p>
+          <p className="mt-1.5 text-[12px] text-muted-foreground">of hygienists · {c.range}</p>
+          {/* Bars share one scale across all three cards, so heights compare */}
+          <div className="mt-auto pt-5 flex items-end gap-1.5 h-[156px] border-b border-black/15" role="img" aria-label={`${c.tag}: ${c.bars.map(([n, v]) => `${n} shifts ${v}%`).join(", ")}`}>
+            {c.bars.map(([n, v]) => (
+              <div key={n} className="flex-1 min-w-0 flex flex-col items-center justify-end h-full">
+                <span className="text-[10px] sm:text-[11px] font-medium text-foreground mb-1 tabular-nums">{v}%</span>
+                <span className="w-full rounded-t-sm" style={{ height: `${(v / MAX_SHARE) * 112}px`, background: c.fill }} />
+              </div>
+            ))}
+          </div>
+          <div className="flex gap-1.5 mt-1.5" aria-hidden>
+            {c.bars.map(([n]) => (
+              <span key={n} className="flex-1 min-w-0 text-center text-[10px] sm:text-[11px] text-muted-foreground tabular-nums">
+                {n}
+              </span>
+            ))}
+          </div>
+          <p className="mt-1 text-[11px] text-muted-foreground text-center">shifts in 24 months</p>
+        </DocCard>
+      ))}
+    </DocStage>
+  )
+}
+
+/* Impact and effort: the changes placed by their impact on activation and the effort they took.
+   Placement is a reading of the case, which says the policy came first. */
+
+const QUADRANTS = [
+  { tag: "Do first", note: "High impact, low effort", accent: true, items: ["Fair cancellation policy", "Clinic details on the shift page", "Clinic reviews in the app"] },
+  { tag: "Plan for", note: "High impact, more effort", items: ["Skills taxonomy and matching", "Shorter staged signup"] },
+  { tag: "Quick wins", note: "Lower impact, low effort", items: ["Profile photo"] },
+  { tag: "Later", note: "Lower impact, more effort", items: ["Favourite offices"] },
+]
+
+export function ImpactEffort() {
+  return (
+    <DocStage bg="/images/veeqo-tile-market.jpg">
+      <div className="hidden md:grid grid-cols-[1fr_1fr] gap-3 mb-2 pl-8 text-[12px] text-white/85">
+        <span>Low effort</span>
+        <span>More effort</span>
+      </div>
+      <div className="md:grid md:grid-cols-[20px_1fr_1fr] md:gap-3 space-y-4 md:space-y-0">
+        <span className="hidden md:flex row-span-2 items-center justify-center text-[12px] text-white/85 [writing-mode:vertical-rl] rotate-180">
+          Impact on activation
+        </span>
+        {QUADRANTS.map((q) => (
+          <DocCard key={q.tag} className={q.accent ? "ring-2 ring-[#28447A]/40" : ""}>
+            <DocTag accent={q.accent}>{q.tag}</DocTag>
+            <p className="mt-2 text-[12px] text-muted-foreground">{q.note}</p>
+            <ul className="mt-3 space-y-2">
+              {q.items.map((it) => (
+                <li key={it} className="flex items-start gap-2 text-[13px] leading-snug text-foreground/85">
+                  {q.accent ? (
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden className="mt-0.5 shrink-0">
+                      <path d="M2.5 7.5l3 3 6-7" stroke={INK} strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  ) : (
+                    <span className="mt-1 w-3 h-3 rounded-full border border-black/25 shrink-0" />
+                  )}
+                  {it}
+                </li>
+              ))}
+            </ul>
+          </DocCard>
+        ))}
+      </div>
+    </DocStage>
   )
 }

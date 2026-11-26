@@ -15,7 +15,7 @@ import {
   KeyCall,
   UpNext,
 } from "@/components/story-case-study"
-import { Cohorts, FirstWeek, ShiftPriorities } from "./diagrams"
+import { CohortAnalysis, Cohorts, FirstWeek, ImpactEffort, ShiftPriorities } from "./diagrams"
 
 // A short version of the portfolio case study: the problem, what we changed, and the result.
 export default function TempStarsStory() {
@@ -103,12 +103,20 @@ export default function TempStarsStory() {
           />
         </div>
 
+        <div className="mt-8 md:mt-10 mx-auto max-w-[920px]">
+          <CohortAnalysis />
+        </div>
+
         <div className="h-14 md:h-20" aria-hidden />
 
         <div id="built" className="scroll-mt-28" aria-hidden />
         <Beat kicker="02 What we changed" title="Fix the policy first, then make matching faster and clearer." />
 
         <div className="mt-10 md:mt-14 space-y-12 md:space-y-16">
+          <div className="mx-auto max-w-[920px]">
+            <ImpactEffort />
+          </div>
+
           <Moment title="Reworking the cancellation policy">
             <p>
               I ran workshops with the founders and made the case that keeping hygienists was worth more than the
