@@ -293,7 +293,7 @@ export function KeyCall({
   return (
     <Narrow>
       <Reveal>
-        <Kicker>{label}</Kicker>
+        <h3 className="font-serif text-[1.25rem] md:text-[1.375rem] tracking-[-0.015em] mb-5">{label}</h3>
         {children && (
           <p className="text-[1.25rem] md:text-[1.375rem] leading-[1.45] tracking-[-0.01em] text-balance">{children}</p>
         )}
@@ -301,7 +301,7 @@ export function KeyCall({
           <dl className="grid grid-cols-1 sm:grid-cols-[120px_1fr] gap-x-6 gap-y-2 sm:gap-y-4">
             {rows.map((r) => (
               <div key={r.label} className="contents">
-                <dt className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground pt-1.5 sm:pt-1.5">{r.label}</dt>
+                <dt className="text-[14px] text-muted-foreground pt-1 sm:pt-1.5">{r.label}</dt>
                 <dd className="text-[1.125rem] md:text-[1.25rem] leading-[1.45] tracking-[-0.01em] mb-3 sm:mb-0">{r.text}</dd>
               </div>
             ))}
@@ -359,11 +359,14 @@ export function Figure({
   className = "",
   maxWidth,
   blur = false,
+  noExpand = false,
 }: {
   src: string
   alt: string
   caption?: string
   className?: string
+  /** Show the image without the expand / lightbox control */
+  noExpand?: boolean
   /** Cap the display width (px) for images too small to stay sharp at full width on Retina */
   maxWidth?: number
   /** Soften a screen so its shape reads but its contents don't (e.g. sensitive data) */
@@ -372,9 +375,9 @@ export function Figure({
   return (
     <Reveal as="figure" className={`mx-auto ${className}`} style={maxWidth ? { maxWidth } : undefined}>
       <div className="rounded-xl overflow-hidden bg-[#EDE8E1] border border-foreground/[0.08]">
-        {blur ? (
+        {blur || noExpand ? (
           // eslint-disable-next-line @next/next/no-img-element
-          <img src={src} alt={alt} className="w-full h-auto blur-[1px]" />
+          <img src={src} alt={alt} className={`w-full h-auto ${blur ? "blur-[1px]" : ""}`} />
         ) : (
           <LightboxImage src={src} alt={alt} className="w-full h-auto" />
         )}

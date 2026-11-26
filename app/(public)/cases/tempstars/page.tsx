@@ -75,11 +75,13 @@ export default function TempStarsStory() {
             src="/images/tempstars-survey.png"
             alt="Onboarding survey results: agree, neutral and disagree for eight statements about the app"
             caption="Onboarding survey of hygienists"
+            noExpand
           />
           <Figure
             src="/images/tempstars-shifts-chart.png"
             alt="Bar chart of how many shifts each hygienist worked over the last 24 months"
             caption="Shifts worked per hygienist, last 24 months"
+            noExpand
           />
         </div>
 
