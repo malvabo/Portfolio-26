@@ -100,7 +100,7 @@ const PRIORITIES = [
 
 export function ShiftPriorities() {
   return (
-    <DocStage bg="/images/veeqo-tile-tickets.jpg">
+    <DocStage bg="/images/paa-tile-triage.jpg">
       <p className="mb-3 text-[13px] text-white/90">Shift page priorities, ranked from survey results across hygienists</p>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-3">
         {PRIORITIES.map((g, gi) => (
@@ -216,7 +216,7 @@ const MAX_SHARE = 26
 
 export function CohortAnalysis() {
   return (
-    <DocStage bg="/images/veeqo-tile-segments.jpg" className="grid grid-cols-1 md:grid-cols-[1.4fr_2.5fr_1.6fr] gap-4 md:gap-3 items-stretch">
+    <DocStage bg="/images/veeqo-tile-segments.jpg" className="grid grid-cols-1 md:grid-cols-[1.35fr_1.9fr_1.5fr] gap-4 md:gap-3 items-stretch">
       <p className="md:col-span-3 font-serif text-[1.375rem] tracking-[-0.01em] text-white">User personas</p>
       {SHIFT_COHORTS.map((c) => (
         <DocCard key={c.tag} className="flex flex-col">
@@ -275,32 +275,33 @@ const QUADRANTS = [
     tag: "Do first",
     note: "High impact, low effort",
     accent: true,
-    items: ["Fair cancellation policy, to rebuild trust", "Clinic reviews in the app, so the decision stays in the app"],
+    items: ["Rewrite the cancellation policy", "Bring clinic reviews into the app"],
   },
   {
     tag: "Plan for",
     note: "High impact, more effort",
-    items: ["Skills taxonomy and weighted matching", "New signup and onboarding that capture skills"],
+    items: ["Skills taxonomy and weighted matching", "Rebuild signup and onboarding around skills"],
   },
-  { tag: "Quick wins", note: "Lower impact, low effort", items: ["Shift page with equipment, pay and parking up front"] },
-  { tag: "Later", note: "Lower impact, more effort", items: ["Favourite offices, for repeat bookings"] },
+  { tag: "Quick wins", note: "Lower impact, low effort", items: ["Restructure the shift page around the booking decision"] },
+  { tag: "Next release", note: "Lower impact, more effort", items: ["Favourite offices for repeat booking"] },
 ]
 
 /* Dots on the plot: x is effort, y is impact, both 0–100 */
 const PLOT = [
-  { label: "Fair cancellation policy", x: 14, y: 90, first: true },
-  { label: "Clinic reviews in the app", x: 30, y: 76, first: true },
-  { label: "Shift page with equipment, pay and parking", x: 22, y: 34 },
-  { label: "Skills taxonomy and weighted matching", x: 72, y: 86 },
-  { label: "New signup and onboarding", x: 62, y: 66 },
-  { label: "Favourite offices", x: 70, y: 24 },
+  { label: "Rewrite the cancellation policy", x: 12, y: 90, first: true },
+  { label: "Bring clinic reviews into the app", x: 18, y: 72, first: true },
+  { label: "Restructure the shift page around the booking decision", x: 16, y: 34 },
+  { label: "Skills taxonomy and weighted matching", x: 64, y: 88 },
+  { label: "Rebuild signup and onboarding around skills", x: 58, y: 66 },
+  { label: "Favourite offices for repeat booking", x: 66, y: 24 },
 ]
 
 export function ImpactEffort() {
   return (
     <DocStage bg="/images/veeqo-tile-market.jpg">
       <DocCard className="sm:!p-6">
-        <p className="font-serif text-[1.125rem] tracking-[-0.01em] mb-5">Impact and effort</p>
+        <p className="font-serif text-[1.125rem] tracking-[-0.01em]">Release 1: impact and effort</p>
+        <p className="mt-1 mb-5 text-[13px] text-muted-foreground">What went into the first release, and what waited</p>
 
         {/* Desktop: a real 2x2 plot */}
         <div className="hidden md:grid grid-cols-[22px_minmax(0,1fr)] gap-2">
@@ -315,7 +316,7 @@ export function ImpactEffort() {
               <span className="absolute left-3 top-2.5"><DocTag accent>Do first</DocTag></span>
               <span className="absolute left-[calc(50%+12px)] top-2.5"><DocTag>Plan for</DocTag></span>
               <span className="absolute left-3 top-[calc(50%+10px)]"><DocTag>Quick wins</DocTag></span>
-              <span className="absolute left-[calc(50%+12px)] top-[calc(50%+10px)]"><DocTag>Later</DocTag></span>
+              <span className="absolute left-[calc(50%+12px)] top-[calc(50%+10px)]"><DocTag>Next release</DocTag></span>
               {PLOT.map((d) => (
                 <span
                   key={d.label}
