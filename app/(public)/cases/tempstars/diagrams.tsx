@@ -62,7 +62,7 @@ export function FirstWeek() {
     </DocCard>
   )
   return (
-    <DocStage bg="/images/veeqo-tile-speed.jpg" className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-4 md:gap-3 items-center">
+    <DocStage bg="/images/paa-tile-deals.jpg" className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-4 md:gap-3 items-center">
       {side(false)}
       <JourneyArrow />
       {side(true)}
