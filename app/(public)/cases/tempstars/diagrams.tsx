@@ -102,6 +102,7 @@ export function ShiftPriorities() {
     <ExplainerStage bg="/images/veeqo-tile-tickets.jpg">
       <ExplainerCard className="sm:!p-6">
         <ExplainerTitle>Shift page priorities</ExplainerTitle>
+        <p className="-mt-4 mb-5 text-[13px] text-muted-foreground">Ranked from survey results across hygienists</p>
         <div className="text-[13px] leading-snug">
           {PRIORITIES.map((g) => (
             <div key={g.group} className="grid gap-2 md:grid-cols-[104px_minmax(0,1fr)] md:gap-4 border-t border-black/10 py-3.5">
@@ -154,29 +155,59 @@ function DocTag({ children, accent = false }: { children: ReactNode; accent?: bo
    Read from the shifts chart in the case; the chart hides counts under 1%, so 13+ is the remainder. */
 
 const SHIFT_COHORTS = [
-  { tag: "Occasional", share: "41%", range: "1–2 shifts", bars: [["1", 26], ["2", 15]] as [string, number][], fill: "#C7CFDD" },
   {
-    tag: "Regular",
+    tag: "Occasional",
+    often: "A shift now and then",
+    share: "41%",
+    range: "1–2 shifts",
+    bars: [["1", 26], ["2", 15]] as [string, number][],
+    fill: "#C7CFDD",
+    needs: "No risk on a rare shift",
+    dropped: "One-sided policy, no reviews to judge a clinic",
+    built: "A clear, fair policy and clinic reviews in the app",
+  },
+  {
+    tag: "Frequent",
+    often: "Several times a month",
     share: "42%",
     range: "3–12 shifts",
     bars: [["3", 10], ["4", 9.8], ["5", 4.8], ["6", 3.9], ["7", 2.9], ["8", 2.6], ["9", 2.9], ["10", 2.5], ["11", 1.9], ["12", 1.2]] as [string, number][],
     fill: "#7D93BC",
+    needs: "Clinics they can trust, fast",
+    dropped: "Left the app to check clinic reviews",
+    built: "Clinic reviews in the app",
   },
-  { tag: "Frequent", share: "~17%", range: "13+ shifts", bars: [["13+", 17]] as [string, number][], fill: INK, accent: true },
+  {
+    tag: "Daily freelancers",
+    often: "Most days",
+    share: "~17%",
+    range: "13+ shifts",
+    bars: [["13+", 17]] as [string, number][],
+    fill: INK,
+    accent: true,
+    needs: "A steady pipeline of shifts that fit",
+    dropped: "Generic list, too much noise",
+    built: "Favourite offices, to rebook the ones they like",
+  },
 ]
 
 const MAX_SHARE = 26
 
 export function CohortAnalysis() {
   return (
-    <DocStage bg="/images/veeqo-tile-segments.jpg" className="grid grid-cols-1 md:grid-cols-[2fr_5fr_1.6fr] gap-4 md:gap-3 items-stretch">
+    <DocStage bg="/images/veeqo-tile-segments.jpg" className="grid grid-cols-1 md:grid-cols-[1.25fr_2.3fr_1.25fr] gap-4 md:gap-3 items-stretch">
       {SHIFT_COHORTS.map((c) => (
         <DocCard key={c.tag} className="flex flex-col">
           <DocTag accent={c.accent}>{c.tag}</DocTag>
-          <p className="font-serif text-[1.5rem] tracking-[-0.01em] leading-none mt-3">{c.share}</p>
+          <p className="mt-1.5 text-[12px] text-muted-foreground">{c.often}</p>
+          <p className="font-serif text-[1.5rem] tracking-[-0.01em] leading-none mt-4">{c.share}</p>
           <p className="mt-1.5 text-[12px] text-muted-foreground">of hygienists · {c.range}</p>
           {/* Bars share one scale across all three cards, so heights compare */}
-          <div className="mt-auto pt-5 flex items-end gap-1.5 h-[156px] border-b border-black/15" role="img" aria-label={`${c.tag}: ${c.bars.map(([n, v]) => `${n} shifts ${v}%`).join(", ")}`}>
+          <div
+            className="pt-5 flex items-end gap-1.5 h-[156px] border-b border-black/15"
+            role="img"
+            aria-label={`${c.tag}: ${c.bars.map(([n, v]) => `${n} shifts ${v}%`).join(", ")}`}
+          >
             {c.bars.map(([n, v]) => (
               <div key={n} className="flex-1 min-w-0 flex flex-col items-center justify-end h-full">
                 <span className="text-[10px] sm:text-[11px] font-medium text-foreground mb-1 tabular-nums">{v}%</span>
@@ -192,6 +223,21 @@ export function CohortAnalysis() {
             ))}
           </div>
           <p className="mt-1 text-[11px] text-muted-foreground text-center">shifts in 3 months</p>
+
+          <dl className="mt-4 pt-4 border-t border-black/10 space-y-3 text-[13px] leading-snug">
+            <div>
+              <dt className="text-[12px] text-muted-foreground">Needs</dt>
+              <dd className="text-foreground/80">{c.needs}</dd>
+            </div>
+            <div>
+              <dt className="text-[12px] text-muted-foreground">Drop-off point</dt>
+              <dd className="text-foreground/80">{c.dropped}</dd>
+            </div>
+            <div>
+              <dt className="text-[12px] text-muted-foreground">What we built</dt>
+              <dd className="text-foreground">{c.built}</dd>
+            </div>
+          </dl>
         </DocCard>
       ))}
     </DocStage>
@@ -217,38 +263,72 @@ const QUADRANTS = [
   { tag: "Later", note: "Lower impact, more effort", items: ["Favourite offices, for repeat bookings"] },
 ]
 
+/* Dots on the plot: x is effort, y is impact, both 0–100 */
+const PLOT = [
+  { label: "Fair cancellation policy", x: 14, y: 90, first: true },
+  { label: "Clinic reviews in the app", x: 30, y: 76, first: true },
+  { label: "Shift page with equipment, pay and parking", x: 22, y: 34 },
+  { label: "Skills taxonomy and weighted matching", x: 72, y: 86 },
+  { label: "New signup and onboarding", x: 62, y: 66 },
+  { label: "Favourite offices", x: 70, y: 24 },
+]
+
 export function ImpactEffort() {
   return (
     <DocStage bg="/images/veeqo-tile-market.jpg">
-      <div className="hidden md:grid grid-cols-[1fr_1fr] gap-3 mb-2 pl-8 text-[12px] text-white/85">
-        <span>Low effort</span>
-        <span>More effort</span>
-      </div>
-      <div className="md:grid md:grid-cols-[20px_1fr_1fr] md:gap-3 space-y-4 md:space-y-0">
-        <span className="hidden md:flex row-span-2 items-center justify-center text-[12px] text-white/85 [writing-mode:vertical-rl] rotate-180">
-          Impact on activation
-        </span>
-        {QUADRANTS.map((q) => (
-          <DocCard key={q.tag} className={q.accent ? "ring-2 ring-[#28447A]/40" : ""}>
-            <DocTag accent={q.accent}>{q.tag}</DocTag>
-            <p className="mt-2 text-[12px] text-muted-foreground">{q.note}</p>
-            <ul className="mt-3 space-y-2">
-              {q.items.map((it) => (
-                <li key={it} className="flex items-start gap-2 text-[13px] leading-snug text-foreground/85">
-                  {q.accent ? (
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden className="mt-0.5 shrink-0">
-                      <path d="M2.5 7.5l3 3 6-7" stroke={INK} strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  ) : (
-                    <span className="mt-1 w-3 h-3 rounded-full border border-black/25 shrink-0" />
-                  )}
-                  {it}
-                </li>
+      <DocCard className="sm:!p-6">
+        <p className="font-serif text-[1.125rem] tracking-[-0.01em] mb-5">Impact and effort</p>
+
+        {/* Desktop: a real 2x2 plot */}
+        <div className="hidden md:grid grid-cols-[22px_minmax(0,1fr)] gap-2">
+          <span className="flex items-center justify-center text-[12px] text-muted-foreground [writing-mode:vertical-rl] rotate-180">
+            Impact on activation
+          </span>
+          <div>
+            <div className="relative h-[320px] border-l border-b border-black/20">
+              <div className="absolute left-0 top-0 w-1/2 h-1/2 bg-[#28447A]/[0.07]" aria-hidden />
+              <div className="absolute left-1/2 top-0 bottom-0 border-l border-dashed border-black/10" aria-hidden />
+              <div className="absolute top-1/2 left-0 right-0 border-t border-dashed border-black/10" aria-hidden />
+              <span className="absolute left-3 top-2.5"><DocTag accent>Do first</DocTag></span>
+              <span className="absolute left-[calc(50%+12px)] top-2.5"><DocTag>Plan for</DocTag></span>
+              <span className="absolute left-3 top-[calc(50%+10px)]"><DocTag>Quick wins</DocTag></span>
+              <span className="absolute left-[calc(50%+12px)] top-[calc(50%+10px)]"><DocTag>Later</DocTag></span>
+              {PLOT.map((d) => (
+                <span
+                  key={d.label}
+                  className="absolute flex items-center gap-2 -translate-y-1/2 text-[12px] leading-snug text-foreground/85 max-w-[44%]"
+                  style={{ left: `${d.x}%`, top: `${100 - d.y}%` }}
+                >
+                  <span className="w-2.5 h-2.5 rounded-full shrink-0" style={{ background: d.first ? INK : "#7D93BC" }} aria-hidden />
+                  {d.label}
+                </span>
               ))}
-            </ul>
-          </DocCard>
-        ))}
-      </div>
+            </div>
+            <div className="flex justify-between mt-2 text-[12px] text-muted-foreground">
+              <span>Low effort</span>
+              <span>More effort</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile: the four groups as a list */}
+        <div className="md:hidden space-y-4">
+          {QUADRANTS.map((q) => (
+            <div key={q.tag}>
+              <DocTag accent={q.accent}>{q.tag}</DocTag>
+              <p className="mt-1.5 text-[12px] text-muted-foreground">{q.note}</p>
+              <ul className="mt-2 space-y-1.5">
+                {q.items.map((it) => (
+                  <li key={it} className="flex items-start gap-2 text-[13px] leading-snug text-foreground/85">
+                    <span className="mt-1.5 w-2 h-2 rounded-full shrink-0" style={{ background: q.accent ? INK : "#7D93BC" }} aria-hidden />
+                    {it}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </DocCard>
     </DocStage>
   )
 }

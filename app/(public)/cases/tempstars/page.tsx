@@ -15,7 +15,7 @@ import {
   KeyCall,
   UpNext,
 } from "@/components/story-case-study"
-import { CohortAnalysis, Cohorts, FirstWeek, ImpactEffort, ShiftPriorities } from "./diagrams"
+import { CohortAnalysis, FirstWeek, ImpactEffort, ShiftPriorities } from "./diagrams"
 
 // A short version of the portfolio case study: the problem, what we changed, and the result.
 export default function TempStarsStory() {
@@ -154,10 +154,6 @@ export default function TempStarsStory() {
 
           <div className="mx-auto max-w-[680px]">
             <FirstWeek />
-          </div>
-
-          <div className="mx-auto max-w-[920px]">
-            <Cohorts />
           </div>
         </div>
 
