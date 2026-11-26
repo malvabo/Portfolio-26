@@ -63,6 +63,7 @@ export function FirstWeek() {
   )
   return (
     <DocStage bg="/images/paa-tile-deals.jpg" className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-4 md:gap-3 items-center">
+      <p className="md:col-span-3 font-serif text-[1.375rem] tracking-[-0.01em] text-white">User journey</p>
       {side(false)}
       <JourneyArrow />
       {side(true)}

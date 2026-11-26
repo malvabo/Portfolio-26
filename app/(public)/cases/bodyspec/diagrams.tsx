@@ -54,6 +54,7 @@ export function JourneyLoop() {
       <img src="/hand-holding-phone-with-map-interface.jpg" alt="" aria-hidden className="absolute inset-0 w-full h-full object-cover" />
       <div className="absolute inset-0 bg-black/25" aria-hidden />
       <div className="relative p-4 sm:p-6 md:p-8 grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-4 md:gap-3 items-center">
+        <p className="md:col-span-3 font-serif text-[1.375rem] tracking-[-0.01em] text-white">User journey</p>
         {side(false)}
         <div className="flex justify-center">
           <span className="grid place-items-center w-10 h-10 rounded-full bg-white shadow-[0_4px_14px_rgba(0,0,0,0.2)] rotate-90 md:rotate-0">
