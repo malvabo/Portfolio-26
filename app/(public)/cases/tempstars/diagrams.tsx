@@ -120,3 +120,108 @@ export function ShiftPriorities() {
     </ExplainerStage>
   )
 }
+
+/* TempStars cohorts: hygienists grouped by how often they work, what each needs,
+   where they dropped off, and the fix that mattered most for them. */
+
+const COHORTS = [
+  {
+    name: "Daily freelancers",
+    sub: "Work most days",
+    swatch: "#28447A",
+    needs: "A steady pipeline of shifts that fit",
+    dropped: "Generic list, too much noise",
+    fix: "Favourite offices, to save the ones they want to work with again",
+  },
+  {
+    name: "Frequent",
+    sub: "Several times a month",
+    swatch: "#8FA3C7",
+    needs: "Clinics they can trust, fast",
+    dropped: "Left to check clinic reviews",
+    fix: "Clinic reviews in the app",
+  },
+  {
+    name: "Occasional",
+    sub: "A shift now and then",
+    swatch: "#C9C2B6",
+    needs: "No risk on a rare shift",
+    dropped: "One-sided policy, no reviews to judge a clinic",
+    fix: "A clear, fair policy and clinic reviews in the app",
+  },
+]
+
+function CohortName({ c }: { c: (typeof COHORTS)[number] }) {
+  return (
+    <span className="block">
+      <span className="flex items-center gap-2 font-medium text-foreground">
+        <span className="w-2.5 h-2.5 rounded-sm shrink-0" style={{ background: c.swatch }} aria-hidden />
+        {c.name}
+      </span>
+      <span className="block ml-[18px] mt-0.5 text-[12px] text-muted-foreground">{c.sub}</span>
+    </span>
+  )
+}
+
+export function Cohorts() {
+  return (
+    <ExplainerStage bg="/images/veeqo-tile-segments.jpg">
+      <ExplainerCard className="sm:!p-6">
+        <ExplainerTitle>Cohorts</ExplainerTitle>
+
+        {/* Desktop: a table, one cohort per row */}
+        <table className="hidden md:table w-full table-fixed text-[13px] leading-snug">
+          <colgroup>
+            <col className="w-[27%]" />
+            <col className="w-[24%]" />
+            <col className="w-[23%]" />
+            <col className="w-[26%]" />
+          </colgroup>
+          <thead>
+            <tr className="text-left text-[12px] text-muted-foreground">
+              <th className="font-normal pb-2 pr-3">Cohort</th>
+              <th className="font-normal pb-2 pr-3">Needs</th>
+              <th className="font-normal pb-2 pr-3">Where they dropped</th>
+              <th className="font-normal pb-2">Fix that mattered</th>
+            </tr>
+          </thead>
+          <tbody>
+            {COHORTS.map((c) => (
+              <tr key={c.name} className="border-t border-black/10 align-top">
+                <td className="py-3 pr-3">
+                  <CohortName c={c} />
+                </td>
+                <td className="py-3 pr-3 text-foreground/75">{c.needs}</td>
+                <td className="py-3 pr-3 text-foreground/75">{c.dropped}</td>
+                <td className="py-3 text-foreground">{c.fix}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+
+        {/* Mobile: one block per cohort */}
+        <dl className="md:hidden divide-y divide-black/10 border-t border-black/10 text-[13px] leading-snug">
+          {COHORTS.map((c) => (
+            <div key={c.name} className="py-3">
+              <dt>
+                <CohortName c={c} />
+              </dt>
+              <dd className="mt-2 text-foreground/75">
+                <span className="text-muted-foreground">Needs: </span>
+                {c.needs}
+              </dd>
+              <dd className="mt-0.5 text-foreground/75">
+                <span className="text-muted-foreground">Where they dropped: </span>
+                {c.dropped}
+              </dd>
+              <dd className="mt-0.5 text-foreground">
+                <span className="text-muted-foreground">Fix that mattered: </span>
+                {c.fix}
+              </dd>
+            </div>
+          ))}
+        </dl>
+      </ExplainerCard>
+    </ExplainerStage>
+  )
+}
