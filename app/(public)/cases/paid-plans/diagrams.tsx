@@ -6,16 +6,42 @@ import { ExplainerCard, ExplainerStage, ExplainerTitle } from "@/components/expl
    Free stays neutral; paid steps deepen in the brand blue. */
 
 const PLANS = [
-  { name: "Shipping", gets: "Unlimited users", paid: false, h: 56, bg: "#F2F0EB", fg: "text-foreground" },
-  { name: "Inventory", gets: "Inventory sync", paid: true, h: 72, bg: "#E1E8F5", fg: "text-[#28447A]" },
-  { name: "High Volume", gets: "Warehouse features", paid: true, h: 96, bg: "#C9D5EC", fg: "text-[#28447A]" },
+  {
+    name: "Shipping",
+    price: "Free",
+    forWho: "Every seller, from day one",
+    features: ["Shipping labels", "Unlimited users, SKUs and warehouses"],
+    h: 46,
+    bg: "#F2F0EB",
+    ink: "text-foreground",
+  },
+  {
+    name: "Inventory",
+    price: "Paid",
+    forWho: "Sellers on several channels",
+    features: ["Everything in Shipping", "Multichannel inventory sync"],
+    h: 70,
+    bg: "#E1E8F5",
+    ink: "text-[#28447A]",
+  },
+  {
+    name: "High Volume",
+    price: "Paid",
+    forWho: "Busy warehouses",
+    features: ["Everything in Inventory", "Digital picking", "Demand forecasting", "ERP integrations"],
+    h: 100,
+    bg: "#C9D5EC",
+    ink: "text-[#28447A]",
+  },
 ]
 
-const PATH = [
-  { title: "Try a feature", text: "Free trial without a card" },
-  { title: "Reach a limit", text: "Grace period, work carries on" },
-  { title: "Downgrade", text: "Nothing is lost" },
-]
+function PlanTick() {
+  return (
+    <svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden className="mt-[3px] shrink-0">
+      <path d="M2.5 7.5l3 3 6-7" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  )
+}
 
 export function PlanStaircase() {
   return (
@@ -24,32 +50,34 @@ export function PlanStaircase() {
         <ExplainerTitle>The price rises with orders</ExplainerTitle>
 
         {/* Staircase: step height stands for monthly order volume */}
-        <ul className="grid grid-cols-3 gap-1.5 sm:gap-2 items-end h-48 sm:h-40 border-b border-black/15" aria-label="Plans">
+        <ul className="grid grid-cols-3 gap-1.5 sm:gap-2 items-end h-[340px] sm:h-[300px] border-b border-black/15" aria-label="Plans">
           {PLANS.map((p) => (
-            <li key={p.name} className={`rounded-t p-2 sm:p-2.5 flex flex-col ${p.fg}`} style={{ height: `${p.h}%`, background: p.bg }}>
-              <span className="text-[12px] sm:text-[13px] font-medium leading-tight">{p.name}</span>
-              <span className="mt-0.5 text-[11px] sm:text-[12px] opacity-75 leading-snug">{p.gets}</span>
-              <span className="mt-auto text-[12px] opacity-70">{p.paid ? "Paid" : "Free"}</span>
+            <li key={p.name} className={`rounded-t p-2.5 sm:p-3 flex flex-col ${p.ink}`} style={{ height: `${p.h}%`, background: p.bg }}>
+              <span className="flex items-baseline justify-between gap-2">
+                <span className="text-[13px] sm:text-[14px] font-medium leading-tight">{p.name}</span>
+                <span className="text-[11px] sm:text-[12px] opacity-70">{p.price}</span>
+              </span>
+              <span className="mt-1 text-[11px] sm:text-[12px] opacity-70 leading-snug">{p.forWho}</span>
+              <ul className="mt-3 space-y-1">
+                {p.features.map((f) => (
+                  <li key={f} className="flex items-start gap-1.5 text-[11px] sm:text-[12px] leading-snug">
+                    <PlanTick />
+                    {f}
+                  </li>
+                ))}
+              </ul>
             </li>
           ))}
         </ul>
-        <p className="mt-1.5 flex items-center justify-end gap-1.5 text-[11px] text-muted-foreground">
-          Monthly seller-fulfilled orders
-          <svg width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden>
-            <path d="M1 5h11M8 1l4 4-4 4" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        </p>
-
-        {/* Moving between plans: the same rules on every platform */}
-        <p className="mt-5 text-[12px] text-muted-foreground">Moving between plans</p>
-        <ul className="mt-2 grid grid-cols-3 gap-1.5 sm:gap-2" aria-label="Moving between plans">
-          {PATH.map((s) => (
-            <li key={s.title} className="rounded border border-black/10 px-2 py-1.5 sm:px-2.5 sm:py-2">
-              <span className="block text-[12px] sm:text-[13px] font-medium leading-tight text-[#28447A]">{s.title}</span>
-              <span className="mt-0.5 block text-[11px] sm:text-[12px] leading-snug text-muted-foreground">{s.text}</span>
-            </li>
-          ))}
-        </ul>
+        <div className="mt-1.5 flex items-center justify-between gap-3 text-[11px] text-muted-foreground">
+          <span>No caps on users, SKUs or warehouses on any plan</span>
+          <span className="flex items-center gap-1.5 shrink-0">
+            Monthly seller-fulfilled orders
+            <svg width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden>
+              <path d="M1 5h11M8 1l4 4-4 4" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </span>
+        </div>
       </ExplainerCard>
     </ExplainerStage>
   )
@@ -62,11 +90,9 @@ const STAGES = ["Discovery", "Design", "Build", "Launch"]
 
 const LANES: { lane: string; from: number; to: number; text: string; live?: boolean }[] = [
   { lane: "Research", from: 0, to: 0, text: "Seller interviews on limits and price" },
-  { lane: "Plans", from: 0, to: 1, text: "Plans, limits and upgrade paths" },
-  { lane: "Marketing", from: 1, to: 3, text: "Pricing page, plan messaging and launch campaign" },
-  { lane: "Engineering", from: 2, to: 2, text: "Gating on iOS, Android, devices and web" },
-  { lane: "Sellers", from: 2, to: 3, text: "Advance notice, then grace periods" },
-  { lane: "Launch", from: 3, to: 3, text: "12+ paid features, free trials", live: true },
+  { lane: "Design", from: 0, to: 2, text: "Plans, limits, upgrade paths, trials and grace periods" },
+  { lane: "Marketing", from: 1, to: 3, text: "Plan packaging, pricing page, messaging and launch campaign" },
+  { lane: "Engineering", from: 1, to: 2, text: "Gating, advance notice and grace periods on iOS, Android, devices and web" },
 ]
 
 export function LegacyAndRoadmap() {

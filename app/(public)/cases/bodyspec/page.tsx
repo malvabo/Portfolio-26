@@ -11,7 +11,6 @@ import {
   Beat,
   Narrow,
   Figure,
-  Stage,
   Moment,
   KeyCall,
   UpNext,
@@ -98,21 +97,12 @@ export default function BodySpecStory() {
         <Beat kicker="02 Key decisions" title="Make booking fast, then give people a reason to come back." />
 
         <div className="mt-10 md:mt-14 space-y-12 md:space-y-16">
-          <Stage
-            title="Two clicks to book"
-            visual={
-              <Figure
-                src="/images/bodyspec-location-booking.webp"
-                alt="BodySpec booking page on a laptop: locations with open time slots next to a map"
-                caption="Locations and open slots on one screen"
-              />
-            }
-          >
+          <Moment title="Two clicks to book">
             <p>
               Location search was the bottleneck. The new flow uses the visitor&apos;s location to show nearby slots
               straight away and drops unneeded fields, cutting the path to checkout to two clicks.
             </p>
-          </Stage>
+          </Moment>
 
           <Moment title="Progress over time, not a single report">
             <p>
@@ -133,7 +123,7 @@ export default function BodySpecStory() {
             </p>
           </Moment>
 
-          <div className="mx-auto max-w-[680px]">
+          <div className="mx-auto max-w-[920px]">
             <UserSegments />
           </div>
 
@@ -145,6 +135,41 @@ export default function BodySpecStory() {
               funding then paid for a second, fuller iteration.
             </p>
           </Moment>
+
+          <figure className="mx-auto max-w-[680px]">
+            <div className="rounded-xl overflow-hidden bg-[#EDE8E1] border border-foreground/[0.08]">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/bodyspec-location-booking.webp"
+                alt="BodySpec booking page on a laptop: locations with open time slots next to a map"
+                className="w-full h-auto scale-[1.16]"
+              />
+            </div>
+            <figcaption className="mt-3 text-[13px] text-muted-foreground text-center">Locations and open slots on one screen</figcaption>
+          </figure>
+
+          <div className="mx-auto max-w-[920px] grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {[
+              { src: "/images/bodyspec-homepage-final.png", alt: "BodySpec homepage leading with bone health and the value of a DEXA scan", cap: "Homepage built around long-term health" },
+              { src: "/images/bodyspec-booking-flow.png", alt: "BodySpec mobile booking: map of nearby locations with slots, then checkout with membership options", cap: "Mobile booking, from map to checkout" },
+            ].map((f) => (
+              <figure key={f.src}>
+                <div className="rounded-xl overflow-hidden bg-[#EDE8E1] border border-foreground/[0.08]">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={f.src} alt={f.alt} className="w-full h-auto" loading="lazy" />
+                </div>
+                <figcaption className="mt-3 text-[13px] text-muted-foreground text-center">{f.cap}</figcaption>
+              </figure>
+            ))}
+          </div>
+
+          <figure className="mx-auto max-w-[680px]">
+            <div className="rounded-xl overflow-hidden bg-white border border-foreground/[0.08]">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/bodyspec-dexa-dashboard-1.png" alt="BodySpec results: body fat percentile against women of the same age" className="w-full h-auto" loading="lazy" />
+            </div>
+            <figcaption className="mt-3 text-[13px] text-muted-foreground text-center">Results against people of the same age and sex</figcaption>
+          </figure>
         </div>
 
         <div className="h-14 md:h-20" aria-hidden />

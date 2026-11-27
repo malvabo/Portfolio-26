@@ -193,3 +193,22 @@ html.story-cursor-on * {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(3px); }
 }
+
+/* Case card hover cursor (components/case-cursor.tsx): the tag replaces the pointer on case cards */
+html.case-cursor-on [data-case-cursor],
+html.case-cursor-on [data-case-cursor] * {
+  cursor: none;
+}
+html.case-cursor-on [data-no-case-cursor],
+html.case-cursor-on [data-no-case-cursor] * {
+  cursor: auto;
+}
+html.case-cursor-on [data-no-case-cursor] button {
+  cursor: pointer;
+}
+@media (prefers-reduced-motion: reduce) {
+  .case-cursor-tag {
+    transform: none !important;
+    transition: opacity 0.15s ease-out !important;
+  }
+}

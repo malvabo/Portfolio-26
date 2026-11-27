@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Geist, Lora } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import '../globals.css'
+import { CaseCursor } from '@/components/case-cursor'
 
 // Public root layout: no password gate. Served at aipm.maryborysova.com (see proxy.ts)
 // and at /ai on the main domain. The design portfolio keeps its own gated layout.
@@ -24,6 +25,7 @@ export default function PublicLayout({ children }: { children: React.ReactNode }
     <html lang="en">
       <body className={`font-sans antialiased ${geist.variable} ${lora.variable}`}>
         {children}
+        <CaseCursor />
         <Analytics />
       </body>
     </html>

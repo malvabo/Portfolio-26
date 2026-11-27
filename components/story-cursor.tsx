@@ -11,7 +11,7 @@ import { useEffect, useRef, useState } from "react"
  * Only runs on devices with a real mouse; touch keeps the native cursor.
  */
 
-type Mode = { kind: "dot" } | { kind: "text"; h: number } | { kind: "label"; text: string }
+type Mode = { kind: "dot" } | { kind: "text"; h: number } | { kind: "label"; text: string } | { kind: "none" }
 
 const ACCENT = "#28447A"
 
@@ -74,6 +74,11 @@ export function StoryCursor() {
       const { x, y, target } = last
       if (rootRef.current) rootRef.current.style.transform = `translate3d(${x}px, ${y}px, 0)`
 
+      // Case cards draw their own tag (components/case-cursor.tsx)
+      if (target?.closest("[data-case-cursor]") && !target.closest("[data-no-case-cursor]")) {
+        setMode((m) => (m.kind === "none" ? m : { kind: "none" }))
+        return
+      }
       const labelled = target?.closest<HTMLElement>("[data-cursor]")
       if (labelled) {
         const text = labelled.dataset.cursor || ""
@@ -125,7 +130,7 @@ export function StoryCursor() {
       ref={rootRef}
       aria-hidden
       className="fixed left-0 top-0 z-[9999] pointer-events-none"
-      style={{ opacity: visible ? 1 : 0, transition: "opacity .2s ease-out" }}
+      style={{ opacity: visible && mode.kind !== "none" ? 1 : 0, transition: "opacity .2s ease-out" }}
     >
       <div
         className="flex items-center gap-2.5"

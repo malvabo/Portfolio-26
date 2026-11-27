@@ -15,7 +15,7 @@ import {
   KeyCall,
   UpNext,
 } from "@/components/story-case-study"
-import { FirstWeek, ShiftPriorities } from "./diagrams"
+import { CohortAnalysis, FirstWeek, ImpactEffort, ShiftPriorities } from "./diagrams"
 
 // A short version of the portfolio case study: the problem, what we changed, and the result.
 export default function TempStarsStory() {
@@ -70,6 +70,21 @@ export default function TempStarsStory() {
           </p>
         </Lede>
 
+        <div className="mt-12 md:mt-16 mx-auto max-w-[1040px] grid gap-6 md:grid-cols-2 md:items-end">
+          <Figure
+            src="/images/tempstars-survey.png"
+            alt="Onboarding survey results: agree, neutral and disagree for eight statements about the app"
+            caption="Onboarding survey of hygienists"
+            noExpand
+          />
+          <Figure
+            src="/images/tempstars-shifts-chart.png"
+            alt="Bar chart of how many shifts each hygienist worked over the last 24 months"
+            caption="Shifts worked per hygienist, last 24 months"
+            noExpand
+          />
+        </div>
+
         <div className="mt-12">
           <KeyCall
             label="What we found"
@@ -90,17 +105,8 @@ export default function TempStarsStory() {
           />
         </div>
 
-        <div className="mt-12 md:mt-16 mx-auto max-w-[1040px] grid gap-6 md:grid-cols-2 md:items-end">
-          <Figure
-            src="/images/tempstars-survey.png"
-            alt="Onboarding survey results: agree, neutral and disagree for eight statements about the app"
-            caption="Onboarding survey of hygienists"
-          />
-          <Figure
-            src="/images/tempstars-shifts-chart.png"
-            alt="Bar chart of how many shifts each hygienist worked over the last 24 months"
-            caption="Shifts worked per hygienist, last 24 months"
-          />
+        <div className="mt-8 md:mt-10 mx-auto max-w-[920px]">
+          <CohortAnalysis />
         </div>
 
         <div className="h-14 md:h-20" aria-hidden />
@@ -109,6 +115,10 @@ export default function TempStarsStory() {
         <Beat kicker="02 What we changed" title="Fix the policy first, then make matching faster and clearer." />
 
         <div className="mt-10 md:mt-14 space-y-12 md:space-y-16">
+          <div className="mx-auto max-w-[920px]">
+            <ImpactEffort />
+          </div>
+
           <Moment title="Reworking the cancellation policy">
             <p>
               I ran workshops with the founders and made the case that keeping hygienists was worth more than the
@@ -124,7 +134,7 @@ export default function TempStarsStory() {
             </p>
           </Moment>
 
-          <div className="mx-auto max-w-[680px]">
+          <div className="mx-auto max-w-[920px]">
             <ShiftPriorities />
           </div>
 
@@ -144,7 +154,7 @@ export default function TempStarsStory() {
             </p>
           </Moment>
 
-          <div className="mx-auto max-w-[680px]">
+          <div className="mx-auto max-w-[920px]">
             <FirstWeek />
           </div>
         </div>
@@ -155,8 +165,7 @@ export default function TempStarsStory() {
         <Lede kicker="03 Outcome" statement="A week-long wait for a first offer became less than 48 hours.">
           <p>
             Activation rose 20%, as fewer people dropped off at the policy or at signup. Booked shifts grew 23% year
-            over year, with more active workers and shifts that were easier to judge. At about $50 per shift, that
-            is about $2M a year in projected added revenue for TempStars.
+            over year, with more active workers and shifts that were easier to judge.
           </p>
           <p>
             The lesson I took from it: operations decisions and design decisions are often the same decision. No
