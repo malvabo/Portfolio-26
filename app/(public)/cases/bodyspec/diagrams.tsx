@@ -5,12 +5,12 @@ import { ExplainerCard, ExplainerStage, ExplainerTitle } from "@/components/expl
 
 /* BodySpec user journey as a before and after pair, the same layout as the doc case */
 
-const STAGES: { stage: string; before: string; broken?: boolean; after: string }[] = [
-  { stage: "Find a location", before: "Searched for a clinic by hand", broken: true, after: "Opens on the nearest locations" },
-  { stage: "Pick a time", before: "Hunted across pages for an open slot", broken: true, after: "Nearby slots on one screen" },
+const STAGES: { stage: string; before: string; after: string }[] = [
+  { stage: "Find a location", before: "Searched for a clinic by hand", after: "Opens on the nearest locations" },
+  { stage: "Pick a time", before: "Hunted across pages for an open slot", after: "Nearby slots on one screen" },
   { stage: "Check out", before: "Asked for details a booking didn't need", after: "Only the fields a booking needs" },
-  { stage: "See results", before: "A one-off report with no trend", broken: true, after: "Change since the last scan" },
-  { stage: "Come back", before: "No reason to book again", broken: true, after: "Progress makes the next scan worth booking" },
+  { stage: "See results", before: "A one-off report with no trend", after: "Change since the last scan" },
+  { stage: "Come back", before: "No reason to book again", after: "Progress makes the next scan worth booking" },
 ]
 
 function Tag({ children, accent = false }: { children: ReactNode; accent?: boolean }) {
@@ -30,17 +30,15 @@ export function JourneyLoop() {
         {STAGES.map((st) => (
           <li key={st.stage} className="rounded border border-black/10 p-3">
             <p className="text-[12px] text-muted-foreground">{st.stage}</p>
-            <p className={`mt-1 flex items-start gap-2 text-[13px] leading-snug ${after || st.broken ? "text-foreground" : "text-muted-foreground"}`}>
+            <p className="mt-1 flex items-start gap-2 text-[13px] leading-snug text-foreground">
               {after ? (
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden className="mt-0.5 shrink-0">
                   <path d="M2.5 7.5l3 3 6-7" stroke="#28447A" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
-              ) : st.broken ? (
+              ) : (
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden className="mt-0.5 shrink-0">
                   <path d="M3.5 3.5l7 7M10.5 3.5l-7 7" stroke="#9a958d" strokeWidth="1.5" strokeLinecap="round" />
                 </svg>
-              ) : (
-                <span className="w-3.5 shrink-0" aria-hidden />
               )}
               {after ? st.after : st.before}
             </p>

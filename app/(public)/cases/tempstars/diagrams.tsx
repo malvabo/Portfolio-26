@@ -5,11 +5,11 @@ import type { ReactNode } from "react"
 
 /* TempStars: the four steps to a first shift. Before shows where people left; after shows the fix at each step. */
 
-const STEPS: { step: string; before: string; left?: boolean; after: string }[] = [
+const STEPS: { step: string; before: string; after: string }[] = [
   { step: "Sign up", before: "Generic signup", after: "Skills asked up front" },
-  { step: "Browse shifts", before: "Same list for everyone", left: true, after: "Matched based on skills" },
-  { step: "Choose a clinic to work in", before: "Left the app to check clinic reviews", left: true, after: "Clinic reviews in the app" },
-  { step: "Accept the terms", before: "Policy favoured clinics", left: true, after: "A clear, fair policy" },
+  { step: "Browse shifts", before: "Same list for everyone", after: "Matched based on skills" },
+  { step: "Choose a clinic to work in", before: "Left the app to check clinic reviews", after: "Clinic reviews in the app" },
+  { step: "Accept the terms", before: "Policy favoured clinics", after: "A clear, fair policy" },
 ]
 
 function Tick() {
@@ -52,8 +52,8 @@ export function FirstWeek() {
         {STEPS.map((st) => (
           <li key={st.step} className="rounded border border-black/10 p-3">
             <p className="text-[12px] text-muted-foreground">{st.step}</p>
-            <p className={`mt-1 flex items-start gap-2 text-[13px] leading-snug ${after || st.left ? "text-foreground" : "text-muted-foreground"}`}>
-              {after ? <Tick /> : st.left ? <Cross /> : <span className="w-3.5 shrink-0" aria-hidden />}
+            <p className="mt-1 flex items-start gap-2 text-[13px] leading-snug text-foreground">
+              {after ? <Tick /> : <Cross />}
               {after ? st.after : st.before}
             </p>
           </li>

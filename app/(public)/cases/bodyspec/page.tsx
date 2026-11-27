@@ -147,6 +147,29 @@ export default function BodySpecStory() {
             </div>
             <figcaption className="mt-3 text-[13px] text-muted-foreground text-center">Locations and open slots on one screen</figcaption>
           </figure>
+
+          <div className="mx-auto max-w-[920px] grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {[
+              { src: "/images/bodyspec-homepage-final.png", alt: "BodySpec homepage leading with bone health and the value of a DEXA scan", cap: "Homepage built around long-term health" },
+              { src: "/images/bodyspec-booking-flow.png", alt: "BodySpec mobile booking: map of nearby locations with slots, then checkout with membership options", cap: "Mobile booking, from map to checkout" },
+            ].map((f) => (
+              <figure key={f.src}>
+                <div className="rounded-xl overflow-hidden bg-[#EDE8E1] border border-foreground/[0.08]">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={f.src} alt={f.alt} className="w-full h-auto" loading="lazy" />
+                </div>
+                <figcaption className="mt-3 text-[13px] text-muted-foreground text-center">{f.cap}</figcaption>
+              </figure>
+            ))}
+          </div>
+
+          <figure className="mx-auto max-w-[680px]">
+            <div className="rounded-xl overflow-hidden bg-white border border-foreground/[0.08]">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/bodyspec-dexa-dashboard-1.png" alt="BodySpec results: body fat percentile against women of the same age" className="w-full h-auto" loading="lazy" />
+            </div>
+            <figcaption className="mt-3 text-[13px] text-muted-foreground text-center">Results against people of the same age and sex</figcaption>
+          </figure>
         </div>
 
         <div className="h-14 md:h-20" aria-hidden />
