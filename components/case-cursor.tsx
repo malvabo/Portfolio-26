@@ -13,7 +13,7 @@ const COLOURS: Record<string, { bg: string; ink: string }> = {
   tempstars: { bg: "#D7E0F0", ink: "#28447A" },
   "paid-plans": { bg: "#F6B98F", ink: "#3D2A1E" },
   paa: { bg: "#ECE3F3", ink: "#5B4A78" },
-  conduit: { bg: "#F5B3CF", ink: "#5A1F38" },
+  conduit: { bg: "#28447A", ink: "#FFFFFF" },
   veeqo: { bg: "#E8E3DD", ink: "#3D3D3D" },
 }
 const FALLBACK = { bg: "#D7E0F0", ink: "#28447A" }
