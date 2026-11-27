@@ -457,6 +457,7 @@ export default function AiPage() {
               <li key={p.id} className={p.demo || (p.wide && p.image) ? "md:col-span-2" : undefined}>
                 <article
                   aria-labelledby={p.id}
+                  data-case-cursor={p.caseStudy ? p.caseStudy.split("/").pop() : undefined}
                   className={`${CASE_CARD} ${p.caseStudy ? CASE_CARD_LINKED : ""}${
                     p.demo || (p.wide && p.image)
                       ? " lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.55fr)] lg:gap-12 lg:items-center md:p-10 lg:p-12"
@@ -465,7 +466,7 @@ export default function AiPage() {
                 >
                   {p.demo ? (
                     // Sits above the card's stretched link so the player controls stay usable
-                    <div className="relative z-10 lg:order-2">
+                    <div className="relative z-10 lg:order-2" data-no-case-cursor>
                       <DemoPlayer chapters={CHAPTERS} label="Conduit demo, 27 seconds, no sound" />
                     </div>
                   ) : p.image ? (

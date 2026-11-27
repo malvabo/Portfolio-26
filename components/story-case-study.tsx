@@ -616,6 +616,7 @@ export function UpNext({
         <a
           href={href}
           data-cursor="View project"
+          data-case-cursor={href.split("/").pop()}
           className="group flex items-stretch rounded-xl overflow-hidden bg-white border border-black/15 hover:border-black/35 transition-colors"
         >
           <div className="p-1 shrink-0">
