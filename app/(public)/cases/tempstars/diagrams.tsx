@@ -283,7 +283,7 @@ const QUADRANTS = [
     note: "High impact, more effort",
     items: ["Skills taxonomy and weighted matching", "Rebuild signup and onboarding around skills"],
   },
-  { tag: "Quick wins", note: "Lower impact, low effort", items: ["Restructure the shift page around the booking decision"] },
+  { tag: "Quick wins", note: "Lower impact, low effort", items: ["Redesign the shift page"] },
   { tag: "Next release", note: "Lower impact, more effort", items: ["Favourite offices for repeat booking"] },
 ]
 
@@ -291,7 +291,7 @@ const QUADRANTS = [
 const PLOT = [
   { label: "Rewrite the cancellation policy", x: 12, y: 90, first: true },
   { label: "Bring clinic reviews into the app", x: 18, y: 72, first: true },
-  { label: "Restructure the shift page around the booking decision", x: 16, y: 34 },
+  { label: "Redesign the shift page", x: 16, y: 34 },
   { label: "Skills taxonomy and weighted matching", x: 64, y: 88 },
   { label: "Rebuild signup and onboarding around skills", x: 58, y: 66 },
   { label: "Favourite offices for repeat booking", x: 66, y: 24 },
